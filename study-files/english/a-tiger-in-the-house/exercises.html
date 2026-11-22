@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Tiger in the House · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>A Tiger in the House</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପୂର୍ବପଠନ ଅନୁମାନ, ତିନି comprehension checkର ୭, ୯ ଓ ୧୦ ପ୍ରଶ୍ନ, D ୧–୭ର ପ୍ରାୟ ୫୦ ଶବ୍ଦର ଉତ୍ତର, Eର ବକ୍ତା–ଶ୍ରୋତା ଓ ଘଟଣାକ୍ରମ ଅଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୯୧–୯୨, ୯୪, ୯୬–୯୮।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୬)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">A · Before you read</a> <a href="#exercise-2">Comprehension check I. 1–4</a> <a href="#exercise-3">Comprehension check I. 5–7</a> <a href="#exercise-4">Comprehension check II. 1–5</a> <a href="#exercise-5">Comprehension check II. 6–9</a> <a href="#exercise-6">Comprehension check III. 1–5</a> <a href="#exercise-7">Comprehension check III. 6–10</a> <a href="#exercise-8">D. 1</a> <a href="#exercise-9">D. 2</a> <a href="#exercise-10">D. 3</a> <a href="#exercise-11">D. 4</a> <a href="#exercise-12">D. 5</a> <a href="#exercise-13">D. 6</a> <a href="#exercise-14">D. 7</a> <a href="#exercise-15">E. Activity I</a> <a href="#exercise-16">E. Activity II</a></nav></details>
+<article id="exercise-1"><h2>A · Before you read. Predict a story from the title and check the prediction.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>I would expect a family to try living with a tiger. The story confirms that Grandfather brings home a cub, then explores what changes as it grows. ପଢ଼ିବା ପୂର୍ବର ଅନୁମାନ ଓ ପରର ଘଟଣା ମେଳାଅ।</p><p>ଶୀର୍ଷକ tiger ଓ houseକୁ ଏକାଠି ରଖି ଆଶ୍ଚର୍ଯ୍ୟ ସୃଷ୍ଟି କରେ। ଗଳ୍ପରେ cub ଥିବାବେଳର କଥା ଓ ତାହା ବଡ଼ ହେବାପରର କଥା ଅଲଗା କଲେ ଘରେ ରଖିବା ଯୋଗ୍ୟତା ନେଇ ଅନୁମାନ କିପରି ବଦଳିଲା ଦେଖାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=91" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୧</a></small></article>
+<article id="exercise-2"><h2>Comprehension check I. 1–4. Describe the discovery, the purpose of Grandfather’s visit and the camp.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Timothy was a small tiger cub discovered among banyan roots in the Terai jungle near Dehra. 2. Grandfather knew the Siwalik forests and could advise the party. 3. There were separate tents, servants, elephants and elaborate meals. 4. Grandfather found the cub while walking apart from the party. ଶିକାର ପାଇଁ ବିଶାଳ ଆୟୋଜନ ହେଲେ ମଧ୍ୟ ଛୁଆକୁ ଖୋଜିଥିଲେ ଶିକାରୀ ନଥିବା ଜେଜେବାପା।</p><p>ମୂଳ ଦଳ ଶିକାର ପାଇଁ ଯାଇଥିଲା। Grandfatherଙ୍କ ବିଶେଷ ଯୋଗ୍ୟତା ଥିଲା ଜଙ୍ଗଲକୁ ଜାଣିବା।</p><p>ମୂଳ ଉଦ୍ଦେଶ୍ୟ ସହ ବଟଗଛ ମୂଳରୁ ଜୀବନ୍ତ ଛୁଆ ଫେରାଇ ଆଣିବାକୁ ତୁଳନା କର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=92" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୨</a></small></article>
+<article id="exercise-3"><h2>Comprehension check I. 5–7. What can one infer about Grandfather and his intentions?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>5. Picking up the cub suggests courage. 6. His forest knowledge and willingness to care for the living animal distinguish him from the hunters. 7. Bringing it home suggests he will care for it, as the next part confirms. ୫ ଓ ୭ରେ ନିଜ ଅନୁମାନକୁ ସେ କରିଥିବା କାମରେ ସମର୍ଥନ କରନ୍ତୁ।</p><p>ତାଙ୍କ ମନର କଥା ଅନୁମାନ ହେଲେ “His action suggests …” କହ। ଛୁଆକୁ ଉଠାଇବାରେ ସାହସ ଓ ଘରେ ତାହାର ଯତ୍ନ ନେବାରେ ଦାୟିତ୍ୱ ଦେଖାଯାଏ।</p><p>ଦୁଇ ଗୁଣ ପାଇଁ ଦୁଇଟି କାମର ପ୍ରମାଣ ମିଳେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=92" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୨</a></small></article>
+<article id="exercise-4"><h2>Comprehension check II. 1–5. Identify members of the household and explain the cub’s early care and play.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. The family, Mahmoud, Timothy, Toto and the puppy appear. 2. Grandmother named the cub; Mahmoud fed him. 3. Milk was replaced by raw mutton and cod-liver oil, later pigeons and rabbits. 4. Toto and the puppy were his companions. 5. He stalked playmates and pretended to bite the narrator’s ankles. ଛୁଆର ଖେଳରେ ଗୋପନରେ ପାଖକୁ ଆସିବା ଅଭ୍ୟାସ ପରେ ଅଧିକ ଭୟଙ୍କର ହୁଏ।</p><p>ନାମ ଦେଇଥିଲେ Grandmother, ଖୁଆଇଥିଲେ Mahmoud। ଖାଦ୍ୟ ଶରୀରକୁ ସୁହାଇଲା କି ବୋଲି ଦେଖି ବଦଳ ହେଲା।</p><p>Toto ଓ puppy ସହ ଖେଳ ଘରୋଇ ପରିବେଶରେ ଅଭ୍ୟସ୍ତ ହେବା ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=94" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୪</a></small></article>
+<article id="exercise-5"><h2>Comprehension check II. 6–9. Why did Timothy leave, how did he travel and what might he feel?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>6. At six months he grew less friendly and began stalking other animals. 7. His behaviour towards Mahmoud made the house unsafe. 8. Grandfather took him by train in a reserved first-class compartment to the Lucknow zoo. 9. Sample prediction: He might miss familiar companions; the narrator does not report his feelings. ଶେଷ ଉତ୍ତରଟି ଅନୁମାନ ବୋଲି ଲେଖନ୍ତୁ।</p><p>ପୋଷା ଜୀବ ପଛେ ଲୁଚି ଯିବାରୁ ସମସ୍ୟାର ପ୍ରଥମ ସୂତ୍ର ମିଳେ। Mahmoudଙ୍କ ପ୍ରତି ବ୍ୟବହାର ତାକୁ ମଣିଷଙ୍କ ସୁରକ୍ଷାର ପ୍ରଶ୍ନ କରେ।</p><p>Zooକୁ ଯିବାରେ Timothy କ’ଣ ଭାବିଲା ଅନୁମାନ କଲେ might ବ୍ୟବହାର କର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=94" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୪</a></small></article>
+<article id="exercise-6"><h2>Comprehension check III. 1–5. Explain the return visit and the incident at the cage.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. It recounts a mistaken reunion. 2. About six months later Grandfather was visiting relatives and called at the zoo. 3. He stroked the animal as he had done at home. 4. It licked him but withdrew when the leopard snarled. 5. He proposed moving it away from the leopard. ପରିଚିତ ଅଭ୍ୟାସ ବାଘକୁ ଚିହ୍ନିବାର ନିଶ୍ଚିତ ପ୍ରମାଣ ନଥିଲା।</p><p>Grandfatherଙ୍କ ସ୍ମୃତିରେ ବାଘଟି ଘରର ସ୍ନେହ ପାଇଥିଲା। ସେଥିପାଇଁ ପିଞ୍ଜରାରେ ଆଦରକୁ ଶାନ୍ତ ଭାବେ ଗ୍ରହଣ କରିବାକୁ ସେ ପରିଚୟର ପ୍ରମାଣ ଭାବିଲେ।</p><p>ପାଖ ପିଞ୍ଜରାର leopard ଏହି ଦୃଶ୍ୟକୁ ବିଚଳିତ କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=96" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୬</a></small></article>
+<article id="exercise-7"><h2>Comprehension check III. 6–10. Resolve the mistaken identity and give reasoned personal answers.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>6. No. The keeper identified a different tiger. 7. Timothy had died of pneumonia; the new tiger had been captured in the hills. 8. Grandfather was shaken by the discovery and withdrew his hand slowly before giving the keeper a scornful look; the text does not state his private thoughts. 9. Sample: I like Grandfather because he noticed an animal’s fear and wanted to help. 10. Sample title: “The Stranger in Timothy’s Cage”, because the final meeting overturns his assumption. ୯–୧୦ର ଉତ୍ତର ପାଠକ ନିଜେ କାରଣ ସହିତ ବାଛନ୍ତୁ।</p><p>ପ୍ରଥମ କେତୋଟି ଉତ୍ତର ପାଇଁ keeperଙ୍କ ଖବର ସ୍ପଷ୍ଟ ପ୍ରମାଣ। ନିଜ ପ୍ରତିକ୍ରିୟା ଲେଖିବା ବେଳେ ପୁରୁଣା ସ୍ନେହ ଓ ନୂଆ ବାଘର ଅଜଣା ସ୍ୱଭାବ ଦୁଇଟିକୁ ଧ୍ୟାନରେ ରଖ।</p><p>ଏହା ଭାବନା ଓ ବିପଦ ଉଭୟ ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=96" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୬</a></small></article>
+<article id="exercise-8"><h2>D. 1. How did Grandfather acquire Timothy?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Timothy was a little tiger cub, about eighteen inches long. Grandfather had joined a hunting party because he knew the forest well. While the hunters found no tiger, he noticed the cub hiding among the roots of a banyan tree. He picked it up and brought it home after the camp broke up. ଅନ୍ୟ ଶିକାରୀଙ୍କ ଫଳ ଓ ଜେଜେଙ୍କ ଆବିଷ୍କାରର ଫରକ ଦେଖ।</p><p>“Acquired” କହିଲେ ଛୁଆଟି କିପରି ତାଙ୍କ ପାଖକୁ ଆସିଲା ତାହା ଲାଗିବ। ଏଥିରେ ଟଙ୍କା ଦେଇ କିଣିବା ବା ଶିକାର କରିବା ନାହିଁ।</p><p>ସ୍ଥାନ, ଛୁଆର ଅବସ୍ଥା ଓ ତାଙ୍କ କାମକୁ କ୍ରମରେ ରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-9"><h2>D. 2. Describe the cub’s companions and care at home.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Mahmoud, the cook, first fed Timothy milk from a bottle. When it proved too rich, the family gave him raw mutton and cod liver oil and later pigeons and rabbits. Toto sometimes teased him. A small puppy frightened him at first but eventually rested on his back. He also played with the narrator. ସମୟ ଅନୁସାରେ ଖାଦ୍ୟ ଓ ସାଙ୍ଗମାନଙ୍କ କଥା ଲେଖ।</p><p>Companions କହିଲେ ଖେଳସାଥୀ, care କହିଲେ ଖାଦ୍ୟ ଓ ରହିବାର ଯତ୍ନ। Toto ଓ କୁକୁରଛୁଆକୁ ପ୍ରଥମ ଭାଗରେ, Mahmoudଙ୍କ ଖୁଆଇବାକୁ ଦ୍ୱିତୀୟରେ ରଖିଲେ ଉଭୟ ଅଂଶର ଉତ୍ତର ମିଳେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-10"><h2>D. 3. Why did Grandfather transfer Timothy to a zoo?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>At about six months Timothy became harder to manage. Outdoors he tried to stalk people’s pets. Noises from the poultry house and feathers on the veranda caused further concern. When he began following Mahmoud about the house as though hunting him, Grandfather decided that keeping him at home was no longer safe. ନିଷ୍ପତ୍ତିର ଶେଷ କାରଣ Mahmoudଙ୍କ ସୁରକ୍ଷା।</p><p>‘Stalk’ ପଛରେ ଲୁଚିଲୁଚି ଅନୁସରଣ କରିବା ବୁଝାଏ। ବାଘର ଏହି ବଦଳକୁ ଘରର ପୁରୁଣା ହାସଖୁସି ସହ ମିଳାଇଲେ ନିଷ୍ପତ୍ତିର କାରଣ ସ୍ପଷ୍ଟ।</p><p>ବିଚ୍ଛେଦର କାରଣ ସ୍ନେହ କମିଯିବା ନଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-11"><h2>D. 4. What did Grandfather do beside the cage?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Believing that he had recognised Timothy, Grandfather reached through the bars and stroked the tiger’s forehead. He tickled its ear and used the familiar gesture that had once quietened his pet. When a leopard in the next cage frightened the tiger, he tried to drive it away and sought the superintendent’s help. ସେ ବାଘଟିକୁ Timothy ବୋଲି ଭାବୁଥିଲେ।</p><p>କାମଗୁଡ଼ିକ ସେ କ’ଣ ବିଶ୍ୱାସ କରୁଥିଲେ ଦେଖାଏ। ପୂର୍ବରୁ ଚିହ୍ନା ପଶୁ ଭାବିଲେ ମାତ୍ର ସେ ଏପରି ନିର୍ଭୟ ଆଦର କରିବାକୁ ଆଗେଇବେ।</p><p>ପରିଚୟଟି ଏଠି ତାଙ୍କ ଅନୁମାନ ବୋଲି ରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-12"><h2>D. 5. How did the tiger respond to Grandfather?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>The tiger came close enough for Grandfather to hold its head and stroke it. It licked his hands as an affectionate pet might do. When the neighbouring leopard snarled or rushed at the bars, however, the tiger slipped back into its corner. Those responses helped sustain Grandfather’s mistaken belief that this was Timothy. ବାଘର ପ୍ରତିକ୍ରିୟା ଜେଜେଙ୍କୁ ଭୁଲ ଧାରଣା ଦେଲା।</p><p>ଏହି ପ୍ରଶ୍ନର କର୍ତ୍ତା tiger, ଆଗର ପ୍ରଶ୍ନରେ Grandfather। ମୁଣ୍ଡ ପାଖକୁ ଆଣିବା ଓ ହାତ ଚାଟିବା ପରି ପ୍ରତିକ୍ରିୟା ଲେଖ।</p><p>ମଣିଷ ତାକୁ ଆଦର କଲେ ବୋଲି ମାତ୍ର ଲେଖିଲେ ପ୍ରଶ୍ନ ବଦଳିଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-13"><h2>D. 6. How did the visit end for Grandfather?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>A keeper who remembered Timothy told Grandfather that his pet had died of pneumonia two months before. The animal in the cage was a recently captured, dangerous tiger. Grandfather drew back his hand. Still moved by the encounter, he addressed the animal as Timothy once more, wished it good night and walked away. ରକ୍ଷକଙ୍କ ଖବର ଓ ଜେଜେଙ୍କ ଶେଷ କଥାକୁ ଯୋଡ଼।</p><p>ପୁରୁଣା keeper ସମୟ ଓ ରୋଗର ଖବର ଜାଣନ୍ତି। ତେଣୁ ପୁରୁଣା ସ୍ମୃତି ଉପରେ ଆଧାରିତ ଚିହ୍ନଟକୁ ତାଙ୍କ ଖବର ସୁଧାରିଦିଏ।</p><p>ଶେଷରେ ମଧ୍ୟ ବିଦାୟ ଜଣାଇବା Grandfatherଙ୍କ ସ୍ନେହକୁ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-14"><h2>D. 7. Suggest a different short ending.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>An imagined ending: Grandfather withdrew his hand and asked the keeper to tell him something about Timothy’s last weeks. Then he looked once more at the stranger in the cage. He thanked the keeper, left without speaking to the crowd and remembered the little tiger he had carried out of the forest. ଏହା କଳ୍ପିତ ଶେଷ, ନିଜେ ଅନ୍ୟ ଶେଷ ମଧ୍ୟ ଲେଖିପାରିବ।</p><p>ନିଜ ଶେଷ ଲେଖିଲେ ତାହାକୁ imagined ending ଭାବେ ଚିହ୍ନା। ଯେଉଁ ଘଟଣା ପରେ ନୂଆ ଶେଷ ଆସୁଛି ସେହି keeperଙ୍କ ଖବରକୁ ମାନି ଚରିତ୍ରର ପର କାମ ବାଛିଲେ ଗଳ୍ପ ସହ ଯୋଗ ରହେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-15"><h2>E. Activity I. Identify speaker and listener in each table row.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Narrator → readers; Grandfather → the newer keeper; the older keeper → Grandfather; Grandfather → the older keeper; the older keeper → Grandfather; Grandfather → the tiger in the cage. ପ୍ରଥମ ରକ୍ଷକ ପୂର୍ବ ଇତିହାସ ଜାଣି ନଥିଲେ; ଦ୍ୱିତୀୟ ରକ୍ଷକ Timothyକୁ ଚିହ୍ନିଥିଲେ।</p><p>Narrator ପାଠକଙ୍କୁ ଘଟଣା କହେ; ପିଞ୍ଜରା ପାଖରେ ଥିବା ପାତ୍ରମାନେ ପରସ୍ପର ସହ କଥା ହୁଅନ୍ତି। କିଏ ପୁରୁଣା ଖବର ଜାଣେ ଦେଖିଲେ ଦୁଇ keeperଙ୍କ ଉକ୍ତି ଅଦଳବଦଳ ହୁଏନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=98" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୮</a></small></article>
+<article id="exercise-16"><h2>E. Activity II. Reorder the nine events to summarise the narrative.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>3 → 2 → 9 → 5 → 1 → 4 → 6 → 8 → 7. ଆବିଷ୍କାର, ଲାଳନପାଳନ, ଘରେ ଅଭ୍ୟସ୍ତ ହେବା, ଆଚରଣ ବଦଳିବା, ଚିଡ଼ିଆଖାନା ଓ ପୁନଃସାକ୍ଷାତ—ଏହି କ୍ରମରେ ମିଳାନ୍ତୁ।</p><p>ଘରେ ନାମ ପାଇବା ପୂର୍ବରୁ ଉଦ୍ଧାର, ପିଞ୍ଜରା ପାଖକୁ ଯିବା ପୂର୍ବରୁ zooକୁ ହସ୍ତାନ୍ତର। ଏପରି ଘଟଣା ଯୋଡ଼କୁ ‘before/after’ରେ ପରଖିଲେ ଦିଆ ନମ୍ବରର କ୍ରମ ନିଜେ ଯାଞ୍ଚ କରିହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=98" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୮</a></small></article>
+
+</main></body></html>

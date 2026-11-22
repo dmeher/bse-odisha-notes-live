@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>जननी जन्मभूमि · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>जननी जन्मभूमि</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଗଦ୍ୟର ତିନି ଦଳ ପ୍ରଶ୍ନର ସମସ୍ତ ଉପପ୍ରଶ୍ନ ଓ ଭାଷାଜ୍ଞାନ ୧–୧୨ର ଉତ୍ତର।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 5–11</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୨)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (ख)</a> <a href="#exercise-2">1 (ग)</a> <a href="#exercise-3">1 (क–छ)</a> <a href="#exercise-4">1 (ज–ढ)</a> <a href="#exercise-5">2 (क–ञ)</a> <a href="#exercise-6">3 (क–ठ)</a> <a href="#exercise-7">भाषा-ज्ञान 1–3</a> <a href="#exercise-8">भाषा-ज्ञान 4–5</a> <a href="#exercise-9">भाषा-ज्ञान 6</a> <a href="#exercise-10">भाषा-ज्ञान 7 (क–ज)</a> <a href="#exercise-11">भाषा-ज्ञान 8–10</a> <a href="#exercise-12">भाषा-ज्ञान 11–12</a></nav></details>
+<article id="exercise-1"><h2>1 (ख). दुनिया के बदलने के दो प्रमाण दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରକୃତିରେ ଋତୁ ବଦଳୁଛି। ଖେତରେ ଯେଉଁଠି ସବୁଜ ଫସଲ ଥିଲା ସେଠାରେ ଦୁର୍ଭିକ୍ଷ ପଡ଼ୁଛି। ଋତୁର ପରିବର୍ତ୍ତନ ଓ ଫସଲର ଅବସ୍ଥାରେ ଏହି ପରିବର୍ତ୍ତନକୁ ଦୁଇଟି ପ୍ରମାଣ ଭାବରେ ଦେଇପାରିବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ऋतुएँ बदलती हैं और कभी लहलहाती फसल की जगह अकाल आ जाता है। मनुष्य की दशा भी सुख से दुख में बदल सकती है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୪–୯୮</a></small></article>
+<article id="exercise-2"><h2>1 (ग). कलिंग के लोगों को साहसी क्यों कहा गया है?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଧଉଳିର ସାକ୍ଷ୍ୟକୁ କଳିଙ୍ଗଯୁଦ୍ଧ ସହ ଯୋଡ଼। ନିଜ ଦେଶକୁ ରକ୍ଷା କରିବା ପାଇଁ ଦିଆଯାଇଥିବା ବଳିଦାନ ଲେଖକଙ୍କ ମନରେ ଜନ୍ମଭୂମି ପ୍ରତି ଗୌରବ ଜଗାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>उन्होंने विशाल मगध सेना का दृढ़ता से सामना किया और अपनी धरती की रक्षा के लिए प्राणों की परवाह नहीं की।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୪–୯୮</a></small></article>
+<article id="exercise-3"><h2>1 (क–छ). दुनिया की विविधता से उत्कल के नाम तक, पहले सात प्रश्नों के उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯୁଦ୍ଧର ସ୍ଥାନ, ଶାସକଙ୍କ ନାମ ଓ ବୀରତ୍ୱର ଉଦାହରଣ ପ୍ରତ୍ୟେକ ଅଲଗା ଚିହ୍ନ। ଉପପ୍ରଶ୍ନରେ କେଉଁ ଯୁଗ ବା ସ୍ଥାନ ପଚରାଯାଇଛି ଦେଖି ଘଟଣା ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) पहाड़, जंगल, नदियाँ, जीव और मनुष्य यहाँ साथ हैं। अच्छाई और बुराई भी हैं, इसीलिए दुनिया विचित्र है।</p><p>(ख) ऋतु और मौसम बदलते हैं। हरी फसल की जगह अकाल और सुख की जगह दुःख आ जाता है।</p><p>(ग) कलिंग के सैनिकों ने मगध की विशाल सेना का डटकर सामना किया। प्राण दिये पर भूमि नहीं छोड़ी, इसलिए उन्हें साहसी कहा गया।</p><p>(घ) रक्तपात देखकर अशोक ने युद्ध छोड़ा। धर्माशोक ने मानव-प्रेम और अहिंसा अपनायी।</p><p>(ङ) खारबेल ने मगध को हराकर ‘कलिंग जिन’ वापस लाया। आगे चलकर जगबन्धु जैसे वीरों ने अंग्रेजों का विरोध किया।</p><p>(च) धउली के शिलालेख अशोक के हृदय-परिवर्तन और शांति की नीति की गवाही देते हैं।</p><p>(छ) पाठ में उत्कल का अर्थ ‘उत्कृष्ट कलाओं का देश’ है। उसके मंदिर, मूर्तियाँ और शिल्प इसका परिचय देते हैं।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=98" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୮–୯୯</a></small></article>
+<article id="exercise-4"><h2>1 (ज–ढ). मंदिर, वाणिज्य, मधुसूदन और प्रगति पर शेष प्रश्नों के उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସାଧବଙ୍କ ପୁରୁଣା ନୌଯାତ୍ରା ଓ ଆଧୁନିକ ବିକାଶର ଦୃଷ୍ଟାନ୍ତ ଏକ ବିଚାରକୁ ସଂଯୋଗ କରେ। ଅତୀତର ସାହସ ଆଜି ନୂତନ କାମରେ ଲାଗିବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ज) भुवनेश्वर, पुरी और कोणार्क के विशाल मंदिरों में मूर्तियों की भाव-भंगिमाएँ और स्थापत्य मंत्रमुग्ध करते हैं। इसी से वे अजूबे हैं।</p><p>(झ) साधव नावों से सुदूर पूर्वी द्वीपों में व्यापार करने जाते थे। लौटते समय नौकाओं में धनरत्न लाते थे।</p><p>(ञ) मधुसूदन ने पुराना इतिहास पढ़ा और लोगों को अपने पूर्वजों का गौरव याद दिलाकर जागने का आह्वान किया।</p><p>(ट) लोगों ने नवनिर्माण का बीड़ा उठाया। अप्रैल १९३६ में स्वतंत्र ओड़िशा प्रदेश बना।</p><p>(ठ) विश्वविद्यालय, स्कूल, इंजीनियरिंग और मेडिकल कॉलेज खुले। हीराकुद बाँध, उद्योग और बंदरगाह ने कृषि और वाणिज्य को आगे बढ़ाया।</p><p>(ड) पाठ के अनुसार यहाँ आधुनिक सुविधाएँ उपलब्ध हुईं, दूसरे राज्यों में भी यहाँ के योग्य लोगों ने काम किया और देश की प्रगति में इसका योगदान बढ़ा।</p><p>(ढ) राउरकेला में लोहा, सुनाबेड़ा में हवाई जहाज और चाँदीपुर तथा बडमाल में रक्षा-सामग्री का उत्पादन हुआ। इमफा, नालको, जिंदल और वेदान्त जैसी कंपनियों ने धातु-द्रव्य बनाये।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-5"><h2>2 (क–ञ). संसार, कलिंग और ओड़िशा के नवनिर्माण पर एक-दो वाक्यों में उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଲେଖକ ଉଦାହରଣ ଦେଲାବେଳେ ସୀମା ବଦଳେ। ସଂସାରର ବୈଚିତ୍ର୍ୟରେ ଜଡ଼ ଓ ଚେତନ, କଳିଙ୍ଗ ଇତିହାସରେ ଯୁଦ୍ଧ ଓ ପରବର୍ତ୍ତୀ ଓଡ଼ିଶାରେ ନବନିର୍ମାଣକୁ ପ୍ରମାଣ କରିବାକୁ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) जड़ और चेतन, भले और बुरे, अलग-अलग प्राणी और प्रकृति के अनेक रूप साथ होने से संसार निराला है।</p><p>(ख) मौसम, ऋतु, फसल और सुख-दुःख की दशाएँ बदलती हैं।</p><p>(ग) मनुष्य का इतिहास उसकी जिजीविषा, संघर्ष, उत्थान और पतन की कहानी है।</p><p>(घ) विशाल मगध-सेना का सामना करने में कलिंगवासियों के साहस से कलिंग की ख्याति बढ़ी।</p><p>(ङ) शिलालेख युद्ध के बाद अशोक के मानव-प्रेम और अहिंसा की नीति अपनाने का बयान करते हैं।</p><p>(च) बक्सि जगबन्धु आदि ने अन्याय के विरुद्ध अंग्रेजों से संघर्ष किया और प्राण तक दे दिये।</p><p>(छ) मंदिरों की नाना चेष्टाओं और भंगिमाओं वाली नारी-मूर्तियाँ और अन्य बारीक शिल्प दुर्लभ हैं।</p><p>(ज) चिलिका व्यापार का केन्द्र थी। पाठ इसे उत्कल-लक्ष्मी का विलास सरोवर कहता है।</p><p>(झ) मधुसूदन ने अपने लोगों से अतीत याद करके उठने और काम में लगने को कहा।</p><p>(ञ) ओड़िशावासियों ने प्रांत के नवनिर्माण में भाग लिया, शिक्षण संस्थाएँ खोलीं और कृषि तथा उद्योग को बढ़ाया।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯–୧୦୦</a></small></article>
+<article id="exercise-6"><h2>3 (क–ठ). बारह प्रश्नों के एक-वाक्य उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘नीर-क्षीर’ରେ ଜଳ ଓ ଦୁଧର ଭେଦ ଜାଣିବାର କଥା ଆସିଛି। ହଂସ ଉଦାହରଣଟି ପ୍ରାଣୀର ନାମ ପାଇଁ ଯେତିକି, ବିବେକର ଅର୍ଥ ପାଇଁ ମଧ୍ୟ ସେତିକି ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) हंस में नीर-क्षीर का विवेक माना गया है।</p><p>(ख) कल मौसम डरावना हो सकता है।</p><p>(ग) यह उसके उत्थान और पतन की कहानी है।</p><p>(घ) प्रदेश के इतिहास में आशा-आकांक्षा, खुशी-गम, सफलता-विफलता, आलस्य और चौकसी का लेखाजोखा है।</p><p>(ङ) अशोक से लड़ने वाले कलिंग के राजा या सेनापति का नाम पाठ में ज्ञात नहीं बताया गया है।</p><p>(च) अशोक ने मानव-प्रेम और अहिंसा की नीति अपनायी।</p><p>(छ) खण्डगिरि की गुफाएँ खारबेल का यशोगान करती हैं।</p><p>(ज) पर्यटकों के लिए ये मंदिर जादू के नमूने हैं।</p><p>(झ) साधव धनरत्न भरकर लौटते थे।</p><p>(ञ) अप्रैल १९३६ में स्वतंत्र ओड़िशा प्रदेश बना।</p><p>(ट) चाँदीपुर और बडमाल में रक्षा-सामग्री बनने लगी।</p><p>(ठ) राउरकेला में लोहे का उत्पादन हुआ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-7"><h2>भाषा-ज्ञान 1–3. मुहावरों के अर्थ, ‘आई’ वाले शब्द और विलोम दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘दाँत खट्टे करना’ରେ ଦାନ୍ତର ସ୍ୱାଦ କଥା ନାହିଁ। ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀକୁ ଜୋରରେ ହରାଇବା ହିଁ ସମଗ୍ର ପଦର ଅର୍ଥ। ତେଣୁ ଶବ୍ଦକୁ ଅଲଗା ଅଲଗା ଅନୁବାଦ କଲେ ଭାବ ହଜିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>१. दाँत खट्टे करना – बुरी तरह हराना, दिल दहलना – बहुत घबराना, जान की बाजी लगाना – प्राणों का जोखिम उठाना, धावा बोलना – अचानक हमला करना, दिल भर आना – भावुक हो उठना, दाने-दाने का मोहताज – बहुत निर्धन, बीड़ा उठाना – जिम्मा लेना।</p><p>२. पढ़ाई, लिखाई, लड़ाई, बुनाई, सिलाई। ३. स्थावर–जंगम, जड़–चेतन, गुण–दोष, सर्दी–गर्मी, खुशी–गम, सुख–दुःख, अँधेरा–उजाला, खुशहाली–बदहाली, उत्थान–पतन, बढ़िया–घटिया, वीर–कायर, युद्ध–शांति, अहिंसा–हिंसा, सजीव–निर्जीव, बड़ा–छोटा।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=101" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୧</a></small></article>
+<article id="exercise-8"><h2>भाषा-ज्ञान 4–5. पर्याय याद कीजिए और दिए शब्दों के लिंग पहचानिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଇତିହାସ ବହିର ‘पन्ना’ ପ୍ରସଙ୍ଗରେ ସମାନ ଅର୍ଥର ‘पृष्ठ’ ବସିପାରେ। ‘युद्ध–लड़ाई’ର ଅର୍ଥ ମିଳିଲେ ମଧ୍ୟ ଲିଙ୍ଗ ଅଲଗା, ତେଣୁ ଦୁଇ ପ୍ରଶ୍ନର ଉତ୍ତର ଅଲଗା ଭାବେ ଯାଞ୍ଚ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>४. आदमी–मनुष्य, मौसम–ऋतु, प्राण–जान, पन्ना–पृष्ठ, युद्ध–लड़ाई, अमूल्य–अनमोल, जरिये–माध्यम से, द्वीप–टापू, प्रांत–प्रदेश, पेशा–जीविका, नाव–नौका, किस्मत–भाग्य। ५. पुल्लिंग – संसार, पहाड़, पौधा, पक्षी, विवेक, दूध, पानी, अनाज, दुःख, दर्द, सूखा, अकाल, जीवन, दिन, मुकाबला, पन्ना, प्राण, दीपक, इतिहास, साम्राज्य, कारखाना, नाम।</p><p>स्त्रीलिंग – नदी, गर्मी, सर्दी, फसल, खुशहाली, चाँदनी, खुशी, अमीरी, गरीबी, जिन्दगी, रात, जान, आजादी, बिजली, शिक्षा। सुहाना और अँधेरी विशेषण के पुल्लिंग और स्त्रीलिंग रूप हैं।</p><p>‘नम’ अविकारी विशेषण है, जैसे नम कपड़ा और नम मिट्टी।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=102" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୨</a></small></article>
+<article id="exercise-9"><h2>भाषा-ज्ञान 6. दिए शब्दों के वचन बदलिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘नदियाँ’ର ଏକବଚନ नदी, ‘मूर्तियाँ’ର ଏକବଚନ मूर्ति। ବହୁବଚନର ଶେଷ ଅଂଶ ଅଲଗା କରିବା ପରେ ମୂଳ ଶବ୍ଦର इ ବା ई ଯଥାରୂପ ଫେରାଇବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>नदियाँ–नदी, झरने–झरना, पौधे–पौधा, पन्ने–पन्ना, बड़े–बड़ा, मुकाबला–मुकाबले, जान–जानें, धारा–धाराएँ, हाथी–हाथी, घोड़ा–घोड़े, मूर्तियाँ–मूर्ति, सुई–सुइयाँ, वस्तु–वस्तुएँ, नाव–नावें, जहाज–जहाज, दाना–दाने, बहन–बहनें, भाई–भाई, देशवासी–देशवासी, सुविधा–सुविधाएँ, कंपनी–कंपनियाँ, चुनौती–चुनौतियाँ।</p><p>कुछ पुल्लिंग शब्दों के सीधे बहुवचन का रूप वही रहता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=102" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୨</a></small></article>
+<article id="exercise-10"><h2>भाषा-ज्ञान 7 (क–ज). सही क्रिया चुनकर वाक्य पूरे कीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘कलिंगवासियों ने जानें दीं’ରେ ଦିଆଯାଇଥିବା ବସ୍ତୁ जानें ସ୍ତ୍ରୀଲିଙ୍ଗ ବହୁବଚନ। ସେହି ବାକ୍ୟର ‘जमीन नहीं दी’ରେ जमीन ସ୍ତ୍ରୀଲିଙ୍ଗ ଏକବଚନ। ଏଣୁ କ୍ରିୟାର ଶେଷ ଦୁଇ ରୂପ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) कलकल करके नदियाँ बहती हैं।</p><p>(ख) हंस ने दूध पिया।</p><p>(ग) कलिंगवासियों ने जानें दीं, पर जमीन नहीं दी।</p><p>(घ) अशोक ने युद्ध छोड़ शांति की नीति अपनायी।</p><p>(ङ) लोगों ने प्राण दिये।</p><p>(च) मधुसूदन ने इतिहास पढ़ा।</p><p>(छ) अशोक ने वीरत्व की कहानी सुनी।</p><p>(ज) पूर्वजों ने साम्राज्य बनाया।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=102" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୨–୧୦୩</a></small></article>
+<article id="exercise-11"><h2>भाषा-ज्ञान 8–10. पाठ से उदाहरण चुनिए और तीनों काल तथा क्रिया के भेद दिखाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘हीराकुद बाँध बना’ର बना ଘଟି ସାରିଥିବା କାମ। ସେହି बनना ପାଇଁ ବର୍ତ୍ତମାନ ‘बनता है’ ଓ ଭବିଷ୍ୟତ୍ ‘बनेगा’। ଧାତୁ ଓ ଅର୍ଥ ସମାନ ରଖି କାଳ ବଦଳିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>८. पाठ में आए इसी तरह के वाक्यांश – ‘अनेक स्कूल-कॉलेज खुले’, ‘हीराकुद बाँध बना’, ‘खेतों की सिंचाई हुई’। ९. बनना – बनता है, बना, बनेगा।</p><p>बहना – बहती है, बही, बहेगी। लौटना – लौटते हैं, लौटे, लौटेंगे।</p><p>अपनाना – अपनाता है, अपनाया, अपनाएगा। १०. सकर्मक – दूध पीना, नीति अपनाना, इतिहास पढ़ना, राज्य फैलाना।</p><p>अकर्मक – नदी बहना, मौसम बदलना, लोग लौटना, झरने झरना।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=103" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୩–୧୦୪</a></small></article>
+<article id="exercise-12"><h2>भाषा-ज्ञान 11–12. प्रेरणार्थक रूप लिखिए और दिए शब्दों जैसे अन्य शब्द बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ନିଜେ ‘पढ़ना’, ପରେ ଅନ୍ୟକୁ ସିଧାସଳଖ ଶିଖାଇବା ‘पढ़ाना’, ଆଉ ଜଣଙ୍କ ଦ୍ୱାରା ସେହି କାମ କରାଇବା ‘पढ़वाना’। କାମରେ ମଝିରେ ଆଉ କିଏ ଆସିଲା ଦେଖି ରୂପ ବାଛ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>११. डरना – डराना/डरवाना, बहना – बहाना/बहवाना, पढ़ना – पढ़ाना/पढ़वाना, बनना – बनाना/बनवाना, करना – कराना/करवाना, मानना – मनाना/मनवाना। १२. सुहावना की तरह लुभावना, डरावना।</p><p>गौरवशाली की तरह प्रभावशाली, शक्तिशाली। तरंगमाला की तरह पुष्पमाला, वर्णमाला।</p><p>जिजीविषा (जीने की इच्छा) की तरह जिज्ञासा (जानने की इच्छा) और पिपासा (पीने की इच्छा)।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=104" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୪</a></small></article>
+
+</main></body></html>

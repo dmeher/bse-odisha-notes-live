@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 300" width="580" height="300" role="img" aria-labelledby="title">
+<title id="title">Closed magnetic field lines around a bar magnet</title>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#125c57"/></marker></defs>
+<rect width="580" height="300" rx="12" fill="#f6faf9"/>
+<g stroke="#183e46" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+<path d="M212 146 C152 139 147 86 290 86 S429 139 368 146" stroke="#125c57"/>
+<path d="M282 86 H297" stroke="#125c57" marker-end="url(#arrow)"/>
+<path d="M212 140 C140 133 135 59 290 59 S441 133 368 140" stroke="#125c57"/>
+<path d="M282 59 H297" stroke="#125c57" marker-end="url(#arrow)"/>
+<path d="M212 134 C130 127 125 33 290 33 S451 127 368 134" stroke="#125c57"/>
+<path d="M282 33 H297" stroke="#125c57" marker-end="url(#arrow)"/>
+<path d="M212 154 C152 161 147 214 290 214 S429 161 368 154" stroke="#125c57"/>
+<path d="M282 214 H297" stroke="#125c57" marker-end="url(#arrow)"/>
+<path d="M212 160 C140 167 135 241 290 241 S441 167 368 160" stroke="#125c57"/>
+<path d="M282 241 H297" stroke="#125c57" marker-end="url(#arrow)"/>
+<path d="M212 166 C130 173 125 267 290 267 S451 173 368 166" stroke="#125c57"/>
+<path d="M282 267 H297" stroke="#125c57" marker-end="url(#arrow)"/>
+<rect x="212" y="128" width="78" height="44" fill="#eeb5ad"/>
+<rect x="290" y="128" width="78" height="44" fill="#9ec8dc"/>
+<text x="244" y="157" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#173b45" stroke="none">N</text>
+<text x="338" y="157" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#173b45" stroke="none">S</text>
+<path d="M318 150 H269" stroke="#125c57" marker-end="url(#arrow)"/>
+</g></svg>

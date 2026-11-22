@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>शब्द रचना · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>शब्द रचना</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1zdpm0Pt1beDebFW-f2rDx4YhCIJQ5z-d/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ସନ୍ଧିର ୪, ସମାସର ୪ ଓ ଉପସର୍ଗ–ପ୍ରତ୍ୟୟର ୭ଟି ଅଭ୍ୟାସ। ସମାସ ମିଳନ ପ୍ରଶ୍ନରେ ଅସଙ୍ଗତ ବିକଳ୍ପ ଥିବାରୁ ମୂଳ ଉଦାହରଣ ସହ କାରଣ ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 11, 20–21, 33</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୪)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">अभ्यास 1 · अबोध</a> <a href="#exercise-2">अभ्यास 3 · मूर्खता</a> <a href="#exercise-3">संधि 1–2</a> <a href="#exercise-4">संधि 3</a> <a href="#exercise-5">संधि 4</a> <a href="#exercise-6">समास 1</a> <a href="#exercise-7">समास 2</a> <a href="#exercise-8">समास 3</a> <a href="#exercise-9">समास 4</a> <a href="#exercise-10">उपसर्ग-प्रत्यय 1</a> <a href="#exercise-11">उपसर्ग-प्रत्यय 2</a> <a href="#exercise-12">उपसर्ग-प्रत्यय 3</a> <a href="#exercise-13">उपसर्ग-प्रत्यय 4–5</a> <a href="#exercise-14">उपसर्ग-प्रत्यय 6–7</a></nav></details>
+<article id="exercise-1"><h2>अभ्यास 1 · अबोध. अबोध में उपसर्ग और मूल शब्द अलग कीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘बोध’ରେ ଜାଣିବାର ଭାବ। ଆଗରେ अ ଯୋଡ଼ିଲେ ସେହି ବୋଧର ଅଭାବ ସୂଚିତ ହୁଏ, ତେଣୁ ଏହା ପୂର୍ବରେ ଲାଗୁଥିବା उपसर्ग।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>अ + बोध। यहाँ अ उपसर्ग है और बोध मूल शब्द है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=48">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୮–୫୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=27" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୭–୫୯</a></small></article>
+<article id="exercise-2"><h2>अभ्यास 3 · मूर्खता. मूर्खता में मूल शब्द और प्रत्यय क्या हैं?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘मूर्ख’ କାହାର ଗୁଣ ଜଣାଇପାରେ। ‘ता’ ଲଗାଇଲେ ‘मूर्खता’ ସେହି ଗୁଣର ନାମ ହେଲା। ମୂଳ ପଦ ପରେ ଲାଗିଥିବାରୁ ଏହା ପ୍ରତ୍ୟୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>मूर्ख मूल शब्द है और ता प्रत्यय है। दोनों मिलकर भाव का बोध कराने वाला शब्द बनाते हैं।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=27" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୭–୫୯</a></small></article>
+<article id="exercise-3"><h2>संधि 1–2. संधि की परिभाषा, प्रकार और दो-दो उदाहरण दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>गण ଶେଷର अ ସହ ईश ଆରମ୍ଭର ई ମିଶି ए ହୁଏ, ତେଣୁ गणेश। ଏଠି ପରିବର୍ତ୍ତନ ଦୁଇ ସ୍ୱର ମଧ୍ୟରେ। ‘सत् + जन’ରେ ପ୍ରଥମ ଶବ୍ଦର ବ୍ୟଞ୍ଜନ ପରିବର୍ତ୍ତନ ଘଟିଥିବାରୁ ସେହି ଉଦାହରଣର ଭେଦ ଅଲଗା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>दो वर्णों के मिलने से जो ध्वनि-परिवर्तन होता है, उसे संधि कहते हैं। (१) स्वर संधि – देव + इन्द्र = देवेन्द्र, गण + ईश = गणेश।</p><p>(२) व्यंजन संधि – सत् + जन = सज्जन, उत् + हार = उद्धार। (३) विसर्ग संधि – मनः + रथ = मनोरथ, निः + चल = निश्चल।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=27">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୭–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=37" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୭</a></small></article>
+<article id="exercise-4"><h2>संधि 3. पन्द्रह शब्दों का संधि-विच्छेद कीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘निश्चल’ର ଶେଷ ଅଂଶ चल, କିନ୍ତୁ ଆଗର ମୂଳ ଅଂଶ निः। ବିସର୍ଗ ଓ च ମିଶିବାର ନିୟମକୁ ଓଲଟା ଲଗାଇଲେ ବିଚ୍ଛେଦରେ ନିଜ ମୂଳ ଅକ୍ଷର ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>निश्चल = निः + चल। निष्पाप = निः + पाप।</p><p>महीन्द्र = मही + इन्द्र। गुरूपदेश = गुरु + उपदेश।</p><p>पत्राचार = पत्र + आचार। पुरुषोत्तम = पुरुष + उत्तम।</p><p>जगन्नाथ = जगत् + नाथ। नीलाचल = नील + अचल।</p><p>देवर्षि = देव + ऋषि। मन्वन्तर = मनु + अन्तर।</p><p>पित्रादेश = पितृ + आदेश। सदैव = सदा + एव।</p><p>उज्ज्वल = उत् + ज्वल। उद्घाटन = उत् + घाटन।</p><p>सदानन्द = सदा + आनन्द।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=27">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୭–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=37" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୭</a></small></article>
+<article id="exercise-5"><h2>संधि 4. दिए पदों को पंक्ति के क्रम में जोड़िए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘गण + ईश’ରେ ଦୁଇ ପଦର ସୀମାରେ अ ଓ ई ମିଶି ए ହୁଏ, ତେଣୁ गणेश। ପ୍ରତ୍ୟେକ ଯୋଡ଼ିର ମଝି ଧ୍ୱନି ଚିହ୍ନି ନିୟମ ଲଗାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(१) षट् + मास = षण्मास, परम + अर्थ = परमार्थ, अनु + अय = अन्वय। (२) तपः + वन = तपोवन, राजा + ऋषि = राजर्षि, महा + उत्सव = महोत्सव।</p><p>(३) भौ + उक = भावुक, गण + ईश = गणेश, सत् + जन = सज्जन। (४) धनुः + टंकार = धनुष्टंकार, सम् + वाद = संवाद, मनः + ताप = मनस्ताप।</p><p>(५) निः + आशा = निराशा, उत् + हार = उद्धार, तथा + एव = तथैव।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=27">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୭–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=37" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୭</a></small></article>
+<article id="exercise-6"><h2>समास 1. पाठ के अनुसार समास के मुख्य भेद और उनके दो-दो उदाहरण दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘प्रतिदिन’ରେ ପ୍ରତି ଦିନର ଭାବ ଆସୁଛି ଓ ଏହା ଅବ୍ୟୟ ପରି ବସେ। ‘देशभक्त’କୁ देश का भक्त କରି ପଢ଼ିଲେ ଦୁଇ ପଦ ମଧ୍ୟର କାରକ ସମ୍ପର୍କ ମିଳେ। ତେଣୁ ଏହା तत्पुरुष।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>चार मुख्य भेद हैं। अव्ययीभाव – प्रतिदिन, भरपेट।</p><p>तत्पुरुष – शरणागत, देशभक्ति। द्वन्द्व – माता-पिता, भला-बुरा।</p><p>बहुव्रीहि – दशानन, लम्बोदर। पाठ में कर्मधारय और द्विगु को तत्पुरुष के अंतर्गत रखा है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮–୪୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-7"><h2>समास 2. दिए समस्त पदों का विग्रह कीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘विधानसभा’ର ବିଗ୍ରହରେ की ସମ୍ବନ୍ଧ ଫେରେ। ‘पददलित’ରେ पद ପଦଦଳନ କାମର ସାଧନ ହେବାରୁ से ଲାଗେ। ମୂଳ ଶବ୍ଦ ଅଲଗା କରିବା ସହ ଏହି ସମ୍ପର୍କ ପ୍ରକାଶ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>दुखार्त – दुःख से आर्त, विधानसभा – विधान की सभा, पददलित – पद से दलित, भरपेट – पेट भरकर, ऋणमुक्त – ऋण से मुक्त, श्रमदान – श्रम का दान, गृहप्रवेश – गृह में प्रवेश, त्रिगुण – तीन गुणों का समूह, महाकाव्य – महान् काव्य, देशान्तर – अन्य देश, घृतान्न – घृत से मिश्रित अन्न, घनश्याम – घन के समान श्याम, चतुरानन – चार आनन हैं जिसके, नाक-कान – नाक और कान, पापपुण्य – पाप और पुण्य, सीताराम – सीता और राम, भलाबुरा – भला और बुरा, विद्यासागर – विद्या का सागर।</p><p>सूची के अन्त में चतुरानन दोबारा आया है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮–୪୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-8"><h2>समास 3. बारह विग्रहों से समस्त पद बनाकर समास पहचानिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘दशानन’ରେ ଦଶଟି ମୁଖ ଯାହାର ସେହି ବ୍ୟକ୍ତିକୁ କୁହାଯାଇଛି। କେବଳ ମୁଖର ସମୂହକୁ କହୁନଥିବାରୁ ଅନ୍ୟପଦ ପ୍ରଧାନ ହୋଇ बहुव्रीहि ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(१) दशानन – बहुव्रीहि। (२) आमरण – अव्ययीभाव।</p><p>(३) नरसिंह – उपमित कर्मधारय। (४) ग्रामान्तर – कर्मधारय।</p><p>(५) चरणकमल – उपमित कर्मधारय। (६) चौराहा – द्विगु।</p><p>(७) कुंभकार – उपपद तत्पुरुष। (८) दिगम्बर – बहुव्रीहि।</p><p>(९) दाल-भात / भात-दाल – द्वन्द्व। (१०) ग्रामोद्धार – संबंध तत्पुरुष।</p><p>(११) महाबली – कर्मधारय। (१२) जलजात – ‘जल से जात’, अपादान तत्पुरुष।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮–୪୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-9"><h2>समास 4. मिलान कीजिए और जहाँ विकल्प नहीं मिलता वहाँ कारण पहचानिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘मनमाना’ରେ ‘मन से माना’ ହେଉଛି करण तत्पुरुषର ସ୍ପଷ୍ଟ ବିଗ୍ରହ। ପଦର ଯୁକ୍ତିସଙ୍ଗତ ଅର୍ଥ ସହ ବିକଳ୍ପର ବର୍ଗ ମେଳିବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>करण तत्पुरुष का स्पष्ट मेल ‘मनमाना’ (मन से माना) है। ‘मुखचन्द्र’ को ‘मुख चन्द्र के समान’ मानें तो उपमित कर्मधारय बनता है, पर पृ. १८ पर पुस्तक ने ‘मुख ही है चन्द्र’ कहकर इसे रूपक कर्मधारय का उदाहरण दिया है।</p><p>‘महापुरुष’ महान् पुरुष है और ‘मरणोत्तर’ मरण के बाद का। किसी में प्रथम पद संख्यावाचक नहीं है, इसलिए द्विगु का उपयुक्त विकल्प नहीं है।</p><p>अव्ययीभाव के लिए भी पुस्तक के उदाहरण ‘प्रतिदिन’ जैसा स्पष्ट विकल्प नहीं दिया है। चार एक-एक जोड़ियाँ बनाना संभव नहीं है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮–୪୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=44" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୪–୪୭</a></small></article>
+<article id="exercise-10"><h2>उपसर्ग-प्रत्यय 1. सभी शब्दों में उपसर्ग और मूल अलग कीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘अबोध’ରେ अ ହଟାଇଲେ बोध ମିଳେ। ପ୍ରଥମ ଅଂଶ ଲାଗିଲେ ବୋଧ ନଥିବାର ଭାବ ଆସିଲା। ଏଭଳି ମୂଳ ରୂପ ଫେରୁଛି କି ଦେଖି ଉପସର୍ଗ ଅଲଗା କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>अन + पढ़, अ + बोध, क + पूत, भर + पूर, हर + दम, प्रति + कूल, सम् + कार (संस्कार), प्र + चार, अप + शब्द, उप + देश, परि + क्रमा, अधि + पति, बद + सूरत, बा + कायदा, वि + ज्ञान, बे + चैन, उत् + थान, निः + चय, ना + समझ, नि + डर।</p><p>संस्कार, उत्थान और निश्चय में जोड़ते समय रूप बदलता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=48">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୮–୫୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯</a></small></article>
+<article id="exercise-11"><h2>उपसर्ग-प्रत्यय 2. दस उपसर्गों से दो-दो शब्द बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘अधपका’ ଅଧା ପାଚିଥିବା ଓ ‘अधमरा’ ପୂରା ମରିନଥିବା ଅବସ୍ଥା ଜଣାଏ। पका ଓ मरा ବଦଳିଲେ ମଧ୍ୟ ଆଗର अध ଦୁହିଁଠି ଅସମ୍ପୂର୍ଣ୍ଣତା ଦେଖାଉଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>अध – अधपका, अधमरा। नि – निडर, निहत्था।</p><p>बद – बदसूरत, बदनाम। ला – लापता, लाजवाब।</p><p>हर – हरदम, हररोज। निर् – निर्जन, निर्दोष।</p><p>परा – पराजय, पराभव। अनु – अनुकरण, अनुवाद।</p><p>उप – उपकार, उपदेश। अभि – अभिमान, अभियान।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=48">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୮–୫୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯</a></small></article>
+<article id="exercise-12"><h2>उपसर्ग-प्रत्यय 3. शब्दों को मूल और प्रत्यय में बाँटिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘घूम’ ଧାତୁରୁ घुमक्कड़ ଶବ୍ଦ ଗଢ଼ିବାବେଳେ ସ୍ୱରରୂପ ମଧ୍ୟ ବଦଳିଛି। ସେଥିପାଇଁ ଅନ୍ତ୍ୟାଂଶ କାଟି ଯାହା ଦିଶେ ସେତିକି ମୂଳ ଶବ୍ଦ ବୋଲି ଧରିବା ଅପୂର୍ଣ୍ଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>खाऊ = खा + ऊ, घुमक्कड़ = घूम + अक्कड़, लुटेरा = लूट + एरा, लड़ाका = लड़ + आका, खिलौना = खेल + औना, चढ़ाई = चढ़ + आई, बसेरा = बस + एरा, बढ़ती = बढ़ + ती, सजावट = सज + आवट, घबराहट = घबरा + आहट, गाड़ीवाला = गाड़ी + वाला, लुहार = लोहा + आर, मूर्खता = मूर्ख + ता, पिछला = पीछे + ला, प्यासा = प्यास + आ, मिठास = मीठा + आस, झूला = झूल + आ, थकान = थक + आन, छलनी = छल + नी।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯</a></small></article>
+<article id="exercise-13"><h2>उपसर्ग-प्रत्यय 4–5. संज्ञाओं से विशेषण और क्रियाओं से भाववाचक संज्ञाएँ बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘सप्ताह’ ସପ୍ତାହର ନାମ, ‘साप्ताहिक’ ସପ୍ତାହ ସମ୍ବନ୍ଧୀୟ କଥା ଜଣାଏ। ପ୍ରତ୍ୟୟ ଲଗାଇବା ପରେ ଶବ୍ଦର କାମ ସଂଜ୍ଞାରୁ ବିଶେଷଣ ହୋଇଛି। ଆରମ୍ଭର ସ୍ୱର ମଧ୍ୟ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>४. सप्ताह – साप्ताहिक, स्वर्ग – स्वर्गीय, शरीर – शारीरिक, गर्मी – गर्म, जहर – जहरीला, जाति – जातीय, खुशी – खुश, बुद्धि – बुद्धिमान, क्षुधा – क्षुधित, खून – खूनी। ५. उड़ना – उड़ान, लड़ना – लड़ाई, देखना – देखना (क्रिया का संज्ञा रूप, जैसे ‘देखना जरूरी है’), हारना – हार, छींकना – छींक, झगड़ना – झगड़ा, घटना – घटाव, पकड़ना – पकड़, दौड़ना – दौड़, समझना – समझ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯</a></small></article>
+<article id="exercise-14"><h2>उपसर्ग-प्रत्यय 6–7. दिए कृत् और तद्धित प्रत्ययों से शब्द बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>कृत्‌ର ଆଧାର ଧାତୁ। ଯଥା सजना ସହ ସମ୍ବନ୍ଧିତ ମୂଳ सज ଓ ‘आवट’ରୁ सजावट। तद्धितରେ ନାମପଦ ବା ଗୁଣସୂଚକ ପଦ ମୂଳ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>६. अनीय – पठनीय, आवट – सजावट, अक्कड़ – घुमक्कड़, आलू – झगड़ालू, इयल – अड़ियल, ई – हँसी, ऊ – खाऊ, एरा – बसेरा, वाला – पढ़नेवाला, औती – कटौती। ७. इक – धार्मिक, ईय – भारतीय, मान – बुद्धिमान, खोर – घूसखोर, आहट – कड़वाहट, आई – भलाई, ईला – रंगीला, वाला – घरवाला, गर – कारीगर, दान – कलमदान, नाक – खतरनाक, पन – बचपन।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯</a></small></article>
+
+</main></body></html>

@@ -1,0 +1,1432 @@
+export default {
+  "subject": "social-science",
+  "setNumber": 2,
+  "objective": [
+    {
+      "prompt": "ଗାନ୍ଧିଜୀଙ୍କ ପ୍ରାରମ୍ଭିକ କାର୍ଯ୍ୟ। “ଗାନ୍ଧିଜୀଙ୍କ ଜନ୍ମସ୍ଥାନ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଇଣ୍ଡିଆନ୍ ଓପିନିଅନ୍",
+        "ପୋରବନ୍ଦର",
+        "ନାଟାଲ୍ ଭାରତୀୟ କଂଗ୍ରେସ",
+        "ରାଜକୁମାର ଶୁକ୍ଳ"
+      ],
+      "correct": 1,
+      "answer": "ଗାନ୍ଧିଜୀଙ୍କ ଜନ୍ମସ୍ଥାନ — ପୋରବନ୍ଦର।",
+      "pages": [
+        1
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "କ୍ରମରେ ମେଳାଅ। (କ) ଦକ୍ଷିଣ ଆଫ୍ରିକାରେ ଭାରତୀୟଙ୍କ ପ୍ରତି ଅନ୍ୟାୟ ପ୍ରଚାର ପାଇଁ ପତ୍ରିକା। (ଖ) ଚମ୍ପାରନ୍‌ର ଚାଷୀଙ୍କ ପାଇଁ ଗାନ୍ଧିଜୀଙ୍କୁ ନିମନ୍ତ୍ରଣ କରିଥିବା ବ୍ୟକ୍ତି।",
+      "options": [
+        "ପୋରବନ୍ଦର / ନାଟାଲ୍ ଭାରତୀୟ କଂଗ୍ରେସ",
+        "ନାଟାଲ୍ ଭାରତୀୟ କଂଗ୍ରେସ / ଇଣ୍ଡିଆନ୍ ଓପିନିଅନ୍",
+        "ରାଜକୁମାର ଶୁକ୍ଳ / ପୋରବନ୍ଦର",
+        "ଇଣ୍ଡିଆନ୍ ଓପିନିଅନ୍ / ରାଜକୁମାର ଶୁକ୍ଳ"
+      ],
+      "correct": 3,
+      "answer": "ପ୍ରଥମ ବିବରଣୀ ସହ ଇଣ୍ଡିଆନ୍ ଓପିନିଅନ୍ ଓ ଦ୍ୱିତୀୟ ବିବରଣୀ ସହ ରାଜକୁମାର ଶୁକ୍ଳ ମେଳ ଖାଏ।",
+      "pages": [
+        2,
+        3
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "ଜାତୀୟ ଆନ୍ଦୋଳନର ଘଟଣାକ୍ରମ। “ସାବରମତୀ ଆଶ୍ରମରୁ ଦାଣ୍ଡି ଅଭିମୁଖେ ଯାତ୍ରାର ଆରମ୍ଭ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "୨୧ ଅକ୍ଟୋବର ୧୯୪୩",
+        "୧ ଅଗଷ୍ଟ ୧୯୨୦",
+        "୬ ଏପ୍ରିଲ ୧୯୩୦",
+        "୧୨ ମାର୍ଚ୍ଚ ୧୯୩୦"
+      ],
+      "correct": 3,
+      "answer": "ସାବରମତୀ ଆଶ୍ରମରୁ ଦାଣ୍ଡି ଅଭିମୁଖେ ଯାତ୍ରାର ଆରମ୍ଭ — ୧୨ ମାର୍ଚ୍ଚ ୧୯୩୦।",
+      "pages": [
+        18
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "“୨୧ ଅକ୍ଟୋବର ୧୯୪୩” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ସିଙ୍ଗାପୁରରେ ଆଜାଦ୍ ହିନ୍ଦ୍ ସରକାର ଗଠନ",
+        "ସାବରମତୀ ଆଶ୍ରମରୁ ଦାଣ୍ଡି ଅଭିମୁଖେ ଯାତ୍ରାର ଆରମ୍ଭ",
+        "ଅସହଯୋଗ ଆନ୍ଦୋଳନର ଆନୁଷ୍ଠାନିକ ଆରମ୍ଭ",
+        "ଦାଣ୍ଡି ସମୁଦ୍ରକୂଳରେ ଲବଣ ଆଇନ ଭଙ୍ଗ"
+      ],
+      "correct": 0,
+      "answer": "୨୧ ଅକ୍ଟୋବର ୧୯୪୩ — ସିଙ୍ଗାପୁରରେ ଆଜାଦ୍ ହିନ୍ଦ୍ ସରକାର ଗଠନ।",
+      "pages": [
+        38
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ପଞ୍ଚବାର୍ଷିକ ଯୋଜନାର ପ୍ରାଥମିକତାକୁ ଠିକ୍ କ୍ରମରେ ବାଛ।",
+      "options": [
+        "ଉଭୟରେ କେବଳ ପ୍ରତିରକ୍ଷା",
+        "ଶିଳ୍ପ, ତା’ପରେ କୃଷି ଓ ଜଳସେଚନ",
+        "ଉଭୟରେ କେବଳ ଶିଳ୍ପ",
+        "କୃଷି ଓ ଜଳସେଚନ, ତା’ପରେ ଶିଳ୍ପ"
+      ],
+      "correct": 3,
+      "answer": "ପ୍ରଥମ ଯୋଜନା କୃଷି ଓ ଜଳସେଚନକୁ ଏବଂ ଦ୍ୱିତୀୟଟି ଶିଳ୍ପ ବିକାଶକୁ ପ୍ରାଧାନ୍ୟ ଦେଲା।",
+      "pages": [
+        22,
+        25
+      ],
+      "chapter": "india-after-independence",
+      "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+      "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+    },
+    {
+      "prompt": "“ଚମ୍ପାରନ୍” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ଆଜାଦ୍ ହିନ୍ଦ୍ ସରକାର ପ୍ରତିଷ୍ଠାର ସ୍ଥାନ",
+        "୧୯୨୯ରେ ପୂର୍ଣ୍ଣ ସ୍ୱରାଜ ଲକ୍ଷ୍ୟ ନିର୍ଦ୍ଧାରଣ କରିଥିବା କଂଗ୍ରେସ ଅଧିବେଶନ",
+        "ତିନିକାଠିଆ ବ୍ୟବସ୍ଥାର ପ୍ରତିବାଦ",
+        "ବାଲେଶ୍ୱର ଜିଲ୍ଲାର ଲବଣ ସତ୍ୟାଗ୍ରହ କେନ୍ଦ୍ର"
+      ],
+      "correct": 2,
+      "answer": "ଚମ୍ପାରନ୍ — ତିନିକାଠିଆ ବ୍ୟବସ୍ଥାର ପ୍ରତିବାଦ।",
+      "pages": [
+        3
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "ସ୍ୱାଧୀନତା ସଂଗ୍ରାମର ପରିଚୟ। “ନେତାଜୀ ନିକୋବରକୁ ଦେଇଥିବା ନାମ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ସ୍ୱରାଜ",
+        "କର ବା ମର",
+        "ଶହୀଦ",
+        "ଝାନ୍‌ସୀ ରାଣୀ ବ୍ରିଗେଡ୍"
+      ],
+      "correct": 0,
+      "answer": "ନେତାଜୀ ନିକୋବରକୁ ଦେଇଥିବା ନାମ — ସ୍ୱରାଜ।",
+      "pages": [
+        38
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "କ୍ରମରେ ମେଳାଅ। (କ) ଆଜାଦ୍ ହିନ୍ଦ୍ ଫୌଜର ମହିଳା ଶାଖା। (ଖ) ନେତାଜୀ ଆଣ୍ଡାମାନକୁ ଦେଇଥିବା ନାମ।",
+      "options": [
+        "କର ବା ମର / ଝାନ୍‌ସୀ ରାଣୀ ବ୍ରିଗେଡ୍",
+        "ଝାନ୍‌ସୀ ରାଣୀ ବ୍ରିଗେଡ୍ / ଶହୀଦ",
+        "ସ୍ୱରାଜ / କର ବା ମର",
+        "ଶହୀଦ / ସ୍ୱରାଜ"
+      ],
+      "correct": 1,
+      "answer": "ପ୍ରଥମ ବିବରଣୀ ସହ ଝାନ୍‌ସୀ ରାଣୀ ବ୍ରିଗେଡ୍ ଓ ଦ୍ୱିତୀୟ ବିବରଣୀ ସହ ଶହୀଦ ମେଳ ଖାଏ।",
+      "pages": [
+        38,
+        38
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନର ପଟଭୂମି। “ଓଡ଼ିଶାରେ ଇଂରେଜ ଶାସନ ପ୍ରତିଷ୍ଠା” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "୧୯୦୩",
+        "୧୮୦୩",
+        "୧୯୩୬",
+        "୧୮୬୬"
+      ],
+      "correct": 1,
+      "answer": "ଓଡ଼ିଶାରେ ଇଂରେଜ ଶାସନ ପ୍ରତିଷ୍ଠା — ୧୮୦୩।",
+      "pages": [
+        1
+      ],
+      "chapter": "separate-odisha",
+      "title": "ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ",
+      "source": "social-science/history-and-political-science/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1x_ExOgYtCCtrMWE5t9975dxMaS76k_Ut/view"
+    },
+    {
+      "prompt": "“୧୯୦୩” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନ",
+        "ଓଡ଼ିଶାରେ ଇଂରେଜ ଶାସନ ପ୍ରତିଷ୍ଠା",
+        "ନଅଙ୍କ ଦୁର୍ଭିକ୍ଷ",
+        "ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ"
+      ],
+      "correct": 0,
+      "answer": "୧୯୦୩ — ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନ।",
+      "pages": [
+        8
+      ],
+      "chapter": "separate-odisha",
+      "title": "ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ",
+      "source": "social-science/history-and-political-science/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1x_ExOgYtCCtrMWE5t9975dxMaS76k_Ut/view"
+    },
+    {
+      "prompt": "ଜଣେ ଚାଷୀ ଚାଷ ଆରମ୍ଭର ଖର୍ଚ୍ଚ ଉଠାଇ ପାରୁନଥିଲେ। ପାଠରେ ବର୍ଣ୍ଣିତ କେଉଁ ସହାୟତା ତାଙ୍କ ପାଇଁ ସିଧାସଳଖ ପ୍ରଯୁଜ୍ୟ?",
+      "options": [
+        "ଗ୍ରାମଜ୍ୟୋତି ଯୋଜନା",
+        "ଶିଳ୍ପ ତାଲିମ",
+        "ତକାଭି ଋଣ",
+        "ଗଡ଼ଜାତ ମିଶ୍ରଣ"
+      ],
+      "correct": 2,
+      "answer": "ତକାଭି ଋଣ ଚାଷ ଆରମ୍ଭର ଖର୍ଚ୍ଚ ପୂରଣ ପାଇଁ ଦିଆଯାଉଥିଲା।",
+      "pages": [
+        14,
+        17
+      ],
+      "chapter": "odisha-development",
+      "title": "ସ୍ୱାଧୀନତୋତ୍ତର ଓଡ଼ିଶାର ବିକାଶ",
+      "source": "social-science/history-and-political-science/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pkewMEbI9oxzWes2f_Ldxx34GXhzvXHR/view"
+    },
+    {
+      "prompt": "“ହରେକୃଷ୍ଣ ମହତାବ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ନିଜ ପ୍ରଧାନମନ୍ତ୍ରୀ ପଦର ଦରମା ଉତ୍କଳ ବିଶ୍ୱବିଦ୍ୟାଳୟକୁ ଦାନ",
+        "ଓଡ଼ିଶା ସହ ଗଡ଼ଜାତ ମିଶ୍ରଣ ସମୟରେ ସରକାରର ନେତୃତ୍ୱ",
+        "ଉତ୍କଳ ସମ୍ମିଳନୀ ଗଠନ ଉଦ୍ୟମରେ ଉତ୍କଳ ଗୌରବ",
+        "ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନର ସଭାପତି"
+      ],
+      "correct": 1,
+      "answer": "ହରେକୃଷ୍ଣ ମହତାବ — ଓଡ଼ିଶା ସହ ଗଡ଼ଜାତ ମିଶ୍ରଣ ସମୟରେ ସରକାରର ନେତୃତ୍ୱ।",
+      "pages": [
+        26
+      ],
+      "chapter": "separate-odisha",
+      "title": "ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ",
+      "source": "social-science/history-and-political-science/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1x_ExOgYtCCtrMWE5t9975dxMaS76k_Ut/view"
+    },
+    {
+      "prompt": "ସ୍ୱାଧୀନତା ଓ ଶାସନ। “ପାକିସ୍ତାନର ପ୍ରଥମ ପ୍ରଧାନମନ୍ତ୍ରୀ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ମହମ୍ମଦ ଅଲ୍ଲୀ ଜିନ୍ନା",
+        "ଲିଆକତ୍ ଅଲ୍ଲୀ ଖାଁ",
+        "ଲର୍ଡ ମାଉଣ୍ଟବ୍ୟାଟେନ",
+        "ଜବାହରଲାଲ ନେହେରୁ"
+      ],
+      "correct": 1,
+      "answer": "ପାକିସ୍ତାନର ପ୍ରଥମ ପ୍ରଧାନମନ୍ତ୍ରୀ — ଲିଆକତ୍ ଅଲ୍ଲୀ ଖାଁ।",
+      "pages": [
+        45
+      ],
+      "chapter": "gandhi-era",
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "prompt": "ମିଳନ ପତ୍ରରେ ଦେଶୀୟ ରାଜ୍ୟରୁ ଭାରତକୁ ଆସିଥିବା ତିନି ଦାୟିତ୍ୱ ମଧ୍ୟରେ କେଉଁଟି ପଡ଼େ?",
+      "options": [
+        "କୃଷି ଋଣ ବଣ୍ଟନ",
+        "ପ୍ରାଥମିକ ଶିକ୍ଷା",
+        "ସ୍ଥାନୀୟ ହାଟ ପରିଚାଳନା",
+        "ପ୍ରତିରକ୍ଷା"
+      ],
+      "correct": 3,
+      "answer": "ତିନିଟି ଦାୟିତ୍ୱ ଥିଲା ପ୍ରତିରକ୍ଷା, ବୈଦେଶିକ ବ୍ୟାପାର ଓ ଯୋଗାଯୋଗ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "india-after-independence",
+      "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+      "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+    },
+    {
+      "prompt": "ବିକାଶ ଓ ରାଷ୍ଟ୍ରଗଠନ। “ଶହେରୁ କମ୍ ଲୋକ ଥିବା ଗାଁର ବିଦ୍ୟୁତୀକରଣ ପାଇଁ ରାଜ୍ୟ ଯୋଜନା” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ବିଜୁ ଗ୍ରାମଜ୍ୟୋତି",
+        "APPLE",
+        "ମିଳନ ପତ୍ର",
+        "ତକାଭି ଋଣ"
+      ],
+      "correct": 0,
+      "answer": "ଶହେରୁ କମ୍ ଲୋକ ଥିବା ଗାଁର ବିଦ୍ୟୁତୀକରଣ ପାଇଁ ରାଜ୍ୟ ଯୋଜନା — ବିଜୁ ଗ୍ରାମଜ୍ୟୋତି।",
+      "pages": [
+        31
+      ],
+      "chapter": "odisha-development",
+      "title": "ସ୍ୱାଧୀନତୋତ୍ତର ଓଡ଼ିଶାର ବିକାଶ",
+      "source": "social-science/history-and-political-science/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pkewMEbI9oxzWes2f_Ldxx34GXhzvXHR/view"
+    },
+    {
+      "prompt": "“APPLE” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "୧୯୮୧ ଜୁନ୍‌ରେ ଉତ୍‌କ୍ଷେପିତ ଭାରତୀୟ ଯୋଗାଯୋଗ ଉପଗ୍ରହ",
+        "ଚାଷ ଆରମ୍ଭ କରିବାକୁ କୃଷକଙ୍କୁ ଦିଆଯାଉଥିବା ଋଣ",
+        "ଶହେରୁ କମ୍ ଲୋକ ଥିବା ଗାଁର ବିଦ୍ୟୁତୀକରଣ ପାଇଁ ରାଜ୍ୟ ଯୋଜନା",
+        "ପଟେଲ ଓ ମେନନଙ୍କ ଦ୍ୱାରା ଦେଶୀୟ ରାଜ୍ୟର ମିଶ୍ରଣ ପାଇଁ ପ୍ରସ୍ତୁତ ଦଲିଲ"
+      ],
+      "correct": 0,
+      "answer": "APPLE — ୧୯୮୧ ଜୁନ୍‌ରେ ଉତ୍‌କ୍ଷେପିତ ଭାରତୀୟ ଯୋଗାଯୋଗ ଉପଗ୍ରହ।",
+      "pages": [
+        32
+      ],
+      "chapter": "india-after-independence",
+      "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+      "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+    },
+    {
+      "prompt": "ରାଜ୍ୟ ପୁନଃଗଠନ। “୧୯୬୧ରେ ଭାରତରେ ମିଶି ୧୯୮୭ରେ ରାଜ୍ୟ ହୋଇଥିବା ଅଞ୍ଚଳ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଗୋଆ",
+        "ତାମିଲନାଡୁ",
+        "ତେଲେଙ୍ଗାନା",
+        "କର୍ଣ୍ଣାଟକ"
+      ],
+      "correct": 0,
+      "answer": "୧୯୬୧ରେ ଭାରତରେ ମିଶି ୧୯୮୭ରେ ରାଜ୍ୟ ହୋଇଥିବା ଅଞ୍ଚଳ — ଗୋଆ।",
+      "pages": [
+        6
+      ],
+      "chapter": "state-reorganisation",
+      "title": "ଭାରତରେ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ରାଜ୍ୟ ପୁନଃଗଠନ",
+      "source": "social-science/history-and-political-science/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/15msbozZzT1tAAsXGnHdaevzVvLr3nFV_/view"
+    },
+    {
+      "prompt": "“ତାମିଲନାଡୁ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "୨ ଜୁନ୍ ୨୦୧୪ରେ ଗଠିତ ରାଜ୍ୟ",
+        "ମାଡ୍ରାସ୍ ରାଜ୍ୟର ପରିବର୍ତ୍ତିତ ନାମ",
+        "୧୯୬୧ରେ ଭାରତରେ ମିଶି ୧୯୮୭ରେ ରାଜ୍ୟ ହୋଇଥିବା ଅଞ୍ଚଳ",
+        "ମହୀଶୂର ରାଜ୍ୟର ପରିବର୍ତ୍ତିତ ନାମ"
+      ],
+      "correct": 1,
+      "answer": "ତାମିଲନାଡୁ — ମାଡ୍ରାସ୍ ରାଜ୍ୟର ପରିବର୍ତ୍ତିତ ନାମ।",
+      "pages": [
+        6
+      ],
+      "chapter": "state-reorganisation",
+      "title": "ଭାରତରେ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ରାଜ୍ୟ ପୁନଃଗଠନ",
+      "source": "social-science/history-and-political-science/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/15msbozZzT1tAAsXGnHdaevzVvLr3nFV_/view"
+    },
+    {
+      "prompt": "ନିର୍ବାଚନର ପରିସ୍ଥିତି। “ନିର୍ଦ୍ଧାରିତ ସମୟ ପୂର୍ବରୁ ସଭା ଭଙ୍ଗ ହେତୁ ନୂଆ ସଭା ଚୟନ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଉପ-ନିର୍ବାଚନ",
+        "ମଧ୍ୟବର୍ତ୍ତୀକାଳୀନ ନିର୍ବାଚନ",
+        "ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନ",
+        "ପରୋକ୍ଷ ନିର୍ବାଚନ"
+      ],
+      "correct": 1,
+      "answer": "ନିର୍ଦ୍ଧାରିତ ସମୟ ପୂର୍ବରୁ ସଭା ଭଙ୍ଗ ହେତୁ ନୂଆ ସଭା ଚୟନ — ମଧ୍ୟବର୍ତ୍ତୀକାଳୀନ ନିର୍ବାଚନ।",
+      "pages": [
+        1
+      ],
+      "chapter": "democracy",
+      "title": "ଭାରତରେ ଗଣତନ୍ତ୍ର",
+      "source": "social-science/history-and-political-science/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1xLzQLWuR_0vQmouaFcOgRFHQPEbEOc0L/view"
+    },
+    {
+      "prompt": "କ୍ରମରେ ମେଳାଅ। (କ) ନିର୍ବାଚକ ମଣ୍ଡଳୀ ମାଧ୍ୟମରେ ରାଷ୍ଟ୍ରପତି ବାଛିବାର ପଦ୍ଧତି। (ଖ) ସଭା ଭଙ୍ଗ ନ ହୋଇ ଗୋଟିଏ ଆସନର ଅବଶିଷ୍ଟ କାଳ ପାଇଁ ଚୟନ।",
+      "options": [
+        "ମଧ୍ୟବର୍ତ୍ତୀକାଳୀନ ନିର୍ବାଚନ / ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନ",
+        "ପରୋକ୍ଷ ନିର୍ବାଚନ / ଉପ-ନିର୍ବାଚନ",
+        "ଉପ-ନିର୍ବାଚନ / ମଧ୍ୟବର୍ତ୍ତୀକାଳୀନ ନିର୍ବାଚନ",
+        "ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନ / ପରୋକ୍ଷ ନିର୍ବାଚନ"
+      ],
+      "correct": 1,
+      "answer": "ପ୍ରଥମ ବିବରଣୀ ସହ ପରୋକ୍ଷ ନିର୍ବାଚନ ଓ ଦ୍ୱିତୀୟ ବିବରଣୀ ସହ ଉପ-ନିର୍ବାଚନ ମେଳ ଖାଏ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "democracy",
+      "title": "ଭାରତରେ ଗଣତନ୍ତ୍ର",
+      "source": "social-science/history-and-political-science/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1xLzQLWuR_0vQmouaFcOgRFHQPEbEOc0L/view"
+    },
+    {
+      "prompt": "ରାସ୍ତାରେ ନିଷ୍ପତ୍ତି। “ଏକ ଯାନରେ ଅନେକ ଯାତ୍ରୀ ଯାଇ ଇନ୍ଧନ ସଞ୍ଚୟ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ସାଇକେଲ ଚଳାଇବା",
+        "ସାର୍ବଜନୀନ ପରିବହନ ବାଛିବା",
+        "ଅନ୍ୟ ଯାନକୁ ଅଗ୍ରାଧିକାର ଦେବା",
+        "ଗାଡ଼ି ଅଟକାଇବା"
+      ],
+      "correct": 1,
+      "answer": "ଏକ ଯାନରେ ଅନେକ ଯାତ୍ରୀ ଯାଇ ଇନ୍ଧନ ସଞ୍ଚୟ — ସାର୍ବଜନୀନ ପରିବହନ ବାଛିବା।",
+      "pages": [
+        6
+      ],
+      "chapter": "road-safety",
+      "title": "ସଡ଼କ ନିରାପତ୍ତା, ସଚେତନତା ଓ ଇନ୍ଧନ ସଂରକ୍ଷଣ",
+      "source": "social-science/history-and-political-science/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1BWnRonzAJcYXQ1SafSzU8TUu8AoxBQoy/view"
+    },
+    {
+      "prompt": "ଦୁଇ ଶକ୍ତିଗୋଷ୍ଠୀରୁ କାହା ସହ ପୂର୍ବରୁ ବନ୍ଧା ନ ରହି ଭାରତ ଆନ୍ତର୍ଜାତିକ ପ୍ରସଙ୍ଗରେ ନିଜେ ନିଷ୍ପତ୍ତି ନେଲା। ଏହା କେଉଁ ନୀତିର ପ୍ରୟୋଗ?",
+      "options": [
+        "ସାମରିକ ଗୋଷ୍ଠୀର ସଦସ୍ୟତା",
+        "ଉପନିବେଶବାଦ",
+        "ଗୋଷ୍ଠୀନିରପେକ୍ଷତା",
+        "ବର୍ଣ୍ଣବୈଷମ୍ୟ"
+      ],
+      "correct": 2,
+      "answer": "ଗୋଷ୍ଠୀନିରପେକ୍ଷତାରେ ପ୍ରସଙ୍ଗର ଗୁଣଦୋଷ ଅନୁସାରେ ସ୍ୱାଧୀନ ମତ ନିଆଯାଏ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "foreign-policy",
+      "title": "ଭାରତର ବୈଦେଶିକ ନୀତି",
+      "source": "social-science/history-and-political-science/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1C8ZBbS-Alt3d64_BKL_WisTcux_ttEnf/view"
+    },
+    {
+      "prompt": "ବୈଦେଶିକ ନୀତିର ଧାରଣା। “ଜାତୀୟ ସ୍ୱାର୍ଥ ଅନୁସାରେ ଅନ୍ୟ ରାଷ୍ଟ୍ର ସହ ସମ୍ପର୍କ ପରିଚାଳନାର ନୀତି” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଗୋଷ୍ଠୀନିରପେକ୍ଷତା",
+        "ପଞ୍ଚଶୀଳ",
+        "ଶୀତଳ ଯୁଦ୍ଧ",
+        "ବୈଦେଶିକ ନୀତି"
+      ],
+      "correct": 3,
+      "answer": "ଜାତୀୟ ସ୍ୱାର୍ଥ ଅନୁସାରେ ଅନ୍ୟ ରାଷ୍ଟ୍ର ସହ ସମ୍ପର୍କ ପରିଚାଳନାର ନୀତି — ବୈଦେଶିକ ନୀତି।",
+      "pages": [
+        1
+      ],
+      "chapter": "foreign-policy",
+      "title": "ଭାରତର ବୈଦେଶିକ ନୀତି",
+      "source": "social-science/history-and-political-science/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1C8ZBbS-Alt3d64_BKL_WisTcux_ttEnf/view"
+    },
+    {
+      "prompt": "“ପଞ୍ଚଶୀଳ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "୧୯୫୪ରେ ଚୀନ ଓ ଭାରତ ସ୍ୱୀକାର କରିଥିବା ପାଞ୍ଚ ନୀତି",
+        "କୌଣସି ଶକ୍ତିଗୋଷ୍ଠୀରେ ସାମିଲ ନ ହୋଇ ସ୍ୱାଧୀନ ନିଷ୍ପତ୍ତି",
+        "ଯୁଦ୍ଧ ପରେ ଆମେରିକା ଓ ସୋଭିଏତ୍ ଗୋଷ୍ଠୀର ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱିତା",
+        "ଜାତୀୟ ସ୍ୱାର୍ଥ ଅନୁସାରେ ଅନ୍ୟ ରାଷ୍ଟ୍ର ସହ ସମ୍ପର୍କ ପରିଚାଳନାର ନୀତି"
+      ],
+      "correct": 0,
+      "answer": "ପଞ୍ଚଶୀଳ — ୧୯୫୪ରେ ଚୀନ ଓ ଭାରତ ସ୍ୱୀକାର କରିଥିବା ପାଞ୍ଚ ନୀତି।",
+      "pages": [
+        2
+      ],
+      "chapter": "foreign-policy",
+      "title": "ଭାରତର ବୈଦେଶିକ ନୀତି",
+      "source": "social-science/history-and-political-science/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1C8ZBbS-Alt3d64_BKL_WisTcux_ttEnf/view"
+    },
+    {
+      "prompt": "ସମୟ ଓ ପରିମାଣ। “ସ୍ୱାଧୀନତା ବେଳକୁ ବ୍ରିଟିଶଙ୍କ ସିଧା ଶାସନ ଅଧୀନରେ ଥିବା ଅଞ୍ଚଳର ପ୍ରାୟ ଅଂଶ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଶତକଡ଼ା ୬୦",
+        "ଅଠର ବର୍ଷ",
+        "ପାଞ୍ଚ ବର୍ଷ",
+        "ତିନି"
+      ],
+      "correct": 0,
+      "answer": "ସ୍ୱାଧୀନତା ବେଳକୁ ବ୍ରିଟିଶଙ୍କ ସିଧା ଶାସନ ଅଧୀନରେ ଥିବା ଅଞ୍ଚଳର ପ୍ରାୟ ଅଂଶ — ଶତକଡ଼ା ୬୦।",
+      "pages": [
+        1
+      ],
+      "chapter": "india-after-independence",
+      "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+      "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+    },
+    {
+      "prompt": "ସମ୍ବଳର ପ୍ରକାର। “ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଅବିରାମ ସମ୍ବଳ",
+        "ଜୈବ ସମ୍ବଳ",
+        "ଅଜୈବ ସମ୍ବଳ",
+        "ଅପୂରଣୀୟ ସମ୍ବଳ"
+      ],
+      "correct": 2,
+      "answer": "ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ — ଅଜୈବ ସମ୍ବଳ।",
+      "pages": [
+        2
+      ],
+      "chapter": "resources",
+      "title": "ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1QoXMNew_3TGAw3uXLbF8VbyZBDF6Gdcs/view"
+    },
+    {
+      "prompt": "“ଅବିରାମ ସମ୍ବଳ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା",
+        "ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ",
+        "କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର",
+        "ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ"
+      ],
+      "correct": 0,
+      "answer": "ଅବିରାମ ସମ୍ବଳ — ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା।",
+      "pages": [
+        3
+      ],
+      "chapter": "resources",
+      "title": "ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1QoXMNew_3TGAw3uXLbF8VbyZBDF6Gdcs/view"
+    },
+    {
+      "prompt": "ଗହମ ଅମଳ ପରେ ଓ ମୌସୁମୀ ଆଗମନ ପୂର୍ବରୁ ସ୍ୱଳ୍ପ ସମୟ ପାଇଁ ଚାଷ ହେଲା। ଏହା କେଉଁ ଋତୁର ଚାଷ?",
+      "options": [
+        "ଯେଦ୍",
+        "ବର୍ଷସାରା ଚାଲୁଥିବା ବଗିଚା କୃଷି",
+        "ଖରିଫ୍",
+        "ରବି"
+      ],
+      "correct": 0,
+      "answer": "ରବି ଓ ଖରିଫ୍‌ର ମଧ୍ୟବର୍ତ୍ତୀ ସ୍ୱଳ୍ପକାଳୀନ ଋତୁ ହେଉଛି ଯେଦ୍।",
+      "pages": [
+        3
+      ],
+      "chapter": "agriculture",
+      "title": "କୃଷି",
+      "source": "social-science/geography-and-economics/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jtaBezdQm-SS0PA5YV9_bkaY9W_Lbg3P/view"
+    },
+    {
+      "prompt": "“ଖାଦର” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି",
+        "ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି",
+        "ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ",
+        "ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ"
+      ],
+      "correct": 0,
+      "answer": "ଖାଦର — ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି।",
+      "pages": [
+        17,
+        18
+      ],
+      "chapter": "resources",
+      "title": "ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1QoXMNew_3TGAw3uXLbF8VbyZBDF6Gdcs/view"
+    },
+    {
+      "prompt": "ଜୈବ ସମ୍ବଳର ପରିଚୟ। “ଓଡ଼ିଶାରେ ପକ୍ଷୀ ସଂରକ୍ଷଣ ପ୍ରସଙ୍ଗରେ ଉଲ୍ଲେଖ ଥିବା ହ୍ରଦ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଚିଲିକା",
+        "ବନ୍ୟ ପ୍ରାଣୀ",
+        "ପ୍ରାକୃତିକ ଉଦ୍ଭିଦ",
+        "ଅରଣ୍ୟ"
+      ],
+      "correct": 0,
+      "answer": "ଓଡ଼ିଶାରେ ପକ୍ଷୀ ସଂରକ୍ଷଣ ପ୍ରସଙ୍ଗରେ ଉଲ୍ଲେଖ ଥିବା ହ୍ରଦ — ଚିଲିକା।",
+      "pages": [
+        16
+      ],
+      "chapter": "biotic-resources",
+      "title": "ଜୈବ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pZgd9BH7My2p90Vf3-BXNBsbaAuGkY90/view"
+    },
+    {
+      "prompt": "କ୍ରମରେ ମେଳାଅ। (କ) ବିସ୍ତୃତ ଭୂମିରେ ବୃକ୍ଷ ଓ ବୁଦାର ଆବରଣ। (ଖ) ଅରଣ୍ୟ ଉପରେ ନିର୍ଭର କରି ବଞ୍ଚୁଥିବା ପଶୁପକ୍ଷୀ।",
+      "options": [
+        "ଚିଲିକା / ପ୍ରାକୃତିକ ଉଦ୍ଭିଦ",
+        "ବନ୍ୟ ପ୍ରାଣୀ / ଚିଲିକା",
+        "ପ୍ରାକୃତିକ ଉଦ୍ଭିଦ / ଅରଣ୍ୟ",
+        "ଅରଣ୍ୟ / ବନ୍ୟ ପ୍ରାଣୀ"
+      ],
+      "correct": 3,
+      "answer": "ପ୍ରଥମ ବିବରଣୀ ସହ ଅରଣ୍ୟ ଓ ଦ୍ୱିତୀୟ ବିବରଣୀ ସହ ବନ୍ୟ ପ୍ରାଣୀ ମେଳ ଖାଏ।",
+      "pages": [
+        1,
+        1
+      ],
+      "chapter": "biotic-resources",
+      "title": "ଜୈବ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pZgd9BH7My2p90Vf3-BXNBsbaAuGkY90/view"
+    },
+    {
+      "prompt": "ଜଳ ସମ୍ବଳର ପରିସ୍ଥିତି। “ଅତ୍ୟଧିକ ଜଳ ଆସି ଭୂଭାଗ ବୁଡ଼ିବା” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ବନ୍ୟା",
+        "ବହୁମୁଖୀ ନଦୀବନ୍ଧ ଯୋଜନା",
+        "ମରୁଡ଼ି",
+        "ଛାତରୁ ବୃଷ୍ଟିଜଳ ଅମଳ"
+      ],
+      "correct": 0,
+      "answer": "ଅତ୍ୟଧିକ ଜଳ ଆସି ଭୂଭାଗ ବୁଡ଼ିବା — ବନ୍ୟା।",
+      "pages": [
+        1
+      ],
+      "chapter": "water-resources",
+      "title": "ଜଳ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1am2jGScYUvoONxpYce4JAn_1c1fkiLvM/view"
+    },
+    {
+      "prompt": "“ଛାତରୁ ବୃଷ୍ଟିଜଳ ଅମଳ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ଗୋଟିଏ ଜଳଭଣ୍ଡାରରୁ ଜଳସେଚନ, ବନ୍ୟା ନିୟନ୍ତ୍ରଣ ଓ ବିଦ୍ୟୁତ୍",
+        "ଅତ୍ୟଧିକ ଜଳ ଆସି ଭୂଭାଗ ବୁଡ଼ିବା",
+        "ବୃଷ୍ଟିର ଅଭାବରେ ଚାଷ ପାଇଁ ଜଳସଙ୍କଟ",
+        "ଗଡ଼ାଣିଆ ଛାତର ବର୍ଷାଜଳ ନଳ ଦେଇ ଭୂଗର୍ଭସ୍ଥ ଭଣ୍ଡାରକୁ ନେବା"
+      ],
+      "correct": 3,
+      "answer": "ଛାତରୁ ବୃଷ୍ଟିଜଳ ଅମଳ — ଗଡ଼ାଣିଆ ଛାତର ବର୍ଷାଜଳ ନଳ ଦେଇ ଭୂଗର୍ଭସ୍ଥ ଭଣ୍ଡାରକୁ ନେବା।",
+      "pages": [
+        8
+      ],
+      "chapter": "water-resources",
+      "title": "ଜଳ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1am2jGScYUvoONxpYce4JAn_1c1fkiLvM/view"
+    },
+    {
+      "prompt": "ଖଣିଜର ବ୍ୟବହାର ଓ ଉତ୍ପତ୍ତି। “ସିମେଣ୍ଟ ଶିଳ୍ପ ସହ ମେଳ ଖାଉଥିବା ପ୍ରମୁଖ କଞ୍ଚାମାଲ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ବକ୍ସାଇଟ୍",
+        "ତମ୍ବା",
+        "ଚୂନପଥର",
+        "ଜିପସମ୍"
+      ],
+      "correct": 2,
+      "answer": "ସିମେଣ୍ଟ ଶିଳ୍ପ ସହ ମେଳ ଖାଉଥିବା ପ୍ରମୁଖ କଞ୍ଚାମାଲ — ଚୂନପଥର।",
+      "pages": [
+        9
+      ],
+      "chapter": "mineral-resources",
+      "title": "ଖଣିଜ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1kf9ysHtu7IYTh0MMd0lVKz6g-0TBLSjj/view"
+    },
+    {
+      "prompt": "“ଜିପସମ୍” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ବାଷ୍ପୀଭବନ ଯୋଗୁଁ ସୃଷ୍ଟି ହେଉଥିବା ଖଣିଜର ପାଠ୍ୟ ଉଦାହରଣ",
+        "ସିମେଣ୍ଟ ଶିଳ୍ପ ସହ ମେଳ ଖାଉଥିବା ପ୍ରମୁଖ କଞ୍ଚାମାଲ",
+        "ଆଲୁମିନିୟମ୍ ପ୍ରାପ୍ତିର ଧାତୁପିଣ୍ଡ",
+        "କ୍ଷେତ୍ରୀରେ ଉତ୍ତୋଳିତ ଧାତୁ"
+      ],
+      "correct": 0,
+      "answer": "ଜିପସମ୍ — ବାଷ୍ପୀଭବନ ଯୋଗୁଁ ସୃଷ୍ଟି ହେଉଥିବା ଖଣିଜର ପାଠ୍ୟ ଉଦାହରଣ।",
+      "pages": [
+        9
+      ],
+      "chapter": "mineral-resources",
+      "title": "ଖଣିଜ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1kf9ysHtu7IYTh0MMd0lVKz6g-0TBLSjj/view"
+    },
+    {
+      "prompt": "ଶକ୍ତି ଉତ୍ସର ପରିଚୟ। “ସମୁଦ୍ର ଜଳସ୍ତରର ନିୟମିତ ଉତ୍‌ଥାନରୁ ପ୍ରାପ୍ତ ଶକ୍ତି” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଜୁଆର ଶକ୍ତି",
+        "ପବନ ଶକ୍ତି",
+        "ସୌରଶକ୍ତି",
+        "ଭୂ-ତାପଜ ଶକ୍ତି"
+      ],
+      "correct": 0,
+      "answer": "ସମୁଦ୍ର ଜଳସ୍ତରର ନିୟମିତ ଉତ୍‌ଥାନରୁ ପ୍ରାପ୍ତ ଶକ୍ତି — ଜୁଆର ଶକ୍ତି।",
+      "pages": [
+        1,
+        8
+      ],
+      "chapter": "energy-resources",
+      "title": "ଶକ୍ତି ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1QTkXO7P21plerzY-RNA_a7s0K2-3Fo_x/view"
+    },
+    {
+      "prompt": "କ୍ରମରେ ମେଳାଅ। (କ) ସୂର୍ଯ୍ୟକିରଣରୁ ମିଳୁଥିବା ଶକ୍ତି। (ଖ) ଭୂଗର୍ଭର ତାପକୁ ବିନିଯୋଗ କରି ମିଳୁଥିବା ଶକ୍ତି।",
+      "options": [
+        "ଭୂ-ତାପଜ ଶକ୍ତି / ଜୁଆର ଶକ୍ତି",
+        "ପବନ ଶକ୍ତି / ସୌରଶକ୍ତି",
+        "ସୌରଶକ୍ତି / ଭୂ-ତାପଜ ଶକ୍ତି",
+        "ଜୁଆର ଶକ୍ତି / ପବନ ଶକ୍ତି"
+      ],
+      "correct": 2,
+      "answer": "ପ୍ରଥମ ବିବରଣୀ ସହ ସୌରଶକ୍ତି ଓ ଦ୍ୱିତୀୟ ବିବରଣୀ ସହ ଭୂ-ତାପଜ ଶକ୍ତି ମେଳ ଖାଏ।",
+      "pages": [
+        1,
+        8
+      ],
+      "chapter": "energy-resources",
+      "title": "ଶକ୍ତି ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1QTkXO7P21plerzY-RNA_a7s0K2-3Fo_x/view"
+    },
+    {
+      "prompt": "ଫସଲ ଓ ଚାଷ। “ଓଡ଼ିଶାରେ ସ୍ଥାନାନ୍ତରିତ କୃଷିର ସ୍ଥାନୀୟ ନାମ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ରବି",
+        "ପୋଡ଼ୁ",
+        "ଯେଦ୍",
+        "ଖରିଫ୍"
+      ],
+      "correct": 1,
+      "answer": "ଓଡ଼ିଶାରେ ସ୍ଥାନାନ୍ତରିତ କୃଷିର ସ୍ଥାନୀୟ ନାମ — ପୋଡ଼ୁ।",
+      "pages": [
+        2,
+        14
+      ],
+      "chapter": "agriculture",
+      "title": "କୃଷି",
+      "source": "social-science/geography-and-economics/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jtaBezdQm-SS0PA5YV9_bkaY9W_Lbg3P/view"
+    },
+    {
+      "prompt": "“ରବି” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ମୌସୁମୀ ଆଗମନ ସହ ଧାନ ଓ ଝୋଟ ଚାଷ ଋତୁ",
+        "ରବି ଓ ଖରିଫ୍ ମଧ୍ୟରେ ସ୍ୱଳ୍ପକାଳୀନ ଚାଷ ଋତୁ",
+        "ଓଡ଼ିଶାରେ ସ୍ଥାନାନ୍ତରିତ କୃଷିର ସ୍ଥାନୀୟ ନାମ",
+        "ଶୀତ ଆରମ୍ଭରେ ଗହମ ଓ ସୋରିଷ ଚାଷ ଋତୁ"
+      ],
+      "correct": 3,
+      "answer": "ରବି — ଶୀତ ଆରମ୍ଭରେ ଗହମ ଓ ସୋରିଷ ଚାଷ ଋତୁ।",
+      "pages": [
+        3
+      ],
+      "chapter": "agriculture",
+      "title": "କୃଷି",
+      "source": "social-science/geography-and-economics/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jtaBezdQm-SS0PA5YV9_bkaY9W_Lbg3P/view"
+    },
+    {
+      "prompt": "ପ୍ରାଥମିକ ଉତ୍ପାଦର ପ୍ରକ୍ରିୟାକରଣ। “ଆଖୁ ପ୍ରକ୍ରିୟାକରଣର ପାଠ୍ୟ ଉଦାହରଣ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଲୁଗା",
+        "ଚିନି",
+        "ଲୌହ-ଇସ୍ପାତ",
+        "କାଗଜ"
+      ],
+      "correct": 1,
+      "answer": "ଆଖୁ ପ୍ରକ୍ରିୟାକରଣର ପାଠ୍ୟ ଉଦାହରଣ — ଚିନି।",
+      "pages": [
+        1
+      ],
+      "chapter": "manufacturing",
+      "title": "ବିନିର୍ମାଣ ଉଦ୍ୟୋଗ",
+      "source": "social-science/geography-and-economics/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1f_W1kDWkys2Av1xDoa_tRyYhf2URoUBB/view"
+    },
+    {
+      "prompt": "ଜଳଚକ୍ର ଜଳର ପୁନଃଭରଣ କରୁଥିଲେ ମଧ୍ୟ ଅଞ୍ଚଳଟିରେ ଜଳାଭାବ କାହିଁକି ହୋଇପାରେ?",
+      "options": [
+        "କେବଳ କୃଷି ପାଇଁ ଜଳ ଦରକାର",
+        "ଭୂପୃଷ୍ଠର ସବୁ ଜଳ ପାନୀୟ",
+        "ଚାହିଦା ଉପଲବ୍ଧ ବ୍ୟବହାରଯୋଗ୍ୟ ଜଳଠାରୁ ଅଧିକ",
+        "ସବୁ ଅଞ୍ଚଳରେ ବୃଷ୍ଟିପାତ ସମାନ"
+      ],
+      "correct": 2,
+      "answer": "ଜଳର ସ୍ଥାନିକ ଓ ଋତୁକାଳୀନ ଉପଲବ୍ଧତା ଏବଂ ଲୋକଙ୍କ ଚାହିଦା ସମାନ ହୁଏନାହିଁ।",
+      "pages": [
+        1,
+        3
+      ],
+      "chapter": "water-resources",
+      "title": "ଜଳ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1am2jGScYUvoONxpYce4JAn_1c1fkiLvM/view"
+    },
+    {
+      "prompt": "ଗୋଟିଏ ନଦୀବନ୍ଧରୁ କ୍ଷେତକୁ ପାଣି ମିଳେ, ବିଦ୍ୟୁତ୍ ମିଳେ ଓ ବନ୍ୟା ନିୟନ୍ତ୍ରଣ ହୁଏ। ପ୍ରକଳ୍ପଟି କେଉଁ ଶ୍ରେଣୀର?",
+      "options": [
+        "ବହୁମୁଖୀ ନଦୀବନ୍ଧ",
+        "କେବଳ ବର୍ଷାଜଳ ସଂଗ୍ରହ",
+        "କେବଳ ବିଦ୍ୟୁତ୍ ପ୍ରକଳ୍ପ",
+        "କେବଳ ଜଳସେଚନ ପ୍ରକଳ୍ପ"
+      ],
+      "correct": 0,
+      "answer": "ସେହି ଜଳଭଣ୍ଡାରର ଜଳ ଏକାଧିକ ଉଦ୍ଦେଶ୍ୟ ପୂରଣ କରୁଛି।",
+      "pages": [
+        8,
+        10
+      ],
+      "chapter": "water-resources",
+      "title": "ଜଳ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1am2jGScYUvoONxpYce4JAn_1c1fkiLvM/view"
+    },
+    {
+      "prompt": "କ୍ରମରେ ମେଳାଅ। (କ) କଞ୍ଚାମାଲ ମୁଖ୍ୟତଃ ଖଣିରୁ ମିଳେ। (ଖ) ଅନ୍ୟ ଶିଳ୍ପର ଉତ୍ପାଦନ ପାଇଁ ମୂଳ ସାମଗ୍ରୀ ଯୋଗାଏ।",
+      "options": [
+        "ଖଣିଜଭିତ୍ତିକ ଶିଳ୍ପ / ମୌଳିକ ଶିଳ୍ପ",
+        "ମୌଳିକ ଶିଳ୍ପ / ଖାଉଟି ଶିଳ୍ପ",
+        "ଖାଉଟି ଶିଳ୍ପ / କୃଷିଭିତ୍ତିକ ଶିଳ୍ପ",
+        "କୃଷିଭିତ୍ତିକ ଶିଳ୍ପ / ଖଣିଜଭିତ୍ତିକ ଶିଳ୍ପ"
+      ],
+      "correct": 0,
+      "answer": "ପ୍ରଥମ ବିବରଣୀ ସହ ଖଣିଜଭିତ୍ତିକ ଶିଳ୍ପ ଓ ଦ୍ୱିତୀୟ ବିବରଣୀ ସହ ମୌଳିକ ଶିଳ୍ପ ମେଳ ଖାଏ।",
+      "pages": [
+        3,
+        5
+      ],
+      "chapter": "manufacturing",
+      "title": "ବିନିର୍ମାଣ ଉଦ୍ୟୋଗ",
+      "source": "social-science/geography-and-economics/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1f_W1kDWkys2Av1xDoa_tRyYhf2URoUBB/view"
+    },
+    {
+      "prompt": "ଅର୍ଥନୀତିର ମାପ ଓ ମାଲିକାନା। “ସରକାରୀ ଓ ଘରୋଇ ଉଭୟ କ୍ଷେତ୍ର ଏକାଠି କାମ କରୁଥିବା ବ୍ୟବସ୍ଥା” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଉଦାରୀକରଣ",
+        "ମିଶ୍ର ଅର୍ଥନୀତି",
+        "ମୁଣ୍ଡପିଛା ଆୟ",
+        "ମୋଟ ଜାତୀୟ ଆୟ"
+      ],
+      "correct": 1,
+      "answer": "ସରକାରୀ ଓ ଘରୋଇ ଉଭୟ କ୍ଷେତ୍ର ଏକାଠି କାମ କରୁଥିବା ବ୍ୟବସ୍ଥା — ମିଶ୍ର ଅର୍ଥନୀତି।",
+      "pages": [
+        2
+      ],
+      "chapter": "economic-development",
+      "title": "ଆର୍ଥନୀତିକ ବିକାଶ",
+      "source": "social-science/geography-and-economics/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1uoZ3Q4ACOmr2VcntY-GWeDgiwn9z2gKW/view"
+    },
+    {
+      "prompt": "“ମୁଣ୍ଡପିଛା ଆୟ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ବର୍ଷକର ଦ୍ରବ୍ୟ ଓ ସେବାର ମୂଲ୍ୟ ସହ ବହିରାଗତ ଆୟର ସମଷ୍ଟି",
+        "ସରକାରୀ ଓ ଘରୋଇ ଉଭୟ କ୍ଷେତ୍ର ଏକାଠି କାମ କରୁଥିବା ବ୍ୟବସ୍ଥା",
+        "ଦେଶର ମୋଟ ଜାତୀୟ ଆୟକୁ ଜନସଂଖ୍ୟାରେ ଭାଗ କରି ମିଳୁଥିବା ମାନ",
+        "ଆର୍ଥିକ କାର୍ଯ୍ୟ ଉପରେ ପ୍ରଚଳିତ କଟକଣା କୋହଳ କରିବା"
+      ],
+      "correct": 2,
+      "answer": "ମୁଣ୍ଡପିଛା ଆୟ — ଦେଶର ମୋଟ ଜାତୀୟ ଆୟକୁ ଜନସଂଖ୍ୟାରେ ଭାଗ କରି ମିଳୁଥିବା ମାନ।",
+      "pages": [
+        1
+      ],
+      "chapter": "economic-development",
+      "title": "ଆର୍ଥନୀତିକ ବିକାଶ",
+      "source": "social-science/geography-and-economics/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1uoZ3Q4ACOmr2VcntY-GWeDgiwn9z2gKW/view"
+    },
+    {
+      "prompt": "ପ୍ରଜନନ ପାଇଁ ଏକ ପକ୍ଷୀକୁ ସୁରକ୍ଷିତ ଆଶ୍ରୟ ଆବଶ୍ୟକ। କେଉଁ ପଦକ୍ଷେପ ତାହାର ବାସସ୍ଥାନକୁ ସିଧାସଳଖ ରକ୍ଷା କରିବ?",
+      "options": [
+        "ବାଣିଜ୍ୟିକ ଶିକାର ବଢ଼ାଇବା",
+        "ବସା ଥିବା ଗଛ କାଟିବା",
+        "ପକ୍ଷୀ ବିହାରର ସଂରକ୍ଷଣ",
+        "ଜଳାଶୟ ପୋତିବା"
+      ],
+      "correct": 2,
+      "answer": "ପକ୍ଷୀ ବିହାରରେ ବାସସ୍ଥାନ ସୁରକ୍ଷା ଓ ଶିକାର ନିୟନ୍ତ୍ରଣ କରାଯାଇପାରେ।",
+      "pages": [
+        14,
+        16
+      ],
+      "chapter": "biotic-resources",
+      "title": "ଜୈବ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pZgd9BH7My2p90Vf3-BXNBsbaAuGkY90/view"
+    },
+    {
+      "prompt": "“ଖାଉଟି ଦର ସୂଚକ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।",
+      "options": [
+        "ପ୍ରମୁଖ ଦ୍ରବ୍ୟଗୁଡ଼ିକର ପାଇକାରୀ ମୂଲ୍ୟ ଆଧାରିତ ସୂଚକ",
+        "କିଣିବାବେଳେ ମାପ, ଗୁଣ, ମୂଲ୍ୟ ଓ ଅଧିକାର ପ୍ରତି ସତର୍କତା",
+        "ଖାଉଟି ପରିବାର ବ୍ୟବହାର କରୁଥିବା ଦ୍ରବ୍ୟ ଆଧାରିତ ସୂଚକ",
+        "ଯେଉଁ ବର୍ଷର ମୂଲ୍ୟ ସୂଚକକୁ ୧୦୦ ଧରାଯାଏ"
+      ],
+      "correct": 2,
+      "answer": "ଖାଉଟି ଦର ସୂଚକ — ଖାଉଟି ପରିବାର ବ୍ୟବହାର କରୁଥିବା ଦ୍ରବ୍ୟ ଆଧାରିତ ସୂଚକ।",
+      "pages": [
+        1
+      ],
+      "chapter": "economic-system",
+      "title": "ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା",
+      "source": "social-science/geography-and-economics/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_pzkwjNskyY_wuMRgUsmWimUeDlRCpd6/view"
+    },
+    {
+      "prompt": "ନିଯୁକ୍ତି ଓ ଦାରିଦ୍ର୍ୟ। “କେତେକ ଶ୍ରମିକ କାମ ଛାଡ଼ିଲେ ମଧ୍ୟ ଉତ୍ପାଦନ ଅପରିବର୍ତ୍ତିତ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "ଋତୁକାଳୀନ ବେକାରୀ",
+        "ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀ",
+        "ଦାରିଦ୍ର୍ୟ",
+        "ଦକ୍ଷତା ବୃଦ୍ଧି"
+      ],
+      "correct": 1,
+      "answer": "କେତେକ ଶ୍ରମିକ କାମ ଛାଡ଼ିଲେ ମଧ୍ୟ ଉତ୍ପାଦନ ଅପରିବର୍ତ୍ତିତ — ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀ।",
+      "pages": [
+        16,
+        18
+      ],
+      "chapter": "economic-system",
+      "title": "ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା",
+      "source": "social-science/geography-and-economics/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_pzkwjNskyY_wuMRgUsmWimUeDlRCpd6/view"
+    },
+    {
+      "prompt": "କ୍ରମରେ ମେଳାଅ। (କ) ମୌଳିକ ଜୀବନ ନିର୍ବାହ ପାଇଁ ଯଥେଷ୍ଟ ସମ୍ବଳର ଅଭାବ। (ଖ) ଶିଳ୍ପ ତାଲିମ କେନ୍ଦ୍ରରେ କାମ ଶିଖିବାର ଉଦ୍ଦେଶ୍ୟ।",
+      "options": [
+        "ଦକ୍ଷତା ବୃଦ୍ଧି / ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀ",
+        "ଦାରିଦ୍ର୍ୟ / ଦକ୍ଷତା ବୃଦ୍ଧି",
+        "ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀ / ଋତୁକାଳୀନ ବେକାରୀ",
+        "ଋତୁକାଳୀନ ବେକାରୀ / ଦାରିଦ୍ର୍ୟ"
+      ],
+      "correct": 1,
+      "answer": "ପ୍ରଥମ ବିବରଣୀ ସହ ଦାରିଦ୍ର୍ୟ ଓ ଦ୍ୱିତୀୟ ବିବରଣୀ ସହ ଦକ୍ଷତା ବୃଦ୍ଧି ମେଳ ଖାଏ।",
+      "pages": [
+        8,
+        18
+      ],
+      "chapter": "economic-system",
+      "title": "ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା",
+      "source": "social-science/geography-and-economics/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_pzkwjNskyY_wuMRgUsmWimUeDlRCpd6/view"
+    },
+    {
+      "prompt": "ସଂରକ୍ଷଣ ପାଇଁ ନିଷ୍ପତ୍ତି। “ସଙ୍କଟାପନ୍ନ ଜୀବଙ୍କ ସଂଖ୍ୟା ବଢ଼ାଇବା ପାଇଁ ନିୟନ୍ତ୍ରିତ ପଦ୍ଧତି” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?",
+      "options": [
+        "କୃତ୍ରିମ ପ୍ରଜନନ",
+        "ଧାତୁର ପୁନର୍ବ୍ୟବହାର",
+        "ପୁନଃ ବନୀକରଣ",
+        "ଜୈବସାର ଯୋଗାଣ"
+      ],
+      "correct": 0,
+      "answer": "ସଙ୍କଟାପନ୍ନ ଜୀବଙ୍କ ସଂଖ୍ୟା ବଢ଼ାଇବା ପାଇଁ ନିୟନ୍ତ୍ରିତ ପଦ୍ଧତି — କୃତ୍ରିମ ପ୍ରଜନନ।",
+      "pages": [
+        16
+      ],
+      "chapter": "biotic-resources",
+      "title": "ଜୈବ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pZgd9BH7My2p90Vf3-BXNBsbaAuGkY90/view"
+    }
+  ],
+  "written": [
+    {
+      "number": "୧ (କ)",
+      "area": "ଇତିହାସ",
+      "marks": 4,
+      "prompt": "ଲାହୋର ଅଧିବେଶନର ଅଧ୍ୟକ୍ଷ, ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ, ପତାକା ଉତ୍ତୋଳନ ଓ ପରବର୍ତ୍ତୀ କାର୍ଯ୍ୟକ୍ରମ ବୁଝାଅ।",
+      "answer": "୧୯୨୯ର ଅଧିବେଶନର ଅଧ୍ୟକ୍ଷ ଥିଲେ ଜବାହରଲାଲ ନେହେରୁ। ପୂର୍ଣ୍ଣ ସ୍ୱରାଜକୁ ଲକ୍ଷ୍ୟ ରୂପେ ଗ୍ରହଣ କରାଗଲା। ୩୧ ଡିସେମ୍ବରରେ ସେ ରାବି ନଦୀକୂଳରେ ତ୍ରିରଙ୍ଗା ଉତ୍ତୋଳନ କଲେ। ୨୬ ଜାନୁଆରୀ ୧୯୩୦କୁ ସ୍ୱାଧୀନତା ଦିବସ ପାଳନ ଓ ଆଇନ ଅମାନ୍ୟ ଆନ୍ଦୋଳନ ପାଇଁ ନିଷ୍ପତ୍ତି ହେଲା।",
+      "pages": [
+        18
+      ],
+      "chapter": "gandhi-era",
+      "alternatives": [
+        {
+          "prompt": "ଦେଶୀୟ ରାଜ୍ୟଗୁଡ଼ିକର ମିଶ୍ରଣର ପଟଭୂମି ଓ ମିଳନ ପତ୍ରର ସର୍ତ୍ତଗୁଡ଼ିକ ବୁଝାଅ।",
+          "answer": "ଦେଶର ପ୍ରାୟ ଶତକଡ଼ା ୪୦ ଭାଗ ଅଞ୍ଚଳ ଦେଶୀୟ ଶାସକଙ୍କ ଅଧୀନରେ ଥିଲା। ବ୍ରିଟିଶ କର୍ତ୍ତୃତ୍ୱ ହଟିବା ପରେ ସେଗୁଡ଼ିକୁ ଭାରତ ସହ ଯୋଡ଼ିବା ଆବଶ୍ୟକ ହେଲା। ପଟେଲ ଓ ମେନନ ମିଳନ ପତ୍ର ପ୍ରସ୍ତୁତ କଲେ। ଏଥିରେ ପ୍ରତିରକ୍ଷା, ବୈଦେଶିକ ବ୍ୟାପାର ଓ ଯୋଗାଯୋଗ ସଂକ୍ରାନ୍ତ କ୍ଷମତା ଭାରତକୁ ହସ୍ତାନ୍ତର କରିବାର ପ୍ରସ୍ତାବ ଥିଲା।",
+          "pages": [
+            1,
+            2
+          ],
+          "chapter": "india-after-independence",
+          "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+          "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+        }
+      ],
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "number": "୧ (ଖ)",
+      "area": "ଇତିହାସ",
+      "marks": 4,
+      "prompt": "ସୁଭାଷଚନ୍ଦ୍ର ବୋଷଙ୍କ ନେତୃତ୍ୱରେ ସରକାର ଗଠନ, ଲକ୍ଷ୍ୟ, ମହିଳା ଶାଖା ଓ ଦ୍ୱୀପର ନାମକରଣ ବର୍ଣ୍ଣନା କର।",
+      "answer": "୨୧ ଅକ୍ଟୋବର ୧୯୪୩ରେ ସିଙ୍ଗାପୁରରେ ଆଜାଦ୍ ହିନ୍ଦ୍ ସରକାର ଗଠିତ ହେଲା। ଇଂରେଜ ଶାସନ ହଟାଇ ସ୍ୱାଧୀନ ଭାରତ ଗଠନ ଥିଲା ଲକ୍ଷ୍ୟ। ଝାନ୍‌ସୀ ରାଣୀ ବ୍ରିଗେଡ୍ ଥିଲା ମହିଳା ଶାଖା। ଆଣ୍ଡାମାନ ଓ ନିକୋବରକୁ ଯଥାକ୍ରମେ ଶହୀଦ ଓ ସ୍ୱରାଜ ନାମ ଦିଆଗଲା।",
+      "pages": [
+        35,
+        39
+      ],
+      "chapter": "gandhi-era",
+      "alternatives": [
+        {
+          "prompt": "ସ୍ୱାଧୀନତା ପରେ କୃଷି, ଶିଳ୍ପ, ପ୍ରତିରକ୍ଷା ଓ ଯୋଗାଯୋଗରେ ବିଜ୍ଞାନର ପ୍ରଭାବ ଲେଖ।",
+          "answer": "ଉନ୍ନତ କୃଷି ପ୍ରଯୁକ୍ତି ଖାଦ୍ୟ ଉତ୍ପାଦନରେ ଆତ୍ମନିର୍ଭରତା ବଢ଼ାଇଲା। କାରଖାନା ଓ ଉତ୍ପାଦନ ପାଇଁ ଦେଶୀୟ ଶିଳ୍ପଦକ୍ଷତା ବଢ଼ିଲା। ପ୍ରତିରକ୍ଷାରେ ନିଜସ୍ୱ ପ୍ରଯୁକ୍ତିର ବିକାଶ ହେଲା। APPLE ପରି ଉପଗ୍ରହ ଯୋଗାଯୋଗ ପାଇଁ ନୂଆ ସୁବିଧା ଆଣିଲା।",
+          "pages": [
+            32
+          ],
+          "chapter": "india-after-independence",
+          "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+          "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+        }
+      ],
+      "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+      "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+    },
+    {
+      "number": "୨ (କ)",
+      "area": "ଇତିହାସ",
+      "marks": 3,
+      "prompt": "ଦେଶୀୟ ରାଜ୍ୟଙ୍କଠାରୁ ଭାରତକୁ କେଉଁ ତିନି କ୍ଷମତା ଦେବାକୁ ମିଳନ ପତ୍ରରେ କୁହାଯାଇଥିଲା?",
+      "answer": "ପ୍ରତିରକ୍ଷା, ବୈଦେଶିକ ବ୍ୟାପାର ଓ ଯୋଗାଯୋଗ ସମ୍ବନ୍ଧୀୟ କ୍ଷମତା ଭାରତକୁ ଦେବାର ପ୍ରସ୍ତାବ ଥିଲା।",
+      "pages": [
+        2
+      ],
+      "chapter": "india-after-independence",
+      "alternatives": [
+        {
+          "prompt": "ଦକ୍ଷିଣ ଆଫ୍ରିକାରେ ଗାନ୍ଧିଜୀଙ୍କ ସଙ୍ଗଠନ, ପ୍ରଚାର ଓ ପ୍ରତିବାଦର ଗୋଟିଏ ଲେଖାଏଁ ଉଦାହରଣ ଦିଅ।",
+          "answer": "ନାଟାଲ୍ ଭାରତୀୟ କଂଗ୍ରେସ ଗଠନ କରି ସେ ଭାରତୀୟଙ୍କୁ ସଙ୍ଗଠିତ କଲେ। ଇଣ୍ଡିଆନ୍ ଓପିନିଅନ୍‌ରେ ଅତ୍ୟାଚାରର ଖବର ପ୍ରଚାର କଲେ। ପଞ୍ଜୀକରଣ ଆଇନ ବିରୋଧରେ ସତ୍ୟାଗ୍ରହ କଲେ।",
+          "pages": [
+            2
+          ],
+          "chapter": "gandhi-era",
+          "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+          "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+        }
+      ],
+      "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+      "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+    },
+    {
+      "number": "୨ (ଖ)",
+      "area": "ଇତିହାସ",
+      "marks": 3,
+      "prompt": "ବିଜ୍ଞାନ ଓ ପ୍ରଯୁକ୍ତିବିଦ୍ୟାର ବିକାଶରୁ ଭାରତ କି ଉପକାର ପାଇଛି?",
+      "answer": "କୃଷି ଉତ୍ପାଦନ ଓ ଶିଳ୍ପ ଦକ୍ଷତା ବଢ଼ିଛି। ଶକ୍ତି ଓ ପ୍ରତିରକ୍ଷାରେ ଦେଶ ନିଜ କ୍ଷମତା ବିକଶିତ କରିଛି। ଉପଗ୍ରହ ପ୍ରଯୁକ୍ତି ଯୋଗାଯୋଗ ଓ ପାଣିପାଗ ସୂଚନା ପାଇଁ ସହାୟକ ହୋଇଛି।",
+      "pages": [
+        32
+      ],
+      "chapter": "india-after-independence",
+      "alternatives": [
+        {
+          "prompt": "ଦକ୍ଷ ମାନବସମ୍ବଳର ଆବଶ୍ୟକତା ଓ ତାହାର ବିକାଶ ପାଇଁ ଦୁଇ ପ୍ରକାର ସଂସ୍ଥାର ଉଦାହରଣ ଦିଅ।",
+          "answer": "ଶିଳ୍ପ ଓ ଅନ୍ୟ ବିକାଶ କାମରେ କୁଶଳୀ ଲୋକ ଦରକାର। ଶିଳ୍ପ ତାଲିମ କେନ୍ଦ୍ର ଓ ଯାନ୍ତ୍ରିକ ମହାବିଦ୍ୟାଳୟରେ ବୈଷୟିକ ଜ୍ଞାନ ଓ କାର୍ଯ୍ୟଦକ୍ଷତା ମିଳେ।",
+          "pages": [
+            31
+          ],
+          "chapter": "odisha-development",
+          "title": "ସ୍ୱାଧୀନତୋତ୍ତର ଓଡ଼ିଶାର ବିକାଶ",
+          "source": "social-science/history-and-political-science/chapter 4/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1pkewMEbI9oxzWes2f_Ldxx34GXhzvXHR/view"
+        }
+      ],
+      "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+      "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+    },
+    {
+      "number": "୨ (ଗ)",
+      "area": "ରାଜନୀତି ବିଜ୍ଞାନ",
+      "marks": 3,
+      "prompt": "ସଡ଼କ ଦୁର୍ଘଟଣାର କାରଣ ବୁଝିବାବେଳେ ଗାଡ଼ିଚାଳକ ବ୍ୟତୀତ ଆଉ କେଉଁ ଦିଗ ଦେଖିବ?",
+      "answer": "ରାସ୍ତାର ଅବସ୍ଥା, ଯାନ୍ତ୍ରିକ ତ୍ରୁଟି, ପଥଚାରୀ ଓ ଅନ୍ୟ ରାସ୍ତା ବ୍ୟବହାରକାରୀଙ୍କ ଆଚରଣ ଏବଂ ପାରିପାର୍ଶ୍ୱିକ ଅବସ୍ଥାକୁ ଦେଖିବା ଦରକାର। ନିରାପଦ ଯାତ୍ରା ଏସବୁର ସମନ୍ୱୟ ଉପରେ ନିର୍ଭର କରେ।",
+      "pages": [
+        1
+      ],
+      "chapter": "road-safety",
+      "alternatives": [
+        {
+          "prompt": "ଜନମତ, ମତଦାନ ଓ ଲୋକପ୍ରତିନିଧି ମଧ୍ୟରେ ସମ୍ପର୍କ ବୁଝାଅ।",
+          "answer": "ଗଣତନ୍ତ୍ରରେ ଜନମତ ଶାସନର ଆଧାର। ମତଦାତା ନିର୍ବାଚନରେ ନିଜର ପସନ୍ଦ ପ୍ରକାଶ କରନ୍ତି। ନିର୍ବାଚିତ ଲୋକପ୍ରତିନିଧି ସଭାରେ ଜନସାଧାରଣଙ୍କ ପକ୍ଷରୁ ଅଂଶ ନିଅନ୍ତି।",
+          "pages": [
+            1,
+            2
+          ],
+          "chapter": "democracy",
+          "title": "ଭାରତରେ ଗଣତନ୍ତ୍ର",
+          "source": "social-science/history-and-political-science/chapter 6/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1xLzQLWuR_0vQmouaFcOgRFHQPEbEOc0L/view"
+        }
+      ],
+      "title": "ସଡ଼କ ନିରାପତ୍ତା, ସଚେତନତା ଓ ଇନ୍ଧନ ସଂରକ୍ଷଣ",
+      "source": "social-science/history-and-political-science/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1BWnRonzAJcYXQ1SafSzU8TUu8AoxBQoy/view"
+    },
+    {
+      "number": "୩ (କ)",
+      "area": "ଇତିହାସ",
+      "marks": 2,
+      "prompt": "APPLEର କାର୍ଯ୍ୟ ଓ ଉତ୍‌କ୍ଷେପଣ ତାରିଖ ଲେଖ।",
+      "answer": "APPLE ଏକ ଯୋଗାଯୋଗ ଉପଗ୍ରହ। ୧୯ ଜୁନ୍ ୧୯୮୧ରେ ଏହା ଉତ୍‌କ୍ଷେପିତ ହେଲା।",
+      "pages": [
+        32
+      ],
+      "chapter": "india-after-independence",
+      "alternatives": [
+        {
+          "prompt": "ପାକିସ୍ତାନର ପ୍ରଥମ ଗଭର୍ଣ୍ଣର ଜେନେରାଲ ଓ ପ୍ରଧାନମନ୍ତ୍ରୀ କିଏ ଥିଲେ?",
+          "answer": "ମହମ୍ମଦ ଅଲ୍ଲୀ ଜିନ୍ନା ଗଭର୍ଣ୍ଣର ଜେନେରାଲ ଓ ଲିଆକତ୍ ଅଲ୍ଲୀ ଖାଁ ପ୍ରଧାନମନ୍ତ୍ରୀ ଥିଲେ।",
+          "pages": [
+            45,
+            46
+          ],
+          "chapter": "gandhi-era",
+          "title": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ – ଗାନ୍ଧୀଯୁଗ",
+          "source": "social-science/history-and-political-science/chapter 1/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1w4sdlt3r2F2lR39gTTesFHCohZ8FtvsE/view"
+        }
+      ],
+      "title": "୨୦୦୦ ଖ୍ରୀଷ୍ଟାବ୍ଦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱାଧୀନତା ପରବର୍ତ୍ତୀ ଭାରତ",
+      "source": "social-science/history-and-political-science/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pzqKPZtVl5zzetmjPYSu9weMLvie5eTR/view"
+    },
+    {
+      "number": "୩ (ଖ)",
+      "area": "ଇତିହାସ",
+      "marks": 2,
+      "prompt": "ମହତାବଙ୍କ ମନ୍ତ୍ରିମଣ୍ଡଳର ପ୍ରଧାନ ସଫଳତାଗୁଡ଼ିକ କ’ଣ?",
+      "answer": "ଗଡ଼ଜାତ ରାଜ୍ୟ ମିଶ୍ରଣ, ହୀରାକୁଦ ଯୋଜନାର ଶୁଭାରମ୍ଭ ଓ ଭୁବନେଶ୍ୱରରେ ନୂତନ ରାଜଧାନୀ ପ୍ରତିଷ୍ଠା।",
+      "pages": [
+        26,
+        27
+      ],
+      "chapter": "separate-odisha",
+      "alternatives": [
+        {
+          "prompt": "ଭିତ୍ତିଭୂମି କହିଲେ କ’ଣ ବୁଝ?",
+          "answer": "କୃଷି, ଶିଳ୍ପ ଓ ଅନ୍ୟାନ୍ୟ ବିକାଶ କାର୍ଯ୍ୟ ଚାଲିବା ପାଇଁ ଆବଶ୍ୟକ ମୌଳିକ ସୁବିଧା ଓ ବ୍ୟବସ୍ଥାକୁ ଭିତ୍ତିଭୂମି କୁହାଯାଏ। ବିଦ୍ୟୁତ୍ ଓ ପରିବହନ ଏହାର ଉଦାହରଣ।",
+          "pages": [
+            31,
+            32
+          ],
+          "chapter": "odisha-development",
+          "title": "ସ୍ୱାଧୀନତୋତ୍ତର ଓଡ଼ିଶାର ବିକାଶ",
+          "source": "social-science/history-and-political-science/chapter 4/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1pkewMEbI9oxzWes2f_Ldxx34GXhzvXHR/view"
+        }
+      ],
+      "title": "ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ",
+      "source": "social-science/history-and-political-science/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1x_ExOgYtCCtrMWE5t9975dxMaS76k_Ut/view"
+    },
+    {
+      "number": "୩ (ଗ)",
+      "area": "ରାଜନୀତି ବିଜ୍ଞାନ",
+      "marks": 2,
+      "prompt": "ଇନ୍ଧନ ସଂରକ୍ଷଣ କାହିଁକି ଆବଶ୍ୟକ?",
+      "answer": "ଇନ୍ଧନର ଅପଚୟ କମାଇଲେ ସୀମିତ ଇନ୍ଧନର ସଞ୍ଚୟ ହୁଏ। ଯାନବାହନରେ କମ୍ ଇନ୍ଧନ ପୋଡ଼ିଲେ ପ୍ରଦୂଷଣ ମଧ୍ୟ କମେ।",
+      "pages": [
+        6,
+        8
+      ],
+      "chapter": "road-safety",
+      "alternatives": [
+        {
+          "prompt": "ନିର୍ବାଚନ ସମ୍ବନ୍ଧୀୟ ଠିକ୍ ଉକ୍ତିଟି ବାଛ।",
+          "answer": "ଲୋକସଭା ସଦସ୍ୟମାନେ ପ୍ରତ୍ୟକ୍ଷ ଭାବରେ ନିର୍ବାଚିତ ହୁଅନ୍ତି। ମତଦାତା ନିଜେ ପ୍ରତିନିଧି ଚୟନ କରନ୍ତି।",
+          "pages": [
+            20
+          ],
+          "chapter": "democracy",
+          "title": "ଭାରତରେ ଗଣତନ୍ତ୍ର",
+          "source": "social-science/history-and-political-science/chapter 6/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1xLzQLWuR_0vQmouaFcOgRFHQPEbEOc0L/view"
+        }
+      ],
+      "title": "ସଡ଼କ ନିରାପତ୍ତା, ସଚେତନତା ଓ ଇନ୍ଧନ ସଂରକ୍ଷଣ",
+      "source": "social-science/history-and-political-science/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1BWnRonzAJcYXQ1SafSzU8TUu8AoxBQoy/view"
+    },
+    {
+      "number": "୩ (ଘ)",
+      "area": "ରାଜନୀତି ବିଜ୍ଞାନ",
+      "marks": 2,
+      "prompt": "ଦ୍ୱିତୀୟ ବିଶ୍ୱଯୁଦ୍ଧ ପରେ କେଉଁ ଦୁଇ ଶକ୍ତିକୁ ନେଇ ଗୋଷ୍ଠୀ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱିତା ଦେଖାଦେଲା?",
+      "answer": "ଗୋଟିଏ ପଟେ ଆମେରିକା ଓ ଅନ୍ୟ ପଟେ ସୋଭିଏତ୍ ରୁଷିଆ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "foreign-policy",
+      "alternatives": [
+        {
+          "prompt": "ପ୍ରତ୍ୟକ୍ଷ ଓ ପରୋକ୍ଷ ନିର୍ବାଚନର ଗୋଟିଏ ଲେଖାଏଁ ଭାରତୀୟ ଉଦାହରଣ ଦେଇ ପାର୍ଥକ୍ୟ ବୁଝାଅ।",
+          "answer": "ଲୋକସଭା ସଦସ୍ୟଙ୍କୁ ଭୋଟର ନିଜେ ବାଛନ୍ତି, ଏହା ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନ। ରାଷ୍ଟ୍ରପତିଙ୍କୁ ନିର୍ବାଚକ ମଣ୍ଡଳୀ ବାଛେ, ଏହା ପରୋକ୍ଷ ନିର୍ବାଚନ।",
+          "pages": [
+            1,
+            2
+          ],
+          "chapter": "democracy",
+          "title": "ଭାରତରେ ଗଣତନ୍ତ୍ର",
+          "source": "social-science/history-and-political-science/chapter 6/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1xLzQLWuR_0vQmouaFcOgRFHQPEbEOc0L/view"
+        }
+      ],
+      "title": "ଭାରତର ବୈଦେଶିକ ନୀତି",
+      "source": "social-science/history-and-political-science/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1C8ZBbS-Alt3d64_BKL_WisTcux_ttEnf/view"
+    },
+    {
+      "number": "୪ (କ)",
+      "area": "ଭୂଗୋଳ",
+      "marks": 4,
+      "prompt": "ପ୍ରାଥମିକ ଓ ଗୌଣ ଉତ୍ପାଦର ଗୋଟିଏ ଯୋଡ଼ି ଦେଇ ମୌଳିକ ଶିଳ୍ପ ଓ ଖାଉଟି ଶିଳ୍ପର ଭିନ୍ନତା ସ୍ପଷ୍ଟ କର।",
+      "answer": "ଆଖୁ ପ୍ରାଥମିକ ଓ ତାହାରୁ ତିଆରି ଚିନି ଗୌଣ ଉତ୍ପାଦ। ମୌଳିକ ଶିଳ୍ପ ଅନ୍ୟ ଶିଳ୍ପ ପାଇଁ ସାମଗ୍ରୀ ଦିଏ, ଯେପରି ଲୌହ-ଇସ୍ପାତ। ଖାଉଟି ଶିଳ୍ପର ଉତ୍ପାଦ ଉପଭୋକ୍ତା ସିଧାସଳଖ ବ୍ୟବହାର କରନ୍ତି, ଯେପରି ଚିନି।",
+      "pages": [
+        1,
+        3
+      ],
+      "chapter": "manufacturing",
+      "alternatives": [
+        {
+          "prompt": "କୃଷିର ବିସ୍ତୃତ ଅର୍ଥ ଓ ତିନି କୃଷି ଋତୁର ଗୋଟିଏ ଲେଖାଏଁ ଫସଲ ଦେଇ ବୁଝାଅ।",
+          "answer": "କୃଷିରେ ଫସଲ ସହ ପଶୁ, ପକ୍ଷୀ, ମତ୍ସ୍ୟ ଓ ମହୁମାଛି ପାଳନ ମଧ୍ୟ ଅନ୍ତର୍ଭୁକ୍ତ। ଖରିଫ୍‌ରେ ଧାନ, ରବିରେ ଗହମ ଓ ଯେଦ୍‌ରେ ତରଭୁଜ ହୁଏ। ଋତୁର ଉତ୍ତାପ ଓ ବର୍ଷା ଅନୁସାରେ ଏହି ଚାଷର ସମୟ ନିର୍ଦ୍ଧାରିତ ହୁଏ।",
+          "pages": [
+            1,
+            3
+          ],
+          "chapter": "agriculture",
+          "title": "କୃଷି",
+          "source": "social-science/geography-and-economics/chapter 6/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1jtaBezdQm-SS0PA5YV9_bkaY9W_Lbg3P/view"
+        }
+      ],
+      "title": "ବିନିର୍ମାଣ ଉଦ୍ୟୋଗ",
+      "source": "social-science/geography-and-economics/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1f_W1kDWkys2Av1xDoa_tRyYhf2URoUBB/view"
+    },
+    {
+      "number": "୪ (ଖ)",
+      "area": "ଭୂଗୋଳ",
+      "marks": 4,
+      "prompt": "ମୂଳ ଶିଳାରୁ ମୃତ୍ତିକା, ତାହାର କ୍ଷୟ ଓ ସଂରକ୍ଷଣ ମଧ୍ୟର ସମ୍ପର୍କ ଚାରିଟି ଧାପରେ ବୁଝାଅ।",
+      "answer": "ମୂଳ ଶିଳା ଚୂର୍ଣ୍ଣୀଭୂତ ହୋଇ ସୂକ୍ଷ୍ମ ଶିଳାରେଣୁ ମିଳେ। ଜଳବାୟୁ, ଜୀବ ଓ ସମୟର ପ୍ରଭାବରେ ମୃତ୍ତିକା ଗଠିତ ହୁଏ। ଜଳ ବା ପବନ ଉପରି ସ୍ତରକୁ ଅପସାରଣ କଲେ କ୍ଷୟ ହୁଏ। ଉଦ୍ଭିଦ ଆବରଣ ରକ୍ଷା ଓ ପୁନଃ ବନୀକରଣ ଏହାକୁ କମାଏ।",
+      "pages": [
+        15,
+        23
+      ],
+      "chapter": "resources",
+      "alternatives": [
+        {
+          "prompt": "ଗ୍ରାମାଞ୍ଚଳରେ କାଠ ଓ ଘସି ବ୍ୟବହାରର ଦୁଇ ପରିଣାମ ବୁଝାଇ ଦୁଇ ଅଣପାରମ୍ପରିକ ଶକ୍ତି ଉତ୍ସ ଦିଅ।",
+          "answer": "ଜାଳେଣି ପାଇଁ ଅଧିକ କାଠ କଟିଲେ ଅରଣ୍ୟ କ୍ଷୟ ହୁଏ। ଘସି ଜାଳିଲେ ଜମି ପାଇଁ ଗୋବର ସାର କମେ। ସୌରଶକ୍ତି ସୂର୍ଯ୍ୟକିରଣରୁ ଓ ପବନ ଶକ୍ତି ପ୍ରବାହିତ ବାୟୁରୁ ମିଳେ। ଉଭୟ ଅଣପାରମ୍ପରିକ ଉତ୍ସ।",
+          "pages": [
+            1,
+            8
+          ],
+          "chapter": "energy-resources",
+          "title": "ଶକ୍ତି ସମ୍ବଳ",
+          "source": "social-science/geography-and-economics/chapter 5/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1QTkXO7P21plerzY-RNA_a7s0K2-3Fo_x/view"
+        }
+      ],
+      "title": "ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1QoXMNew_3TGAw3uXLbF8VbyZBDF6Gdcs/view"
+    },
+    {
+      "number": "୫ (କ)",
+      "area": "ଭୂଗୋଳ",
+      "marks": 3,
+      "prompt": "କାଠ, ଆଖୁ ଓ କପା ପ୍ରକ୍ରିୟାକରଣର ତିନିଟି ଶିଳ୍ପଜାତ ଉତ୍ପାଦ ଲେଖ।",
+      "answer": "କାଠରୁ କାଠମଣ୍ଡ ଓ ସେଥିରୁ କାଗଜ, ଆଖୁରୁ ଚିନି ଏବଂ କପାରୁ ଲୁଗା ପ୍ରସ୍ତୁତ ହୁଏ।",
+      "pages": [
+        1
+      ],
+      "chapter": "manufacturing",
+      "alternatives": [
+        {
+          "prompt": "ବନ୍ୟ ପ୍ରାଣୀ ସଂରକ୍ଷଣର ତିନୋଟି ଭିନ୍ନ ପଦକ୍ଷେପ ବୁଝାଅ।",
+          "answer": "ପ୍ରାକୃତିକ ବାସସ୍ଥାନକୁ ଅଭୟାରଣ୍ୟ ଭଳି ସୁରକ୍ଷିତ କ୍ଷେତ୍ରରେ ରଖାଯାଏ। ଶିକାର ଓ ବ୍ୟବସାୟିକ ଶୋଷଣ ରୋକାଯାଏ। ପ୍ରଜନନ ଏବଂ ପ୍ରାଣୀ ଚିକିତ୍ସା ବ୍ୟବସ୍ଥାରେ ସଙ୍କଟାପନ୍ନ ଜାତିଙ୍କୁ ସୁରକ୍ଷା ମିଳେ।",
+          "pages": [
+            14,
+            16
+          ],
+          "chapter": "biotic-resources",
+          "title": "ଜୈବ ସମ୍ବଳ",
+          "source": "social-science/geography-and-economics/chapter 2/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1pZgd9BH7My2p90Vf3-BXNBsbaAuGkY90/view"
+        }
+      ],
+      "title": "ବିନିର୍ମାଣ ଉଦ୍ୟୋଗ",
+      "source": "social-science/geography-and-economics/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1f_W1kDWkys2Av1xDoa_tRyYhf2URoUBB/view"
+    },
+    {
+      "number": "୫ (ଖ)",
+      "area": "ଭୂଗୋଳ",
+      "marks": 3,
+      "prompt": "ଖରିଫ୍, ରବି ଓ ଯେଦ୍ ଋତୁକୁ କୃଷି ବର୍ଷରେ କ୍ରମରେ ରଖି ବିଶେଷତା ଲେଖ।",
+      "answer": "ଖରିଫ୍ ମୌସୁମୀ ସହ ଆରମ୍ଭ ହୁଏ, ଧାନ ଏହାର ଏକ ଫସଲ। ଶୀତ ଆରମ୍ଭରୁ ରବି ଚାଲେ ଓ ଗହମ ହୁଏ। ପରବର୍ତ୍ତୀ ଖରିଫ୍ ପୂର୍ବର ଅଳ୍ପ ସମୟର ଗ୍ରୀଷ୍ମ ଚାଷ ଯେଦ୍।",
+      "pages": [
+        3
+      ],
+      "chapter": "agriculture",
+      "alternatives": [
+        {
+          "prompt": "ଗୋଟିଏ କାରଖାନା ପାଇଁ ସ୍ଥାନ ବାଛିବା ବେଳେ କେବଳ କଞ୍ଚାମାଲ ଦେଖିଲେ ଚଳିବ କି? କାରଣ ଦିଅ।",
+          "answer": "କଞ୍ଚାମାଲ ସହ ଜମି, ଶକ୍ତି ଓ ଶ୍ରମ ଦରକାର। କଞ୍ଚାମାଲ ଆଣିବା ଓ ଉତ୍ପାଦ ବଜାରକୁ ନେବା ପାଇଁ ପରିବହନ ଏବଂ ବିକ୍ରି ପାଇଁ ବଜାର ସୁବିଧା ମଧ୍ୟ ଦେଖିବାକୁ ପଡ଼େ।",
+          "pages": [
+            2,
+            3
+          ],
+          "chapter": "manufacturing",
+          "title": "ବିନିର୍ମାଣ ଉଦ୍ୟୋଗ",
+          "source": "social-science/geography-and-economics/chapter 7/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1f_W1kDWkys2Av1xDoa_tRyYhf2URoUBB/view"
+        }
+      ],
+      "title": "କୃଷି",
+      "source": "social-science/geography-and-economics/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jtaBezdQm-SS0PA5YV9_bkaY9W_Lbg3P/view"
+    },
+    {
+      "number": "୫ (ଗ)",
+      "area": "ଅର୍ଥନୀତି",
+      "marks": 3,
+      "prompt": "ଖାଉଟି ବଜାରରେ କେଉଁ ତିନି ବିଷୟ ପ୍ରତି ସଚେତନ ରହିବ? ପ୍ରତ୍ୟେକର କାରଣ ଦିଅ।",
+      "answer": "ଠିକ୍ ପରିମାଣ ମିଳିବାକୁ ଓଜନ ଦେଖିବା, ଅଧିକ ଦର ଆଦାୟ ରୋକିବାକୁ ମୂଲ୍ୟ ଯାଞ୍ଚ ଓ ତ୍ରୁଟିପୂର୍ଣ୍ଣ ବା ଅପମିଶ୍ରିତ ଦ୍ରବ୍ୟରୁ ନିଜକୁ ବଞ୍ଚାଇବାକୁ ଗୁଣ ଦେଖିବା ଉଚିତ।",
+      "pages": [
+        4,
+        7
+      ],
+      "chapter": "economic-system",
+      "alternatives": [
+        {
+          "prompt": "ଜାତୀୟ ଆୟ ବଢ଼ିଲେ ବିକାଶ ବୁଝିବା ପାଇଁ ଆଉ କ’ଣ ଦେଖିବା ଦରକାର?",
+          "answer": "ଜନସଂଖ୍ୟା ସହ ଆୟକୁ ମେଳାଇ ମୁଣ୍ଡପିଛା ଆୟ ଦେଖିବା ଆବଶ୍ୟକ। ଲୋକଙ୍କ ଜୀବନଯାପନର ମାନ, ସାମାଜିକ ସ୍ଥିତି ଓ ଆର୍ଥିକ ଅବସ୍ଥାରେ ଉନ୍ନତି ହୋଇଛି କି ତାହା ମଧ୍ୟ ବିଚାର କରିବାକୁ ହୁଏ।",
+          "pages": [
+            1
+          ],
+          "chapter": "economic-development",
+          "title": "ଆର୍ଥନୀତିକ ବିକାଶ",
+          "source": "social-science/geography-and-economics/chapter 8/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1uoZ3Q4ACOmr2VcntY-GWeDgiwn9z2gKW/view"
+        }
+      ],
+      "title": "ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା",
+      "source": "social-science/geography-and-economics/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_pzkwjNskyY_wuMRgUsmWimUeDlRCpd6/view"
+    },
+    {
+      "number": "୬ (କ)",
+      "area": "ଭୂଗୋଳ",
+      "marks": 2,
+      "prompt": "ଶସ୍ୟ ଚାଷ ବ୍ୟତୀତ କୃଷି ପରିସରରେ ଆସୁଥିବା ଦୁଇଟି କାର୍ଯ୍ୟ ଲେଖ।",
+      "answer": "ମତ୍ସ୍ୟ ପାଳନ ଓ ମହୁମାଛି ପାଳନ। ଉଭୟକୁ ପାଠରେ କୃଷି କାର୍ଯ୍ୟରୂପେ ଗ୍ରହଣ କରାଯାଇଛି।",
+      "pages": [
+        1
+      ],
+      "chapter": "agriculture",
+      "alternatives": [
+        {
+          "prompt": "ସମ୍ବଳର ଉପଯୋଗିତା ରୂପାନ୍ତରଣରେ କିପରି ବଢ଼େ? ପାଠରୁ ଗୋଟିଏ ଉଦାହରଣ ଦିଅ।",
+          "answer": "ବସ୍ତୁକୁ ପ୍ରକ୍ରିୟାକରଣ କଲେ ନୂତନ ବ୍ୟବହାରଯୋଗ୍ୟ ଦ୍ରବ୍ୟ ମିଳେ। ତୁଳାରୁ ସୂତା ଓ ସୂତାରୁ ପିନ୍ଧିବା ଲୁଗା ତିଆରି ହୁଏ।",
+          "pages": [
+            1,
+            3
+          ],
+          "chapter": "resources",
+          "title": "ସମ୍ବଳ",
+          "source": "social-science/geography-and-economics/chapter 1/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1QoXMNew_3TGAw3uXLbF8VbyZBDF6Gdcs/view"
+        }
+      ],
+      "title": "କୃଷି",
+      "source": "social-science/geography-and-economics/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jtaBezdQm-SS0PA5YV9_bkaY9W_Lbg3P/view"
+    },
+    {
+      "number": "୬ (ଖ)",
+      "area": "ଭୂଗୋଳ",
+      "marks": 2,
+      "prompt": "ଜୈବ ବିବିଧତା କ’ଣ?",
+      "answer": "କୌଣସି ଅଞ୍ଚଳରେ ଦେଖାଯାଉଥିବା ବିଭିନ୍ନ ପ୍ରକାରର ଉଦ୍ଭିଦ, ପ୍ରାଣୀ ଓ ଅଣୁଜୀବଙ୍କ ବିବିଧତାକୁ ଜୈବ ବିବିଧତା କୁହାଯାଏ।",
+      "pages": [
+        10,
+        16
+      ],
+      "chapter": "biotic-resources",
+      "alternatives": [
+        {
+          "prompt": "ପାରମ୍ପରିକ ଓ ଅଣପାରମ୍ପରିକ ଶକ୍ତି ଉତ୍ସର ଦୁଇଟି ଲେଖାଏଁ ଉଦାହରଣ ଦିଅ।",
+          "answer": "କୋଇଲା ଓ ପେଟ୍ରୋଲିୟମ୍ ପାରମ୍ପରିକ ଉତ୍ସ। ସୂର୍ଯ୍ୟକିରଣ ଓ ପବନ ଅଣପାରମ୍ପରିକ ଉତ୍ସ।",
+          "pages": [
+            1
+          ],
+          "chapter": "energy-resources",
+          "title": "ଶକ୍ତି ସମ୍ବଳ",
+          "source": "social-science/geography-and-economics/chapter 5/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1QTkXO7P21plerzY-RNA_a7s0K2-3Fo_x/view"
+        }
+      ],
+      "title": "ଜୈବ ସମ୍ବଳ",
+      "source": "social-science/geography-and-economics/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1pZgd9BH7My2p90Vf3-BXNBsbaAuGkY90/view"
+    },
+    {
+      "number": "୬ (ଗ)",
+      "area": "ଅର୍ଥନୀତି",
+      "marks": 2,
+      "prompt": "ଦାରିଦ୍ର୍ୟ ହ୍ରାସରେ ନିଯୁକ୍ତି ଓ ତାଲିମ କିପରି ସହାୟକ?",
+      "answer": "ନିଯୁକ୍ତିରୁ ପରିବାର ଆୟ ପାଏ। ତାଲିମ ନୂଆ କାମ ବା ସ୍ୱନିଯୁକ୍ତି ମାଧ୍ୟମରେ ଉପାର୍ଜନ କ୍ଷମତା ବଢ଼ାଏ।",
+      "pages": [
+        8,
+        15
+      ],
+      "chapter": "economic-system",
+      "alternatives": [
+        {
+          "prompt": "ଦୁଇ ଦେଶର ମୋଟ ଜାତୀୟ ଆୟ ସମାନ ହେଲେ ସେମାନଙ୍କ ମୁଣ୍ଡପିଛା ଆୟ ଭିନ୍ନ କିପରି ହୋଇପାରେ?",
+          "answer": "ମୋଟ ଜାତୀୟ ଆୟକୁ ଜନସଂଖ୍ୟା ଦ୍ୱାରା ଭାଗ କଲେ ମୁଣ୍ଡପିଛା ଆୟ ମିଳେ। ଆୟ ସମାନ ହେଲେ କମ୍ ଜନସଂଖ୍ୟା ଥିବା ଦେଶର ମୁଣ୍ଡପିଛା ଆୟ ଅଧିକ ହୁଏ।",
+          "pages": [
+            1
+          ],
+          "chapter": "economic-development",
+          "title": "ଆର୍ଥନୀତିକ ବିକାଶ",
+          "source": "social-science/geography-and-economics/chapter 8/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1uoZ3Q4ACOmr2VcntY-GWeDgiwn9z2gKW/view"
+        }
+      ],
+      "title": "ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା",
+      "source": "social-science/geography-and-economics/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_pzkwjNskyY_wuMRgUsmWimUeDlRCpd6/view"
+    },
+    {
+      "number": "୬ (ଘ)",
+      "area": "ଅର୍ଥନୀତି",
+      "marks": 2,
+      "prompt": "ଭାରତ ଅନୁସରଣ କରୁଥିବା ଆର୍ଥନୀତିକ ବ୍ୟବସ୍ଥାର ନାମ କ’ଣ?",
+      "answer": "ମିଶ୍ର ଅର୍ଥନୀତି। ଏଥିରେ ସରକାରୀ ଓ ଘରୋଇ ଉଭୟ କ୍ଷେତ୍ରର ଭୂମିକା ରହିଛି।",
+      "pages": [
+        2,
+        6
+      ],
+      "chapter": "economic-development",
+      "alternatives": [
+        {
+          "prompt": "ମୂଳ ବର୍ଷର ଦର ସୂଚକ ଓ ୨୫ ପ୍ରତିଶତ ଦରବୃଦ୍ଧି ପରର ସୂଚକ କେତେ? ଅର୍ଥଟି ବୁଝାଅ।",
+          "answer": "ମୂଳ ବର୍ଷର ଆଧାର ୧୦୦ ଓ ନୂତନ ସୂଚକ ୧୨୫। ଏହାର ଅର୍ଥ ତୁଳନୀୟ ଦ୍ରବ୍ୟ ଓ ସେବାର ଦର ମୂଳ ବର୍ଷ ଅପେକ୍ଷା ଶତକଡ଼ା ୨୫ ଭାଗ ବଢ଼ିଛି।",
+          "pages": [
+            1
+          ],
+          "chapter": "economic-system",
+          "title": "ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା",
+          "source": "social-science/geography-and-economics/chapter 9/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1_pzkwjNskyY_wuMRgUsmWimUeDlRCpd6/view"
+        }
+      ],
+      "title": "ଆର୍ଥନୀତିକ ବିକାଶ",
+      "source": "social-science/geography-and-economics/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1uoZ3Q4ACOmr2VcntY-GWeDgiwn9z2gKW/view"
+    }
+  ]
+};

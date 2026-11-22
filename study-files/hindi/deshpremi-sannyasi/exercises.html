@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>देशप्रेमी संन्यासी · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>देशप्रेमी संन्यासी</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1_8Do-JTdb1-LADPIMOw6MPr7K84rq83x/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ବିବେକାନନ୍ଦଙ୍କ ଉପରେ ତିନି ଦଳ ପ୍ରଶ୍ନ, ଭାଷାଜ୍ଞାନ ଓ ଅତିରିକ୍ତ କାର୍ଯ୍ୟ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 3–5</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୯)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (क)</a> <a href="#exercise-2">1 (घ)</a> <a href="#exercise-3">1 (ख–ग, ङ–छ)</a> <a href="#exercise-4">2 (क–ङ)</a> <a href="#exercise-5">3 (क–ञ)</a> <a href="#exercise-6">भाषा-ज्ञान 1–2</a> <a href="#exercise-7">भाषा-ज्ञान 3</a> <a href="#exercise-8">भाषा-ज्ञान 4–5</a> <a href="#exercise-9">अध्ययन कार्य (i–ii)</a></nav></details>
+<article id="exercise-1"><h2>1 (क). संन्यासी किसे कहते हैं?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଘର ଛାଡ଼ିବାରୁ ସ୍ୱାମୀଜୀଙ୍କ ଦାୟିତ୍ୱ ଶେଷ ହୋଇନଥିଲା। ମାତୃଭୂମି ଓ ଦେଶବାସୀଙ୍କ କଲ୍ୟାଣକୁ ସେ ନିଜ ସାଧନାର କାମ କଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>जो अपनी इच्छा से घरबार और सुख के साधन त्याग देता है तथा सादगी में जीता है, उसे संन्यासी कहते हैं।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-2"><h2>1 (घ). अमरीका की धर्मसभा में स्वामीजी ने किस बात का महत्त्व समझाया?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭାଷଣରେ ଭାରତୀୟ ଋଷିଙ୍କ ଚିନ୍ତାଧାରାକୁ ବିଶ୍ୱର ଶ୍ରୋତାଙ୍କ ସମ୍ମୁଖରେ ରଖାଗଲା। ସ୍ଥାନ ଧର୍ମସଭା, ଆଲୋଚ୍ୟ ବିଷୟ ଭାରତର ଆଧ୍ୟାତ୍ମିକ ଦୃଷ୍ଟି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>उन्होंने भारतीय धर्म, आचार-विचार, ऋषियों के चिंतन और आध्यात्मिक दृष्टिकोण का महत्त्व समझाया। उनके भाषण से सभा के लोगों को भारतीय विचारों और उनकी ऊँचाई का परिचय मिला।</p><p>विदेश में भारत का यह परिचय कराना भी उनकी देशभक्ति का एक रूप था।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-3"><h2>1 (ख–ग, ङ–छ). स्वामीजी के व्यक्तित्व, आह्वान, इंग्लैंड में प्रभाव, अनुयायियों और 1857 के बाद की स्थिति पर लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିଦେଶରେ ମିଳିଥିବା ଆଦର ଓ ଦେଶରେ ଥିବା ନିରାଶା ଭିନ୍ନ ପ୍ରସଙ୍ଗ। ‘उठो, जागो’ ଡାକକୁ ଦେଶବାସୀଙ୍କ ଆତ୍ମବିଶ୍ୱାସ ଫେରାଇବା ସହ ଯୋଡ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ख) वे सुन्दर, ज्ञानी, सरल, विनयी और मिष्टभाषी थे। उनके व्यक्तित्व में प्रचण्ड प्रतिभा और देशप्रेम था।</p><p>(ग) उन्होंने देशवासियों को उठने और जागने को कहा। वे चाहते थे कि भारतीय स्वतंत्रता पाएं और अपनी पहचान पर गर्व करें।</p><p>(ङ) इंग्लैंड में उन्होंने अपनी विद्वत्ता से अंग्रेज विद्वानों को प्रभावित किया। उन्होंने माना कि भारत उच्च चिंतन का धनी है।</p><p>(च) अनुयायियों को मानव-सेवा, ज्ञान और धर्म-प्रचार में लगाया।</p><p>(छ) 1857 की पराजय के बाद लोग निराशा, आलस्य और कर्महीनता में डूबे थे।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-4"><h2>2 (क–ङ). भारत, स्वतंत्रता, अंग्रेज विद्वानों और शिष्य के विषय में उत्तर लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରାମକୃଷ୍ଣଙ୍କ ଶିଷ୍ୟ ଓ ମିଶନର କାମ ଚିହ୍ନିଲେ ବ୍ୟକ୍ତି, ତାଙ୍କ ଗୁରୁ ଓ ପରବର୍ତ୍ତୀ ସେବାର ସମ୍ପର୍କ ବୁଝାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) अंग्रेजी शासन के समय भारत पराधीन था।</p><p>(ख) स्वतंत्रता जीवन का वरदान है।</p><p>(ग) अंग्रेज विद्वानों ने माना कि भारत गरीबी के बावजूद ऊँचे विचारों और चिंतन का धनी है।</p><p>(घ) भारत को आजाद करने और जागृत रखने में स्वामी विवेकानन्द का योगदान रहा।</p><p>(ङ) स्वामी विवेकानन्द रामकृष्ण परमहंस के उपयुक्त शिष्य थे।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪–୭୫</a></small></article>
+<article id="exercise-5"><h2>3 (क–ञ). धर्मसभा से जीवन के वरदान तक दस संक्षिप्त उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଧର୍ମସଭାର ସ୍ଥାନ ପାଇଁ ‘अमरीका’ ଓ ବ୍ୟକ୍ତି ପାଇଁ ‘स्वामी विवेकानन्द’ ହେବ। ବ୍ୟକ୍ତି, ଘଟଣା ଓ ପ୍ରସଙ୍ଗର ଭେଦ ରଖିଲେ ଏକ ଶବ୍ଦର ଉତ୍ତର ଠିକ୍ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) अमरीका में।</p><p>(ख) स्वामी विवेकानन्द।</p><p>(ग) एक साल।</p><p>(घ) भारत के देवता।</p><p>(ङ) रामकृष्ण परमहंस।</p><p>(च) अंग्रेजों का।</p><p>(छ) भारत को।</p><p>(ज) भारत।</p><p>(झ) उनका भाई।</p><p>(ञ) स्वतंत्रता को।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪–୭୬</a></small></article>
+<article id="exercise-6"><h2>भाषा-ज्ञान 1–2. ग्यारह शब्दों के लिंग और छह शब्दों के पर्याय लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘वाणी’ ଓ ‘निराशा’ ସ୍ତ୍ରୀଲିଙ୍ଗ। ଲିଙ୍ଗ ପ୍ରଶ୍ନରେ ଶବ୍ଦ ଯେଉଁ ଶ୍ରେଣୀର ତାହା କହୁଛ। ପର୍ଯ୍ୟାୟ ପ୍ରଶ୍ନରେ ବାକ୍ୟରେ ସମାନ ଅର୍ଥ ଦେବା ପଦ ଖୋଜୁଛ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>१. स्त्रीलिंग — वाणी, अंग्रेजी, आजादी, गरीबी, निराशा। पुल्लिंग — विद्वान, दृष्टिकोण, देश, संन्यासी, आनन्द, बुढ़ापा।</p><p>२. विद्वान–पंडित, आजाद–स्वतंत्र, साल–वर्ष, मानव–मनुष्य, व्याकुल–बेचैन, इच्छा–चाह।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬</a></small></article>
+<article id="exercise-7"><h2>भाषा-ज्ञान 3. पाँचों वाक्यों को व्याकरणसम्मत बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘रामकृष्ण परमहंस विवेकानंद के गुरु थे’ରେ गुरु ସହ ସମ୍ପର୍କ ଜଣାଇବାକୁ के ଏବଂ ସମ୍ମାନ ରଖିବାକୁ थे ରହିଛି। ସଂଶୋଧନ ପରେ ପୂରା ବାକ୍ୟର ଅନ୍ୱୟ ପଢ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) सालों पहले की बात है।</p><p>(ख) रामकृष्ण परमहंस विवेकानंद के गुरु थे।</p><p>(ग) देश में रामकृष्ण मिशन की अनेक संस्थाएँ हैं।</p><p>(घ) गर्व से कहो कि मैं भारतीय हूँ।</p><p>(ङ) भारत मेरा जीवन है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬</a></small></article>
+<article id="exercise-8"><h2>भाषा-ज्ञान 4–5. विशेषण चुनिए और अगले चार वाक्यों में विराम चिह्न लगाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘कड़ा’ ଶାସନର ଗୁଣ; ‘अंग्रेजों का’ ସେହି ଶାସନ କାହାର ଥିଲା ଜଣାଏ। ଏକେ ନାମପଦ ସହ ଆସିଥିବା ଦୁଇଟି ପଦର କାମ ଏପରି ଅଲଗା ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>४.</p><p>(क) मेरे, प्यारे।</p><p>(ख) कड़ा (‘अंग्रेजों का’ शासन का संबंध भी बताता है)।</p><p>(ग) मेरे, बचपन का।</p><p>(घ) मेरे, यौवन का।</p><p>(ङ) मेरे, बचपन का। ५.</p><p>(क) मेरे प्यारे देशवासियो! उठो, जागो।</p><p>(ख) निराशा, आलस्य और कर्महीनता में डूबे हुए थे।</p><p>(ग) उनके सुन्दर, सरल, अर्थपूर्ण अंग्रेजी भाषण ने सबके दिलों को अभिभूत कर दिया।</p><p>(घ) स्वामीजी ने असंख्य अनुयायियों को मानव-सेवा, ज्ञान तथा धर्म-प्रचार में लगाया।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=77" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୭</a></small></article>
+<article id="exercise-9"><h2>अध्ययन कार्य (i–ii). जीवनी पढ़ने और पाठ के दो वाचनों के लिए नमूना टिप्पणी।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ପଠନର ନୋଟରେ ଧର୍ମସଭାରେ କଥା କହିବା ଏକ ଘଟଣା। ଦ୍ୱିତୀୟ ପଠନରେ ସେହି ଘଟଣାରେ ସ୍ୱାମୀଜୀଙ୍କ ସରଳ ବାଣୀ ଓ ବିନୟ ଚିହ୍ନ। ଏହି ପ୍ରମାଣରୁ ଜୀବନୀରେ କାମ ଓ ସ୍ୱଭାବକୁ ଅଲଗା କରିହେବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(i) जीवनी में पहले स्वभाव के प्रमाण, फिर कार्य और परिणाम छाँटें। इस पाठ से नमूना — सरल वाणी और विनय उनके व्यक्तित्व के प्रमाण हैं; देशवासियों को जगाना और सेवा के लिए संगठन बनाना उनके कृतित्व के प्रमाण हैं।</p><p>(ii) पहले वाचन में घटनाओं का क्रम, दूसरे में उन घटनाओं से उभरने वाले गुण बताइए।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=77" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୭</a></small></article>
+
+</main></body></html>

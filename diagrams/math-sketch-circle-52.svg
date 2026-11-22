@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">AB ଓ CD ଜ୍ୟା Pରେ ଛେଦ କରନ୍ତି | AC ଓ DB ଜ୍ୟାରେ △APC ଓ △DPB ଗଠିତ |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="250.00" cy="160.00" r="127.50" stroke="#244355" stroke-width="2.5"/>
+<polyline points="122.58,155.55 250.00,287.50" stroke="#244355" stroke-width="2.35"/>
+<polyline points="377.50,160.00 371.26,120.60" stroke="#244355" stroke-width="2.35"/>
+<polyline points="122.58,155.55 377.50,160.00" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="250.00,287.50 371.26,120.60" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="122.58" cy="155.55" r="2.7" fill="#244355"/>
+<text x="108.59" y="155.03" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="377.50" cy="160.00" r="2.7" fill="#244355"/>
+<text x="391.50" y="160.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="250.00" cy="287.50" r="2.7" fill="#244355"/>
+<text x="250.00" y="302.50" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="371.26" cy="120.60" r="2.7" fill="#244355"/>
+<text x="384.57" y="115.97" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="343.07" cy="159.40" r="2.7" fill="#244355"/>
+<text x="339.07" y="176.40" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">P</text>
+</svg>

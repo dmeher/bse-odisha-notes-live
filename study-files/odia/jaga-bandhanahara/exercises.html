@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଜାଗ ବନ୍ଧନହରା · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଜାଗ ବନ୍ଧନହରା</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1teYMGSRjWEHzlooJDEWn_E2e2BFsBz0Z/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୨୬। ଯାଞ୍ଚ କରାଯାଇଥିବା ଉତ୍ତର ପ୍ରଶ୍ନକ୍ରମରେ ଦିଆଯାଇଛି।</p><p>୨୫ରେ କବିଙ୍କ ଅନ୍ୟ ସଂକଳନ ପଢ଼ିବାକୁ କୁହାଯାଇଛି। ଏହି ଅଧ୍ୟାୟରେ ମିଳିଥିବା ପାଠ ଆଧାରରେ ସଂଗ୍ରହର ନମୁନା ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୩–୫</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୨୬)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a> <a href="#exercise-18">୧୮</a> <a href="#exercise-19">୧୯</a> <a href="#exercise-20">୨୦</a> <a href="#exercise-21">୨୧</a> <a href="#exercise-22">୨୨</a> <a href="#exercise-23">୨୩</a> <a href="#exercise-24">୨୪</a> <a href="#exercise-25">୨୫</a> <a href="#exercise-26">୨୬</a></nav></details>
+<article id="exercise-1"><h2>୧. ନବଯୁଗରେ ଜାଗିବାର ଆହ୍ୱାନ କାହାକୁ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଜାଗ’ ସମ୍ବୋଧନଟି ବାରମ୍ବାର ଆସୁଛି। ନୂଆ ଯୁଗର ବାଧା ଦୂର କରିବା ପାଇଁ ତରୁଣମାନଙ୍କ ଶକ୍ତି ଉପରେ କବିଙ୍କ ଭରସା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତରୁଣମାନଙ୍କୁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-2"><h2>୨. ଲକ୍ଷ ଜୀବନରେ କେଉଁ ଧାରା ଖେଳାଇବାକୁ କୁହାଯାଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ଧାର ଦୂର କରୁଥିବା ଆଲୋକ ଏଠାରେ ଆଶା ଓ ଜାଗରଣର ଚିତ୍ର। ତାହାକୁ ଅନେକ ମଣିଷଙ୍କ ଜୀବନରେ ପହଞ୍ଚାଇବାକୁ କୁହାଯାଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଲୋକଧାରା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-3"><h2>୩. ‘ସଞ୍ଚିତ’ର ପଦପରିଚୟ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କେଉଁପରି ଅପମାନ ବୋଲି ପଚାରିଲେ ‘ସଞ୍ଚିତ’ ମିଳେ। ବିଶେଷ୍ୟର ଅବସ୍ଥା ଜଣାଉଥିବାରୁ ପଦଟି ବିଶେଷଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଶେଷଣ। ଏହା ଅପମାନର ଅବସ୍ଥାକୁ ସୂଚାଉଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-4"><h2>୪. ‘ତିମିର’ର ପ୍ରତିଶବ୍ଦ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତିମିର ଥିଲେ ପଥ ଦେଖାଯାଏ ନାହିଁ। ପଦ୍ୟର ଆଲୋକଧାରା ଯାହାକୁ ଦୂର କରେ, ସେହି ଅନ୍ଧାରକୁ ଏହି ପଦ ଜଣାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ — ଅନ୍ଧାର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-5"><h2>୫. ‘ତନ୍ଦ୍ରାପରଶ’ କେଉଁ ସମାସ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିଗ୍ରହ କଲେ ‘କାହାର ପରଶ’ ପ୍ରଶ୍ନର ଉତ୍ତର ‘ତନ୍ଦ୍ରାର’ ମିଳେ। ସମସ୍ତପଦରେ ଷଷ୍ଠୀ ବିଭକ୍ତିର ଚିହ୍ନ ଲୁପ୍ତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତନ୍ଦ୍ରାର ପରଶ — ଷଷ୍ଠୀ ତତ୍ପୁରୁଷ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-6"><h2>୬. ‘ଅନ’ ପ୍ରତ୍ୟୟ ଥିବା ଆଉ ତିନି ଶବ୍ଦ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗମ୍‌, ପଠ୍‌ ଓ ଲିଖ୍‌ ଧାତୁ ଭିନ୍ନ ହେଲେ ମଧ୍ୟ ପ୍ରତ୍ୟେକରୁ କାମର ନାମ ହେଉଛି। ତିନି ଗଠନର ଶେଷରେ ସାଧାରଣ ଅଂଶ ‘ଅନ’।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗମନ, ପଠନ, ଲିଖନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-7"><h2>୭. ‘ନିର୍ଝର’ର ସନ୍ଧିବିଚ୍ଛେଦ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୂଳ ପ୍ରଥମ ଅଂଶ ‘ନିଃ’। ‘ଝର’ ସହ ସନ୍ଧିରେ ବିସର୍ଗ ସ୍ଥାନରେ ର୍‌ ହୋଇ ନିର୍ଝର ରୂପ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ — ନିଃ + ଝର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-8"><h2>୮. ‘ବନ୍ଧନହରା’ ସମ୍ବୋଧନ କାହା ପାଇଁ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ହରା’ର ଭାବ ବନ୍ଧନ ଦୂର କରିବା। ନାମଟି ଯୁବକଙ୍କ ଦାୟିତ୍ୱକୁ ଜଣାଉଛି, କେବଳ ବୟସକୁ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯେଉଁ ତରୁଣମାନେ ଶୋଷଣ ଓ ଅପମାନର ବନ୍ଧନ ଛିଣ୍ଡାଇବେ, ସେହି ନବଯୁଗର ତରୁଣମାନଙ୍କ ପାଇଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-9"><h2>୯. କେଉଁଠି ଆଲୋକଧାରା ଖେଳାଇବାକୁ ଆହ୍ୱାନ ଅଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କବି ଜଣେ ବ୍ୟକ୍ତିକୁ ତାଙ୍କ ନିଜ ଉଦ୍ଧାର ପାଇଁ ଡାକୁନାହାନ୍ତି। ଜାଗରଣର ଲକ୍ଷ୍ୟ ଅସଂଖ୍ୟ ମଣିଷଙ୍କ ଜୀବନ ବଦଳାଇବା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲକ୍ଷ ଲକ୍ଷ ମଣିଷଙ୍କ ଜୀବନରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-10"><h2>୧୦. କେଉଁ ବିଭେଦ ଲୁପ୍ତ ହେଉ ବୋଲି କବି ଚାହାନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆରମ୍ଭରେ ତରୁଣଙ୍କ ଆତ୍ମଦାନରେ ଲକ୍ଷ ଜୀବନ ଆଲୋକିତ ହେବାର ଆଶା ଅଛି। ଜାତି, ଉପଜାତି ଓ ଖଣ୍ଡିତ ଦେଶର ବିଭେଦ ହଟିବା ସହ କ୍ରନ୍ଦନ ଓ ଦୁଃଖ ଶେଷ ହେଉ ବୋଲି କବି ଚାହାନ୍ତି। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜାତି, ଉପଜାତି ଓ ଦେଶଦେଶ ମଧ୍ୟରେ ଥିବା ବିଭେଦ ଲୋପ ପାଉ ବୋଲି ସେ ଚାହାନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-11"><h2>୧୧. କାହାର ଶଙ୍ଖଶବ୍ଦରେ ଦୁଃଖଜ୍ୱାଳା କମିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶଙ୍ଖର ଡାକ ଜାଗରଣ ଆରମ୍ଭର ସଙ୍କେତ। ସେହି ଡାକରେ ପୀଡ଼ିତ ମଣିଷ ସାହସ ଫେରିପାଇବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମହାମାନବର ଶଙ୍ଖଶବ୍ଦରେ ଦୁଃଖଜ୍ୱାଳା ଶମିତ ହେବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-12"><h2>୧୨. କେଉଁଠାରେ ଅମର ଗାନ ଗାଇବାକୁ ଆହ୍ୱାନ ଅଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୃତ୍ୟୁର ଦୁଆର ଚରମ ବିପଦର ସ୍ଥାନ। ସେଠି ମଧ୍ୟ ଗାନ ନ ଥାମିବାରେ ଲକ୍ଷ୍ୟ ପାଇଁ ନିର୍ଭୀକତା ଦିଶେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୃତ୍ୟୁର ଦୁଆରେ ପାଦ ଦେଇ ମଧ୍ୟ ଅମର ଗାନ ଗାଇବାକୁ କବି ତରୁଣମାନଙ୍କୁ କହିଛନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-13"><h2>୧୩. ତିମିର କାରା ଚୂର୍ଣ୍ଣ କରିବାର ଭାବ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘କାରା’ରେ ବନ୍ଦୀ ହୋଇ ରହିବା ଓ ‘ତିମିର’ରେ ପଥ ନ ଦିଶିବା, ଦୁଇ ଅର୍ଥ ଏକାଠି ମିଳିଛି। ଏହି ସ୍ଥିତି ଦୂର ହେବାରେ ମୁକ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମଣିଷକୁ ବାନ୍ଧିଥିବା ଅନ୍ଧକାର ଓ ଅପମାନ ଦୂର କରି ମୁକ୍ତିର ପଥ ଖୋଲିବା ପାଇଁ ଏହି ଆହ୍ୱାନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-14"><h2>୧୪. ମରୁପଥରେ କ’ଣ ସୃଷ୍ଟି କରିବାକୁ କବି କହିଛନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଥ ମରୁଭୂମି ପରି କଠିନ ହେଲେ ସେଠାରେ ଝରଣା ସୃଷ୍ଟି କରିବାକୁ କୁହାଯାଇଛି। କଣ୍ଟକ ଓ କୁହେଳି ବାଧାର ସୂଚନା ଦିଏ। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶୁଷ୍କ ମରୁପଥରେ ନିର୍ଝର ସୃଷ୍ଟି କରିବାକୁ କହିଛନ୍ତି। କଠିନ ପଥରେ ନୂଆ ଜୀବନ ଆଣିବା ଏହାର ଭାବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-15"><h2>୧୫. “ସମ୍ମୁଖେ ତବ”ରେ “ତବ” କାହାକୁ ବୁଝାଉଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ତବ’ ଅର୍ଥ ‘ତୁମର’। ଆଗପଛର ଡାକ ଦେଖିଲେ ଏହି ‘ତୁମେ’ ନବଯୁଗର ତରୁଣ ବୋଲି ସ୍ପଷ୍ଟ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏଠାରେ ନୂଆ ଯୁଗର ସନ୍ଧାନୀ ତରୁଣଙ୍କୁ ସମ୍ବୋଧନ କରାଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-16"><h2>୧୬. ଭୁବନକୁ ହସାଇବା ପାଇଁ କ’ଣ ଛିନ୍ନ କରିବାକୁ ହେବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କୁହେଳି ଦୃଷ୍ଟି ଢାଙ୍କେ, ତନ୍ଦ୍ରା ଜାଗିବାକୁ ଦିଏନାହିଁ। ଦୁଇଟି ବାଧା କାଟିଲେ ହିଁ ଅନ୍ୟର ଜୀବନରେ ଆନନ୍ଦ ଆଣିହେବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୋହମମତାର କୁହେଳି ଓ ତନ୍ଦ୍ରାର ପରଶ ଛିନ୍ନ କରିବାକୁ ହେବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-17"><h2>୧୭. ଭବିଷ୍ୟତର ତରୁଣ କିପରି ଜାଗିବେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତରୁଣଙ୍କ ଜାଗିବାରେ ଏକା ମଣିଷର ଘୁମ ଭାଙ୍ଗିବା ଅପେକ୍ଷା ଅଧିକ ଅର୍ଥ ଅଛି। ଭବିଷ୍ୟତ ଆଡ଼କୁ ମିଳିତ ଉଦ୍ୟମରେ ଯିବା ତାହାର ଫଳ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅତୀତର ଜୀର୍ଣ୍ଣ ଜୀବନକୁ ଚିରି, ପୀଡ଼ନର ବନ୍ଧନ ଭାଙ୍ଗି ସେମାନେ ନୂଆ ଭବିଷ୍ୟତ ଗଢ଼ିବେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-18"><h2>୧୮. ବିଜୟର ମାଳା ଘେନିବା ଆଗରୁ କ’ଣ ହେବା ଦରକାର?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିଜୟମାଳା ସଫଳତାର ଚିହ୍ନ। ତାହା ଆଗରୁ ଲୋକଙ୍କୁ ବାନ୍ଧି ରଖିଥିବା ଅର୍ଗଳ ଭାଙ୍ଗିବା କାମ ପୂରା ହେବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୀଡ଼ନ ଓ ବନ୍ଧନର ଅର୍ଗଳରାଜି ଭାଙ୍ଗିପଡ଼ିବା ଦରକାର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-19"><h2>୧୯. ମରଣଦୁଆରେ ଅମର ଗାନ କରିବାର ସପ୍ରସଙ୍ଗ ଅର୍ଥ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ମରଣଦୁଆର’ ବିପଦର ସୀମାକୁ ଓ ‘ଅମର ଗାନ’ ବ୍ୟକ୍ତିର ଜୀବନ ପରେ ମଧ୍ୟ ବଞ୍ଚି ରହୁଥିବା ମୁକ୍ତିର ଆଦର୍ଶକୁ ବୁଝାଏ। ଦୁଇ ପଦକୁ ପାଖାପାଖି ରଖି କବି ତରୁଣଙ୍କ ସାହସ ମାଗିଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କବି ନବଯୁଗର ତରୁଣମାନଙ୍କୁ ମଣିଷର ବନ୍ଧନ ଛିଣ୍ଡାଇବାକୁ ଡାକିଛନ୍ତି। ସେ କାମର ପଥରେ ବାହାରୁ ବାଧା ଆସିବ ଓ ନିଜ ମନରେ ଭୟ ଉଠିବ।</p><p>ମରଣର ଦୁଆର ପାଖରେ ପାଦ ଥାପିବା ସେହି ବିପଦକୁ ସାମ୍ନା କରିବାର ଚିତ୍ର। ସେଠାରେ ଅମର ଗାନ ଗାଇବାର ଅର୍ଥ ହେଲା, ପ୍ରାଣଭୟ ମଧ୍ୟ ମାନବ କଲ୍ୟାଣର ଆଦର୍ଶକୁ ଚୁପ୍ କରିପାରିବ ନାହିଁ।</p><p>ଲୋକଙ୍କ ଅପମାନ ଲୋପ କରିବାର ଦୃଢ଼ତା ଓ ସାହସ ଏହି ଦୁଇ ପାଦରେ ପ୍ରକାଶ ପାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-20"><h2>୨୦. ତନ୍ଦ୍ରାର ପରଶ ଛିଣ୍ଡାଇ ଭୁବନକୁ ହସାଇବାର ଭାବ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ତନ୍ଦ୍ରା’ରେ ଆଗକୁ ଯିବାର ଶକ୍ତି ଅବଶ ହୋଇଥାଏ। ନିଜ ମୋହରୁ ବାହାରି ଅନ୍ୟ ମଣିଷର ଦୁଃଖ ଦୂର କଲେ ‘ଭୁବନକୁ ହସାଇବା’ର କାମ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତରୁଣ ଏକ ନୂଆ ସମାଜର ସନ୍ଧାନୀ। ତା’ ପଥର କଣ୍ଟକ ସହ ମୋହ ଓ ମମତାର କୁହେଳି ତାକୁ ଅଟକାଇପାରେ।</p><p>ନିଜର ନିଷ୍କ୍ରିୟତା କାଟି ଅନ୍ୟ ମଣିଷର ଦୁଃଖ ଦୂର କରିବାରେ ଲାଗିଲେ ଭୁବନ ହସିବ। ଏହି ଜାଗରଣ ପାଇଁ କବି ଡାକିଛନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-21"><h2>୨୧. ଅର୍ଗଳ ଭାଙ୍ଗି ବିଜୟମାଳା ନେବାର ଅର୍ଥ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅର୍ଗଳ ଦ୍ୱାର ବନ୍ଦ ରଖେ, ତାହା ଭାଙ୍ଗିବା ମୁକ୍ତିର ପଥ ଖୋଲିବାକୁ ବୁଝାଏ। ଏହି ସାମୂହିକ ବିଜୟ ପରେ ବିଜୟମାଳା ଘେନିବାର ଆହ୍ୱାନ ଆସେ। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୀଡ଼ନ ଓ ପୁରୁଣା ବାଧାଗୁଡ଼ିକ ଯେପରି ମୁକ୍ତିର ଦୁଆରରେ ଲାଗିଥିବା ଅର୍ଗଳ। ତରୁଣମାନେ ତାହା ଭାଙ୍ଗିଦେଲେ ସମସ୍ତଙ୍କ କଲ୍ୟାଣର ରାସ୍ତା ଖୋଲିବ।</p><p>ସେହି ସଫଳତା ହିଁ ବିଜୟର ମାଳା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩</a></small></article>
+<article id="exercise-22"><h2>୨୨. କବିତାକୁ ସାର୍ଥକ ଉଦ୍‌ବୋଧନ ଗୀତିକା କହିବାର କାରଣ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>‘ଜାଗ’ ସମ୍ବୋଧନ ତରୁଣଙ୍କୁ ପୁଣି ପୁଣି କର୍ମକୁ ଡାକେ। କ୍ରନ୍ଦନ ଓ ସଞ୍ଚିତ ଅପମାନ ଦୂର କରିବା ଉଦ୍ଦେଶ୍ୟଟି ସ୍ପଷ୍ଟ।</p><p>ମରୁପଥରେ ନିର୍ଝର ଓ ଅନ୍ଧାରରେ ପ୍ରଦୀପ ଭଳି ଚିତ୍ର ଆଶା ଓ ସାହସ ଜଗାଏ। ବାଧା ଲଙ୍ଘିବା, ମୋହ ଛାଡ଼ିବା ଓ ପୀଡ଼ନ ଭାଙ୍ଗିବାର ଆଦେଶାତ୍ମକ ପଦରେ ଡାକଟି ବଳ ପାଏ।</p><p>ଗୀତର ସ୍ୱର ଓ ମାନବକଲ୍ୟାଣର ଭାବ ଏକାଠି ହୋଇ ଏହାକୁ ଉଦ୍‌ବୋଧନ ଗୀତିକା କରିଛି।</p><p>କବିତାରେ ‘ଜାଗ’ ଡାକ ପୁନଃପୁନଃ ଉଠୁଛି। ଏହା ଶ୍ରୋତାଙ୍କୁ ଚିହ୍ନାଇଦିଏ ଓ ଗୀତର ତାଳ ରଖେ।</p><p>ମରଣର ଦୁଆରରେ ଗାନ କରିବା, ମରୁପଥରେ ନିର୍ଝର ବୁହାଇବା ଓ ଅନ୍ଧକାରରେ ଦୀପ ଧରିବାରେ ପ୍ରତ୍ୟେକ ଡାକ ଏକ କାମର ରୂପ ନେଇଛି। ଏହି କାରଣରୁ ଗୀତର ଉତ୍ସାହ କେବଳ ଭାବାବେଗ ନ ହୋଇ କର୍ମର ପ୍ରେରଣା ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=34" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୪</a></small></article>
+<article id="exercise-23"><h2>୨୩. ନବଯୁଗର ତରୁଣଙ୍କୁ କେଉଁ ଆହ୍ୱାନ ଦିଆଯାଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମୃତ୍ୟୁକୁ ଡରି ପଛକୁ ନ ହଟି ମାନବର ଅପମାନ ଦୂର କର। ପଥର କଣ୍ଟକ ଓ ମୋହ ଅତିକ୍ରମ କରି ପୀଡ଼ନର ବନ୍ଧନ ଭାଙ୍ଗ।</p><p>ନିଜ ଅନ୍ତରର ସାହସରେ ଭୁବନକୁ ଆନନ୍ଦ ଦିଅ।</p><p>କବି ତରୁଣଙ୍କୁ ପଥ ସହଜ ହେବ ବୋଲି କହିନାହାନ୍ତି। ତାଙ୍କ ଆଗରେ କଣ୍ଟକ ଓ ମନରେ ମୋହର କୁହେଳି ରହିପାରେ।</p><p>ଏସବୁ ଅତିକ୍ରମ କରିବା ପରେ ଯେଉଁ ବିଜୟ ଆସେ ତାହା ବ୍ୟକ୍ତିର ପ୍ରତିଷ୍ଠା ପାଇଁ ନୁହେଁ। ସଞ୍ଚିତ ଅପମାନ ଓ ପୀଡ଼ନ ଲୋପ ପାଇ ଅନେକ ମଣିଷ ମୁକ୍ତ ହେଲେ ମାଳା ଗ୍ରହଣର ଅର୍ଥ ରହେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=34" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୪</a></small></article>
+<article id="exercise-24"><h2>୨୪. ବନ୍ଧନରାଜି ଛିନ୍ନ କରିବାର ଆହ୍ୱାନ ବିଶ୍ଳେଷଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମରୁପଥରେ ନିର୍ଝର ଓ ଅନ୍ତରେ କୋଟି ଜୀବନର ସ୍ପନ୍ଦନ ଧରିଥିବା ପ୍ରଦୀପ ନୂତନ ଆଶାର ଚିତ୍ର। ବାହାରେ କଣ୍ଟକ ଥିଲାପରି ଭିତରେ ମୋହମମତାର କୁହେଳି ଥାଏ। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତରୁଣମାନଙ୍କୁ ମାନବର ସଞ୍ଚିତ ଅପମାନ ପୋଛିବାକୁ କବି ଡାକିଛନ୍ତି। ଏଥିପାଇଁ ବନ, ପର୍ବତ ଓ ସାଗର ପରି ବାଧା ଅତିକ୍ରମ କରିବାକୁ ପଡ଼ିବ।</p><p>ସନ୍ଧାନପଥର କଣ୍ଟକ ବାହାରର ବାଧା; ମୋହ ଓ ମମତାର କୁହେଳି ଭିତରର ବାଧା। ଅନ୍ଧକାରରେ ପ୍ରଦୀପ ଧରିବା, ମରୁପଥରେ ନିର୍ଝର ସୃଷ୍ଟି କରିବା ଓ ମୃତ୍ୟୁ ସାମ୍ନାରେ ମଧ୍ୟ ଅମର ଗୀତ ଗାଇବା ହେଉଛି କର୍ମ ଓ ସାହସର ଚିତ୍ର।</p><p>କେବଳ ନିଜର ମୁକ୍ତିରେ ଏହାର ଶେଷ ନାହିଁ। ପୀଡ଼ନ ଦୂର କରି ସମଗ୍ର ଭୁବନକୁ ହସାଇବା ତାଙ୍କ ଦାୟିତ୍ୱ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=34" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୪</a></small></article>
+<article id="exercise-25"><h2>୨୫. କବିଙ୍କ ଅନ୍ୟ କବିତା ସଂଗ୍ରହ ପାଇଁ ପାଠନ ନୋଟ ତିଆରି କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅନନ୍ତ ପଟ୍ଟନାୟକଙ୍କ ସଂକଳନରୁ କବିତା ବାଛି ନାମ, ପ୍ରଥମ ପାଦ ଓ କାହା ଉଦ୍ଦେଶ୍ୟରେ ସମ୍ବୋଧନ ଅଛି ଲେଖିବି। ଏହି ପାଠର ତୁଳନାବିନ୍ଦୁ — ତରୁଣଙ୍କୁ ଆହ୍ୱାନ, ମୁକ୍ତି ଓ କର୍ମ।</p><p>ଅନ୍ୟ କବିତାର ପୂରା ପାଠ ଏହି PDFରେ ନାହିଁ।</p><p>କବି ପରିଚୟରୁ ‘ରକ୍ତଶିଖା’, ‘ଛାଇର ଛିଟା’ ଓ ‘ଅବାନ୍ତର’ ମୋର ସଂଗ୍ରହ ତାଲିକା। ପଢ଼ିଥିବା ପାଠର ନମୁନା ଟିପ୍ପଣୀ — ପ୍ରଥମ ପାଦ ‘ନବୀନଯୁଗର ତରୁଣ ଜାଗରେ’।</p><p>ସମ୍ବୋଧିତ ବ୍ୟକ୍ତି ତରୁଣ। ଆହ୍ୱାନର ଲକ୍ଷ୍ୟ ବନ୍ଧନ ଦୂର କରିବା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=34" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୪</a></small></article>
+<article id="exercise-26"><h2>୨୬. ନବଯୁଗର ଆହ୍ୱାନ ଜଣାଇ ସାଙ୍ଗକୁ ଚିଠି ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚିଠିରେ ବନ୍ଧୁଙ୍କୁ ଗୋଟିଏ କାମ ପାଇଁ ଆହ୍ୱାନ କର। କବିଙ୍କ ‘ବନ୍ଧନ’ ଭାବରୁ ବିଭେଦ ଦୂର କରିବା କଥାକୁ ନିଜ ଓ ବନ୍ଧୁର ଦାୟିତ୍ୱ ଭାବେ କହିଲେ ପତ୍ରର ଉଦ୍ଦେଶ୍ୟ ସ୍ପଷ୍ଟ ହୋଇଥାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନିଜ ଗ୍ରାମ, ତାରିଖ …</p><p>ପ୍ରିୟ ବନ୍ଧୁ,</p><p>‘ଜାଗ ବନ୍ଧନହରା’ ପଢ଼ି ଭାବିଲି ତରୁଣଙ୍କୁ କବି କେତେ ବଡ଼ ଦାୟିତ୍ୱ ଦେଇଛନ୍ତି। ଜାତି ଓ ଉପଜାତିର ଭେଦରେ ମଣିଷ କାନ୍ଦୁଥିଲେ ନିଜ ସୁଖରେ ଚୁପ୍ ବସିହେବ ନାହିଁ।</p><p>ସମ୍ମୁଖର ବାଧା ଓ ନିଜ ମନର ଭୟ ଉଭୟକୁ ଜିତିବାକୁ ହେବ। ମରୁପଥରେ ନିର୍ଝର ଗଢ଼ିବାର ଚିତ୍ରଟି ମୋତେ ବଡ଼ ସାହସ ଦେଲା।</p><p>ଆମେ ସାଙ୍ଗମାନେ ପରସ୍ପରର ଅସୁବିଧା ବୁଝି କାମ କଲେ ଏହି ଆହ୍ୱାନକୁ ଜୀବନରେ ଆଣିପାରିବା। ତୋ ମତ ଲେଖିବୁ।</p><p>ତୋର ବନ୍ଧୁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=34" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୪</a></small></article>
+
+</main></body></html>

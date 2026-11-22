@@ -1,0 +1,1275 @@
+export default {
+  "subject": "hindi",
+  "setNumber": 5,
+  "objective": [
+    {
+      "prompt": "कृपाशंकर के पिता पहले बिल्हौर में कौन-सा काम करते थे?",
+      "options": [
+        "चिकित्सक का",
+        "हेड कान्सटेबुल का",
+        "अध्यापक का",
+        "डाक-मुंशी का"
+      ],
+      "correct": 3,
+      "answer": "ଶିଷ୍ୟ ନିଜ ପରିଚୟ ଦେବାବେଳେ ବାପାଙ୍କ ଚାକିରି କହିଥିଲେ।",
+      "pages": [
+        8,
+        9
+      ],
+      "chapter": "bodh",
+      "title": "बोध",
+      "source": "hindi-saurav/chapter 11/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1naFuNF9V7CuiJVnzeze63oivFoAX1brB/view"
+    },
+    {
+      "prompt": "किससे पता चलता है कि निराशा के बावजूद अध्यापक ने कर्तव्य निभाया?",
+      "options": [
+        "वे किसी को न पढ़ाते",
+        "वे केवल यात्रा करते",
+        "वे रुचि से पढ़ाते और देर से लौटते",
+        "वे काम छोड़कर चले गए"
+      ],
+      "correct": 2,
+      "answer": "ନିଜ ଅସୁବିଧାକୁ ସେ ଶ୍ରେଣୀକାର୍ଯ୍ୟରେ ବାଧା ହେବାକୁ ଦେଇନଥିଲେ।",
+      "pages": [
+        3,
+        4
+      ],
+      "chapter": "bodh",
+      "title": "बोध",
+      "source": "hindi-saurav/chapter 11/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1naFuNF9V7CuiJVnzeze63oivFoAX1brB/view"
+    },
+    {
+      "prompt": "इस पाठ के शीर्षक में संन्यास के साथ कौन-सा गुण रखा गया है?",
+      "options": [
+        "देशप्रेम",
+        "ऐश्वर्य",
+        "एकांतप्रियता",
+        "व्यापार-कौशल"
+      ],
+      "correct": 0,
+      "answer": "ସନ୍ନ୍ୟାସୀଙ୍କ ଦେଶପ୍ରେମକୁ ଶୀର୍ଷକ ସୂଚାଏ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "deshpremi-sannyasi",
+      "title": "देशप्रेमी संन्यासी",
+      "source": "hindi-saurav/chapter 12/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_8Do-JTdb1-LADPIMOw6MPr7K84rq83x/view"
+    },
+    {
+      "prompt": "लेखिका को अस्पताल क्यों जाना पड़ा?",
+      "options": [
+        "गिलहरी के काटने के कारण",
+        "जाली टूटने के कारण",
+        "मोटर दुर्घटना के कारण",
+        "कौवे के हमले के कारण"
+      ],
+      "correct": 2,
+      "answer": "ଲେଖିକା ଗାଡ଼ି ଦୁର୍ଘଟଣାରେ ଆହତ ହୋଇଥିଲେ।",
+      "pages": [
+        4,
+        6
+      ],
+      "chapter": "gillu",
+      "title": "गिल्लू",
+      "source": "hindi-saurav/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1b2gS5_ZKHsF_R_89n7aaD9SCjSoFMEse/view"
+    },
+    {
+      "prompt": "किस जोड़ी में पुराना शब्द और उसका अर्थ मेल खाते हैं?",
+      "options": [
+        "हिरदै–हृदय",
+        "ऋतु–काँटा",
+        "साँच–मिथ्या",
+        "जाके–घड़ा"
+      ],
+      "correct": 0,
+      "answer": "हिरदै ଶବ୍ଦର ଅର୍ଥ ହୃଦୟ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "anmol-vani",
+      "title": "अनमोल वाणी · कबीर",
+      "source": "hindi-saurav/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1q9v-WwawP5MBInh-TW8wSgxd0EU2P5cs/view"
+    },
+    {
+      "prompt": "सुजान के धन-संग्रह का प्रयोजन कौन-सा है?",
+      "options": [
+        "लघु का अपमान",
+        "फल छिपाना",
+        "अपनी शेखी",
+        "दूसरों की भलाई"
+      ],
+      "correct": 3,
+      "answer": "ସୁଜନ ସମ୍ପଦକୁ ପରହିତରେ ଲଗାନ୍ତି।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "rahim",
+      "title": "रहीम · दोहे",
+      "source": "hindi-saurav/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1XwYZnxvRYSCMXld42fPi67QuHDzlvSOq/view"
+    },
+    {
+      "prompt": "बलराम कृष्ण के रंग की तुलना किससे करते हैं?",
+      "options": [
+        "मक्खन के बर्तन से",
+        "नंद और यशोदा के रंग से",
+        "गाय की पूँछ से",
+        "आकाश के रंग से"
+      ],
+      "correct": 1,
+      "answer": "ଗୋରା ମାତାପିତା ଓ ଶାମଳ ଶିଶୁର ଭେଦକୁ ନେଇ ଥଟ୍ଟା କରାଯାଏ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "surdas",
+      "title": "सूरदास · पद",
+      "source": "hindi-saurav/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1EIiZTCV8wQ2eOREn98ueNTfY4Pgrqwtd/view"
+    },
+    {
+      "prompt": "पवन और चिड़िया के चित्र में प्रमुख विरोध क्या है?",
+      "options": [
+        "धन और व्यापार",
+        "दिन और भोजन",
+        "बलवान विनाश और छोटे जीव का साहस",
+        "नगर और गाँव"
+      ],
+      "correct": 2,
+      "answer": "କ୍ଷୁଦ୍ର ଜୀବର ପ୍ରୟାସ ବେଗବାନ ପବନକୁ ଆହ୍ୱାନ କରେ।",
+      "pages": [
+        2,
+        4
+      ],
+      "chapter": "need-ka-nirman",
+      "title": "नीड़ का निर्माण",
+      "source": "hindi-saurav/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1t1Ya3HwCQshJKbxEmR5AXGt7GdVTROZl/view"
+    },
+    {
+      "prompt": "बाजि शब्द किस प्राणी का बोध कराता है?",
+      "options": [
+        "हिरन",
+        "हाथी",
+        "घोड़ा",
+        "गाय"
+      ],
+      "correct": 2,
+      "answer": "बाजिधनରେ बाजि ଅର୍ଥ ଘୋଡ଼ା।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "tulsidas",
+      "title": "तुलसीदास · दोहे",
+      "source": "hindi-saurav/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1uv9eSDyZDZNYURxiuJtsRUM53JrkO_yA/view"
+    },
+    {
+      "prompt": "जिनकी स्थिति अपने से कम है उनके साथ किसकी रक्षा करनी चाहिए?",
+      "options": [
+        "अपने प्रदर्शन की",
+        "बाहरी ठाठ की",
+        "उनके भय की",
+        "उनके स्वाभिमान की"
+      ],
+      "correct": 3,
+      "answer": "ସାହାଯ୍ୟ ଦେବା ସମୟରେ ମଧ୍ୟ ସମ୍ମାନ ରଖିବାକୁ ପାଠ କୁହେ।",
+      "pages": [
+        2,
+        4
+      ],
+      "chapter": "madhur-bhashan",
+      "title": "मधुर भाषण",
+      "source": "hindi-saurav/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+    },
+    {
+      "prompt": "गिलहरी को गिल्लू कहने से कैसी संज्ञा बनी?",
+      "options": [
+        "व्यक्तिवाचक",
+        "द्रव्यवाचक",
+        "समूहवाचक",
+        "भाववाचक"
+      ],
+      "correct": 0,
+      "answer": "ଜାତିର ଗୋଟିଏ ଜୀବକୁ ସ୍ୱତନ୍ତ୍ର ନାମ ଦିଆଗଲା।",
+      "pages": [
+        3,
+        4
+      ],
+      "chapter": "gillu",
+      "title": "गिल्लू",
+      "source": "hindi-saurav/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1b2gS5_ZKHsF_R_89n7aaD9SCjSoFMEse/view"
+    },
+    {
+      "prompt": "कवि ने संशय की तुलना किससे की है?",
+      "options": [
+        "शीतल छाया से",
+        "सूक्ष्म कुहासे से",
+        "चंदन से",
+        "पुष्प से"
+      ],
+      "correct": 1,
+      "answer": "ସନ୍ଦେହକୁ କୁହୁଡ଼ି ସହ ଯୋଡ଼ିଛନ୍ତି।",
+      "pages": [
+        2,
+        3
+      ],
+      "chapter": "kante-mat-boo",
+      "title": "काँटे कम-से-कम मत बोओ",
+      "source": "hindi-saurav/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1WodaVIYZJgzUUPtIYPLgCAeXgZFhIkEz/view"
+    },
+    {
+      "prompt": "संन्यासी के त्याग का सबसे सटीक वर्णन कौन-सा है?",
+      "options": [
+        "भाषा सीखना छोड़ना",
+        "स्वेच्छा से घर और भोग-साधन छोड़ना",
+        "जनसेवा छोड़ना",
+        "देश से प्रेम छोड़ना"
+      ],
+      "correct": 1,
+      "answer": "ତ୍ୟାଗ ସହ ଜନସେବାର ସମନ୍ୱୟ ଏହି ପାଠର କେନ୍ଦ୍ର।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "deshpremi-sannyasi",
+      "title": "देशप्रेमी संन्यासी",
+      "source": "hindi-saurav/chapter 12/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_8Do-JTdb1-LADPIMOw6MPr7K84rq83x/view"
+    },
+    {
+      "prompt": "लेखक हर देश के इतिहास को किसका लेखा मानते हैं?",
+      "options": [
+        "केवल फसलों का",
+        "केवल भाषा का",
+        "आशा और संघर्ष का",
+        "केवल ऋतु का"
+      ],
+      "correct": 2,
+      "answer": "ଦେଶର ସଫଳତା ଓ ବିଫଳତା ସ୍ମୃତିରେ ରହେ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "janani-janmabhumi",
+      "title": "जननी जन्मभूमि",
+      "source": "hindi-saurav/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view"
+    },
+    {
+      "prompt": "उत्कल विश्वविद्यालय और तकनीकी कॉलेज किस विकास के उदाहरण हैं?",
+      "options": [
+        "नदी परिवहन के",
+        "शिक्षा के",
+        "शिलालेखन के",
+        "प्राचीन युद्ध के"
+      ],
+      "correct": 1,
+      "answer": "ଓଡ଼ିଶାର ନବନିର୍ମାଣରେ ଶିକ୍ଷାପ୍ରତିଷ୍ଠାନ ଗଢ଼ିଉଠିଲା।",
+      "pages": [
+        4
+      ],
+      "chapter": "janani-janmabhumi",
+      "title": "जननी जन्मभूमि",
+      "source": "hindi-saurav/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view"
+    },
+    {
+      "prompt": "दूसरे पद में कृष्ण को दूर से देखकर कौन आनंदित होती हैं?",
+      "options": [
+        "ग्वालिन",
+        "यशोदा",
+        "चाँद की माता",
+        "सखी"
+      ],
+      "correct": 1,
+      "answer": "ଶିଶୁ କୃଷ୍ଣଙ୍କ ଖେଳ ଦେଖି ମାଆ ଆନନ୍ଦ ପାଆନ୍ତି।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "surdas",
+      "title": "सूरदास · पद",
+      "source": "hindi-saurav/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1EIiZTCV8wQ2eOREn98ueNTfY4Pgrqwtd/view"
+    },
+    {
+      "prompt": "आरंभ और अंत में नीड़ की पुनरावृत्ति क्या प्रकट करती है?",
+      "options": [
+        "सवेरे का डर",
+        "घोंसला छोड़ने की इच्छा",
+        "वर्षा की प्रतीक्षा",
+        "सृजन का बना रहने वाला संकल्प"
+      ],
+      "correct": 3,
+      "answer": "ପୁଣି ଗଢ଼ିବା ଏହି ଆବୃତ୍ତିର କେନ୍ଦ୍ର।",
+      "pages": [
+        2,
+        4
+      ],
+      "chapter": "need-ka-nirman",
+      "title": "नीड़ का निर्माण",
+      "source": "hindi-saurav/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1t1Ya3HwCQshJKbxEmR5AXGt7GdVTROZl/view"
+    },
+    {
+      "prompt": "गिल्लू को सोनजुही के नीचे स्थान देने का कारण क्या था?",
+      "options": [
+        "वहाँ अस्पताल था",
+        "वह लता उसे प्रिय थी",
+        "वहाँ काजू उगते थे",
+        "वहाँ सुराही थी"
+      ],
+      "correct": 1,
+      "answer": "ପ୍ରିୟ ଲତା ତାହାର ସ୍ମୃତି ସହ ଯୋଡ଼ି ହେଲା।",
+      "pages": [
+        6,
+        7
+      ],
+      "chapter": "gillu",
+      "title": "गिल्लू",
+      "source": "hindi-saurav/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1b2gS5_ZKHsF_R_89n7aaD9SCjSoFMEse/view"
+    },
+    {
+      "prompt": "पुराने साधव किस मार्ग से दूर द्वीपों तक पहुँचते थे?",
+      "options": [
+        "पर्वत मार्ग से",
+        "रेल मार्ग से",
+        "मरुस्थल मार्ग से",
+        "समुद्री मार्ग से"
+      ],
+      "correct": 3,
+      "answer": "ସାଧବମାନଙ୍କ ନୌବାଣିଜ୍ୟ ଏଠାରେ ଆଲୋଚିତ।",
+      "pages": [
+        2,
+        3
+      ],
+      "chapter": "janani-janmabhumi",
+      "title": "जननी जन्मभूमि",
+      "source": "hindi-saurav/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view"
+    },
+    {
+      "prompt": "‘व्यथा हरे’ में बंधु का कौन-सा कर्तव्य प्रकट है?",
+      "options": [
+        "धन छिपाना",
+        "दूसरे का दुःख कम करना",
+        "अपना यश बढ़ाना",
+        "भेद बढ़ाना"
+      ],
+      "correct": 1,
+      "answer": "ବନ୍ଧୁତାର ପରିଚୟ ହେଉଛି ଅନ୍ୟର ଦୁଃଖ ଦୂର କରିବା।",
+      "pages": [
+        2,
+        3
+      ],
+      "chapter": "manushyata",
+      "title": "मनुष्यता",
+      "source": "hindi-saurav/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1vxOLBKNsIrThRhEgSI7YV0sLhp99x6kI/view"
+    },
+    {
+      "prompt": "रूठे मित्र को मनाना किस योग्यता का व्यावहारिक रूप है?",
+      "options": [
+        "वस्त्र चुनना",
+        "मौन रहना",
+        "बल से झुकाना",
+        "भाव को प्रभावी ढंग से कहना"
+      ],
+      "correct": 3,
+      "answer": "କଥାବାର୍ତ୍ତାର ଠିକ୍ ଶବ୍ଦ ଭୁଲ ବୁଝାମଣା ଦୂର କରିପାରେ।",
+      "pages": [
+        3,
+        4
+      ],
+      "chapter": "madhur-bhashan",
+      "title": "मधुर भाषण",
+      "source": "hindi-saurav/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+    },
+    {
+      "prompt": "फसल और अकाल के चित्र किस बात के प्रमाण हैं?",
+      "options": [
+        "हर समय की समानता",
+        "प्रकृति का अभाव",
+        "संसार की परिवर्तनशीलता",
+        "ऋतुओं की स्थिरता"
+      ],
+      "correct": 2,
+      "answer": "ଏକ ଅଞ୍ଚଳର ଦଶା ସମୟ ସହ ବଦଳେ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "janani-janmabhumi",
+      "title": "जननी जन्मभूमि",
+      "source": "hindi-saurav/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view"
+    },
+    {
+      "prompt": "पण्डितजी के पड़ोसियों और उनके बीच सबसे स्पष्ट अंतर कहाँ दिखता था?",
+      "options": [
+        "उम्र में",
+        "शहर में",
+        "भाषा में",
+        "रहन-सहन में"
+      ],
+      "correct": 3,
+      "answer": "ପଡ଼ୋଶୀଙ୍କ ଘରର ଆରାମ ଓ ନିଜର ଅଭାବକୁ ପଣ୍ଡିତ ତୁଳନା କରୁଥିଲେ।",
+      "pages": [
+        2,
+        4
+      ],
+      "chapter": "bodh",
+      "title": "बोध",
+      "source": "hindi-saurav/chapter 11/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1naFuNF9V7CuiJVnzeze63oivFoAX1brB/view"
+    },
+    {
+      "prompt": "चाँद की यात्रा कहाँ होती है?",
+      "options": [
+        "जंगल में",
+        "समुद्र में",
+        "आसमान में",
+        "मैदान में"
+      ],
+      "correct": 2,
+      "answer": "ରାତିର ଆକାଶ ଯାତ୍ରାବେଳେ ତାକୁ ଥଣ୍ଡା ଲାଗେ।",
+      "pages": [
+        1,
+        2
+      ],
+      "chapter": "chand-ka-jhingola",
+      "title": "चाँद का झिंगोला",
+      "source": "hindi-saurav/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Oip3_LqKsvV8HNBDOY-CgH_hEAOrTnh8/view"
+    },
+    {
+      "prompt": "आरंभ में जुड़ा उपसर्ग पहचानिए — “अभिमान”।",
+      "options": [
+        "अभि",
+        "अनु",
+        "प्रति",
+        "उप"
+      ],
+      "correct": 0,
+      "answer": "अभिमान ଶବ୍ଦର ଆଗରେ अभि ଲାଗିଛି।",
+      "pages": [
+        22,
+        25
+      ],
+      "chapter": "shabd-rachna",
+      "title": "शब्द रचना",
+      "source": "madhyamika-hindi-byakaran/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1zdpm0Pt1beDebFW-f2rDx4YhCIJQ5z-d/view"
+    },
+    {
+      "prompt": "पुस्तक किसकी है, यह बताने में कौन-सा परसर्ग उपयोगी है?",
+      "options": [
+        "से",
+        "का/की",
+        "में",
+        "तक"
+      ],
+      "correct": 1,
+      "answer": "ଅଧିକାର ବା ସମ୍ବନ୍ଧ ଜଣାଇବାକୁ का, के, की ବ୍ୟବହାର ହୁଏ।",
+      "pages": [
+        18,
+        29
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "इस प्रयोग में सर्वनाम का भेद चुनिए — मैं जाता हूँ। (मैं)।",
+      "options": [
+        "निजवाचक",
+        "प्रश्नवाचक",
+        "अनिश्चयवाचक",
+        "पुरुषवाचक"
+      ],
+      "correct": 3,
+      "answer": "“मैं जाता हूँ। (मैं)”ରେ ସର୍ବନାମର ପ୍ରୟୋଗ पुरुषवाचक।",
+      "pages": [
+        35,
+        36
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "उत्तम पुरुष का वक्ता अपने आने वाले कार्य को कैसे बताएगा?",
+      "options": [
+        "मैंने लिखा",
+        "मैं लिखूँगा",
+        "मैं लिख रहा हूँ",
+        "मैं लिखता था"
+      ],
+      "correct": 1,
+      "answer": "ପ୍ରଶ୍ନରେ ଆଗାମୀ କାମ ଲେଖିବାକୁ ଅଛି।",
+      "pages": [
+        51,
+        55
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "पढ़ सकना का निर्माण किस वर्ग में रखा गया है?",
+      "options": [
+        "सर्वनाम",
+        "यौगिक क्रिया",
+        "मूल धातु",
+        "संज्ञा"
+      ],
+      "correct": 1,
+      "answer": "पढ़ ଓ सकना ମେଳରେ କ୍ରିୟା ହୋଇଛି।",
+      "pages": [
+        43,
+        50
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "विशेषण का भेद चुनिए — यह पुस्तक (यह)।",
+      "options": [
+        "संख्यावाचक",
+        "सार्वनामिक",
+        "गुणवाचक",
+        "परिमाणवाचक"
+      ],
+      "correct": 1,
+      "answer": "“यह पुस्तक (यह)”ରେ ବିଶେଷଣର କାମ ଅନୁସାରେ सार्वनामिक ହୁଏ।",
+      "pages": [
+        40,
+        41
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "कौन-सा उदाहरण “द्रव्यवाचक” संज्ञा का है?",
+      "options": [
+        "सौंदर्य",
+        "ताँबा",
+        "टोली",
+        "महानदी"
+      ],
+      "correct": 1,
+      "answer": "द्रव्यवाचक ପ୍ରଶ୍ନ ପାଇଁ ताँबा ବାଛନ୍ତୁ। ନାମଟି ଭାବ, ସମୂହ, ବିଶେଷ ନାମ ନା ଦ୍ରବ୍ୟ ସୂଚାଏ ଦେଖନ୍ତୁ।",
+      "pages": [
+        2
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "जिस क्रिया से एक साथ ‘किसको’ और ‘क्या’ के दो अलग कर्म मिलें उसका नाम क्या है?",
+      "options": [
+        "समापिका मात्र",
+        "द्विकर्मक",
+        "कालवाचक",
+        "अकर्मक"
+      ],
+      "correct": 1,
+      "answer": "ଦୁଇ ଭିନ୍ନ କର୍ମ ଥିବାରୁ ଏହି ନାମ।",
+      "pages": [
+        43,
+        44
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "“शेर” का स्त्रीलिंग रूप पहचानिए।",
+      "options": [
+        "शेरनी",
+        "बालिका",
+        "घोड़ी",
+        "मालिन"
+      ],
+      "correct": 0,
+      "answer": "ଲିଙ୍ଗ ପରିବର୍ତ୍ତନ ସାରଣୀରେ शेरର ରୂପ शेरनी।",
+      "pages": [
+        5
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "क्रिया कैसे की गई, यह कौन-सा क्रियाविशेषण बताता है?",
+      "options": [
+        "कालवाचक",
+        "स्थानवाचक",
+        "परिमाणवाचक",
+        "रीतिवाचक"
+      ],
+      "correct": 3,
+      "answer": "କାମ କରିବାର ରୀତି ବୁଝାଏ।",
+      "pages": [
+        58,
+        62
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "शब्द के अंत का प्रत्यय चुनिए — “थकान”।",
+      "options": [
+        "आका",
+        "आन",
+        "आवट",
+        "आहट"
+      ],
+      "correct": 1,
+      "answer": "थकान ଶବ୍ଦର ଶେଷରେ आन ପ୍ରତ୍ୟୟ ଚିହ୍ନାଯାଏ।",
+      "pages": [
+        25,
+        33
+      ],
+      "chapter": "shabd-rachna",
+      "title": "शब्द रचना",
+      "source": "madhyamika-hindi-byakaran/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1zdpm0Pt1beDebFW-f2rDx4YhCIJQ5z-d/view"
+    },
+    {
+      "prompt": "रिक्त जोड़ी पूरी कीजिए — आदान : विपरीत अर्थ ?",
+      "options": [
+        "अवनति",
+        "परतंत्र",
+        "पराजय",
+        "प्रदान"
+      ],
+      "correct": 3,
+      "answer": "आदान ଓ प्रदान ବିପରୀତାର୍ଥକ ଯୁଗଳ।",
+      "pages": [
+        6
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "prompt": "गुणवाचक विशेषण की विशेषता पहचानिए — “उत्तरी”।",
+      "options": [
+        "रंग",
+        "आकार",
+        "दिशा",
+        "स्वाद"
+      ],
+      "correct": 2,
+      "answer": "उत्तरी ଶବ୍ଦଟି दिशा ସୂଚାଇ ବସ୍ତୁର ଗୁଣ ଦେଖାଏ।",
+      "pages": [
+        40
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "किस शब्द का अर्थ “सुगंध” है?",
+      "options": [
+        "सखा",
+        "मीन",
+        "दामिनी",
+        "सौरभ"
+      ],
+      "correct": 3,
+      "answer": "सुगंध ପାଇଁ ଦିଆଯାଇଥିବା ପର୍ଯ୍ୟାୟଶବ୍ଦ सौरभ।",
+      "pages": [
+        5
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "prompt": "“कच्चा” के लिए उचित विलोम पहचानिए।",
+      "options": [
+        "पक्का",
+        "उत्तर",
+        "कोमल",
+        "अस्त"
+      ],
+      "correct": 0,
+      "answer": "ଅଧ୍ୟାୟର ତାଲିକାରେ कच्चा ଓ पक्का ପରସ୍ପର ବିପରୀତ।",
+      "pages": [
+        7
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "prompt": "“योग” के विपरीत अर्थ वाला शब्द चुनिए।",
+      "options": [
+        "वियोग",
+        "नास्तिक",
+        "अनिच्छा",
+        "अपयश"
+      ],
+      "correct": 0,
+      "answer": "योगର ଓଲଟା ଭାବ वियोग ଦ୍ୱାରା ବୁଝାଯାଏ।",
+      "pages": [
+        6
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "prompt": "“सो” का पहला प्रेरणार्थक रूप क्या होगा?",
+      "options": [
+        "पिलाना",
+        "सुलाना",
+        "धुलाना",
+        "खिलाना"
+      ],
+      "correct": 1,
+      "answer": "सो ଧାତୁର ସ୍ୱର ବଦଳି सुलाना ରୂପ ହୁଏ।",
+      "pages": [
+        50
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "कारक की पहचान कीजिए — अलगाव का बोध।",
+      "options": [
+        "करण",
+        "कर्म",
+        "अपादान",
+        "कर्ता"
+      ],
+      "correct": 2,
+      "answer": "“अलगाव का बोध” ବର୍ଣ୍ଣନାରେ ପଦର କାମ ଦେଖି अपादान ଚିହ୍ନାଯାଏ।",
+      "pages": [
+        18
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "“अंधकार” के लिए समानार्थी शब्द चुनिए।",
+      "options": [
+        "पद्म",
+        "तट",
+        "तिमिर",
+        "अश्व"
+      ],
+      "correct": 2,
+      "answer": "अंधकार ଓ तिमिर ଏକ ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା ଶବ୍ଦ।",
+      "pages": [
+        4
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "prompt": "वचन बदलने पर कौन-सी जोड़ी सही रहती है?",
+      "options": [
+        "लड़की–लड़कियाँ",
+        "घोड़ा–घोड़ी",
+        "लड़की–लड़का",
+        "बालक–बालिका"
+      ],
+      "correct": 0,
+      "answer": "ପ୍ରଥମ ଯୁଗଳ କେବଳ ବଚନ ବଦଳାଏ। ଅନ୍ୟ ଯୁଗଳ ଲିଙ୍ଗ ବଦଳାନ୍ତି।",
+      "pages": [
+        13,
+        17
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "धातु “गिर” की द्वितीय प्रेरणार्थक क्रिया चुनिए।",
+      "options": [
+        "चलवाना",
+        "लिखवाना",
+        "गिरवाना",
+        "उड़वाना"
+      ],
+      "correct": 2,
+      "answer": "गिर ଧାତୁର ଦ୍ୱିତୀୟ ପ୍ରେରଣାର୍ଥକ ରୂପ गिरवाना। ଅନ୍ୟ ଦ୍ୱାରା କାମ କରାଇବା ବୁଝାଏ।",
+      "pages": [
+        48
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "“कमल” के लिए समानार्थी शब्द चुनिए।",
+      "options": [
+        "पद्म",
+        "तट",
+        "तिमिर",
+        "अश्व"
+      ],
+      "correct": 0,
+      "answer": "कमल ଓ पद्म ଏକ ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା ଶବ୍ଦ।",
+      "pages": [
+        4
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "prompt": "यह और वह किस पुरुष से जुड़े उदाहरण हैं?",
+      "options": [
+        "मध्यम पुरुष",
+        "अन्य पुरुष",
+        "दोनों उत्तम और मध्यम",
+        "उत्तम पुरुष"
+      ],
+      "correct": 1,
+      "answer": "କୁହାଯାଉଥିବା ତୃତୀୟ ବ୍ୟକ୍ତି ବା ବସ୍ତୁକୁ ଏହି ଶବ୍ଦ ସୂଚାଏ।",
+      "pages": [
+        35,
+        37
+      ],
+      "chapter": "roop-vichar",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "prompt": "“किनारा” के लिए समानार्थी शब्द चुनिए।",
+      "options": [
+        "पद्म",
+        "अश्व",
+        "तट",
+        "तिमिर"
+      ],
+      "correct": 2,
+      "answer": "किनारा ଓ तट ଏକ ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା ଶବ୍ଦ।",
+      "pages": [
+        4
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "prompt": "दिए शब्द में जुड़ा अंश कहाँ है — प्रतिकूल? सही विश्लेषण चुनिए।",
+      "options": [
+        "गाड़ी + वाला",
+        "अन + पढ़",
+        "मूर्ख + ता",
+        "प्रति + कूल"
+      ],
+      "correct": 3,
+      "answer": "प्रतिकूल ଶବ୍ଦର ମୂଳ ଓ ଯୋଡ଼ା ଅଂଶକୁ ଦେଖିଲେ प्रति + कूल ମିଳେ।",
+      "pages": [
+        25,
+        33
+      ],
+      "chapter": "shabd-rachna",
+      "title": "शब्द रचना",
+      "source": "madhyamika-hindi-byakaran/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1zdpm0Pt1beDebFW-f2rDx4YhCIJQ5z-d/view"
+    },
+    {
+      "prompt": "“पर्वत” के अर्थ से मेल खाने वाला पद कौन-सा है?",
+      "options": [
+        "यामिनी",
+        "शैल",
+        "सागर",
+        "तरु"
+      ],
+      "correct": 1,
+      "answer": "ପାଠର ପର୍ଯ୍ୟାୟବାଚୀ ତାଲିକାରେ ଏହି ଅର୍ଥ ପାଇଁ पर्वत ସହ शैल ମେଳ ଖାଏ।",
+      "pages": [
+        5
+      ],
+      "chapter": "shabd-vichar",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    }
+  ],
+  "written": [
+    {
+      "chapter": "janani-janmabhumi",
+      "pages": [
+        2,
+        4
+      ],
+      "area": "गद्य · ଗଦ୍ୟ",
+      "number": "1 (क)",
+      "marks": 5,
+      "prompt": "प्राचीन ओड़िशा के कलात्मक और आधुनिक ओड़िशा के आर्थिक योगदान के उदाहरण देकर पाठ के शीर्षक की सार्थकता बताइए।",
+      "answer": "भुवनेश्वर, पुरी और कोणार्क के मंदिर उत्कल की उत्कृष्ट कला का प्रमाण हैं। साधवों का समुद्री व्यापार भी प्रदेश की पुरानी पहचान था। नए समय में हीराकुद की सिंचाई, राउरकेला का लोहा और पारादीप का बंदरगाह आर्थिक उन्नति के उदाहरण हैं। लेखक अपनी जन्मभूमि को केवल स्मृति से नहीं, उसके श्रम, कला और नवनिर्माण से पहचानते हैं। इसी कारण शीर्षक सार्थक है।",
+      "choiceGroup": {
+        "id": "prose",
+        "choose": 2,
+        "total": 3,
+        "eachMarks": 5
+      },
+      "title": "जननी जन्मभूमि",
+      "source": "hindi-saurav/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view"
+    },
+    {
+      "chapter": "gillu",
+      "pages": [
+        3,
+        7
+      ],
+      "area": "गद्य · ଗଦ୍ୟ",
+      "number": "1 (ख)",
+      "marks": 5,
+      "prompt": "उँगली पकड़ने और सोनजुही के दोहराए गए चित्र कहानी में किस प्रकार भावनात्मक एकता लाते हैं?",
+      "answer": "घायल बच्चा स्वस्थ होने लगा तो उसने लेखिका की उँगली अपने पंजों में पकड़ ली। अंतिम रात वही स्पर्श फिर लौटता है, जिससे आरंभ का विश्वास और अंत की निकटता एक साथ याद आते हैं। आरंभ में सोनजुही की कली गिल्लू की स्मृति जगाती है और अंत में उसी लता के नीचे उसे स्थान मिला है। दोनों चित्र छोटे जीवन की पूरी यात्रा को जोड़ते हैं।",
+      "alternatives": [
+        {
+          "chapter": "madhur-bhashan",
+          "pages": [
+            3,
+            4
+          ],
+          "prompt": "विनय और दिखावे का अंतर लेखक कैसे स्पष्ट करते हैं? सहायता करने और इनकार करने के उदाहरण दीजिए।",
+          "answer": "विनय में दूसरे के सम्मान की सच्ची चिंता होती है। दिखावे में शब्द मीठे हो सकते हैं, लेकिन काम या भाव उनसे मेल नहीं खाते। सहायता करते समय यदि अहसान जताया जाए तो उपकार का मूल्य घटता है। इसी तरह मना करना हो तो उसमें अभिमान की गंध नहीं होनी चाहिए। मधुर वाणी की कसौटी शब्दों के साथ व्यवहार और मन की निष्कपटता है।",
+          "title": "मधुर भाषण",
+          "source": "hindi-saurav/chapter 10/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+        }
+      ],
+      "choiceGroup": {
+        "id": "prose",
+        "choose": 2,
+        "total": 3,
+        "eachMarks": 5
+      },
+      "title": "गिल्लू",
+      "source": "hindi-saurav/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1b2gS5_ZKHsF_R_89n7aaD9SCjSoFMEse/view"
+    },
+    {
+      "chapter": "surdas",
+      "pages": [
+        1,
+        2
+      ],
+      "area": "पद्य · ପଦ୍ୟ",
+      "number": "2 (क)",
+      "marks": 5,
+      "prompt": "पहले पद के बालक की शिकायत में तर्क, पीड़ा और माँ के प्रति विश्वास कैसे प्रकट होते हैं?",
+      "answer": "बलराम नंद और यशोदा के गोरे रंग की तुलना कृष्ण के साँवले रंग से करके उन्हें चिढ़ाते हैं। ग्वालबालों की हँसी उनकी पीड़ा बढ़ाती है। कृष्ण अपनी शिकायत में माँ से पूछते हैं कि वह उन्हें ही क्यों डाँटती है और दाऊ पर क्यों नहीं खीझती। दुःखी होने पर उन्हीं के पास आना उनके भरोसे का प्रमाण है। माँ गोधन की सौगंध लेकर बालक को आश्वस्त करती है।",
+      "choiceGroup": {
+        "id": "poetry",
+        "choose": 2,
+        "total": 3,
+        "eachMarks": 5
+      },
+      "title": "सूरदास · पद",
+      "source": "hindi-saurav/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1EIiZTCV8wQ2eOREn98ueNTfY4Pgrqwtd/view"
+    },
+    {
+      "chapter": "ek-tinka",
+      "pages": [
+        1,
+        3
+      ],
+      "area": "पद्य · ପଦ୍ୟ",
+      "number": "2 (ख)",
+      "marks": 5,
+      "prompt": "पहले पुरुष में कही गई एक तिनके की घटना पाठक को क्या सोचने के लिए प्रेरित करती है? आरंभ और अंत का अंतर दिखाइए।",
+      "answer": "आरंभ में वक्ता स्वयं बताता है कि वह ऐंठा हुआ मुंडेर पर था। इसलिए तिनका पड़ने के बाद उसकी घबराहट और आँख का दुखना उसके निजी अनुभव बन जाते हैं। लोग सहायता करते हैं और तिनका निकलता है। अंत में कोई दूसरा उसे भाषण नहीं देता, अपनी समझ ही प्रश्न करती है। पाठक को अपनी छोटी कमजोरियों और अभिमान पर विचार करने का अवसर मिलता है।",
+      "alternatives": [
+        {
+          "chapter": "kante-mat-boo",
+          "pages": [
+            1,
+            3
+          ],
+          "prompt": "सुख और संकट दोनों में सचेत रहने से परोपकार का संबंध समझाइए।",
+          "answer": "सुख का अभिमान मनुष्य को दूसरों के दुःख से अनजान कर सकता है। संकट में भय, निराशा या संशय उसे निष्क्रिय कर सकते हैं। कवि दोनों दशाओं में होश और विश्वास बनाए रखने को कहते हैं। ममता से कटुता घटती है। जब हम सुख देने की स्थिति में न हों तब भी किसी का कष्ट न बढ़ाना हमारे हाथ में है।",
+          "title": "काँटे कम-से-कम मत बोओ",
+          "source": "hindi-saurav/chapter 9/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1WodaVIYZJgzUUPtIYPLgCAeXgZFhIkEz/view"
+        }
+      ],
+      "choiceGroup": {
+        "id": "poetry",
+        "choose": 2,
+        "total": 3,
+        "eachMarks": 5
+      },
+      "title": "एक तिनका",
+      "source": "hindi-saurav/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1vAfDAVf5eVdJjAQoyqQyopiEfdQRpRJe/view"
+    },
+    {
+      "chapter": "madhur-bhashan",
+      "pages": [
+        2,
+        4
+      ],
+      "area": "अपठित अनुच्छेद",
+      "number": "3 (क)",
+      "marks": 2,
+      "prompt": "अभ्यास के लिए नया अनुच्छेद — दो विद्यार्थियों ने एक ही बात अलग-अलग ढंग से कही। पहले ने साथी की भूल गिनाकर अपनी बात समाप्त कर दी। दूसरे ने पहले यह पूछा कि साथी ने ऐसा क्यों सोचा। उत्तर सुनने के बाद उसने वही भूल सरल शब्दों में समझाई। साथी ने दूसरी बार अपनी भूल स्वयं सुधारी। सही जानकारी दोनों के पास थी। अंतर इस बात में था कि एक ने गलती को बातचीत का अंत माना और दूसरे ने उसे समझने का आरंभ बनाया।\n\nदोनों विद्यार्थियों की जानकारी में कौन-सी समानता थी?",
+      "answer": "दोनों सही बात जानते थे और साथी की भूल पहचानते थे।",
+      "title": "मधुर भाषण",
+      "source": "hindi-saurav/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+    },
+    {
+      "chapter": "madhur-bhashan",
+      "pages": [
+        2,
+        4
+      ],
+      "area": "अपठित अनुच्छेद",
+      "number": "3 (ख)",
+      "marks": 2,
+      "prompt": "पहले विद्यार्थी ने अपनी बात कैसे समाप्त की?",
+      "answer": "उसने साथी की भूल गिना दी और आगे कारण नहीं पूछा।",
+      "title": "मधुर भाषण",
+      "source": "hindi-saurav/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+    },
+    {
+      "chapter": "madhur-bhashan",
+      "pages": [
+        2,
+        4
+      ],
+      "area": "अपठित अनुच्छेद",
+      "number": "3 (ग)",
+      "marks": 2,
+      "prompt": "दूसरे विद्यार्थी ने सुधार से पहले क्या किया?",
+      "answer": "उसने पूछा कि साथी ने ऐसा क्यों सोचा और ध्यान से उत्तर सुना।",
+      "title": "मधुर भाषण",
+      "source": "hindi-saurav/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+    },
+    {
+      "chapter": "madhur-bhashan",
+      "pages": [
+        2,
+        4
+      ],
+      "area": "अपठित अनुच्छेद",
+      "number": "3 (घ)",
+      "marks": 2,
+      "prompt": "साथी ने दूसरी बातचीत के बाद क्या किया?",
+      "answer": "स्पष्टीकरण समझकर अपनी भूल स्वयं सुधारी।",
+      "title": "मधुर भाषण",
+      "source": "hindi-saurav/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+    },
+    {
+      "chapter": "madhur-bhashan",
+      "pages": [
+        2,
+        4
+      ],
+      "area": "अपठित अनुच्छेद",
+      "number": "3 (ङ)",
+      "marks": 2,
+      "prompt": "अनुच्छेद किस अंतर की ओर ध्यान दिलाता है?",
+      "answer": "सही सूचना देने के साथ सुनने और सम्मानपूर्वक समझाने की विधि भी परिणाम बदलती है।",
+      "title": "मधुर भाषण",
+      "source": "hindi-saurav/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view"
+    },
+    {
+      "chapter": "chand-ka-jhingola",
+      "pages": [
+        2
+      ],
+      "area": "अनुवाद · ଅନୁବାଦ",
+      "number": "4 (क)",
+      "marks": 2,
+      "prompt": "ହିନ୍ଦୀରେ ଲେଖନ୍ତୁ। ଚନ୍ଦ୍ରର ଆକାର ପ୍ରତିଦିନ ବଦଳେ।",
+      "answer": "चाँद का आकार हर दिन बदलता है।",
+      "title": "चाँद का झिंगोला",
+      "source": "hindi-saurav/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Oip3_LqKsvV8HNBDOY-CgH_hEAOrTnh8/view"
+    },
+    {
+      "chapter": "surdas",
+      "pages": [
+        1,
+        2
+      ],
+      "area": "अनुवाद · ଅନୁବାଦ",
+      "number": "4 (ख)",
+      "marks": 2,
+      "prompt": "ହିନ୍ଦୀରେ ଲେଖନ୍ତୁ। ମାଆ ପିଲାର ଖେଳ ଦେଖି ଖୁସି ହେଲେ।",
+      "answer": "माँ बच्चे का खेल देखकर प्रसन्न हुई।",
+      "title": "सूरदास · पद",
+      "source": "hindi-saurav/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1EIiZTCV8wQ2eOREn98ueNTfY4Pgrqwtd/view"
+    },
+    {
+      "chapter": "janani-janmabhumi",
+      "pages": [
+        3
+      ],
+      "area": "अनुवाद · ଅନୁବାଦ",
+      "number": "4 (ग)",
+      "marks": 2,
+      "prompt": "ହିନ୍ଦୀରେ ଲେଖନ୍ତୁ। ବଣିକମାନେ ନୌକାରେ ଦୂର ଦ୍ୱୀପକୁ ଯାଉଥିଲେ।",
+      "answer": "व्यापारी नावों में दूर के द्वीपों तक जाते थे।",
+      "title": "जननी जन्मभूमि",
+      "source": "hindi-saurav/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view"
+    },
+    {
+      "chapter": "tulsidas",
+      "pages": [
+        1,
+        2
+      ],
+      "area": "अनुवाद · ଅନୁବାଦ",
+      "number": "4 (घ)",
+      "marks": 2,
+      "prompt": "ओड़िआ में लिखिए। क्रोध के समय सोचकर बोलना चाहिए।",
+      "answer": "କ୍ରୋଧ ସମୟରେ ଭାବିଚିନ୍ତି କଥା କହିବା ଉଚିତ।",
+      "title": "तुलसीदास · दोहे",
+      "source": "hindi-saurav/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1uv9eSDyZDZNYURxiuJtsRUM53JrkO_yA/view"
+    },
+    {
+      "chapter": "gillu",
+      "pages": [
+        7
+      ],
+      "area": "अनुवाद · ଅନୁବାଦ",
+      "number": "4 (ङ)",
+      "marks": 2,
+      "prompt": "ओड़िआ में लिखिए। वह लता उसे सबसे अधिक प्रिय थी।",
+      "answer": "ସେହି ଲତାଟି ତାକୁ ସବୁଠାରୁ ଅଧିକ ପ୍ରିୟ ଥିଲା।",
+      "title": "गिल्लू",
+      "source": "hindi-saurav/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1b2gS5_ZKHsF_R_89n7aaD9SCjSoFMEse/view"
+    },
+    {
+      "chapter": "roop-vichar",
+      "pages": [
+        2
+      ],
+      "area": "Do as directed",
+      "number": "5 (क)",
+      "marks": 2,
+      "prompt": "जातिवाचक और भाववाचक के भेद को ‘लड़का–लड़कपन’ से स्पष्ट कीजिए।",
+      "answer": "लड़का एक वर्ग के व्यक्ति का नाम है। लड़कपन अवस्था का नाम होने से भाववाचक है।",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "chapter": "roop-vichar",
+      "pages": [
+        5
+      ],
+      "area": "Do as directed",
+      "number": "5 (ख)",
+      "marks": 2,
+      "prompt": "बालक और शेर को स्त्रीलिंग में बदलिए।",
+      "answer": "बालिका और शेरनी।",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "chapter": "roop-vichar",
+      "pages": [
+        43,
+        44
+      ],
+      "area": "Do as directed",
+      "number": "5 (ग)",
+      "marks": 2,
+      "prompt": "‘शिक्षक ने छात्र को इतिहास पढ़ाया’ में कर्ता और प्रत्यक्ष कर्म छाँटिए।",
+      "answer": "कर्ता शिक्षक है। ‘क्या पढ़ाया’ का उत्तर इतिहास है, इसलिए इतिहास प्रत्यक्ष कर्म है।",
+      "title": "रूप विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
+    },
+    {
+      "chapter": "shabd-vichar",
+      "pages": [
+        4,
+        6
+      ],
+      "area": "Do as directed",
+      "number": "5 (घ)",
+      "marks": 2,
+      "prompt": "पृथ्वी का एक पर्याय और अवनति का विलोम लिखिए।",
+      "answer": "पृथ्वी–धरा। अवनति–उन्नति।",
+      "title": "शब्द विचार",
+      "source": "madhyamika-hindi-byakaran/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view"
+    },
+    {
+      "chapter": "shabd-rachna",
+      "pages": [
+        22,
+        33
+      ],
+      "area": "Do as directed",
+      "number": "5 (ङ)",
+      "marks": 2,
+      "prompt": "उपकार और घबराहट में क्रमशः उपसर्ग तथा प्रत्यय अलग कीजिए।",
+      "answer": "उपकार में उप उपसर्ग है। घबराहट में आहट प्रत्यय है।",
+      "title": "शब्द रचना",
+      "source": "madhyamika-hindi-byakaran/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1zdpm0Pt1beDebFW-f2rDx4YhCIJQ5z-d/view"
+    }
+  ]
+};

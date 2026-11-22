@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">Pରେ ଦୁଇ ବୃତ୍ତ ବହିଃସ୍ପର୍ଶୀ | A ଓ Bର ସାଧାରଣ ସ୍ପର୍ଶକକୁ Pର ସ୍ପର୍ଶକ Cରେ ଛେଦ କରେ |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="140.04" cy="142.08" r="77.56" stroke="#244355" stroke-width="2.5"/>
+<circle cx="326.02" cy="176.01" r="111.49" stroke="#244355" stroke-width="2.5"/>
+<polyline points="67.33,64.52 403.58,64.52" stroke="#244355" stroke-width="2.35"/>
+<polyline points="238.88,32.50 199.65,247.48" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="140.04,64.52 216.34,156.00 326.02,64.52" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<text x="126.04" y="151.08" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">S₁</text>
+<text x="340.02" y="185.01" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">S₂</text>
+<circle cx="140.04" cy="64.52" r="2.7" fill="#244355"/>
+<text x="140.04" y="49.52" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="326.02" cy="64.52" r="2.7" fill="#244355"/>
+<text x="326.02" y="49.52" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="233.03" cy="64.52" r="2.7" fill="#244355"/>
+<text x="233.03" y="49.52" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="216.34" cy="156.00" r="2.7" fill="#244355"/>
+<text x="227.34" y="168.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">P</text>
+</svg>

@@ -1,0 +1,1489 @@
+export default {
+  "subject": "science",
+  "setNumber": 5,
+  "objective": [
+    {
+      "chapter": "chemical-reactions",
+      "pages": [
+        18,
+        19
+      ],
+      "prompt": "କପର୍ ଅକ୍ସାଇଡ୍‌ରୁ କପର୍ ମିଳିବାବେଳେ CuO + H₂ → Cu + H₂O। ଜାରଣ ଘଟୁଥିବା ପ୍ରତିକାରକଟି କିଏ?",
+      "options": [
+        "CuO",
+        "Cu",
+        "H₂O",
+        "H₂"
+      ],
+      "correct": 3,
+      "answer": "H₂ ଅକ୍ସିଜେନ୍ ଗ୍ରହଣ କରି H₂O ହୁଏ। ଏଣୁ H₂ର ଜାରଣ ଓ CuOର ବିଜାରଣ ଘଟେ।",
+      "title": "ରାସାୟନିକ ପ୍ରତିକ୍ରିୟା ଓ ରାସାୟନିକ ସମୀକରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "periodic-classification",
+      "pages": [
+        88,
+        99
+      ],
+      "prompt": "ଅଷ୍ଟକ ନିୟମ ସହ ସମ୍ପୃକ୍ତ ବୈଜ୍ଞାନିକ କିଏ?",
+      "answer": "ନିଉଲାଣ୍ଡସ୍ ବସ୍ତୁତ୍ୱ ଅନୁସାରେ ସଜାଇ ପ୍ରତି ଅଷ୍ଟମ ମୌଳିକରେ ସାମ୍ୟ ସୂଚାଇଥିଲେ।",
+      "options": [
+        "ନିଉଲାଣ୍ଡସ୍",
+        "ମେଣ୍ଡେଲିଫ୍",
+        "ଡୁବେରିନର୍",
+        "ମୋସ୍‌ଲେ"
+      ],
+      "correct": 0,
+      "title": "ମୌଳିକଗୁଡ଼ିକର ପର୍ଯ୍ୟାୟୀ ଶ୍ରେଣୀକରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "light",
+      "pages": [
+        102,
+        104
+      ],
+      "prompt": "ସମତଳ ଦର୍ପଣରୁ 1.5 m ଦୂରରେ ଥିବା ଏକ ବସ୍ତୁ ଓ ତାହାର ପ୍ରତିବିମ୍ବ ମଧ୍ୟରେ ଦୂରତା କେତେ?",
+      "options": [
+        "0.75 m",
+        "1.5 m",
+        "3 m",
+        "6 m"
+      ],
+      "correct": 2,
+      "answer": "ବସ୍ତୁ 1.5 m ସାମ୍ନାରେ ଓ ତାହାର ପ୍ରତିବିମ୍ବ 1.5 m ପଛରେ। ମୋଟ ଦୂରତା 3 m।",
+      "title": "ଆଲୋକ – ପ୍ରତିଫଳନ ଓ ପ୍ରତିସରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "electricity",
+      "pages": [
+        149,
+        152
+      ],
+      "prompt": "ସମାନ ଲମ୍ବ ଓ ପ୍ରସ୍ଥଚ୍ଛେଦର ଦୁଇ ତାର X ଓ Yରେ Rₓ > Rᵧ। ସମାନ ତାପମାତ୍ରାରେ ସେମାନଙ୍କ ପ୍ରତିରୋଧିତା ପାଇଁ କେଉଁ ସମ୍ପର୍କ ଠିକ୍?",
+      "options": [
+        "ρₓ < ρᵧ",
+        "ρₓ = ρᵧ",
+        "ρₓ > ρᵧ",
+        "ଦୁଇଟିଯାକ ଶୂନ"
+      ],
+      "correct": 2,
+      "answer": "R = ρl/A। ଉଭୟ ତାରର l/A ସମାନ ଥିବାରୁ R ଅଧିକ ହେଲେ ତାହାର ρ ମଧ୍ୟ ଅଧିକ।",
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "prompt": "କ୍ଷେତ୍ରରେ ସ୍ରୋତବାହୀ ତାର ଉପରେ ସର୍ବାଧିକ ବଳ ପାଇଁ ସ୍ରୋତ ଓ କ୍ଷେତ୍ର ମଧ୍ୟରେ କୋଣ କେତେ?",
+      "options": [
+        "୦°",
+        "୩୦°",
+        "୧୮୦°",
+        "୯୦°"
+      ],
+      "correct": 3,
+      "answer": "ପରିବାହୀ କ୍ଷେତ୍ର ପ୍ରତି ଲମ୍ବ ହେଲେ ବଳ ସର୍ବାଧିକ।",
+      "pages": [
+        171,
+        173
+      ],
+      "chapter": "magnetic-effects",
+      "title": "ବିଦ୍ୟୁତ୍ ସ୍ରୋତର ଚୁମ୍ବକୀୟ ପ୍ରଭାବ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "acids-bases-salts",
+      "pages": [
+        29,
+        43
+      ],
+      "prompt": "ଜଳୀୟ HClର ଅମ୍ଳୀୟ ଧର୍ମ କେଉଁ ଆୟନ ଯୋଗୁଁ ହୁଏ?",
+      "answer": "ଜଳରେ H⁺ ଆୟନ ଜଳ ଅଣୁ ସହ ମିଶି H₃O⁺ ରୂପେ ରହେ।",
+      "options": [
+        "OH⁻ ଆୟନ",
+        "CO₂ ଗ୍ୟାସ୍",
+        "H⁺ ଆୟନ",
+        "NaCl ସ୍ଫଟିକ"
+      ],
+      "correct": 2,
+      "title": "ଅମ୍ଳ, କ୍ଷାରକ ଓ ଲବଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "metals-nonmetals",
+      "pages": [
+        45,
+        49
+      ],
+      "prompt": "ସାଧାରଣ ତାପମାତ୍ରାରେ ତରଳ ଧାତୁଟି ଚିହ୍ନାଅ।",
+      "answer": "ପାରଦ କଠିନ ଧାତୁର ସାଧାରଣ ଧର୍ମର ଏକ ବ୍ୟତିକ୍ରମ।",
+      "options": [
+        "ଆୟୋଡିନ୍",
+        "ବ୍ରୋମିନ୍",
+        "ପାରଦ",
+        "ଗ୍ରାଫାଇଟ୍"
+      ],
+      "correct": 2,
+      "title": "ଧାତୁ ଓ ଅଧାତୁ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "human-eye",
+      "pages": [
+        130,
+        141
+      ],
+      "prompt": "ଫୋକସ୍ ଦୂରତା ବଦଳାଇବା ପାଇଁ ଲେନ୍ସ ଉପରେ କ୍ରିୟା କରୁଥିବା ଅଂଶ କେଉଁଟି?",
+      "answer": "ସିଲିଆରୀ ମାଂସପେଶୀର ସଙ୍କୋଚନ ବା ଶିଥିଳତା ଲେନ୍ସର ବକ୍ରତା ବଦଳାଏ।",
+      "options": [
+        "କନୀନିକା",
+        "ସିଲିଆରୀ ମାଂସପେଶୀ",
+        "ଚକ୍ଷୁ ଲେନ୍ସ",
+        "ମୁକୁରିକା"
+      ],
+      "correct": 1,
+      "title": "ମାନବ ଚକ୍ଷୁ ଓ ବର୍ଣ୍ଣଜଗତ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "carbon",
+      "pages": [
+        68,
+        71
+      ],
+      "prompt": "କେବଳ ଏକବନ୍ଧ ଥିବା ଦୁଇ-କାର୍ବନ ହାଇଡ୍ରୋକାର୍ବନରୁ ଦୁଇଟି H ଅପସାରଣ କରି C₂H₄ ଗଠନ ଭାବିଲେ ଦୁଇ କାର୍ବନ ମଧ୍ୟରେ କେଉଁ ବନ୍ଧ ରହେ?",
+      "options": [
+        "ଏକବନ୍ଧ",
+        "ଦ୍ୱିବନ୍ଧ",
+        "ତ୍ରିବନ୍ଧ",
+        "ଆୟନିକ ବନ୍ଧ"
+      ],
+      "correct": 1,
+      "answer": "C₂H₄ରେ ପ୍ରତି କାର୍ବନ ଦୁଇ H ସହ ଦୁଇଟି ଏକବନ୍ଧ କରେ। ଅବଶିଷ୍ଟ ଦୁଇ ସଂଯୋଜ୍ୟତା ଦୁଇ କାର୍ବନ ମଧ୍ୟରେ ଦ୍ୱିବନ୍ଧ ଗଢ଼େ।",
+      "title": "କାର୍ବନ ଓ ଏହାର ଯୌଗିକ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "chemical-reactions",
+      "pages": [
+        9,
+        20
+      ],
+      "prompt": "Fe + CuSO₄ → FeSO₄ + Cuରେ ପ୍ରତିକ୍ରିୟାର ପ୍ରକାର କ’ଣ?",
+      "answer": "Fe ଲବଣରୁ Cuର ସ୍ଥାନ ନେଇଛି।",
+      "options": [
+        "ଦ୍ୱୈତ ବିସ୍ଥାପନ",
+        "ବିଘଟନ",
+        "ବିସ୍ଥାପନ",
+        "ସଂଶ୍ଳେଷଣ"
+      ],
+      "correct": 2,
+      "title": "ରାସାୟନିକ ପ୍ରତିକ୍ରିୟା ଓ ରାସାୟନିକ ସମୀକରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "periodic-classification",
+      "pages": [
+        94,
+        100
+      ],
+      "prompt": "୨,୮,୨ ଇଲେକ୍ଟ୍ରନ୍ ସଂରଚନାର ମ୍ୟାଗ୍ନେସିୟମ୍ କେଉଁ ଗ୍ରୁପରେ?",
+      "answer": "ବାହ୍ୟ କକ୍ଷରେ ଦୁଇଟି ଇଲେକ୍ଟ୍ରନ୍ ରହିଛି।",
+      "options": [
+        "ଗ୍ରୁପ ୧",
+        "ଗ୍ରୁପ ୧୮",
+        "ଗ୍ରୁପ ୧୭",
+        "ଗ୍ରୁପ ୨"
+      ],
+      "correct": 3,
+      "title": "ମୌଳିକଗୁଡ଼ିକର ପର୍ଯ୍ୟାୟୀ ଶ୍ରେଣୀକରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "light",
+      "pages": [
+        102,
+        126
+      ],
+      "prompt": "ପଛର ବଡ଼ ଦୃଶ୍ୟକ୍ଷେତ୍ର ଦେଖିବା ପାଇଁ ଚାଳକଙ୍କ ଦର୍ପଣ ଭାବେ କେଉଁଟି ଉପଯୁକ୍ତ?",
+      "answer": "ଉତ୍ତଳ ଦର୍ପଣ ଛୋଟ ଓ ସଳଖ ପ୍ରତିବିମ୍ବ ଦେଇ ବଡ଼ ଅଞ୍ଚଳ ଦର୍ଶାଏ।",
+      "options": [
+        "ଅବତଳ ଦର୍ପଣ",
+        "ଅବତଳ ଲେନ୍ସ",
+        "ଉତ୍ତଳ ଲେନ୍ସ",
+        "ଉତ୍ତଳ ଦର୍ପଣ"
+      ],
+      "correct": 3,
+      "title": "ଆଲୋକ – ପ୍ରତିଫଳନ ଓ ପ୍ରତିସରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "prompt": "ସ୍ଥିର 6 Ω ପ୍ରତିରୋଧୀରେ 2 A ସ୍ରୋତ ହେଲେ ପାୱାର କେତେ?",
+      "options": [
+        "12 W",
+        "24 W",
+        "3 W",
+        "48 W"
+      ],
+      "correct": 1,
+      "answer": "P = I²R = 2² × 6 = 24 W।",
+      "pages": [
+        159,
+        162
+      ],
+      "chapter": "electricity",
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "magnetic-effects",
+      "pages": [
+        165,
+        180
+      ],
+      "prompt": "ସଳଖ ତାରର ସ୍ରୋତ ଜାଣି ତାହା ଚାରିପଟର କ୍ଷେତ୍ରର ଦିଗ ବାହାର କରିବା ପାଇଁ କେଉଁ ନିୟମ?",
+      "answer": "ବୃଦ୍ଧାଙ୍ଗୁଳି ସ୍ରୋତ ଦିଗରେ ରହିଲେ ମୁଡ଼ା ଆଙ୍ଗୁଠି କ୍ଷେତ୍ରର ଦିଗ ଦର୍ଶାଏ।",
+      "options": [
+        "ଦକ୍ଷିଣ ହସ୍ତ ବୃଦ୍ଧାଙ୍ଗୁଳି ନିୟମ",
+        "ପ୍ରତିଫଳନ ନିୟମ",
+        "ବିଦ୍ୟୁତ୍‌ଚୁମ୍ବକୀୟ ପ୍ରେରଣ",
+        "ଫ୍ଲେମିଙ୍ଗଙ୍କ ବାମହସ୍ତ ନିୟମ"
+      ],
+      "correct": 0,
+      "title": "ବିଦ୍ୟୁତ୍ ସ୍ରୋତର ଚୁମ୍ବକୀୟ ପ୍ରଭାବ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "acids-bases-salts",
+      "pages": [
+        24,
+        41
+      ],
+      "prompt": "HCl ଓ NaOHର ପ୍ରଶମନୀକରଣରୁ ମିଳୁଥିବା ଲବଣ କେଉଁଟି?",
+      "answer": "Na⁺ ଓ Cl⁻ ଦ୍ୱାରା NaCl ଗଠିତ ହୁଏ।",
+      "options": [
+        "NaCl",
+        "Na₂CO₃·10H₂O",
+        "NaOH",
+        "NaHCO₃"
+      ],
+      "correct": 0,
+      "title": "ଅମ୍ଳ, କ୍ଷାରକ ଓ ଲବଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "prompt": "Al₂O₃ ଓ ZnOର ସାଧାରଣ ରାସାୟନିକ ଧର୍ମ କ’ଣ?",
+      "options": [
+        "କେବଳ ଜଳ ସହ ପ୍ରତିକ୍ରିୟା",
+        "କେବଳ ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟା",
+        "କେବଳ କ୍ଷାରକ ସହ ପ୍ରତିକ୍ରିୟା",
+        "ଅମ୍ଳ ଓ କ୍ଷାରକ ଉଭୟ ସହ ପ୍ରତିକ୍ରିୟା"
+      ],
+      "correct": 3,
+      "answer": "ଦୁଇଟି ଯାକ ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍।",
+      "pages": [
+        48,
+        50
+      ],
+      "chapter": "metals-nonmetals",
+      "title": "ଧାତୁ ଓ ଅଧାତୁ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "carbon",
+      "pages": [
+        74,
+        76
+      ],
+      "prompt": "CH₃COOH ଓ CH₃CH₂OH ମଧ୍ୟରେ ଥିବା ମୁଖ୍ୟ ଗାଠନିକ ପାର୍ଥକ୍ୟ କେଉଁଟି?",
+      "options": [
+        "ପ୍ରଥମଟିରେ C ନାହିଁ",
+        "ଦ୍ୱିତୀୟଟିରେ O ନାହିଁ",
+        "ସକ୍ରିୟ ଗ୍ରୁପ କ୍ରମେ –COOH ଓ –OH",
+        "ଦୁଇଟିରେ ସମାନ ସକ୍ରିୟ ଗ୍ରୁପ"
+      ],
+      "correct": 2,
+      "answer": "ଦୁଇ ସଂକେତରେ ଦୁଇଟି କରି କାର୍ବନ ଅଛି। ଶେଷର –COOH କାର୍ବୋକ୍ସିଲିକ୍ ଅମ୍ଳକୁ ଓ –OH ଆଲ୍‌କହଲ୍‌କୁ ଚିହ୍ନାଏ।",
+      "title": "କାର୍ବନ ଓ ଏହାର ଯୌଗିକ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "magnetic-effects",
+      "pages": [
+        165,
+        180
+      ],
+      "prompt": "କ୍ଷେତ୍ର ଓ ସ୍ରୋତର ଦିଗ ଜଣାଥିଲେ ପରିବାହୀ ଉପରେ ବଳର ଦିଗ ଜାଣିବାର ନିୟମ କେଉଁଟି?",
+      "answer": "ବାମହସ୍ତର ପରସ୍ପର ଲମ୍ବ ତିନି ଆଙ୍ଗୁଠି କ୍ଷେତ୍ର, ସ୍ରୋତ ଓ ବଳର ସମ୍ପର୍କ ଦର୍ଶାଏ।",
+      "options": [
+        "ଫ୍ଲେମିଙ୍ଗଙ୍କ ବାମହସ୍ତ ନିୟମ",
+        "ପ୍ରତିଫଳନ ନିୟମ",
+        "ଦକ୍ଷିଣ ହସ୍ତ ବୃଦ୍ଧାଙ୍ଗୁଳି ନିୟମ",
+        "ବିଦ୍ୟୁତ୍‌ଚୁମ୍ବକୀୟ ପ୍ରେରଣ"
+      ],
+      "correct": 0,
+      "title": "ବିଦ୍ୟୁତ୍ ସ୍ରୋତର ଚୁମ୍ବକୀୟ ପ୍ରଭାବ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "electricity",
+      "pages": [
+        161,
+        163
+      ],
+      "prompt": "200 W ଉପକରଣ ଅଧ ଘଣ୍ଟା ଚାଲିଲା। ବ୍ୟୟ ହୋଇଥିବା ବିଦ୍ୟୁତ୍ ଶକ୍ତି କେତେ?",
+      "options": [
+        "0.1 kWh",
+        "0.4 kWh",
+        "100 kWh",
+        "400 kWh"
+      ],
+      "correct": 0,
+      "answer": "200 W = 0.2 kW। ଶକ୍ତି E = Pt = 0.2 × 0.5 = 0.1 kWh।",
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "chemical-reactions",
+      "pages": [
+        9,
+        20
+      ],
+      "prompt": "ଦୁଇ ଜଳୀୟ ଲବଣର ଆୟନ ପରସ୍ପର ବିନିମୟ କଲେ କେଉଁ ପ୍ରକାର ପ୍ରତିକ୍ରିୟା ହୁଏ?",
+      "answer": "ଦୁଇଟି ଯୌଗିକର ଆୟନ ପରସ୍ପର ସାଥୀ ବଦଳାନ୍ତି।",
+      "options": [
+        "ସଂଶ୍ଳେଷଣ",
+        "ବିଘଟନ",
+        "ବିସ୍ଥାପନ",
+        "ଦ୍ୱୈତ ବିସ୍ଥାପନ"
+      ],
+      "correct": 3,
+      "title": "ରାସାୟନିକ ପ୍ରତିକ୍ରିୟା ଓ ରାସାୟନିକ ସମୀକରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "light",
+      "pages": [
+        105,
+        110
+      ],
+      "prompt": "ଚିତ୍ରରେ ବସ୍ତୁ AB ଅବତଳ ଦର୍ପଣର ବକ୍ରତା କେନ୍ଦ୍ର ବାହାରେ ଅଛି। ତାହାର ପ୍ରତିବିମ୍ବ ପାଇଁ କେଉଁ ଚିହ୍ନିତ ସ୍ଥାନଟି ସମ୍ଭବ?",
+      "options": [
+        "K",
+        "L",
+        "M",
+        "N"
+      ],
+      "correct": 1,
+      "answer": "ବସ୍ତୁ C ବାହାରେ ଥିଲେ ଅବତଳ ଦର୍ପଣ ସାମ୍ନାରେ C ଓ F ମଧ୍ୟରେ ବାସ୍ତବ, ଓଲଟା ଓ ଛୋଟ ପ୍ରତିବିମ୍ବ ହୁଏ। କେବଳ L ଏହି ଅଞ୍ଚଳରେ ଅଛି।",
+      "diagram": {
+        "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjUgMjEyIiB3aWR0aD0iNDY1IiBoZWlnaHQ9IjIxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPkNhbmRpZGF0ZSBpbWFnZSBwb3NpdGlvbnMgZm9yIGEgY29uY2F2ZSBtaXJyb3I8L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5UaGUgb2JqZWN0IGFycm93IEFCIGxpZXMgYmV5b25kIGNlbnRyZSBDLiBGcm9tIGxlZnQgdG8gcmlnaHQgYXJlIHRoZSBvYmplY3QsIEssIGNlbnRyZSBDLCBMLCBmb2N1cyBGLCBNLCBtaXJyb3IgcG9sZSBQLCBhbmQgTiBiZWhpbmQgdGhlIG1pcnJvci48L2Rlc2M+CiAgPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjQ2MyIgaGVpZ2h0PSIyMTAiIHJ4PSIxMCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjY2VkYmQ1Ii8+CiAgPHN0eWxlPnRleHQge2ZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmOyBmb250LXNpemU6IDE2cHg7IGZpbGw6ICMxNTJjMjR9IC53aXJlIHtzdHJva2U6IzI1NGQzZjtzdHJva2Utd2lkdGg6Mi41O2ZpbGw6bm9uZX08L3N0eWxlPgo8bGluZSB4MT0iMjUiIHkxPSIxMTIiIHgyPSI0MzgiIHkyPSIxMTIiIHN0cm9rZT0iIzUyNjM1OSIgc3Ryb2tlLXdpZHRoPSIxLjYiIC8+PHBhdGggZD0iTTMzMyAzMlEzNjcgMTEyIDMzMyAxOTAiIGNsYXNzPSJ3aXJlIiAvPjxsaW5lIHgxPSIzMzYiIHkxPSIzNyIgeDI9IjM0NSIgeTI9IjQzIiBzdHJva2U9IiM2ODgzNzgiIHN0cm9rZS13aWR0aD0iMS4yIiAvPjxsaW5lIHgxPSIzNDMiIHkxPSI1NyIgeDI9IjM1MiIgeTI9IjYzIiBzdHJva2U9IiM2ODgzNzgiIHN0cm9rZS13aWR0aD0iMS4yIiAvPjxsaW5lIHgxPSIzNDciIHkxPSI3NyIgeDI9IjM1NiIgeTI9IjgzIiBzdHJva2U9IiM2ODgzNzgiIHN0cm9rZS13aWR0aD0iMS4yIiAvPjxsaW5lIHgxPSIzNTEiIHkxPSI5NyIgeDI9IjM2MCIgeTI9IjEwMyIgc3Ryb2tlPSIjNjg4Mzc4IiBzdHJva2Utd2lkdGg9IjEuMiIgLz48bGluZSB4MT0iMzUyIiB5MT0iMTE3IiB4Mj0iMzYxIiB5Mj0iMTIzIiBzdHJva2U9IiM2ODgzNzgiIHN0cm9rZS13aWR0aD0iMS4yIiAvPjxsaW5lIHgxPSIzNTAiIHkxPSIxMzciIHgyPSIzNTkiIHkyPSIxNDMiIHN0cm9rZT0iIzY4ODM3OCIgc3Ryb2tlLXdpZHRoPSIxLjIiIC8+PGxpbmUgeDE9IjM0NiIgeTE9IjE1NyIgeDI9IjM1NSIgeTI9IjE2MyIgc3Ryb2tlPSIjNjg4Mzc4IiBzdHJva2Utd2lkdGg9IjEuMiIgLz48bGluZSB4MT0iMzM5IiB5MT0iMTc3IiB4Mj0iMzQ4IiB5Mj0iMTgzIiBzdHJva2U9IiM2ODgzNzgiIHN0cm9rZS13aWR0aD0iMS4yIiAvPjxjaXJjbGUgY3g9IjEzOCIgY3k9IjExMiIgcj0iNCIgZmlsbD0iIzI1NGQzZiIvPjxjaXJjbGUgY3g9IjI0NCIgY3k9IjExMiIgcj0iNCIgZmlsbD0iIzI1NGQzZiIvPjxjaXJjbGUgY3g9IjM1MCIgY3k9IjExMiIgcj0iNCIgZmlsbD0iIzI1NGQzZiIvPjx0ZXh0IHg9IjEzOCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DPC90ZXh0Pjx0ZXh0IHg9IjI0NCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5GPC90ZXh0Pjx0ZXh0IHg9IjM1MCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QPC90ZXh0PjxsaW5lIHgxPSI2NiIgeTE9IjExMiIgeDI9IjY2IiB5Mj0iNTkiIHN0cm9rZT0iIzIwNWU0YyIgc3Ryb2tlLXdpZHRoPSIzIiAvPjxwYXRoIGQ9Ik02MCA3MGw2LTEyIDYgMTIiIGNsYXNzPSJ3aXJlIiAvPjx0ZXh0IHg9IjYxIiB5PSI0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QTwvdGV4dD48dGV4dCB4PSI2NCIgeT0iMTM2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CPC90ZXh0PjxjaXJjbGUgY3g9Ijk5IiBjeT0iMTEyIiByPSI0IiBmaWxsPSIjMjU0ZDNmIi8+PHRleHQgeD0iOTkiIHk9Ijk4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5LPC90ZXh0PjxjaXJjbGUgY3g9IjE5NSIgY3k9IjExMiIgcj0iNCIgZmlsbD0iIzI1NGQzZiIvPjx0ZXh0IHg9IjE5NSIgeT0iOTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkw8L3RleHQ+PGNpcmNsZSBjeD0iMjk2IiBjeT0iMTEyIiByPSI0IiBmaWxsPSIjMjU0ZDNmIi8+PHRleHQgeD0iMjk2IiB5PSI5OCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TTwvdGV4dD48Y2lyY2xlIGN4PSIzOTciIGN5PSIxMTIiIHI9IjQiIGZpbGw9IiMyNTRkM2YiLz48dGV4dCB4PSIzOTciIHk9Ijk4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OPC90ZXh0Pgo8L3N2Zz4K",
+        "alt": "ଅବତଳ ଦର୍ପଣର ଅକ୍ଷରେ ବାମରୁ ଡାହାଣକୁ ବସ୍ତୁ AB, K, ବକ୍ରତା କେନ୍ଦ୍ର C, L, ଫୋକସ୍ F, M, ଧ୍ରୁବ P ଓ ଦର୍ପଣ ପଛରେ N ଚିହ୍ନିତ।"
+      },
+      "title": "ଆଲୋକ – ପ୍ରତିଫଳନ ଓ ପ୍ରତିସରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "light",
+      "pages": [
+        114,
+        118
+      ],
+      "prompt": "ଜଳରୁ ବାୟୁକୁ ଯାଉଥିବା ରଶ୍ମିର ପ୍ରତିସରଣ ହୋଇଛି ଓ ଆପତନ କୋଣ ଶୂନ ନୁହେଁ। ପ୍ରତିସରିତ ରଶ୍ମି ସମ୍ପର୍କରେ କେଉଁ କଥା ଠିକ୍?",
+      "options": [
+        "ଲମ୍ବ ଆଡ଼କୁ ବଙ୍କେ",
+        "ଲମ୍ବଠାରୁ ଦୂରକୁ ବଙ୍କେ",
+        "ବେଗ କମିବାରୁ ପଥ ଅବଦଳ ରହେ",
+        "ସବୁବେଳେ ପ୍ରତିସରଣ କୋଣ ଶୂନ ହୁଏ"
+      ],
+      "correct": 1,
+      "answer": "ପ୍ରତିସରିତ ରଶ୍ମି ଘନ ମାଧ୍ୟମ ଜଳରୁ ଲଘୁ ମାଧ୍ୟମ ବାୟୁକୁ ଗଲେ ଲମ୍ବଠାରୁ ଦୂରକୁ ବଙ୍କେ।",
+      "title": "ଆଲୋକ – ପ୍ରତିଫଳନ ଓ ପ୍ରତିସରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "electricity",
+      "pages": [
+        143,
+        162
+      ],
+      "prompt": "ପରିପଥର ସ୍ରୋତ ମାପିବା ପାଇଁ ପଙ୍କ୍ତି ସଂଯୋଗରେ କେଉଁ ଉପକରଣ ରଖିବ?",
+      "answer": "ଶାଖାର ସମଗ୍ର ସ୍ରୋତ ଏମିଟର୍ ଦେଇ ଯିବା ଦରକାର।",
+      "options": [
+        "ଓମ୍",
+        "ୱାଟ୍",
+        "ଏମିଟର୍",
+        "ଭୋଲ୍ଟମିଟର୍"
+      ],
+      "correct": 2,
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "light",
+      "pages": [
+        119,
+        123
+      ],
+      "prompt": "ଉତ୍ତଳ ଲେନ୍ସର ସାମ୍ନାରେ ବସ୍ତୁକୁ F₁ ଓ O ମଧ୍ୟରେ ରଖିଲେ ପ୍ରତିବିମ୍ବ କେଉଁ ପ୍ରକାରର ହେବ?",
+      "options": [
+        "ଓଲଟା ଓ ଛୋଟ",
+        "ଓଲଟା ଓ ସମାନ ଆକାର",
+        "ସଳଖ, ବଡ଼ ଓ ଆଭାସୀ",
+        "ସଳଖ, ଛୋଟ ଓ ବାସ୍ତବ"
+      ],
+      "correct": 2,
+      "answer": "ପ୍ରତିସରିତ ରଶ୍ମି ଅପସାରିତ ହୁଏ। ପଛକୁ ବଢ଼ାଇଲେ ବସ୍ତୁ ପାଖରେ ଏକ ବଡ଼, ସଳଖ ଆଭାସୀ ପ୍ରତିବିମ୍ବରେ ମିଳେ।",
+      "title": "ଆଲୋକ – ପ୍ରତିଫଳନ ଓ ପ୍ରତିସରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "electricity",
+      "pages": [
+        143,
+        145
+      ],
+      "prompt": "ଗୋଟିଏ ପ୍ରତିରୋଧୀରେ 1 mA ସ୍ରୋତ ବହୁଛି। ସେକେଣ୍ଡକୁ ଯାଉଥିବା ଚାର୍ଜର ମାନ କେଉଁଟି?",
+      "options": [
+        "1 C",
+        "10³ C",
+        "10⁻⁶ C",
+        "10⁻³ C"
+      ],
+      "correct": 3,
+      "answer": "1 mA = 10⁻³ A = 10⁻³ C/s। ତେଣୁ 1 sରେ 10⁻³ C ଯାଏ।",
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "heredity",
+      "pages": [
+        108,
+        114
+      ],
+      "prompt": "ଉତ୍ପତ୍ତି ଓ ମୌଳିକ ଗଠନ ସମାନ ଥାଇ ଭିନ୍ନ କାମ କରୁଥିବା ଅଙ୍ଗକୁ କ’ଣ କୁହାଯାଏ?",
+      "answer": "ସମଜାତ ଅଙ୍ଗ ସାଧାରଣ ପୂର୍ବଜ ସହ ସମ୍ପର୍କ ଦର୍ଶାଏ।",
+      "options": [
+        "ଜୀବାଶ୍ମ",
+        "ଅନୁରୂପୀ ଅଙ୍ଗ",
+        "ସମଜାତ ଅଙ୍ଗ",
+        "ପ୍ରାକୃତିକ ଚୟନ"
+      ],
+      "correct": 2,
+      "title": "ବଂଶାନୁକ୍ରମ ଓ ବିବର୍ତ୍ତନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "respiration",
+      "pages": [
+        23,
+        31
+      ],
+      "prompt": "ଦୀର୍ଘ ପେଶୀକାର୍ଯ୍ୟ ସମୟରେ ଅମ୍ଳଜାନ ଅଭାବରେ କେଉଁ ପଦାର୍ଥ ଗଠିତ ହୁଏ?",
+      "answer": "ପାଇରୁଭିକ୍ ଅମ୍ଳ ପେଶୀରେ ଲାକ୍ଟିକ୍ ଅମ୍ଳରେ ପରିଣତ ହୁଏ।",
+      "options": [
+        "ଲାକ୍ଟିକ୍ ଅମ୍ଳ",
+        "ATP",
+        "ଅମ୍ଳଜାନ",
+        "ଅଙ୍ଗାରକାମ୍ଳ"
+      ],
+      "correct": 0,
+      "title": "ଶ୍ୱସନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "reproduction",
+      "pages": [
+        82,
+        90
+      ],
+      "prompt": "ପରାଗଣ ବେଳେ କେଉଁଟି ଗର୍ଭଶୀର୍ଷରେ ପହଞ୍ଚେ?",
+      "answer": "ପରାଗପେଟିକାରୁ ପରାଗରେଣୁ ସ୍ଥାନାନ୍ତରିତ ହୁଏ।",
+      "options": [
+        "ପରାଗରେଣୁ",
+        "ଯୁଗ୍ମଜ",
+        "ଡିମ୍ବକ",
+        "ଡିମ୍ବାଶୟ"
+      ],
+      "correct": 0,
+      "title": "ଜନନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "environment",
+      "pages": [
+        140
+      ],
+      "prompt": "ଏକ ଖାଦ୍ୟ ଶୃଙ୍ଖଳରେ ତୃଣଭୋଜୀଠାରେ ୧୦ କ୍ୟାଲୋରି ଶକ୍ତି ଅଛି। ଦଶ ପ୍ରତିଶତ ନିୟମ ଅନୁସାରେ ଏହାର ପୂର୍ବବର୍ତ୍ତୀ ଉତ୍ପାଦକ ସ୍ତରରେ କେତେ ଶକ୍ତି ଥିଲା?",
+      "answer": "ତୃଣଭୋଜୀ ପାଇଥିବା ୧୦ କ୍ୟାଲୋରି ଉତ୍ପାଦକ ସ୍ତରର ପ୍ରାୟ ୧୦%। ଉତ୍ପାଦକ ସ୍ତରରେ ୧୦ ÷ ୦.୧ = ୧୦୦ କ୍ୟାଲୋରି ଶକ୍ତି ଥିଲା।",
+      "options": [
+        "୧ କ୍ୟାଲୋରି",
+        "୦.୧ କ୍ୟାଲୋରି",
+        "୧୦ କ୍ୟାଲୋରି",
+        "୧୦୦ କ୍ୟାଲୋରି"
+      ],
+      "correct": 3,
+      "title": "ଆମ ପରିବେଶ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "transport",
+      "pages": [
+        39,
+        45
+      ],
+      "prompt": "କେଉଁ ଶିରାରେ ଫୁସ୍‌ଫୁସ୍‌ରୁ ଆସୁଥିବା ତାଜା ଅମ୍ଳଜାନଯୁକ୍ତ ରକ୍ତ ବହେ?",
+      "answer": "ଫୁସ୍‌ଫୁସ୍ ଶିରା ଏହି ରକ୍ତକୁ ବାମ ଅଳିନ୍ଦରେ ପହଞ୍ଚାଏ।",
+      "options": [
+        "ଫୁସ୍‌ଫୁସ୍ ଶିରା",
+        "ଲୋହିତ ରକ୍ତକଣିକା",
+        "ଫୁସ୍‌ଫୁସ୍ ଧମନୀ",
+        "ଫାଇବ୍ରିନ୍"
+      ],
+      "correct": 0,
+      "title": "ପରିବହନ ଓ ସଞ୍ଚାଳନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "energy-sources",
+      "pages": [
+        120,
+        130
+      ],
+      "prompt": "ପୃଥିବୀର ଅଭ୍ୟନ୍ତରର ତାପକୁ ଆଧାର କରୁଥିବା ଉତ୍ସ କେଉଁଟି?",
+      "answer": "ଭୂତାପଜ ଶକ୍ତିରେ ପୃଥିବୀ ଭିତରର ତାପ ବ୍ୟବହୃତ ହୁଏ।",
+      "options": [
+        "ସୋଲାର ସେଲ୍",
+        "ଜୁଆର ଶକ୍ତି",
+        "ଭୂତାପଜ ଶକ୍ତି",
+        "ଜୀବାଶ୍ମ ଇନ୍ଧନ"
+      ],
+      "correct": 2,
+      "title": "ଶକ୍ତିର ଉତ୍ସ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "excretion",
+      "pages": [
+        47,
+        51
+      ],
+      "prompt": "ପରିସ୍ରୁତ ତରଳରୁ ଗ୍ଲୁକୋଜ୍ ନେଫ୍ରନ୍ ନଳିକାରୁ ରକ୍ତକୁ ଫେରିବା କେଉଁ କ୍ରିୟା?",
+      "answer": "ଦରକାରୀ ପଦାର୍ଥକୁ ରକ୍ତକୁ ଫେରାଇନେବା ପୁନଃଶୋଷଣ।",
+      "options": [
+        "ରକ୍ତ ଜମାଟ",
+        "ପୁନଃଶୋଷଣ",
+        "ପରିସ୍ରବଣ",
+        "ଉତ୍ସ୍ୱେଦନ"
+      ],
+      "correct": 1,
+      "title": "ରେଚନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "nutrition",
+      "pages": [
+        14,
+        17
+      ],
+      "prompt": "ଗ୍ରସନୀରୁ ପାକସ୍ଥଳୀକୁ ଖାଦ୍ୟ ନେଉଥିବା ନଳୀ କେଉଁଟି?",
+      "answer": "ଗ୍ରାସନଳୀର ପେଶୀର ଗତି ଖାଦ୍ୟକୁ ପାକସ୍ଥଳୀ ଆଡ଼କୁ ଠେଲେ।",
+      "options": [
+        "ଗ୍ରାସନଳୀ",
+        "ଗ୍ରସନୀ",
+        "କ୍ଷୁଦ୍ରାନ୍ତ୍ର",
+        "ପାକସ୍ଥଳୀ"
+      ],
+      "correct": 0,
+      "title": "ପୋଷଣ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "natural-resources",
+      "pages": [
+        152,
+        164
+      ],
+      "prompt": "ଦରକାର ଅନୁସାରେ ଜଳ ନେଇ ଅପଚୟ କମାଇବା ୫R ଭିତରୁ କେଉଁଟି?",
+      "answer": "ଆବଶ୍ୟକତା ମଧ୍ୟରେ ବ୍ୟବହାର ସୀମିତ କରିବା ସମ୍ବରଣ।",
+      "options": [
+        "ପୁନଃଉପଯୋଗ",
+        "ସମ୍ବରଣ",
+        "ପୁନଃବ୍ୟବହାର",
+        "ପୁନଶ୍ଚକ୍ରଣ"
+      ],
+      "correct": 1,
+      "title": "ପ୍ରାକୃତିକ ସମ୍ପଦର ସଂରକ୍ଷଣ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "coordination",
+      "pages": [
+        59,
+        67
+      ],
+      "prompt": "ହାତକୁ ହଠାତ୍ ଗରମ ବସ୍ତୁଠାରୁ ଫେରାଇନେବାର ସରଳ ପ୍ରତିକ୍ଷେପ ଚାପର କେନ୍ଦ୍ର କେଉଁଟି?",
+      "answer": "ସୁଷୁମ୍ନାକାଣ୍ଡ ସଂବେଦୀ ଓ ଆଜ୍ଞାବହ ସଙ୍କେତକୁ ଯୋଡ଼େ।",
+      "options": [
+        "ଅନ୍ତଃସ୍ରାବୀ ଗ୍ରନ୍ଥି",
+        "ପେଶୀ",
+        "ସୁଷୁମ୍ନାକାଣ୍ଡ",
+        "ମସ୍ତିଷ୍କ"
+      ],
+      "correct": 2,
+      "title": "ନିୟନ୍ତ୍ରଣ ଓ ସମନ୍ୱୟ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "heredity",
+      "pages": [
+        103,
+        108
+      ],
+      "prompt": "କେଉଁ ସଂଯୋଗରୁ T ଓ t ଉଭୟ ପ୍ରକାର ଯୁଗ୍ମକ ମିଳିପାରେ?",
+      "answer": "Ttର କାରକ ଯୋଡ଼ି ପୃଥକ୍ ହେଲେ ଦୁଇ ଧରଣର ଯୁଗ୍ମକ ହୁଏ।",
+      "options": [
+        "TT",
+        "Tt",
+        "T",
+        "tt"
+      ],
+      "correct": 1,
+      "title": "ବଂଶାନୁକ୍ରମ ଓ ବିବର୍ତ୍ତନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "respiration",
+      "pages": [
+        23,
+        31
+      ],
+      "prompt": "କୋଷୀୟ ଶ୍ୱସନର ଶକ୍ତି କେଉଁ ରୂପରେ କୋଷର କାମ ପାଇଁ ମିଳେ?",
+      "answer": "ATP କୋଷର ଶକ୍ତିମୁଦ୍ରା।",
+      "options": [
+        "ଅମ୍ଳଜାନ",
+        "ଲାକ୍ଟିକ୍ ଅମ୍ଳ",
+        "ATP",
+        "ଅଙ୍ଗାରକାମ୍ଳ"
+      ],
+      "correct": 2,
+      "title": "ଶ୍ୱସନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "reproduction",
+      "pages": [
+        72,
+        83
+      ],
+      "prompt": "କୋଷ ବିଭାଜନ ପରେ ଦୁଇ ଅପତ୍ୟ କୋଷର ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ମାତୃକୋଷ ସହ ସମାନ। ଏହା କ’ଣ?",
+      "answer": "ସମବିଭାଜନରେ ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ସଂରକ୍ଷିତ ରହେ।",
+      "options": [
+        "ଅଙ୍ଗୀୟ ଜନନ",
+        "ସମବିଭାଜନ",
+        "କୋରକୋଦ୍‌ଗମ",
+        "ଅର୍ଦ୍ଧବିଭାଜନ"
+      ],
+      "correct": 1,
+      "title": "ଜନନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "environment",
+      "pages": [
+        141,
+        148
+      ],
+      "prompt": "ଜୀବ ଶ୍ୱସନରୁ CO₂ ଫେରି ପତ୍ରରେ ଶର୍କରା ଗଢ଼ିବା କେଉଁ ମୌଳିକର ପ୍ରବାହ ଦର୍ଶାଏ?",
+      "answer": "ଅଙ୍ଗାରକ ବାୟୁ ଓ ଜୀବଦେହ ମଧ୍ୟରେ ଚକ୍ରାକାରରେ ଚାଲେ।",
+      "options": [
+        "ଜୈବପରିବର୍ଦ୍ଧନ",
+        "ଓଜୋନ୍ ସ୍ତର",
+        "ଅମ୍ଳଜାନଚକ୍ର",
+        "ଅଙ୍ଗାରକ ଚକ୍ର"
+      ],
+      "correct": 3,
+      "title": "ଆମ ପରିବେଶ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "transport",
+      "pages": [
+        39,
+        44
+      ],
+      "prompt": "ହୃତ୍‌ପିଣ୍ଡର କେଉଁ ଭାଗ ରକ୍ତକୁ ଫୁସ୍‌ଫୁସ୍ ଧମନୀକୁ ପଠାଏ?",
+      "answer": "ଦକ୍ଷିଣ ନିଳୟ ଫୁସ୍‌ଫୁସ୍ ଅଭିମୁଖେ ରକ୍ତ ପଠାଏ।",
+      "options": [
+        "ଦକ୍ଷିଣ ଅଳିନ୍ଦ",
+        "ଦକ୍ଷିଣ ନିଳୟ",
+        "ବାମ ଅଳିନ୍ଦ",
+        "ବାମ ନିଳୟ"
+      ],
+      "correct": 1,
+      "title": "ପରିବହନ ଓ ସଞ୍ଚାଳନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "energy-sources",
+      "pages": [
+        120,
+        130
+      ],
+      "prompt": "କୋଇଲା ଓ ପେଟ୍ରୋଲିୟମ୍‌କୁ ଏକତ୍ର କେଉଁ ଶ୍ରେଣୀରେ ରଖାଯାଏ?",
+      "answer": "ପ୍ରାଚୀନ ଜୀବାବଶେଷରୁ ଦୀର୍ଘ ସମୟରେ ଏହି ଇନ୍ଧନ ସୃଷ୍ଟି ହୁଏ।",
+      "options": [
+        "ଜୀବାଶ୍ମ ଇନ୍ଧନ",
+        "ଭୂତାପଜ ଶକ୍ତି",
+        "ସୋଲାର ସେଲ୍",
+        "ଜୁଆର ଶକ୍ତି"
+      ],
+      "correct": 0,
+      "title": "ଶକ୍ତିର ଉତ୍ସ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "excretion",
+      "pages": [
+        47,
+        51
+      ],
+      "prompt": "ମଣିଷ ଦେହରେ ଏମୋନିଆରୁ ମୁଖ୍ୟତଃ କେଉଁ ରେଚନ ପଦାର୍ଥ ଗଠିତ ହୁଏ?",
+      "answer": "ୟୁରିଆ ରକ୍ତଦ୍ୱାରା ବୃକ୍କରେ ପହଞ୍ଚି ମୂତ୍ରରେ ବାହାରେ।",
+      "options": [
+        "ଗ୍ଲୁକୋଜ୍",
+        "ଏମୋନିଆ",
+        "ୟୁରିକ୍ ଏସିଡ୍",
+        "ୟୁରିଆ"
+      ],
+      "correct": 3,
+      "title": "ରେଚନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "nutrition",
+      "pages": [
+        9,
+        13
+      ],
+      "prompt": "ପଚିଥିବା ଜୈବ ପଦାର୍ଥରୁ ଦ୍ରବଣୀୟ ଖାଦ୍ୟ ଶୋଷୁଥିବା କବକର ପୋଷଣ କେଉଁ ପ୍ରକାର?",
+      "answer": "ମୃତ ପଦାର୍ଥ ଏହାର ଖାଦ୍ୟ ଉତ୍ସ।",
+      "options": [
+        "ସହଜୀବୀ",
+        "ପରଜୀବୀ",
+        "ମୃତୋପଜୀବୀ",
+        "ସ୍ୱଭୋଜୀ"
+      ],
+      "correct": 2,
+      "title": "ପୋଷଣ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "coordination",
+      "pages": [
+        54,
+        58
+      ],
+      "prompt": "କାଣ୍ଡ ଝରକାରୁ ଆସୁଥିବା ଆଲୋକ ଆଡ଼କୁ ବଙ୍କିଲା। ଏହା କେଉଁ ପ୍ରକାର ବୃଦ୍ଧି?",
+      "answer": "ଆଲୋକ ଉଦ୍ଦୀପନା ବୃଦ୍ଧିର ଦିଗ ବଦଳାଇଛି।",
+      "options": [
+        "ଅନ୍ତର୍କୁଞ୍ଚନ ଗତି",
+        "ପ୍ରତିକ୍ଷେପ କ୍ରିୟା",
+        "ଆଲୋକାନୁବର୍ତ୍ତନ",
+        "ଜ୍ୟାନୁବର୍ତ୍ତନ"
+      ],
+      "correct": 2,
+      "title": "ନିୟନ୍ତ୍ରଣ ଓ ସମନ୍ୱୟ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "nutrition",
+      "pages": [
+        14,
+        17
+      ],
+      "prompt": "ଅପାଚିତ ଅବଶେଷରୁ ଜଳ ଶୋଷିବାରେ କେଉଁ ଅଂଶର ମୁଖ୍ୟ ଭୂମିକା?",
+      "answer": "କ୍ଷୁଦ୍ରାନ୍ତ୍ର ଅତିକ୍ରମ କଲାପରେ ଅବଶେଷ ବୃହଦନ୍ତ୍ରରେ ପହଞ୍ଚେ।",
+      "options": [
+        "ବୃହଦନ୍ତ୍ର",
+        "ମୁଖଗହ୍ୱର",
+        "କ୍ଷୁଦ୍ରାନ୍ତ୍ର",
+        "ପାକସ୍ଥଳୀ"
+      ],
+      "correct": 0,
+      "title": "ପୋଷଣ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "excretion",
+      "pages": [
+        47,
+        51
+      ],
+      "prompt": "ଗ୍ଲୋମେରୁଲସ୍‌ରୁ ଜଳ ଓ କିଛି ଦ୍ରବୀଭୂତ ପଦାର୍ଥ କ୍ୟାପ୍‌ସୁଲ୍ ଭିତରକୁ ଆସିବା କେଉଁ କ୍ରିୟା?",
+      "answer": "ଚାପ ଯୋଗୁଁ ରକ୍ତରୁ ଛୋଟ ଉପାଦାନ ଛାଣି ହୁଅନ୍ତି।",
+      "options": [
+        "ରକ୍ତ ଜମାଟ",
+        "ପୁନଃଶୋଷଣ",
+        "ଉତ୍ସ୍ୱେଦନ",
+        "ପରିସ୍ରବଣ"
+      ],
+      "correct": 3,
+      "title": "ରେଚନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "reproduction",
+      "pages": [
+        76,
+        78
+      ],
+      "prompt": "ଯୁଗ୍ମଜରେ ପୂର୍ଣ୍ଣ ଗୁଣସୂତ୍ର ସଂଖ୍ୟା କେଉଁ ଘଟଣା ଦ୍ୱାରା ଫେରେ?",
+      "options": [
+        "ଏକ କୋଷର ସମବିଭାଜନ",
+        "ଦୁଇ ଅର୍ଦ୍ଧସଂଖ୍ୟକ ଗୁଣସୂତ୍ରବିଶିଷ୍ଟ ଯୁଗ୍ମକର ସମାୟନ",
+        "ଏକ କୋରକର ବୃଦ୍ଧି",
+        "ମାତୃକୋଷର ଅର୍ଦ୍ଧବିଭାଜନ"
+      ],
+      "correct": 1,
+      "answer": "ଗୋଟିଏ ଯୁଗ୍ମକରେ n ଗୁଣସୂତ୍ର। ସମାୟନରେ n + n = 2n ହୋଇ ଯୁଗ୍ମଜ ଗଠିତ ହୁଏ।",
+      "title": "ଜନନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "transport",
+      "pages": [
+        39,
+        44
+      ],
+      "prompt": "ଶରୀରରୁ ମହାଶିରା ଦେଇ ଆସିଥିବା ରକ୍ତ ପ୍ରଥମେ କେଉଁଠି ପହଞ୍ଚେ?",
+      "answer": "ମହାଶିରା ଦକ୍ଷିଣ ଅଳିନ୍ଦରେ ଖୋଲେ।",
+      "options": [
+        "ଦକ୍ଷିଣ ନିଳୟ",
+        "ବାମ ଅଳିନ୍ଦ",
+        "ବାମ ନିଳୟ",
+        "ଦକ୍ଷିଣ ଅଳିନ୍ଦ"
+      ],
+      "correct": 3,
+      "title": "ପରିବହନ ଓ ସଞ୍ଚାଳନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "respiration",
+      "pages": [
+        24,
+        26
+      ],
+      "prompt": "ମାଇଟୋକଣ୍ଡ୍ରିଆରେ ଚାଲୁଥିବା ଶ୍ୱସନ ପର୍ଯ୍ୟାୟ ପୂର୍ବରୁ ଗ୍ଲାଇକୋଲିସିସ୍ କେଉଁଠି ହୁଏ?",
+      "options": [
+        "କୋଷଜୀବକରେ",
+        "ନ୍ୟଷ୍ଟିକାରେ",
+        "କୋଷଭିତ୍ତିରେ",
+        "ବାୟୁକୋଷରେ"
+      ],
+      "correct": 0,
+      "answer": "ଗ୍ଲୁକୋଜ୍‌ରୁ ପାଇରୁଭିକ୍ ଅମ୍ଳ ଗଠନ ହେଉଥିବା ପ୍ରଥମ ପର୍ଯ୍ୟାୟ କୋଷଜୀବକରେ ହୁଏ।",
+      "title": "ଶ୍ୱସନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "prompt": "TT × tt ସଙ୍କରଣର ପ୍ରଥମ ପିଢ଼ିର କାରକ ସଂଯୋଗ କ’ଣ?",
+      "options": [
+        "TT",
+        "tt",
+        "Tt",
+        "TT ଓ tt ସମାନ ଅନୁପାତରେ"
+      ],
+      "correct": 2,
+      "answer": "ଗୋଟିଏ ଜନକରୁ T ଓ ଅନ୍ୟଟିରୁ t ମିଳେ।",
+      "pages": [
+        103,
+        106
+      ],
+      "chapter": "heredity",
+      "title": "ବଂଶାନୁକ୍ରମ ଓ ବିବର୍ତ୍ତନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    }
+  ],
+  "written": [
+    {
+      "chapter": "metals-nonmetals",
+      "pages": [
+        48,
+        62
+      ],
+      "prompt": "ଧାତୁର ଅକ୍ସାଇଡ୍ ଓ ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍‌ର ଧର୍ମ ତୁଳନା କର। ଦୁଇ ଏମ୍ଫୋଟେରିକ୍ ଉଦାହରଣ ଓ ଲୁହାକୁ ସଂକ୍ଷାରଣରୁ ସୁରକ୍ଷାର ଏକ ଉପାୟ ଲେଖ।",
+      "answer": "ଅଧିକାଂଶ ଧାତବ ଅକ୍ସାଇଡ୍ କ୍ଷାରକୀୟ ଓ ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟା କରନ୍ତି। ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍ ଅମ୍ଳ ଓ କ୍ଷାରକ ଉଭୟ ସହ ପ୍ରତିକ୍ରିୟା କରନ୍ତି। Al₂O₃ ଓ ZnO ଏହାର ଦୁଇ ଉଦାହରଣ। ଲୁହାରେ ରଙ୍ଗର ପ୍ରଲେପ ଦେଲେ ବାୟୁ ଓ ଆର୍ଦ୍ରତା ସହ ସଂସ୍ପର୍ଶ କମେ।",
+      "alternatives": [
+        {
+          "chapter": "electricity",
+          "pages": [
+            147,
+            162
+          ],
+          "prompt": "2 Ωର ଦୁଇଟି ପ୍ରତିରୋଧୀକୁ ପ୍ରଥମେ ପଙ୍କ୍ତିରେ ଓ ପରେ ସମାନ୍ତରାଳରେ 6 V ବ୍ୟାଟେରୀ ସହ ଯୋଡ଼ାଗଲା। ଦୁଇ ଅବସ୍ଥାରେ ସମତୁଲ୍ୟ ପ୍ରତିରୋଧ ଓ ମୁଖ୍ୟ ସ୍ରୋତ ନିର୍ଣ୍ଣୟ କର।",
+          "answer": "ପଙ୍କ୍ତିରେ Rₛ = 2 + 2 = 4 Ω ଓ Iₛ = 6/4 = 1.5 A। ସମାନ୍ତରାଳରେ ସମାନ ଦୁଇ ପ୍ରତିରୋଧୀ ପାଇଁ Rₚ = 2/2 = 1 Ω। ମୁଖ୍ୟ ସ୍ରୋତ Iₚ = 6/1 = 6 A। ସମାନ୍ତରାଳ ଅବସ୍ଥାରେ ସମତୁଲ୍ୟ ପ୍ରତିରୋଧ ଚତୁର୍ଥାଂଶ ହେବାରୁ ସ୍ରୋତ ଚାରିଗୁଣ।",
+          "title": "ବିଦ୍ୟୁତ୍",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୧ (କ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 4,
+      "title": "ଧାତୁ ଓ ଅଧାତୁ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "electricity",
+      "pages": [
+        159,
+        163
+      ],
+      "prompt": "ଏକ ବଲ୍‌ବରେ 220 V, 100 W ଲେଖା ଅଛି। ନିର୍ଦ୍ଦିଷ୍ଟ ବିଭବାନ୍ତରରେ ସ୍ରୋତ ଓ ପ୍ରତିରୋଧ ନିର୍ଣ୍ଣୟ କର। ଏହି ଅବସ୍ଥାରେ ପାଞ୍ଚ ଘଣ୍ଟା ବ୍ୟବହାର କଲେ ଶକ୍ତି ବ୍ୟୟ kWh ଓ Jରେ କେତେ?",
+      "answer": "ସ୍ରୋତ ପ୍ରାୟ 0.455 A, ପ୍ରତିରୋଧ 484 Ω ଓ ବ୍ୟୟ ହୋଇଥିବା ଶକ୍ତି 0.5 kWh ବା 1.8 × 10⁶ J।",
+      "alternatives": [
+        {
+          "chapter": "chemical-reactions",
+          "pages": [
+            12,
+            20
+          ],
+          "prompt": "ସଂଶ୍ଳେଷଣ ଓ ବିଘଟନର ପାର୍ଥକ୍ୟ ସମୀକରଣ ସହ ଲେଖ। ଗୋଟିଏ ଉଦାହରଣରେ ତାପର ଭୂମିକା ଦର୍ଶାଅ।",
+          "answer": "ସଂଶ୍ଳେଷଣରେ ଏକାଧିକ ପ୍ରତିକାରକରୁ ଏକ ଉତ୍ପାଦ ମିଳେ। CaO + H₂O → Ca(OH)₂ରେ ତାପ ନିର୍ଗତ ହୁଏ। ବିଘଟନରେ ଗୋଟିଏ ପ୍ରତିକାରକରୁ ଏକାଧିକ ଉତ୍ପାଦ ମିଳେ। CaCO₃ → CaO + CO₂ରେ ତାପ ଦରକାର। ଦୁଇ ସମୀକରଣର ଉଭୟପଟେ ପ୍ରତି ମୌଳିକର ପରମାଣୁ ସଂଖ୍ୟା ସମାନ।",
+          "title": "ରାସାୟନିକ ପ୍ରତିକ୍ରିୟା ଓ ରାସାୟନିକ ସମୀକରଣ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୧ (ଖ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 4,
+      "steps": [
+        "P = VI, ତେଣୁ I = 100/220 A = 5/11 A ≈ 0.455 A।",
+        "R = V²/P = 220²/100 = 484 Ω।",
+        "100 W = 0.1 kW। ପାଞ୍ଚ ଘଣ୍ଟା ପାଇଁ ଶକ୍ତି E = 0.1 × 5 = 0.5 kWh।",
+        "1 kWh = 3.6 × 10⁶ J, ତେଣୁ 0.5 kWh = 1.8 × 10⁶ J।"
+      ],
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "electricity",
+      "prompt": "ଭୂସମାନ୍ତର ଅକ୍ଷରେ I ଓ ଊର୍ଦ୍ଧ୍ୱ ଅକ୍ଷରେ V ନେଲେ ଓମୀୟ ପରିବାହୀର ଗ୍ରାଫ୍ କିପରି ପଢ଼ିବ?",
+      "answer": "ସ୍ଥିର ତାପମାତ୍ରାରେ V = IR ଯୋଗୁଁ ଗ୍ରାଫ୍ ମୂଳବିନ୍ଦୁ ଦେଇ ଯାଇଥିବା ସରଳରେଖା। ଯେକୌଣସି ଦୁଇ ବିନ୍ଦୁ ମଧ୍ୟରେ ΔV/ΔI ହେଉଛି ପ୍ରତିରୋଧ। ସମାନ ଅକ୍ଷ ମାପରେ ଅଧିକ ଢାଲ ଅଧିକ ପ୍ରତିରୋଧ ସୂଚାଏ।",
+      "pages": [
+        146,
+        149
+      ],
+      "alternatives": [
+        {
+          "chapter": "metals-nonmetals",
+          "pages": [
+            54,
+            56
+          ],
+          "prompt": "ଆୟନିକ ଯୌଗିକର ଗଳନାଙ୍କ ଅଧିକ କାହିଁକି? ତାହାର କଠିନ ଓ ତରଳିତ ଅବସ୍ଥାର ବିଦ୍ୟୁତ୍ ପରିବାହିତା ତୁଳନା କର।",
+          "answer": "ବିପରୀତ ଚାର୍ଜର ଆୟନ ମଧ୍ୟରେ ଦୃଢ଼ ଆକର୍ଷଣ ଥାଏ; ଏହା ଅତିକ୍ରମ କରିବାକୁ ଅଧିକ ଶକ୍ତି ଲାଗେ। କଠିନ ଅବସ୍ଥାରେ ଆୟନ ନିଜ ସ୍ଥାନରେ ଥିବାରୁ ସ୍ରୋତ ବହେ ନାହିଁ। ତରଳିତ ଅବସ୍ଥାରେ ଆୟନ ଗତି କରି ଚାର୍ଜ ପରିବହନ କରନ୍ତି।",
+          "title": "ଧାତୁ ଓ ଅଧାତୁ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୨ (କ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 3,
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "magnetic-effects",
+      "prompt": "ଦୁଇଟି ଚୁମ୍ବକୀୟ କ୍ଷେତ୍ରରେଖା ଛେଦ କଲେ କ’ଣ ଅସଙ୍ଗତି ହେବ?",
+      "answer": "ଛେଦବିନ୍ଦୁରେ ଦୁଇଟି ରେଖାର ଦୁଇଟି ଭିନ୍ନ ସ୍ପର୍ଶକ ଥାନ୍ତା। ତେଣୁ ଏକ ସ୍ଥାନରେ ଏକାବେଳେ କ୍ଷେତ୍ରର ଦୁଇଟି ଦିଗ ହେବାକୁ ପଡ଼ନ୍ତା। କମ୍ପାସ୍ ସେହି ବିନ୍ଦୁରେ ଗୋଟିଏ ଦିଗ ଦର୍ଶାଏ।",
+      "pages": [
+        166,
+        168
+      ],
+      "alternatives": [
+        {
+          "chapter": "human-eye",
+          "prompt": "ନିର୍ମଳ ଆକାଶ ନୀଳ ଓ ସୂର୍ଯ୍ୟାସ୍ତରେ ସୂର୍ଯ୍ୟ ଲାଲ୍ ଦିଶିବାକୁ ଗୋଟିଏ ନୀତିରେ ବୁଝାଅ।",
+          "answer": "ନୀଳ ପରି ଛୋଟ ତରଙ୍ଗଦୈର୍ଘ୍ୟର ଆଲୋକ ଅଧିକ ବିଚ୍ଛୁରିତ ହୋଇ ନାନା ଦିଗରୁ ଆଖିରେ ପଡ଼େ। ତେଣୁ ଆକାଶ ନୀଳ ଦିଶେ। ସୂର୍ଯ୍ୟାସ୍ତରେ ରଶ୍ମିକୁ ଅଧିକ ବାୟୁସ୍ତର ଅତିକ୍ରମ କରିବାକୁ ପଡ଼େ। ସିଧା ଆସୁଥିବା ଆଲୋକରେ ଲାଲ୍ ବର୍ଣ୍ଣର ଅନୁପାତ ଅଧିକ ରହିଯାଏ।",
+          "pages": [
+            139,
+            140
+          ],
+          "title": "ମାନବ ଚକ୍ଷୁ ଓ ବର୍ଣ୍ଣଜଗତ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୨ (ଖ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 3,
+      "title": "ବିଦ୍ୟୁତ୍ ସ୍ରୋତର ଚୁମ୍ବକୀୟ ପ୍ରଭାବ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "light",
+      "prompt": "ଉତ୍ତଳ ଦର୍ପଣ ଗାଡ଼ିର ପଛଦୃଶ୍ୟ ଦେଖିବାକୁ କାହିଁକି ଉପଯୁକ୍ତ?",
+      "answer": "ଉତ୍ତଳ ଦର୍ପଣରେ ପ୍ରତିବିମ୍ବ ଆଭାସୀ, ସଳଖ ଓ ଛୋଟ ହୁଏ। ଦୃଶ୍ୟକ୍ଷେତ୍ର ବଡ଼ ଥିବାରୁ ଚାଳକ ଦର୍ପଣରେ ପଛର ବିସ୍ତୃତ ଅଞ୍ଚଳ ଦେଖିପାରନ୍ତି।",
+      "pages": [
+        107,
+        112
+      ],
+      "alternatives": [
+        {
+          "chapter": "metals-nonmetals",
+          "prompt": "ଲୁହା ଓ କପର୍‌ର ପ୍ରତିକ୍ରିୟାଶୀଳତାକୁ ବିସ୍ଥାପନ ଧାରଣାରେ ତୁଳନା କର।",
+          "answer": "ଲୁହା କପର୍‌ଠାରୁ ଅଧିକ ସକ୍ରିୟ। କପର୍ ସଲ୍‌ଫେଟ୍ ଦ୍ରବଣରୁ ଲୁହା କପର୍‌କୁ ବିସ୍ଥାପିତ କରେ। ବିପରୀତ ଭାବେ କପର୍ ଲୌହ ଲବଣର ଦ୍ରବଣରୁ ଲୁହାକୁ ବିସ୍ଥାପିତ କରିପାରେ ନାହିଁ।",
+          "pages": [
+            52,
+            53
+          ],
+          "title": "ଧାତୁ ଓ ଅଧାତୁ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୨ (ଗ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 3,
+      "title": "ଆଲୋକ – ପ୍ରତିଫଳନ ଓ ପ୍ରତିସରଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "acids-bases-salts",
+      "prompt": "ତଟକା କ୍ଷୀରର pH ୬। ଦହି ହେବାବେଳେ ଏହା କିପରି ବଦଳେ?",
+      "answer": "ଦହି ହେବାବେଳେ ଲାକ୍ଟିକ୍ ଅମ୍ଳ ସୃଷ୍ଟି ହୁଏ। ଅମ୍ଳୀୟତା ବଢ଼ିବାରୁ pH ୬ଠାରୁ କମିଯାଏ।",
+      "pages": [
+        32,
+        43
+      ],
+      "alternatives": [
+        {
+          "chapter": "human-eye",
+          "prompt": "ସୁସ୍ଥ ଯୁବ ଚକ୍ଷୁର ନିକଟବିନ୍ଦୁ ଓ ଦୂରବିନ୍ଦୁ କେଉଁଠି? ଏହି ଦୁଇ ସୀମା ମଧ୍ୟରେ ଚକ୍ଷୁ କ’ଣ କରିପାରେ?",
+          "answer": "ନିକଟବିନ୍ଦୁ ଚକ୍ଷୁଠାରୁ ପ୍ରାୟ ୨୫ ସେମି ଦୂରରେ ଓ ଦୂରବିନ୍ଦୁ ଅନନ୍ତରେ। ଚକ୍ଷୁ ଲେନ୍ସ ନିଜର ଫୋକସ୍ ଦୂରତା ବଦଳାଇ ଏହି ସୀମା ମଧ୍ୟରେ ଥିବା ବସ୍ତୁର ସ୍ପଷ୍ଟ ପ୍ରତିବିମ୍ବ ମୁକୁରିକା ଉପରେ ଗଠନ କରେ।",
+          "pages": [
+            130,
+            132
+          ],
+          "title": "ମାନବ ଚକ୍ଷୁ ଓ ବର୍ଣ୍ଣଜଗତ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୩ (କ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ଅମ୍ଳ, କ୍ଷାରକ ଓ ଲବଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "acids-bases-salts",
+      "prompt": "ପ୍ଲାଷ୍ଟର୍ ଅଫ୍ ପ୍ୟାରିସ୍‌କୁ ଆର୍ଦ୍ରତାରୁ କାହିଁକି ରକ୍ଷା କରିବା ଉଚିତ?",
+      "answer": "ଏହା ଜଳ ଗ୍ରହଣ କରି ଜିପ୍‌ସମ୍‌ରେ ପରିଣତ ହୋଇ କଠିନ ହୋଇଯାଏ। ପୂର୍ବରୁ ଏହା ଘଟିଲେ ଆବଶ୍ୟକ ସମୟରେ ଛାଞ୍ଚରେ ରୂପ ଦେଇହେବ ନାହିଁ।",
+      "pages": [
+        40,
+        43
+      ],
+      "alternatives": [
+        {
+          "chapter": "magnetic-effects",
+          "prompt": "ଚୁମ୍ବକୀୟ କ୍ଷେତ୍ରରେ ସ୍ରୋତବାହୀ ପରିବାହୀ ଉପରେ ବଳ କେତେବେଳେ ସର୍ବାଧିକ?",
+          "answer": "ସ୍ରୋତର ଦିଗ କ୍ଷେତ୍ର ଦିଗ ସହ ସମକୋଣ କଲେ ବଳ ସର୍ବାଧିକ। ସମାନ୍ତର ଅବସ୍ଥାରେ ଏହି ବଳ ଶୂନ।",
+          "pages": [
+            171,
+            183
+          ],
+          "title": "ବିଦ୍ୟୁତ୍ ସ୍ରୋତର ଚୁମ୍ବକୀୟ ପ୍ରଭାବ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୩ (ଖ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ଅମ୍ଳ, କ୍ଷାରକ ଓ ଲବଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "acids-bases-salts",
+      "prompt": "ହାଇଡ୍ରୋକ୍ଲୋରିକ୍ ଅମ୍ଳ ଓ ସୋଡ଼ିୟମ୍ ହାଇଡ୍ରକ୍ସାଇଡ୍‌ର ପ୍ରଶମନୀକରଣ ସମୀକରଣ ଲେଖ। ଏଥିରେ କେଉଁ ଦୁଇଟି ଆୟନ ମିଶି ଜଳ ସୃଷ୍ଟି କରନ୍ତି?",
+      "answer": "NaOH + HCl → NaCl + H₂O। ଆୟନ ଦୃଷ୍ଟିରୁ H⁺ + OH⁻ → H₂O।",
+      "pages": [
+        28,
+        29
+      ],
+      "alternatives": [
+        {
+          "chapter": "periodic-classification",
+          "prompt": "ଗୋଟିଏ ନିରପେକ୍ଷ ପରମାଣୁର ଇଲେକ୍‌ଟ୍ରନ୍ ସଂରଚନା ୨, ୮, ୨। ମୌଳିକଟିକୁ ଚିହ୍ନଟ କରି ଏହା କେଉଁ ପର୍ଯ୍ୟାୟ ଓ ଗ୍ରୁପ୍‌ରେ ଅଛି ଦର୍ଶାଅ।",
+          "answer": "ମୋଟ ୧୨ଟି ଇଲେକ୍ଟ୍ରନ୍ ଥିବା ନିରପେକ୍ଷ ପରମାଣୁଟି ମ୍ୟାଗ୍ନେସିୟମ୍। ତିନୋଟି କକ୍ଷରୁ ପର୍ଯ୍ୟାୟ ୩ ଓ ବାହ୍ୟ କକ୍ଷରେ ଦୁଇଟି ଇଲେକ୍ଟ୍ରନ୍‌ରୁ ଗ୍ରୁପ ୨ ଜଣାଯାଏ।",
+          "pages": [
+            96,
+            100
+          ],
+          "title": "ମୌଳିକଗୁଡ଼ିକର ପର୍ଯ୍ୟାୟୀ ଶ୍ରେଣୀକରଣ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୩ (ଗ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ଅମ୍ଳ, କ୍ଷାରକ ଓ ଲବଣ",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "electricity",
+      "prompt": "9 V ବ୍ୟାଟେରୀ ଓ 12 Ω ପ୍ରତିରୋଧୀ ପାଇଁ ସ୍ରୋତ ନିର୍ଣ୍ଣୟ କର।",
+      "answer": "V = 9 V ଓ R = 12 Ω। I = V/R = 9/12 A = 0.75 A। ଯାଞ୍ଚ କଲେ 0.75 × 12 = 9 V।",
+      "pages": [
+        147,
+        164
+      ],
+      "alternatives": [
+        {
+          "chapter": "metals-nonmetals",
+          "prompt": "ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍ କ’ଣ? ଦୁଇଟି ଉଦାହରଣ ଦିଅ।",
+          "answer": "ଅମ୍ଳ ଓ କ୍ଷାରକ ଉଭୟ ସହ ପ୍ରତିକ୍ରିୟା କରୁଥିବା ଅକ୍ସାଇଡ୍‌କୁ ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍ କୁହାଯାଏ। ଉଦାହରଣ ଆଲୁମିନିୟମ୍ ଅକ୍ସାଇଡ୍ (Al₂O₃) ଓ ଜିଙ୍କ୍ ଅକ୍ସାଇଡ୍ (ZnO)।",
+          "pages": [
+            48,
+            64
+          ],
+          "title": "ଧାତୁ ଓ ଅଧାତୁ",
+          "source": "science/physical-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+        }
+      ],
+      "number": "୩ (ଘ)",
+      "area": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ବିଦ୍ୟୁତ୍",
+      "source": "science/physical-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view"
+    },
+    {
+      "chapter": "transport",
+      "pages": [
+        35,
+        42
+      ],
+      "prompt": "ଉଦ୍ଭିଦ ଓ ମଣିଷର ପରିବହନ ତୁଳନା କରି ଜାଇଲେମ୍, ଫ୍ଲୋଏମ୍, ଧମନୀ ଓ ଶିରାର ଗୋଟିଏ ଲେଖାଏଁ ଭୂମିକା ଲେଖ।",
+      "answer": "ଜାଇଲେମ୍ ମୂଳରୁ ଜଳ ଓ ଖଣିଜ ଉପରକୁ ନିଏ। ଫ୍ଲୋଏମ୍ ପ୍ରସ୍ତୁତ ଖାଦ୍ୟକୁ ବ୍ୟବହାର ବା ସଞ୍ଚୟ ସ୍ଥାନକୁ ନିଏ। ମଣିଷରେ ଧମନୀ ହୃତ୍‌ପିଣ୍ଡରୁ ରକ୍ତ ବାହାରକୁ ନିଏ। ଶିରା ରକ୍ତକୁ ହୃତ୍‌ପିଣ୍ଡକୁ ଫେରାଏ।",
+      "alternatives": [
+        {
+          "chapter": "excretion",
+          "pages": [
+            47,
+            50
+          ],
+          "prompt": "ରକ୍ତରୁ ମୂତ୍ର ହୋଇ ବାହାରିବା ପର୍ଯ୍ୟନ୍ତ ପଥ ବର୍ଣ୍ଣନ କର। ପରିସ୍ରବଣ ଓ ପୁନଃଶୋଷଣର ଭୂମିକା ଅଲଗା କରି ଦର୍ଶାଅ।",
+          "answer": "ବୃକ୍କର ନେଫ୍ରନ୍‌ରେ ଗ୍ଲୋମେରୁଲସ୍‌ରୁ ଜଳ ଓ ଛୋଟ ଅଣୁ ବାଓମ୍ୟାନ୍ସ୍ କ୍ୟାପ୍‌ସୁଲ୍‌କୁ ଛାଣି ହୁଏ। ନଳିକାରେ ଦରକାରୀ ଜଳ, ଗ୍ଲୁକୋଜ୍ ଓ ଲବଣ ରକ୍ତକୁ ଫେରେ। ଅବଶିଷ୍ଟରେ ୟୁରିଆ ଓ ଅଧିକ ଜଳ ରହେ। ମୂତ୍ର ବୃକ୍କରୁ ମୂତ୍ରସାରଣୀ ଦେଇ ମୂତ୍ରାଶୟରେ ରହେ ଓ ମୂତ୍ରମାର୍ଗ ଦେଇ ବାହାରେ।",
+          "title": "ରେଚନ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୪ (କ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 4,
+      "title": "ପରିବହନ ଓ ସଞ୍ଚାଳନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "nutrition",
+      "pages": [
+        10,
+        13
+      ],
+      "prompt": "ଆଲୋକଶ୍ଳେଷଣର ଆଧାର, ଆଲୋକ ପ୍ରକ୍ରିୟାର ସ୍ଥାନ, ଅମ୍ଳଜାନର ଉତ୍ସ ଓ ଅନ୍ଧକାର ପ୍ରକ୍ରିୟାର କାମ ଲେଖ।",
+      "answer": "ସବୁଜ ପତ୍ର ଆଲୋକଶ୍ଳେଷଣର ଆଧାର। ଜଳ ଓ ଅଙ୍ଗାରକାମ୍ଳ ଖାଦ୍ୟ ଗଠନର ଉପାଦାନ। କ୍ଲୋରୋପ୍ଲାଷ୍ଟର ଥାଇଲାକଏଡ୍‌ରେ କ୍ଲୋରୋଫିଲ୍ ଆଲୋକ ଶୋଷେ। ଜଳର ବିଭାଜନରୁ ଅମ୍ଳଜାନ ମିଳେ ଓ ATP, NADPH ତିଆରି ହୁଏ। ଷ୍ଟ୍ରୋମାରେ ଏମାନଙ୍କ ସାହାଯ୍ୟରେ ଅଙ୍ଗାରକାମ୍ଳରୁ ଶର୍କରା ତିଆରି ହୁଏ।",
+      "alternatives": [
+        {
+          "chapter": "heredity",
+          "pages": [
+            103,
+            114
+          ],
+          "prompt": "ବ୍ୟକ୍ତିର ବଂଶଗତ ଲକ୍ଷଣ ଓ ପିଢ଼ି ପରେ ବିବର୍ତ୍ତନର ସମ୍ପର୍କ ବୁଝାଅ। ମଟର ଗଛରୁ ବଂଶଗତିର ଉଦାହରଣ ଓ ପ୍ରାକୃତିକ ଚୟନର ଯୁକ୍ତି ଦିଅ।",
+          "answer": "ମଟର ଗଛର ଉଚ୍ଚତା ପରି ଲକ୍ଷଣ ଜନକଙ୍କ କାରକ ଦ୍ୱାରା ଅପତ୍ୟକୁ ଯାଏ। Tt ଗଛ ଡେଙ୍ଗା ହେଲେ ମଧ୍ୟ t ଦେଇପାରେ। ଜୀବମାନଙ୍କ ଭିତରେ ବଂଶଗତ ଭିନ୍ନତା ଥାଏ। ପରିବେଶରେ ଅନୁକୂଳ ଲକ୍ଷଣ ଥିବା ଜୀବ ଅଧିକ ସନ୍ତାନ ଦେଲେ ପିଢ଼ି ପରେ ପିଢ଼ି ସେ ଲକ୍ଷଣର ଅନୁପାତ ବଢ଼ି ବିବର୍ତ୍ତନ ଘଟେ।",
+          "title": "ବଂଶାନୁକ୍ରମ ଓ ବିବର୍ତ୍ତନ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୪ (ଖ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 4,
+      "title": "ପୋଷଣ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "coordination",
+      "pages": [
+        61,
+        63
+      ],
+      "prompt": "ପ୍ରତିକ୍ଷେପ ଚାପରେ ସଙ୍କେତ ଗତିପଥ ଦର୍ଶାଅ। ସଂବେଦୀ ଓ ଆଜ୍ଞାବହ ସ୍ନାୟୁର କାମ ଭିନ୍ନ କିପରି?",
+      "answer": "ଗ୍ରାହୀ → ସଂବେଦୀ ସ୍ନାୟୁ → ସୁଷୁମ୍ନାକାଣ୍ଡ → ଆଜ୍ଞାବହ ସ୍ନାୟୁ → ପେଶୀ। ସଂବେଦୀ ସ୍ନାୟୁ ଗ୍ରାହୀର ସଙ୍କେତ କେନ୍ଦ୍ରକୁ ନିଏ। ଆଜ୍ଞାବହ ସ୍ନାୟୁ କେନ୍ଦ୍ରରୁ ପେଶୀକୁ ସଙ୍କେତ ନିଏ ଓ ପେଶୀ ସଙ୍କୁଚିତ ହୁଏ।",
+      "alternatives": [
+        {
+          "chapter": "natural-resources",
+          "prompt": "୫R ନୀତି ଦ୍ୱାରା ସମ୍ପଦର ସୁରକ୍ଷା ବୁଝାଅ।",
+          "answer": "ଅନାବଶ୍ୟକ ଜିନିଷକୁ ଗ୍ରହଣ ନକରିବା ପ୍ରତ୍ୟାଖ୍ୟାନ। ବ୍ୟବହାର ସୀମିତ କରିବା ସମ୍ବରଣ। ବୋତଲକୁ ଧୋଇ ପୁଣି ସେହି କାମରେ ଲଗାଇବା ପୁନଃବ୍ୟବହାର। ଅନ୍ୟ କାମରେ ଲଗାଇବା ପୁନଃଉପଯୋଗ। ରଦି କାଚ, କାଗଜ ବା ଧାତୁକୁ ନୂଆ ଦ୍ରବ୍ୟରେ ବଦଳାଇବା ପୁନଶ୍ଚକ୍ରଣ। ଏସବୁ ଉପାୟ କଞ୍ଚାମାଲ ଓ ଶକ୍ତିର ଚାହିଦା କମାଏ।",
+          "pages": [
+            153,
+            167
+          ],
+          "title": "ପ୍ରାକୃତିକ ସମ୍ପଦର ସଂରକ୍ଷଣ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୫ (କ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 3,
+      "title": "ନିୟନ୍ତ୍ରଣ ଓ ସମନ୍ୱୟ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "natural-resources",
+      "pages": [
+        152,
+        154
+      ],
+      "prompt": "ପୁନଃବ୍ୟବହାର, ପୁନଃଉପଯୋଗ ଓ ପୁନଶ୍ଚକ୍ରଣକୁ ଗୋଟିଏ ଲେଖାଏଁ ଉଦାହରଣରେ ପୃଥକ୍ କର।",
+      "answer": "ବୋତଲ ଧୋଇ ତହିଁରେ ପୁଣି ଜଳ ରଖିବା ପୁନଃବ୍ୟବହାର। ପୁରୁଣା ବାଲ୍ଟିରେ ଚାରା ଲଗାଇବା ପୁନଃଉପଯୋଗ। ରଦି କାଗଜକୁ କଞ୍ଚାମାଲ କରି ନୂଆ କାଗଜ ଗଢ଼ିବା ପୁନଶ୍ଚକ୍ରଣ।",
+      "alternatives": [
+        {
+          "chapter": "transport",
+          "prompt": "ପତ୍ରରୁ ଜଳ ହ୍ରାସ ମୂଳରୁ ଜଳ ପରିବହନ ସହ କିପରି ସମ୍ପୃକ୍ତ?",
+          "answer": "ପତ୍ରରୁ ଉତ୍ସ୍ୱେଦନ ହେଲେ ପତ୍ରରେ ଜଳର ଅଭାବ ହୁଏ। ଜାଇଲେମ୍‌ର ଅବିଚ୍ଛିନ୍ନ ଜଳସ୍ତମ୍ଭ ଉପରେ ଟାଣ ପଡ଼େ। ଏହି ଟାଣ ମୂଳରୁ ଜଳକୁ ଉପରକୁ ଆଣିବାରେ ସାହାଯ୍ୟ କରେ।",
+          "pages": [
+            35,
+            37
+          ],
+          "title": "ପରିବହନ ଓ ସଞ୍ଚାଳନ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୫ (ଖ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 3,
+      "title": "ପ୍ରାକୃତିକ ସମ୍ପଦର ସଂରକ୍ଷଣ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "heredity",
+      "prompt": "ପ୍ରଥମ ପିଢ଼ିର ଗଛ ଡେଙ୍ଗା ହେଲେ ମଧ୍ୟ ପର ପିଢ଼ିରେ କେତେକ ଗେଡ଼ା ହୁଅନ୍ତି କାହିଁକି?",
+      "answer": "ପ୍ରଥମ ପିଢ଼ିରେ ଡେଙ୍ଗା କାରକ ସହ ଗେଡ଼ା କାରକ ରହେ। ଡେଙ୍ଗା କାରକ ପ୍ରଭାବୀ ହେବାରୁ ଗେଡ଼ା ଲକ୍ଷଣ ପ୍ରକାଶ ପାଏନି। ଯୁଗ୍ମକରେ କାରକ ଅଲଗା ହୋଇ ପୁଣି ମିଶିଲେ ଦୁଇଟି ଗେଡ଼ା କାରକ ଥିବା ଗଛ ଗେଡ଼ା ହୁଏ।",
+      "pages": [
+        103,
+        106
+      ],
+      "alternatives": [
+        {
+          "chapter": "energy-sources",
+          "pages": [
+            120,
+            125
+          ],
+          "prompt": "ଜଳବିଦ୍ୟୁତ୍ ଉତ୍ପାଦନରେ ଶକ୍ତି ପରିବର୍ତ୍ତନର କ୍ରମ ଲେଖ। ଜଳଭଣ୍ଡାର ଓ ଜେନେରେଟରର କାମ କ’ଣ?",
+          "answer": "ଜଳଭଣ୍ଡାର ଉଚ୍ଚରେ ଜଳ ସଞ୍ଚିତ ରଖେ, ଫଳରେ ଜଳର ସ୍ଥିତିଜ ଶକ୍ତି ଥାଏ। ଜଳ ଖସିଲେ ଗତିଜ ଶକ୍ତି ଟରବାଇନ୍ ଘୂରାଏ। ଜେନେରେଟର୍ ଏହି ଯାନ୍ତ୍ରିକ ଶକ୍ତିକୁ ବିଦ୍ୟୁତ୍ ଶକ୍ତିରେ ରୂପାନ୍ତରିତ କରେ।",
+          "title": "ଶକ୍ତିର ଉତ୍ସ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୫ (ଗ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 3,
+      "title": "ବଂଶାନୁକ୍ରମ ଓ ବିବର୍ତ୍ତନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "nutrition",
+      "prompt": "ଖାଦ୍ୟନଳୀର ଅଂଶ ଓ ପାଟିରେ ଖାଦ୍ୟର ପରିବର୍ତ୍ତନ ଲେଖ।",
+      "answer": "ମୁଖଗହ୍ୱର → ଗ୍ରସନୀ → ଗ୍ରାସନଳୀ → ପାକସ୍ଥଳୀ → କ୍ଷୁଦ୍ରାନ୍ତ୍ର → ବୃହଦନ୍ତ୍ର → ମଳାଶୟ → ମଳଦ୍ୱାର। ଦାନ୍ତ ଖାଦ୍ୟକୁ ଛୋଟ କରେ, ଜିଭ ଲାଳ ସହ ମିଶାଏ। ଲାଳର ଏନ୍‌ଜାଇମ୍ ଶ୍ୱେତସାରର ପାକ ଆରମ୍ଭ କରେ।",
+      "pages": [
+        14,
+        21
+      ],
+      "alternatives": [
+        {
+          "chapter": "respiration",
+          "prompt": "ଭିନ୍ନ ସ୍ଥିତିରେ ଗ୍ଲୁକୋଜ୍ ଭାଙ୍ଗିବାର ପଥ ଦର୍ଶାଅ।",
+          "answer": "ଗ୍ଲୁକୋଜ୍ → କୋଷଜୀବକରେ ପାଇରୁଭିକ୍ ଅମ୍ଳ। ଏଠାରୁ ତିନିଟି ପଥ ଦେଖାଯାଏ। ଅମ୍ଳଜାନ ଥିଲେ → ମାଇଟୋକଣ୍ଡ୍ରିଆରେ ଅଙ୍ଗାରକାମ୍ଳ + ଜଳ। ଇଷ୍ଟ୍‌ରେ ଅମ୍ଳଜାନ ନଥିଲେ → ସୁରାସାର + ଅଙ୍ଗାରକାମ୍ଳ। ପେଶୀରେ ଅମ୍ଳଜାନ କମିଲେ → ଲାକ୍ଟିକ୍ ଅମ୍ଳ।",
+          "pages": [
+            23,
+            33
+          ],
+          "title": "ଶ୍ୱସନ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୬ (କ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ପୋଷଣ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "environment",
+      "prompt": "ପରିସଂସ୍ଥାରେ ଶକ୍ତିର ପ୍ରବାହ ଏକତରଫା କାହିଁକି?",
+      "answer": "ସୂର୍ଯ୍ୟ → ଉତ୍ପାଦକ → ପ୍ରଥମ ସ୍ତରର ଭକ୍ଷକ → ପରବର୍ତ୍ତୀ ଭକ୍ଷକ। ପ୍ରତି ସ୍ତରରେ ଶକ୍ତିର କିଛି ଅଂଶ ଜୀବନକ୍ରିୟାରେ ବ୍ୟୟ ହୁଏ ଓ ତାପ ଭାବେ ପରିବେଶକୁ ଯାଏ। ଏହା ପୁଣି ସେହି ଖାଦ୍ୟଶୃଙ୍ଖଳର ଆରମ୍ଭକୁ ଫେରେ ନାହିଁ।",
+      "pages": [
+        139,
+        150
+      ],
+      "alternatives": [
+        {
+          "chapter": "respiration",
+          "pages": [
+            29,
+            31
+          ],
+          "prompt": "ବାୟୁକୋଷରେ ଅମ୍ଳଜାନ ଓ ଅଙ୍ଗାରକାମ୍ଳ କେଉଁ କେଉଁ ଦିଗରେ ଯାଏ?",
+          "answer": "ଅମ୍ଳଜାନ ବାୟୁକୋଷରୁ ରକ୍ତକୁ ଯାଏ। ଅଙ୍ଗାରକାମ୍ଳ ରକ୍ତରୁ ବାୟୁକୋଷକୁ ଆସି ନିଃଶ୍ୱାସରେ ବାହାରେ।",
+          "title": "ଶ୍ୱସନ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୬ (ଖ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ଆମ ପରିବେଶ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "respiration",
+      "prompt": "ବାୟୁ ଉପଜୀବୀ ଓ ବାୟୁ ଅପଜୀବୀ ଶ୍ୱସନର ପାର୍ଥକ୍ୟ ଲେଖ।",
+      "answer": "ବାୟୁ ଉପଜୀବୀ ଶ୍ୱସନରେ ଅମ୍ଳଜାନ ଉପସ୍ଥିତିରେ ଗ୍ଲୁକୋଜ୍‌ର ସମ୍ପୂର୍ଣ୍ଣ ଜାରଣ ହୁଏ, ଅଙ୍ଗାରକାମ୍ଳ ଓ ଜଳ ସୃଷ୍ଟି ହୁଏ ଏବଂ ଅଧିକ ଶକ୍ତି ମିଳେ। ବାୟୁ ଅପଜୀବୀ ଶ୍ୱସନରେ ଅମ୍ଳଜାନ ବିନା ଅସମ୍ପୂର୍ଣ୍ଣ ବିଘଟନ ହୁଏ, ଉତ୍ପାଦ ଭିନ୍ନ ଓ ଶକ୍ତିର ପରିମାଣ କମ୍।",
+      "pages": [
+        23,
+        33
+      ],
+      "alternatives": [
+        {
+          "chapter": "nutrition",
+          "prompt": "ମୁଖଗହ୍ୱରରେ ଶ୍ୱେତସାରର ପାକ କେଉଁ ଏନ୍‌ଜାଇମ୍ ଆରମ୍ଭ କରେ? କେଉଁ ଦ୍ୱିଶର୍କରା ଗଠିତ ହୁଏ?",
+          "answer": "ଲାଳରେ ଥିବା ଟାୟାଲିନ୍ ଏନ୍‌ଜାଇମ୍ ଶ୍ୱେତସାର ଉପରେ କାର୍ଯ୍ୟ କରେ। ଏହା ଶ୍ୱେତସାରକୁ ମାଲଟୋଜ୍ ନାମକ ଦ୍ୱିଶର୍କରାରେ ପରିଣତ କରେ।",
+          "pages": [
+            15,
+            16
+          ],
+          "title": "ପୋଷଣ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୬ (ଗ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ଶ୍ୱସନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    },
+    {
+      "chapter": "respiration",
+      "prompt": "ଶ୍ୱସନରେ ଛଅ କାର୍ବନ ବିଶିଷ୍ଟ ଗ୍ଲୁକୋଜ୍‌ର ପ୍ରଥମ ଭାଙ୍ଗଣ କୋଷର କେଉଁ ସ୍ଥାନରେ ହୁଏ? କେତୋଟି କାର୍ବନ ବିଶିଷ୍ଟ କେଉଁ ଉତ୍ପାଦ ସୃଷ୍ଟି ହୁଏ?",
+      "answer": "ଗ୍ଲାଇକୋଲିସିସ୍ କୋଷଜୀବକରେ ହୁଏ। ଗୋଟିଏ ଛଅ କାର୍ବନ ବିଶିଷ୍ଟ ଗ୍ଲୁକୋଜ୍‌ରୁ ଦୁଇଟି ତିନି କାର୍ବନ ବିଶିଷ୍ଟ ପାଇରୁଭିକ୍ ଅମ୍ଳ ଅଣୁ ସୃଷ୍ଟି ହୁଏ।",
+      "pages": [
+        23,
+        25
+      ],
+      "alternatives": [
+        {
+          "chapter": "transport",
+          "pages": [
+            35,
+            37
+          ],
+          "prompt": "ଜାଇଲେମ୍ ଓ ଫ୍ଲୋଏମ୍ କ’ଣ ପରିବହନ କରନ୍ତି?",
+          "answer": "ଜାଇଲେମ୍ ମୂଳରୁ ଜଳ ଓ ଦ୍ରବୀଭୂତ ଖଣିଜ ପରିବହନ କରେ। ଫ୍ଲୋଏମ୍ ପତ୍ରରେ ପ୍ରସ୍ତୁତ ଖାଦ୍ୟକୁ ଅନ୍ୟ ଅଂଶକୁ ନିଏ।",
+          "title": "ପରିବହନ ଓ ସଞ୍ଚାଳନ",
+          "source": "science/life-science/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+        }
+      ],
+      "number": "୬ (ଘ)",
+      "area": "ଜୀବ ବିଜ୍ଞାନ",
+      "marks": 2,
+      "title": "ଶ୍ୱସନ",
+      "source": "science/life-science/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view"
+    }
+  ]
+};

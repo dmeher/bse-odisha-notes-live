@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Village Judge · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>The Village Judge</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>A ୧–୪, ଚାରି comprehension checkର ୫, ୩, ୫ ଓ ୬ ପ୍ରଶ୍ନ, D ୧–୫ର ପ୍ରାୟ ୫୦ ଶବ୍ଦର ଉତ୍ତର ଓ Eର ଦଶଟି ବାକ୍ୟର କ୍ରମ ମେଳାଯାଇଛି। ଦ୍ୱିତୀୟ ଓ ତୃତୀୟ comprehension check ପରର ଦୁଇ ଅନୁମାନକୁ ପରବର୍ତ୍ତୀ ଘଟଣା ସହ ମେଳାଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୧୧୦–୧୧୬।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୪)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">A. 1–4 · Before you read</a> <a href="#exercise-2">Comprehension check I. 1–5</a> <a href="#exercise-3">Comprehension check II. 1–3</a> <a href="#exercise-4">After Comprehension check II · Prediction</a> <a href="#exercise-5">Comprehension check III. 1–5</a> <a href="#exercise-6">After Comprehension check III · Prediction</a> <a href="#exercise-7">Comprehension check IV. 1–4</a> <a href="#exercise-8">Comprehension check IV. 5–6</a> <a href="#exercise-9">D. 1</a> <a href="#exercise-10">D. 2</a> <a href="#exercise-11">D. 3</a> <a href="#exercise-12">D. 4</a> <a href="#exercise-13">D. 5</a> <a href="#exercise-14">E. Activity</a></nav></details>
+<article id="exercise-1"><h2>A. 1–4 · Before you read. Discuss the opening questions about settling disputes and predict the story.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Sample: When a family disagreement persists, I ask someone who will hear both people. 2. People approach a judge for a fair decision. 3. The panch in this story listens to the parties and gives a village judgement. 4. I predict that friendship will be tested by a dispute. The ending also shows reconciliation. ପ୍ରଥମ ଉତ୍ତର ବ୍ୟକ୍ତିଗତ; ଅନୁମାନକୁ ଗଳ୍ପ ସହ ମେଳାଅ।</p><p>ପକ୍ଷ ଦୁଇଟି କହିବାକୁ ସୁଯୋଗ ପାଇବା ହେଉଛି ଆରମ୍ଭର ସାଧାରଣ ଧାରଣା। ଗଳ୍ପରେ ବିଚାରକ ନିଜେ ଏକ ପକ୍ଷର ବନ୍ଧୁ ହେବାରୁ ଏହି ସାଧାରଣ କର୍ତ୍ତବ୍ୟ କଷ୍ଟକର ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-2"><h2>Comprehension check I. 1–5. How did the property transfer create a dispute and a dilemma?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Jumman, his aunt, Kariman and Algu are central here. 2. The aunt was treated kindly while the property was still hers. 3. After the transfer Jumman no longer needed to win her consent. 4. She called for a panchayat and finally approached Algu. 5. Her question left him troubled by the conflict between friendship and honesty. ରାୟ ପୂର୍ବରୁ Algu ନିଜ ମନରେ ବିବେକର ପ୍ରଶ୍ନ ସାମ୍ନା କରନ୍ତି।</p><p>ସମ୍ପତ୍ତି ମିଳିବା ପୂର୍ବ ଓ ପରର ଦୁଇ ବ୍ୟବହାର ତୁଳନା କର। ଆଗେ ଆଦର, ପରେ ଅବହେଳା।</p><p>ବୃଦ୍ଧାଙ୍କ ପାଇଁ ରକ୍ଷଣାବେକ୍ଷଣ ଓ Alguଙ୍କ ପାଇଁ ବନ୍ଧୁତା ଭିନ୍ନ ଚିନ୍ତା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-3"><h2>Comprehension check II. 1–3. Explain the choice of judge, his duty and his ruling.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. The aunt named Algu since she believed a panch would judge honestly. 2. Her appeal to his conscience made him put duty first. 3. He ordered an allowance or the return of the land. I expected a fair hearing after he began questioning Jumman closely. ଶେଷ ଉପପ୍ରଶ୍ନରେ ନିଜ ଅନୁମାନ ପାଇଁ ଗଳ୍ପର ଗୋଟିଏ ସୂଚନା ଦିଅନ୍ତୁ।</p><p>ବୃଦ୍ଧା Alguଙ୍କୁ ବାଛିଲେ ସେ Jummanଙ୍କ ବନ୍ଧୁ ଥିବା କଥା ଜାଣି। Panch ଆସନର କର୍ତ୍ତବ୍ୟ ବନ୍ଧୁତାଠାରୁ ବଳବାନ୍ ହେବ ବୋଲି ତାଙ୍କ ଭରସା।</p><p>ରାୟ ସେ ଭରସାକୁ ସତ୍ୟ କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=112" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୨</a></small></article>
+<article id="exercise-4"><h2>After Comprehension check II · Prediction. After Algu rules on the aunt’s claim, predict whether the friendship will continue and then check your prediction.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Sample prediction: Jumman may avoid Algu because he expected his friend’s support. Check: Their friendship does break, and Jumman wants revenge. Only after he must judge Algu’s own case does he understand the duty which guided Algu and seek reconciliation. ଅନୁମାନ, ଠିକ୍ ପରବର୍ତ୍ତୀ ଘଟଣା ଓ ଗଳ୍ପର ଶେଷର ମିଳନ ତିନିଟି ଅଲଗା ପର୍ଯ୍ୟାୟ।</p><p>Prediction ଅଂଶରେ ଭବିଷ୍ୟତକୁ may କହ, checkରେ ପର ଭାଗରେ ଯାହା ଘଟିଲା ତାକୁ pastରେ ଲେଖ। ମଝିର ଭଙ୍ଗା ବନ୍ଧୁତା ଶେଷ ପୁନର୍ମିଳନ ପାଇଁ ଭୂମିକା ତିଆରି କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=112" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୨</a></small></article>
+<article id="exercise-5"><h2>Comprehension check III. 1–5. Trace the break between the friends and the sale of the bullock.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. The friendship broke and Jumman wanted revenge. 2. Jumman called the death of one bullock a punishment; Algu suspected poisoning. Neither opinion establishes the cause. 3. Samjhoo Sahu is introduced. 4. He wanted more trading trips and promised payment after a month. 5. He overworked and underfed the animal until it died. ପ୍ରଥମ ବଳଦର ମୃତ୍ୟୁ ଉପରେ ସନ୍ଦେହ ଓ ଦ୍ୱିତୀୟ ବଳଦର ପ୍ରମାଣିତ ଅବହେଳା ଭିନ୍ନ।</p><p>Prediction: Sahu may refuse to pay for an animal that has died; the next part confirms that refusal.</p><p>ପ୍ରଥମ ବଳଦର ମୃତ୍ୟୁ ବିଷୟରେ Alguଙ୍କ ସନ୍ଦେହ ପ୍ରମାଣ ନୁହେଁ। ଅନ୍ୟ ବଳଦକୁ ବେଚିବା ଓ Sahuଙ୍କ ବ୍ୟବହାର ହେଉଛି ପର ମାମଲାର ସିଧା ଘଟଣା।</p><p>ଦୁଇ ବଳଦକୁ ମିଶାଅନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩–୧୧୪</a></small></article>
+<article id="exercise-6"><h2>After Comprehension check III · Prediction. After the bullock dies, predict what will happen to the unpaid price and compare that prediction with the next section.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Sample prediction: Sahuji may refuse to pay and the parties may need another panch. Check: Sahuji does refuse. At the second hearing he selects Jumman, who orders him to pay the full price because he overworked and neglected the animal. ମୃତ୍ୟୁ ପୂର୍ବରୁ ପଶୁଟିକୁ କିଭଳି ରଖାଯାଇଥିଲା ଚିନ୍ତା କଲେ ରାୟର କାରଣ ବୁଝିହୁଏ।</p><p>ଦାମ ବାକି ଥିବାରୁ ମୃତ୍ୟୁ ପରେ ‘କେବେ ବଳଦଟି ଅସୁସ୍ଥ ହେଲା’ ପ୍ରଶ୍ନ ଗୁରୁତ୍ୱ ନିଏ। ବିକ୍ରିଦିନର ଅବସ୍ଥା ଓ ପରର ଅବସ୍ଥା ପୃଥକ କରି ବିଚାର ହେବ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-7"><h2>Comprehension check IV. 1–4. Explain the second hearing and decision.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Sahu refused payment, claiming the bullock was already dying when sold. 2. Sahu chose Jumman. 3. He ordered payment in full since the animal died from overwork and neglect. 4. The verdict was regarded as the work of God because Jumman spoke justly even for a man he resented. ରାୟର କାରଣ ସହ କିଏ ବିଚାରକ ବାଛିଲେ ସ୍ପଷ୍ଟ କରନ୍ତୁ।</p><p>Sahuଙ୍କ ଅଭିଯୋଗ ଥିଲା ବିକ୍ରି ବେଳରୁ ବଳଦ ମରଣମୁହଁରେ ଥିଲା। ବିଚାରରେ ସେ ସମୟରେ ବଳଦ ସୁସ୍ଥ ଥିବା ଗ୍ରହଣ କରାଗଲା।</p><p>ତେଣୁ ଦାମ ଫେରାଇବାର ଦାୟିତ୍ୱ କ୍ରେତାଙ୍କ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=115" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୫</a></small></article>
+<article id="exercise-8"><h2>Comprehension check IV. 5–6. Which verdict surprised you, and whom do you admire?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Sample: The second surprised me more because Jumman had actively wished for revenge. I admire the aunt: she had little power, yet she persisted and trusted an honest hearing. ଏଗୁଡ଼ିକ ବ୍ୟକ୍ତିଗତ ପ୍ରତିକ୍ରିୟା। ଅନ୍ୟ ପସନ୍ଦ ବି ଗ୍ରହଣୀୟ, ଯଦି ଘଟଣାରୁ ପ୍ରମାଣ ଦିଆଯାଏ।</p><p>ଉଭୟ ରାୟ ପାଇଁ ଆଶ୍ଚର୍ଯ୍ୟର କାରଣ ଭିନ୍ନ ହୋଇପାରେ। ପ୍ରଥମରେ ବନ୍ଧୁଙ୍କ ବିରୋଧରେ କହିବା କଷ୍ଟ; ଦ୍ୱିତୀୟରେ ପ୍ରତିଶୋଧର ସୁଯୋଗ ଛାଡ଼ିବା କଷ୍ଟ।</p><p>ନିଜ ପସନ୍ଦ ସହ ପ୍ରମାଣ ରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=115" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୫</a></small></article>
+<article id="exercise-9"><h2>D. 1. Why did Jumman’s aunt seek a panch?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Jumman had persuaded his aunt to transfer her small property to him. Once he had it, he and his wife treated her harshly. She asked for money so that she could cook separately, but he refused. Unable to secure fair support in the household, she took her claim to the village panchayat. ବୃଦ୍ଧାଙ୍କ ସମ୍ପତ୍ତି ହସ୍ତାନ୍ତର ପରର ବ୍ୟବହାର ବଦଳିଗଲା।</p><p>ସମ୍ପତ୍ତି ହସ୍ତାନ୍ତର ପଛରେ ନିଜ ଜୀବନ ଚଳାଇବାର ଭରସା ଥିଲା। ଆଦର ବଦଳିବା ଓ ଅଲଗା ଖର୍ଚ୍ଚର ଦାବି ନ ମାନିବା ଫଳରେ ଘରୋଇ ସମାଧାନର ରାସ୍ତା ବନ୍ଦ ହେଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=115" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୫</a></small></article>
+<article id="exercise-10"><h2>D. 2. How did the aunt win her claim?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>The aunt insisted that a judge should listen to justice even if a friend was involved. At the panchayat Algu asked Jumman about the arrangement and the property. He found the aunt entitled to maintenance. Jumman must give her a monthly allowance or give up his claim to the property. ରାୟର ଦୁଇଟି ବିକଳ୍ପ ଉଲ୍ଲେଖ କର।</p><p>Alguଙ୍କୁ ବାଛିବାମାତ୍ରେ ବୃଦ୍ଧା ଜିତିନଥିଲେ। ସେ ବୁଝାଇଲେ ଯେ ଆସନରେ ବସିଲେ ସତ୍ୟକୁ ମାନିବା କର୍ତ୍ତବ୍ୟ।</p><p>ପ୍ରଶ୍ନ ଓ ଉତ୍ତରରୁ ପାଳନ ନ ହୋଇଥିବା ଦାୟିତ୍ୱ ଦେଖାଗଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=115" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୫</a></small></article>
+<article id="exercise-11"><h2>D. 3. Why did the bullock die?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Samjhoo Sahu bought the bullock for carrying goods. Hoping to get as much work from it as possible, he drove it on repeated journeys without giving it proper food, rest or care. At last it could no longer bear its load and collapsed. Its death followed the buyer’s harsh treatment. ବଳଦର ମୃତ୍ୟୁର କାରଣ ତାହାର ଅତ୍ୟଧିକ ପରିଶ୍ରମ।</p><p>କାମ କରାଇବା ମାତ୍ର ନୁହେଁ, ବିଶ୍ରାମ ଓ ଖାଦ୍ୟର ଯତ୍ନ ବିନା ପୁଣିପୁଣି ଭାର ଟଣାଇବାର ଫଳ ବୁଝାଅ। ଏହା ପରେ ବିକ୍ରେତାଙ୍କୁ ଦୋଷ ଦେବା କାହିଁକି ଅନ୍ୟାୟ ଜଣାପଡ଼େ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=115" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୫</a></small></article>
+<article id="exercise-12"><h2>D. 4. Why was a second panchayat needed?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>After the bullock died, Sahu declined to pay the agreed price. He and his wife claimed that Algu had sold a dying animal. Algu could not give up the money, and their quarrel grew. The villagers advised the parties to take the dispute to the panchayat, and they agreed. ବିକ୍ରୟ ମୂଲ୍ୟ ଓ ବଳଦର ସ୍ୱାସ୍ଥ୍ୟ ନେଇ ବିବାଦ ଥିଲା।</p><p>ପ୍ରଥମ ବିଚାରର ଦାବି maintenance, ଦ୍ୱିତୀୟରେ price of the bullock। ପକ୍ଷ ବିଭିନ୍ନ ହେଲେ ମଧ୍ୟ ଉଭୟରେ ଚୁକ୍ତି ଅନୁସାରେ ନିଜ ଦାୟିତ୍ୱ ପାଳନ ହୋଇଛି କି ତାହା ବିବାଦ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=115" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୫</a></small></article>
+<article id="exercise-13"><h2>D. 5. Why did the listeners regard the judgement as the work of God?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Jumman had resented the earlier judgement that Algu gave against him. As judge in the new dispute, however, he put aside personal feelings and ordered Sahu to pay Algu. The listeners saw a man give a just verdict in favour of someone he had treated as an enemy. That impartiality moved them. ବ୍ୟକ୍ତିଗତ ରାଗ ଉପରେ ନ୍ୟାୟକୁ ସ୍ଥାନ ଦେବା ମୁଖ୍ୟ ଭାବ।</p><p>ପୂର୍ବ ରାଗକୁ ଜାଣି ଶ୍ରୋତାମାନେ ବିପରୀତ ଆଶା କରିପାରିଥିଲେ। ରାୟରେ ସତ୍ୟ କହିବାରୁ ବିଚାର ଆସନର ମର୍ଯ୍ୟାଦାକୁ ଭଗବାନଙ୍କ ସ୍ୱର ରୂପେ ଦେଖନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=115" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୫</a></small></article>
+<article id="exercise-14"><h2>E. Activity. Restore the order of the ten summary sentences.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1 → 9 → 2 → 5 → 8 → 3 → 6 → 7 → 4 → 10. ପ୍ରଥମେ ବୃଦ୍ଧାଙ୍କ ମାମଲା, ପରେ ବଳଦ ସମ୍ପର୍କିତ ମାମଲା।</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ବୃଦ୍ଧାଙ୍କ ରାୟ ପରେ ବନ୍ଧୁତା ଭାଙ୍ଗିଲା; ବଳଦ ମାମଲାର ରାୟ ପରେ ବୁଝାମଣା ଫେରିଲା।</p><p>ସାରାଂଶରେ ବିବାଦକୁ ରାୟ ପୂର୍ବରେ, ରାୟକୁ ବନ୍ଧୁତାର ଫଳ ପୂର୍ବରେ ରଖ। ଶେଷ ମିଳନ କେବଳ ଦ୍ୱିତୀୟ ରାୟ ପରେ ସମ୍ଭବ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=116" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୬</a></small></article>
+
+</main></body></html>

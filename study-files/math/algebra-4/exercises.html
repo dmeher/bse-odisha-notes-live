@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସମ୍ଭାବ୍ୟତା · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସମ୍ଭାବ୍ୟତା</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1EtQ269EpOLTlIummkXNmRd5XkCSXNEKf/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>4(a) · 1–4। 4(b) · 1–16। ଉଭୟ ଅନୁଶୀଳନୀର ସମସ୍ତ ପ୍ରଶ୍ନ ଓ ଉପପ୍ରଶ୍ନ ପ୍ରକାଶିତ। 4(b) 1(ix)ରେ ମୁଦ୍ରିତ ସଂଯୋଗ ଓ ସଠିକ୍ ସୂତ୍ର ପୃଥକ୍ ଦର୍ଶାଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 6, 12–14।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୫୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">4(a) · 1(i)</a> <a href="#exercise-2">4(a) · 1(ii)</a> <a href="#exercise-3">4(a) · 1(iii)</a> <a href="#exercise-4">4(a) · 1(iv)</a> <a href="#exercise-5">4(a) · 1(v)</a> <a href="#exercise-6">4(a) · 1(vi)</a> <a href="#exercise-7">4(a) · 1(vii)</a> <a href="#exercise-8">4(a) · 2(i)</a> <a href="#exercise-9">4(a) · 2(ii)</a> <a href="#exercise-10">4(a) · 2(iii)</a> <a href="#exercise-11">4(a) · 3(i)</a> <a href="#exercise-12">4(a) · 3(ii)</a> <a href="#exercise-13">4(a) · 3(iii)</a> <a href="#exercise-14">4(a) · 4(i)</a> <a href="#exercise-15">4(a) · 4(ii)</a> <a href="#exercise-16">4(b) · 1(i)</a> <a href="#exercise-17">4(b) · 1(ii)</a> <a href="#exercise-18">4(b) · 1(iii)</a> <a href="#exercise-19">4(b) · 1(iv)</a> <a href="#exercise-20">4(b) · 1(v)</a> <a href="#exercise-21">4(b) · 1(vi)</a> <a href="#exercise-22">4(b) · 1(vii)</a> <a href="#exercise-23">4(b) · 1(viii)</a> <a href="#exercise-24">4(b) · 1(ix)</a> <a href="#exercise-25">4(b) · 1(x)</a> <a href="#exercise-26">4(b) · 2</a> <a href="#exercise-27">4(b) · 3(i)</a> <a href="#exercise-28">4(b) · 3(ii)</a> <a href="#exercise-29">4(b) · 3(iii)</a> <a href="#exercise-30">4(b) · 3(iv)</a> <a href="#exercise-31">4(b) · 3(v)</a> <a href="#exercise-32">4(b) · 3(vi)</a> <a href="#exercise-33">4(b) · 4</a> <a href="#exercise-34">4(b) · 5</a> <a href="#exercise-35">4(b) · 6</a> <a href="#exercise-36">4(b) · 7</a> <a href="#exercise-37">4(b) · 8</a> <a href="#exercise-38">4(b) · 9(i–iv)</a> <a href="#exercise-39">4(b) · 10(i–v)</a> <a href="#exercise-40">4(b) · 11(i)</a> <a href="#exercise-41">4(b) · 11(ii)</a> <a href="#exercise-42">4(b) · 11(iii)</a> <a href="#exercise-43">4(b) · 11(iv)</a> <a href="#exercise-44">4(b) · 11(v)</a> <a href="#exercise-45">4(b) · 11(vi)</a> <a href="#exercise-46">4(b) · 12</a> <a href="#exercise-47">4(b) · 13(i–iv)</a> <a href="#exercise-48">4(b) · 14</a> <a href="#exercise-49">4(b) · 15</a> <a href="#exercise-50">4(b) · 16</a></nav></details>
+<article id="exercise-1"><h2>4(a) · 1(i). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ 8 ଆସିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 6।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 0।</li><li>P(E) = 0/6 = 0।</li><li>ଛଅଟି ସମ୍ଭାବ୍ୟ ଫଳ ମଧ୍ୟରୁ କୌଣସିଟି ଅନୁକୂଳ ନୁହେଁ। ଏହା ଏକ ଅସମ୍ଭବ ଘଟଣା, ତେଣୁ 0/6 = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-2"><h2>4(a) · 1(ii). ଲୁଡୁଗୋଟିରେ ଫଳ 7 ରୁ କମ୍ ଆସିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 6।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 6।</li><li>P(E) = 6/6 = 1।</li><li>ଛଅଟିଯାକ ସମ୍ଭାବ୍ୟ ଫଳ ଅନୁକୂଳ। ତେଣୁ ପ୍ରତିଥର ଘଟଣାଟି ଘଟିବ ଓ 6/6 = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-3"><h2>4(a) · 1(iii). ଲୁଡୁଗୋଟିରେ ଫଳ 3 ବା ତାହାଠାରୁ କମ୍ ଆସିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 6।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 3।</li><li>P(E) = 3/6 = 1/2।</li><li>ଭଗ୍ନାଂଶ 3/6ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/2। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-4"><h2>4(a) · 1(iv). ମିଲି ଓ ଲିମାଙ୍କ ଟେନିସ୍ ଖେଳରେ ମିଲି ଜିତିବାର ସମ୍ଭାବ୍ୟତା 0.62। ଲିମା ହାରିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ପ୍ରତିଯୋଗୀଙ୍କର ଏହି ଖେଳରେ ମିଲି ଜିତିବା ଓ ଲିମା ହାରିବା ଏକେ ଫଳକୁ ସୂଚାଏ।</li><li>ଏଣୁ ଉଭୟର ସମ୍ଭାବ୍ୟତା ଏକେ। ଲିମା ହାରିବାର ସମ୍ଭାବ୍ୟତା 0.62।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0.62।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-5"><h2>4(a) · 1(v). ଦୁଇଟି ମୁଦ୍ରା ଥରେ ଟସ୍ କଲେ ଫଳରେ ଅତିକମ୍‌ରେ ଗୋଟିଏ T ଆସିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ସମ୍ଭବ ଫଳ HH, HT, TH, TT।</li><li>ଅତିକମ୍‌ରେ ଗୋଟିଏ T ଥିବା ଫଳ HT, TH, TT।</li><li>ଚାରିଟି ସମସମ୍ଭାବୀ ଫଳ ମଧ୍ୟରୁ ତିନୋଟି ଅନୁକୂଳ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3/4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-6"><h2>4(a) · 1(vi). ଏକ ପରୀକ୍ଷଣର ସମସ୍ତ ମୌଳିକ ବା ସରଳ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ସମଷ୍ଟି କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ମୌଳିକ ଘଟଣାରେ ଗୋଟିଏ ଫଳ ଅଛି। ଭିନ୍ନ ମୌଳିକ ଘଟଣାରେ ସେହି ଫଳର ପୁନରାବୃତ୍ତି ନାହିଁ।</li><li>ସବୁ ମୌଳିକ ଘଟଣାର ସଂଯୋଗ ସମଗ୍ର ସାମ୍ପଲ ସ୍ପେସ୍। ଏହାର ସମ୍ଭାବ୍ୟତା 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-7"><h2>4(a) · 1(vii). P(E) = 0.05 ହେଲେ Eର ପରିପୂରକର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>E ଏବଂ ତାହାର ପରିପୂରକ E′ ପରସ୍ପରକୁ ଛେଦ କରନ୍ତି ନାହିଁ ଏବଂ ଦୁହେଁ ମିଶି ସମସ୍ତ ଫଳ ନିଅନ୍ତି। ସେଥିପାଇଁ P(E) + P(E′) = 1।</li><li>E ଓ ଏହାର ପରିପୂରକ ମିଶି ସମଗ୍ର ସାମ୍ପଲ ସ୍ପେସ୍ ହୁଅନ୍ତି।</li><li>P(E′) = 1 − P(E) = 1 − 0.05 = 0.95।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0.95।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-8"><h2>4(a) · 2(i). ତିନୋଟି ନୀଳ, ଦୁଇଟି ଧଳା ଓ ଚାରୋଟି ଲାଲ ମାର୍ବଲରୁ ଯଦୃଚ୍ଛା ଉଠାଇଲେ ଧଳା ମାର୍ବଲ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 9।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 2।</li><li>P(E) = 2/9 = 2/9।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2/9।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-9"><h2>4(a) · 2(ii). ସେହି 3 ନୀଳ, 2 ଧଳା ଓ 4 ଲାଲ ମାର୍ବଲରୁ ନୀଳ ମାର୍ବଲ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 9।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 3।</li><li>P(E) = 3/9 = 1/3।</li><li>ଭଗ୍ନାଂଶ 3/9ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/3। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-10"><h2>4(a) · 2(iii). 3 ନୀଳ, 2 ଧଳା ଓ 4 ଲାଲ ମାର୍ବଲରୁ ଲାଲ ମାର୍ବଲ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 9।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 4।</li><li>P(E) = 4/9 = 4/9।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>4/9।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-11"><h2>4(a) · 3(i). 5 ଧଳା, 4 ଲାଲ ଓ 3 କଳା ବଲ୍‌ରୁ ଯଦୃଚ୍ଛା ଗୋଟିଏ ଉଠାଇଲେ କଳା ବଲ୍ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 12।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 3।</li><li>P(E) = 3/12 = 1/4।</li><li>ଭଗ୍ନାଂଶ 3/12ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/4। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-12"><h2>4(a) · 3(ii). 5 ଧଳା, 4 ଲାଲ ଓ 3 କଳା ବଲ୍‌ରୁ ଲାଲ ବଲ୍ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 12।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 4।</li><li>P(E) = 4/12 = 1/3।</li><li>ଭଗ୍ନାଂଶ 4/12ର ଲବ ଓ ହର ଉଭୟକୁ 4ରେ ଭାଗ କଲେ 1/3। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-13"><h2>4(a) · 3(iii). 5 ଧଳା, 4 ଲାଲ ଓ 3 କଳା ବଲ୍‌ରୁ ଧଳା ବଲ୍ ନ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 12।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 7।</li><li>P(E) = 7/12 = 7/12।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>7/12।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-14"><h2>4(a) · 4(i). 60 ବଲ୍‌ବ ମଧ୍ୟରୁ 12ଟି ଖରାପ। ଯଦୃଚ୍ଛା ଗୋଟିଏ ଉଠାଇଲେ ଭଲ ବଲ୍‌ବ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 60।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 48।</li><li>P(E) = 48/60 = 4/5।</li><li>ଭଗ୍ନାଂଶ 48/60ର ଲବ ଓ ହର ଉଭୟକୁ 12ରେ ଭାଗ କଲେ 4/5। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>4/5।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-15"><h2>4(a) · 4(ii). 60 ବଲ୍‌ବ ମଧ୍ୟରେ 12ଟି ଖରାପ ଥିଲେ ଖରାପ ବଲ୍‌ବ ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ସମସମ୍ଭାବୀ ଫଳ ସଂଖ୍ୟା 60।</li><li>ଚାହିଁଥିବା ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 12।</li><li>P(E) = 12/60 = 1/5।</li><li>ଭଗ୍ନାଂଶ 12/60ର ଲବ ଓ ହର ଉଭୟକୁ 12ରେ ଭାଗ କଲେ 1/5। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/5।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-16"><h2>4(b) · 1(i). ଉକ୍ତି ଯାଞ୍ଚ କର। ଘଟଣାଟି ∅ ହେଲେ ସମ୍ଭାବ୍ୟତା ଶୂନ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଘଟଣା E ପାଇଁ ଅନୁକୂଳ ଫଳଗୁଡ଼ିକ S ମଧ୍ୟରୁ ବଛାଯାଏ। E = ∅ ହେଲେ ଅଂଶରେ ଫଳ ସଂଖ୍ୟା 0, କିନ୍ତୁ Sରେ ସମ୍ଭବ ଫଳ ଥିବାରୁ ହର ଅଶୂନ।</li><li>ଶୂନ୍ୟ ସେଟ୍‌ରେ ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା ଶୂନ।</li><li>P(∅) = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଠିକ୍।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-17"><h2>4(b) · 1(ii). ଉକ୍ତି ଯାଞ୍ଚ କର। E = S ହେଲେ P(E) &lt; 1।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>S ନିଜେ ଘଟଣା ହେଲେ ପ୍ରତି ସମ୍ଭବ ଫଳ ଅନୁକୂଳ। ତେଣୁ ଅନୁପାତ n(S)/n(S) ଏକ ନିଶ୍ଚିତ ଘଟଣାକୁ ସୂଚାଏ।</li><li>S ସାମ୍ପଲ ସ୍ପେସ୍ ହେତୁ ସମସ୍ତ ଫଳ ଅନୁକୂଳ।</li><li>P(E) = P(S) = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୁଲ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-18"><h2>4(b) · 1(iii). ଉକ୍ତି ଯାଞ୍ଚ କର। ମୁଦ୍ରାକୁ ଥରେ ଟସ୍ କଲେ ସାମ୍ପଲ ସ୍ପେସ୍‌ରେ 4ଟି ଉପାଦାନ ଥାଏ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଥରେ ଟସ୍ କଲେ କେବଳ H କିମ୍ବା T ମିଳେ।</li><li>S = {H, T} ହେତୁ ଉପାଦାନ ସଂଖ୍ୟା 2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୁଲ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-19"><h2>4(b) · 1(iv). ଉକ୍ତି ଯାଞ୍ଚ କର। Probability ଶବ୍ଦର ଗୋଟିଏ ଅକ୍ଷରସ୍ଥାନ ବାଛିଲେ i ମିଳିବାର ସମ୍ଭାବ୍ୟତା 2/11।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>11ଟି ଅକ୍ଷର ସ୍ଥାନ ମଧ୍ୟରୁ i ଦୁଇଟି ସ୍ଥାନରେ ଅଛି।</li><li>ଯଦୃଚ୍ଛା ଚୟନରେ P = ଅନୁକୂଳ ସ୍ଥାନ/ମୋଟ ସ୍ଥାନ = 2/11।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଠିକ୍।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-20"><h2>4(b) · 1(v). ଉକ୍ତି ଯାଞ୍ଚ କର। ପରସ୍ପର ବହିର୍ଭୂତ ଯେକୌଣସି ଦୁଇ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ସମଷ୍ଟି 1।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବହିର୍ଭୂତ ହେବା କେବଳ ସାଧାରଣ ଫଳ ନଥିବାକୁ ସୂଚାଏ। ସଂଯୋଗ ସର୍ବଦା S ହେବା ଆବଶ୍ୟକ ନୁହେଁ।</li><li>ଗୋଟିଏ ଲୁଡୁଗୋଟିରେ {1} ଓ {2} ବହିର୍ଭୂତ ହେଲେ ମଧ୍ୟ 1/6 + 1/6 = 1/3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୁଲ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-21"><h2>4(b) · 1(vi). ଉକ୍ତି ଯାଞ୍ଚ କର। ଲୁଡୁଗୋଟିକୁ ଦୁଇଥର ଗଡ଼ାଇବାରେ ସାମ୍ପଲ ସ୍ପେସ୍‌ର ଉପାଦାନ ସଂଖ୍ୟା 36।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଥର ପାଇଁ 6ଟି ଓ ପ୍ରତି ପ୍ରଥମ ଫଳ ପାଇଁ ଦ୍ୱିତୀୟ ଥର 6ଟି ଫଳ ସମ୍ଭବ।</li><li>କ୍ରମିତ ଯୋଡ଼ି ସଂଖ୍ୟା 6 × 6 = 36।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଠିକ୍।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-22"><h2>4(b) · 1(vii). ଉକ୍ତି ଯାଞ୍ଚ କର। ମୁଦ୍ରାକୁ ତିନିଥର ଟସ୍ କଲେ ସାମ୍ପଲ ସ୍ପେସ୍‌ରେ 3² = 9ଟି ଉପାଦାନ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ଟସ୍‌ରେ 2ଟି ଫଳ ସମ୍ଭବ ଓ ଟସ୍ ସଂଖ୍ୟା 3।</li><li>ଉପାଦାନ ସଂଖ୍ୟା 2 × 2 × 2 = 2³ = 8।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୁଲ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-23"><h2>4(b) · 1(viii). ଉକ୍ତି ଯାଞ୍ଚ କର। Mathematics ଶବ୍ଦରୁ ବଛାଯାଇଥିବା ଅକ୍ଷରର ଭିନ୍ନ ନାମ ଲେଖିଲେ S = {m, a, t, h, e, i, c, s}।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବଡ଼ ଓ ସାନ ଅକ୍ଷରକୁ ଏକେ ଅକ୍ଷର ଭାବେ ନେଲେ m, a, t ପୁନରାବୃତ୍ତ ହୋଇଛନ୍ତି।</li><li>ସେଟ୍‌ରେ ପ୍ରତି ଭିନ୍ନ ଅକ୍ଷରକୁ ଥରେ ନେଲେ ଦତ୍ତ ଆଠଟି ଉପାଦାନ ମିଳେ।</li><li>ଏହି ଅକ୍ଷରନାମଗୁଡ଼ିକର ସମ୍ଭାବ୍ୟତା ସମାନ ହେବା ଆବଶ୍ୟକ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଠିକ୍।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-24"><h2>4(b) · 1(ix). ଉକ୍ତି ଯାଞ୍ଚ କର। ମୁଦ୍ରିତ ଉକ୍ତିରେ E₁ ଓ E₂ ବହିର୍ଭୂତ ହେଲେ P(E₂ ∪ E₂) = P(E₁) + P(E₂)। ଏହା ଯାଞ୍ଚ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାମପକ୍ଷରେ E₂ ଦୁଇଥର ମୁଦ୍ରିତ। E₂ ∪ E₂ = E₂ ହେତୁ ବାମପକ୍ଷ କେବଳ P(E₂)।</li><li>ବହିର୍ଭୂତ ଘଟଣା ପାଇଁ ସଠିକ୍ ଯୋଗ ସୂତ୍ର P(E₁ ∪ E₂) = P(E₁) + P(E₂)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୁଲ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦</a></small></article>
+<article id="exercise-25"><h2>4(b) · 1(x). ଉକ୍ତି ଯାଞ୍ଚ କର। ମୁଦ୍ରାକୁ ଥରେ ଟସ୍ କଲେ {H}ର ପରିପୂରକ {H, T}।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>E ଏବଂ ତାହାର ପରିପୂରକ E′ ପରସ୍ପରକୁ ଛେଦ କରନ୍ତି ନାହିଁ ଏବଂ ଦୁହେଁ ମିଶି ସମସ୍ତ ଫଳ ନିଅନ୍ତି। ସେଥିପାଇଁ P(E) + P(E′) = 1।</li><li>ସାମ୍ପଲ ସ୍ପେସ୍ S = {H, T}। {H} ବାଦ ଦେଲେ T ମାତ୍ର ରହେ।</li><li>ତେଣୁ ପରିପୂରକ ଘଟଣା {T}।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୁଲ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-26"><h2>4(b) · 2. ଚାରିଟି ବହିର୍ଭୂତ ଘଟଣା E₁, E₂, E₃ ଓ E₄ର ସଂଯୋଗ ନିଶ୍ଚିତ ରୂପେ ଘଟୁଥିବା ଘଟଣା। ଚାରି ଘଟଣା ସମସମ୍ଭାବ୍ୟ ହେଲେ ପ୍ରତ୍ୟେକର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଘଟଣାଗୁଡ଼ିକ ପରସ୍ପର ବହିର୍ଭୂତ ହେତୁ କୌଣସି ଫଳ ଦୁଇଟି ଘଟଣାରେ ଏକାଠି ନାହିଁ।</li><li>ସଂଯୋଗର ସମ୍ଭାବ୍ୟତା ପୃଥକ୍ ସମ୍ଭାବ୍ୟତାଗୁଡ଼ିକର ସମଷ୍ଟି।</li><li>ସେମାନଙ୍କ ସଂଯୋଗ ନିଶ୍ଚିତ ଘଟଣା ହେତୁ P(E₁) + P(E₂) + P(E₃) + P(E₄) = 1।</li><li>ଘଟଣା ଚାରିଟି ସମସମ୍ଭାବ୍ୟ। ପ୍ରତ୍ୟେକର ସମ୍ଭାବ୍ୟତା p ଧରିଲେ 4p = 1। ଏଣୁ p = 1/4।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟେକର ସମ୍ଭାବ୍ୟତା 1/4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-27"><h2>4(b) · 3(i). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ ≤ 3 ହେବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମସ୍ତ ସମସମ୍ଭାବୀ ଫଳ S = {1, 2, 3, 4, 5, 6}।</li><li>ଦତ୍ତ ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ଫଳ 1, 2, 3।</li><li>ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 3। ସମ୍ଭାବ୍ୟତା = 3/6 = 1/2।</li><li>ଭଗ୍ନାଂଶ 3/6ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/2। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-28"><h2>4(b) · 3(ii). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ &lt; 3 ହେବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମସ୍ତ ସମସମ୍ଭାବୀ ଫଳ S = {1, 2, 3, 4, 5, 6}।</li><li>ଦତ୍ତ ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ଫଳ 1, 2।</li><li>ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 2। ସମ୍ଭାବ୍ୟତା = 2/6 = 1/3।</li><li>ଭଗ୍ନାଂଶ 2/6ର ଲବ ଓ ହର ଉଭୟକୁ 2ରେ ଭାଗ କଲେ 1/3। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-29"><h2>4(b) · 3(iii). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ ≤ 4 ହେବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମସ୍ତ ସମସମ୍ଭାବୀ ଫଳ S = {1, 2, 3, 4, 5, 6}।</li><li>ଦତ୍ତ ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ଫଳ 1, 2, 3, 4।</li><li>ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 4। ସମ୍ଭାବ୍ୟତା = 4/6 = 2/3।</li><li>ଭଗ୍ନାଂଶ 4/6ର ଲବ ଓ ହର ଉଭୟକୁ 2ରେ ଭାଗ କଲେ 2/3। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2/3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-30"><h2>4(b) · 3(iv). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ &lt; 6 ହେବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ସମସ୍ତ ସମସମ୍ଭାବୀ ଫଳ S = {1, 2, 3, 4, 5, 6}।</li><li>ଦତ୍ତ ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ଫଳ 1, 2, 3, 4, 5।</li><li>ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 5। ସମ୍ଭାବ୍ୟତା = 5/6 = 5/6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5/6।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-31"><h2>4(b) · 3(v). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ ≤ 6 ହେବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମସ୍ତ ସମସମ୍ଭାବୀ ଫଳ S = {1, 2, 3, 4, 5, 6}।</li><li>ଦତ୍ତ ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ଫଳ 1, 2, 3, 4, 5, 6।</li><li>ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 6। ସମ୍ଭାବ୍ୟତା = 6/6 = 1।</li><li>ଛଅଟିଯାକ ସମ୍ଭାବ୍ୟ ଫଳ ଅନୁକୂଳ। ତେଣୁ ପ୍ରତିଥର ଘଟଣାଟି ଘଟିବ ଓ 6/6 = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-32"><h2>4(b) · 3(vi). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ &gt; 6 ହେବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମସ୍ତ ସମସମ୍ଭାବୀ ଫଳ S = {1, 2, 3, 4, 5, 6}।</li><li>ଗୋଟିର ଛଅ ପାର୍ଶ୍ୱର ସର୍ବାଧିକ ମାନ 6। ଏହି ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ଫଳ ନାହିଁ।</li><li>ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 0। ସମ୍ଭାବ୍ୟତା = 0/6 = 0।</li><li>ଛଅଟି ସମ୍ଭାବ୍ୟ ଫଳ ମଧ୍ୟରୁ କୌଣସିଟି ଅନୁକୂଳ ନୁହେଁ। ଏହା ଏକ ଅସମ୍ଭବ ଘଟଣା, ତେଣୁ 0/6 = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-33"><h2>4(b) · 4. SCHOOL ଶବ୍ଦରୁ ଯଦୃଚ୍ଛା ଗୋଟିଏ ଅକ୍ଷର ବାଛିଲେ S ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ଶବ୍ଦର ଅକ୍ଷର ସ୍ଥାନଗୁଡ଼ିକ S, C, H, O, O, L।</li><li>O ଦୁଇଟି ଭିନ୍ନ ସ୍ଥାନରେ ଅଛି, ମୋଟ ସ୍ଥାନ 6ଟି।</li><li>S କେବଳ ପ୍ରଥମ ସ୍ଥାନରେ। ଅନୁକୂଳ ସ୍ଥାନ 1 ଏବଂ ମୋଟ 6, ତେଣୁ ସମ୍ଭାବ୍ୟତା 1/6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/6।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-34"><h2>4(b) · 5. ଜାର୍‌ରେ 5 କଳା, 6 ସବୁଜ ଓ 4 ନୀଳ ମାର୍ବଲ ଅଛି। ଯଦୃଚ୍ଛା ଗୋଟିଏ ନେଲେ ସବୁଜ ମିଳିବାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ମାର୍ବଲ ସଂଖ୍ୟା = 5 + 6 + 4 = 15। ପ୍ରତ୍ୟେକ ମାର୍ବଲ ବାଛିବାର ସୁଯୋଗ ସମାନ।</li><li>ସବୁଜ ପାଇଁ 6ଟି ଅନୁକୂଳ ଫଳ। ସମ୍ଭାବ୍ୟତା = 6/15 = 2/5।</li><li>ଭଗ୍ନାଂଶ 6/15ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 2/5। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2/5।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-35"><h2>4(b) · 6. ଏକ ଲୁଡୁଗୋଟିକୁ ଥରେ ଗଡ଼ାଇଲେ ଯୁଗ୍ମ ସଂଖ୍ୟା ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସାମ୍ପଲ ସ୍ପେସ୍ S = {1, 2, 3, 4, 5, 6}। ଛଅଟି ଫଳ ସମସମ୍ଭାବୀ।</li><li>ଯୁଗ୍ମ ଫଳ {2, 4, 6}। ଛଅଟି ସମସମ୍ଭାବୀ ଫଳ ମଧ୍ୟରୁ ଏଗୁଡ଼ିକ 3ଟି। ତେଣୁ P = 3/6 = 1/2।</li><li>ଭଗ୍ନାଂଶ 3/6ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/2। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">P = 3/6 = 1/2 |</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-36"><h2>4(b) · 7. ଏକ ଲୁଡୁଗୋଟିକୁ ଥରେ ଗଡ଼ାଇଲେ ଅଯୁଗ୍ମ ସଂଖ୍ୟା ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>E ଏବଂ ତାହାର ପରିପୂରକ E′ ପରସ୍ପରକୁ ଛେଦ କରନ୍ତି ନାହିଁ ଏବଂ ଦୁହେଁ ମିଶି ସମସ୍ତ ଫଳ ନିଅନ୍ତି। ସେଥିପାଇଁ P(E) + P(E′) = 1।</li><li>ସାମ୍ପଲ ସ୍ପେସ୍ S = {1, 2, 3, 4, 5, 6}। ଛଅଟି ଫଳ ସମସମ୍ଭାବୀ।</li><li>ଅଯୁଗ୍ମ ଫଳ {1, 3, 5}। ଏହା ଯୁଗ୍ମ ଫଳର ପରିପୂରକ ହେତୁ P = 1 − 1/2 = 1/2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">P = 3/6 = 1/2 |</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-37"><h2>4(b) · 8. ଏକ ଲୁଡୁଗୋଟିକୁ ଥରେ ଗଡ଼ାଇଲେ ୫ କିମ୍ବା ତାହାଠାରୁ ଛୋଟ ସଂଖ୍ୟା ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ସାମ୍ପଲ ସ୍ପେସ୍ S = {1, 2, 3, 4, 5, 6}। ଛଅଟି ଫଳ ସମସମ୍ଭାବୀ।</li><li>ଫଳ ≤ 5 ହେବାର ଅନୁକୂଳ ଫଳ {1, 2, 3, 4, 5}। ତେଣୁ P = 5/6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">P = 5/6 |</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-38"><h2>4(b) · 9(i–iv). ମୁଦ୍ରାକୁ ଦୁଇଥର ଟସ୍ କଲେ (i) ଅତି କମରେ ଗୋଟିଏ H, (ii) କେବଳ T, (iii) ଅତି ବେଶିରେ ଗୋଟିଏ H ଓ (iv) କୌଣସି H ନଥିବା ଘଟଣା ଓ ସମ୍ଭାବ୍ୟତା ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>କ୍ରମିତ ଫଳ S = {HH, HT, TH, TT}।</li><li>ମୁଦ୍ରାର ଦୁଇ ପାର୍ଶ୍ୱ ସମସମ୍ଭାବୀ ହେତୁ ପ୍ରତି କ୍ରମର ସମ୍ଭାବ୍ୟତା 1/4।</li><li>(i) ଅତି କମରେ ଗୋଟିଏ H ପାଇଁ {HH, HT, TH} ଅନୁକୂଳ। (ii) କେବଳ T ପାଇଁ {TT} ଅନୁକୂଳ।</li><li>(iii) ଅତି ବେଶିରେ ଗୋଟିଏ H ଅର୍ଥ ଶୂନ କିମ୍ବା ଗୋଟିଏ H।</li><li>ଅନୁକୂଳ ସେଟ୍ {TT, HT, TH}।</li><li>(iv) H ନଥିଲେ କେବଳ {TT} ରହେ।</li><li>ଚାରିଟି ଘଟଣାର ଅନୁକୂଳ ଫଳ ସଂଖ୍ୟା 3, 1, 3 ଓ 1। ପ୍ରତ୍ୟେକକୁ 4ରେ ଭାଗ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ୍ରମେ 3/4, 1/4, 3/4 ଓ 1/4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-39"><h2>4(b) · 10(i–v). ଏକ ମୁଦ୍ରାକୁ ତିନିଥର ଟସ୍ କର। ସାମ୍ପଲ ସ୍ପେସ୍ ଓ (i) କେବଳ T, (ii) ଅତି କମରେ ଦୁଇଟି H, (iii) ଅତି ବେଶିରେ ଦୁଇଟି T, (iv) କେବଳ H କିମ୍ବା କେବଳ T ଓ (v) T ନଥିବା ଘଟଣାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>S = {HHH, HHT, HTH, THH, HTT, THT, TTH, TTT} |</li><li>ତିନି ଟସ୍‌ର ପ୍ରତିଟିରେ 2ଟି ସମସମ୍ଭାବୀ ଫଳ, ତେଣୁ ମୋଟ 2³ = 8।</li><li>(i) କେବଳ T ପାଇଁ {TTT}।</li><li>(ii) ଦୁଇଟି ବା ତିନୋଟି H ପାଇଁ {HHT, HTH, THH, HHH}, ତେଣୁ 4/8 = 1/2।</li><li>(iii) ତିନୋଟି T ଥିବା {TTT}କୁ ବାଦ ଦେଲେ ଅନ୍ୟ 7ଟି ଅନୁକୂଳ।</li><li>(iv) ସମସ୍ତ H କିମ୍ବା ସମସ୍ତ T ପାଇଁ {HHH, TTT}, ତେଣୁ 2/8 = 1/4।</li><li>(v) T ନଥିଲେ {HHH} ଏକମାତ୍ର ଅନୁକୂଳ ଫଳ। ସମ୍ଭାବ୍ୟତା 1/8।</li><li>ଉପପ୍ରଶ୍ନ (ii)ରେ ଭଗ୍ନାଂଶ 4/8ର ଲବ ଓ ହର ଉଭୟକୁ 4ରେ ଭାଗ କଲେ 1/2। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ୍ରମେ 1/8, 1/2, 7/8, 1/4 ଓ 1/8।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧–୮୨</a></small></article>
+<article id="exercise-40"><h2>4(b) · 11(i). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଦୁଇଥର ଗଡ଼ାଇଲେ ଦୁଇ ଫଳର ସମଷ୍ଟି 6 ହେବାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଥର ପ୍ରତ୍ୟେକରେ 6ଟି ସମସମ୍ଭାବୀ ଫଳ। ମୋଟ କ୍ରମିତ ଯୋଡ଼ି 6 × 6 = 36।</li><li>ଅନୁକୂଳ କ୍ରମିତ ଯୋଡ଼ି (1,5), (2,4), (3,3), (4,2), (5,1)।</li><li>ଅନୁକୂଳ ଫଳ 5ଟି ହେତୁ ସମ୍ଭାବ୍ୟତା 5/36।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5/36।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-41"><h2>4(b) · 11(ii). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଦୁଇଥର ଗଡ଼ାଇଲେ ଦୁଇ ଫଳର ସମଷ୍ଟି 4 ହେବାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଥର ପ୍ରତ୍ୟେକରେ 6ଟି ସମସମ୍ଭାବୀ ଫଳ। ମୋଟ କ୍ରମିତ ଯୋଡ଼ି 6 × 6 = 36।</li><li>ଅନୁକୂଳ ଫଳ (1,3), (2,2), (3,1)।</li><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଥର ଭିନ୍ନ ହେତୁ (1,3) ଓ (3,1) ପୃଥକ୍।</li><li>3/36କୁ ସଂକ୍ଷେପ କଲେ 1/12।</li><li>ଭଗ୍ନାଂଶ 3/36ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/12। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/12।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-42"><h2>4(b) · 11(iii). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଦୁଇଥର ଗଡ଼ାଇଲେ ପ୍ରତିଟି ଫଳ ଗୋଟିଏ ବର୍ଗ ସଂଖ୍ୟା ହେବାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଥର ପ୍ରତ୍ୟେକରେ 6ଟି ସମସମ୍ଭାବୀ ଫଳ। ମୋଟ କ୍ରମିତ ଯୋଡ଼ି 6 × 6 = 36।</li><li>1 ଠାରୁ 6 ମଧ୍ୟରେ ବର୍ଗ ସଂଖ୍ୟା 1 ଓ 4। ଦୁଇଥର ଯାକ ଏମାନଙ୍କ ମଧ୍ୟରୁ ଗୋଟିଏ ମିଳିବା ଦରକାର।</li><li>ଅନୁକୂଳ ଯୋଡ଼ି (1,1), (1,4), (4,1), (4,4)। P = 4/36 = 1/9।</li><li>ଭଗ୍ନାଂଶ 4/36ର ଲବ ଓ ହର ଉଭୟକୁ 4ରେ ଭାଗ କଲେ 1/9। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/9।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-43"><h2>4(b) · 11(iv). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଦୁଇଥର ଗଡ଼ାଇଲେ ଦୁଇ ଫଳର ସମଷ୍ଟି ≥ 10 ହେବାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଥର ପ୍ରତ୍ୟେକରେ 6ଟି ସମସମ୍ଭାବୀ ଫଳ। ମୋଟ କ୍ରମିତ ଯୋଡ଼ି 6 × 6 = 36।</li><li>ସମଷ୍ଟି 10 ପାଇଁ (4,6), (5,5), (6,4)।</li><li>ସମଷ୍ଟି 11 ପାଇଁ (5,6), (6,5)।</li><li>ସମଷ୍ଟି 12 ପାଇଁ (6,6)।</li><li>ମୋଟ 3 + 2 + 1 = 6ଟି ଅନୁକୂଳ ଫଳ। P = 6/36 = 1/6।</li><li>ଭଗ୍ନାଂଶ 6/36ର ଲବ ଓ ହର ଉଭୟକୁ 6ରେ ଭାଗ କଲେ 1/6। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/6।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-44"><h2>4(b) · 11(v). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଦୁଇଥର ଗଡ଼ାଇଲେ ଦୁଇ ଫଳର ସମଷ୍ଟି &lt; 6 ହେବାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଥର ପ୍ରତ୍ୟେକରେ 6ଟି ସମସମ୍ଭାବୀ ଫଳ। ମୋଟ କ୍ରମିତ ଯୋଡ଼ି 6 × 6 = 36।</li><li>ସମ୍ଭବ ସମଷ୍ଟି 2, 3, 4, 5 ପାଇଁ ଅନୁକୂଳ ଯୋଡ଼ି ସଂଖ୍ୟା କ୍ରମେ 1, 2, 3, 4।</li><li>ଉଦାହରଣତଃ 5 ପାଇଁ (1,4), (2,3), (3,2), (4,1)।</li><li>ଏଣୁ ଅନୁକୂଳ ଫଳ 1 + 2 + 3 + 4 = 10। P = 10/36 = 5/18।</li><li>ଭଗ୍ନାଂଶ 10/36ର ଲବ ଓ ହର ଉଭୟକୁ 2ରେ ଭାଗ କଲେ 5/18। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5/18।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-45"><h2>4(b) · 11(vi). ଗୋଟିଏ ଲୁଡୁଗୋଟି ଦୁଇଥର ଗଡ଼ାଇଲେ ପ୍ରଥମ ଫଳ ଅଯୁଗ୍ମ ଓ ଦ୍ୱିତୀୟ ଫଳ 6 ହେବାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଥର ପ୍ରତ୍ୟେକରେ 6ଟି ସମସମ୍ଭାବୀ ଫଳ। ମୋଟ କ୍ରମିତ ଯୋଡ଼ି 6 × 6 = 36।</li><li>ପ୍ରଥମ ଫଳ ପାଇଁ 1, 3, 5 ମଧ୍ୟରୁ ଗୋଟିଏ ମିଳିବ। ଦ୍ୱିତୀୟ ଫଳ ନିର୍ଦ୍ଦିଷ୍ଟ।</li><li>ଅନୁକୂଳ ଯୋଡ଼ି (1,6), (3,6), (5,6)। P = 3/36 = 1/12।</li><li>ଭଗ୍ନାଂଶ 3/36ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/12। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/12।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-46"><h2>4(b) · 12. ପରସ୍ପର ବହିର୍ଭୂତ E₁ ଓ E₂ ପାଇଁ P(E₁) = 2P(E₂) ଓ P(E₁) + P(E₂) = 0.9। P(E₁ ∪ E₂) ଓ P(E₁) କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>P(E₂) = x ଧର। ତେଣୁ P(E₁) = 2x। ସମଷ୍ଟିର ସର୍ତ୍ତରୁ 3x = 0.9 ⇒ x = 0.3।</li><li>ଏଣୁ P(E₁) = 2 × 0.3 = 0.6। ଘଟଣାଦ୍ୱୟ ପରସ୍ପର ବହିର୍ଭୂତ ହେତୁ P(E₁ ∩ E₂) = 0।</li><li>ସଂଯୋଗର ସମ୍ଭାବ୍ୟତା = 0.6 + 0.3 − 0 = 0.9।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">P(E₁ ∪ E₂) = 0.9 ଓ P(E₁) = 0.6।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-47"><h2>4(b) · 13(i–iv). P(E₁) = 5/8, P(E₂) = 2/8 ଓ P(E₁ ∩ E₂) = 1/8। P(E₁ ∪ E₂), P(E₁′), P(E₂′) ଓ P(E₁′ ∪ E₂′) ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>E ଏବଂ ତାହାର ପରିପୂରକ E′ ପରସ୍ପରକୁ ଛେଦ କରନ୍ତି ନାହିଁ ଏବଂ ଦୁହେଁ ମିଶି ସମସ୍ତ ଫଳ ନିଅନ୍ତି। ସେଥିପାଇଁ P(E) + P(E′) = 1।</li><li>ସଂଯୋଗ ପାଇଁ ଯୋଗରୁ ସାଧାରଣ ଅଂଶ ଥରେ ବିୟୋଗ କର।</li><li>P(E₁ ∪ E₂) = (5 + 2 − 1)/8 = 6/8 = 3/4 |</li><li>ପରିପୂରକ ଘଟଣାର ସୂତ୍ରରୁ P(E₁′) = 1 − 5/8 = 3/8 ଓ P(E₂′) = 1 − 2/8 = 6/8 = 3/4।</li><li>ଅତି କମରେ ଗୋଟିଏ ଘଟଣା ନ ଘଟିବା ଓ ଉଭୟ ଘଟିବା ପରିପୂରକ।</li><li>ତେଣୁ P(E₁′ ∪ E₂′) = 1 − P(E₁ ∩ E₂) = 1 − 1/8 = 7/8।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ୍ରମେ 3/4, 3/8, 3/4 ଓ 7/8।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-48"><h2>4(b) · 14. MATHEMATICS ଶବ୍ଦରୁ ଯଦୃଚ୍ଛା ଗୋଟିଏ ଅକ୍ଷର ବାଛିଲେ A କିମ୍ବା T ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ମୌଳିକ ଫଳ ସମସମ୍ଭାବୀ ହେଲେ P(E) = n(E)/n(S)। ଘଟଣାର ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ପ୍ରତି ଫଳ ଲବରେ ଥରେ ଓ ସମୁଦାୟ ଫଳ ହରରେ ଥରେ ଗଣାଯାଏ।</li><li>ଶବ୍ଦଟିର ମୋଟ ଅକ୍ଷର ସ୍ଥାନ 11ଟି। ପ୍ରତି ସ୍ଥାନ ବାଛିବାର ସୁଯୋଗ ସମାନ।</li><li>A ଦୁଇଥର ଓ T ଦୁଇଥର ଅଛି। ଏକ ସ୍ଥାନରେ ଉଭୟ ଅକ୍ଷର ରହନ୍ତି ନାହିଁ।</li><li>ତେଣୁ ଅନୁକୂଳ ସ୍ଥାନ 2 + 2 = 4 ଓ ସମ୍ଭାବ୍ୟତା 4/11।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>4/11।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-49"><h2>4(b) · 15. ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ 5 କିମ୍ବା ଅଯୁଗ୍ମ ସଂଖ୍ୟା ମିଳିବାର ସମ୍ଭାବ୍ୟତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଫଳ 5 ପାଇଁ ସେଟ୍ {5} ଓ ଅଯୁଗ୍ମ ଫଳ ପାଇଁ ସେଟ୍ {1, 3, 5}।</li><li>5 ଅଯୁଗ୍ମ ସଂଖ୍ୟା ହେତୁ ପ୍ରଥମ ସେଟ୍ ସମ୍ପୂର୍ଣ୍ଣ ଭାବେ ଦ୍ୱିତୀୟ ସେଟ୍ ମଧ୍ୟରେ।</li><li>ଯେକୌଣସି ଗୋଟିଏ ସର୍ତ୍ତ ପୂରଣ କରୁଥିବା ଫଳ {1, 3, 5}।</li><li>ଏଣୁ 6ଟି ସମସମ୍ଭାବୀ ଫଳରୁ 3ଟି ଅନୁକୂଳ, P = 3/6 = 1/2।</li><li>ଭଗ୍ନାଂଶ 3/6ର ଲବ ଓ ହର ଉଭୟକୁ 3ରେ ଭାଗ କଲେ 1/2। ଏକେ ଘଟଣାର ସମ୍ଭାବ୍ୟତାର ଏହା ସରଳ ରୂପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-50"><h2>4(b) · 16. ଲୁଡୁଗୋଟି ଥରେ ଗଡ଼ାଇଲେ ଫଳ ଅଯୁଗ୍ମ କିମ୍ବା ଫଳ ≥ 3 ଘଟଣାର ସମ୍ଭାବ୍ୟତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଯୁଗ୍ମ ଫଳ ସେଟ୍ {1, 3, 5}। ଫଳ ≥ 3 ସେଟ୍ {3, 4, 5, 6}।</li><li>ଉଭୟ ତାଲିକାରେ 3 ଓ 5 ଅଛି। ସଂଯୋଗରେ ପ୍ରତିଟିକୁ ଥରେ ନେଲେ {1, 3, 4, 5, 6} ମିଳେ।</li><li>ସମୁଦାୟ ଛଅଟି ଫଳ ମଧ୍ୟରୁ କେବଳ 2 ଉଭୟ ସର୍ତ୍ତର ବାହାରେ। ଏଣୁ P = 5/6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5/6।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+
+</main></body></html>

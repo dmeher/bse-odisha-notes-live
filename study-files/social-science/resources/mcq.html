@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସମ୍ବଳ · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସମ୍ବଳ</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1QoXMNew_3TGAw3uXLbF8VbyZBDF6Gdcs/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. କେଉଁଟି ଅଜୈବ ସମ୍ବଳ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଅରଣ୍ୟ</li><li>ବନ୍ୟ ପ୍ରାଣୀ</li><li>ଶିଳା</li><li>ମାଛ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଶିଳା</b></p>
+<div class="lesson-body"><p>ଶିଳା ନିର୍ଜୀବ ପଦାର୍ଥ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୨. କେଉଁ ସମ୍ବଳ ଅପୂରଣୀୟ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ପବନ ଶକ୍ତି</li><li>ଜୁଆର ଶକ୍ତି</li><li>ସୌରଶକ୍ତି</li><li>କୋଇଲା</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. କୋଇଲା</b></p>
+<div class="lesson-body"><p>ବ୍ୟବହାର ସହିତ କୋଇଲା ଭଣ୍ଡାର କ୍ଷୟ ହୁଏ ଓ ମଣିଷର ସମୟସୀମାରେ ଏହାକୁ ପୂରଣ କରିହୁଏ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୩. ସମ୍ବଳର ପ୍ରକାର। “ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଅବିରାମ ସମ୍ବଳ</li><li>ଜୈବ ସମ୍ବଳ</li><li>ଅଜୈବ ସମ୍ବଳ</li><li>ଅପୂରଣୀୟ ସମ୍ବଳ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଅଜୈବ ସମ୍ବଳ</b></p>
+<div class="lesson-body"><p>ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ — ଅଜୈବ ସମ୍ବଳ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୪. “ଅବିରାମ ସମ୍ବଳ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା</li><li>ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ</li><li>କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର</li><li>ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା</b></p>
+<div class="lesson-body"><p>ଅବିରାମ ସମ୍ବଳ — ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୫. ସମ୍ବଳର ପ୍ରକାର। “କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଜୈବ ସମ୍ବଳ</li><li>ଅବିରାମ ସମ୍ବଳ</li><li>ଅଜୈବ ସମ୍ବଳ</li><li>ଅପୂରଣୀୟ ସମ୍ବଳ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଅପୂରଣୀୟ ସମ୍ବଳ</b></p>
+<div class="lesson-body"><p>କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର — ଅପୂରଣୀୟ ସମ୍ବଳ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୬. “ଜୈବ ସମ୍ବଳ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର</li><li>ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ</li><li>ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ</li><li>ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ</b></p>
+<div class="lesson-body"><p>ଜୈବ ସମ୍ବଳ — ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୭. ସମ୍ବଳର ପ୍ରକାର। “ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଅବିରାମ ସମ୍ବଳ</li><li>ଅଜୈବ ସମ୍ବଳ</li><li>ଜୈବ ସମ୍ବଳ</li><li>ଅପୂରଣୀୟ ସମ୍ବଳ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ଅବିରାମ ସମ୍ବଳ</b></p>
+<div class="lesson-body"><p>ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା — ଅବିରାମ ସମ୍ବଳ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୮. “ଅଜୈବ ସମ୍ବଳ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା</li><li>କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର</li><li>ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ</li><li>ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ</b></p>
+<div class="lesson-body"><p>ଅଜୈବ ସମ୍ବଳ — ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୯. ସମ୍ବଳର ପ୍ରକାର। “ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<ol type="A"><li>ଅବିରାମ ସମ୍ବଳ</li><li>ଅଜୈବ ସମ୍ବଳ</li><li>ଅପୂରଣୀୟ ସମ୍ବଳ</li><li>ଜୈବ ସମ୍ବଳ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଜୈବ ସମ୍ବଳ</b></p>
+<div class="lesson-body"><p>ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ — ଜୈବ ସମ୍ବଳ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୦. “ଅପୂରଣୀୟ ସମ୍ବଳ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର</li><li>ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀଙ୍କୁ ନେଇ ଗଠିତ ସମ୍ବଳ</li><li>ସୌରଶକ୍ତି ଓ ଜୁଆର ଶକ୍ତିରେ ବ୍ୟବହାର ସତ୍ତ୍ୱେ ପରିମାଣ ହ୍ରାସ ନ ହେବା</li><li>ଶିଳା ଓ ଭୂମି ପରି ନିର୍ଜୀବ ଉପାଦାନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର</b></p>
+<div class="lesson-body"><p>ଅପୂରଣୀୟ ସମ୍ବଳ — କୋଇଲା ଓ ଖଣିଜ ତୈଳର ଭଣ୍ଡାର ପୁନଃପୂରଣ ବିଚାରରେ ଯେଉଁ ଶ୍ରେଣୀର।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୧୧. ମୃତ୍ତିକା ଓ କ୍ଷୟ। “ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<ol type="A"><li>ଭାଙ୍ଗର</li><li>ସମୁଦ୍ର ତରଙ୍ଗ</li><li>ପବନ</li><li>ଖାଦର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ପବନ</b></p>
+<div class="lesson-body"><p>ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ — ପବନ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨</small></article>
+<article><h2>୧୨. “ଖାଦର” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି</li><li>ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି</li><li>ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ</li><li>ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି</b></p>
+<div class="lesson-body"><p>ଖାଦର — ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୧୭–୧୮</small></article>
+<article><h2>୧୩. ମୃତ୍ତିକା ଓ କ୍ଷୟ। “ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<ol type="A"><li>ସମୁଦ୍ର ତରଙ୍ଗ</li><li>ଭାଙ୍ଗର</li><li>ପବନ</li><li>ଖାଦର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ସମୁଦ୍ର ତରଙ୍ଗ</b></p>
+<div class="lesson-body"><p>ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ — ସମୁଦ୍ର ତରଙ୍ଗ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨</small></article>
+<article><h2>୧୪. “ଭାଙ୍ଗର” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ</li><li>ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ</li><li>ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି</li><li>ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି</b></p>
+<div class="lesson-body"><p>ଭାଙ୍ଗର — ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୧୭–୧୮</small></article>
+<article><h2>୧୫. ମୃତ୍ତିକା ଓ କ୍ଷୟ। “ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ସମୁଦ୍ର ତରଙ୍ଗ</li><li>ଭାଙ୍ଗର</li><li>ଖାଦର</li><li>ପବନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଖାଦର</b></p>
+<div class="lesson-body"><p>ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି — ଖାଦର।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୧୭–୧୮</small></article>
+<article><h2>୧୬. “ପବନ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି</li><li>ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି</li><li>ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ</li><li>ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ</b></p>
+<div class="lesson-body"><p>ପବନ — ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨</small></article>
+<article><h2>୧୭. ମୃତ୍ତିକା ଓ କ୍ଷୟ। “ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<ol type="A"><li>ଖାଦର</li><li>ପବନ</li><li>ଭାଙ୍ଗର</li><li>ସମୁଦ୍ର ତରଙ୍ଗ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଭାଙ୍ଗର</b></p>
+<div class="lesson-body"><p>ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି — ଭାଙ୍ଗର।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୧୭–୧୮</small></article>
+<article><h2>୧୮. “ସମୁଦ୍ର ତରଙ୍ଗ” ପାଇଁ ପାଠର ଠିକ୍ ପରିଚୟ ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ</li><li>ଉଚ୍ଚତର ଭୂମିର ପୁରୁଣା ପଟୁମାଟି</li><li>ନଦୀର ନିମ୍ନ ଭୂମିର ନୂଆ ପଟୁମାଟି</li><li>ସ୍ୱଳ୍ପ ବର୍ଷା ଓ ସ୍ୱଳ୍ପ ଉଦ୍ଭିଦ ଅଞ୍ଚଳରେ ମାଟି ଉଡ଼ିଯିବାର କାରକ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ</b></p>
+<div class="lesson-body"><p>ସମୁଦ୍ର ତରଙ୍ଗ — ଓଡ଼ିଶା ଓ କେରଳର ବେଳାଭୂମି କ୍ଷୟର କାରକ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨</small></article>
+<article><h2>୧୯. ସଂରକ୍ଷଣ ପାଇଁ ନିଷ୍ପତ୍ତି। “ବୃକ୍ଷ ଆବରଣ ପୁଣି ସୃଷ୍ଟି କରି ମାଟି ରକ୍ଷା କରିବା” ସହ କେଉଁ ଉତ୍ତର ମେଳ ଖାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>କୃତ୍ରିମ ପ୍ରଜନନ</li><li>ଧାତୁର ପୁନର୍ବ୍ୟବହାର</li><li>ପୁନଃ ବନୀକରଣ</li><li>ଜୈବସାର ଯୋଗାଣ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ପୁନଃ ବନୀକରଣ</b></p>
+<div class="lesson-body"><p>ବୃକ୍ଷ ଆବରଣ ପୁଣି ସୃଷ୍ଟି କରି ମାଟି ରକ୍ଷା କରିବା — ପୁନଃ ବନୀକରଣ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୨୩</small></article>
+<article><h2>୨୦. ବୃକ୍ଷ ନଥିବା ଶୁଷ୍କ ଜମିରୁ ମାଟି ଉଡ଼ୁଛି। କେଉଁ ଯୋଡ଼ି ଏଠାରେ କାରକ ଓ ପ୍ରତିକାର ଦର୍ଶାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ବରଫ ଓ ଅତିଚାରଣ</li><li>ପବନ ଓ ବନୀକରଣ</li><li>ପବନ ଓ ଗଛ କାଟିବା</li><li>ନଦୀ ଓ ଅତିଚାରଣ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ପବନ ଓ ବନୀକରଣ</b></p>
+<div class="lesson-body"><p>ପବନ ଖୋଲା ଜମିର ମାଟି ଉଡ଼ାଏ। ଗଛ ଲଗାଇବା ମାଟି ଧରି ରଖିବାରେ ସାହାଯ୍ୟ କରେ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୧–୨୩</small></article>
+<article><h2>୨୧. ତୁଳାରୁ ସୂତା ଓ ସୂତାରୁ ଲୁଗା ପ୍ରସ୍ତୁତ ହେଲା। ସମ୍ବଳର ବିକାଶ ସମ୍ପର୍କରେ ଏହା କ’ଣ ବୁଝାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ତୁଳା ଏକ ଖଣିଜ</li><li>ଲୁଗା ଭୂଗର୍ଭରୁ ମିଳେ</li><li>ଜ୍ଞାନ ଓ ଶ୍ରମ ବସ୍ତୁର ଉପଯୋଗିତା ବଢ଼ାଏ</li><li>ପ୍ରକ୍ରିୟାକରଣରେ ଉପଯୋଗିତା ଲୋପ ପାଏ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଜ୍ଞାନ ଓ ଶ୍ରମ ବସ୍ତୁର ଉପଯୋଗିତା ବଢ଼ାଏ</b></p>
+<div class="lesson-body"><p>ପ୍ରକ୍ରିୟାକରଣର ପ୍ରତି ଧାପରେ ବସ୍ତୁ ଏକ ନୂଆ କାମରେ ଲାଗେ।</p></div>
+</details>
+<small class="lesson-source">social-science/geography-and-economics/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୧–୩</small></article>
+
+</main></body></html>

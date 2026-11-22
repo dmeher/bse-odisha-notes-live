@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 225">
+  <title>ABCD, cyclic quadrilateral</title>
+  <rect width="320" height="225" rx="8" fill="white"/>
+  <g fill="none" stroke="#254b55" stroke-width="2">
+<circle cx="150" cy="110" r="84"/><path d="M93.8 47.6L77.3 152L204 174.4L232.7 95.4Z"/>
+  </g>
+  <g fill="#173940" font-family="sans-serif" font-size="15">
+    <text x="78" y="41">A</text>
+    <text x="57" y="163">B</text>
+    <text x="207" y="193">C</text>
+    <text x="242" y="96">D</text>
+  </g>
+</svg>

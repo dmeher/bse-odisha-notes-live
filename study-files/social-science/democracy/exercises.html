@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଭାରତରେ ଗଣତନ୍ତ୍ର · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଭାରତରେ ଗଣତନ୍ତ୍ର</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1xLzQLWuR_0vQmouaFcOgRFHQPEbEOc0L/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ତିନି ବିଭାଗର ଦଶଟି ଲେଖାଏଁ ଉପପ୍ରଶ୍ନ ଓ ଚତୁର୍ଥ ବିଭାଗର ଚଉଦଟି ଚୟନ ଯାଞ୍ଚ କରାଯାଇଛି। ୪(ଠ) ଓ ୪(ଢ)ରେ ଏକାଧିକ ବିକଳ୍ପ କାହିଁକି ମେଳେ ଦର୍ଶାଯାଇଛି। ପୃ. ୧୮ର ପାଞ୍ଚ ନିର୍ବାଚନ ସମ୍ପର୍କିତ କାମରେ ମଣ୍ଡଳୀ ଚିହ୍ନଟ ଓ ଫଳ ଲେଖିବା ପଦ୍ଧତି ଅଛି।</p><p>ନିଜ ଅଞ୍ଚଳର ବିଗତ ନିର୍ବାଚନ ରେକର୍ଡ, ପ୍ରାର୍ଥୀ ଓ ବିଧାୟକଙ୍କ ନାମ ଏବଂ ୨୦୦୯ର ସମସ୍ତ ୨୧ ଜଣ ସାଂସଦଙ୍କ ନାମ ପାଇଁ ସମ୍ପୃକ୍ତ ଫଳ ଦରକାର।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୬–୭, ୧୮–୨୨</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୪୧)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧ (କ)</a> <a href="#exercise-2">୧ (ଖ)</a> <a href="#exercise-3">୧ (ଗ)</a> <a href="#exercise-4">୧ (ଘ)</a> <a href="#exercise-5">୧ (ଙ)</a> <a href="#exercise-6">୧ (ଚ)</a> <a href="#exercise-7">୧ (ଛ)</a> <a href="#exercise-8">୧ (ଜ)</a> <a href="#exercise-9">୧ (ଝ)</a> <a href="#exercise-10">୧ (ଞ)</a> <a href="#exercise-11">୨ (କ)</a> <a href="#exercise-12">୨ (ଖ)</a> <a href="#exercise-13">୨ (ଗ)</a> <a href="#exercise-14">୨ (ଘ)</a> <a href="#exercise-15">୨ (ଙ)</a> <a href="#exercise-16">୨ (ଚ)</a> <a href="#exercise-17">୨ (ଛ)</a> <a href="#exercise-18">୨ (ଜ)</a> <a href="#exercise-19">୨ (ଝ)</a> <a href="#exercise-20">୨ (ଞ)</a> <a href="#exercise-21">୩ (କ)</a> <a href="#exercise-22">୩ (ଖ)</a> <a href="#exercise-23">୩ (ଗ)</a> <a href="#exercise-24">୩ (ଘ)</a> <a href="#exercise-25">୩ (ଙ)</a> <a href="#exercise-26">୩ (ଚ)</a> <a href="#exercise-27">୩ (ଛ)</a> <a href="#exercise-28">୩ (ଜ)</a> <a href="#exercise-29">୩ (ଝ)</a> <a href="#exercise-30">୩ (ଞ)</a> <a href="#exercise-31">୪ (କ)</a> <a href="#exercise-32">୪ (ଖ)</a> <a href="#exercise-33">୪ (ଗ)</a> <a href="#exercise-34">୪ (ଘ–ଛ)</a> <a href="#exercise-35">୪ (ଜ–ଞ)</a> <a href="#exercise-36">୪ (ଟ–ଢ)</a> <a href="#exercise-37">ତୁମ ପାଇଁ କାମ · ପ୍ରଥମ</a> <a href="#exercise-38">ତୁମ ପାଇଁ କାମ · ଦ୍ୱିତୀୟ</a> <a href="#exercise-39">ତୁମ ପାଇଁ କାମ · ତୃତୀୟ</a> <a href="#exercise-40">ତୁମ ପାଇଁ କାମ · ଚତୁର୍ଥ</a> <a href="#exercise-41">ତୁମ ପାଇଁ କାମ · ପଞ୍ଚମ</a></nav></details>
+<article id="exercise-1"><h2>୧ (କ). ଗଣତନ୍ତ୍ରର ସଂଜ୍ଞା ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଯେଉଁ ଶାସନ ବ୍ୟବସ୍ଥାରେ ସାର୍ବଭୌମ କ୍ଷମତା ଲୋକମାନଙ୍କ ହାତରେ ରହେ ଓ ସେମାନେ ନିଜେ କିମ୍ବା ପ୍ରତିନିଧିଙ୍କ ମାଧ୍ୟମରେ ଶାସନରେ ଅଂଶ ନିଅନ୍ତି, ତାହା ଗଣତନ୍ତ୍ର। ଆବ୍ରାହାମ୍ ଲିଙ୍କନଙ୍କ ବର୍ଣ୍ଣନାରେ ଏହା ଲୋକଙ୍କର, ଲୋକଙ୍କ ଦ୍ୱାରା ଓ ଲୋକଙ୍କ ପାଇଁ ଶାସନ।</p><p>ସେଥିରେ ଶାସନ କ୍ଷମତାର ଉତ୍ସ ନାଗରିକ। ବଡ଼ ଦେଶରେ ସମସ୍ତେ ପ୍ରତ୍ୟେକ ନିଷ୍ପତ୍ତି ନେବା ସମ୍ଭବ ନଥିବାରୁ ଭୋଟ ଦେଇ ପ୍ରତିନିଧି ବାଛନ୍ତି।</p><p>ନିୟମିତ ନିର୍ବାଚନ ପ୍ରତିନିଧିଙ୍କୁ ଜନତାଙ୍କ ପ୍ରତି ଦାୟୀ ରଖେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=157">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୭–୧୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭–୧୭୪</a></small></article>
+<article id="exercise-2"><h2>୧ (ଖ). ପ୍ରତ୍ୟକ୍ଷ ଓ ପରୋକ୍ଷ ଗଣତନ୍ତ୍ର ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟକ୍ଷ ଗଣତନ୍ତ୍ରରେ ନାଗରିକମାନେ ନିଜେ ନିୟମ ଓ ଶାସନ ସମ୍ବନ୍ଧୀୟ ନିଷ୍ପତ୍ତି ନିଅନ୍ତି। ପରୋକ୍ଷ ଗଣତନ୍ତ୍ରରେ ସେମାନେ ନିଜର ପ୍ରତିନିଧି ବାଛନ୍ତି ଓ ସେହି ପ୍ରତିନିଧି ଶାସନ କରନ୍ତି।</p><p>ବିଶାଳ ଜନସଂଖ୍ୟାରେ ସମସ୍ତେ ଏକାଠି ହୋଇ ନିଷ୍ପତ୍ତି ନେବା କଠିନ ହେଉଥିବାରୁ ଭାରତରେ ପ୍ରତିନିଧିମୂଳକ ଗଣତନ୍ତ୍ର ଚାଲେ। ପ୍ରତ୍ୟକ୍ଷ ଗଣତନ୍ତ୍ର ଓ ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନର ଅର୍ଥକୁ ଅଲଗା ରଖ।</p><p>ପ୍ରଥମରେ ଲୋକେ ନିଜେ ଶାସନ ସମ୍ପର୍କିତ ନିଷ୍ପତ୍ତି ନିଅନ୍ତି। ଲୋକସଭା ସଦସ୍ୟଙ୍କ ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନରେ ଭୋଟର ଜଣେ ପ୍ରତିନିଧିଙ୍କୁ ବାଛନ୍ତି, ଯିଏ ସେମାନଙ୍କ ତରଫରୁ ନିଷ୍ପତ୍ତି ନିଅନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=157">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୭–୧୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭–୧୭୪</a></small></article>
+<article id="exercise-3"><h2>୧ (ଗ). ନିର୍ବାଚନର ଗୁରୁତ୍ୱ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମତଦାତା ନିଜ ଜନପ୍ରତିନିଧି ଚୟନ କରନ୍ତି, ଶାସକଙ୍କ କାର୍ଯ୍ୟକୁ ବିଚାର କରନ୍ତି ଓ ଦଳର ନୀତି ଉପରେ ମତ ଦିଅନ୍ତି। ଏପରି ନିୟମିତ ଚୟନ ଶାସନକୁ ଜନମତ ସହ ଯୋଡ଼େ।</p><p>ମତଦାତା ନିର୍ଦ୍ଦିଷ୍ଟ ସମୟ ଅନ୍ତରରେ କାର୍ଯ୍ୟରତ ପ୍ରତିନିଧିଙ୍କ କାମ ବିଚାର କରିପାରନ୍ତି। ତାଙ୍କୁ ପୁନର୍ବାର ବାଛିବା ବା ଅନ୍ୟ ଜଣଙ୍କୁ ଭୋଟ ଦେବା ସେମାନଙ୍କ ଅଧିକାର।</p><p>ଏହିପରି କ୍ଷମତାର ଶାନ୍ତିପୂର୍ଣ୍ଣ ପରିବର୍ତ୍ତନ ଓ ଜନସାଧାରଣଙ୍କ ପ୍ରତି ଶାସକଙ୍କ ଉତ୍ତରଦାୟିତ୍ୱ ରକ୍ଷା ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=157">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୭–୧୫୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭–୧୭୪</a></small></article>
+<article id="exercise-4"><h2>୧ (ଘ). ଭାରତରେ ନିର୍ବାଚନ ବ୍ୟବସ୍ଥାର ବିଶେଷତ୍ୱ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସାର୍ବଜନୀନ ସାବାଳକ ମତାଧିକାର ଭିତ୍ତିରେ ଲୋକସଭା ଓ ବିଧାନସଭା ପାଇଁ ଭୋଟ ହୁଏ। ପ୍ରତି ମଣ୍ଡଳୀରୁ ଗୋଟିଏ ପ୍ରତିନିଧି ନିର୍ବାଚିତ ହୁଅନ୍ତି।</p><p>ଗୋପନ ମତଦାନରେ ଯିଏ ସର୍ବାଧିକ ସିଦ୍ଧମତ ପାଆନ୍ତି ସେ ବିଜୟୀ ହୁଅନ୍ତି। ସ୍ୱାଧୀନ ନିର୍ବାଚନ ଆୟୋଗ ପ୍ରକ୍ରିୟାର ତତ୍ତ୍ୱାବଧାନ କରନ୍ତି।</p><p>ସାବାଳକ ମତଦାନ ଭୋଟ ଦେବାର ଯୋଗ୍ୟତାକୁ, ଗୁପ୍ତ ମତଦାନ ନିଜ ପସନ୍ଦ ଗୋପନ ରଖିବାକୁ ବୁଝାଏ। ଏକସଦସ୍ୟ ମଣ୍ଡଳୀରେ ସର୍ବାଧିକ ଭୋଟ ପାଇଥିବା ପ୍ରାର୍ଥୀ ମଣ୍ଡଳୀର ପ୍ରତିନିଧି ହୁଅନ୍ତି।</p><p>ଆୟୋଗ ଏହି ପ୍ରକ୍ରିୟା ପରିଚାଳନା କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=158">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୮–୧୬୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮–୧୭୪</a></small></article>
+<article id="exercise-5"><h2>୧ (ଙ). ଆମ ଦେଶର ନିର୍ବାଚନ ପ୍ରକ୍ରିୟାର ବିଭିନ୍ନ ପର୍ଯ୍ୟାୟଗୁଡ଼ିକ ସଂକ୍ଷେପରେ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରଥମେ ମଣ୍ଡଳୀ ଓ ମତଦାତାଙ୍କ ତାଲିକା ପ୍ରସ୍ତୁତ ହୁଏ। ନିର୍ବାଚନ ତାରିଖ ଘୋଷଣା ପରେ ପ୍ରାର୍ଥୀ ଅମାନତ ରାଶି ସହ ନାମାଙ୍କନ ଦିଅନ୍ତି।</p><p>ଯାଞ୍ଚ ଓ ପ୍ରତ୍ୟାହାର ପରେ ଚୂଡ଼ାନ୍ତ ପ୍ରାର୍ଥୀ ତାଲିକା ଓ ସଙ୍କେତ ପ୍ରକାଶ ପାଏ। ପ୍ରଚାର, ଗୋପନ ମତଦାନ, ମତଗଣନା ଓ ଫଳ ଘୋଷଣା କ୍ରମରେ ପ୍ରକ୍ରିୟା ଶେଷ ହୁଏ।</p><p>ଭୋଟର ତାଲିକା କିଏ ମତ ଦେଇପାରିବେ ତାହା ନିର୍ଦ୍ଧାରଣ କରେ। ନାମାଙ୍କନପତ୍ର ଯାଞ୍ଚ ଓ ପ୍ରତ୍ୟାହାର ପରେ କିଏ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱିତା କରିବେ ତାହା ସ୍ଥିର ହୁଏ।</p><p>ମତଗଣନା ପରେ ସମ୍ପୃକ୍ତ ଅଧିକାରୀ ଫଳ ଘୋଷଣା କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=161">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬୧–୧୭୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=161" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୧–୧୭୪</a></small></article>
+<article id="exercise-6"><h2>୧ (ଚ). ନିର୍ବାଚନ ଆୟୋଗର ଗଠନ ଓ କାର୍ଯ୍ୟାବଳୀ ବର୍ଣ୍ଣନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନିର୍ବାଚନ ଆୟୋଗରେ ମୁଖ୍ୟ ନିର୍ବାଚନ ଆୟୁକ୍ତ ଓ ଅନ୍ୟ ଦୁଇ ଆୟୁକ୍ତ ଅଛନ୍ତି। ରାଷ୍ଟ୍ରପତି ଏମାନଙ୍କୁ ନିଯୁକ୍ତ କରନ୍ତି।</p><p>ମତଦାତା ତାଲିକା, ନିର୍ବାଚନ ସୂଚୀ, ରାଜନୈତିକ ଦଳ ଓ ସଙ୍କେତ, ଆଚରଣ ବିଧି, ମତଦାନ ଓ ଗଣନାର ତଦାରଖ ଆୟୋଗଙ୍କ କାର୍ଯ୍ୟ। ସ୍ୱାଧୀନ ଓ ନିରପେକ୍ଷ ନିର୍ବାଚନ ଏହାର ଲକ୍ଷ୍ୟ।</p><p>ଲୋକସଭା ଓ ବିଧାନସଭା ପାଇଁ ଭାରତର ନିର୍ବାଚନ ଆୟୋଗ କାମ କରନ୍ତି। ପଞ୍ଚାୟତ ଓ ପୌରସଂସ୍ଥାର ନିର୍ବାଚନ ପାଇଁ ରାଜ୍ୟ ନିର୍ବାଚନ ଆୟୋଗ ଅଛନ୍ତି।</p><p>ଦୁଇ ଆୟୋଗର କାର୍ଯ୍ୟକ୍ଷେତ୍ର ଏପରି ଭିନ୍ନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=170">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୭୦–୧୭୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=162" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୨–୧୭୫</a></small></article>
+<article id="exercise-7"><h2>୧ (ଛ). ମଧ୍ୟବର୍ତ୍ତୀକାଳୀନ ନିର୍ବାଚନ କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଲୋକସଭା ବା ବିଧାନସଭାର ସାଧାରଣ କାର୍ଯ୍ୟକାଳ ସରିବା ପୂର୍ବରୁ ଗୃହ ଭଙ୍ଗ ହେଲେ ନୂତନ ଗୃହ ଗଠନ ପାଇଁ ଯେଉଁ ସାଧାରଣ ନିର୍ବାଚନ ହୁଏ ତାହା ମଧ୍ୟବର୍ତ୍ତୀକାଳୀନ ନିର୍ବାଚନ। ଏଥିରେ ଭଙ୍ଗ ହୋଇଥିବା ଗୃହର ସମସ୍ତ ଆସନ ପାଇଁ ନିର୍ବାଚନ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=159" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୯–୧୭୫</a></small></article>
+<article id="exercise-8"><h2>୧ (ଜ). ଏକ-ସଦସ୍ୟ ବିଶିଷ୍ଟ ନିର୍ବାଚନ ମଣ୍ଡଳୀ କହିଲେ କ’ଣ ବୁଝ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଭୌଗୋଳିକ ଅଞ୍ଚଳର ମତଦାତା ଯେତେବେଳେ ଲୋକସଭା ବା ବିଧାନସଭା ପାଇଁ ମାତ୍ର ଜଣେ ପ୍ରତିନିଧି ବାଛନ୍ତି, ସେହି ଅଞ୍ଚଳ ଏକ-ସଦସ୍ୟ ବିଶିଷ୍ଟ ନିର୍ବାଚନମଣ୍ଡଳୀ। ପ୍ରାର୍ଥୀ ଏକାଧିକ ହୋଇପାରନ୍ତି, କିନ୍ତୁ ସର୍ବାଧିକ ସିଦ୍ଧମତ ପାଇଥିବା ଜଣେ ନିର୍ବାଚିତ ହୁଅନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=159" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୯–୧୭୫</a></small></article>
+<article id="exercise-9"><h2>୧ (ଝ). ନିର୍ବାଚନ ପ୍ରଚାର ସମ୍ପର୍କରେ ସଂକ୍ଷିପ୍ତ ସୂଚନା ପ୍ରଦାନ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଚୂଡ଼ାନ୍ତ ପ୍ରାର୍ଥୀ ତାଲିକା ପରେ ଦଳ ଓ ପ୍ରାର୍ଥୀ ସଭା, ପଦଯାତ୍ରା, ପ୍ରଚାରପତ୍ର ଓ ଗଣମାଧ୍ୟମରେ ନିଜ ନୀତି ଜଣାଇ ସମର୍ଥନ ଚାହାନ୍ତି। ମତଦାତା ଏହି ତଥ୍ୟରେ ପ୍ରାର୍ଥୀଙ୍କ ତୁଳନା କରିପାରନ୍ତି।</p><p>ପ୍ରଚାରରେ ଆଦର୍ଶ ଆଚରଣ ବିଧି ଓ ନିର୍ଦ୍ଧାରିତ ସମୟସୀମା ପାଳନ କରାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=167" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୭–୧୭୫</a></small></article>
+<article id="exercise-10"><h2>୧ (ଞ). ଏକ ସ୍ୱାଧୀନ ତଥା ମୁକ୍ତ ନିର୍ବାଚନର ପ୍ରତିବନ୍ଧକଗୁଡ଼ିକ କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅର୍ଥବଳ, ବାହୁବଳ, ହିଂସା, ଧମକ, ଜାତି ବା ଧର୍ମ ଆଧାରରେ ପ୍ରଭାବ, ଜାଲ ମତଦାନ ଓ କ୍ଷମତାର ଅପବ୍ୟବହାର ନିର୍ବାଚନର ସ୍ୱାଧୀନତାକୁ କ୍ଷୁଣ୍ଣ କରେ। ଏଥିରେ ମତଦାତା ନିଜ ଇଚ୍ଛା ପ୍ରକାଶ କରିପାରନ୍ତି ନାହିଁ।</p><p>ସଠିକ୍ ତାଲିକା, ସଚେତନ ମତଦାତା ଓ ନିରପେକ୍ଷ ପରିଚାଳନା ପ୍ରତିକାର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=171" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୧–୧୭୫</a></small></article>
+<article id="exercise-11"><h2>୨ (କ). ‘ମତଦାତାଙ୍କ ନିର୍ବାଚନ ପରିଚୟ ପତ୍ର’ କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମତଦାତାଙ୍କ ଫଟୋ ଓ ପରିଚୟ ସୂଚନା ଥିବା, ନିର୍ବାଚନ ଆୟୋଗ ଦେଉଥିବା ଦସ୍ତାବିଜ ମତଦାତାଙ୍କ ନିର୍ବାଚନ ପରିଚୟ ପତ୍ର।</p><p>ବୁଝିବା ପାଇଁ — ମତଦାତା ତାଲିକାରେ ନାମରୁ ମତଦାନ ଅଧିକାର ମେଳାଯାଏ। ପରିଚୟ ପତ୍ରରୁ ସେହି ନାମଧାରୀ ଭୋଟରଙ୍କ ପରିଚୟ ମେଳାଯାଏ।</p><p>ଏହି ଯାଞ୍ଚ ଅନ୍ୟ ଜଣଙ୍କ ନାମରେ ଭୋଟ ଦେବା ରୋକେ ଓ ଭୋଟରଙ୍କ ପସନ୍ଦ ଗୁପ୍ତ ରହେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=161">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬୧–୧୬୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=161" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୧–୧୭୫</a></small></article>
+<article id="exercise-12"><h2>୨ (ଖ). ନିର୍ବାଚନମଣ୍ଡଳୀର ସୀମା କିଏ ନିର୍ଦ୍ଧାରଣ କରନ୍ତି ଓ କିପରି ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନିର୍ବାଚନ ମଣ୍ଡଳୀ ସୀମାନିର୍ଦ୍ଧାରଣ ଆୟୋଗ ଜନଗଣନାର ଲୋକସଂଖ୍ୟାକୁ ଆଧାର କରି ପ୍ରତି ମଣ୍ଡଳୀର ସୀମା ସ୍ଥିର କରନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ଏକ ଆସନର ଜନସଂଖ୍ୟା ଅନ୍ୟ ଆସନ ସହ ପ୍ରାୟ ତୁଳନୀୟ ରହିଲେ ପ୍ରତ୍ୟେକ ପ୍ରତିନିଧି ପ୍ରାୟ ସମାନ ସଂଖ୍ୟକ ଲୋକଙ୍କ କଥା ଉଠାଇପାରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=161" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୧–୧୭୫</a></small></article>
+<article id="exercise-13"><h2>୨ (ଗ). ପରୋକ୍ଷ ନିର୍ବାଚନର ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନଠାରୁ ପାର୍ଥକ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟକ୍ଷ ପଦ୍ଧତିରେ ମତଦାତା ନିଜେ ସଦସ୍ୟ ବାଛନ୍ତି। ପରୋକ୍ଷ ପଦ୍ଧତିରେ ନିର୍ବାଚିତ ପ୍ରତିନିଧି ଅନ୍ୟ ପ୍ରତିନିଧି ବା ପଦାଧିକାରୀଙ୍କୁ ବାଛନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ଲୋକସଭା ପାଇଁ ନାଗରିକ ଭୋଟ ଦିଅନ୍ତି। ରାଜ୍ୟସଭା ପାଇଁ ରାଜ୍ୟର ନିର୍ବାଚିତ ବିଧାୟକ ଭୋଟ ଦିଅନ୍ତି।</p><p>କିଏ ଭୋଟ ଦିଅନ୍ତି ତାହା ଦେଖି ପଦ୍ଧତି ଚିହ୍ନିହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭–୧୭୫</a></small></article>
+<article id="exercise-14"><h2>୨ (ଘ). ନାମାଙ୍କନ ପତ୍ର ଯାଞ୍ଚ କ’ଣ ଏବଂ ଏହା କାହିଁକି କରାଯାଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ରିଟର୍ଣ୍ଣିଂ ଅଫିସର ନାମାଙ୍କନର ତଥ୍ୟ, ଯୋଗ୍ୟତା ଓ ଆବଶ୍ୟକ ସର୍ତ୍ତ ଯାଞ୍ଚ କରନ୍ତି। ଏଥିରୁ ବୈଧ ପ୍ରାର୍ଥୀପତ୍ର ନିର୍ଦ୍ଧାରିତ ହୁଏ।</p><p>ବୁଝିବା ପାଇଁ — ପତ୍ରରେ ଆବଶ୍ୟକ ସ୍ୱାକ୍ଷର ବା ଯୋଗ୍ୟତା ନଥିଲେ ତାହା ନାକଚ ହୋଇପାରେ। ଯାଞ୍ଚ ପରେ ବୈଧ ପ୍ରାର୍ଥୀ ନିଜ ନାମ ପ୍ରତ୍ୟାହାର କରିବା ପାଇଁ ସମୟ ପାଆନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=166" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୬–୧୭୫</a></small></article>
+<article id="exercise-15"><h2>୨ (ଙ). ରାଜ୍ୟ ନିର୍ବାଚନ ଆୟୋଗର ଗଠନ ବିଷୟରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ରାଜ୍ୟ ନିର୍ବାଚନ ଆୟୋଗର ମୁଖ୍ୟ ରାଜ୍ୟ ନିର୍ବାଚନ ଆୟୁକ୍ତ। ରାଜ୍ୟପାଳ ତାଙ୍କୁ ନିଯୁକ୍ତ କରନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ସ୍ଥାନୀୟ ସ୍ୱାୟତ୍ତ ଶାସନ ସଂସ୍ଥା ପାଇଁ ମତଦାତା ତାଲିକା ଓ ନିର୍ବାଚନ ପରିଚାଳନା ଏହି ରାଜ୍ୟସ୍ତରୀୟ ଆୟୋଗର ଦାୟିତ୍ୱ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=170" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୦–୧୭୫</a></small></article>
+<article id="exercise-16"><h2>୨ (ଚ). ‘ଆଦର୍ଶ ଆଚରଣ ବିଧି’ ସମ୍ପର୍କରେ ଯାହା ଜାଣିଛ, ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନିର୍ବାଚନରେ ଦଳ, ପ୍ରାର୍ଥୀ ଓ ସରକାରଙ୍କ ଆଚରଣକୁ ନିୟନ୍ତ୍ରଣ କରୁଥିବା ନିୟମାବଳୀ ଯାହା ନିରପେକ୍ଷ ପ୍ରତିଯୋଗିତା ରକ୍ଷା କରେ।</p><p>ବୁଝିବା ପାଇଁ — ଉଦାହରଣରୂପେ, ନିର୍ବାଚନ ଘୋଷଣା ପରେ ମନ୍ତ୍ରୀ ନୂଆ ପ୍ରକଳ୍ପ ଉଦ୍‌ଘାଟନ କଲେ ଶାସକ ଦଳକୁ ସରକାରୀ ପଦର ଅନୁଚିତ ସୁବିଧା ମିଳେ। ଆଚରଣ ବିଧି ଏଭଳି କାର୍ଯ୍ୟକୁ ରୋକେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=167" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୭–୧୭୫</a></small></article>
+<article id="exercise-17"><h2>୨ (ଛ). ‘ସାବାଳକ ମତଦାନ’ ପ୍ରଥା କହିଲେ, ତୁମେ କ’ଣ ବୁଝ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଲିଙ୍ଗ, ଧର୍ମ, ଜାତି ବା ସମ୍ପତ୍ତି ଭେଦ ବିନା ଆଇନତଃ ଯୋଗ୍ୟ ୧୮ ବର୍ଷ ପୂରଣ କରିଥିବା ନାଗରିକଙ୍କ ଭୋଟ ଅଧିକାର।</p><p>ବୁଝିବା ପାଇଁ — ଧନୀ ଓ ଦରିଦ୍ର ଉଭୟଙ୍କ ଭୋଟର ମୂଲ୍ୟ ସମାନ। ବୟସର ସର୍ତ୍ତ ପୂରଣ କରିଥିବା ଯୋଗ୍ୟ ନାଗରିକଙ୍କ ନାମ ମତଦାତା ତାଲିକାରେ ରହିବା ଦରକାର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=159" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୯–୧୭୫</a></small></article>
+<article id="exercise-18"><h2>୨ (ଜ). ରାଷ୍ଟ୍ରପତି କିପରି ନିର୍ବାଚିତ ହୁଅନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସଂସଦର ଉଭୟ ଗୃହର ନିର୍ବାଚିତ ସଦସ୍ୟ ଓ ରାଜ୍ୟ ବିଧାନସଭାର ନିର୍ବାଚିତ ସଦସ୍ୟଙ୍କୁ ନେଇ ଗଠିତ ନିର୍ବାଚକ ମଣ୍ଡଳୀ ପରୋକ୍ଷ ପଦ୍ଧତିରେ ରାଷ୍ଟ୍ରପତିଙ୍କୁ ନିର୍ବାଚିତ କରେ।</p><p>ବୁଝିବା ପାଇଁ — ସାଧାରଣ ମତଦାତା ନିଜ ସାଂସଦ ଓ ବିଧାୟକ ବାଛନ୍ତି। ଏହି ପ୍ରତିନିଧିମାନେ ପରବର୍ତ୍ତୀ ସ୍ତରରେ ରାଷ୍ଟ୍ରପତିଙ୍କୁ ବାଛିବାରୁ ଏହା ପରୋକ୍ଷ ନିର୍ବାଚନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮–୧୭୫</a></small></article>
+<article id="exercise-19"><h2>୨ (ଝ). କେଉଁ ଆଇନ ବଳରେ ନିର୍ବାଚନ କାର୍ଯ୍ୟ ସମାହିତ ହୁଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସମ୍ବିଧାନର ନିର୍ବାଚନ ସମ୍ବନ୍ଧୀୟ ବ୍ୟବସ୍ଥା ଓ ସଂସଦର ଲୋକପ୍ରତିନିଧି ଆଇନ ଅନୁଯାୟୀ ନିର୍ବାଚନ ଅନୁଷ୍ଠିତ ହୁଏ।</p><p>ବୁଝିବା ପାଇଁ — ଆୟୋଗ ନିର୍ବାଚନ ପରିଚାଳନା କରେ। ପ୍ରାର୍ଥୀ ହେବାର ଯୋଗ୍ୟତା, ନାମାଙ୍କନ ଓ ମତଦାନ ଭଳି ବ୍ୟବସ୍ଥା ପାଳନ ପାଇଁ ଆଇନ ଆଧାର ଦିଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=159" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୯–୧୭୫</a></small></article>
+<article id="exercise-20"><h2>୨ (ଞ). କେଉଁ ଅଧିକାରୀଙ୍କ ନିକଟରେ ନାମାଙ୍କନ ପତ୍ର ଦାଖଲ କରାଯାଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରାର୍ଥୀ ନିଜ ନିର୍ବାଚନମଣ୍ଡଳୀର ରିଟର୍ଣ୍ଣିଂ ଅଫିସରଙ୍କ ନିକଟରେ ନାମାଙ୍କନ ପତ୍ର ଦିଅନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ଏହା ନିର୍ବାଚନରେ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱିତା କରିବାର ଆନୁଷ୍ଠାନିକ ଆବେଦନ। ମତଦାନ କେନ୍ଦ୍ରକୁ ଭୋଟ ଦେବାକୁ ଯିବାର ବହୁ ପୂର୍ବରୁ ନାମାଙ୍କନ ସମାପ୍ତ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=166" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୬–୧୭୫</a></small></article>
+<article id="exercise-21"><h2>୩ (କ). ‘ଅମାନତ ଅର୍ଥ ରାଶି’ କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନାମାଙ୍କନ ପତ୍ର ସହ ପ୍ରାର୍ଥୀ ଜମା ଦେଉଥିବା ନିର୍ଦ୍ଧାରିତ ଅର୍ଥ ଅମାନତ ଅର୍ଥ ରାଶି।</p><p>ବୁଝିବା ପାଇଁ — ପାଠ ଅନୁସାରେ ପ୍ରାର୍ଥୀଙ୍କୁ ମଣ୍ଡଳୀର ସିଦ୍ଧମତର ଏକ-ଷଷ୍ଠାଂଶ ସମର୍ଥନ ନମିଳିଲେ ଏହି ଜମା ଅର୍ଥ ବାଜ୍ୟାପ୍ତ ହୁଏ। ତେଣୁ ଏହା ନିର୍ବାଚନ ପ୍ରଚାରରେ ଖର୍ଚ୍ଚ କରିବାକୁ ଦିଆ ଅର୍ଥଠାରୁ ଅଲଗା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=166" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୬–୧୭୫</a></small></article>
+<article id="exercise-22"><h2>୩ (ଖ). ‘ମତଦାତାଙ୍କ ନାମ ତାଲିକା’ କାହାକୁ କୁହାଯାଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗୋଟିଏ ମଣ୍ଡଳୀରେ ମତଦାନର ଅଧିକାର ଥିବା ନାଗରିକଙ୍କ ପ୍ରାମାଣିକ ନାମ ତାଲିକା ମତଦାତାଙ୍କ ନାମ ତାଲିକା।</p><p>ବୁଝିବା ପାଇଁ — ମତଦାନ ଦିନ ଏହି ତାଲିକାରେ ନାମ ମେଳାଯାଏ। ପରିଚୟ ପତ୍ରର ଫଟୋ ବ୍ୟକ୍ତିଙ୍କୁ ଚିହ୍ନିବାରେ ସାହାଯ୍ୟ କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=161" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୧–୧୭୫</a></small></article>
+<article id="exercise-23"><h2>୩ (ଗ). ‘ଆପେକ୍ଷିକ ସଂଖ୍ୟା ଗରିଷ୍ଠତା’ କହିଲେ ତୁମେ କ’ଣ ବୁଝ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅନ୍ୟ ସମସ୍ତ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀଙ୍କ ଅପେକ୍ଷା ଅଧିକ ସିଦ୍ଧମତ ମିଳିବାକୁ ଆପେକ୍ଷିକ ସଂଖ୍ୟାଗରିଷ୍ଠତା କୁହାଯାଏ। ଅର୍ଥାତ୍ ସମୁଦାୟ ଭୋଟର ଅର୍ଦ୍ଧେକରୁ ଅଧିକ ଭୋଟ ପାଇବା ଆବଶ୍ୟକ ହୁଏ ନାହିଁ।</p><p>ବୁଝିବା ପାଇଁ — ତିନି ପ୍ରାର୍ଥୀ ଯଥାକ୍ରମେ ୪୦, ୩୫ ଓ ୨୫ଟି ସିଦ୍ଧମତ ପାଇଲେ ୪୦ ମତ ପାଇଥିବା ପ୍ରାର୍ଥୀ ଜିତନ୍ତି। ୧୦୦ର ଅଧାରୁ କମ୍ ହେଲେ ମଧ୍ୟ ୪୦ ସବୁଠାରୁ ଅଧିକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=169">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯–୧୭୫</a></small></article>
+<article id="exercise-24"><h2>୩ (ଘ). ନିର୍ବାଚନ ସମ୍ବନ୍ଧୀୟ ବିବାଦର ଚୂଡ଼ାନ୍ତ ନିଷ୍ପତ୍ତି କିଏ ନିଅନ୍ତି ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଉଚ୍ଚ ନ୍ୟାୟାଳୟର ନିଷ୍ପତ୍ତି ଉପରେ ଅପିଲ୍ ହେଲେ ସର୍ବୋଚ୍ଚ ନ୍ୟାୟାଳୟର ନିଷ୍ପତ୍ତି ଚୂଡ଼ାନ୍ତ।</p><p>ବୁଝିବା ପାଇଁ — ପ୍ରଥମେ ନିର୍ବାଚନୀ ଆବେଦନ ଉଚ୍ଚ ନ୍ୟାୟାଳୟ ଶୁଣନ୍ତି। ଅପିଲ୍‌ର ଶେଷ ସ୍ତର ବିଷୟରେ ପ୍ରଶ୍ନ ଥିବାରୁ ଉତ୍ତର ସର୍ବୋଚ୍ଚ ନ୍ୟାୟାଳୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯–୧୭୫</a></small></article>
+<article id="exercise-25"><h2>୩ (ଙ). ନାମାଙ୍କନ ପତ୍ର ସହିତ ପ୍ରାର୍ଥୀ ଅନ୍ୟ କି ପ୍ରକାର କାଗଜପତ୍ର ଦାଖଲ କରିଥାନ୍ତି ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରାର୍ଥୀ ନିଜ ଆୟ ଓ ନିଜ ବିରୋଧରେ ଥିବା ଫୌଜଦାରୀ ମକଦ୍ଦମାର ବିବରଣୀ ଦାଖଲ କରନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ଏଥିରୁ ପ୍ରାର୍ଥୀଙ୍କ ଆର୍ଥିକ ଅବସ୍ଥା ଓ ତାଙ୍କ ସମ୍ପର୍କରେ ଥିବା ମାମଲା ବିଷୟରେ ମତଦାତା ଜାଣିପାରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=166" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୬–୧୭୫</a></small></article>
+<article id="exercise-26"><h2>୩ (ଚ). ରାଜ୍ୟ ବିଧାନସଭା ନିର୍ବାଚନରେ ପ୍ରାର୍ଥୀମାନେ କାହା ନିକଟରେ ନାମାଙ୍କନ ପତ୍ର ଦାଖଲ କରନ୍ତି ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସମ୍ପୃକ୍ତ ବିଧାନସଭା ନିର୍ବାଚନମଣ୍ଡଳୀର ରିଟର୍ଣ୍ଣିଂ ଅଫିସରଙ୍କ ନିକଟରେ।</p><p>ବୁଝିବା ପାଇଁ — ପତ୍ର ଗ୍ରହଣ ଓ ଯାଞ୍ଚ ସେହି ମଣ୍ଡଳୀରେ ହୁଏ। ରାଜ୍ୟର ସ୍ଥାନୀୟ ସଂସ୍ଥା ନିର୍ବାଚନ ପରିଚାଳନା ଏକ ପୃଥକ୍ ଦାୟିତ୍ୱ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=166" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୬–୧୭୫</a></small></article>
+<article id="exercise-27"><h2>୩ (ଛ). ରାଜ୍ୟ ନିର୍ବାଚନ ଆୟୋଗଙ୍କ ଦ୍ୱାରା କେଉଁ ନିର୍ବାଚନ ପରିଚାଳିତ ହୁଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପଞ୍ଚାୟତିରାଜ ସଂସ୍ଥା ଓ ପୌରସଂସ୍ଥାର ନିର୍ବାଚନ ରାଜ୍ୟ ନିର୍ବାଚନ ଆୟୋଗ ପରିଚାଳନା କରନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ଗ୍ରାମରେ ସରପଞ୍ଚ ଓ ସହରରେ ପୌର ପ୍ରତିନିଧି ବାଛିବା ଏହାର ଉଦାହରଣ। ଲୋକସଭା ଓ ବିଧାନସଭା ନିର୍ବାଚନର ଦାୟିତ୍ୱ ଭାରତର ନିର୍ବାଚନ ଆୟୋଗଙ୍କର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=170" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୦–୧୭୫</a></small></article>
+<article id="exercise-28"><h2>୩ (ଜ). ମୁଖ୍ୟ ନିର୍ବାଚନ ଆୟୁକ୍ତ କେଉଁ ପ୍ରଣାଳୀରେ ପଦଚ୍ୟୁତ ହୁଅନ୍ତି ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସର୍ବୋଚ୍ଚ ନ୍ୟାୟାଳୟର ବିଚାରପତିଙ୍କ ଭଳି ସଂସଦର ବିଶେଷ ସଂଖ୍ୟାଗରିଷ୍ଠତାରେ ଗୃହୀତ ପ୍ରସ୍ତାବ ଆଧାରରେ ମୁଖ୍ୟ ନିର୍ବାଚନ ଆୟୁକ୍ତଙ୍କୁ ପଦଚ୍ୟୁତ କରାଯାଏ।</p><p>ବୁଝିବା ପାଇଁ — ପ୍ରମାଣିତ ଅସଦାଚରଣ ବା ଅକ୍ଷମତା ପରି କାରଣ ପାଇଁ ଏହି ବିଶେଷ ପ୍ରଣାଳୀ ରହିଛି। ପଦର ସୁରକ୍ଷା ଆୟୁକ୍ତଙ୍କ ନିରପେକ୍ଷ କାର୍ଯ୍ୟରେ ସହାୟକ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩–୧୭୫</a></small></article>
+<article id="exercise-29"><h2>୩ (ଝ). ଉପ-ନିର୍ବାଚନ କେତେବେଳେ କରାଯାଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କାର୍ଯ୍ୟକାଳ ମଧ୍ୟରେ କୌଣସି ସଦସ୍ୟଙ୍କ ଆସନ ଖାଲି ହେଲେ ସେହି ଆସନର ଅବଶିଷ୍ଟ ସମୟ ପାଇଁ ଉପନିର୍ବାଚନ ହୁଏ।</p><p>ବୁଝିବା ପାଇଁ — ମୃତ୍ୟୁ ବା ଇସ୍ତଫାରେ ଗୋଟିଏ ଆସନ ଖାଲି ହେଲେ କେବଳ ସେହି ମଣ୍ଡଳୀରେ ମତଦାନ ହୁଏ। ନୂଆ ସଦସ୍ୟ ପୂର୍ବ ସଦସ୍ୟଙ୍କ ଅବଶିଷ୍ଟ ମିଆଦ ପୂରଣ କରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=159" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୯–୧୭୫</a></small></article>
+<article id="exercise-30"><h2>୩ (ଞ). ନିର୍ବାଚନ ଆୟୋଗର ଆୟୁକ୍ତଙ୍କୁ କିଏ ନିଯୁକ୍ତ କରନ୍ତି ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଭାରତର ରାଷ୍ଟ୍ରପତି ନିର୍ବାଚନ ଆୟୋଗର ଆୟୁକ୍ତମାନଙ୍କୁ ନିଯୁକ୍ତ କରନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ଏଠାରେ ପ୍ରଶ୍ନ ଭାରତର ନିର୍ବାଚନ ଆୟୋଗ ବିଷୟରେ। ରାଜ୍ୟ ନିର୍ବାଚନ ଆୟୁକ୍ତଙ୍କ ନିଯୁକ୍ତି କ୍ଷେତ୍ରରେ ଏହି ଭୂମିକା ରାଜ୍ୟପାଳଙ୍କର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩–୧୭୫</a></small></article>
+<article id="exercise-31"><h2>୪ (କ). ଲୋକଙ୍କର, ଲୋକଙ୍କ ଦ୍ୱାରା ଓ ଲୋକଙ୍କ ପାଇଁ ଶାସନ ବୋଲି ଗଣତନ୍ତ୍ରର ସଂଜ୍ଞା କିଏ ଦେଇଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଆବ୍ରାହମ୍ ଲିଙ୍କନ୍।</p><p>ବୁଝିବା ପାଇଁ — ଲିଙ୍କନ୍‌ଙ୍କ ସଂଜ୍ଞାରେ ଲୋକ ଶାସନକ୍ଷମତାର ଉତ୍ସ, ସେମାନେ ପ୍ରତିନିଧି ବାଛନ୍ତି ଓ ଶାସନ ଲୋକଙ୍କ କଲ୍ୟାଣ ପାଇଁ ଚାଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=176" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୬</a></small></article>
+<article id="exercise-32"><h2>୪ (ଖ). ଭୋଟ ଦେବା ପାଇଁ ସର୍ବନିମ୍ନ ବୟସ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୮ ବର୍ଷ।</p><p>ବୁଝିବା ପାଇଁ — ଏହା ମତଦାତା ହେବାର ବୟସ। ନିର୍ବାଚନରେ ପ୍ରାର୍ଥୀ ହେବାର ଯୋଗ୍ୟତା ସେହି ପଦ ଅନୁସାରେ ପୃଥକ୍ ଭାବେ ସ୍ଥିର ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=176" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୬</a></small></article>
+<article id="exercise-33"><h2>୪ (ଗ). ନିର୍ବାଚନ ସମ୍ବନ୍ଧୀୟ ଠିକ୍ ଉକ୍ତିଟି ବାଛ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (ଗ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଲୋକସଭା ସଦସ୍ୟମାନେ ପ୍ରତ୍ୟକ୍ଷ ଭାବରେ ନିର୍ବାଚିତ ହୁଅନ୍ତି। ମତଦାତା ନିଜେ ପ୍ରତିନିଧି ଚୟନ କରନ୍ତି।</p><p>ବୁଝିବା ପାଇଁ — ଲୋକସଭା ପାଇଁ ସାରା ଦେଶକୁ ମଣ୍ଡଳୀରେ ବିଭକ୍ତ କରାଯାଏ। ନିଜ ମଣ୍ଡଳୀର ଭୋଟର ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀ ପ୍ରାର୍ଥୀଙ୍କ ମଧ୍ୟରୁ ଜଣଙ୍କୁ ବାଛନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=176" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୬</a></small></article>
+<article id="exercise-34"><h2>୪ (ଘ–ଛ). ଆୟୋଗର ଗଠନ, ନିର୍ବାଚନର ଉଦ୍ଦେଶ୍ୟ, ଅଧିକାରୀଙ୍କ କାମ ଓ ଆଚରଣ ବିଧି ପାଇଁ ଠିକ୍ ବିକଳ୍ପ ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(ଘ) ବିକଳ୍ପ ଖ, ଅନ୍ୟ ଦୁଇ ଆୟୁକ୍ତ। (ଙ) ଗ, ନ୍ୟାୟପାଳିକାର ସଫଳତା ମୂଲ୍ୟାୟନ।</p><p>(ଚ) କ, ଦଳୀୟ ନିର୍ବାଚନ ପ୍ରଚାର। (ଛ) କ, ତାରିଖ ଘୋଷଣା ପରେ ମନ୍ତ୍ରୀଙ୍କ ପ୍ରକଳ୍ପ ଉଦ୍‌ଘାଟନ।</p><p>ବୁଝିବା ପାଇଁ — (ଘ) ମୁଖ୍ୟ ଆୟୁକ୍ତଙ୍କ ସହ ଦୁଇ ଆୟୁକ୍ତ ମିଶି ତିନିଜଣ ହୁଅନ୍ତି। (ଙ) ନିର୍ବାଚନରେ ଲୋକେ ଶାସକଙ୍କ କାମ ମୂଲ୍ୟାୟନ କରନ୍ତି।</p><p>ନ୍ୟାୟପାଳିକାର କାମ ଏଥିରେ ମତଦାନକୁ ଆସେ ନାହିଁ। (ଚ) ପ୍ରଚାର ଦଳ ଓ ପ୍ରାର୍ଥୀ କରନ୍ତି, ନିର୍ବାଚନ ଅଧିକାରୀଙ୍କ ଦାୟିତ୍ୱ ନିରପେକ୍ଷ ପରିଚାଳନା।</p><p>(ଛ) ମନ୍ତ୍ରୀଙ୍କ ସରକାରୀ ଉଦ୍‌ଘାଟନ ମତଦାତାଙ୍କୁ ପ୍ରଭାବିତ କରିପାରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=176" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୬–୧୭୭</a></small></article>
+<article id="exercise-35"><h2>୪ (ଜ–ଞ). ସୁସ୍ଥ ନିର୍ବାଚନର ବିରୋଧୀ କାର୍ଯ୍ୟ, ମୁଖ୍ୟ ଆୟୁକ୍ତଙ୍କ ନିଯୁକ୍ତି ଓ ରାଜ୍ୟସଭାର ମତଦାତା ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(ଜ) କ, ହିଂସାତ୍ମକ କାର୍ଯ୍ୟ। (ଝ) କ, ରାଷ୍ଟ୍ରପତି।</p><p>(ଞ) କ, ରାଜ୍ୟ ବିଧାନସଭାର ନିର୍ବାଚିତ ସଦସ୍ୟ।</p><p>ବୁଝିବା ପାଇଁ — (ଜ) ହିଂସା ଭୋଟରଙ୍କୁ ଭୟଭୀତ କରେ ଓ ମତଦାନର ସ୍ୱାଧୀନତା ନଷ୍ଟ କରେ। (ଝ) କେନ୍ଦ୍ରୀୟ ଆୟୋଗର ନିଯୁକ୍ତି ରାଷ୍ଟ୍ରପତି କରନ୍ତି।</p><p>(ଞ) ରାଜ୍ୟସଭା ରାଜ୍ୟଗୁଡ଼ିକର ପ୍ରତିନିଧିତ୍ୱ କରେ, ତେଣୁ ରାଜ୍ୟର ନିର୍ବାଚିତ ବିଧାୟକ ଏଥିପାଇଁ ଭୋଟ ଦିଅନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=177" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୭</a></small></article>
+<article id="exercise-36"><h2>୪ (ଟ–ଢ). ଭୋଟିଂ ଯନ୍ତ୍ର, ଦଳୀୟ ସଙ୍କେତ, ରାଜ୍ୟ ଆୟୁକ୍ତଙ୍କ ନିଯୁକ୍ତି ଓ ପର୍ଯ୍ୟବେକ୍ଷକଙ୍କ କାର୍ଯ୍ୟ ସମ୍ପର୍କରେ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(ଟ) ଗ, ଯାନ୍ତ୍ରିକ ଗୋଳମାଳର ସମ୍ଭାବନା। (ଠ) କ, ସରପଞ୍ଚ ନିର୍ବାଚନ।</p><p>ପଞ୍ଚାୟତ ସମିତି ସଦସ୍ୟ ନିର୍ବାଚନ ମଧ୍ୟ ଦଳୀୟ ସଙ୍କେତ ବିନା ହୁଏ। (ଡ) କ, ରାଜ୍ୟପାଳ।</p><p>(ଢ) ଦିଆଯାଇଥିବା କାର୍ଯ୍ୟଗୁଡ଼ିକ ମଧ୍ୟରୁ ମତଦାନ ଓ ଗଣନା ତଦାରଖ କରି ରିପୋର୍ଟ ଦେବା (କ) ପର୍ଯ୍ୟବେକ୍ଷକଙ୍କ କାମ। ନାମାଙ୍କନ ଦାଖଲ (ଖ), ପ୍ରତ୍ୟାହାର (ଗ) ଓ ସଙ୍କେତ ପ୍ରଦାନ (ଘ) ତାଙ୍କ କାର୍ଯ୍ୟ ପରିସର ବାହାରେ।</p><p>ଏହି ନକାରାତ୍ମକ ପ୍ରଶ୍ନରେ ଏକାଧିକ ବିକଳ୍ପ ମେଳେ।</p><p>ବୁଝିବା ପାଇଁ — (ଟ) ପ୍ରଶ୍ନଟି ଯନ୍ତ୍ରର ଅସୁବିଧା ଖୋଜୁଛି। ମତଦାନର ଗତି ଓ ମତ ସଂରକ୍ଷଣ ଏହାର ସୁବିଧା।</p><p>(ଠ) ମୁଦ୍ରିତ (କ) ଓ (ଘ) ଉଭୟ ସ୍ଥାନୀୟ ଅଣଦଳୀୟ ନିର୍ବାଚନ। (ଡ) ଏଠାରେ ରାଜ୍ୟ ଆୟୁକ୍ତଙ୍କ ନିଯୁକ୍ତି କଥା ପଚରାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=178" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୮</a></small></article>
+<article id="exercise-37"><h2>ତୁମ ପାଇଁ କାମ · ପ୍ରଥମ. ନିଜ ରାଜ୍ୟର ବିଧାନସଭା ନିର୍ବାଚନ ଓ ବିଗତ ପାଞ୍ଚ ବର୍ଷର ସ୍ଥାନୀୟ ନିର୍ବାଚନ ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ତାଲିକା ତିଆରିର ତାରିଖ ଲେଖି ତାହାର ଆଗର ପାଞ୍ଚ ବର୍ଷ ବାଛ। ମତଦାନ ତାରିଖ, ନିର୍ବାଚନର ସ୍ତର ଓ ମଣ୍ଡଳୀ ଅଲଗା ରଖ।</p><p>ଦିଆଯାଇଥିବା ପୁସ୍ତକରେ ତୁମ ଅଞ୍ଚଳର ସମସ୍ତ ତାରିଖ ନଥିବାରୁ ପ୍ରକୃତ ନିର୍ବାଚନ ରେକର୍ଡ ସହ ମେଳାଅ। ଦୁଇ ଧାଡ଼ିରେ ଗୋଟିଏ ବିଧାନସଭା ମଣ୍ଡଳୀ ଓ ଗୋଟିଏ ଗ୍ରାମପଞ୍ଚାୟତ ବା ପୌର ୱାର୍ଡ ରଖ।</p><p>ବହୁ ପର୍ଯ୍ୟାୟରେ ଭୋଟ ହୋଇଥିଲେ ସମ୍ପୃକ୍ତ ମଣ୍ଡଳୀର ମତଦାନ ଦିନକୁ ଚିହ୍ନାଅ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=174" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୪</a></small></article>
+<article id="exercise-38"><h2>ତୁମ ପାଇଁ କାମ · ଦ୍ୱିତୀୟ. ଗତ ବିଧାନସଭା ନିର୍ବାଚନରେ ନିଜ ମଣ୍ଡଳୀର ପ୍ରାର୍ଥୀମାନଙ୍କ ନାମ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମଣ୍ଡଳୀ ଓ ନିର୍ବାଚନ ବର୍ଷକୁ ଶୀର୍ଷରେ ଲେଖ। ପ୍ରାର୍ଥୀଙ୍କ ନାମ, ଦଳ ବା ସ୍ୱାଧୀନ ଓ ଫଳ ପ୍ରକାଶନର ଉତ୍ସ ପାଇଁ ସ୍ତମ୍ଭ ରଖ।</p><p>ଏହା ସମସ୍ତ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀଙ୍କ ତାଲିକା, ତେଣୁ କେବଳ ବିଜୟୀଙ୍କ ନାମ ଯଥେଷ୍ଟ ନୁହେଁ। ଭୋଟ ଫଳ ସହ ତାଲିକା ମେଳାଇ ପ୍ରତି ନାମ ଆଗରେ ଦଳ ବା ‘ସ୍ୱାଧୀନ’ ଲେଖ।</p><p>ନାମାଙ୍କନ ପ୍ରତ୍ୟାହାର କରିଥିବା ବ୍ୟକ୍ତି ଚୂଡ଼ାନ୍ତ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀଙ୍କ ତାଲିକାରେ ଆସିବେ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=174" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୭୪</a></small></article>
+<article id="exercise-39"><h2>ତୁମ ପାଇଁ କାମ · ତୃତୀୟ. ନିଜ ଲୋକସଭା ମଣ୍ଡଳୀ ଅଧୀନରେ କେଉଁ ବିଧାନସଭା ମଣ୍ଡଳୀ ଅଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପୃ. ୬ରେ ଓଡ଼ିଶାର ୨୧ଟି ଲୋକସଭା ମଣ୍ଡଳୀର ନାମ ଓ ଜିଲ୍ଲାୱାରୀ ବିଧାନସଭା ମଣ୍ଡଳୀର ତାଲିକା ଅଛି। ନିଜ ଲୋକସଭା ମଣ୍ଡଳୀ ବାଛି ସେଥିରେ ପଡ଼ୁଥିବା ଆସନଗୁଡ଼ିକୁ ମଣ୍ଡଳୀ ସୀମା ସହ ମେଳାଅ।</p><p>ଜିଲ୍ଲାୱାରୀ ତାଲିକା ମାତ୍ରକୁ ଲୋକସଭା ମଣ୍ଡଳୀର ସୀମା ଭାବିବା ଠିକ୍ ହେବନାହିଁ। ଏକ ରେଖାଚିତ୍ରରେ ଉପରେ ଲୋକସଭା ମଣ୍ଡଳୀର ନାମ ଓ ତଳେ ସେଥିରେ ଅନ୍ତର୍ଭୁକ୍ତ ବିଧାନସଭା ମଣ୍ଡଳୀର ନାମ ଲେଖି ରେଖାରେ ଯୋଡ଼।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=162" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୨–୧୭୪</a></small></article>
+<article id="exercise-40"><h2>ତୁମ ପାଇଁ କାମ · ଚତୁର୍ଥ. ନିଜ ଜିଲ୍ଲାର ବିଧାନସଭା ଆସନ ଓ ନିର୍ବାଚିତ ବିଧାୟକଙ୍କ ନାମ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପୁସ୍ତକର ଜିଲ୍ଲାୱାରୀ ସାରଣୀରେ ନିଜ ଜିଲ୍ଲା ଖୋଜି ଆସନ ନାମ ଓ କ୍ରମିକ ସଂଖ୍ୟା ଲେଖ। ପାଖରେ ନିର୍ବାଚନ ବର୍ଷ ଓ ସେହି ବର୍ଷ ନିର୍ବାଚିତ ପ୍ରତିନିଧିଙ୍କ ନାମ ପାଇଁ ସ୍ତମ୍ଭ ରଖ।</p><p>ଆସନ ନାମ ଓ ବିଧାୟକଙ୍କ ନାମ ଅଲଗା ତଥ୍ୟ। ନିଜ ଜିଲ୍ଲାର ମୋଟ ଆସନ ସଂଖ୍ୟା ସହ ତାଲିକାର ଧାଡ଼ି ଗଣି ମେଳାଅ।</p><p>ଉପନିର୍ବାଚନ ହୋଇଥିଲେ ସାଧାରଣ ନିର୍ବାଚନ ଓ ଉପନିର୍ବାଚନର ବର୍ଷ ପୃଥକ୍ ଲେଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=162" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୨–୧୭୪</a></small></article>
+<article id="exercise-41"><h2>ତୁମ ପାଇଁ କାମ · ପଞ୍ଚମ. ୨୦୦୯ ଲୋକସଭା ନିର୍ବାଚନରେ ଓଡ଼ିଶାର ୨୧ ସାଂସଦ ଓ ମଣ୍ଡଳୀର ନାମ ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଠର ମଣ୍ଡଳୀ ତାଲିକା — ଆସ୍କା, ବାଲେଶ୍ୱର, ବରଗଡ଼, ବ୍ରହ୍ମପୁର, ଭଦ୍ରକ, ଭୁବନେଶ୍ୱର, ବଲାଙ୍ଗିର, କଟକ, ଢେଙ୍କାନାଳ, ଜଗତସିଂହପୁର, ଯାଜପୁର, କଳାହାଣ୍ଡି, କନ୍ଧମାଳ, କେନ୍ଦ୍ରାପଡ଼ା, କେନ୍ଦୁଝର, କୋରାପୁଟ, ମୟୂରଭଞ୍ଜ, ନବରଙ୍ଗପୁର, ପୁରୀ, ସମ୍ବଲପୁର, ସୁନ୍ଦରଗଡ଼। ପୃ. ୬ର ସାରଣୀ ମଣ୍ଡଳୀ ଦେଇଛି।</p><p>ପ୍ରତ୍ୟେକ ଧାଡ଼ିରେ ୨୦୦୯ର ନିର୍ବାଚିତ ସାଂସଦଙ୍କ ନାମ ଭରିବା ପାଇଁ ସେହି ବର୍ଷର ଫଳ ଦରକାର। ପ୍ରତି ମଣ୍ଡଳୀ ପାଇଁ ଥରେ ମାତ୍ର ନାମ ଲେଖ।</p><p>ଫଳାଫଳରେ ମଣ୍ଡଳୀ ଓ ବିଜୟୀ ପ୍ରାର୍ଥୀ ମେଳାଇ ମୋଟ ୨୧ଟି ଧାଡ଼ି ହେଲା କି ଦେଖ। ପରବର୍ତ୍ତୀ ବର୍ଷର ସାଂସଦଙ୍କ ନାମ ଏହି ଐତିହାସିକ ସାରଣୀରେ ମିଶାଅ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=162" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୨–୧୭୪</a></small></article>
+
+</main></body></html>

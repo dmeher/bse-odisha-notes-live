@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 245" width="550" height="245" role="img" aria-labelledby="title">
+<title id="title">Series circuit with three resistors and electrical meters</title>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#125c57"/></marker></defs>
+<rect width="550" height="245" rx="12" fill="#f6faf9"/>
+<g stroke="#183e46" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+<path d="M95 181 H48 V70 H92 M139 70 H180 M232 70 H258 M310 70 H340 M410 70 H500 V181" />
+<circle cx="94" cy="70" r="3" fill="#fff"/>
+<circle cx="138" cy="70" r="3" fill="#fff"/>
+<path d="M94 70 H138" />
+<text x="116" y="49" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#173b45" stroke="none">K</text>
+<rect x="180" y="59" width="52" height="22" fill="#e3f1ed"/>
+<text x="206" y="47" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#173b45" stroke="none">5 Ω</text>
+<rect x="258" y="59" width="52" height="22" fill="#e3f1ed"/>
+<text x="284" y="47" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#173b45" stroke="none">8 Ω</text>
+<rect x="340" y="59" width="70" height="22" fill="#e3f1ed"/>
+<text x="375" y="47" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#173b45" stroke="none">12 Ω</text>
+<path d="M95 181 H115 M115 168 V194 M123 174 V188 M123 181 H141 M141 168 V194 M149 174 V188 M149 181 H167 M167 168 V194 M175 174 V188 M175 181 H190" />
+<text x="145" y="220" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#173b45" stroke="none">3 × 2 V</text>
+<text x="104" y="166" font-family="Arial,sans-serif" font-size="14" text-anchor="middle" fill="#173b45" stroke="none">+</text>
+<text x="188" y="166" font-family="Arial,sans-serif" font-size="14" text-anchor="middle" fill="#173b45" stroke="none">−</text>
+<circle cx="258" cy="181" r="16" fill="#fff"/>
+<text x="258" y="187" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#173b45" stroke="none">A</text>
+<path d="M190 181 H242 M274 181 H500" />
+<path d="M329 70 V122 H357 M389 122 H421 V70" />
+<circle cx="373" cy="122" r="16" fill="#fff"/>
+<text x="373" y="128" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#173b45" stroke="none">V</text>
+</g></svg>

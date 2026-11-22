@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ମୌଳିକଗୁଡ଼ିକର ପର୍ଯ୍ୟାୟୀ ଶ୍ରେଣୀକରଣ · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ମୌଳିକଗୁଡ଼ିକର ପର୍ଯ୍ୟାୟୀ ଶ୍ରେଣୀକରଣ</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ଆଧୁନିକ ପର୍ଯ୍ୟାୟ ସାରଣୀରେ ମୌଳିକର କ୍ରମ କେଉଁ ରାଶି ଦ୍ୱାରା ସ୍ଥିର ହୁଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ପରମାଣୁ ବସ୍ତୁତ୍ୱ</li><li>ବସ୍ତୁର ଘନତା</li><li>ନ୍ୟୁଟ୍ରନ୍ ସଂଖ୍ୟା</li><li>ପରମାଣୁ କ୍ରମାଙ୍କ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ପରମାଣୁ କ୍ରମାଙ୍କ</b></p>
+<div class="lesson-body"><p>ପରମାଣୁ କ୍ରମାଙ୍କର ବର୍ଦ୍ଧିତ କ୍ରମରେ ମୌଳିକମାନଙ୍କୁ ସଜାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୪–୯୬</small></article>
+<article><h2>୨. ୨,୮,୨ ଓ ୨,୨ ଇଲେକ୍ଟ୍ରନ୍ ସଂରଚନା ଥିବା ପରମାଣୁ ଦୁଇଟି ପାଇଁ ଠିକ୍ ଉକ୍ତି କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଏକ ପର୍ଯ୍ୟାୟ, ଭିନ୍ନ ଗ୍ରୁପ</li><li>ଏକ ପର୍ଯ୍ୟାୟ ଓ ଏକ ଗ୍ରୁପ</li><li>ଭିନ୍ନ ପର୍ଯ୍ୟାୟ, ଏକ ଗ୍ରୁପ</li><li>ସମାନ କ୍ରମାଙ୍କ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଭିନ୍ନ ପର୍ଯ୍ୟାୟ, ଏକ ଗ୍ରୁପ</b></p>
+<div class="lesson-body"><p>କକ୍ଷ ସଂଖ୍ୟା ଭିନ୍ନ କିନ୍ତୁ ସଂଯୋଜକ ଇଲେକ୍ଟ୍ରନ୍ ଦୁଇଟି ଲେଖାଏଁ।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୪–୧୦୦</small></article>
+<article><h2>୩. ଏକ ଗ୍ରୁପରେ ତଳକୁ ଗଲେ ପରମାଣୁ ଆକାର ସାଧାରଣତଃ ବଢ଼ିବାର ମୁଖ୍ୟ କାରଣ କ’ଣ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ପ୍ରୋଟନ୍ ନଷ୍ଟ ହେବା</li><li>ବାହ୍ୟ ଇଲେକ୍ଟ୍ରନ୍ ନଥିବା</li><li>କକ୍ଷ ସଂଖ୍ୟା କମିବା</li><li>ନୂଆ ଇଲେକ୍ଟ୍ରନ୍ କକ୍ଷ ଯୋଗ ହେବା</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ନୂଆ ଇଲେକ୍ଟ୍ରନ୍ କକ୍ଷ ଯୋଗ ହେବା</b></p>
+<div class="lesson-body"><p>ବାହ୍ୟ ଇଲେକ୍ଟ୍ରନ୍ ନ୍ୟଷ୍ଟିଠାରୁ ଅଧିକ ଦୂରରେ ରହେ।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୬–୯୯</small></article>
+<article><h2>୪. ୨,୮,୧ ଇଲେକ୍ଟ୍ରନ୍ ସଂରଚନା ଥିବା ମୌଳିକ କେଉଁ ଗ୍ରୁପରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଗ୍ରୁପ ୨</li><li>ଗ୍ରୁପ ୧</li><li>ଗ୍ରୁପ ୧୭</li><li>ଗ୍ରୁପ ୧୮</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଗ୍ରୁପ ୧</b></p>
+<div class="lesson-body"><p>ଗୋଟିଏ ସଂଯୋଜକ ଇଲେକ୍ଟ୍ରନ୍ ଥିବା ସୋଡ଼ିୟମ୍ ଗ୍ରୁପ ୧ରେ।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୪–୧୦୦</small></article>
+<article><h2>୫. ଦିଆଯାଇଥିବା ସାରଣୀରେ P ସହ ସମାନ ସଂଖ୍ୟକ ବାହ୍ୟ କକ୍ଷ ଇଲେକ୍‌ଟ୍ରନ୍, କିନ୍ତୁ ଗୋଟିଏ ଅଧିକ କକ୍ଷ କାହାର ଅଛି?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଗ୍ରୁପ୍ ୧ ଓ ୨ର ଦୁଇଟି ସ୍ତମ୍ଭ। ଦ୍ୱିତୀୟ ପର୍ଯ୍ୟାୟରେ କ୍ରମେ P ଓ Q, ତୃତୀୟ ପର୍ଯ୍ୟାୟରେ କ୍ରମେ R ଓ S।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODUgMTkyIiB3aWR0aD0iMzg1IiBoZWlnaHQ9IjE5MiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPlBvc2l0aW9ucyBpbiB0d28gZ3JvdXBzIG9mIHRoZSBwZXJpb2RpYyB0YWJsZTwvdGl0bGU+CiAgPGRlc2MgaWQ9ImRlc2MiPlJvdyBmb3IgcGVyaW9kIDIgY29udGFpbnMgUCBpbiBncm91cCAxIGFuZCBRIGluIGdyb3VwIDIuIFJvdyBmb3IgcGVyaW9kIDMgY29udGFpbnMgUiBpbiBncm91cCAxIGFuZCBTIGluIGdyb3VwIDIuPC9kZXNjPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzODMiIGhlaWdodD0iMTkwIiByeD0iMTAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2NlZGJkNSIvPgogIDxzdHlsZT50ZXh0IHtmb250LWZhbWlseTogc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxNnB4OyBmaWxsOiAjMTUyYzI0fSAud2lyZSB7c3Ryb2tlOiMyNTRkM2Y7c3Ryb2tlLXdpZHRoOjIuNTtmaWxsOm5vbmV9PC9zdHlsZT4KPHRleHQgeD0iMjI1IiB5PSIyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+R3JvdXA8L3RleHQ+PHRleHQgeD0iMTgwIiB5PSI1NCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+MTwvdGV4dD48dGV4dCB4PSIyNzciIHk9IjU0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4yPC90ZXh0Pjx0ZXh0IHg9IjUyIiB5PSI5NCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UGVyaW9kIDI8L3RleHQ+PHRleHQgeD0iNTIiIHk9IjE0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UGVyaW9kIDM8L3RleHQ+PHBhdGggZD0iTTEzMCA2NEgzMjZWMTYzSDEzMFogTTIyOCA2NFYxNjMgTTEzMCAxMTNIMzI2IiBjbGFzcz0id2lyZSIgLz48dGV4dCB4PSIxNzkiIHk9Ijk0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QPC90ZXh0Pjx0ZXh0IHg9IjI3NyIgeT0iOTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlE8L3RleHQ+PHRleHQgeD0iMTc5IiB5PSIxNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+PHRleHQgeD0iMjc3IiB5PSIxNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlM8L3RleHQ+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Q</li><li>R</li><li>S</li><li>P</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. R</b></p>
+<div class="lesson-body"><p>P ଓ R ଉଭୟ ଗ୍ରୁପ୍ ୧ରେ ଅଛନ୍ତି। P ଦ୍ୱିତୀୟ ଓ R ତୃତୀୟ ପର୍ଯ୍ୟାୟରେ ଥିବାରୁ Rର ଗୋଟିଏ ଅଧିକ କକ୍ଷ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୪–୯୮</small></article>
+<article><h2>୬. ଅନାବିଷ୍କୃତ ମୌଳିକ ପାଇଁ ସାରଣୀରେ ଖାଲିସ୍ଥାନ ରଖି ଧର୍ମର ପୂର୍ବାନୁମାନ କିଏ କରିଥିଲେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ନିଉଲାଣ୍ଡସ୍</li><li>ଡୁବେରିନର୍</li><li>ମୋସ୍‌ଲେ</li><li>ମେଣ୍ଡେଲିଫ୍</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ମେଣ୍ଡେଲିଫ୍</b></p>
+<div class="lesson-body"><p>ମେଣ୍ଡେଲିଫ୍‌ଙ୍କ ସାରଣୀ ଅଧ୍ୟୟନରେ ଏହି ସଫଳତା ଦର୍ଶାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୮୮–୯୯</small></article>
+<article><h2>୭. ଫ୍ଲୋରିନ୍ ଓ କ୍ଲୋରିନ୍‌ର ବାହ୍ୟ କକ୍ଷରେ ସାତ ଇଲେକ୍ଟ୍ରନ୍। ସେମାନଙ୍କ ଗ୍ରୁପ କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଗ୍ରୁପ ୨</li><li>ଗ୍ରୁପ ୧୭</li><li>ଗ୍ରୁପ ୧୮</li><li>ଗ୍ରୁପ ୧</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଗ୍ରୁପ ୧୭</b></p>
+<div class="lesson-body"><p>ହାଲୋଜେନ୍ ମୌଳିକ ଗ୍ରୁପ ୧୭ରେ ରହନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୪–୧୦୦</small></article>
+<article><h2>୮. ୨,୮ ଇଲେକ୍ଟ୍ରନ୍ ସଂରଚନା ଥିବା ନିଅନ୍ କେଉଁ ଗ୍ରୁପରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଗ୍ରୁପ ୧</li><li>ଗ୍ରୁପ ୧୭</li><li>ଗ୍ରୁପ ୨</li><li>ଗ୍ରୁପ ୧୮</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଗ୍ରୁପ ୧୮</b></p>
+<div class="lesson-body"><p>ଏହାର ବାହ୍ୟ କକ୍ଷ ପୂର୍ଣ୍ଣ, ଏହା ଗ୍ରୁପ ୧୮ର ମୌଳିକ।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୪–୧୦୦</small></article>
+<article><h2>୯. ସମାନ ଧର୍ମବିଶିଷ୍ଟ ତିନୋଟି ମୌଳିକକୁ ଟ୍ରାଇଏଡ୍‌ରେ ଗୋଷ୍ଠୀଭୁକ୍ତ କରିବା ପ୍ରୟାସ କାହାର?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ମେଣ୍ଡେଲିଫ୍</li><li>ମୋସ୍‌ଲେ</li><li>ଡୁବେରିନର୍</li><li>ନିଉଲାଣ୍ଡସ୍</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଡୁବେରିନର୍</b></p>
+<div class="lesson-body"><p>ଡୁବେରିନର୍‌ଙ୍କ ଟ୍ରାଇଏଡ୍‌ରେ ମଧ୍ୟ ମୌଳିକର ବସ୍ତୁତ୍ୱ ପ୍ରାୟ ଅନ୍ୟ ଦୁଇଟିର ହାରାହାରି।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୮୮–୯୯</small></article>
+<article><h2>୧୦. ଅଷ୍ଟକ ନିୟମ ସହ ସମ୍ପୃକ୍ତ ବୈଜ୍ଞାନିକ କିଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ନିଉଲାଣ୍ଡସ୍</li><li>ମେଣ୍ଡେଲିଫ୍</li><li>ଡୁବେରିନର୍</li><li>ମୋସ୍‌ଲେ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ନିଉଲାଣ୍ଡସ୍</b></p>
+<div class="lesson-body"><p>ନିଉଲାଣ୍ଡସ୍ ବସ୍ତୁତ୍ୱ ଅନୁସାରେ ସଜାଇ ପ୍ରତି ଅଷ୍ଟମ ମୌଳିକରେ ସାମ୍ୟ ସୂଚାଇଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୮୮–୯୯</small></article>
+<article><h2>୧୧. ୨,୮,୨ ଇଲେକ୍ଟ୍ରନ୍ ସଂରଚନାର ମ୍ୟାଗ୍ନେସିୟମ୍ କେଉଁ ଗ୍ରୁପରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଗ୍ରୁପ ୧</li><li>ଗ୍ରୁପ ୧୮</li><li>ଗ୍ରୁପ ୧୭</li><li>ଗ୍ରୁପ ୨</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଗ୍ରୁପ ୨</b></p>
+<div class="lesson-body"><p>ବାହ୍ୟ କକ୍ଷରେ ଦୁଇଟି ଇଲେକ୍ଟ୍ରନ୍ ରହିଛି।</p></div>
+</details>
+<small class="lesson-source">science/physical-science/source.pdf · ପୃଷ୍ଠା ୯୪–୧୦୦</small></article>
+
+</main></body></html>

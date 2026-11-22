@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 230">
+  <title>Intersecting chords AB and CD at P</title>
+  <rect width="300" height="230" rx="8" fill="#fff"/>
+  <g fill="none" stroke="#1b4452" stroke-width="2">
+    <circle cx="150" cy="115" r="92"/>
+    <path d="M74.6 167.8L236.5 146.5M118.5 201.5L202.8 39.6M74.6 167.8L118.5 201.5M202.8 39.6L236.5 146.5"/>
+  </g>
+  <g fill="#173940" font-family="sans-serif" font-size="16">
+    <text x="54" y="175">A</text><text x="241" y="155">B</text>
+    <text x="108" y="221">C</text><text x="207" y="37">D</text><text x="148" y="177">P</text>
+  </g>
+</svg>

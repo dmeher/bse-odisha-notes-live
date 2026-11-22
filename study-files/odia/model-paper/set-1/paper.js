@@ -1,0 +1,1200 @@
+export default {
+  "subject": "odia",
+  "setNumber": 1,
+  "objective": [
+    {
+      "prompt": "ଲେଖକଙ୍କୁ ରୂପ ଓ ରସର ପ୍ରଥମ ପରିଚୟ କେଉଁଠି ମିଳିଛି?",
+      "options": [
+        "ବିଦେଶରେ",
+        "ନିଜ ପଲ୍ଲୀରେ",
+        "ନଗରରେ",
+        "ତୀର୍ଥରେ"
+      ],
+      "correct": 1,
+      "answer": "ଶୈଶବର ଇନ୍ଦ୍ରିୟାନୁଭୂତିକୁ ସେ ପଲ୍ଲୀ ସହ ଯୋଡ଼ନ୍ତି।",
+      "pages": [
+        1
+      ],
+      "chapter": "janmabhumi",
+      "title": "ଜନ୍ମଭୂମି",
+      "source": "odia/sahitya-sindhu/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1gzF0442mLad4AEJDS0isfuQRKZt6ttgc/view"
+    },
+    {
+      "prompt": "ତଣ୍ଡୁଳ ଶବ୍ଦର ଅର୍ଥ କେଉଁଟି?",
+      "options": [
+        "ଫୁଲ",
+        "ଚାଉଳ",
+        "ଫଳ",
+        "ସୁବାସ"
+      ],
+      "correct": 1,
+      "answer": "ପଲ୍ଲୀର ପୋଷଣ ପ୍ରସଙ୍ଗରେ ତଣ୍ଡୁଳ ଚାଉଳକୁ ବୁଝାଇଛି।",
+      "pages": [
+        5
+      ],
+      "chapter": "janmabhumi",
+      "title": "ଜନ୍ମଭୂମି",
+      "source": "odia/sahitya-sindhu/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1gzF0442mLad4AEJDS0isfuQRKZt6ttgc/view"
+    },
+    {
+      "prompt": "ପ୍ରବନ୍ଧରେ ଭାରତୀୟ ସଭ୍ୟତାର ଆଦର୍ଶ କ’ଣ?",
+      "options": [
+        "ଧନ ଓ ଶକ୍ତି",
+        "ଭୋଗ ଓ ବିଳାସ",
+        "ତ୍ୟାଗ ଓ ଆତ୍ମସଂଯମ",
+        "ଯୁଦ୍ଧ ଓ ବିଜୟ"
+      ],
+      "correct": 2,
+      "answer": "ଭାରତୀୟ ଆଦର୍ଶ ପ୍ରସଙ୍ଗରେ ଲେଖକ ଏହି ଦୁଇ ଗୁଣ ଉଲ୍ଲେଖ କରନ୍ତି।",
+      "pages": [
+        2
+      ],
+      "chapter": "sabhyata-o-bigyana",
+      "title": "ସଭ୍ୟତା ଓ ବିଜ୍ଞାନ",
+      "source": "odia/sahitya-sindhu/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1lTSObttEcXqOKHT2Zy3zizh23MucSHvJ/view"
+    },
+    {
+      "prompt": "ଆତ୍ମସଂଯମର ଅର୍ଥ କ’ଣ?",
+      "options": [
+        "ନିଜକୁ ନିୟନ୍ତ୍ରଣ କରିବା",
+        "ବଳରେ ଅନ୍ୟକୁ ଜିତିବା",
+        "ନୂତନ ବସ୍ତୁ ତିଆରି କରିବା",
+        "ନିଜ ଗୁଣର ପ୍ରଶଂସା କରିବା"
+      ],
+      "correct": 0,
+      "answer": "ନିଜ ଇଚ୍ଛା ଓ ଆଚରଣ ଉପରେ ନିଜର ନିୟନ୍ତ୍ରଣ ଆତ୍ମସଂଯମ।",
+      "pages": [
+        7
+      ],
+      "chapter": "sabhyata-o-bigyana",
+      "title": "ସଭ୍ୟତା ଓ ବିଜ୍ଞାନ",
+      "source": "odia/sahitya-sindhu/chapter 8/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1lTSObttEcXqOKHT2Zy3zizh23MucSHvJ/view"
+    },
+    {
+      "prompt": "କୃଷିଶିକ୍ଷାର ଉଦାହରଣରେ ଲେଖକ କାହାର ସୁବିଧାକୁ ଦେଖନ୍ତି?",
+      "options": [
+        "କେବଳ ପରୀକ୍ଷକଙ୍କ",
+        "ଚାଷୀଙ୍କ",
+        "ବିଦେଶୀ ପର୍ଯ୍ୟଟକଙ୍କ",
+        "କେବଳ ଅନୁବାଦକଙ୍କ"
+      ],
+      "correct": 1,
+      "answer": "ଚାଷୀ ବୁଝିପାରିଲେ ଶିକ୍ଷା ଚାଷ କାମରେ ଲାଗିବ।",
+      "pages": [
+        2,
+        5
+      ],
+      "chapter": "matrubhasa-o-lokasiksha",
+      "title": "ମାତୃଭାଷା ଓ ଲୋକଶିକ୍ଷା",
+      "source": "odia/sahitya-sindhu/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1hSlLKgTpBP4eFF7xoJMeNacuH9anq0Dp/view"
+    },
+    {
+      "prompt": "ମାତୃଭାଷା ଓ ଲୋକଶିକ୍ଷାର ଲେଖକ କିଏ?",
+      "options": [
+        "ଶରତ କୁମାର ମହାନ୍ତି",
+        "ଗୋଲୋକ ବିହାରୀ ଧଳ",
+        "ବଂଶୀଧର ସାମନ୍ତରାୟ",
+        "କୃଷ୍ଣଚନ୍ଦ୍ର ପାଣିଗ୍ରାହୀ"
+      ],
+      "correct": 1,
+      "answer": "ଗୋଲୋକ ବିହାରୀ ଧଳ ଏହି ପ୍ରବନ୍ଧର ଲେଖକ।",
+      "pages": [
+        1
+      ],
+      "chapter": "matrubhasa-o-lokasiksha",
+      "title": "ମାତୃଭାଷା ଓ ଲୋକଶିକ୍ଷା",
+      "source": "odia/sahitya-sindhu/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1hSlLKgTpBP4eFF7xoJMeNacuH9anq0Dp/view"
+    },
+    {
+      "prompt": "ନରେନ୍‌ଙ୍କ ଗୁରୁ କିଏ?",
+      "options": [
+        "ଶରତ ଚନ୍ଦ୍ର ଗୁପ୍ତ",
+        "ସ୍ୱାମୀ ସଦାନନ୍ଦ",
+        "ଶ୍ରୀରାମକୃଷ୍ଣ",
+        "ଶରତ କୁମାର ମହାନ୍ତି"
+      ],
+      "correct": 2,
+      "answer": "ଶ୍ରୀରାମକୃଷ୍ଣଙ୍କ ନିର୍ଦ୍ଦେଶ ନରେନ୍‌ଙ୍କ ସେବାସାଧନାକୁ ଦିଗ ଦେଇଥିଲା।",
+      "pages": [
+        2
+      ],
+      "chapter": "narenru-bibekananda",
+      "title": "ନରେନ୍‌ରୁ ବିବେକାନନ୍ଦ",
+      "source": "odia/sahitya-sindhu/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1lFEuWD9XS6qA1fIEaUjLTOfK7gSdjjYL/view"
+    },
+    {
+      "prompt": "ଭ୍ରମଣରେ ବିବେକାନନ୍ଦ କାହାର ଦୁଃଖ ଅଙ୍ଗେ ନିଭାଇଲେ?",
+      "options": [
+        "କେବଳ ରାଜପରିବାରର",
+        "କେବଳ ମଠାଧୀଶଙ୍କ",
+        "କେବଳ ତୀର୍ଥଯାତ୍ରୀଙ୍କ",
+        "ଦରିଦ୍ର ଜନତାଙ୍କ"
+      ],
+      "correct": 3,
+      "answer": "ଭାରତବାସୀଙ୍କ ଅବସ୍ଥାକୁ ସେ ନିକଟରୁ ଜାଣିଥିଲେ।",
+      "pages": [
+        4
+      ],
+      "chapter": "narenru-bibekananda",
+      "title": "ନରେନ୍‌ରୁ ବିବେକାନନ୍ଦ",
+      "source": "odia/sahitya-sindhu/chapter 10/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1lFEuWD9XS6qA1fIEaUjLTOfK7gSdjjYL/view"
+    },
+    {
+      "prompt": "ପୂର୍ଣ୍ଣଚନ୍ଦ୍ର ଓଡ଼ିଆ ଭାଷାକୋଷ କାହାର କୃତି?",
+      "options": [
+        "ଫକୀରମୋହନ ସେନାପତି",
+        "ରାଧାନାଥ ରାୟ",
+        "ଗୋପାଳଚନ୍ଦ୍ର ପ୍ରହରାଜ",
+        "ଗଙ୍ଗାଧର ମେହେର"
+      ],
+      "correct": 2,
+      "answer": "ସାତ ଖଣ୍ଡର ଏହି ଭାଷାକୋଷ ପ୍ରହରାଜଙ୍କ ଅକ୍ଷୟ କୀର୍ତ୍ତି।",
+      "pages": [
+        5
+      ],
+      "chapter": "odia-sahitya-katha",
+      "title": "ଓଡ଼ିଆ ସାହିତ୍ୟ କଥା",
+      "source": "odia/sahitya-sindhu/chapter 11/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1PA-lMVc4-f7x8nXnuCJl09bKsWHh9xJ2/view"
+    },
+    {
+      "prompt": "ପୂର୍ଣ୍ଣଚନ୍ଦ୍ର ଓଡ଼ିଆ ଭାଷାକୋଷ କେତେ ଖଣ୍ଡରେ ପ୍ରକାଶିତ?",
+      "options": [
+        "ତିନି",
+        "ପାଞ୍ଚ",
+        "ସାତ",
+        "ନଅ"
+      ],
+      "correct": 2,
+      "answer": "ଭାଷାକୋଷ ସାତ ଖଣ୍ଡରେ ପ୍ରକାଶ ପାଇଛି।",
+      "pages": [
+        5
+      ],
+      "chapter": "odia-sahitya-katha",
+      "title": "ଓଡ଼ିଆ ସାହିତ୍ୟ କଥା",
+      "source": "odia/sahitya-sindhu/chapter 11/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1PA-lMVc4-f7x8nXnuCJl09bKsWHh9xJ2/view"
+    },
+    {
+      "prompt": "ସାହିତ୍ୟ କଥାର ଏହି ଭାଗ କେଉଁ କାଳକୁ ନେଇ ଆଲୋଚନା କରେ?",
+      "options": [
+        "ପ୍ରାଚୀନ",
+        "ଆଧୁନିକ",
+        "କେବଳ ମଧ୍ୟଯୁଗ",
+        "ବୈଦିକ"
+      ],
+      "correct": 1,
+      "answer": "ଶୀର୍ଷକ ତଳେ ଆଧୁନିକ ଭାଗ ୧୮୭୦ରୁ ବୋଲି ଦର୍ଶାଯାଇଛି।",
+      "pages": [
+        1
+      ],
+      "chapter": "odia-sahitya-katha",
+      "title": "ଓଡ଼ିଆ ସାହିତ୍ୟ କଥା",
+      "source": "odia/sahitya-sindhu/chapter 11/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1PA-lMVc4-f7x8nXnuCJl09bKsWHh9xJ2/view"
+    },
+    {
+      "prompt": "ରାବଣ କାହାକୁ ଚର କରି ପଠାଇଥିଲେ?",
+      "options": [
+        "ରାମ ଓ ଲକ୍ଷ୍ମଣ",
+        "ଶୁକ ଓ ସାରଣ",
+        "ବିଭୀଷଣ ଓ ଅଙ୍ଗଦ",
+        "ବରୁଣ ଓ ରାଘବ"
+      ],
+      "correct": 1,
+      "answer": "ଶୁକ ଓ ସାରଣ ରାବଣଙ୍କ ବାର୍ତ୍ତା ନେଇ ଯାଇଥିଲେ।",
+      "pages": [
+        2
+      ],
+      "chapter": "raghabanka-lanka",
+      "title": "ରାଘବଙ୍କ ଲଙ୍କା ଯାତ୍ରାନୁକୂଳ",
+      "source": "odia/sahitya-sindhu/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1mPaDIDoNXx3IViJN1g4YW5Cy_gXuXLm4/view"
+    },
+    {
+      "prompt": "ବାନରମାନେ ପର୍ବତ ପକାଇବା ପରେ କ’ଣ ହେଲା?",
+      "options": [
+        "ଲଙ୍କା କମ୍ପିଲା",
+        "ସାଗର ଶୁଖିଲା",
+        "ପର୍ବତଗୁଡ଼ିକ ଭାସିଲେ",
+        "ପର୍ବତଗୁଡ଼ିକ ବୁଡ଼ିଗଲେ"
+      ],
+      "correct": 3,
+      "answer": "ସାଗର ପୋତିବାର ପ୍ରଥମ ଉଦ୍ୟମ ସଫଳ ହେଲା ନାହିଁ।",
+      "pages": [
+        1
+      ],
+      "chapter": "raghabanka-lanka",
+      "title": "ରାଘବଙ୍କ ଲଙ୍କା ଯାତ୍ରାନୁକୂଳ",
+      "source": "odia/sahitya-sindhu/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1mPaDIDoNXx3IViJN1g4YW5Cy_gXuXLm4/view"
+    },
+    {
+      "prompt": "ବିଭୀଷଣ କେଉଁ ସର୍ତ୍ତ ଦେଇଥିଲେ?",
+      "options": [
+        "ଅଙ୍ଗଦଙ୍କୁ ବନ୍ଦୀ କରିବା",
+        "ସୀତାଙ୍କୁ ସମର୍ପଣ କରିବା",
+        "ଦୂତଙ୍କୁ ଅଟକାଇବା",
+        "ସାଗର ଶୁଖାଇବା"
+      ],
+      "correct": 1,
+      "answer": "ରାବଣଙ୍କ ବାର୍ତ୍ତାକୁ ସେ ସୀତାଙ୍କୁ ଫେରାଇବା ପ୍ରସଙ୍ଗରେ ଉତ୍ତର ଦେଇଥିଲେ।",
+      "pages": [
+        2
+      ],
+      "chapter": "raghabanka-lanka",
+      "title": "ରାଘବଙ୍କ ଲଙ୍କା ଯାତ୍ରାନୁକୂଳ",
+      "source": "odia/sahitya-sindhu/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1mPaDIDoNXx3IViJN1g4YW5Cy_gXuXLm4/view"
+    },
+    {
+      "prompt": "ମୀନଜୀବୀମାନେ କେଉଁ ଦୃଶ୍ୟ ଦେଖି ପଟିକା ଟେକନ୍ତି?",
+      "options": [
+        "ମଧ୍ୟାହ୍ନର ସୂର୍ଯ୍ୟ",
+        "ଭାଲେରି ଶିଖରେ ସନ୍ଧ୍ୟାତାରା",
+        "ସମୁଦ୍ରରେ ଝଡ଼",
+        "ପ୍ରଭାତର କିରଣ"
+      ],
+      "correct": 1,
+      "answer": "ସନ୍ଧ୍ୟାତାରା ଘରକୁ ଫେରିବା ବେଳର ସୂଚନା ଦେଉଛି।",
+      "pages": [
+        1
+      ],
+      "chapter": "chilikare-sayantana",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
+    },
+    {
+      "prompt": "ଦୋହଲୁଥିବା ଶିଖା ସହ କେଉଁ ଭାବକୁ ତୁଳନା କରାଯାଇଛି?",
+      "options": [
+        "ଶୋକାକୁଳ ମନରେ ଆଶାର ଉଠାପଡ଼ା",
+        "ମୀନଜୀବୀଙ୍କ କ୍ରୋଧ",
+        "ପଥିକର ନିଦ",
+        "ମାଛର ଭୟ"
+      ],
+      "correct": 0,
+      "answer": "ତରଙ୍ଗରେ ଶିଖା ଉଠେ ଓ ପଡ଼େ; ଦୁଃଖୀ ମନରେ ଆଶା ମଧ୍ୟ ସେପରି ବଦଳେ।",
+      "pages": [
+        3
+      ],
+      "chapter": "chilikare-sayantana",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
+    },
+    {
+      "prompt": "ଜ୍ୟୋତ୍ସ୍ନାରେ ଜଳ, ସ୍ଥଳ ଓ ଆକାଶ କିପରି ଦିଶିଛି?",
+      "options": [
+        "କୁହୁଡ଼ିରେ ଘେରା",
+        "ଝଡ଼ରେ ଆଚ୍ଛନ୍ନ",
+        "ପାରଦରେ ଧୁଆ ହେଲା ପରି",
+        "ଧୂଳିରେ ମଳିନ"
+      ],
+      "correct": 2,
+      "answer": "ଚନ୍ଦ୍ରାଲୋକର ଉଜ୍ଜ୍ୱଳତା ପାଇଁ ପାରଦ-ଧଉତର ଉପମା ଦିଆଯାଇଛି।",
+      "pages": [
+        3
+      ],
+      "chapter": "chilikare-sayantana",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
+    },
+    {
+      "prompt": "ଉଷାଙ୍କ ଉପହାର କାହାକୁ ମୁକ୍ତା ସହ ତୁଳନା କରେ?",
+      "options": [
+        "ନଦୀର ଢେଉ",
+        "ରାତିର ତାରା",
+        "ଶିଶିରବିନ୍ଦୁ",
+        "ପଦ୍ମର ପାଖୁଡ଼ା"
+      ],
+      "correct": 2,
+      "answer": "ନୀହାର ଉଷାଙ୍କ ହାତରେ ମୁକ୍ତାର ରୂପ ନେଇଛି।",
+      "pages": [
+        1
+      ],
+      "chapter": "mangale-aila-usha",
+      "title": "ମଙ୍ଗଳେ ଅଇଲା ଉଷା",
+      "source": "odia/sahitya-sindhu/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Z8-vOpybd4gEu2gDPcEJOlnZqRSgpMQg/view"
+    },
+    {
+      "prompt": "ଜାନକୀ ଶବ୍ଦ ଏଠାରେ କାହାକୁ ସୂଚାଏ?",
+      "options": [
+        "ଉଷା",
+        "ସୀତା",
+        "ତମସା",
+        "ସରସ୍ୱତୀ"
+      ],
+      "correct": 1,
+      "answer": "ଜାନକୀଙ୍କୁ ଦର୍ଶନ କରିବାକୁ ଉଷା ଆସିଛନ୍ତି।",
+      "pages": [
+        1
+      ],
+      "chapter": "mangale-aila-usha",
+      "title": "ମଙ୍ଗଳେ ଅଇଲା ଉଷା",
+      "source": "odia/sahitya-sindhu/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Z8-vOpybd4gEu2gDPcEJOlnZqRSgpMQg/view"
+    },
+    {
+      "prompt": "ବିକଚ ରାଜୀବ ପ୍ରତିମାରେ କେଉଁ ଚିତ୍ର ରହିଛି?",
+      "options": [
+        "ଖୋଲା ପଦ୍ମ",
+        "ଝରିଥିବା ପତ୍ର",
+        "ନଦୀର ଫେଣ",
+        "ଅସ୍ତଗାମୀ ସୂର୍ଯ୍ୟ"
+      ],
+      "correct": 0,
+      "answer": "ବିକଚ ଅର୍ଥ ପ୍ରସ୍ଫୁଟିତ ଓ ରାଜୀବ ଅର୍ଥ ପଦ୍ମ।",
+      "pages": [
+        1
+      ],
+      "chapter": "mangale-aila-usha",
+      "title": "ମଙ୍ଗଳେ ଅଇଲା ଉଷା",
+      "source": "odia/sahitya-sindhu/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Z8-vOpybd4gEu2gDPcEJOlnZqRSgpMQg/view"
+    },
+    {
+      "prompt": "କବି କାହାର ଶିରରୁ ଅପମାନ ପୋଛିବାକୁ କହିଛନ୍ତି?",
+      "options": [
+        "ମାନବର",
+        "ଚନ୍ଦ୍ରର",
+        "ପର୍ବତର",
+        "ତପନର"
+      ],
+      "correct": 0,
+      "answer": "ସାମୂହିକ ମୁକ୍ତି ହିଁ ଆହ୍ୱାନର ଉଦ୍ଦେଶ୍ୟ।",
+      "pages": [
+        2
+      ],
+      "chapter": "jaga-bandhanahara",
+      "title": "ଜାଗ ବନ୍ଧନହରା",
+      "source": "odia/sahitya-sindhu/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1teYMGSRjWEHzlooJDEWn_E2e2BFsBz0Z/view"
+    },
+    {
+      "prompt": "କଣ୍ଟକ ଓ କୁହେଳିର ଚିତ୍ର ଯାତ୍ରାର କେଉଁ ଦିଗକୁ ବୁଝାଏ?",
+      "options": [
+        "ସମ୍ବର୍ଦ୍ଧନା",
+        "ବିଶ୍ରାମ",
+        "ବାଧା",
+        "ଗନ୍ତବ୍ୟରେ ପହଞ୍ଚିବା"
+      ],
+      "correct": 2,
+      "answer": "ଯାତ୍ରୀଙ୍କୁ ପଥର ବାହ୍ୟ ଓ ମାନସିକ ବାଧା ଅତିକ୍ରମ କରିବାକୁ ହେବ।",
+      "pages": [
+        2
+      ],
+      "chapter": "jaga-bandhanahara",
+      "title": "ଜାଗ ବନ୍ଧନହରା",
+      "source": "odia/sahitya-sindhu/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1teYMGSRjWEHzlooJDEWn_E2e2BFsBz0Z/view"
+    },
+    {
+      "prompt": "ମରୁପଥରେ ନିର୍ଝର ସୃଷ୍ଟି କରିବା କେଉଁ ମନୋଭାବକୁ ଦେଖାଏ?",
+      "options": [
+        "ପଳାୟନ",
+        "ନିଷ୍କ୍ରିୟତା",
+        "ଆତ୍ମସମର୍ପଣ",
+        "ପ୍ରତିକୂଳତାରେ ସୃଜନଶୀଳ କାମ"
+      ],
+      "correct": 3,
+      "answer": "ଶୁଷ୍କ ପଥକୁ ଜୀବନଦାୟୀ କରିବା ପାଇଁ କର୍ମର ଆହ୍ୱାନ ଅଛି।",
+      "pages": [
+        2
+      ],
+      "chapter": "jaga-bandhanahara",
+      "title": "ଜାଗ ବନ୍ଧନହରା",
+      "source": "odia/sahitya-sindhu/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1teYMGSRjWEHzlooJDEWn_E2e2BFsBz0Z/view"
+    },
+    {
+      "prompt": "କବି ମାଟିମାଆଠାରୁ କେଉଁ ଗୁଣ ପାଇବାକୁ ଚାହାନ୍ତି?",
+      "options": [
+        "କ୍ରୋଧ",
+        "ଧୈର୍ଯ୍ୟ",
+        "ଅଭିମାନ",
+        "ଭୟ"
+      ],
+      "correct": 1,
+      "answer": "ଧୈର୍ଯ୍ୟ ମିଳିଲେ ନିଜେ ଦୁଃଖ ସହି ଜଗତର ସେବା କରିପାରିବେ।",
+      "pages": [
+        2
+      ],
+      "chapter": "sarbamsaha-mati",
+      "title": "ସର୍ବଂସହା ମାଟି",
+      "source": "odia/sahitya-sindhu/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1eA1bYbXBPpzPG6MqHkGmI9656L5umbP3/view"
+    },
+    {
+      "prompt": "କବିଙ୍କୁ ତୃପ୍ତି କିଏ ଦେଇଛି?",
+      "options": [
+        "ଗଛଲତାର ଫଳ",
+        "ନଗରର କୋଳାହଳ",
+        "ଯୁଦ୍ଧର ଘୋଷଣା",
+        "ଧନର ପ୍ରଦର୍ଶନ"
+      ],
+      "correct": 0,
+      "answer": "ମାଟିର ପୋଷଣ ବୁଝାଇବାକୁ କବି ଫଳର କଥା କହିଛନ୍ତି।",
+      "pages": [
+        1
+      ],
+      "chapter": "sarbamsaha-mati",
+      "title": "ସର୍ବଂସହା ମାଟି",
+      "source": "odia/sahitya-sindhu/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1eA1bYbXBPpzPG6MqHkGmI9656L5umbP3/view"
+    },
+    {
+      "prompt": "ମାଟିମାଆଙ୍କ ମୁକ୍ତି ସହିତ କବି କାହାର ମୁକ୍ତିକୁ ମିଳାଇଛନ୍ତି?",
+      "options": [
+        "କେବଳ ପକ୍ଷୀର",
+        "ନିଜର",
+        "କେବଳ ବୃକ୍ଷର",
+        "କେବଳ ନଦୀର"
+      ],
+      "correct": 1,
+      "answer": "କବି ନିଜ ଆନନ୍ଦ ଓ ମୁକ୍ତିକୁ ମାଟିମାଆଙ୍କ ସହ ଏକ ମନେ କରିଛନ୍ତି।",
+      "pages": [
+        2
+      ],
+      "chapter": "sarbamsaha-mati",
+      "title": "ସର୍ବଂସହା ମାଟି",
+      "source": "odia/sahitya-sindhu/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1eA1bYbXBPpzPG6MqHkGmI9656L5umbP3/view"
+    },
+    {
+      "prompt": "ଅଙ୍ଗଦ ଚୌଧୁରୀ କେଉଁ ବିଷୟର ଛାତ୍ର?",
+      "options": [
+        "ଗଣିତ",
+        "ଇତିହାସ",
+        "ଚିକିତ୍ସା",
+        "ଜ୍ୟୋତିଷ"
+      ],
+      "correct": 1,
+      "answer": "ସେ ଇତିହାସର ଛାତ୍ର ଭାବେ ଗବେଷଣା କାର୍ଯ୍ୟରେ ଆସିଛନ୍ତି।",
+      "pages": [
+        1
+      ],
+      "chapter": "kalara-kapola",
+      "title": "କାଳର କପୋଳ ତଳେ",
+      "source": "odia/sahitya-sindhu/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1qnbNZcea6QuwPz3110hBSu2zzwyfUN-A/view"
+    },
+    {
+      "prompt": "ଅଙ୍ଗଦଙ୍କ ଆଖି ଆଗରେ କେଉଁ ନଦୀର ପାଣି ଲାଲ ଦିଶିଲା?",
+      "options": [
+        "ତମସା",
+        "ଗଙ୍ଗା",
+        "ଦୟା",
+        "ଯମୁନା"
+      ],
+      "correct": 2,
+      "answer": "ଧଉଳିର ଦୟାନଦୀ ଗବେଷକଙ୍କ ମନରେ ଯୁଦ୍ଧର ସ୍ମୃତି ଜଗାଏ।",
+      "pages": [
+        1
+      ],
+      "chapter": "kalara-kapola",
+      "title": "କାଳର କପୋଳ ତଳେ",
+      "source": "odia/sahitya-sindhu/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1qnbNZcea6QuwPz3110hBSu2zzwyfUN-A/view"
+    },
+    {
+      "prompt": "ଅଶୋକଙ୍କ ଯୁଦ୍ଧବିରତି ଘୋଷଣାରେ ପ୍ରଧାନ ଭାବ କେଉଁଟି?",
+      "options": [
+        "ବିଜୟର ଗର୍ବ",
+        "ପୁଣି ଯୁଦ୍ଧ କରିବା",
+        "ପ୍ରତିଶୋଧ",
+        "ନରହତ୍ୟା ପାଇଁ ମର୍ମବେଦନା"
+      ],
+      "correct": 3,
+      "answer": "ଘୋଷଣାରେ ବିଭୀଷିକାର ଅନୁଭବ ଓ ଅହିଂସା ଗ୍ରହଣର କଥା ଅଛି।",
+      "pages": [
+        5
+      ],
+      "chapter": "kalara-kapola",
+      "title": "କାଳର କପୋଳ ତଳେ",
+      "source": "odia/sahitya-sindhu/chapter 13/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1qnbNZcea6QuwPz3110hBSu2zzwyfUN-A/view"
+    },
+    {
+      "prompt": "ବେଲ ଓ ଅଶ୍ୱତ୍ଥ କେଉଁଠି ଉଠିଥିଲା?",
+      "options": [
+        "ନଦୀକୂଳରେ",
+        "ବସ୍ ଭିତରେ",
+        "ବରଗଛର କୋରଡ଼ରେ",
+        "ଦୋକାନ ଛାତରେ"
+      ],
+      "correct": 2,
+      "answer": "ନଟବର ବରଗଛ ତଳେ ବିଶ୍ରାମ କରୁଥିବାବେଳେ ଏହା ଦେଖିଲେ।",
+      "pages": [
+        7
+      ],
+      "chapter": "bela-aswattha-batabruksha",
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    },
+    {
+      "prompt": "ନଟବରଙ୍କ ଯାତ୍ରାରେ କେଉଁ ମାସର ଖରାର କଥା ଅଛି?",
+      "options": [
+        "ଆଷାଢ଼",
+        "ବୈଶାଖ",
+        "ଭାଦ୍ରବ",
+        "ପୌଷ"
+      ],
+      "correct": 1,
+      "answer": "ବୈଶାଖର ପ୍ରଚଣ୍ଡ ତାତିରେ ଯାତ୍ରା ଅଧିକ କଷ୍ଟକର ହୁଏ।",
+      "pages": [
+        1
+      ],
+      "chapter": "bela-aswattha-batabruksha",
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    },
+    {
+      "prompt": "ବରଗଛର ଛବି ଉପରେ ପ୍ରଥମେ କାହାର ଛବି ଭାସିଲା?",
+      "options": [
+        "ହରି ଗୁଡ଼ିଆର",
+        "ବସ୍ ଚାଳକର",
+        "ନଟବରଙ୍କ ବୋଉର",
+        "ଦୋକାନୀର"
+      ],
+      "correct": 2,
+      "answer": "ମାତୃସ୍ନେହ ଓ ବରଗଛର ଆଶ୍ରୟ ତାଙ୍କ ମନରେ ମିଶିଯାଏ।",
+      "pages": [
+        7
+      ],
+      "chapter": "bela-aswattha-batabruksha",
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    },
+    {
+      "prompt": "ବିଶୁଙ୍କୁ ନିଜ ପରିଚୟ ବୁଝାଇବାକୁ ଧରମା କ’ଣ ଦେଖାଇଥିଲା?",
+      "options": [
+        "ମନ୍ଦିରର ନକ୍ସା",
+        "କୋଳି ଓ ମୁଦି",
+        "ରାଜାଙ୍କ ଆଦେଶ",
+        "ଶିଳ୍ପୀଙ୍କ ହାତୁଡ଼ି"
+      ],
+      "correct": 1,
+      "answer": "ଘରୁ ମାଆ ଦେଇଥିବା ଏହି ଦୁଇଟି ଜିନିଷ ପରିଚୟର ପ୍ରମାଣ ହୁଏ।",
+      "pages": [
+        9
+      ],
+      "chapter": "konarka",
+      "title": "କୋଣାର୍କ",
+      "source": "odia/sahitya-sindhu/chapter 16/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-p9aKK1vAHGW0NUOc_QX9A2uqz8Grt3Y/view"
+    },
+    {
+      "prompt": "ନାଟକର ପ୍ରଥମ ଦୃଶ୍ୟ କେଉଁଠି?",
+      "options": [
+        "ଚନ୍ଦ୍ରଭାଗା ତୀର",
+        "ପଲ୍ଲୀର ପିଣ୍ଡା",
+        "ଧଉଳି ପାହାଡ଼",
+        "ଚିଲିକା ମୁହାଣ"
+      ],
+      "correct": 0,
+      "answer": "ଚନ୍ଦ୍ରଭାଗା ତୀରରେ ସୂର୍ଯ୍ୟୋଦୟ ଦେଖୁଛନ୍ତି ନରସିଂହ ଦେବ।",
+      "pages": [
+        1
+      ],
+      "chapter": "konarka",
+      "title": "କୋଣାର୍କ",
+      "source": "odia/sahitya-sindhu/chapter 16/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-p9aKK1vAHGW0NUOc_QX9A2uqz8Grt3Y/view"
+    },
+    {
+      "prompt": "ଧରମାର ଶେଷ ନିଷ୍ପତ୍ତି କେଉଁ ମୂଲ୍ୟବୋଧ ପ୍ରକାଶ କରେ?",
+      "options": [
+        "ଭୋଗଲାଳସା",
+        "ପ୍ରତିଶୋଧ",
+        "ରାଜପଦର ଲୋଭ",
+        "ସମୂହ ପାଇଁ ଆତ୍ମତ୍ୟାଗ"
+      ],
+      "correct": 3,
+      "answer": "ଶିଳ୍ପୀକୁଳର ରକ୍ଷା ପାଇଁ ଧରମା ନିଜ ଜୀବନ ଦେବାକୁ ପ୍ରସ୍ତୁତ।",
+      "pages": [
+        9
+      ],
+      "chapter": "konarka",
+      "title": "କୋଣାର୍କ",
+      "source": "odia/sahitya-sindhu/chapter 16/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1-p9aKK1vAHGW0NUOc_QX9A2uqz8Grt3Y/view"
+    },
+    {
+      "prompt": "“ରମେଶଙ୍କ ବିନା”ରେ ଅବ୍ୟୟ ପଦଟି କେଉଁଠି ବସିଛି?",
+      "options": [
+        "ବାକ୍ୟର ଆରମ୍ଭରେ",
+        "ସମ୍ବନ୍ଧିତ ପଦ ପୂର୍ବରୁ",
+        "ସମ୍ବନ୍ଧିତ ପଦ ପରେ",
+        "କ୍ରିୟାର ଭିତରେ"
+      ],
+      "correct": 2,
+      "answer": "ପଦାନ୍ୱୟୀ ଅବ୍ୟୟ “ବିନା” ରମେଶଙ୍କ ସହ ସମ୍ବନ୍ଧିତ ଓ ସେହି ପଦ ପରେ ଅଛି।",
+      "pages": [
+        5
+      ],
+      "chapter": "bakya-bichara",
+      "title": "ବାକ୍ୟ ବିଚାର",
+      "source": "odia/odia-grammar/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view"
+    },
+    {
+      "prompt": "କେଉଁ ବାକ୍ୟରେ ନିଷେଧବାଚକ “ନ” ଠିକ୍ ସ୍ଥାନରେ ଅଛି?",
+      "options": [
+        "କାଲି ତମେ ଘରେ ନ ଥିଲ।",
+        "କାଲି ତମେ ଘରେ ଥିଲ ନ।",
+        "କାଲି ନ ତମେ ଘରେ ଥିଲ।",
+        "କାଲି ତମେ ନ ଘରେ ଥିଲ।"
+      ],
+      "correct": 0,
+      "answer": "ଏଠାରେ “ନ” କ୍ରିୟା “ଥିଲ” ଆଗରେ ବସିଛି।",
+      "pages": [
+        5
+      ],
+      "chapter": "bakya-bichara",
+      "title": "ବାକ୍ୟ ବିଚାର",
+      "source": "odia/odia-grammar/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view"
+    },
+    {
+      "prompt": "“ଚନ୍ଦ୍ରମୋହନ କଟକ ଗଲା ନାହିଁ”ରେ ନିଷେଧର କ୍ରମ ଚିହ୍ନାଅ।",
+      "options": [
+        "ଗଲା ପରେ ନାହିଁ",
+        "ଗଲା ପୂର୍ବରୁ ନାହିଁ",
+        "କଟକ ଆଗରେ ନାହିଁ",
+        "କର୍ତ୍ତା ଆଗରେ ନାହିଁ"
+      ],
+      "correct": 0,
+      "answer": "“ନାହିଁ” କ୍ରିୟାପଦ ପରେ ଓ “ନ” କ୍ରିୟାପଦ ପୂର୍ବରେ ବସେ।",
+      "pages": [
+        5
+      ],
+      "chapter": "bakya-bichara",
+      "title": "ବାକ୍ୟ ବିଚାର",
+      "source": "odia/odia-grammar/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view"
+    },
+    {
+      "prompt": "“ବାପା ଗୋପାଳକୁ ବହିଟିଏ ଦେଲେ”ର ଅର୍ଥ ରଖି କେଉଁ କ୍ରମ ଲେଖାଯିବ?",
+      "options": [
+        "ବାପା ବହିଟିଏ ଗୋପାଳକୁ ଦେଲେ।",
+        "ବାପା ଗୋପାଳଠୁ ନେଲେ।",
+        "ବହିଟିଏ ଗୋପାଳକୁ ବାପା ମାଗିଲେ।",
+        "ଗୋପାଳ ବାପାଙ୍କୁ ବହିଟିଏ ଦେଲା।"
+      ],
+      "correct": 0,
+      "answer": "ଠିକ୍ ବିକଳ୍ପରେ ଦାତା, ଗ୍ରହୀତା ଓ ବସ୍ତୁ ସମାନ ରହିଛି।",
+      "pages": [
+        5
+      ],
+      "chapter": "bakya-bichara",
+      "title": "ବାକ୍ୟ ବିଚାର",
+      "source": "odia/odia-grammar/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view"
+    },
+    {
+      "prompt": "ଅର୍ଥ ପୂରଣ ପାଇଁ ଗୋଟିଏ ପଦ ଅନ୍ୟ ପଦକୁ ଅପେକ୍ଷା କରିବାର ନାମ କ’ଣ?",
+      "options": [
+        "ଯୋଗ୍ୟତା",
+        "ଆକାଂକ୍ଷା",
+        "ଆସତ୍ତି",
+        "ଖଣ୍ଡବାକ୍ୟ"
+      ],
+      "correct": 1,
+      "answer": "ଅସମ୍ପୂର୍ଣ୍ଣ ବକ୍ତବ୍ୟରେ ଯେଉଁ ଅପେକ୍ଷା ଥାଏ ତାହା ଆକାଂକ୍ଷା।",
+      "pages": [
+        2
+      ],
+      "chapter": "bakya-bichara",
+      "title": "ବାକ୍ୟ ବିଚାର",
+      "source": "odia/odia-grammar/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view"
+    },
+    {
+      "prompt": "କର୍ତ୍ତା ଓ କ୍ରିୟା ଥିଲେ ମଧ୍ୟ ଭାବ ପୂର୍ଣ୍ଣ କରିବାକୁ ଅନ୍ୟ ଅଂଶ ଲୋଡ଼ୁଥିବା ଗଠନ କେଉଁଟି?",
+      "options": [
+        "ପଦ",
+        "ଶବ୍ଦ",
+        "ଖଣ୍ଡବାକ୍ୟ",
+        "ବର୍ଣ୍ଣ"
+      ],
+      "correct": 2,
+      "answer": "ଖଣ୍ଡବାକ୍ୟରେ କର୍ତ୍ତା ଓ କ୍ରିୟା ଥାଏ, କିନ୍ତୁ ଅର୍ଥ ଅନ୍ୟ ଅଂଶ ଉପରେ ନିର୍ଭର କରିପାରେ।",
+      "pages": [
+        3
+      ],
+      "chapter": "bakya-bichara",
+      "title": "ବାକ୍ୟ ବିଚାର",
+      "source": "odia/odia-grammar/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view"
+    },
+    {
+      "prompt": "“ଛେଳି ଗୀତ ଗାଉଛି” ଉଦାହରଣରେ କେଉଁ ଦୋଷ ଦେଖାଯାଏ?",
+      "options": [
+        "ବଚନ ଦୋଷ",
+        "ଯୋଗ୍ୟତାର ଅଭାବ",
+        "ବିଭକ୍ତିର ଅଭାବ",
+        "କର୍ତ୍ତାର ଅଭାବ"
+      ],
+      "correct": 1,
+      "answer": "କର୍ତ୍ତାର ସାମର୍ଥ୍ୟ ସହିତ କ୍ରିୟାର ଅର୍ଥ ମେଳ ଖାଉନାହିଁ।",
+      "pages": [
+        1
+      ],
+      "chapter": "bakya-bichara",
+      "title": "ବାକ୍ୟ ବିଚାର",
+      "source": "odia/odia-grammar/chapter 1/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view"
+    },
+    {
+      "prompt": "ନିମ୍ନରୁ କେଉଁ ଶବ୍ଦରେ ଣ ପ୍ରୟୋଗ ହୁଏ?",
+      "options": [
+        "ଦିନ",
+        "ଦାନ",
+        "ଭାଷଣ",
+        "ଫେନ"
+      ],
+      "correct": 2,
+      "answer": "ଭାଷଣରେ ଷ ପରେ ଣ ରହିଛି।",
+      "pages": [
+        1
+      ],
+      "chapter": "natwa-satwa",
+      "title": "‘ଣତ୍ୱ’ ବିଧି, ‘ଷତ୍ୱ’ ବିଧି ଓ ସାଧାରଣ ଅଶୁଦ୍ଧି",
+      "source": "odia/odia-grammar/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1WVw9B_Vz4JXO76cMlUo3Gc8UQEnFgGqU/view"
+    },
+    {
+      "prompt": "କେଉଁ ପ୍ରୟୋଗରେ ଅର୍ଥର ଅନାବଶ୍ୟକ ପୁନରୁକ୍ତି ରହିଛି?",
+      "options": [
+        "ସେ ସପରିବାର ଗଲେ",
+        "ଭୋଜି ଖାଇଲେ",
+        "ଲୋକ ଆସିଲେ",
+        "ସପରିବାର ସହିତ ଗଲେ"
+      ],
+      "correct": 3,
+      "answer": "ସପରିବାର ଶବ୍ଦରେ ହିଁ ପରିବାର ସହିତ ଅର୍ଥ ଅଛି।",
+      "pages": [
+        14
+      ],
+      "chapter": "natwa-satwa",
+      "title": "‘ଣତ୍ୱ’ ବିଧି, ‘ଷତ୍ୱ’ ବିଧି ଓ ସାଧାରଣ ଅଶୁଦ୍ଧି",
+      "source": "odia/odia-grammar/chapter 2/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1WVw9B_Vz4JXO76cMlUo3Gc8UQEnFgGqU/view"
+    },
+    {
+      "prompt": "ଗୋଟିଏ ଚାଉଳରେ ଗଢ଼ା ରୂଢ଼ିର ଅର୍ଥ କ’ଣ?",
+      "options": [
+        "ସୁନ୍ଦର",
+        "ଅଳସୁଆ",
+        "ଅଭିଜ୍ଞ",
+        "ଧନୀ"
+      ],
+      "correct": 0,
+      "answer": "ପଦସମୂହଟି ଏକାଠି ସୌନ୍ଦର୍ଯ୍ୟକୁ ବୁଝାଏ।",
+      "pages": [
+        1
+      ],
+      "chapter": "rudhi-o-lokabani",
+      "title": "ରୂଢ଼ି ଓ ଲୋକବାଣୀ",
+      "source": "odia/odia-grammar/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_4qA5Z97TyAJZc4nxS69dXCIuUizJmx-/view"
+    },
+    {
+      "prompt": "କେଉଁ ରୂଢ଼ି ବିବାହ ହେବାକୁ ବୁଝାଏ?",
+      "options": [
+        "ମନକୁ ପାଇବା",
+        "ହାତଗଣ୍ଠି ପଡ଼ିବା",
+        "ଅନ୍ଧାରକୁ ଟେକା ପକାଇବା",
+        "ଗୋଟିଏ ଚାଉଳରେ ଗଢ଼ା"
+      ],
+      "correct": 1,
+      "answer": "ସବିତାର ବିବାହକୁ ହାତଗଣ୍ଠି ପଡ଼ିବା ବୋଲି ବୁଝାଯାଇଛି।",
+      "pages": [
+        1
+      ],
+      "chapter": "rudhi-o-lokabani",
+      "title": "ରୂଢ଼ି ଓ ଲୋକବାଣୀ",
+      "source": "odia/odia-grammar/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_4qA5Z97TyAJZc4nxS69dXCIuUizJmx-/view"
+    },
+    {
+      "prompt": "ହାତେ ମାପି ଚାଖଣ୍ଡେ ଚାଲ କେଉଁ ଶିକ୍ଷା ଦିଏ?",
+      "options": [
+        "ଅବିବେକୀ ହେବା",
+        "କାମ ଛାଡ଼ିବା",
+        "ସାବଧାନ ହୋଇ କାମ କରିବା",
+        "ଅନ୍ୟକୁ ହେଳା କରିବା"
+      ],
+      "correct": 2,
+      "answer": "ମାପି ଚାଲିବା ପୂର୍ବବିଚାର ଓ ସତର୍କତାକୁ ବୁଝାଏ।",
+      "pages": [
+        18
+      ],
+      "chapter": "rudhi-o-lokabani",
+      "title": "ରୂଢ଼ି ଓ ଲୋକବାଣୀ",
+      "source": "odia/odia-grammar/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1_4qA5Z97TyAJZc4nxS69dXCIuUizJmx-/view"
+    },
+    {
+      "prompt": "ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣର ଆବୃତ୍ତିରେ କେଉଁ ଅଳଙ୍କାର ଦେଖାଯାଏ?",
+      "options": [
+        "ଉପମା",
+        "ରୂପକ",
+        "ଅନୁପ୍ରାସ",
+        "ଉତ୍ପ୍ରେକ୍ଷା"
+      ],
+      "correct": 2,
+      "answer": "ବର୍ଣ୍ଣର ପୁନଃପ୍ରୟୋଗ ଅନୁପ୍ରାସର ଶବ୍ଦସୌନ୍ଦର୍ଯ୍ୟ ଆଣେ।",
+      "pages": [
+        6,
+        8
+      ],
+      "chapter": "chhanda-alankara",
+      "title": "ଛନ୍ଦ ଓ ଅଳଙ୍କାର",
+      "source": "odia/odia-grammar/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/117tAjiGYIkUI1ylzp3TcmlP8eJYeaFp4/view"
+    },
+    {
+      "prompt": "ଗୋଟିଏ ଶବ୍ଦ ଏକାଧିକ ଅର୍ଥ ଦେଲେ କେଉଁ ଅଳଙ୍କାର ହୁଏ?",
+      "options": [
+        "ଶ୍ଳେଷ",
+        "ଅନୁପ୍ରାସ",
+        "ଉପମା",
+        "ରୂପକ"
+      ],
+      "correct": 0,
+      "answer": "ଏକ ଶବ୍ଦର ଭିନ୍ନ ଅର୍ଥ ପ୍ରକାଶ ଶ୍ଳେଷର ବୈଶିଷ୍ଟ୍ୟ।",
+      "pages": [
+        7
+      ],
+      "chapter": "chhanda-alankara",
+      "title": "ଛନ୍ଦ ଓ ଅଳଙ୍କାର",
+      "source": "odia/odia-grammar/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/117tAjiGYIkUI1ylzp3TcmlP8eJYeaFp4/view"
+    },
+    {
+      "prompt": "ପାଠରେ ଛନ୍ଦର ପ୍ରାଥମିକ ଦୁଇ ଭେଦ କ’ଣ?",
+      "options": [
+        "ଉପମା ଓ ରୂପକ",
+        "ଗଦ୍ୟ ଓ ପଦ୍ୟ",
+        "ଶବ୍ଦ ଓ ଅର୍ଥ",
+        "ମିତ୍ରାକ୍ଷର ଓ ଅମିତ୍ରାକ୍ଷର"
+      ],
+      "correct": 3,
+      "answer": "ମିତ୍ରାକ୍ଷର ଭିତରେ ପୁଣି ପୂର୍ଣ୍ଣ, ଅପୂର୍ଣ୍ଣ ଓ ଏକାନ୍ତର ଭେଦ ଅଛି।",
+      "pages": [
+        1
+      ],
+      "chapter": "chhanda-alankara",
+      "title": "ଛନ୍ଦ ଓ ଅଳଙ୍କାର",
+      "source": "odia/odia-grammar/chapter 5/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/117tAjiGYIkUI1ylzp3TcmlP8eJYeaFp4/view"
+    }
+  ],
+  "written": [
+    {
+      "chapter": "janmabhumi",
+      "pages": [
+        1,
+        4
+      ],
+      "prompt": "ପଲ୍ଲୀକୁ ଲେଖକ ମାତା, ଧାତ୍ରୀ ଓ ଶିକ୍ଷୟିତ୍ରୀ କହିବାର ଯଥାର୍ଥତା ଦର୍ଶାଅ।",
+      "answer": "ଜନ୍ମଭୂମି କହିଲେ ବ୍ୟାପକ ଅର୍ଥରେ ଭାରତ ଓ ସମଗ୍ର ପୃଥିବୀକୁ ମଧ୍ୟ ବୁଝାଯାଏ। ଲେଖକଙ୍କର ସବୁଠୁ ନିକଟର ଜନ୍ମଭୂମି କିନ୍ତୁ ତାଙ୍କ ପଲ୍ଲୀ। ଜନ୍ମ ହୋଇ ସେ ସେଠାକାର ମାଟି ପ୍ରଥମେ ଛୁଇଁଥିଲେ। ତେଣୁ ତାହା ସହ ମାତାର ସମ୍ପର୍କ। ଫଳ, ଶାକ ଓ ତଣ୍ଡୁଳ ଦେଇ ପଲ୍ଲୀ ଶିଶୁକୁ ପୋଷିଛି। ଏଥିପାଇଁ ସେ ଧାତ୍ରୀ। ସେହି ପରିବେଶରେ ରୂପ, ରସ, ଗନ୍ଧ ଓ ସ୍ପର୍ଶ ସହ ତାଙ୍କର ପ୍ରଥମ ପରିଚୟ ହେଲା। ଜଗତକୁ ଅନୁଭବ କରିବାର ଶିକ୍ଷା ସେଠାରୁ ପାଇଥିବାରୁ ପଲ୍ଲୀ ତାଙ୍କ ଶିକ୍ଷୟିତ୍ରୀ।",
+      "number": "୧ (କ)",
+      "area": "ଗଦ୍ୟ",
+      "marks": 5,
+      "alternatives": [
+        {
+          "chapter": "narenru-bibekananda",
+          "pages": [
+            2,
+            6
+          ],
+          "prompt": "ଗୁରୁଙ୍କ ଶିକ୍ଷା ଓ ଦେଶଭ୍ରମଣ ନରେନ୍‌ଙ୍କ ସାଧନାକୁ କେଉଁ ଦିଗ ଦେଇଥିଲା?",
+          "answer": "ନରେନ୍ ନିଜ ସାଧନାର ସିଦ୍ଧି ଚାହୁଁଥିଲେ। ଶ୍ରୀରାମକୃଷ୍ଣ ତାଙ୍କ ଦୃଷ୍ଟିକୁ ଅନ୍ୟ ମଣିଷର ଦୁଃଖ ଆଡ଼କୁ ଫେରାଇଲେ। ମନୁଷ୍ୟ ସେବା ମଧ୍ୟ ଈଶ୍ୱର ସେବା ବୋଲି ବୁଝିଲେ ଧର୍ମ କେବଳ ନିଜ ମୁକ୍ତିରେ ସୀମିତ ରହେନାହିଁ। ଦେଶଭ୍ରମଣବେଳେ ନରେନ୍ ତୀର୍ଥ ଦେଖିବା ସହ ଦେଶର ଲୋକଙ୍କୁ ଜାଣିଲେ। ଗରିବ ଲୋକଙ୍କ କଷ୍ଟ ନିଜ ଜୀବନରେ ଅନୁଭବ କଲେ। ଫଳରେ ଗୁରୁଙ୍କ ଶିକ୍ଷା ତାଙ୍କ ପାଇଁ କେବଳ ଏକ କଥା ହୋଇ ରହିଲା ନାହିଁ। ଦେଶବାସୀଙ୍କ ଦୁଃଖମୋଚନ ପାଇଁ କାମ କରିବା ତାଙ୍କ ସନ୍ନ୍ୟାସର କର୍ତ୍ତବ୍ୟ ହେଲା।",
+          "title": "ନରେନ୍‌ରୁ ବିବେକାନନ୍ଦ",
+          "source": "odia/sahitya-sindhu/chapter 10/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1lFEuWD9XS6qA1fIEaUjLTOfK7gSdjjYL/view"
+        }
+      ],
+      "title": "ଜନ୍ମଭୂମି",
+      "source": "odia/sahitya-sindhu/chapter 7/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1gzF0442mLad4AEJDS0isfuQRKZt6ttgc/view"
+    },
+    {
+      "chapter": "mangale-aila-usha",
+      "pages": [
+        1,
+        4
+      ],
+      "prompt": "ସୀତାଙ୍କୁ ଘେରିଥିବା ପ୍ରକୃତି କିପରି ମଣିଷ ପରି ବ୍ୟବହାର କରେ?",
+      "answer": "ବାଲ୍ମୀକିଙ୍କ ଆଶ୍ରମର ପ୍ରଭାତ ଦୁଃଖିନୀ ସୀତାଙ୍କ ପାଇଁ ଏକ ଆତ୍ମୀୟ ସମାଗମ। ଉଷାଙ୍କର ସୀତାଙ୍କୁ ଦେଖିବାର ଆଗ୍ରହ ଅଛି। ସେ ପଦ୍ମପରି ଆଖି ମେଲି ଆସନ୍ତି, ଶିଶିରକୁ ମୁକ୍ତାପରି ଉପହାର ସଜାଇ ପ୍ରାଙ୍ଗଣରେ ଠିଆ ହୁଅନ୍ତି। କୋକିଳର ଡାକ ଯେପରି ସୀତାଙ୍କୁ ତାଙ୍କର ବିନୟପୂର୍ଣ୍ଣ ନିବେଦନ। ତମସା ମଧ୍ୟ ଆଶ୍ରମକୁ ପୋଷୁଥିବା ଧାତ୍ରୀ ପରି ସତୀଙ୍କ ଆଗମନକୁ ସ୍ୱାଗତ କରେ। ଏହି ସବୁ କ୍ରିୟାରେ ପ୍ରକୃତିର ଦୃଶ୍ୟ ଓ ଧ୍ୱନି ସେବା, ସ୍ନେହ ଓ ସମବେଦନାରେ ରୂପାନ୍ତରିତ ହୋଇଛି।",
+      "number": "୧ (ଖ)",
+      "area": "ପଦ୍ୟ",
+      "marks": 5,
+      "alternatives": [
+        {
+          "chapter": "jaga-bandhanahara",
+          "pages": [
+            1,
+            2
+          ],
+          "prompt": "ତରୁଣମାନଙ୍କ ପଥର ବାଧା ଓ କର୍ତ୍ତବ୍ୟ କବି କିପରି ଚିତ୍ରଣ କରିଛନ୍ତି?",
+          "answer": "ତରୁଣମାନଙ୍କୁ ମାନବର ସଞ୍ଚିତ ଅପମାନ ପୋଛିବାକୁ କବି ଡାକିଛନ୍ତି। ଏଥିପାଇଁ ବନ, ପର୍ବତ ଓ ସାଗର ପରି ବାଧା ଅତିକ୍ରମ କରିବାକୁ ପଡ଼ିବ। ସନ୍ଧାନପଥର କଣ୍ଟକ ବାହାରର ବାଧା; ମୋହ ଓ ମମତାର କୁହେଳି ଭିତରର ବାଧା। ଅନ୍ଧକାରରେ ପ୍ରଦୀପ ଧରିବା, ମରୁପଥରେ ନିର୍ଝର ସୃଷ୍ଟି କରିବା ଓ ମୃତ୍ୟୁ ସାମ୍ନାରେ ମଧ୍ୟ ଅମର ଗୀତ ଗାଇବା ହେଉଛି କର୍ମ ଓ ସାହସର ଚିତ୍ର। କେବଳ ନିଜର ମୁକ୍ତିରେ ଏହାର ଶେଷ ନାହିଁ। ପୀଡ଼ନ ଦୂର କରି ସମଗ୍ର ଭୁବନକୁ ହସାଇବା ତାଙ୍କ ଦାୟିତ୍ୱ।",
+          "title": "ଜାଗ ବନ୍ଧନହରା",
+          "source": "odia/sahitya-sindhu/chapter 5/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1teYMGSRjWEHzlooJDEWn_E2e2BFsBz0Z/view"
+        }
+      ],
+      "title": "ମଙ୍ଗଳେ ଅଇଲା ଉଷା",
+      "source": "odia/sahitya-sindhu/chapter 4/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Z8-vOpybd4gEu2gDPcEJOlnZqRSgpMQg/view"
+    },
+    {
+      "chapter": "matrubhasa-o-lokasiksha",
+      "pages": [
+        1,
+        9
+      ],
+      "prompt": "ପ୍ରସଙ୍ଗ ସହ ବ୍ୟାଖ୍ୟା କର — “ମାତୃଭାଷାରେ ମନୁଷ୍ୟର ଯେଉଁ ସ୍ଫୂର୍ତ୍ତି ହୁଏ, ଅନ୍ୟ କୌଣସି ଦ୍ୱିତୀୟ ଭାଷାରେ ତା’ ହୁଏ ନାହିଁ।”",
+      "answer": "ଗୋଲୋକ ବିହାରୀ ଧଳ ଲୋକଶିକ୍ଷାର ମାଧ୍ୟମ ବିଚାର କରୁଥିବା ପ୍ରସଙ୍ଗରେ ଏହି କଥା କହିଛନ୍ତି। ଶୈଶବରୁ ଚିହ୍ନା ଭାଷାରେ ଏକ ଶବ୍ଦ ଶୁଣିଲେ ତାହା ସହ ଜଡ଼ିତ ଅନୁଭବ ମନକୁ ଆସେ। ତେଣୁ ଭାବିବା, ପ୍ରଶ୍ନ କରିବା ଓ ଉତ୍ତର ଦେବା ସହଜ ହୁଏ। ଅପରିଚିତ ଭାଷାରେ ଆଗେ ଶବ୍ଦର ଅର୍ଥ ଖୋଜି ପରେ ବିଷୟକୁ ଧରିବାକୁ ହୁଏ। ଜନସାଧାରଣଙ୍କ ଶିକ୍ଷା ପାଇଁ ଏହି ତଫାତ ବିଶେଷ ମହତ୍ତ୍ୱ ରଖେ। ଏଠାରେ ସ୍ଫୂର୍ତ୍ତି କହିଲେ ମାତୃଭାଷାରେ ଚିନ୍ତା ଓ ପ୍ରକାଶର ସ୍ୱାଭାବିକ ଶକ୍ତିକୁ ବୁଝାଯାଇଛି।",
+      "number": "୨ (କ)",
+      "area": "ଗଦ୍ୟ",
+      "marks": 5,
+      "alternatives": [
+        {
+          "chapter": "janmabhumi",
+          "pages": [
+            1,
+            9
+          ],
+          "prompt": "ପ୍ରସଙ୍ଗ ସହ ବ୍ୟାଖ୍ୟା କର — “ସମୟ-ସ୍ରୋତରେ ନିଃସହାୟ ଶୁଷ୍କ ତୃଣ ପରି ମୁଁ ଭାସି ଚାଲିଛି।”",
+          "answer": "ଜନ୍ମଭୂମି ପ୍ରବନ୍ଧରେ ଲେଖକ ନିଜ ପଲ୍ଲୀ ସହ ବଦଳୁଥିବା ସମ୍ପର୍କ କଥା ଭାବୁଛନ୍ତି। ପଲ୍ଲୀର ଶିକ୍ଷା ଓ ପୋଷଣ ସେ ଭୁଲିନାହାନ୍ତି। ତଥାପି ଜୀବନର ଗତି ତାଙ୍କୁ ଦୂରକୁ ନେଇଯାଇଛି। ଜଳସ୍ରୋତରେ ପଡ଼ିଥିବା ଶୁଖିଲା ଘାସ ନିଜ ଇଚ୍ଛାରେ ପଥ ବାଛିପାରେ ନାହିଁ। ସେହିପରି ସମୟ ଓ ପରିସ୍ଥିତିରେ ନିଜର ଅସହାୟତାକୁ ସେ ଅନୁଭବ କରନ୍ତି। ଉପମାଟିରେ କେବଳ ଦୂରତା ନୁହେଁ, ଜନ୍ମଭୂମି ପ୍ରତି ଋଣ ସ୍ୱୀକାର କରୁଥିବା ମଣିଷର ଅନୁତାପ ମଧ୍ୟ ଅଛି।",
+          "title": "ଜନ୍ମଭୂମି",
+          "source": "odia/sahitya-sindhu/chapter 7/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1gzF0442mLad4AEJDS0isfuQRKZt6ttgc/view"
+        }
+      ],
+      "title": "ମାତୃଭାଷା ଓ ଲୋକଶିକ୍ଷା",
+      "source": "odia/sahitya-sindhu/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1hSlLKgTpBP4eFF7xoJMeNacuH9anq0Dp/view"
+    },
+    {
+      "chapter": "sarbamsaha-mati",
+      "pages": [
+        1,
+        2
+      ],
+      "prompt": "ପ୍ରସଙ୍ଗ ସହ ବ୍ୟାଖ୍ୟା କର — “ତୋର ମୁକତିରେ ମୋର ମୁକତି ମା / ତୋର ହସେ ମୋର ହସ।”",
+      "answer": "ସର୍ବଂସହା ମାଟି କବିତାରେ ବିଦ୍ୟୁତ୍‌ପ୍ରଭା ଦେବୀ ମାଟିକୁ ନିଜ ମାଆ ଭାବେ ସମ୍ବୋଧନ କରିଛନ୍ତି। ତାହାର ଜଳ, ପବନ ଓ ଫଳ ତାଙ୍କୁ ବଢ଼ାଇଛି। ତାହାର ଅସୀମ ଧୈର୍ଯ୍ୟ ତାଙ୍କୁ ଅନ୍ୟମାନଙ୍କ ଦୁଃଖ ସହିବା ଶିଖାଇଛି। ତେଣୁ ନିଜ ପାଇଁ ଅଲଗା ସୁଖ ବା ମୁକ୍ତି ସେ କଳ୍ପନା କରନ୍ତି ନାହିଁ। ଜନ୍ମମାଟି କଲ୍ୟାଣ ଲାଭ କଲେ ସନ୍ତାନ ତାହାକୁ ନିଜର ଆନନ୍ଦ ଭାବେ ଅନୁଭବ କରେ। ଏହି ନିବିଡ଼ ଏକାତ୍ମବୋଧ ହିଁ ମାଆର ଯଶ ଘୋଷିବା ଓ ସେବାରେ ଲାଗିବାର ପ୍ରେରଣା।",
+      "number": "୨ (ଖ)",
+      "area": "ପଦ୍ୟ",
+      "marks": 5,
+      "alternatives": [
+        {
+          "chapter": "chilikare-sayantana",
+          "pages": [
+            2,
+            3
+          ],
+          "prompt": "ପ୍ରସଙ୍ଗ ସହ ବ୍ୟାଖ୍ୟା କର — “ଦୁଃଖିମନେ ଆଶା ଉତ୍ଥାନ ପତନ-ପ୍ରାୟେ ଶିଖା ଉଠେ ପଡ଼େ ଘନ ଘନ।”",
+          "answer": "ଚିଲିକାର ସନ୍ଧ୍ୟା ଦୃଶ୍ୟରେ କବି ରାଧାନାଥ ରାୟଙ୍କ ଦୃଷ୍ଟି ନାଆଁର ମଶାଲ ଉପରେ ପଡ଼ିଛି। ତରଙ୍ଗ ସହ ବୋଇତ ଦୋହଲେ। ତାହା ସହିତ ଶିଖା କେବେ ଉପରକୁ ଉଠେ ଓ କେବେ ତଳକୁ ଖସେ। ଦୁଃଖୀ ମଣିଷର ମନରେ ଆଶା ମଧ୍ୟ କେବେ ଉଜ୍ଜ୍ୱଳ ହୋଇଉଠେ, କେବେ ମଳିନ ହୁଏ। ଜଳରାଶିର ଛୋଟ ଦୃଶ୍ୟ ସହ ଏକ ଗଭୀର ମାନସିକ ଅନୁଭୂତିକୁ କବି ଏହି ତୁଳନା ଦ୍ୱାରା ଯୋଡ଼ିଛନ୍ତି।",
+          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+          "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
+        }
+      ],
+      "title": "ସର୍ବଂସହା ମାଟି",
+      "source": "odia/sahitya-sindhu/chapter 6/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1eA1bYbXBPpzPG6MqHkGmI9656L5umbP3/view"
+    },
+    {
+      "chapter": "matrubhasa-o-lokasiksha",
+      "pages": [
+        1,
+        6
+      ],
+      "prompt": "ପ୍ରାୟ ୨୦୦ ଶବ୍ଦରେ ରଚନା ଲେଖ — ଲୋକଶିକ୍ଷାରେ ମାତୃଭାଷା।",
+      "answer": "ଲୋକଶିକ୍ଷାରେ ମାତୃଭାଷା\n\nଶିକ୍ଷାର ଅର୍ଥ କେବଳ କିଛି ଶବ୍ଦ ମନେ ରଖିବା ନୁହେଁ। ଯାହା ଶିଖିଲୁ ତାହା ବୁଝିବା, ନିଜ ଭାଷାରେ କହିବା ଓ ଜୀବନରେ କାମରେ ଲଗାଇବା ଦରକାର। ଅନେକ ଲୋକଙ୍କ ପାଖକୁ ଶିକ୍ଷା ନେବାକୁ ହେଲେ ପ୍ରଥମେ ସେମାନେ କେଉଁ ଭାଷା ବୁଝନ୍ତି ତାହା ଭାବିବାକୁ ହୁଏ। ମାତୃଭାଷା ସହ ପିଲାବେଳରୁ ଆମର ପରିଚୟ। ସେହି ଭାଷାର ଶବ୍ଦ ସହ ଘର, କାମ ଓ ଅନୁଭବର ସମ୍ପର୍କ ରହିଛି।\n\nଜଣେ ଚାଷୀର କଥା ଭାବିବା। ଚାଷ ସମ୍ପର୍କରେ ଏକ ଭଲ କଥା ଲେଖା ହେଲା, ଅଥଚ ସେ ତାହା ପଢ଼ି ବୁଝିପାରିଲେ ନାହିଁ। ଏପରି ସ୍ଥିତିରେ ଜ୍ଞାନ ଥିଲେ ମଧ୍ୟ ସେ ତାହାର ଫଳ ପାଇବେ କିପରି? ସେହି ବିଷୟକୁ ତାଙ୍କର ପରିଚିତ ଭାଷାରେ ବୁଝାଇଲେ ସେ ନିଜ ଅନୁଭବ ସହ ମିଳାଇ ଦେଖିବେ। କଥାଟି ବୁଝା ପଡ଼ିନଥିଲେ ସେ ପ୍ରଶ୍ନ କରିବେ। ଆଉ ଜଣକୁ ମଧ୍ୟ ତାହା ବୁଝାଇ ପାରିବେ। ଏପରି ଭାବେ ଗୋଟିଏ ଶିକ୍ଷା ଅନେକଙ୍କ କାମରେ ଲାଗେ।\n\nଚାଷ ବିଷୟରେ ଶିଖୁଥିବା ଜଣେ ପିଲାର କଥା ଧରାଯାଉ। ତାହାର ବହିର ଅର୍ଥ ଘରେ କେହି ବୁଝିପାରିଲେ ନିଜ କ୍ଷେତର ଅଭିଜ୍ଞତା ସହିତ ତାହାକୁ ମିଳାଇ ଦେଖିବେ। କେଉଁ କଥା ଠିକ୍ ବୁଝିଲେ ଓ କେଉଁ କଥା ପୁଣି ଜାଣିବାକୁ ହେବ, ଏ ନେଇ ପ୍ରଶ୍ନ ଉଠିବ। ଏହି ଆଲୋଚନାରେ ବିଦ୍ୟାଳୟର ପାଠ ଘରେ ମଧ୍ୟ ଜୀବନ୍ତ ରହେ।\n\nବିଦେଶୀ ଭାଷା ଆୟତ୍ତ କରିଥିବା ସ୍ୱଳ୍ପ ଲୋକଙ୍କ ପାଖରେ ସମସ୍ତ ପୁସ୍ତକ ଓ ନୂଆ ଚିନ୍ତା ଅଟକିଗଲେ ଲୋକଶିକ୍ଷାର ଉଦ୍ଦେଶ୍ୟ ପୂରଣ ହୁଏନାହିଁ। ନିଜ ଚାରିପଟର ବିଷୟକୁ ଜାଣିବା, ତାହା ଉପରେ ନିଜ ମତ କହିବା ଓ ଅନ୍ୟର ମତ ଶୁଣିବାର ସୁଯୋଗ ସବୁ ଲୋକଙ୍କୁ ମିଳିବା ଉଚିତ। ଗଣତନ୍ତ୍ରରେ ଜନତାଙ୍କ ବୁଝିବା ଶକ୍ତି ବଢ଼ିଲେ ସମାଜ ସୁଦୃଢ଼ ହୁଏ। ସେଥିପାଇଁ ଶିକ୍ଷାର ପ୍ରତ୍ୟେକ ଦ୍ୱାର ମାତୃଭାଷା ଜରିଆରେ ଖୋଲା ରଖିବା ଦରକାର।",
+      "number": "୩",
+      "area": "ରଚନା",
+      "marks": 10,
+      "alternatives": [
+        {
+          "chapter": "bela-aswattha-batabruksha",
+          "pages": [
+            1,
+            7
+          ],
+          "prompt": "ପ୍ରାୟ ୨୦୦ ଶବ୍ଦରେ ରଚନା ଲେଖ — ଆଶ୍ରୟ ଦେବାର ଆନନ୍ଦ।",
+          "answer": "ଆଶ୍ରୟ ଦେବାର ଆନନ୍ଦ\n\nବୈଶାଖର ଖରାରେ ଅନେକ ବାଟ ଚାଲିଥିବା ମଣିଷ ଯେବେ ଗଛ ଛାଇରେ ବସେ ସେବେ ସେ ବୁଝେ ଆଶ୍ରୟର ମୂଲ୍ୟ କେତେ। ରବି ପଟ୍ଟନାୟକଙ୍କ ଗଳ୍ପରେ ନଟବରଙ୍କ ପାଇଁ ଏହା କେବଳ କ୍ଳାନ୍ତି ଦୂର ହେବାର ଅନୁଭବ ନୁହେଁ। ତତଲା ପାଦକୁ ଛାଇ ମିଳିବା ସହ ତାଙ୍କ ମନକୁ ଏକ ଶିକ୍ଷା ମିଳେ।\n\nବରଗଛଟି ନିଜର ଡାଳ ମେଲାଇ ଠିଆ ହୋଇଛି। ତାହା ତଳେ ଗୋରୁ ବସିଛନ୍ତି, ଡାଳରେ ପକ୍ଷୀ ଅଛନ୍ତି, କ୍ଳାନ୍ତ ପଥିକ ଟିକେ ଶୋଇ ପଡ଼ିପାରେ। ଏତିକିରେ ତାହାର ଦାନ ଶେଷ ହୋଇନାହିଁ। ତାହାର ନିଜ ଦେହର କୋରଡ଼ରେ ବେଲ ଓ ଅଶ୍ୱତ୍ଥ ଗଜା ହୋଇ ବଢ଼ୁଛନ୍ତି। ଅନ୍ୟ ଦୁଇଟି ଗଛକୁ ସେ ନିଜଠାରୁ ଦୂରେଇ ଦେଇନାହିଁ। ଫେରି କିଛି ପାଇବାର ଦାବି ମଧ୍ୟ ସେ କାହା ପାଖରେ କରିନାହିଁ।\n\nଏହି ଦୃଶ୍ୟରେ ଆଶ୍ରୟ ପାଇବାର ଢଙ୍ଗ ସମସ୍ତଙ୍କର ଭିନ୍ନ। ପଥିକ ପାଇଁ ଦରକାର ମୁଣ୍ଡ ଉପରେ ଛାଇ, ପକ୍ଷୀ ପାଇଁ ଡାଳ ଓ କଅଁଳ ଗଛ ପାଇଁ ବଢ଼ିବାର ଜାଗା। ସମସ୍ତଙ୍କୁ ଯଦି ଏକ ପ୍ରକାରର ସାହାଯ୍ୟ ଦିଆଯାଏ, କିଛି ଆବଶ୍ୟକତା ଅପୂର୍ଣ୍ଣ ରହିଯାଏ। କିଏ କେଉଁ ଅସୁବିଧାରେ ଅଛି ସେ କଥା ଜାଣିଲେ ଆମେ ମଧ୍ୟ ତାହାର ଦରକାର ବେଳେ ପାଖରେ ରହିପାରିବା।\n\nମଣିଷ ଜୀବନରେ ମଧ୍ୟ ଏପରି ଆଶ୍ରୟ ରହିଛି। ପିଲା ନିଜ ପାଦରେ ଠିଆ ହେବା ପୂର୍ବରୁ ମାଆ ତାହାକୁ ପାଳେ। ସେହି ପିଲା ଦିନେ ବଡ଼ ହୋଇ ନିଜେ ଅନ୍ୟର ଆଶ୍ରୟ ହୋଇପାରେ। ନଟବରଙ୍କ ମନରେ ତେଣୁ ବରଗଛର ଛବି ଉପରେ ପ୍ରଥମେ ବୋଉର ଛବି ଓ ପରେ ନିଜର ଛବି ଆସିଛି। ଆମେ କାହାଠାରୁ କେତେ ପାଇଲୁ ତାହାର ହିସାବ ଛାଡ଼ି କାହାକୁ ଆଶ୍ରୟ ଦେଲୁ ତାହା ଭାବିଲେ ଜୀବନର ଅର୍ଥ ସ୍ପଷ୍ଟ ହୁଏ। ଅନ୍ୟ ପ୍ରାଣର ବିକାଶ ଦେଖିବା ହିଁ ଆଶ୍ରୟଦାତାଙ୍କ ତୃପ୍ତି।",
+          "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+          "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+        },
+        {
+          "chapter": "narenru-bibekananda",
+          "pages": [
+            2,
+            6
+          ],
+          "prompt": "ପ୍ରାୟ ୨୦୦ ଶବ୍ଦରେ ରଚନା ଲେଖ — ଅନୁଭବ ଓ ମାନବସେବା।",
+          "answer": "ଅନୁଭବ ଓ ମାନବସେବା\n\nଅନ୍ୟର ଦୁଃଖ ଅଛି ବୋଲି କହିବା ସହଜ। କିନ୍ତୁ ସେ କିପରି ରହେ, କେଉଁ ଅସୁବିଧାରେ ତାହାର ଦିନ କଟେ ଓ ତାହାକୁ ପ୍ରକୃତରେ କ’ଣ ଦରକାର, ସେ କଥା ଜାଣିବାକୁ ହେଲେ ତାହା ପାଖକୁ ଯିବାକୁ ପଡ଼େ। ସେଥିପାଇଁ ମାନବସେବାର ମୂଳରେ ଅଛି ଅନ୍ୟର ଜୀବନକୁ ଜାଣିବାର ସତ୍ୟ ଆଗ୍ରହ।\n\nବିବେକାନନ୍ଦଙ୍କ ଜୀବନରେ ଏହି ଭାବ କିପରି ଗଭୀର ହେଲା ତାହା ତାଙ୍କ ଭାରତ ପରିଭ୍ରମଣରୁ ଜଣାଯାଏ। ଗୁରୁ ଶ୍ରୀରାମକୃଷ୍ଣ ଶିଷ୍ୟଙ୍କୁ ନିଜର ମୁକ୍ତି ସହିତ ଅନ୍ୟର ମଙ୍ଗଳ କଥା ଭାବିବାକୁ ଶିଖାଇଥିଲେ। ନରେନ୍ ଏହି କଥାକୁ କେବଳ ଏକ ସୁନ୍ଦର ବାଣୀ ଭାବରେ ମନେ ରଖିନଥିଲେ। ସେ ଭିନ୍ନ ଭିନ୍ନ ସ୍ଥାନକୁ ଗଲେ ଓ ମଠ ବାହାରେ ବିଶାଳ ଜନସମାଜକୁ ଦେଖିଲେ। ଭ୍ରମଣରେ ତୀର୍ଥସ୍ଥାନ ପଡ଼ିଲା, କିନ୍ତୁ ଏହି ଯାତ୍ରାର ସବୁଠୁ ବଡ଼ ଲାଭ ଥିଲା ମଣିଷର ପରିଚୟ। ନିଜେ ଭୋକ ଓ କଷ୍ଟ ଅନୁଭବ କଲେ ଦରିଦ୍ର ଲୋକର ଅବସ୍ଥା ଆଉ ସୁଦୂରର ଏକ ଖବର ହୋଇ ରହେନାହିଁ।\n\nସେବା କରୁଥିବା ଲୋକ ପାଖରେ ଦୁଇଟି ଶକ୍ତି ରହିବା ଦରକାର। ପ୍ରଥମଟି ହେଉଛି ଅନ୍ୟର ଅବସ୍ଥା ଦେଖିବାର ଧୈର୍ଯ୍ୟ। ଦ୍ୱିତୀୟଟି ହେଉଛି ସେହି ଅବସ୍ଥା ବଦଳାଇବାକୁ କିଛି କାମ କରିବାର ସଙ୍କଳ୍ପ। ପ୍ରଥମଟି ନ ଥିଲେ ଆମ ସାହାଯ୍ୟ ଭୁଲ ବାଟରେ ଯାଇପାରେ। ଦ୍ୱିତୀୟଟି ବିନା କରୁଣା ନିଜ ମନ ଭିତରେ ରହିଯାଏ। ଭ୍ରମଣର କଷ୍ଟ ଭିତରେ ଦେଶକୁ ଚିହ୍ନିବା ଏହି ଦୁଇ ଶକ୍ତିକୁ ଏକାଠି କରିଥିଲା।\n\nଅନୁଭବ ଆମର ଦୃଷ୍ଟି ବଦଳାଏ। ଯିଏ ଆଗେ କେବଳ ନିଜ ସାଧନା ଭାବୁଥିଲେ ସେ ଏବେ ଲୋକଙ୍କ ଉନ୍ନତିକୁ ସାଧନାର ଅଂଶ କରନ୍ତି। ମଣିଷ ପାଇଁ କାମ କରିବା ପୂର୍ବରୁ ତାହାର କଥା ଶୁଣିବା, ପାଖରେ ରହିବା ଓ ଦୁଃଖକୁ ସମ୍ମାନର ସହ ବୁଝିବା ଦରକାର। ଏଭଳି ବୋଧରୁ ଜନ୍ମିଥିବା ସେବା ହୃଦୟବାନ ଓ ଦାୟିତ୍ୱପୂର୍ଣ୍ଣ ହୁଏ।",
+          "title": "ନରେନ୍‌ରୁ ବିବେକାନନ୍ଦ",
+          "source": "odia/sahitya-sindhu/chapter 10/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1lFEuWD9XS6qA1fIEaUjLTOfK7gSdjjYL/view"
+        }
+      ],
+      "title": "ମାତୃଭାଷା ଓ ଲୋକଶିକ୍ଷା",
+      "source": "odia/sahitya-sindhu/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1hSlLKgTpBP4eFF7xoJMeNacuH9anq0Dp/view"
+    },
+    {
+      "chapter": "chilikare-sayantana",
+      "pages": [
+        1,
+        3
+      ],
+      "prompt": "ଚିଲିକାର ସନ୍ଧ୍ୟାବର୍ଣ୍ଣନା ପଢ଼ି କ’ଣ ଭଲ ଲାଗିଲା ଜଣାଇ ସାଙ୍ଗକୁ ପ୍ରାୟ ୧୦୦ ଶବ୍ଦରେ ପତ୍ର ଲେଖ।",
+      "answer": "ନିଜ ଗ୍ରାମ\nତାରିଖ …\nପ୍ରିୟ ବନ୍ଧୁ,\nଗତକାଲି ଚିଲିକାର ସନ୍ଧ୍ୟା ଉପରେ ରାଧାନାଥ ରାୟଙ୍କ କବିତା ପଢ଼ିଲି। ତୋତେ ଏକ କଥା ଲେଖିବାକୁ ଇଚ୍ଛା ହେଲା। ମାଛ ଧରି ଫେରୁଥିବା ଲୋକେ ଘରକୁ ମନେ ପକାଉଛନ୍ତି। ଦୂରର ନାଆଁ ଛାୟା ପରି ଦିଶୁଛି। ମଶାଲ ଆଲୋକ ତରଙ୍ଗରେ କେବେ ଉଠୁଛି, କେବେ ପଡ଼ୁଛି। କବି ଏହି ସାମାନ୍ୟ ଦୃଶ୍ୟରେ ଦୁଃଖୀ ଲୋକର ଆଶା ଦେଖିବା କଥାଟି ମୋ ମନକୁ ବେଶି ଛୁଇଁଲା। ପରେ ଜ୍ୟୋତ୍ସ୍ନା ବଢ଼େ ଓ ଲୋକଙ୍କ କୋଳାହଳ ଥମିଯାଏ। ଲାଗେ ଯେମିତି ଆଖି ଆଗରେ ସମୟ ବଦଳୁଛି। ତୋର ପଢ଼ା ସରିଲେ କେଉଁ ଚିତ୍ର ତୋତେ ଅଧିକ ଭଲ ଲାଗିଲା ଲେଖିବୁ। ଆମେ ପୁଣି ମିଶି କବିତାଟି ଆବୃତ୍ତି କରିବା।\nତୋ ଉତ୍ତର ପାଇଲେ ଆମ ଦୁହିଁଙ୍କୁ ଭିନ୍ନ ଚିତ୍ର କାହିଁକି ଭଲ ଲାଗିଲା ସେ କଥା ଶ୍ରେଣୀରେ ମଧ୍ୟ ଆଲୋଚନା କରିବା।\nତୋର ବନ୍ଧୁ\nକ",
+      "number": "୪ (କ)",
+      "area": "ପତ୍ରଲିଖନ",
+      "marks": 5,
+      "alternatives": [
+        {
+          "chapter": "konarka",
+          "pages": [
+            7,
+            9
+          ],
+          "prompt": "ଧରମାର କାହାଣୀରୁ କ’ଣ ଶିଖିଲ ଜଣାଇ ସାନଭାଇକୁ ପ୍ରାୟ ୧୦୦ ଶବ୍ଦରେ ପତ୍ର ଲେଖ।",
+          "answer": "ନିଜ ଗ୍ରାମ\nତାରିଖ …\nସ୍ନେହର ସାନଭାଇ,\nତୁ ଥରେ ପଚାରିଥିଲୁ କାହାକୁ ସାହସୀ କୁହାଯାଏ। କୋଣାର୍କ ଏକାଙ୍କିକା ପଢ଼ି ତୋ କଥା ମନେ ପଡ଼ିଲା। ଧରମା ବାଳକ ହୋଇ ମଧ୍ୟ ମନ୍ଦିର ନିର୍ମାଣର କଠିନ କାମରେ ସଫଳ ହୁଏ। ଏତିକିରେ ସେ ଶ୍ରେଷ୍ଠ ବୋଲି ମୁଁ ଭାବୁନାହିଁ। ନିଜ ସଫଳତାରେ ଶିଳ୍ପୀମାନଙ୍କୁ ବିପଦ ଆସିବ ଶୁଣି ସେ ସେମାନଙ୍କ ରକ୍ଷା କଥା ଆଗେ ଭାବେ। ବାପାଙ୍କୁ ଛାଡ଼ିବାର ଦୁଃଖ ମଧ୍ୟ ତାକୁ ସେହି ନିଷ୍ପତ୍ତିରୁ ଫେରାଇ ପାରେନାହିଁ। ଆମ ଜୀବନରେ ଏପରି ଘଟଣା ନ ଆସିଲେ ବି ଅନ୍ୟର ଅସୁବିଧାକୁ ଭାବିବାର ଅଭ୍ୟାସ ଆମେ କରିପାରିବା। ପାଠଟି ପଢ଼ି ତୋ ମତ ମୋତେ ଲେଖିବୁ।\nବାପା ଓ ପୁଅଙ୍କ ଶେଷ କଥାବାର୍ତ୍ତାଟିକୁ ମୁଁ ବାରମ୍ବାର ପଢ଼ିଲି। ତୁ ବି ସେ ଦୃଶ୍ୟଟି ପଢ଼ିଲେ ଧରମାର ମନ କଥା ଆହୁରି ଭଲ ବୁଝିବୁ।\nତୋର ଭାଇ\nକ",
+          "title": "କୋଣାର୍କ",
+          "source": "odia/sahitya-sindhu/chapter 16/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1-p9aKK1vAHGW0NUOc_QX9A2uqz8Grt3Y/view"
+        }
+      ],
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
+    },
+    {
+      "chapter": "matrubhasa-o-lokasiksha",
+      "pages": [
+        1,
+        5
+      ],
+      "prompt": "ବିଦ୍ୟାଳୟ ପାଠାଗାରରେ ସହଜ ଓଡ଼ିଆ ପୁସ୍ତକ ପାଇଁ ପ୍ରଧାନଶିକ୍ଷକଙ୍କୁ ପ୍ରାୟ ୧୦୦ ଶବ୍ଦରେ ଦରଖାସ୍ତ ଲେଖ।",
+      "answer": "ମାନନୀୟ ପ୍ରଧାନଶିକ୍ଷକ ମହୋଦୟ,\nନିଜ ବିଦ୍ୟାଳୟ।\nବିଷୟ — ପାଠାଗାର ପାଇଁ ସହଜ ଓଡ଼ିଆ ପୁସ୍ତକ।\nମହାଶୟ,\nବିନୀତ ନିବେଦନ ଏହି କି, ଆମେ ଦଶମ ଶ୍ରେଣୀର ଛାତ୍ରଛାତ୍ରୀମାନେ ମାତୃଭାଷାରେ ବିଭିନ୍ନ ବିଷୟ ପଢ଼ିବାକୁ ଚାହୁଁଛୁ। ସହଜ ଓଡ଼ିଆରେ କୃଷି, ବିଜ୍ଞାନ ଓ ସାହିତ୍ୟ ସମ୍ପର୍କିତ ବହି ମିଳିଲେ ପାଠର ଅର୍ଥ ନିଜେ ବୁଝିବା ଓ ସାଙ୍ଗମାନଙ୍କୁ ବୁଝାଇବା ସୁବିଧା ହେବ। ଏହି ବହିଗୁଡ଼ିକୁ ପାଳିକରି ପଢ଼ିବା ଏବଂ ଯାହା ଶିଖିଲୁ ତାହା ନିଜ ଭାଷାରେ କହିବାକୁ ଆମେ ଇଚ୍ଛୁକ।\nଏଣୁ ଉପଯୁକ୍ତ ପୁସ୍ତକ ଚୟନ କରି ପାଠାଗାରରେ ଉପଲବ୍ଧ କରାଇବାକୁ ଆପଣଙ୍କୁ ସବିନୟ ଅନୁରୋଧ। ବହି ପଢ଼ିବା ଓ ଠିକ୍ ସମୟରେ ଫେରାଇବାର ନିୟମ ଆମେ ମାନିବୁ।\nପ୍ରତ୍ୟେକ ସପ୍ତାହରେ ଜଣେ ସାଙ୍ଗ ପଢ଼ିଥିବା ବହିରୁ ଗୋଟିଏ ଅଂଶ ଅନ୍ୟମାନଙ୍କୁ ଶୁଣାଇବେ। ଏଥିରେ ବହିଗୁଡ଼ିକର ନିୟମିତ ବ୍ୟବହାର ହେବ।\nତାରିଖ …\nଆପଣଙ୍କର ଆଜ୍ଞାଧୀନ ଛାତ୍ର/ଛାତ୍ରୀ\nକ, ଦଶମ ଶ୍ରେଣୀ",
+      "number": "୪ (ଖ)",
+      "area": "ଦରଖାସ୍ତ",
+      "marks": 5,
+      "alternatives": [
+        {
+          "chapter": "jaga-bandhanahara",
+          "pages": [
+            1,
+            2
+          ],
+          "prompt": "ବିଦ୍ୟାଳୟରେ କବିତା ଆବୃତ୍ତି ସଭା ପାଇଁ ଅନୁମତି ମାଗି ପ୍ରାୟ ୧୦୦ ଶବ୍ଦରେ ଦରଖାସ୍ତ ଲେଖ।",
+          "answer": "ମାନନୀୟ ପ୍ରଧାନଶିକ୍ଷକ ମହୋଦୟ,\nନିଜ ବିଦ୍ୟାଳୟ।\nବିଷୟ — କବିତା ଆବୃତ୍ତି ସଭା ପାଇଁ ଅନୁମତି।\nମହାଶୟ,\nବିନୀତ ନିବେଦନ କରୁଛୁ ଯେ ଆମ ଶ୍ରେଣୀର ଛାତ୍ରଛାତ୍ରୀମାନେ ପାଠ୍ୟ କବିତାକୁ ନେଇ ଏକ ଆବୃତ୍ତି ସଭା କରିବାକୁ ଇଚ୍ଛା କରୁଛୁ। ଜାଗ ବନ୍ଧନହରା ଭଳି କବିତାରେ ଥିବା ଆହ୍ୱାନ ସ୍ୱର ଓ ଭାବ ସହ ପଢ଼ିଲେ ଅଧିକ ସ୍ପଷ୍ଟ ହୁଏ। ପ୍ରତ୍ୟେକ ଆବୃତ୍ତି ପରେ ଜଣେ ସାଙ୍ଗ ନିଜ ଭାଷାରେ କବିତାର ମୁଖ୍ୟ କଥା କହିବେ। ଶିକ୍ଷକଙ୍କ ପରାମର୍ଶ ନେଇ ଆମେ ସମୟ ଓ କ୍ରମ ନିର୍ଦ୍ଧାରଣ କରିବୁ।\nସୁବିଧାଜନକ ଦିନ ଓ ସ୍ଥାନ ନିର୍ଦ୍ଦେଶ କରି ସଭାଟି ପାଇଁ ଅନୁମତି ଦେବାକୁ ଅନୁରୋଧ।\nସଭାରେ କେଉଁ କ୍ରମରେ କିଏ ପାଠ କରିବେ ତାହା ଆଗରୁ ଲେଖି ଶିକ୍ଷକଙ୍କୁ ଦେବୁ। ସମସ୍ତଙ୍କୁ ଶୁଣିବାର ସୁଯୋଗ ଦେବୁ।\nତାରିଖ …\nଆପଣଙ୍କର ଆଜ୍ଞାଧୀନ ଛାତ୍ର/ଛାତ୍ରୀ\nକ, ଦଶମ ଶ୍ରେଣୀ",
+          "title": "ଜାଗ ବନ୍ଧନହରା",
+          "source": "odia/sahitya-sindhu/chapter 5/chapter.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1teYMGSRjWEHzlooJDEWn_E2e2BFsBz0Z/view"
+        }
+      ],
+      "title": "ମାତୃଭାଷା ଓ ଲୋକଶିକ୍ଷା",
+      "source": "odia/sahitya-sindhu/chapter 9/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1hSlLKgTpBP4eFF7xoJMeNacuH9anq0Dp/view"
+    },
+    {
+      "chapter": "bela-aswattha-batabruksha",
+      "pages": [
+        1,
+        7
+      ],
+      "prompt": "ନିମ୍ନ ମୌଳିକ ଅନୁଚ୍ଛେଦଟି ପଢ଼।\n\nଖରାଦିନେ ଚାଲୁଥିବା ପଥିକ ଏକ ବଡ଼ ଗଛ ତଳେ ଅଟକିଲା। ତାକୁ ଲାଗିଲା ସେ ଏକା ସେହି ଛାଇର ଅତିଥି। ଟିକେ ପରେ ଉପରକୁ ଚାହିଁ ସେ ଡାଳରେ ପକ୍ଷୀ ଦେଖିଲା। ପାଖରେ ଗୋରୁ ବି ବିଶ୍ରାମ କରୁଥିଲେ। ଗଣ୍ଡିର ଖୋଲ ଭିତରେ ଦୁଇଟି ସାନ ଗଛ ବଢ଼ୁଥିଲେ। ଗଛଟି ଏତେ ଅତିଥିଙ୍କୁ ଆଶ୍ରୟ ଦେଇ ବି କାହାଠାରୁ କିଛି ମାଗୁନାହିଁ। ପଥିକ ଭାବିଲା, ନିଜେ ଛାଇ ପାଇବାରେ ଯେତେ ସୁଖ ଅଛି, ଆଉ କାହା ପାଇଁ ଟିକିଏ ଛାଇ ହୋଇପାରିଲେ ତାହାଠାରୁ ବଡ଼ ଆନନ୍ଦ ମିଳିବ।\n\nପଥିକ କାହିଁକି ଅଟକିଲା?",
+      "answer": "ଖରାରେ ଚାଲିବା ପରେ ଗଛର ଛାଇରେ ବିଶ୍ରାମ କରିବାକୁ ସେ ଅଟକିଲା।",
+      "number": "୫ (କ)",
+      "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
+      "marks": 2,
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    },
+    {
+      "chapter": "bela-aswattha-batabruksha",
+      "pages": [
+        1,
+        7
+      ],
+      "prompt": "ତାହାର ପ୍ରଥମ ଧାରଣା କ’ଣ ଥିଲା?",
+      "answer": "ସେ ନିଜକୁ ଗଛ ଛାଇର ଏକମାତ୍ର ଅତିଥି ବୋଲି ଭାବିଥିଲା।",
+      "number": "୫ (ଖ)",
+      "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
+      "marks": 2,
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    },
+    {
+      "chapter": "bela-aswattha-batabruksha",
+      "pages": [
+        1,
+        7
+      ],
+      "prompt": "ଗଛର ଖୋଲ ଆଉ କାହାର ଆଶ୍ରୟ ଥିଲା?",
+      "answer": "ସେଠାରେ ଦୁଇଟି ସାନ ଗଛ ବଢ଼ୁଥିଲେ।",
+      "number": "୫ (ଗ)",
+      "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
+      "marks": 2,
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    },
+    {
+      "chapter": "bela-aswattha-batabruksha",
+      "pages": [
+        1,
+        7
+      ],
+      "prompt": "ଗଛର କେଉଁ ଗୁଣ ପଥିକକୁ ଆକର୍ଷଣ କଲା?",
+      "answer": "ପ୍ରତିବଦଳରେ କିଛି ନ ମାଗି ଗଛ ଅନେକ ଜୀବକୁ ଆଶ୍ରୟ ଦେଉଥିଲା।",
+      "number": "୫ (ଘ)",
+      "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
+      "marks": 2,
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    },
+    {
+      "chapter": "bela-aswattha-batabruksha",
+      "pages": [
+        1,
+        7
+      ],
+      "prompt": "ଏଠାରେ ଅନ୍ୟ ପାଇଁ ଛାଇ ହେବାର ଅର୍ଥ କ’ଣ?",
+      "answer": "ଅନ୍ୟର କଷ୍ଟ ସମୟରେ ତାହାକୁ ସାହାଯ୍ୟ ଓ ଆଶ୍ରୟ ଦେବା।",
+      "number": "୫ (ଙ)",
+      "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
+      "marks": 2,
+      "title": "ବେଲ, ଅଶ୍ୱତ୍ଥ ଓ ବଟବୃକ୍ଷ",
+      "source": "odia/sahitya-sindhu/chapter 14/chapter.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1Blp665c8CIoPyOJyw6UjY1DRkOwzkyQC/view"
+    }
+  ]
+};

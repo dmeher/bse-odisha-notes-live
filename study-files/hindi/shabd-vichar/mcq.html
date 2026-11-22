@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>शब्द विचार · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>शब्द विचार</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1Y6hG-G3c0anG16-_CEcId6AkDLzS2mO1/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. आकाशର ପର୍ଯ୍ୟାୟବାଚୀ କେଉଁଟି?</h2>
+<ol type="A"><li>नीर</li><li>गगन</li><li>पावक</li><li>नयन</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. गगन</b></p>
+<div class="lesson-body"><p>ଗଗନ ଓ ଆକାଶ ଏକା ଅର୍ଥର। ଅନ୍ୟ ବିକଳ୍ପଗୁଡ଼ିକ ଅଗ୍ନି, ଆଖି ଓ ପାଣି ସହ ସମ୍ବନ୍ଧିତ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧–୧୪</small></article>
+<article><h2>୨. नयन किसका पर्यायवाची है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>आँख</li><li>जल</li><li>अग्नि</li><li>आकाश</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. आँख</b></p>
+<div class="lesson-body"><p>नयन, नेत्र ଓ आँख ଏକ ଅର୍ଥ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୩. कौन-सा शब्द जल के समान अर्थ में आता है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>तिमिर</li><li>नीर</li><li>नभ</li><li>पावक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. नीर</b></p>
+<div class="lesson-body"><p>नीर ଅର୍ଥ ପାଣି। ଅନ୍ୟ ବିକଳ୍ପ ଆକାଶ, ଅନ୍ଧାର ଓ ନିଆଁ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୪. अनुकूल का विलोम चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>प्रतिकूल</li><li>अनुकूलित</li><li>अनुकूलता</li><li>अनुकूलन</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. प्रतिकूल</b></p>
+<div class="lesson-body"><p>ପାଠର ଯୋଡ଼ା ଅନୁସାରେ ଅନୁକୂଳତାର ବିପରୀତ ପ୍ରତିକୂଳତା।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୫. सत्य के विपरीत अर्थ वाला शब्द कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>असत्य</li><li>सच्चाई</li><li>सत्यता</li><li>सच</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. असत्य</b></p>
+<div class="lesson-body"><p>अ ଯୋଡ଼ି ଏଠି ବିପରୀତ ଅର୍ଥ ହୋଇଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୬. सजीव के लिए उचित विलोम कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>जीवित</li><li>निर्जीव</li><li>जीवन</li><li>जीव</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. निर्जीव</b></p>
+<div class="lesson-body"><p>ପ୍ରାଣ ଥିବା ଓ ପ୍ରାଣ ନଥିବା ଅର୍ଥରେ ଦୁଇ ଶବ୍ଦ ବିପରୀତ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୭. “अंधकार” के लिए समानार्थी शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पद्म</li><li>तट</li><li>तिमिर</li><li>अश्व</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. तिमिर</b></p>
+<div class="lesson-body"><p>अंधकार ଓ तिमिर ଏକ ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା ଶବ୍ଦ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୮. “घोड़ा” के लिए समानार्थी शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>अश्व</li><li>पद्म</li><li>तिमिर</li><li>तट</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. अश्व</b></p>
+<div class="lesson-body"><p>घोड़ा ଓ अश्व ଏକ ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା ଶବ୍ଦ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୯. “कमल” के लिए समानार्थी शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पद्म</li><li>तट</li><li>तिमिर</li><li>अश्व</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. पद्म</b></p>
+<div class="lesson-body"><p>कमल ଓ पद्म ଏକ ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା ଶବ୍ଦ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୦. “किनारा” के लिए समानार्थी शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पद्म</li><li>अश्व</li><li>तट</li><li>तिमिर</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. तट</b></p>
+<div class="lesson-body"><p>किनारा ଓ तट ଏକ ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା ଶବ୍ଦ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୧. “रात” के अर्थ से मेल खाने वाला पद कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>यामिनी</li><li>शैल</li><li>सागर</li><li>तरु</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. यामिनी</b></p>
+<div class="lesson-body"><p>ପାଠର ପର୍ଯ୍ୟାୟବାଚୀ ତାଲିକାରେ ଏହି ଅର୍ଥ ପାଇଁ रात ସହ यामिनी ମେଳ ଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୨. “वृक्ष” के अर्थ से मेल खाने वाला पद कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>शैल</li><li>तरु</li><li>सागर</li><li>यामिनी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. तरु</b></p>
+<div class="lesson-body"><p>ପାଠର ପର୍ଯ୍ୟାୟବାଚୀ ତାଲିକାରେ ଏହି ଅର୍ଥ ପାଇଁ वृक्ष ସହ तरु ମେଳ ଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୩. “समुद्र” के अर्थ से मेल खाने वाला पद कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सागर</li><li>शैल</li><li>यामिनी</li><li>तरु</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. सागर</b></p>
+<div class="lesson-body"><p>ପାଠର ପର୍ଯ୍ୟାୟବାଚୀ ତାଲିକାରେ ଏହି ଅର୍ଥ ପାଇଁ समुद्र ସହ सागर ମେଳ ଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୪. “पर्वत” के अर्थ से मेल खाने वाला पद कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>यामिनी</li><li>शैल</li><li>सागर</li><li>तरु</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. शैल</b></p>
+<div class="lesson-body"><p>ପାଠର ପର୍ଯ୍ୟାୟବାଚୀ ତାଲିକାରେ ଏହି ଅର୍ଥ ପାଇଁ पर्वत ସହ शैल ମେଳ ଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୫. किस शब्द का अर्थ “मित्र” है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सौरभ</li><li>सखा</li><li>मीन</li><li>दामिनी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. सखा</b></p>
+<div class="lesson-body"><p>मित्र ପାଇଁ ଦିଆଯାଇଥିବା ପର୍ଯ୍ୟାୟଶବ୍ଦ सखा।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୬. किस शब्द का अर्थ “मछली” है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>दामिनी</li><li>सखा</li><li>सौरभ</li><li>मीन</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. मीन</b></p>
+<div class="lesson-body"><p>मछली ପାଇଁ ଦିଆଯାଇଥିବା ପର୍ଯ୍ୟାୟଶବ୍ଦ मीन।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୭. किस शब्द का अर्थ “बिजली” है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मीन</li><li>दामिनी</li><li>सौरभ</li><li>सखा</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. दामिनी</b></p>
+<div class="lesson-body"><p>बिजली ପାଇଁ ଦିଆଯାଇଥିବା ପର୍ଯ୍ୟାୟଶବ୍ଦ दामिनी।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୮. किस शब्द का अर्थ “सुगंध” है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सखा</li><li>मीन</li><li>दामिनी</li><li>सौरभ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. सौरभ</b></p>
+<div class="lesson-body"><p>सुगंध ପାଇଁ ଦିଆଯାଇଥିବା ପର୍ଯ୍ୟାୟଶବ୍ଦ सौरभ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୧୯. “आस्तिक” के विपरीत अर्थ वाला शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>नास्तिक</li><li>अनिच्छा</li><li>वियोग</li><li>अपयश</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. नास्तिक</b></p>
+<div class="lesson-body"><p>आस्तिकର ଓଲଟା ଭାବ नास्तिक ଦ୍ୱାରା ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୦. “इच्छा” के विपरीत अर्थ वाला शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>वियोग</li><li>अपयश</li><li>नास्तिक</li><li>अनिच्छा</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. अनिच्छा</b></p>
+<div class="lesson-body"><p>इच्छाର ଓଲଟା ଭାବ अनिच्छा ଦ୍ୱାରା ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୧. “यश” के विपरीत अर्थ वाला शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>वियोग</li><li>अनिच्छा</li><li>नास्तिक</li><li>अपयश</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. अपयश</b></p>
+<div class="lesson-body"><p>यशର ଓଲଟା ଭାବ अपयश ଦ୍ୱାରା ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୨. “योग” के विपरीत अर्थ वाला शब्द चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>वियोग</li><li>नास्तिक</li><li>अनिच्छा</li><li>अपयश</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. वियोग</b></p>
+<div class="lesson-body"><p>योगର ଓଲଟା ଭାବ वियोग ଦ୍ୱାରା ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୩. रिक्त जोड़ी पूरी कीजिए — जय : विपरीत अर्थ ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>प्रदान</li><li>पराजय</li><li>अवनति</li><li>परतंत्र</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. पराजय</b></p>
+<div class="lesson-body"><p>जय ଓ पराजय ବିପରୀତାର୍ଥକ ଯୁଗଳ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୪. रिक्त जोड़ी पूरी कीजिए — उन्नति : विपरीत अर्थ ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>प्रदान</li><li>पराजय</li><li>परतंत्र</li><li>अवनति</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. अवनति</b></p>
+<div class="lesson-body"><p>उन्नति ଓ अवनति ବିପରୀତାର୍ଥକ ଯୁଗଳ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୫. रिक्त जोड़ी पूरी कीजिए — स्वतंत्र : विपरीत अर्थ ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>प्रदान</li><li>पराजय</li><li>अवनति</li><li>परतंत्र</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. परतंत्र</b></p>
+<div class="lesson-body"><p>स्वतंत्र ଓ परतंत्र ବିପରୀତାର୍ଥକ ଯୁଗଳ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୬. रिक्त जोड़ी पूरी कीजिए — आदान : विपरीत अर्थ ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>अवनति</li><li>परतंत्र</li><li>पराजय</li><li>प्रदान</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. प्रदान</b></p>
+<div class="lesson-body"><p>आदान ଓ प्रदान ବିପରୀତାର୍ଥକ ଯୁଗଳ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୨୭. “उदय” के लिए उचित विलोम पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कोमल</li><li>उत्तर</li><li>अस्त</li><li>पक्का</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. अस्त</b></p>
+<div class="lesson-body"><p>ଅଧ୍ୟାୟର ତାଲିକାରେ उदय ଓ अस्त ପରସ୍ପର ବିପରୀତ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୭</small></article>
+<article><h2>୨୮. “कठोर” के लिए उचित विलोम पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>अस्त</li><li>कोमल</li><li>उत्तर</li><li>पक्का</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. कोमल</b></p>
+<div class="lesson-body"><p>ଅଧ୍ୟାୟର ତାଲିକାରେ कठोर ଓ कोमल ପରସ୍ପର ବିପରୀତ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୭</small></article>
+<article><h2>୨୯. “दक्षिण” के लिए उचित विलोम पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>अस्त</li><li>पक्का</li><li>उत्तर</li><li>कोमल</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. उत्तर</b></p>
+<div class="lesson-body"><p>ଅଧ୍ୟାୟର ତାଲିକାରେ दक्षिण ଓ उत्तर ପରସ୍ପର ବିପରୀତ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୭</small></article>
+<article><h2>୩୦. “कच्चा” के लिए उचित विलोम पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पक्का</li><li>उत्तर</li><li>कोमल</li><li>अस्त</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. पक्का</b></p>
+<div class="lesson-body"><p>ଅଧ୍ୟାୟର ତାଲିକାରେ कच्चा ଓ पक्का ପରସ୍ପର ବିପରୀତ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୭</small></article>
+
+</main></body></html>

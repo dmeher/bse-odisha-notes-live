@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">AT ବ୍ୟାସ, B ବୃତ୍ତ ଉପରେ | AB ରଶ୍ମି ଓ Bର ସ୍ପର୍ଶକ, Tର ସ୍ପର୍ଶକକୁ P ଓ Qରେ ଛେଦ କରନ୍ତି |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="238.74" cy="187.46" r="100.04" stroke="#244355" stroke-width="2.5"/>
+<polyline points="138.70,187.46 338.78,187.46" stroke="#244355" stroke-width="2.35"/>
+<polyline points="138.70,187.46 338.78,52.51" stroke="#244355" stroke-width="2.35"/>
+<polyline points="338.78,229.14 338.78,32.50" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="231.17,76.51 361.30,129.08" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="138.70" cy="187.46" r="2.7" fill="#244355"/>
+<text x="125.11" y="191.05" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="276.21" cy="94.71" r="2.7" fill="#244355"/>
+<text x="276.21" y="79.71" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="338.78" cy="187.46" r="2.7" fill="#244355"/>
+<text x="351.78" y="191.46" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">T</text>
+<circle cx="238.74" cy="187.46" r="2.7" fill="#244355"/>
+<text x="238.74" y="202.46" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">O</text>
+<circle cx="338.78" cy="52.51" r="2.7" fill="#244355"/>
+<text x="351.78" y="52.51" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">P</text>
+<circle cx="338.78" cy="119.98" r="2.7" fill="#244355"/>
+<text x="351.78" y="120.98" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">Q</text>
+</svg>

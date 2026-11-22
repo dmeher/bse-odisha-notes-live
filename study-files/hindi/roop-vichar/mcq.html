@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>रूप विचार · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>रूप विचार</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. बच्चे दौड़ते हैंରେ दौड़ते हैं କେଉଁ ପ୍ରକାର କ୍ରିୟା?</h2>
+<ol type="A"><li>द्विकर्मक</li><li>प्रेरणार्थक</li><li>सकर्मक</li><li>अकर्मक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. अकर्मक</b></p>
+<div class="lesson-body"><p>ଏଠି ଦୌଡ଼ିବା କାର୍ଯ୍ୟର କର୍ମ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧–୬୪</small></article>
+<article><h2>୨. समूह का बोध कराने वाली संज्ञा कौन-सी है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>व्यक्तिवाचक</li><li>द्रव्यवाचक</li><li>भाववाचक</li><li>समूहवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. समूहवाचक</b></p>
+<div class="lesson-body"><p>ବ୍ୟକ୍ତି ବା ବସ୍ତୁଙ୍କ ସମୂହ ବୁଝାଉଥିବା ନାମ समूहवाचक।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୩. मनुष्य से बनी भाववाचक संज्ञा चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मनुष्यजाति</li><li>मनुष्यता</li><li>मनुष्यगण</li><li>मनुष्यलोक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. मनुष्यता</b></p>
+<div class="lesson-body"><p>ପାଠରେ मनुष्यताକୁ मनुष्यରୁ ଗଠିତ ଭାବବାଚକ ଶବ୍ଦ ଭାବେ ଦିଆଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୪. लड़की के साथ कौन-सा क्रिया-रूप मेल खाता है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>जाता है</li><li>जाती है</li><li>जाते हैं</li><li>जाती हैं वे</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. जाती है</b></p>
+<div class="lesson-body"><p>ଏକବଚନ ସ୍ତ୍ରୀଲିଙ୍ଗ କର୍ତ୍ତା ପାଇଁ जाती है।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧</small></article>
+<article><h2>୫. अच्छे बच्चे के बाद बहुवचन के अनुसार क्रिया चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पढ़ूँगा</li><li>पढ़ता है</li><li>पढ़ती है</li><li>पढ़ते हैं</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. पढ़ते हैं</b></p>
+<div class="lesson-body"><p>ବହୁବଚନ କର୍ତ୍ତା बच्चे ସହ पढ़ते हैं ମେଳ ଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧</small></article>
+<article><h2>୬. सम्प्रदान के लिए पाठ में कौन-सा परसर्ग दिया है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>से होकर</li><li>के लिए</li><li>पर</li><li>के ऊपर</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. के लिए</b></p>
+<div class="lesson-body"><p>ଯାହା ପାଇଁ କାମ ହୁଏ ତାକୁ के लिए ଦ୍ୱାରା ସୂଚାଯାଇପାରେ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨୪–୨୫</small></article>
+<article><h2>୭. संज्ञा के स्थान पर आने वाले पद का नाम क्या है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सर्वनाम</li><li>उपसर्ग</li><li>प्रत्यय</li><li>विशेषण</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. सर्वनाम</b></p>
+<div class="lesson-body"><p>ସଂଜ୍ଞା ପରିବର୍ତ୍ତେ ସର୍ବନାମ ବ୍ୟବହାର ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫</small></article>
+<article><h2>୮. मैं किस पुरुष का सर्वनाम है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कोई पुरुष नहीं</li><li>उत्तम पुरुष</li><li>मध्यम पुरुष</li><li>अन्य पुरुष</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. उत्तम पुरुष</b></p>
+<div class="lesson-body"><p>ବକ୍ତା ନିଜ ପାଇଁ मैं ବ୍ୟବହାର କରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫</small></article>
+<article><h2>୯. पाँच छात्र में पाँच किस प्रकार का विशेषण है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>निश्चित संख्यावाचक</li><li>सार्वनामिक</li><li>परिमाणवाचक</li><li>गुणवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. निश्चित संख्यावाचक</b></p>
+<div class="lesson-body"><p>ଛାତ୍ରଙ୍କ ନିର୍ଦ୍ଦିଷ୍ଟ ସଂଖ୍ୟା ପ୍ରକାଶ ପାଇଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦–୪୧</small></article>
+<article><h2>୧୦. सुरेश पत्र लिखता है में कर्म चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सुरेश</li><li>पत्र</li><li>है</li><li>लिखता</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. पत्र</b></p>
+<div class="lesson-body"><p>‘କ’ଣ ଲେଖେ’ର ଉତ୍ତର पत्र।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩</small></article>
+<article><h2>୧୧. शिक्षक ने छात्र को इतिहास पढ़ाया। क्रिया का भेद क्या है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>समूहवाचक</li><li>अकर्मक</li><li>द्विकर्मक</li><li>भाववाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. द्विकर्मक</b></p>
+<div class="lesson-body"><p>छात्र को ଓ इतिहास ଦୁଇ କର୍ମ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୪</small></article>
+<article><h2>୧୨. देख लेना किसका उदाहरण है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>यौगिक क्रिया</li><li>सर्वनाम</li><li>मूल धातु</li><li>विशेषण</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. यौगिक क्रिया</b></p>
+<div class="lesson-body"><p>ପାଠରେ देख लेनाକୁ ଦୁଇ କ୍ରିୟାର ମେଳରୁ ହୋଇଥିବା ଯୌଗିକ କ୍ରିୟା ଭାବେ ରଖାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩</small></article>
+<article><h2>୧୩. पढ़ की द्वितीय प्रेरणार्थक क्रिया कौन-सी है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पढ़कर</li><li>पढ़ाना</li><li>पढ़ना</li><li>पढ़वाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. पढ़वाना</b></p>
+<div class="lesson-body"><p>ପ୍ରଥମ ରୂପ पढ़ाना ଓ ଦ୍ୱିତୀୟ पढ़वाना।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୮</small></article>
+<article><h2>୧୪. जाऊँगा किस काल का रूप है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पूर्ण भूत</li><li>भविष्यत्</li><li>वर्तमान</li><li>भूत</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. भविष्यत्</b></p>
+<div class="lesson-body"><p>କାମ ଆଗକୁ ହେବ ବୋଲି କ୍ରିୟା ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୧–୫୪</small></article>
+<article><h2>୧୫. जिस पद का रूप लिंग या वचन से नहीं बदलता, वह क्या है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सर्वनाम का वचन</li><li>अव्यय</li><li>संज्ञा का लिंग</li><li>क्रिया का काल</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. अव्यय</b></p>
+<div class="lesson-body"><p>अव्ययର ରୂପ ଏହି ପରିବର୍ତ୍ତନରେ ସ୍ଥିର ରହେ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୮</small></article>
+<article><h2>୧୬. किस क्रिया के साथ कर्म की आवश्यकता नहीं है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>खाना</li><li>लिखना</li><li>दौड़ना</li><li>पढ़ाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. दौड़ना</b></p>
+<div class="lesson-body"><p>ପାଠରେ बच्चे दौड़ते हैंକୁ ଅକର୍ମକ ପ୍ରୟୋଗ ଭାବରେ ଦିଆଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୪</small></article>
+<article><h2>୧୭. कौन किस प्रकार के सर्वनाम का उदाहरण है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>संबंधवाचक</li><li>निजवाचक</li><li>अनिश्चयवाचक</li><li>प्रश्नवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. प्रश्नवाचक</b></p>
+<div class="lesson-body"><p>କୌଣସି ବ୍ୟକ୍ତି ବିଷୟରେ ପ୍ରଶ୍ନ କରିବାକୁ कौन ବ୍ୟବହାର ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫</small></article>
+<article><h2>୧୮. मीठा और कड़वा किस प्रकार की विशेषता व्यक्त करते हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सर्वनाम</li><li>गुण</li><li>संख्या</li><li>परिमाण</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. गुण</b></p>
+<div class="lesson-body"><p>ଏଗୁଡ଼ିକ ସ୍ୱାଦର ଗୁଣ ପ୍ରକାଶ କରେ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦</small></article>
+<article><h2>୧୯. संज्ञा का भेद पहचानिए — “कटक”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>द्रव्यवाचक</li><li>समूहवाचक</li><li>व्यक्तिवाचक</li><li>जातिवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. व्यक्तिवाचक</b></p>
+<div class="lesson-body"><p>कटक ଶବ୍ଦଟି ପାଠର व्यक्तिवाचक ଶ୍ରେଣୀର ଉଦାହରଣ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୦. संज्ञा का भेद पहचानिए — “कोयल”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>द्रव्यवाचक</li><li>जातिवाचक</li><li>व्यक्तिवाचक</li><li>समूहवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. जातिवाचक</b></p>
+<div class="lesson-body"><p>कोयल ଶବ୍ଦଟି ପାଠର जातिवाचक ଶ୍ରେଣୀର ଉଦାହରଣ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୧. संज्ञा का भेद पहचानिए — “तेल”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>समूहवाचक</li><li>व्यक्तिवाचक</li><li>जातिवाचक</li><li>द्रव्यवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. द्रव्यवाचक</b></p>
+<div class="lesson-body"><p>तेल ଶବ୍ଦଟି ପାଠର द्रव्यवाचक ଶ୍ରେଣୀର ଉଦାହରଣ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୨. संज्ञा का भेद पहचानिए — “सेना”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>जातिवाचक</li><li>द्रव्यवाचक</li><li>समूहवाचक</li><li>व्यक्तिवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. समूहवाचक</b></p>
+<div class="lesson-body"><p>सेना ଶବ୍ଦଟି ପାଠର समूहवाचक ଶ୍ରେଣୀର ଉଦାହରଣ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୩. कौन-सा उदाहरण “भाववाचक” संज्ञा का है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ताँबा</li><li>टोली</li><li>सौंदर्य</li><li>महानदी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. सौंदर्य</b></p>
+<div class="lesson-body"><p>भाववाचक ପ୍ରଶ୍ନ ପାଇଁ सौंदर्य ବାଛନ୍ତୁ। ନାମଟି ଭାବ, ସମୂହ, ବିଶେଷ ନାମ ନା ଦ୍ରବ୍ୟ ସୂଚାଏ ଦେଖନ୍ତୁ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୪. कौन-सा उदाहरण “समूहवाचक” संज्ञा का है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>टोली</li><li>सौंदर्य</li><li>महानदी</li><li>ताँबा</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. टोली</b></p>
+<div class="lesson-body"><p>समूहवाचक ପ୍ରଶ୍ନ ପାଇଁ टोली ବାଛନ୍ତୁ। ନାମଟି ଭାବ, ସମୂହ, ବିଶେଷ ନାମ ନା ଦ୍ରବ୍ୟ ସୂଚାଏ ଦେଖନ୍ତୁ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୫. कौन-सा उदाहरण “व्यक्तिवाचक” संज्ञा का है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ताँबा</li><li>टोली</li><li>सौंदर्य</li><li>महानदी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. महानदी</b></p>
+<div class="lesson-body"><p>व्यक्तिवाचक ପ୍ରଶ୍ନ ପାଇଁ महानदी ବାଛନ୍ତୁ। ନାମଟି ଭାବ, ସମୂହ, ବିଶେଷ ନାମ ନା ଦ୍ରବ୍ୟ ସୂଚାଏ ଦେଖନ୍ତୁ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୬. कौन-सा उदाहरण “द्रव्यवाचक” संज्ञा का है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सौंदर्य</li><li>ताँबा</li><li>टोली</li><li>महानदी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ताँबा</b></p>
+<div class="lesson-body"><p>द्रव्यवाचक ପ୍ରଶ୍ନ ପାଇଁ ताँबा ବାଛନ୍ତୁ। ନାମଟି ଭାବ, ସମୂହ, ବିଶେଷ ନାମ ନା ଦ୍ରବ୍ୟ ସୂଚାଏ ଦେଖନ୍ତୁ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୭. “घोड़ा” का स्त्रीलिंग रूप पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>शेरनी</li><li>मालिन</li><li>बालिका</li><li>घोड़ी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. घोड़ी</b></p>
+<div class="lesson-body"><p>ଲିଙ୍ଗ ପରିବର୍ତ୍ତନ ସାରଣୀରେ घोड़ाର ରୂପ घोड़ी।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୨୮. “बालक” का स्त्रीलिंग रूप पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>शेरनी</li><li>बालिका</li><li>मालिन</li><li>घोड़ी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. बालिका</b></p>
+<div class="lesson-body"><p>ଲିଙ୍ଗ ପରିବର୍ତ୍ତନ ସାରଣୀରେ बालकର ରୂପ बालिका।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୨୯. “माली” का स्त्रीलिंग रूप पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>बालिका</li><li>घोड़ी</li><li>शेरनी</li><li>मालिन</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. मालिन</b></p>
+<div class="lesson-body"><p>ଲିଙ୍ଗ ପରିବର୍ତ୍ତନ ସାରଣୀରେ मालीର ରୂପ मालिन।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୩୦. “शेर” का स्त्रीलिंग रूप पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>शेरनी</li><li>बालिका</li><li>घोड़ी</li><li>मालिन</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. शेरनी</b></p>
+<div class="lesson-body"><p>ଲିଙ୍ଗ ପରିବର୍ତ୍ତନ ସାରଣୀରେ शेरର ରୂପ शेरनी।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୩୧. लड़का का सीधा बहुवचन चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>लड़की</li><li>लड़कों</li><li>लड़के</li><li>लड़कियों</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. लड़के</b></p>
+<div class="lesson-body"><p>ସିଧା ବହୁବଚନରେ लड़के। ପରସର୍ଗ ସହ लड़कों ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୩–୧୭</small></article>
+<article><h2>୩୨. लड़कियाँ किस वचन का रूप है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>बहुवचन</li><li>किसी वचन का नहीं</li><li>दोनों वचनों का एक रूप</li><li>एकवचन</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. बहुवचन</b></p>
+<div class="lesson-body"><p>ଏଠାରେ ଏକାଧିକ ଝିଅ ବୁଝାଯାଉଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୩–୧୭</small></article>
+<article><h2>୩୩. एकवचन का सही क्रिया-संबंध चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>बच्चा पढ़ूँगा</li><li>बच्चा पढ़ते हैं</li><li>बच्चा पढ़ती हैं</li><li>बच्चा पढ़ता है</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. बच्चा पढ़ता है</b></p>
+<div class="lesson-body"><p>କର୍ତ୍ତା ଏକବଚନ ପୁଂଲିଙ୍ଗ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୩–୧୭</small></article>
+<article><h2>୩୪. वचन बदलने पर कौन-सी जोड़ी सही रहती है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>लड़की–लड़कियाँ</li><li>घोड़ा–घोड़ी</li><li>लड़की–लड़का</li><li>बालक–बालिका</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. लड़की–लड़कियाँ</b></p>
+<div class="lesson-body"><p>ପ୍ରଥମ ଯୁଗଳ କେବଳ ବଚନ ବଦଳାଏ। ଅନ୍ୟ ଯୁଗଳ ଲିଙ୍ଗ ବଦଳାନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୩–୧୭</small></article>
+<article><h2>୩୫. कारक की पहचान कीजिए — काम करने वाला।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>करण</li><li>अपादान</li><li>कर्म</li><li>कर्ता</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. कर्ता</b></p>
+<div class="lesson-body"><p>“काम करने वाला” ବର୍ଣ୍ଣନାରେ ପଦର କାମ ଦେଖି कर्ता ଚିହ୍ନାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮</small></article>
+<article><h2>୩୬. कारक की पहचान कीजिए — क्रिया का साधन।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कर्ता</li><li>करण</li><li>कर्म</li><li>अपादान</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. करण</b></p>
+<div class="lesson-body"><p>“क्रिया का साधन” ବର୍ଣ୍ଣନାରେ ପଦର କାମ ଦେଖି करण ଚିହ୍ନାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮</small></article>
+<article><h2>୩୭. कारक की पहचान कीजिए — क्रिया का फल जिस पर पड़े।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>करण</li><li>कर्ता</li><li>कर्म</li><li>अपादान</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. कर्म</b></p>
+<div class="lesson-body"><p>“क्रिया का फल जिस पर पड़े” ବର୍ଣ୍ଣନାରେ ପଦର କାମ ଦେଖି कर्म ଚିହ୍ନାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮</small></article>
+<article><h2>୩୮. कारक की पहचान कीजिए — अलगाव का बोध।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>करण</li><li>कर्म</li><li>अपादान</li><li>कर्ता</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. अपादान</b></p>
+<div class="lesson-body"><p>“अलगाव का बोध” ବର୍ଣ୍ଣନାରେ ପଦର କାମ ଦେଖି अपादान ଚିହ୍ନାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮</small></article>
+<article><h2>୩୯. चाकू से फल काटा। यहाँ से किस कारक का चिह्न है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>करण</li><li>अधिकरण</li><li>संप्रदान</li><li>संबंध</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. करण</b></p>
+<div class="lesson-body"><p>ଛୁରୀ କାଟିବାର ସାଧନ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮–୨୯</small></article>
+<article><h2>୪୦. पेड़ से पत्ता गिरा। ‘से’ किस अर्थ में है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>अलग होने के</li><li>देने के</li><li>अंदर होने के</li><li>स्वामित्व के</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. अलग होने के</b></p>
+<div class="lesson-body"><p>ପତ୍ର ଗଛରୁ ପୃଥକ ହେଉଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮–୨୯</small></article>
+<article><h2>୪୧. “मेज पर” में कौन-सा कारक-संबंध है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कर्ता</li><li>अधिकरण</li><li>संप्रदान</li><li>करण</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. अधिकरण</b></p>
+<div class="lesson-body"><p>ଅବସ୍ଥାନ ସୂଚାଇବାରୁ अधिकरण।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮–୨୯</small></article>
+<article><h2>୪୨. पुस्तक किसकी है, यह बताने में कौन-सा परसर्ग उपयोगी है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>से</li><li>का/की</li><li>में</li><li>तक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. का/की</b></p>
+<div class="lesson-body"><p>ଅଧିକାର ବା ସମ୍ବନ୍ଧ ଜଣାଇବାକୁ का, के, की ବ୍ୟବହାର ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୧୮–୨୯</small></article>
+<article><h2>୪୩. इस प्रयोग में सर्वनाम का भेद चुनिए — कौन आया?।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>निजवाचक</li><li>अनिश्चयवाचक</li><li>प्रश्नवाचक</li><li>पुरुषवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. प्रश्नवाचक</b></p>
+<div class="lesson-body"><p>“कौन आया?”ରେ ସର୍ବନାମର ପ୍ରୟୋଗ प्रश्नवाचक।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୬</small></article>
+<article><h2>୪୪. इस प्रयोग में सर्वनाम का भेद चुनिए — कोई आया है।।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पुरुषवाचक</li><li>अनिश्चयवाचक</li><li>निजवाचक</li><li>प्रश्नवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. अनिश्चयवाचक</b></p>
+<div class="lesson-body"><p>“कोई आया है।”ରେ ସର୍ବନାମର ପ୍ରୟୋଗ अनिश्चयवाचक।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୬</small></article>
+<article><h2>୪୫. इस प्रयोग में सर्वनाम का भेद चुनिए — मैं यह काम खुद करूँगा। (खुद)।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>निजवाचक</li><li>प्रश्नवाचक</li><li>अनिश्चयवाचक</li><li>पुरुषवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. निजवाचक</b></p>
+<div class="lesson-body"><p>“मैं यह काम खुद करूँगा। (खुद)”ରେ ସର୍ବନାମର ପ୍ରୟୋଗ निजवाचक।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୬</small></article>
+<article><h2>୪୬. इस प्रयोग में सर्वनाम का भेद चुनिए — मैं जाता हूँ। (मैं)।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>निजवाचक</li><li>प्रश्नवाचक</li><li>अनिश्चयवाचक</li><li>पुरुषवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. पुरुषवाचक</b></p>
+<div class="lesson-body"><p>“मैं जाता हूँ। (मैं)”ରେ ସର୍ବନାମର ପ୍ରୟୋଗ पुरुषवाचक।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୬</small></article>
+<article><h2>୪୭. कहने वाला अपने समूह के लिए कौन-सा सर्वनाम चुनता है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>हम</li><li>तुम</li><li>वह</li><li>वे</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. हम</b></p>
+<div class="lesson-body"><p>ବକ୍ତା ନିଜକୁ ସାମିଲ କରି ବହୁବଚନରେ हम କହନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୭</small></article>
+<article><h2>୪୮. सुनने वाले से आदरपूर्वक बात में किसका प्रयोग है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>वह</li><li>मैं</li><li>आप</li><li>यह</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. आप</b></p>
+<div class="lesson-body"><p>ସମ୍ମାନ ଜଣାଇ ଶ୍ରୋତାଙ୍କୁ आप କୁହାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୭</small></article>
+<article><h2>୪୯. वक्ता के सामने संबोधित व्यक्ति का पुरुष कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>अन्य पुरुष</li><li>कोई पुरुष नहीं</li><li>उत्तम पुरुष</li><li>मध्यम पुरुष</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. मध्यम पुरुष</b></p>
+<div class="lesson-body"><p>तू, तुम, आप ଶ୍ରୋତାଙ୍କୁ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୭</small></article>
+<article><h2>୫୦. यह और वह किस पुरुष से जुड़े उदाहरण हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मध्यम पुरुष</li><li>अन्य पुरुष</li><li>दोनों उत्तम और मध्यम</li><li>उत्तम पुरुष</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. अन्य पुरुष</b></p>
+<div class="lesson-body"><p>କୁହାଯାଉଥିବା ତୃତୀୟ ବ୍ୟକ୍ତି ବା ବସ୍ତୁକୁ ଏହି ଶବ୍ଦ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୩୫–୩୭</small></article>
+<article><h2>୫୧. गुणवाचक विशेषण की विशेषता पहचानिए — “पीला”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>स्वाद</li><li>दिशा</li><li>आकार</li><li>रंग</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. रंग</b></p>
+<div class="lesson-body"><p>पीला ଶବ୍ଦଟି रंग ସୂଚାଇ ବସ୍ତୁର ଗୁଣ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦</small></article>
+<article><h2>୫୨. गुणवाचक विशेषण की विशेषता पहचानिए — “गोल”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>स्वाद</li><li>दिशा</li><li>आकार</li><li>रंग</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. आकार</b></p>
+<div class="lesson-body"><p>गोल ଶବ୍ଦଟି आकार ସୂଚାଇ ବସ୍ତୁର ଗୁଣ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦</small></article>
+<article><h2>୫୩. गुणवाचक विशेषण की विशेषता पहचानिए — “मीठा”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>रंग</li><li>आकार</li><li>स्वाद</li><li>दिशा</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. स्वाद</b></p>
+<div class="lesson-body"><p>मीठा ଶବ୍ଦଟି स्वाद ସୂଚାଇ ବସ୍ତୁର ଗୁଣ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦</small></article>
+<article><h2>୫୪. गुणवाचक विशेषण की विशेषता पहचानिए — “उत्तरी”।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>रंग</li><li>आकार</li><li>दिशा</li><li>स्वाद</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. दिशा</b></p>
+<div class="lesson-body"><p>उत्तरी ଶବ୍ଦଟି दिशा ସୂଚାଇ ବସ୍ତୁର ଗୁଣ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦</small></article>
+<article><h2>୫୫. विशेषण का भेद चुनिए — पाँच विद्यार्थी (पाँच)।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>परिमाणवाचक</li><li>संख्यावाचक</li><li>गुणवाचक</li><li>सार्वनामिक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. संख्यावाचक</b></p>
+<div class="lesson-body"><p>“पाँच विद्यार्थी (पाँच)”ରେ ବିଶେଷଣର କାମ ଅନୁସାରେ संख्यावाचक ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦–୪୧</small></article>
+<article><h2>୫୬. विशेषण का भेद चुनिए — मीठा फल (मीठा)।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>परिमाणवाचक</li><li>संख्यावाचक</li><li>सार्वनामिक</li><li>गुणवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. गुणवाचक</b></p>
+<div class="lesson-body"><p>“मीठा फल (मीठा)”ରେ ବିଶେଷଣର କାମ ଅନୁସାରେ गुणवाचक ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦–୪୧</small></article>
+<article><h2>୫୭. विशेषण का भेद चुनिए — थोड़ा पानी (थोड़ा)।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>परिमाणवाचक</li><li>सार्वनामिक</li><li>संख्यावाचक</li><li>गुणवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. परिमाणवाचक</b></p>
+<div class="lesson-body"><p>“थोड़ा पानी (थोड़ा)”ରେ ବିଶେଷଣର କାମ ଅନୁସାରେ परिमाणवाचक ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦–୪୧</small></article>
+<article><h2>୫୮. विशेषण का भेद चुनिए — यह पुस्तक (यह)।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>संख्यावाचक</li><li>सार्वनामिक</li><li>गुणवाचक</li><li>परिमाणवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. सार्वनामिक</b></p>
+<div class="lesson-body"><p>“यह पुस्तक (यह)”ରେ ବିଶେଷଣର କାମ ଅନୁସାରେ सार्वनामिक ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୦–୪୧</small></article>
+<article><h2>୫୯. सुरेश पत्र लिखता है। लिखना किस प्रकार की क्रिया है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>भाववाचक</li><li>अकर्मक</li><li>सकर्मक</li><li>समूहवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. सकर्मक</b></p>
+<div class="lesson-body"><p>पत्र ଏଠାରେ କର୍ମ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୪୪</small></article>
+<article><h2>୬୦. बच्चे दौड़ते हैं। किस प्रश्न का उत्तर यहाँ नहीं मिलता?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>क्रिया क्या है?</li><li>कौन दौड़ते हैं?</li><li>क्या दौड़ते हैं?</li><li>कर्ता क्या है?</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. क्या दौड़ते हैं?</b></p>
+<div class="lesson-body"><p>ଦୌଡ଼ିବା କାର୍ଯ୍ୟର କର୍ମ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୪୪</small></article>
+<article><h2>୬୧. इतिहास पढ़ाने के वाक्य में अप्रत्यक्ष रूप से किसे पढ़ाया गया?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>इतिहास को</li><li>छात्र को</li><li>क्रिया को</li><li>शिक्षक को</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. छात्र को</b></p>
+<div class="lesson-body"><p>शिक्षक ने छात्र को इतिहास पढ़ायाରେ କାହାକୁ ପ୍ରଶ୍ନର ଉତ୍ତର छात्र को।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୪୪</small></article>
+<article><h2>୬୨. जिस क्रिया से एक साथ ‘किसको’ और ‘क्या’ के दो अलग कर्म मिलें उसका नाम क्या है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>समापिका मात्र</li><li>द्विकर्मक</li><li>कालवाचक</li><li>अकर्मक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. द्विकर्मक</b></p>
+<div class="lesson-body"><p>ଦୁଇ ଭିନ୍ନ କର୍ମ ଥିବାରୁ ଏହି ନାମ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୪୪</small></article>
+<article><h2>୬୩. धातु “उड़” की द्वितीय प्रेरणार्थक क्रिया चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>लिखवाना</li><li>उड़वाना</li><li>चलवाना</li><li>गिरवाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. उड़वाना</b></p>
+<div class="lesson-body"><p>उड़ ଧାତୁର ଦ୍ୱିତୀୟ ପ୍ରେରଣାର୍ଥକ ରୂପ उड़वाना। ଅନ୍ୟ ଦ୍ୱାରା କାମ କରାଇବା ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୮</small></article>
+<article><h2>୬୪. धातु “लिख” की द्वितीय प्रेरणार्थक क्रिया चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>उड़वाना</li><li>गिरवाना</li><li>लिखवाना</li><li>चलवाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. लिखवाना</b></p>
+<div class="lesson-body"><p>लिख ଧାତୁର ଦ୍ୱିତୀୟ ପ୍ରେରଣାର୍ଥକ ରୂପ लिखवाना। ଅନ୍ୟ ଦ୍ୱାରା କାମ କରାଇବା ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୮</small></article>
+<article><h2>୬୫. धातु “चल” की द्वितीय प्रेरणार्थक क्रिया चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>चलवाना</li><li>लिखवाना</li><li>उड़वाना</li><li>गिरवाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. चलवाना</b></p>
+<div class="lesson-body"><p>चल ଧାତୁର ଦ୍ୱିତୀୟ ପ୍ରେରଣାର୍ଥକ ରୂପ चलवाना। ଅନ୍ୟ ଦ୍ୱାରା କାମ କରାଇବା ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୮</small></article>
+<article><h2>୬୬. धातु “गिर” की द्वितीय प्रेरणार्थक क्रिया चुनिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>चलवाना</li><li>लिखवाना</li><li>गिरवाना</li><li>उड़वाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. गिरवाना</b></p>
+<div class="lesson-body"><p>गिर ଧାତୁର ଦ୍ୱିତୀୟ ପ୍ରେରଣାର୍ଥକ ରୂପ गिरवाना। ଅନ୍ୟ ଦ୍ୱାରା କାମ କରାଇବା ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୮</small></article>
+<article><h2>୬୭. “खा” का पहला प्रेरणार्थक रूप क्या होगा?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पिलाना</li><li>सुलाना</li><li>धुलाना</li><li>खिलाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. खिलाना</b></p>
+<div class="lesson-body"><p>खा ଧାତୁର ସ୍ୱର ବଦଳି खिलाना ରୂପ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୦</small></article>
+<article><h2>୬୮. “पी” का पहला प्रेरणार्थक रूप क्या होगा?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>खिलाना</li><li>धुलाना</li><li>सुलाना</li><li>पिलाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. पिलाना</b></p>
+<div class="lesson-body"><p>पी ଧାତୁର ସ୍ୱର ବଦଳି पिलाना ରୂପ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୦</small></article>
+<article><h2>୬୯. “धो” का पहला प्रेरणार्थक रूप क्या होगा?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>खिलाना</li><li>धुलाना</li><li>सुलाना</li><li>पिलाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. धुलाना</b></p>
+<div class="lesson-body"><p>धो ଧାତୁର ସ୍ୱର ବଦଳି धुलाना ରୂପ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୦</small></article>
+<article><h2>୭୦. “सो” का पहला प्रेरणार्थक रूप क्या होगा?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पिलाना</li><li>सुलाना</li><li>धुलाना</li><li>खिलाना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. सुलाना</b></p>
+<div class="lesson-body"><p>सो ଧାତୁର ସ୍ୱର ବଦଳି सुलाना ରୂପ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୦</small></article>
+<article><h2>୭୧. भविष्य की क्रिया बताने वाला वाक्य कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मैं जाता हूँ</li><li>मैं गया था</li><li>मैं जा रहा हूँ</li><li>मैं जाऊँगा</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. मैं जाऊँगा</b></p>
+<div class="lesson-body"><p>जाऊँगा ଆଗାମୀ ସମୟ ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୧–୫୫</small></article>
+<article><h2>୭୨. वह जा रहा है। क्रिया किस समय चल रही है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>अनिश्चित बीते समय में</li><li>आने वाले समय में</li><li>वर्तमान में</li><li>बीते हुए समय में</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. वर्तमान में</b></p>
+<div class="lesson-body"><p>रहा है ବର୍ତ୍ତମାନ ଚାଲିଥିବା କାମ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୧–୫୫</small></article>
+<article><h2>୭୩. “वह गया था” में कौन-सा समय व्यक्त है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सभी समान</li><li>भूत</li><li>भविष्यत्</li><li>वर्तमान</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. भूत</b></p>
+<div class="lesson-body"><p>କାମ ପୂର୍ବରୁ ହୋଇଥିଲା।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୧–୫୫</small></article>
+<article><h2>୭୪. उत्तम पुरुष का वक्ता अपने आने वाले कार्य को कैसे बताएगा?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मैंने लिखा</li><li>मैं लिखूँगा</li><li>मैं लिख रहा हूँ</li><li>मैं लिखता था</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. मैं लिखूँगा</b></p>
+<div class="lesson-body"><p>ପ୍ରଶ୍ନରେ ଆଗାମୀ କାମ ଲେଖିବାକୁ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୧–୫୫</small></article>
+<article><h2>୭୫. कब का उत्तर देने वाला क्रियाविशेषण कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>रीतिवाचक</li><li>परिमाणवाचक</li><li>कालवाचक</li><li>स्थानवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. कालवाचक</b></p>
+<div class="lesson-body"><p>କାମର ସମୟ ପଚାରିଲେ କାଳବାଚକ ଶବ୍ଦ ମିଳେ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୮–୬୨</small></article>
+<article><h2>୭୬. कहाँ का उत्तर बताने वाला क्रियाविशेषण किस वर्ग में होगा?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कालवाचक</li><li>रीतिवाचक</li><li>परिमाणवाचक</li><li>स्थानवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. स्थानवाचक</b></p>
+<div class="lesson-body"><p>କାର୍ଯ୍ୟର ସ୍ଥାନ ଆଧାରରେ ଭେଦ କରାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୮–୬୨</small></article>
+<article><h2>୭୭. दो पदों या वाक्यों को जोड़ने वाला अव्यय कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>क्रिया</li><li>विशेषण</li><li>समुच्चयबोधक</li><li>संज्ञा</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. समुच्चयबोधक</b></p>
+<div class="lesson-body"><p>ଯୋଡ଼ିବା ଏହି ଅବ୍ୟୟର କାମ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୮–୬୨</small></article>
+<article><h2>୭୮. क्रिया कैसे की गई, यह कौन-सा क्रियाविशेषण बताता है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कालवाचक</li><li>स्थानवाचक</li><li>परिमाणवाचक</li><li>रीतिवाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. रीतिवाचक</b></p>
+<div class="lesson-body"><p>କାମ କରିବାର ରୀତି ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୫୮–୬୨</small></article>
+<article><h2>୭୯. मालिक नौकर से काम करवाता है। प्रेरक कर्ता कौन है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मालिक</li><li>करवाता</li><li>काम</li><li>नौकर</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. मालिक</b></p>
+<div class="lesson-body"><p>ମାଲିକ କାମ କରାଉଛନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୫୦</small></article>
+<article><h2>୮୦. मालिक नौकर से काम करवाता है। प्रेरित कर्ता कौन है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>नौकर</li><li>से</li><li>काम</li><li>मालिक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. नौकर</b></p>
+<div class="lesson-body"><p>ଚାକର ପ୍ରେରଣା ପାଇ କାମ କରେ।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୫୦</small></article>
+<article><h2>୮୧. लिखना में धातु पहचानिए।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>खना</li><li>लिख</li><li>लि</li><li>ना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. लिख</b></p>
+<div class="lesson-body"><p>କ୍ରିୟାର ମୂଳ ରୂପ लिख।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୫୦</small></article>
+<article><h2>୮୨. पढ़ सकना का निर्माण किस वर्ग में रखा गया है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सर्वनाम</li><li>यौगिक क्रिया</li><li>मूल धातु</li><li>संज्ञा</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. यौगिक क्रिया</b></p>
+<div class="lesson-body"><p>पढ़ ଓ सकना ମେଳରେ କ୍ରିୟା ହୋଇଛି।</p></div>
+</details>
+<small class="lesson-source">madhyamika-hindi-byakaran/chapter 6/chapter.pdf · ପୃଷ୍ଠା ୪୩–୫୦</small></article>
+
+</main></body></html>

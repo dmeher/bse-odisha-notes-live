@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>अनुवाद · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>अनुवाद</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1pt1zRSx2b9WKNBq8qmGBv92EzVmPYaSK/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଓଡ଼ିଆରୁ ହିନ୍ଦୀ ବାକ୍ୟ ଓ ଅନୁଚ୍ଛେଦ, କ୍ରିୟାର ରୂପ, କର୍ତ୍ତାପଦର ବିସ୍ତାର ଓ ବିଶେଷଣର ମେଳ। ପାଠ ଭିତରର ‘आपका काम’ରେ କର୍ତ୍ତାର ଲିଙ୍ଗ–ବଚନ ସହ କ୍ରିୟାର ମେଳ ଏବଂ କର୍ମ ଅନୁସାରେ पढ़ना ଓ लिखनाର ଚାରିଟି ଲେଖାଏଁ ରୂପ ବାକ୍ୟ ସହ ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 3–11</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୫)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (i)</a> <a href="#exercise-2">1 (ii)</a> <a href="#exercise-3">1 (iii)</a> <a href="#exercise-4">1 (iv)</a> <a href="#exercise-5">1 (v)</a> <a href="#exercise-6">1 (vi)</a> <a href="#exercise-7">1 (vii)</a> <a href="#exercise-8">ओड़िआ में अनुवाद कीजिए</a> <a href="#exercise-9">हिन्दी में अनुवाद कीजिए</a> <a href="#exercise-10">आपका काम · लिंग–वचन</a> <a href="#exercise-11">आपका काम · कर्म–क्रिया</a> <a href="#exercise-12">आपके लिए काम (क)</a> <a href="#exercise-13">आपके लिए काम (ख)</a> <a href="#exercise-14">कर्ता-पद का विस्तार</a> <a href="#exercise-15">संज्ञा-विशेषण संबंध (१–७)</a></nav></details>
+<article id="exercise-1"><h2>1 (i). ଡାକ୍ତର, ଅଧ୍ୟାପକ, ଅଭିନେତା, ଖେଳାଳି ଓ ଗାଁର ମୁଖିଆ ସମ୍ପର୍କିତ ବାକ୍ୟକୁ ହିନ୍ଦୀରେ ଲେଖନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୁଁ ପାଇଁ हूँ, ସେ ପାଇଁ है ଓ ସମ୍ମାନସୂଚକ ଆପଣ ପାଇଁ हैं ବାଛନ୍ତୁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>मैं डॉक्टर हूँ। वह अध्यापक है।</p><p>आप अभिनेता हैं। सुरेश एक खिलाड़ी है।</p><p>वह गाँव का मुखिया है।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=149" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୯</a></small></article>
+<article id="exercise-2"><h2>1 (ii). ପିଲାମାନଙ୍କ ସ୍କୁଲ ଓ ଘରର ଦୈନନ୍ଦିନ କାମର ବାକ୍ୟଗୁଡ଼ିକୁ ଅନୁବାଦ କରନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠାରେ କାମଗୁଡ଼ିକ ନିୟମିତ ଘଟେ। बच्चे ପାଇଁ आते हैं, लौटते हैं, खेलते हैं ରୂପ ରଖନ୍ତୁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>बच्चे दस बजे विद्यालय आते हैं। वे चार बजे लौटते हैं।</p><p>वे शाम तक मैदान में खेलते हैं। पिताजी उन्हें पढ़ाते हैं।</p><p>माँ उन्हें कहानी सुनाती हैं।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=149" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୯</a></small></article>
+<article id="exercise-3"><h2>1 (iii). ଲେଖକ ହେବାଠାରୁ ଭାଇ ବହି କିଣିଦେବା ପର୍ଯ୍ୟନ୍ତ ଭବିଷ୍ୟତ୍ କାଳର ବାକ୍ୟକୁ ଅନୁବାଦ କରନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବକ୍ତା ଝିଅ ହେଲେ ତୃତୀୟ ବାକ୍ୟରେ पढ़ूँगी ଲେଖାଯିବ। छुट्टी ସ୍ତ୍ରୀଲିଙ୍ଗ ହେବାରୁ होगी ବ୍ୟବହୃତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>तुम एक लेखक बनोगे। कल स्कूल की छुट्टी होगी।</p><p>मैं अगले वर्ष दिल्ली में पढ़ूँगा। पिताजी रुपये भेजेंगे।</p><p>मेरा भाई पुस्तक खरीदकर देगा।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=149" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୯</a></small></article>
+<article id="exercise-4"><h2>1 (iv). ଚୋର, ଘୋଡ଼ା, ଗାଡ଼ି, ଯାତ୍ରୀ ଓ ଇତିହାସ ସମ୍ପର୍କିତ ଅତୀତ ଘଟଣାଗୁଡ଼ିକୁ ଅନୁବାଦ କରନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାଲିଯିବା ବା ପହଞ୍ଚିବା ପାଇଁ କର୍ତ୍ତା ଅନୁସାରେ गए, दौड़े, पहुँची, उतरे ନିଅନ୍ତୁ। ଶେଷ ବାକ୍ୟରେ हमने ବ୍ୟବହାର କରନ୍ତୁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>चोर भाग गए। घोड़े तेज़ दौड़े।</p><p>सुबह गाड़ी पहुँची। लोग गाड़ी से उतरे।</p><p>हमने इतिहास पढ़ा।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=150" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୦</a></small></article>
+<article id="exercise-5"><h2>1 (v). ସଙ୍ଗୀତା, ବାଦଲ, କୃଷକ, ଶ୍ରମିକ ଓ ରଞ୍ଜିତାଙ୍କ ବିଷୟରେ ଅତୀତର ବାକ୍ୟକୁ ଅନୁବାଦ କରନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାଲୁଥିବା କାମ ପାଇଁ କର୍ତ୍ତାର ଲିଙ୍ଗ ଓ ବଚନ ଦେଖି रहा था ବା रही थी ନିଅନ୍ତୁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>संगीता अकेली चल रही थी। आकाश में बादल छाए हुए थे।</p><p>किसान खेत में हल चला रहा था। मज़दूर बोरा उठा रहा था।</p><p>रंजिता चित्र बना रही थी।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=150" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୦</a></small></article>
+<article id="exercise-6"><h2>1 (vi). ପଢ଼ିବା, କ୍ଷୀର ପିଇବା, ଫୁଲ ବିକିବା, କାଗଜ କିଣିବା ଓ ତରକାରି ରାନ୍ଧିବାର ବାକ୍ୟକୁ ଅନୁବାଦ କରନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାପ୍ତ ସକର୍ମକ କ୍ରିୟାରେ ने ଓ କର୍ମ ସହ କ୍ରିୟାର ମେଳ ଦେଖନ୍ତୁ। तरकारी ପାଇଁ पकाई।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>उन्होंने पढ़ा। उसने दूध पिया।</p><p>माली ने फूल बेचे। पिताजी ने दुकान से कागज़ खरीदा।</p><p>माँ ने तरकारी पकाई।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=150" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୦</a></small></article>
+<article id="exercise-7"><h2>1 (vii). ଧୋତି କିଣିବା, କାହାଣୀ ଲେଖିବା, କଲମ ହଜାଇବା ଓ ମୂର୍ତ୍ତି ତିଆରି କରିବା ସମ୍ପର୍କିତ ପ୍ରଶ୍ନଗୁଡ଼ିକୁ ଅନୁବାଦ କରନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଶ୍ନର ‘କି’ ପାଇଁ क्या ଓ ଶେଷରେ ପ୍ରଶ୍ନଚିହ୍ନ ଦିଅନ୍ତୁ। ଘଟଣାର କାଳ ଅନୁସାରେ खरीदी ଓ लिखी है ରୂପ ରଖନ୍ତୁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>क्या तुमने धोती खरीदी? क्या मेरी माँ ने एक कहानी लिखी है?</p><p>क्या आपने कलम खो दी? क्या तुमने एक मूर्ति बनाई है?</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=150" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୦</a></small></article>
+<article id="exercise-8"><h2>ओड़िआ में अनुवाद कीजिए. भारत वर्ष मेरी मातृभूमि है ଦ୍ୱାରା ଆରମ୍ଭ ହୋଇଥିବା ଅନୁଚ୍ଛେଦର ଓଡ଼ିଆ ଅନୁବାଦ କରନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘इसलिए’ ଦ୍ୱାରା ମାଟିର ଉର୍ବରତା ଓ ଚାଷ ମୁଖ୍ୟ ଜୀବିକା ହେବା ମଧ୍ୟରେ ଥିବା କାରଣ ସମ୍ପର୍କକୁ ରଖନ୍ତୁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭାରତବର୍ଷ ମୋର ମାତୃଭୂମି। ଏହାର ବଣ, ପାହାଡ଼ ଓ ନଦୀଗୁଡ଼ିକ ଅତି ସୁନ୍ଦର।</p><p>ଏହା ଋଷିମୁନିମାନଙ୍କ ଦେଶ। ଏହାର ମାଟି ବହୁତ ଉର୍ବର।</p><p>ସେଥିପାଇଁ ଚାଷ ଏଠାକାର ମୁଖ୍ୟ ଜୀବିକା। ଏଠାରେ ଚାଷୀମାନେ ବହୁତ ପରିଶ୍ରମୀ।</p><p>ସେମାନେ ହଳ କରନ୍ତି, ବିହନ ବୁଣନ୍ତି ଓ ଫସଲ ଉପୁଜାନ୍ତି। ଆମ ଦେଶରେ ଖାଦ୍ୟଶସ୍ୟର ଅଭାବ ନାହିଁ।</p><p>ସରକାର ଗରିବମାନଙ୍କୁ ଶସ୍ୟ ବାଣ୍ଟନ୍ତି। ଲୋକମାନେ ଖୁସି ହୁଅନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=150" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୦</a></small></article>
+<article id="exercise-9"><h2>हिन्दी में अनुवाद कीजिए. ‘ଓଡ଼ିଶା ମୋର ଜନ୍ମଭୂମି’ ଅନୁଚ୍ଛେଦର ହିନ୍ଦୀ ରୂପ ଲେଖନ୍ତୁ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉତ୍ତମ ପୁରୁଷରୁ ଆରମ୍ଭ କରି ପରେ ଓଡ଼ିଶାର ଲୋକଙ୍କ ପାଇଁ वे ବ୍ୟବହାର କରନ୍ତୁ। ଅତୀତର ବେପାର ପାଇଁ होता था ଓ ବର୍ତ୍ତମାନର କାମ ପାଇଁ करते हैं ରଖନ୍ତୁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ओडिशा मेरी जन्मभूमि है। मैं इसे अपने प्राणों से भी अधिक प्यार करता हूँ।</p><p>महानदी एक बड़ी नदी है। नदी के जल से ओडिशा में अच्छी फसल होती है।</p><p>पहले नदी के रास्ते व्यापार होता था। ओडिशा में अनेक शिल्पी और कलाकार थे।</p><p>उन्होंने बहुत-से मंदिर बनाए हैं। ओडिशा के कपड़े विश्वप्रसिद्ध हैं।</p><p>यहाँ के लोग बड़े परिश्रमी हैं। वे अनेक प्रकार के काम जानते हैं।</p><p>वे मन लगाकर काम करते हैं। वे अतिथिप्रिय हैं।</p><p>जगन्नाथ ओड़िआ जाति के देवता हैं। यहाँ के लोग बड़े धार्मिक हैं।</p><p>इसलिए उन्हें कष्ट नहीं होता।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=150" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୦</a></small></article>
+<article id="exercise-10"><h2>आपका काम · लिंग–वचन. कर्ता का लिंग और वचन बदलकर हिन्दी और ओड़िआ में कुछ और वाक्य बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ହିନ୍ଦୀରେ ପୁଲ୍ଲିଙ୍ଗ ଏକବଚନର रहा है ଓ ବହୁବଚନର रहे हैं ତୁଳନା କରନ୍ତୁ। ସ୍ତ୍ରୀଲିଙ୍ଗରେ रही ସମାନ ରହିଲେ ମଧ୍ୟ है/हैं ବଚନ ଦର୍ଶାଏ।</li><li>ଓଡ଼ିଆରେ ପୁଅଟି ଓ ଝିଅଟି ଉଭୟ ପାଇଁ ପଢ଼ୁଛି, ବହୁବଚନରେ ଉଭୟ ପାଇଁ ପଢ଼ୁଛନ୍ତି ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>नमूना उत्तर।</p><p>(i) बच्चा पढ़ रहा है। — ପୁଅଟି ପଢ଼ୁଛି।</p><p>(ii) बच्चे पढ़ रहे हैं। — ପୁଅମାନେ ପଢ଼ୁଛନ୍ତି।</p><p>(iii) बच्ची पढ़ रही है। — ଝିଅଟି ପଢ଼ୁଛି।</p><p>(iv) बच्चियाँ पढ़ रही हैं। — ଝିଅମାନେ ପଢ଼ୁଛନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨–୧୪୩</a></small></article>
+<article id="exercise-11"><h2>आपका काम · कर्म–क्रिया. पढ़ना और लिखना के चार-चार भूतकालीन रूप वाक्यों में दिखाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ବାକ୍ୟରେ କର୍ତ୍ତା मैंने ସମାନ ରହିଛି। କର୍ମକୁ ଲିଙ୍ଗ ଓ ବଚନ ଅନୁସାରେ ବଦଳାନ୍ତୁ।</li><li>पाठ ଓ पत्र ପୁଲ୍ଲିଙ୍ଗ। ତେଣୁ ଏକବଚନରେ पढ़ा/लिखा ଓ ବହୁବଚନରେ पढ़े/लिखे ହୁଏ। कहानी ସ୍ତ୍ରୀଲିଙ୍ଗ। ତେଣୁ एक कहानी ସହ पढ़ी/लिखी ଓ दो कहानियाँ ସହ पढ़ीं/लिखीं ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>नमूना उत्तर।</p><p>पढ़ना — (i) मैंने एक पाठ पढ़ा। (ii) मैंने दो पाठ पढ़े।</p><p>(iii) मैंने एक कहानी पढ़ी। (iv) मैंने दो कहानियाँ पढ़ीं।</p><p>लिखना — (i) मैंने एक पत्र लिखा। (ii) मैंने दो पत्र लिखे।</p><p>(iii) मैंने एक कहानी लिखी। (iv) मैंने दो कहानियाँ लिखीं।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=144" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୪–୧୪୫</a></small></article>
+<article id="exercise-12"><h2>आपके लिए काम (क). ओड़िआ से हिन्दी में अनुवाद करके क्रिया का अन्तर देखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ସେ’ ଓଡ଼ିଆରେ ଉଭୟ ଲିଙ୍ଗ ପାଇଁ ହୁଏ। ହିନ୍ଦୀରେ वह ରଖି ବ୍ୟକ୍ତି ପୁଅ ହେଲେ पढ़ता है, ଝିଅ ହେଲେ पढ़ती है ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେ ପଢ଼େ। – वह पढ़ता है / वह पढ़ती है। ସେମାନେ ଖେଳନ୍ତି। – वे खेलते हैं / वे खेलती हैं।</p><p>ଓଡ଼ିଆରେ ଏହି କ୍ରିୟାରୂପରୁ କର୍ତ୍ତାର ଲିଙ୍ଗ ଜଣାପଡ଼େ ନାହିଁ। ହିନ୍ଦୀରେ କର୍ତ୍ତା ସହ କ୍ରିୟାର ମେଳ ଦେଖନ୍ତୁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=146" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୬</a></small></article>
+<article id="exercise-13"><h2>आपके लिए काम (ख). ‘खेलना’ के वर्तमान, भूत और भविष्य के रूप लिंग, वचन और पुरुष के अनुसार लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଖେଳିବି’ରେ କର୍ତ୍ତା ପ୍ରଥମ ପୁରୁଷ। ହିନ୍ଦୀରେ ‘मैं’ ରଖି ପୁଅ ବକ୍ତା ପାଇଁ खेलूँगा, ଝିଅ ବକ୍ତା ପାଇଁ खेलूँगी ବାଛ। ଉଭୟ ଭବିଷ୍ୟତ୍ ଘଟଣାକୁ ଜଣାଉଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>हर जोड़ी में पुल्लिंग/स्त्रीलिंग है। क्रम वर्तमान → सामान्य भूत → भविष्य।</p><p>मैं – खेलता/खेलती हूँ → खेला/खेली → खेलूँगा/खेलूँगी। हम – खेलते/खेलती हैं → खेले/खेलीं → खेलेंगे/खेलेंगी।</p><p>तू – खेलता/खेलती है → खेला/खेली → खेलेगा/खेलेगी। तुम – खेलते/खेलती हो → खेले/खेलीं → खेलोगे/खेलोगी।</p><p>आप – खेलते/खेलती हैं → खेले/खेलीं → खेलेंगे/खेलेंगी। वह – खेलता/खेलती है → खेला/खेली → खेलेगा/खेलेगी।</p><p>वे – खेलते/खेलती हैं → खेले/खेलीं → खेलेंगे/खेलेंगी। ଓଡ଼ିଆରେ ସାଧାରଣ ରୂପ ମୁଁ ଖେଳେ/ଖେଳିଲି/ଖେଳିବି, ଆମେ ଖେଳୁ/ଖେଳିଲୁ/ଖେଳିବୁ, ତୁ ଖେଳୁ/ଖେଳିଲୁ/ଖେଳିବୁ, ତୁମେ ଖେଳ/ଖେଳିଲ/ଖେଳିବ, ଆପଣ ଖେଳନ୍ତି/ଖେଳିଲେ/ଖେଳିବେ, ସେ ଖେଳେ/ଖେଳିଲା/ଖେଳିବ, ସେମାନେ ଖେଳନ୍ତି/ଖେଳିଲେ/ଖେଳିବେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=146" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୬</a></small></article>
+<article id="exercise-14"><h2>कर्ता-पद का विस्तार. कर्ता-पद बढ़ाकर वाक्य बनाइए और ओड़िआ में लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘घोड़ा चर रहा है’ରେ କେଉଁ ଘୋଡ଼ା ବୋଲି ପଚାରି ‘काला’ ଯୋଡ଼। ଏଥିରେ କ’ଣ କରୁଛି ପ୍ରଶ୍ନର ଉତ୍ତର ‘चर रहा है’ ପୂର୍ବପରି ରହିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>घोड़ा चर रहा है। – ଘୋଡ଼ାଟି ଚରୁଛି। काला घोड़ा चर रहा है। – କଳା ଘୋଡ଼ାଟି ଚରୁଛି।</p><p>सेनापति का काला घोड़ा चर रहा है। – ସେନାପତିଙ୍କ କଳା ଘୋଡ଼ାଟି ଚରୁଛି। हमारे देश के सेनापति का काला घोड़ा चर रहा है। – ଆମ ଦେଶର ସେନାପତିଙ୍କ କଳା ଘୋଡ଼ାଟି ଚରୁଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=146" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୬–୧୪୭</a></small></article>
+<article id="exercise-15"><h2>संज्ञा-विशेषण संबंध (१–७). दिए सात पदों के ओड़िआ रूप लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଓଡ଼ିଆ ‘ଭଲ’ର ରୂପ ସବୁ ବେଳେ ସମାନ ରହିଛି। ହିନ୍ଦୀରେ लड़का ସହ अच्छा, लड़के ସହ अच्छे ଓ लड़की ସହ अच्छी କହି ନାମପଦକୁ ମିଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>अच्छा लड़का – ଭଲ ପୁଅ। अच्छे लड़के – ଭଲ ପୁଅମାନେ।</p><p>अच्छी लड़की – ଭଲ ଝିଅ। बहुत अच्छा लड़का – ଖୁବ ଭଲ ପୁଅ।</p><p>पाँचवीं पंक्ति में ‘सबसे अच्छे लड़का’ छपा है। एकवचन ‘सबसे अच्छा लड़का’ – ସବୁଠାରୁ ଭଲ ପୁଅ।</p><p>सबसे अच्छी लड़की – ସବୁଠାରୁ ଭଲ ଝିଅ। सबसे अच्छी लड़कियाँ – ସବୁଠାରୁ ଭଲ ଝିଅମାନେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=148" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୮</a></small></article>
+
+</main></body></html>

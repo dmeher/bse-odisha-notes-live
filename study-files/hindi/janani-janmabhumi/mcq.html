@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>जननी जन्मभूमि · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>जननी जन्मभूमि</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ଲେଖାରେ ଅଶୋକଙ୍କ ପରିବର୍ତ୍ତନ କାହା ସହ ଜଡ଼ିତ?</h2>
+<ol type="A"><li>ବନ୍ଦର ନିର୍ମାଣ</li><li>ଋତୁ ପରିବର୍ତ୍ତନ</li><li>କାରଖାନା ସ୍ଥାପନ</li><li>କଳିଙ୍ଗ ଯୁଦ୍ଧ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. କଳିଙ୍ଗ ଯୁଦ୍ଧ</b></p>
+<div class="lesson-body"><p>ଯୁଦ୍ଧର ରକ୍ତପାତ ଦେଖି ଅଶୋକ ମାନବପ୍ରେମ ଓ ଅହିଂସା ଆଡ଼କୁ ଫେରିଥିବା ପାଠ କହେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୧–୫</small></article>
+<article><h2>୨. ओड़िशा के पुराने नामों के किस समूह का पाठ में उल्लेख है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मगध, काशी, कोशल, अयोध्या</li><li>धौली, काशी, उत्कल, इटावा</li><li>अयोध्या, काशी, इटावा, कटक</li><li>कलिंग, उत्कल, कंगोद, कोशल</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. कलिंग, उत्कल, कंगोद, कोशल</b></p>
+<div class="lesson-body"><p>ଅଞ୍ଚଳ ଓ କାଳ ଅନୁସାରେ ଓଡ଼ିଶା ପାଇଁ ଭିନ୍ନ ନାମ ବ୍ୟବହାର ହୋଇଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୩. कलिंग के युद्ध के बाद अशोक ने कौन-सी नीति अपनाई?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>व्यापार निषेध की</li><li>युद्ध-विस्तार की</li><li>मानव-प्रेम और अहिंसा की</li><li>दमन की</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. मानव-प्रेम और अहिंसा की</b></p>
+<div class="lesson-body"><p>ରକ୍ତପାତ ଦେଖି ଅଶୋକଙ୍କ ମନରେ ପରିବର୍ତ୍ତନ ଘଟିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୪. अच्छाई चुनने के लिए पाठ में किसका उदाहरण है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कौवे का</li><li>हंस का</li><li>बैल का</li><li>गिलहरी का</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. हंस का</b></p>
+<div class="lesson-body"><p>ଦୁଧ ଓ ପାଣିର ଭେଦ ଚିହ୍ନୁଥିବା ହଂସର ଦୃଷ୍ଟାନ୍ତ ଦିଆଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୫. कलिंग के संघर्ष के वर्णन में किस नदी का नाम आता है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>गोदावरी</li><li>गंगा</li><li>यमुना</li><li>दया</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. दया</b></p>
+<div class="lesson-body"><p>ଯୁଦ୍ଧର ଭୟାବହତା ସହ ଦୟା ନଦୀର ଉଲ୍ଲେଖ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୬. लेखक हर देश के इतिहास को किसका लेखा मानते हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>केवल फसलों का</li><li>केवल भाषा का</li><li>आशा और संघर्ष का</li><li>केवल ऋतु का</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. आशा और संघर्ष का</b></p>
+<div class="lesson-body"><p>ଦେଶର ସଫଳତା ଓ ବିଫଳତା ସ୍ମୃତିରେ ରହେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୭. फसल और अकाल के चित्र किस बात के प्रमाण हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>हर समय की समानता</li><li>प्रकृति का अभाव</li><li>संसार की परिवर्तनशीलता</li><li>ऋतुओं की स्थिरता</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. संसार की परिवर्तनशीलता</b></p>
+<div class="lesson-body"><p>ଏକ ଅଞ୍ଚଳର ଦଶା ସମୟ ସହ ବଦଳେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୮. कलिंग जिन को वापस लाने का प्रसंग किससे जुड़ा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>मधुसूदन से</li><li>खारबेल से</li><li>अशोक से</li><li>विवेकानंद से</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. खारबेल से</b></p>
+<div class="lesson-body"><p>ଖାରବେଳ ମଗଧରୁ ତାହା ଫେରାଇ ଆଣିଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୯. खण्डगिरि-उदयगिरि की गुफाएँ किसकी कीर्ति का परिचय देती हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>बाणभट्ट की</li><li>खारबेल की</li><li>शिवि की</li><li>कृपाशंकर की</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. खारबेल की</b></p>
+<div class="lesson-body"><p>ପାଠରେ ଗୁମ୍ଫା ଓ ଶିଳାଲେଖ ସହ ଖାରବେଳଙ୍କ ନାମ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୧୦. कला के उत्कर्ष के प्रमाण में किन नगरों के मंदिर आए हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>दिल्ली, आगरा, गया</li><li>मगध, बिल्हौर, काशी</li><li>अयोध्या, काशी, इटावा</li><li>भुवनेश्वर, पुरी, कोणार्क</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. भुवनेश्वर, पुरी, कोणार्क</b></p>
+<div class="lesson-body"><p>ଉତ୍କଳର କଳାକୁ ଏହି ମନ୍ଦିରଗୁଡ଼ିକ ଦର୍ଶାଏ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୧୧. पुराने साधव किस मार्ग से दूर द्वीपों तक पहुँचते थे?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पर्वत मार्ग से</li><li>रेल मार्ग से</li><li>मरुस्थल मार्ग से</li><li>समुद्री मार्ग से</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. समुद्री मार्ग से</b></p>
+<div class="lesson-body"><p>ସାଧବମାନଙ୍କ ନୌବାଣିଜ୍ୟ ଏଠାରେ ଆଲୋଚିତ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୧୨. हीराकुद बाँध से किस काम को सहायता मिली?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पुस्तक मुद्रण</li><li>मंदिर निर्माण</li><li>सिंचाई</li><li>नौ निर्माण</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. सिंचाई</b></p>
+<div class="lesson-body"><p>ଜଳସେଚନ ଯୋଗୁଁ ଶସ୍ୟ ଉତ୍ପାଦନ ବଢ଼ିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୩. राउरकेला का नाम किस उत्पादन के साथ आया है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ऊन के</li><li>लोहे के</li><li>हवाई जहाज के</li><li>अन्न के</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. लोहे के</b></p>
+<div class="lesson-body"><p>ରାଉରକେଲା ସହ ଲୁହାର ଉତ୍ପାଦନ ଯୋଡ଼ାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୪. पारादीप बंदरगाह ने किसे बढ़ावा दिया?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>धान की सिंचाई</li><li>नौवाणिज्य</li><li>वन संरक्षण</li><li>चाँदी की खुदाई</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. नौवाणिज्य</b></p>
+<div class="lesson-body"><p>ବନ୍ଦର ନୌବାଣିଜ୍ୟର ଉନ୍ନତି ଆଣିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୫. उत्कल विश्वविद्यालय और तकनीकी कॉलेज किस विकास के उदाहरण हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>नदी परिवहन के</li><li>शिक्षा के</li><li>शिलालेखन के</li><li>प्राचीन युद्ध के</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. शिक्षा के</b></p>
+<div class="lesson-body"><p>ଓଡ଼ିଶାର ନବନିର୍ମାଣରେ ଶିକ୍ଷାପ୍ରତିଷ୍ଠାନ ଗଢ଼ିଉଠିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 14/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+
+</main></body></html>

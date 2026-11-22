@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>मधुर भाषण · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>मधुर भाषण</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/11rL6wRxG4XFH_hmyCLQGqpMKCQZUl040/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଗଦ୍ୟର ପ୍ରଶ୍ନ ୧–୩, ଭାଷାଜ୍ଞାନ ଓ ଅଧିକ ଅଭ୍ୟାସର ନମୁନା ଉତ୍ତର।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 6–8</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୧)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (क)</a> <a href="#exercise-2">1 (ख)</a> <a href="#exercise-3">1 (ग–छ)</a> <a href="#exercise-4">2 (क–च)</a> <a href="#exercise-5">3 (क–ञ)</a> <a href="#exercise-6">भाषा-ज्ञान 1–2</a> <a href="#exercise-7">भाषा-ज्ञान 3–4</a> <a href="#exercise-8">भाषा-ज्ञान 5</a> <a href="#exercise-9">भाषा-ज्ञान 6</a> <a href="#exercise-10">भाषा-ज्ञान 7–8</a> <a href="#exercise-11">स्मरण व योग्यता विस्तार (क–ख)</a></nav></details>
+<article id="exercise-1"><h2>1 (क). भाषा ने मनुष्य की उन्नति में कैसे सहायता की?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନୁଭବ କେବଳ ଜଣେ ମଣିଷରେ ସୀମିତ ରହିଲେ ପର ଲୋକ ତାହାର ଲାଭ ପାଇବେ ନାହିଁ। ଭାଷା ସେହି ଅଭିଜ୍ଞତାକୁ ଅନ୍ୟ ଜଣକୁ ଦେଇ ମିଳିତ କାମର ସୁଯୋଗ କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>भाषा ज्ञान और अनुभव की रक्षा करती है। इसके द्वारा लोग परस्पर सहयोग करते हैं और अकेले की शक्ति से बड़े काम कर पाते हैं।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=45">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୫–୪୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫–୫୦</a></small></article>
+<article id="exercise-2"><h2>1 (ख). मधुर भाषण किसे कहते हैं?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧୁରତାର ପରୀକ୍ଷା ଶ୍ରୋତାଙ୍କ ମନ ଓ ବକ୍ତାଙ୍କ ଆନ୍ତରିକତାରେ। ମୁହଁରେ ମିଠା କଥା ରଖି କ୍ଷତି କରିବାର ମନ ଥିଲେ ତାହା ପ୍ରବନ୍ଧର ଆଦର୍ଶ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>जो वचन सुनने वाले के मन को प्रसन्न और द्रवित करें, वे मधुर हैं। उनके पीछे सच्ची भावना भी होनी चाहिए।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=46">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୬–୪୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫–୫୦</a></small></article>
+<article id="exercise-3"><h2>1 (ग–छ). पुत्र के चयन, आदर, वचन, सज्जनता और दो प्रकार के वार्तालाप को समझाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କାହାର ମନରେ ସ୍ଥାନ ମିଳିଲା, କେଉଁ ବ୍ୟବହାର ଯୋଗୁଁ ମିଳିଲା, ଦୁଇଟି ଅଂଶ ଭାବ। କଥା ଓ ଅନ୍ତରର ଏକତା ଥିଲେ ମିଳୁଥିବା ସମ୍ମାନ ସ୍ଥାୟୀ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ग) बड़े बेटे ने सूखे पेड़ का रूखा वर्णन किया। छोटे ने उसी बात को सरस ढंग से कहा, इसलिए बाणभट्ट ने उसे कादम्बरी पूरी करने योग्य माना।</p><p>(घ) शिष्ट वार्तालाप, मधुर वचन और इनके अनुरूप आचरण से मनुष्य आदर का पात्र बनता है।</p><p>(ङ) मधुर वचन विश्वास और प्रसन्नता देते हैं। कटु वचन वैमनस्य पैदा करते हैं और किए हुए उपकार का प्रभाव भी मिटा सकते हैं।</p><p>(च) अपने से कम स्थिति वाले का स्वाभिमान बचाना सज्जन का पहला कर्तव्य है।</p><p>(छ) व्यापारिक बातचीत शिष्ट पर नपी-तुली हो सकती है। निजी बातचीत में अपनापन और बात समझाने का धैर्य आवश्यक है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=45">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୫–୪୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬–୫୦</a></small></article>
+<article id="exercise-4"><h2>2 (क–च). सामाजिकता, शब्द का असर, बाणभट्ट और कथनी-करनी के उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟବହାର ଯଦି ବଚନର ବିପରୀତ ହୁଏ, ଶ୍ରୋତାଙ୍କ ବିଶ୍ୱାସ ନଷ୍ଟ ହୁଏ। ସମାଜରେ ସହଯୋଗ ପାଇଁ କଥାକୁ ନିଜ କାମରେ ସତ୍ୟ କରିବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) भाषा और विचारों के आदान-प्रदान से मनुष्य की सामाजिकता बनी रहती है।</p><p>(ख) मधुर शब्द दो रूठे लोगों को मिलाता है और कटु शब्द दो मित्रों में वैमनस्य पैदा करता है।</p><p>(ग) कादम्बरी अधूरी रह गई थी।</p><p>(घ) हम आदर पाते हैं और सामाजिक सफलता की राह खुलती है।</p><p>(ङ) मधुर वचन तभी विश्वास जगाते हैं जब सच्चे कर्म उनका साथ दें।</p><p>(च) वचन के अनुरूप कर्म करने पर मनुष्य वंद्य बनता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=45">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୫–୪୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬–୫୦</a></small></article>
+<article id="exercise-5"><h2>3 (क–ञ). प्रत्येक तथ्य का एक शब्द या एक वाक्य में उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଭାଷା’ର କାମ ପଚାରିଲେ ଲେଖକ କହିଥିବା ଜ୍ଞାନ ଓ ଅନୁଭବର ସଂରକ୍ଷଣକୁ ଦେଖାଅ। ଏହା ମିଠା କଥା ଶୁଣିଥିବା ବ୍ୟକ୍ତିର ତୁରନ୍ତ ପ୍ରତିକ୍ରିୟାଠାରୁ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) भाषा ज्ञान और अनुभव की रक्षा करती है।</p><p>(ख) बाबू गुलाबराय।</p><p>(ग) वार्तालाप की शिष्टता।</p><p>(घ) कथनी और करनी में।</p><p>(ङ) मन, वाणी और कर्म का सामंजस्य।</p><p>(च) हृदय की मलिनता और मधुर वचनों का।</p><p>(छ) दुधारू गाय की।</p><p>(ज) शिष्टता सदाचार का व्यावहारिक रूप है।</p><p>(झ) अपने से कम स्थिति वाले लोगों के स्वाभिमान की।</p><p>(ञ) आत्मीयता का।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=45">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୫–୪୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬–୫୧</a></small></article>
+<article id="exercise-6"><h2>भाषा-ज्ञान 1–2. विशेषण चुनें और दस शब्दों के लिंग लिखें।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘भौतिक’ ଓ ‘व्यापारिक’ ପ୍ରଭୃତି ପଦ କାହାର ପ୍ରକାର ବା ଗୁଣ ଜଣାଉଛନ୍ତି, ତେଣୁ ବିଶେଷଣ। ଲିଙ୍ଗରେ ନିକଟ ଅର୍ଥ ଥିଲେ ମଧ୍ୟ ‘वाणी’ ସ୍ତ୍ରୀଲିଙ୍ଗ ଓ ‘वचन’ ପୁଲ୍ଲିଙ୍ଗ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>१. भौतिक, पटु, व्यापारिक, सैद्धान्तिक। २. स्त्रीलिंग — गंध, परंपरा, भाषा, वाणी, उन्नति।</p><p>पुल्लिंग — भाव, कर्त्तव्य, भाषण, वचन, साहित्य।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୧</a></small></article>
+<article id="exercise-7"><h2>भाषा-ज्ञान 3–4. समानार्थी और विपरीत रूप लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘मधुर–मीठा’ ଗୋଟିଏ ଭାବର ଦୁଇ ପ୍ରକାଶ। ‘मधुर–कटु’ ପରସ୍ପର ବିପରୀତ। ତେଣୁ ଏକେ ମୂଳ ଶବ୍ଦ ସହ ପ୍ରଶ୍ନର ନିର୍ଦ୍ଦେଶ ଅନୁସାରେ ଅଲଗା ପଦ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>३. मनुष्य–मानव, चित्र–तस्वीर, पुस्तक–किताब, मधुर–मीठा, कटु–कड़वा, आनंद–हर्ष। ४. ज्ञान–अज्ञान, उन्नति–अवनति, सच्चा–झूठा, मधुर–कटु, आनंद–शोक, मित्र–शत्रु, बड़ा–छोटा।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୧</a></small></article>
+<article id="exercise-8"><h2>भाषा-ज्ञान 5. सात शब्दों के सार्थक वाक्य बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ମିଠା’ ଏଠି କଣ୍ଠର ଗୁଣ। ତେଣୁ ‘मधुर वचन मन जीत लेते हैं’ରେ ଶବ୍ଦ, ତାହାର କାମ ଓ ଫଳ ତିନୋଟି ଥିବାରୁ ଏକ ସାର୍ଥକ ବାକ୍ୟ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>मधुर वचन मन जीत लेते हैं। उसका भाषण सरल था।</p><p>चाल-ढाल से पहला प्रभाव पड़ता है। भाषा से विचारों का आदान-प्रदान होता है।</p><p>वाणी और कर्म में सामंजस्य रखो। उसने विनम्रता से इनकार किया।</p><p>निजी बातचीत में आत्मीयता होनी चाहिए।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୧</a></small></article>
+<article id="exercise-9"><h2>भाषा-ज्ञान 6. पाँच वाक्यों की अशुद्धि सुधारिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘भाषा मनुष्य का विशेष अधिकार है’ରେ ସମ୍ପର୍କଚିହ୍ନ का ପରର ପୁଲ୍ଲିଙ୍ଗ ଏକବଚନ अधिकार ସହ ମେଳ ଖାଏ। ଆଗର भाषा ସ୍ତ୍ରୀଲିଙ୍ଗ ହେଲେ ମଧ୍ୟ ଏଠି की ହେବନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) भाषा मनुष्य का विशेष अधिकार है।</p><p>(ख) हृदय की मलिनता और मधुर वचनों का योग नहीं हो सकता।</p><p>(ग) कटुभाषी लोगों से लोग हृदय खोलकर बात करने में डरते हैं।</p><p>(घ) भाव को प्रभावशाली भाषा में व्यक्त कर देना ही साहित्य है।</p><p>(ङ) मधुर वचन दूसरे को प्रसन्न भी कर सकते हैं।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=52" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୨</a></small></article>
+<article id="exercise-10"><h2>भाषा-ज्ञान 7–8. ‘ता’ और ‘इक’ प्रत्यय लगाकर शब्द बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ता’ ଲାଗିଲେ ଗୁଣର ନାମ ହୁଏ ଓ ‘इक’ ଅନେକ ଉଦାହରଣରେ ସମ୍ପର୍କ ବୁଝାଏ। ମୂଳ ଶବ୍ଦ ଚିହ୍ନି ତାହା ପରେ ପ୍ରତ୍ୟୟ ଦିଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>७. सामाजिकता, मनुष्यता, प्रसन्नता, अशिष्टता, मलिनता। ८. वैचारिक, नैतिक, ऐतिहासिक, भौतिक, सामाजिक, साहित्यिक, सैद्धान्तिक, व्यापारिक।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=51">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୧–୫୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=52" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୨</a></small></article>
+<article id="exercise-11"><h2>स्मरण व योग्यता विस्तार (क–ख). कक्षा में मधुर भाषण और वाक्यों के स्मरण का नमूना।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶ୍ରେଣୀରେ ଭାଷଣ ଦେବାବେଳେ ନମୁନାର ‘साथियो’ ସମ୍ବୋଧନରେ ଶ୍ରୋତାଙ୍କୁ ନିଜ ପାଖକୁ ଆଣ। ଅନ୍ୟର କଥା ମାନୁ ନଥିଲେ ମଧ୍ୟ ମଧୁର ଭାବେ କିପରି ଉତ୍ତର ଦେବ ଏକ ସ୍ଥିତିରେ କହିଲେ ପାଠର ନୀତି କାମରେ ପ୍ରକାଶ ପାଇବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) छोटा भाषण — “साथियो, मधुर वचन विश्वास जगाते हैं। जब हम किसी की बात मान न सकें, तब भी सम्मान से उत्तर दें।</p><p>हमारी करनी हमारी कथनी का साथ दे।” (ख) याद करने के संकेत — वाणी और कर्म का सामंजस्य, कथनी और करनी का साम्य, चित्त को पिघलानेवाला आनन्द तथा वार्तालाप की शिष्टता। इन चार विचारों को भाषण में अपने शब्दों में समझाइए।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=45">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୫–୪୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=52" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୨</a></small></article>
+
+</main></body></html>

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>କୃଷି · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>କୃଷି</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1jtaBezdQm-SS0PA5YV9_bkaY9W_Lbg3P/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପ୍ରଶ୍ନ ୧–୩ର ସମସ୍ତ ୧୮ ଉପପ୍ରଶ୍ନ ଓ ଅଧ୍ୟାୟ ଭିତରର ୧୨ଟି ପ୍ରଶ୍ନ ବା କାମ ସମାଧାନ କରାଯାଇଛି। ପୃ. ୧ର ମୌଳିକ ଆବଶ୍ୟକତା, ପୃ. ୧୦ର କୃଷକ ପରିବାରର ଆର୍ଥିକ ଚାପ ଓ ନିୟୋଜନ, ପୃ. ୧୩ର ସ୍ଥାନୀୟ ବିହନ କିସମ ଅନୁସନ୍ଧାନ ଓ ଚାରିଟି ଦଳୀୟ କାମ ଅନ୍ତର୍ଭୁକ୍ତ।</p><p>ପୃ. ୬ର ପ୍ରତ୍ୟେକ ଡାଲିର ଋତୁ ପାଇଁ ପାଠରେ ଅଲଗା ତଥ୍ୟ ନାହିଁ। ନିଜ ଗ୍ରାମର ସ୍ଥାନାନ୍ତରିତ ଚାଷ, ବିହନ କିସମ ଓ ଜଳସେଚନର ଯାଞ୍ଚିତ ତଥ୍ୟ, ଏବଂ ପଡ଼ିଆର ମାନଚିତ୍ର ଛାତ୍ରଙ୍କ କ୍ଷେତ୍ର କାମ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୧–୩, ୬, ୧୦, ୧୨–୧୪</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୩୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (a)</a> <a href="#exercise-2">1 (b)</a> <a href="#exercise-3">1 (c)</a> <a href="#exercise-4">1 (d)</a> <a href="#exercise-5">1 (e)</a> <a href="#exercise-6">2 (i)</a> <a href="#exercise-7">2 (ii)</a> <a href="#exercise-8">2 (iii)</a> <a href="#exercise-9">2 (iv)</a> <a href="#exercise-10">2 (v)</a> <a href="#exercise-11">3 (i)</a> <a href="#exercise-12">3 (ii)</a> <a href="#exercise-13">3 (iii)</a> <a href="#exercise-14">3 (iv)</a> <a href="#exercise-15">3 (v)</a> <a href="#exercise-16">3 (vi)</a> <a href="#exercise-17">3 (vii)</a> <a href="#exercise-18">3 (viii)</a> <a href="#exercise-19">କାମ · ପୃ. ୨</a> <a href="#exercise-20">କାମ · ପୃ. ୬</a> <a href="#exercise-21">କାମ · ପୃ. ୧୦</a> <a href="#exercise-22">କାମ · ପୃ. ୧୨</a> <a href="#exercise-23">କାମ · ପୃ. ୧୩ (୧)</a> <a href="#exercise-24">କାମ · ପୃ. ୧୩ (୨)</a> <a href="#exercise-25">କାମ · ପୃ. ୧୩ (୩)</a> <a href="#exercise-26">କାମ · ପୃ. ୧୩ (୪)</a> <a href="#exercise-27">ପାଠ ଭିତରେ · ପୃ. ୧</a> <a href="#exercise-28">ପାଠ ଭିତରେ · ପୃ. ୧୦ (କ)</a> <a href="#exercise-29">ପାଠ ଭିତରେ · ପୃ. ୧୦ (ଖ)</a> <a href="#exercise-30">ପାଠ ଭିତରେ · ପୃ. ୧୩</a></nav></details>
+<article id="exercise-1"><h2>1 (a). ବିସ୍ତୃତ ଜମିରେ ବର୍ଷକୁ ଥରେ ଚାଷ କରାଯାଉଥିବା କୃଷି କେଉଁଟି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିକଳ୍ପ (iv), ବ୍ୟାପକ କୃଷି। ଏଥିରେ ବହୁ ପରିମାଣର କୃଷିଭୂମି ମିଳୁଥିବାରୁ କମ୍ ଜନସଂଖ୍ୟା ବିଶିଷ୍ଟ ଅଞ୍ଚଳରେ ବଡ଼ କ୍ଷେତରେ ଚାଷ ହୁଏ।</p><p>ଯାନ୍ତ୍ରିକ ଉପକରଣର ବ୍ୟବହାର ଅଧିକ ଥାଏ। ସଘନ କୃଷିରେ ଗୋଟିଏ ଜମିରେ ବର୍ଷକୁ ଏକାଧିକ ଥର ଶସ୍ୟ ଉତ୍ପାଦନ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪–୮୭</a></small></article>
+<article id="exercise-2"><h2>1 (b). ଦିଆଯାଇଥିବା ଧାନ, ମୁଗ, ବୁଟ ଓ ଗହମ ମଧ୍ୟରୁ ପାଠରେ କେଉଁଟି ରବି ଫସଲ ନୁହେଁ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିକଳ୍ପ (i), ଧାନ। ମୌସୁମୀ ବର୍ଷା ସହ ଆରମ୍ଭ ହେଉଥିବା ଖରିଫ୍ ଋତୁର ଫସଲ ମଧ୍ୟରେ ଧାନ ରହିଛି।</p><p>ଋତୁ ଚିହ୍ନିବାର ସୂତ୍ର ହେଉଛି ବୁଣିବା ସମୟ। ଖରିଫ୍ ଚାଷ ଜୁନ୍–ଜୁଲାଇରେ ଓ ରବି ଚାଷ ଅକ୍ଟୋବର–ନଭେମ୍ବରରେ ଆରମ୍ଭ ହୁଏ।</p><p>ପୃ. ୩ର ଖରିଫ୍ ତାଲିକାରେ ମୁଗ ମଧ୍ୟ ଅଛି। ଚୟନ ପ୍ରଶ୍ନର ଅନ୍ୟ ସବୁ ବିକଳ୍ପକୁ କେବଳ ଗୋଟିଏ ଋତୁର ଫସଲ ବୋଲି ଧରିବା ଉଚିତ ନୁହେଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬–୮୭</a></small></article>
+<article id="exercise-3"><h2>1 (c). ଶସ୍ୟ ସଂଗ୍ରହ ପାଇଁ ସରକାର କେଉଁ ମୂଲ୍ୟ ନିର୍ଦ୍ଧାରଣ କରନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିକଳ୍ପ (ii), ଶସ୍ୟର ସର୍ବନିମ୍ନ ସଂଗ୍ରହ ମୂଲ୍ୟ। ଏହା ଚାଷୀଙ୍କଠାରୁ ଶସ୍ୟ ସଂଗ୍ରହ ପାଇଁ ନିର୍ଦ୍ଧାରିତ ହୁଏ।</p><p>ଭାରତୀୟ ଖାଦ୍ୟ ନିଗମ ଏହି ମୂଲ୍ୟରେ ଚାଷୀଙ୍କଠାରୁ ଶସ୍ୟ କିଣି ଗୋଦାମରେ ରଖେ। ଖାଉଟିଙ୍କୁ ଶସ୍ୟ ବିତରଣ ହୁଏ ସାଧାରଣ ବଣ୍ଟନ ବ୍ୟବସ୍ଥାରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=84">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=84" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୪–୮୭</a></small></article>
+<article id="exercise-4"><h2>1 (d). ଓଡ଼ିଶାରେ ସ୍ଥାନାନ୍ତରିତ କୃଷିର ନାମ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିକଳ୍ପ (iii), ପୋଡ଼ୁ। ଏହି ପଦ୍ଧତିରେ ଜଙ୍ଗଲର ଏକ ଅଂଶ ପୋଡ଼ି ସଫା କରି ଚାଷ କରାଯାଏ।</p><p>ଅମଳ କମିଲେ ଚାଷୀ ସେହି ଜମି ଛାଡ଼ି ଅନ୍ୟ ଜମିରେ ଚାଷ କରନ୍ତି। ଏହି ସ୍ଥାନ ପରିବର୍ତ୍ତନରୁ ନାମ ସ୍ଥାନାନ୍ତରିତ କୃଷି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=87" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୭</a></small></article>
+<article id="exercise-5"><h2>1 (e). ଯେଦ୍ ଋତୁରେ ହେଉନଥିବା ଫସଲଟି ଚିହ୍ନଟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗହମ। ପାଠରେ ଗହମକୁ ରବି ଓ କାକୁଡ଼ି, ତରଭୁଜ ଓ ଖରଭୁଜକୁ ଯେଦ୍ ଋତୁର ଫସଲ ଭାବରେ ଦିଆଯାଇଛି।</p><p>ରବି ଫସଲ ଅମଳ ଓ ଖରିଫ୍ ଫସଲ ବୁଣିବା ମଧ୍ୟରେ ଥିବା ସ୍ୱଳ୍ପକାଳୀନ ଗ୍ରୀଷ୍ମ ଋତୁକୁ ଯେଦ୍ କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬–୮୭</a></small></article>
+<article id="exercise-6"><h2>2 (i). ଦିନକୁ ଦିନ କୃଷି ଭୂମିର ପରିମାଣ ହ୍ରାସ ପାଉଛି କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଚାଷଜମି ବସତି ଓ ରାସ୍ତା ପରି ଅଣକୃଷି କାମରେ ଲାଗିଲେ ଚାଷ ପାଇଁ ଜମି କମେ। ପରିବାରରେ ଜମି ବିଭାଜିତ ହେଲେ ପ୍ରତି ଚାଷୀଙ୍କ ଜୋତ ଛୋଟ ହୁଏ।</p><p>ଜୋତ ବିଭାଜନ ଓ ଚାଷଜମିର ଅନ୍ୟ ବ୍ୟବହାର ଦୁଇଟି ଭିନ୍ନ ପରିବର୍ତ୍ତନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୩–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=84" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୪–୮୭</a></small></article>
+<article id="exercise-7"><h2>2 (ii). କୃଷକଙ୍କ ସ୍ୱାର୍ଥରେ ସରକାର କେଉଁ ପଦକ୍ଷେପ ନେଇଛନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଫସଲ ବୀମା ପ୍ରାକୃତିକ ବିପର୍ଯ୍ୟୟରେ ସହାୟତା ଦିଏ। ଗ୍ରାମ୍ୟ ବ୍ୟାଙ୍କ ଓ ସମବାୟ ସଂସ୍ଥା କମ୍ ସୁଧରେ କୃଷି ଋଣ ଦିଅନ୍ତି।</p><p>ପାଣିପାଗ ପୂର୍ବାନୁମାନ, ରିହାତିରେ ବିହନ ଓ ସାର, ଏବଂ ଶସ୍ୟର ସର୍ବନିମ୍ନ ସଂଗ୍ରହ ମୂଲ୍ୟ ମଧ୍ୟ ଚାଷୀଙ୍କ ସହାୟକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୨–୮୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨–୮୭</a></small></article>
+<article id="exercise-8"><h2>2 (iii). ଭୂଦାନ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଜମିମାଲିକ ସ୍ୱେଚ୍ଛାରେ ନିଜ ଜମିର କିଛି ଅଂଶ ଭୂମିହୀନମାନଙ୍କୁ ଚାଷ ପାଇଁ ଦେବା ହେଉଛି ଭୂଦାନ। ବିନୋବା ଭାବେଙ୍କ ପଦଯାତ୍ରା ସମୟରେ ରେଡ୍ଡି ଅଶୀ ଜଣ ଭୂମିହୀନଙ୍କ ପାଇଁ ଅଶୀ ଏକର ଜମି ଦେବାକୁ ସମ୍ମତ ହୋଇଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨–୮୭</a></small></article>
+<article id="exercise-9"><h2>2 (iv). ଗ୍ରାମଦାନର ଅର୍ଥ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିନୋବା ଭାବେଙ୍କ ପଦଯାତ୍ରାରେ ପ୍ରଭାବିତ କେତେକ ଜମିଦାର ଓ ଗ୍ରାମମୁଖିଆ ଭୂମିହୀନଙ୍କ ମଧ୍ୟରେ ବଣ୍ଟନ ପାଇଁ ସମଗ୍ର ଗ୍ରାମ ଦେବାକୁ ପ୍ରତିଶ୍ରୁତି ଦେଲେ। ଏହାକୁ ଗ୍ରାମଦାନ କୁହାଗଲା।</p><p>ଏଠାରେ ଦାନର ଏକକ ହେଉଛି ଗ୍ରାମ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨–୮୭</a></small></article>
+<article id="exercise-10"><h2>2 (v). ତନ୍ତୁଜାତୀୟ କୃଷି ଦ୍ରବ୍ୟର ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କପା, ଝୋଟ, ଛଣପଟ ଓ ରେଶମ ପାଠର ତନ୍ତୁଜାତୀୟ କୃଷି ଦ୍ରବ୍ୟ। ପ୍ରଥମ ତିନୋଟି ମୃତ୍ତିକାରେ ଚାଷ ହୁଏ।</p><p>ରେଶମ ମିଳେ ରେଶମ କୀଟ ପାଳନରୁ। ଝୋଟର ତନ୍ତୁରୁ ଅଖା, ଆସନ ଓ ଦଉଡ଼ି ତିଆରି ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=81">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=79" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୯–୮୭</a></small></article>
+<article id="exercise-11"><h2>3 (i). ଜଗତୀକରଣ ଭାରତୀୟ କୃଷିକୁ କିପରି ପ୍ରଭାବିତ କରିଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଭାରତୀୟ ଚା, କଫି, ମସଲା ଓ କପା ପାଇଁ ବିଦେଶରେ ବଜାର ମିଳିଛି। କିନ୍ତୁ ବିଶ୍ୱ ବଜାରରେ ଆମ ଚାଷୀଙ୍କୁ ଅନ୍ୟ ଦେଶର ଉତ୍ପାଦକଙ୍କ ସହ ପ୍ରତିଯୋଗିତା କରିବାକୁ ପଡ଼େ।</p><p>ଉନ୍ନତ ରାଷ୍ଟ୍ରର କୃଷିଜାତ ଦ୍ରବ୍ୟ ସହ ପ୍ରତିଯୋଗିତାରେ କ୍ଷୁଦ୍ର ଓ ନାମମାତ୍ର ଚାଷୀଙ୍କ ଅସୁବିଧା ପ୍ରତି ପାଠ ଧ୍ୟାନ ଦେଇଛି। ଭଲ ଗୁଣର ଫସଲ, ଉତ୍ପାଦନ ଖର୍ଚ୍ଚ ଉପରେ ଧ୍ୟାନ ଓ ଫସଲର ବିବିଧତା ସେମାନଙ୍କ ପାଇଁ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ।</p><p>ଔପନିବେଶିକ ସମୟରେ ମଧ୍ୟ ଭାରତର ମସଲା ରପ୍ତାନି ହେଉଥିଲା ଓ ଦକ୍ଷିଣ ଭାରତର ଚାଷୀ ତାହାର ଉତ୍ପାଦନ ବଢ଼ାଇବାକୁ ଉତ୍ସାହ ପାଉଥିଲେ। ଏଥିରୁ ବୁଝାଯାଏ ଯେ ବିଦେଶୀ ବଜାରର ଚାହିଦା ଆମ ଜମିରେ ଫସଲ ଚୟନକୁ ପ୍ରଭାବିତ କରେ।</p><p>ମାତ୍ର ଫସଲ ବଢ଼ାଇଲେ ଚାଷୀଙ୍କ ଲାଭ ନିଶ୍ଚିତ ହୁଏ ନାହିଁ। ବିହନ, ସାର ଓ ଜଳସେଚନର ଖର୍ଚ୍ଚ କାଟି ଯେଉଁ ଆୟ ରହେ ତାହା ବିକ୍ରୟ ଦର ଉପରେ ନିର୍ଭର କରେ।</p><p>ଖାଦ୍ୟଶସ୍ୟରୁ ଅର୍ଥକରୀ ଫସଲକୁ ଯିବାବେଳେ ନିଜ ଦେଶର ଖାଦ୍ୟ ଯୋଗାଣ ଓ କ୍ଷୁଦ୍ର ଚାଷୀର ସୁରକ୍ଷା ମଧ୍ୟ ବିଚାର କରିବା ଦରକାର। ଚମ୍ପାରନରେ ଇଂଲଣ୍ଡର ବୟନ ଶିଳ୍ପ ପାଇଁ ଜବରଦସ୍ତ ନୀଳ ଚାଷ କରାଇବାରୁ ଖାଦ୍ୟଶସ୍ୟ ଚାଷ ବାଧା ପାଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=85">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୫–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=85" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୫–୮୭</a></small></article>
+<article id="exercise-12"><h2>3 (ii). ଭୂଦାନ ଓ ଗ୍ରାମଦାନ ଆନ୍ଦୋଳନର ନେତୃତ୍ୱ ଓ ପ୍ରଭାବ ବର୍ଣ୍ଣନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିନୋବା ଭାବେ ଏହି ଆନ୍ଦୋଳନର ନେତୃତ୍ୱ ନେଇଥିଲେ। ଭୂଦାନରେ ଜମିମାଲିକ ନିଜ ଜମିର ଅଂଶ ଦାନ କଲେ ଓ ଭୂମିହୀନ ଚାଷୀଙ୍କୁ ସେଥିରୁ ଜମି ମିଳିଲା।</p><p>କେତେକ ସ୍ଥାନରେ ସମଗ୍ର ଗ୍ରାମର ଜମି ଦାନ କରାଯିବାରୁ ଏହା ଗ୍ରାମଦାନ ନାମ ପାଇଲା। ସ୍ୱେଚ୍ଛାରେ ଜମିର ପୁନର୍ବଣ୍ଟନ ଏହାର ବିଶେଷତ୍ୱ ଥିଲା।</p><p>ଗାନ୍ଧିଜୀଙ୍କ ବାର୍ତ୍ତା ପ୍ରଚାର ପାଇଁ ବିନୋବା ଭାବେ ପଦଯାତ୍ରା କରୁଥିଲେ। ଆନ୍ଧ୍ରପ୍ରଦେଶର ପଚମ ପଲ୍ଲୀରେ ଭୂମିହୀନ ଗ୍ରାମବାସୀ ଆର୍ଥିକ ଉନ୍ନତି ପାଇଁ ଜମି ମାଗିଲେ।</p><p>ସମବାୟ କୃଷି କଲେ ସରକାରଙ୍କ ସହ କଥା ହେବେ ବୋଲି ସେ କହିଲେ। ସେଠାରେ ଶ୍ରୀରାମଚନ୍ଦ୍ର ରେଡ୍ଡି ନିଜର ଅଶୀ ଏକର ଜମି ଅଶୀ ଜଣ ଭୂମିହୀନଙ୍କୁ ଦେବାକୁ ସମ୍ମତ ହେଲେ।</p><p>ଏହି ଦୃଷ୍ଟାନ୍ତ ପଦଯାତ୍ରା ଦ୍ୱାରା ଅନ୍ୟ ଅଞ୍ଚଳକୁ ଗଲା। କେତେକ ଜମିଦାର ଓ ଗ୍ରାମମୁଖିଆ ସମଗ୍ର ଗ୍ରାମର ଜମି ପାଇଁ ପ୍ରତିଶ୍ରୁତି ଦେଲେ।</p><p>ଦୁଇ କାର୍ଯ୍ୟକ୍ରମର ମାପ ଅଲଗା ହେଲେ ମଧ୍ୟ ଲକ୍ଷ୍ୟ ଥିଲା ଭୂମିହୀନଙ୍କ ଜୀବିକା। ଜମି ମାଲିକାନାର ସର୍ବୋଚ୍ଚ ସୀମା ଆଇନକୁ ଧ୍ୟାନରେ ରଖି ମଧ୍ୟ କେତେକ ମାଲିକ ଜମି ଦେଲେ।</p><p>ବିନା ରକ୍ତପାତରେ ଏହି ପରିବର୍ତ୍ତନ ହେତୁ ପାଠରେ ଏହାକୁ “ରକ୍ତପାତବିହୀନ ବିପ୍ଳବ” କୁହାଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨–୮୭</a></small></article>
+<article id="exercise-13"><h2>3 (iii). ଖାଦ୍ୟ ସୁରକ୍ଷା କ’ଣ ଓ ଏହା କାହିଁକି ଆବଶ୍ୟକ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସମସ୍ତଙ୍କୁ ସବୁ ସମୟରେ ଆବଶ୍ୟକ ପରିମାଣର ଖାଦ୍ୟ ମିଳିବା ଏବଂ ତାହା କିଣିବାର ସାମର୍ଥ୍ୟ ରହିବାକୁ ଖାଦ୍ୟ ସୁରକ୍ଷା କୁହାଯାଏ। ମରୁଡ଼ି, ଫସଲହାନି ବା ଆୟ ହ୍ରାସ ସମୟରେ ଦରିଦ୍ର ପରିବାର ଅଧିକ କ୍ଷତିଗ୍ରସ୍ତ ହୁଅନ୍ତି।</p><p>ସରକାର ଶସ୍ୟ ସଂଗ୍ରହ କରି ଭଣ୍ଡାରରେ ରଖନ୍ତି ଓ ସାଧାରଣ ବଣ୍ଟନ ବ୍ୟବସ୍ଥାରେ ଉପଲବ୍ଧ କରାନ୍ତି। ଏହା ଅଭାବ ସମୟରେ ଯୋଗାଣ ବଜାୟ ରଖେ।</p><p>ଏହି ବ୍ୟବସ୍ଥାର ଦୁଇ ପାର୍ଶ୍ୱରେ ଅଛନ୍ତି ଚାଷୀ ଓ ଖାଉଟି। ଚାଷୀଙ୍କଠାରୁ ଶସ୍ୟ କିଣିବା ପାଇଁ ସରକାର ସର୍ବନିମ୍ନ ସଂଗ୍ରହ ମୂଲ୍ୟ ଧାର୍ଯ୍ୟ କରନ୍ତି।</p><p>ସଂଗୃହୀତ ଶସ୍ୟକୁ ଅଭାବ ସମୟରେ ସାଧାରଣ ବଣ୍ଟନ ମାଧ୍ୟମରେ ପରିବାର ନିକଟକୁ ନିଆଯାଏ। ଦେଶରେ ଶସ୍ୟ ଥାଇ ମଧ୍ୟ କିଣିବାର ସାମର୍ଥ୍ୟ ନଥିଲେ ଗୋଟିଏ ପରିବାର ଅନାହାରର ସମ୍ମୁଖୀନ ହୋଇପାରେ।</p><p>ଅନ୍ୟପଟେ କ୍ଷୁଦ୍ର ଚାଷୀ ଉପଯୁକ୍ତ ମୂଲ୍ୟ ନପାଇ ଚାଷ ଛାଡ଼ିଲେ ଭବିଷ୍ୟତର ଯୋଗାଣ କମିବ। ସେଥିପାଇଁ ଖାଦ୍ୟ ସୁରକ୍ଷାରେ ଖାଉଟିର କ୍ରୟଶକ୍ତି ସହ ଚାଷୀର ଜୀବିକାର ସୁରକ୍ଷା ମଧ୍ୟ ଆବଶ୍ୟକ।</p><p>ଭାରତୀୟ ଖାଦ୍ୟ ନିଗମ ଶସ୍ୟ ସଂଗ୍ରହ କରେ। ବଣ୍ଟନ ବେଳେ ସହର ଓ ଗାଁର ହିତାଧିକାରୀ ରିହାତି ମୂଲ୍ୟରେ ତାହା ପାଆନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୩–୮୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୩–୮୭</a></small></article>
+<article id="exercise-14"><h2>3 (iv). ପାଠରେ ବର୍ଣ୍ଣିତ କୃଷି ଉତ୍ପାଦନ ହ୍ରାସର କାରଣ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କୃଷି ଭୂମିର ପରିମାଣ କମୁଛି। ଭୂତଳ ଜଳର ଅତ୍ୟଧିକ ବ୍ୟବହାରରେ କୂଅ ଓ ନଳକୂଅ ଶୁଖୁଛି।</p><p>ଗଭୀର ନଳକୂଅ ଖୋଳିବା, ଉନ୍ନତ ବିହନ ଓ ସାର କିଣିବାର ଖର୍ଚ୍ଚ କ୍ଷୁଦ୍ର ଚାଷୀଙ୍କ ପକ୍ଷରେ ବହନ କରିବା କଠିନ। ସଂରକ୍ଷଣ ସ୍ଥାନ ଓ ନିଶ୍ଚିତ ବଜାରର ଅଭାବରେ ଉଚିତ ମୂଲ୍ୟ ମିଳେନାହିଁ।</p><p>ଫଳରେ କେତେକ ଚାଷୀ କୃଷି ଛାଡ଼ନ୍ତି। ଭୂମିର ଅନ୍ୟ ବ୍ୟବହାର ବଢ଼ିଲେ ଖାଦ୍ୟଶସ୍ୟ ପାଇଁ କ୍ଷେତ୍ର ସୀମିତ ହୁଏ।</p><p>ପରିବାର ଭିତରେ ଜମି ଭାଗ ହେବାରୁ ଜୋତ ଛୋଟ ହୁଏ ଓ ଉପକରଣରେ ବିନିଯୋଗ କରିବା କଠିନ ହୁଏ। କେତେକ ଅଞ୍ଚଳରେ ରାସାୟନିକ ସାର ଓ କୀଟନାଶକର ଅତ୍ୟଧିକ ବ୍ୟବହାର ମୃତ୍ତିକା ଓ ଜଳକୁ କ୍ଷତି କରେ।</p><p>ଏପରି ସ୍ଥିତିରେ ଅଧିକ ଖର୍ଚ୍ଚ କରି ମଧ୍ୟ ପୂର୍ବଭଳି ଅମଳ ମିଳି ନପାରେ। ବଜାରରେ ଦର ନମିଳିବା ଆର୍ଥିକ କାରଣ, ମୃତ୍ତିକାର କ୍ଷୟ ଓ ଜଳାଭାବ ପ୍ରାକୃତିକ ସମ୍ବଳ ସମ୍ପର୍କିତ କାରଣ।</p><p>ଦୁଇଟି ମିଶି ଉତ୍ପାଦନ ହ୍ରାସକୁ ବୁଝାଏ। ପାଠରେ ପଞ୍ଜାବରେ ଧାନ ଓ ମହାରାଷ୍ଟ୍ରରେ ଆଖୁ ଚାଷ ପାଇଁ ଭୂତଳ ଜଳର ମାତ୍ରାଧିକ ବ୍ୟବହାରର ଦୁଇଟି ଉଦାହରଣ ଦିଆଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୩–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=84" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୪–୮୭</a></small></article>
+<article id="exercise-15"><h2>3 (v). ଧାନ ଚାଷ ପାଇଁ ଉପଯୁକ୍ତ ଭୌଗୋଳିକ ଅବସ୍ଥା ବର୍ଣ୍ଣନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଉଷ୍ଣ ଓ ଆର୍ଦ୍ର ଜଳବାୟୁ ଧାନ ଚାଷକୁ ସୁହାଏ। ପାଠରେ ପ୍ରାୟ ଶତକଡ଼ା ୮୦ ଆର୍ଦ୍ରତା ଓ ୧୦୦ରୁ ୨୦୦ ସେ.ମି. ବୃଷ୍ଟିପାତର ଉଲ୍ଲେଖ ଅଛି।</p><p>ସମତଳ ଅଞ୍ଚଳ, ଉପକୂଳ ଏବଂ ନଦୀର ତ୍ରିକୋଣଭୂମିରେ ଏହି ଚାଷ ବିଶେଷ ଦେଖାଯାଏ। ବର୍ଷାର ଅଭାବ ଥିଲେ ଜଳସେଚନ ଦ୍ୱାରା ମଧ୍ୟ ଧାନ ଚାଷ କରାଯାଏ।</p><p>ଧାନ ଏକ ଖରିଫ୍ ଫସଲ। ଏହା ବଢ଼ୁଥିବା ସମୟରେ ଜଳ ମିଳିବା ମୁଖ୍ୟ ଆବଶ୍ୟକତା।</p><p>ଉର୍ବର ସମତଳ, ଉତ୍ତର-ପୂର୍ବ ଭାରତ ଓ ନଦୀର ତ୍ରିକୋଣଭୂମିରେ ଆର୍ଦ୍ରତା ଓ ମୃତ୍ତିକା ଉଭୟ ଅନୁକୂଳ। ପଶ୍ଚିମବଙ୍ଗ, ଓଡ଼ିଶା, ଆନ୍ଧ୍ରପ୍ରଦେଶ ଓ ତାମିଲନାଡ଼ୁ ପାଠର ପ୍ରମୁଖ ଉଦାହରଣ।</p><p>ଅପରପକ୍ଷରେ ପଞ୍ଜାବ ଓ ହରିୟାଣାରେ ବର୍ଷା କମ୍ ଥିଲେ ମଧ୍ୟ କେନାଲ ଓ ନଳକୂପରୁ ଜଳ ଯୋଗାଇ ଧାନ ଚାଷ କରାଯାଏ। ତେଣୁ ମାନଚିତ୍ରରେ ଧାନଚାଷ ଦେଖି କେବଳ ଅଧିକ ବର୍ଷା ହୋଇଥାଏ ବୋଲି ନିଷ୍କର୍ଷ କରିହେବ ନାହିଁ।</p><p>ପ୍ରାକୃତିକ ବୃଷ୍ଟି ଓ ମଣିଷର ଜଳସେଚନ ଉଭୟକୁ ବିଚାର କରିବାକୁ ହୁଏ। ପୁସ୍ତକରେ ଧାନ ପାଇଁ ପ୍ରାୟ ୨୫° ସେଲସିଅସ୍ ତାପମାତ୍ରା ଦର୍ଶାଯାଇଛି।</p><p>ଏହି ଉଷ୍ମତା ସହ ବାୟୁର ଆର୍ଦ୍ରତା ଓ କ୍ଷେତରେ ପ୍ରୟୋଜନୀୟ ଜଳ ମିଳିବା ଦରକାର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬–୮୭</a></small></article>
+<article id="exercise-16"><h2>3 (vi). ସଘନ କୃଷି କ’ଣ ଓ ଏହାର ଆବଶ୍ୟକତା କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଏକ ଜମିରୁ ବର୍ଷରେ ଏକାଧିକ ଥର ଫସଲ ପାଇବା ପାଇଁ ଅଧିକ ଶ୍ରମ, ଜଳସେଚନ, ସାର ଓ ଉପକରଣ ଲଗାଇ ଚାଷ କରିବା ସଘନ କୃଷି। ଘନ ଜନବସତିରେ ଜମି ତୁଳନାରେ ଖାଦ୍ୟର ଚାହିଦା ଅଧିକ।</p><p>ଛୋଟ ଜୋତର ଉତ୍ପାଦନ କ୍ଷମତା ବଢ଼ାଇବାକୁ ବର୍ଷକୁ ତିନି ବା ଚାରି ପ୍ରକାର ଶସ୍ୟ ଚାଷ କରାଯାଏ। ସମତଳ, ଉପକୂଳ ଓ ଜଳସେଚିତ ଅଞ୍ଚଳ ଏହାପାଇଁ ସୁବିଧାଜନକ।</p><p>ଏହି ପ୍ରଣାଳୀରେ ଉତ୍ପାଦନ ବଢ଼ାଇବାର ପ୍ରଧାନ ଉପାୟ ହେଲା ଥିବା ଜମିର ଅଧିକ ଥର ଓ ଅଧିକ ଯତ୍ନରେ ବ୍ୟବହାର। ଗୋଟିଏ ଫସଲ ଅମଳ ପରେ ପରବର୍ତ୍ତୀ ଫସଲ ପାଇଁ ମାଟି ପ୍ରସ୍ତୁତ କରିବାକୁ ପଡ଼େ।</p><p>ବର୍ଷାର ଅଭାବ ସମୟରେ ସେଚନ ଓ ମାଟିର ଉତ୍ପାଦନ କ୍ଷମତା ପାଇଁ ସାର ଆବଶ୍ୟକ ହୁଏ। ଏହାକୁ ବ୍ୟାପକ କୃଷି ସହ ମେଳାଇଲେ ପାର୍ଥକ୍ୟ ସ୍ପଷ୍ଟ ହୁଏ।</p><p>ବିସ୍ତୃତ ଜମିରେ ବର୍ଷକୁ ଥରେ ଚାଷ କରିବାର ସୁଯୋଗ ଘନ ଜନବସତିର ଛୋଟ ଜୋତରେ ନଥାଏ। ଏଠାରେ ସେହି ଏକା ଜମିରୁ ପରିବାର ଓ ସ୍ଥାନୀୟ ଲୋକଙ୍କ ଖାଦ୍ୟ ଆବଶ୍ୟକତା ପୂରଣ କରିବାକୁ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=74">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୪–୭୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୫–୮୭</a></small></article>
+<article id="exercise-17"><h2>3 (vii). ଗହମ ଚାଷର ପ୍ରାକୃତିକ ଅବସ୍ଥା ଓ ଭାରତର ଉତ୍ପାଦକ ଅଞ୍ଚଳ ବର୍ଣ୍ଣନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗହମ ଏକ ରବି ଫସଲ। ଗଛ ବଢ଼ିବା ପାଇଁ ଶୀତଳ ଜଳବାୟୁ ଓ ଅମଳ ସମୟରେ ପ୍ରଖର ସୂର୍ଯ୍ୟକିରଣ ଆବଶ୍ୟକ।</p><p>ବାର୍ଷିକ ୫୦ରୁ ୭୫ ସେଣ୍ଟିମିଟର ବର୍ଷା ଅନୁକୂଳ। ଭାରତର ଉତ୍ତର ଓ ଉତ୍ତର-ପଶ୍ଚିମ ଭାଗର ପଞ୍ଜାବ, ହରିୟାଣା ଓ ଉତ୍ତରପ୍ରଦେଶରେ ବିଶେଷ ଭାବରେ ଏହି ଚାଷ ହୁଏ।</p><p>ପାଠରେ ଦୁଇଟି ମୁଖ୍ୟ ଭୌଗୋଳିକ ଅଞ୍ଚଳ ଚିହ୍ନାଯାଇଛି। ପ୍ରଥମଟି ଉତ୍ତର-ପଶ୍ଚିମର ଗଙ୍ଗା–ସତ୍‌ଲେଜ ସମତଳଭୂମି।</p><p>ଦ୍ୱିତୀୟଟି ଦାକ୍ଷିଣାତ୍ୟ ମାଳଭୂମିର କୃଷ୍ଣ ମୃତ୍ତିକା ଅଞ୍ଚଳ। ଉତ୍ପାଦନର ବିତରଣ ବୁଝିବା ପାଇଁ ରାଜ୍ୟର ନାମ ସହିତ ଏହି ଭୂପ୍ରକୃତି ଜାଣିବା ଦରକାର।</p><p>ଧାନ ଅପେକ୍ଷା ଗହମ ପାଇଁ କମ୍ ବୃଷ୍ଟି ଆବଶ୍ୟକ। ଫସଲର ବୃଦ୍ଧି ଏବଂ ଶସ୍ୟ ପାଚିବା ସମୟର ଜଳବାୟୁ ମଧ୍ୟ ସମାନ ନୁହେଁ।</p><p>ଶୀତଦିନରେ ବୁଣାଯାଇଥିବା ଫସଲ ବଢ଼ିବା ପରେ ଅମଳବେଳେ ଉଜ୍ଜ୍ୱଳ ସୂର୍ଯ୍ୟକିରଣ ଦରକାର। ଋତୁ, ବର୍ଷା ଓ ମୃତ୍ତିକାକୁ ଏକାଠି ଦେଖିଲେ ଦୁଇଟି ମୁଖ୍ୟ ଅଞ୍ଚଳର ବିତରଣ ବୁଝାଯାଏ।</p><p>ରାଜସ୍ଥାନ ଓ ବିହାର ମଧ୍ୟ ପାଠର ପ୍ରମୁଖ ଗହମ ଉତ୍ପାଦକ ରାଜ୍ୟ। ପୁସ୍ତକର ହିସାବରେ ଦେଶର ପ୍ରାୟ ଏକ ଷଷ୍ଠାଂଶ ଜମିରେ ଗହମ ଚାଷ ହେଉଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=79" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୯–୮୭</a></small></article>
+<article id="exercise-18"><h2>3 (viii). ଅଳ୍ପ ବୃଷ୍ଟି ଅଞ୍ଚଳର କୃଷି, ଏହାର ପ୍ରାକୃତିକ ଅବସ୍ଥା ଓ ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କମ୍ ବୃଷ୍ଟିପାତ ଅଞ୍ଚଳରେ ଶୁଷ୍କ କୃଷି କରାଯାଏ। ମୃତ୍ତିକାରେ ଉପଲବ୍ଧ ଅଳ୍ପ ଆର୍ଦ୍ରତା ଓ ମୌସୁମୀ ବର୍ଷାରେ ବଢ଼ିପାରୁଥିବା ଫସଲ ବଛାଯାଏ।</p><p>ମକା, ବାଜରା ଓ ତୈଳବୀଜ ଏହାର ଉଦାହରଣ। ରାଜସ୍ଥାନ ଓ ମହାରାଷ୍ଟ୍ରର କମ୍ ବର୍ଷା ପାଉଥିବା ଅଞ୍ଚଳରେ ଏଭଳି ଫସଲ ଚାଷ ହୁଏ।</p><p>ଏଠାରେ ଜଳ ଯୋଗାଣ ସୀମିତ ଥିବାରୁ ଅଧିକ ଜଳ ଦରକାର କରୁଥିବା ଧାନ ପରି ଫସଲ ବଦଳରେ ସ୍ଥାନୀୟ ମୃତ୍ତିକା ଓ ବର୍ଷା ସହ ଖାପ ଖାଉଥିବା ଶସ୍ୟ ଚାଷ ହୁଏ। ବାଜରା ଏହାକୁ ବୁଝିବାର ଭଲ ଉଦାହରଣ।</p><p>ପାଠରେ ଏହା ପାଇଁ ବାଲିଆ ତଥା ଅଗଭୀର କୃଷ୍ଣ ମୃତ୍ତିକା ଏବଂ ରାଜସ୍ଥାନରେ ଏହାର ଅଧିକ ଉତ୍ପାଦନ ଉଲ୍ଲେଖ ଅଛି। ଅଳ୍ପ ବର୍ଷା ଅଞ୍ଚଳରେ କେନାଲ ବା ନଳକୂପରୁ ନିୟମିତ ଜଳ ମିଳୁଥିଲେ ଚାଷୀଙ୍କ ଫସଲ ଚୟନ ବଦଳିପାରେ।</p><p>ତେଣୁ ଶୁଷ୍କ କୃଷି ଚିହ୍ନିବା ପାଇଁ ଜିଲ୍ଲାର ନାମ ସହ କ୍ଷେତରେ ପ୍ରକୃତରେ ମିଳୁଥିବା ଜଳକୁ ମଧ୍ୟ ବିଚାର କରାଯାଏ। ବାଜରା ପାଇଁ ଉତ୍ତରପ୍ରଦେଶ, ଗୁଜରାଟ ଓ ହରିୟାଣାର ନାମ ମଧ୍ୟ ଅଛି।</p><p>ରାଶି ଶୁଷ୍କ ଅବସ୍ଥାରେ ବଢ଼େ ଓ ଏହାର ଏକ ପ୍ରମୁଖ ଉତ୍ପାଦକ କର୍ଣ୍ଣାଟକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୫–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୫–୮୭</a></small></article>
+<article id="exercise-19"><h2>କାମ · ପୃ. ୨. ଓଡ଼ିଶାରେ ସ୍ଥାନାନ୍ତରିତ କୃଷିକୁ କେଉଁ ନାମରେ ଜାଣାଯାଏ? ନିଜ ଅଞ୍ଚଳର ତାଲିକା ପ୍ରସ୍ତୁତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଓଡ଼ିଶାରେ ଏହାକୁ ପୋଡ଼ୁ କୁହାଯାଏ। ପାଠର ଅନ୍ୟ ଉଦାହରଣ ଆସାମ ଆଦିରେ ଝୁମ୍ ଓ ଆନ୍ଧ୍ରପ୍ରଦେଶର କେତେକ ଅଞ୍ଚଳରେ ପେଣ୍ଡା।</p><p>ସ୍ଥାନୀୟ ତାଲିକାରେ ଗ୍ରାମ, ଚାଷର ଲୋକନାମ ଓ ଦେଖାଯାଇଥିବା ପ୍ରଣାଳୀ ଲେଖ। ଏକ ଧାଡ଼ିରେ ଥିବା ସ୍ଥାନ ଓ ଲୋକନାମକୁ ଏକେ ଅଞ୍ଚଳର ବିବରଣୀରୁ ମେଳାଅ।</p><p>ଚାଷୀ କେବେ ପୁରୁଣା ଜମି ଛାଡ଼ନ୍ତି, ତାହା ଲେଖିଲେ ଅନ୍ୟ ଚାଷଠାରୁ ଏହାର ପାର୍ଥକ୍ୟ ବୁଝାପଡ଼ିବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୫</a></small></article>
+<article id="exercise-20"><h2>କାମ · ପୃ. ୬. ପାଠରେ ଉଲ୍ଲେଖିତ ଡାଲିଜାତୀୟ ଫସଲକୁ ଖରିଫ ଓ ରବି ଋତୁ ସହ ମେଳାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କୃଷି ଋତୁର ବର୍ଣ୍ଣନାରେ ମୁଗ ଓ ବିରି ଖରିଫ ଉଦାହରଣ। ରବି ତାଲିକାରେ ବିରି ଓ କୋଳଥ ମଧ୍ୟ ଅଛି, ତେଣୁ ବହିରେ ବିରି ଦୁଇ ଋତୁରେ ଆସିଛି।</p><p>ପୃ. ୬ରେ ମସୁର, ମଟର, ହରଡ଼ ଓ ବୁଟର ନାମ ଥିଲେ ମଧ୍ୟ ସେଠାରେ ପ୍ରତିଟିର ଋତୁ ଲେଖାଯାଇନାହିଁ। ଋତୁ ସାରଣୀରେ ଦୁଇଟି ସ୍ତମ୍ଭ ରଖ।</p><p>ଖରିଫ୍‌ରେ ମୌସୁମୀ ଆଗମନ ସହ ଓ ରବିରେ ଶୀତଋତୁ ଆରମ୍ଭରେ ବୁଣାଯିବା ହେଉଛି ଚିହ୍ନଟର ଆଧାର। ଅନ୍ୟ ଡାଲି ପାଇଁ ନିଜ ଅଞ୍ଚଳର ବୁଣିବା ସମୟ ଜାଣି ସ୍ଥାନୀୟ ତଥ୍ୟ ଭାବେ ଯୋଡ଼।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬–୭୯</a></small></article>
+<article id="exercise-21"><h2>କାମ · ପୃ. ୧୦. ଜଣେ କୃଷକ ତାଙ୍କ ଉତ୍ତରାଧିକାରୀ କୃଷକ ହେଉ ବୋଲି ଚାହୁଁନଥିବାର ସମ୍ଭାବ୍ୟ କାରଣ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅନିଶ୍ଚିତ ଉତ୍ପାଦନ, ଅନିଶ୍ଚିତ ବଜାର ଓ ଶସ୍ୟ ସଞ୍ଚୟ ସ୍ଥାନର ଅଭାବରେ ଆୟ ସ୍ଥିର ହୁଏନାହିଁ। ଅଧିକ ଅମଳକ୍ଷମ ବିହନ ଓ ଜଳସେଚନରେ ଅଧିକ ଖର୍ଚ୍ଚ ହୁଏ।</p><p>ଏହି ଅସୁବିଧା ଥିବା କୃଷକ ପରବର୍ତ୍ତୀ ପିଢ଼ି ପାଇଁ ଅନ୍ୟ ଜୀବିକା ଚାହିଁପାରନ୍ତି। ଯେପରି କୂଅ ଶୁଖିଗଲେ ନୂଆ ନଳକୂପ ପାଇଁ ପୁଣି ପୁଞ୍ଜି ଦରକାର।</p><p>ଅମଳ ପରେ ବିକ୍ରି ଦର କମିଲେ ଖର୍ଚ୍ଚ ଫେରିବା ମଧ୍ୟ ଅନିଶ୍ଚିତ। ସମସ୍ତ କୃଷକଙ୍କ ପରିବାର ଏକେ ନିଷ୍ପତ୍ତି ନେବେ ବୋଲି ଏହି ଉଦାହରଣରୁ କୁହାଯାଇପାରେ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୩–୮୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୩–୮୫</a></small></article>
+<article id="exercise-22"><h2>କାମ · ପୃ. ୧୨. ଖାଦ୍ୟଶସ୍ୟ ଉତ୍ପାଦନ ସ୍ଥିର ବା ହ୍ରାସ ପାଇବାର କାରଣ କ’ଣ ହୋଇପାରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସାରଣୀର ମୋଟ ଧାଡ଼ିରେ ୨୦୦୧–୦୨ରେ ୨୧୨.୩ ନିୟୁତ ଟନ ଓ ୨୦୦୨–୦୩ରେ ୧୭୪.୮ ନିୟୁତ ଟନ ଅଛି। ଏହି ଦୁଇ ବର୍ଷର ତଫାତ ୩୭.୫ ନିୟୁତ ଟନ।</p><p>ପର ବର୍ଷ ମୋଟ ଉତ୍ପାଦନ ପୁଣି ୨୧୩.୫ ନିୟୁତ ଟନ ହୋଇଛି। ଏଣୁ ସମସ୍ତ ବର୍ଷରେ ବାରମ୍ବାର ହ୍ରାସ ଘଟିଥିଲା ବୋଲି ସାରଣୀ କହୁନାହିଁ।</p><p>ଚାଷୀଙ୍କୁ ବିହନ ଓ ସାର ପାଇଁ ଅଧିକ ଖର୍ଚ୍ଚ କରିବାକୁ ପଡ଼େ। ଶସ୍ୟ ସଞ୍ଚୟ ବା ଉପଯୁକ୍ତ ବଜାରର ଅଭାବ ମଧ୍ୟ ଉତ୍ସାହ କମାଏ।</p><p>ପଞ୍ଜାବରେ ଧାନ ଓ ମହାରାଷ୍ଟ୍ରରେ ଆଖୁ ପାଇଁ ବହୁ ଭୂତଳ ଜଳ ବ୍ୟବହାରରୁ କୂଅ ଶୁଖିବା କଥା ପାଠରେ ଅଛି। କ୍ଷୁଦ୍ର ଚାଷୀ ଗଭୀର ନଳକୂପର ଖର୍ଚ୍ଚ ବହନ କରି ନପାରିଲେ ପରବର୍ତ୍ତୀ ଫସଲ ନେବା କଷ୍ଟକର ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=85">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=84" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୪–୮୫</a></small></article>
+<article id="exercise-23"><h2>କାମ · ପୃ. ୧୩ (୧). ଓଡ଼ିଶାରେ ଚାଷ ହେଉଥିବା ଅର୍ଥକରୀ ଫସଲର ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଓଡ଼ିଶାର ଉଦାହରଣ ଝୋଟ ଓ ଚାହା। ପାଠରେ ଓଡ଼ିଶାକୁ ପ୍ରମୁଖ ଝୋଟ ଉତ୍ପାଦନକାରୀ ରାଜ୍ୟ ମଧ୍ୟରେ ରଖାଯାଇଛି।</p><p>କେନ୍ଦୁଝର, କଳାହାଣ୍ଡି, କୋରାପୁଟ ଓ କନ୍ଧମାଳରେ ପରୀକ୍ଷାମୂଳକ ଚାହା ଚାଷ ଉଲ୍ଲେଖ ଅଛି। ପ୍ରତି ଉଦାହରଣ ପାଖରେ ସମ୍ପୃକ୍ତ ଅଞ୍ଚଳ ଲେଖ।</p><p>ପାଠଭିତ୍ତିକ ତାଲିକାରେ ଆଉ ଗୋଟିଏ ସ୍ତମ୍ଭରେ ବିକ୍ରୟଯୋଗ୍ୟ ଦ୍ରବ୍ୟ ଲେଖ। ଝୋଟରୁ ମିଳୁଥିବା ତନ୍ତୁ ଅଖା ଓ ଦଉଡ଼ି ପାଇଁ ବ୍ୟବହୃତ ହୁଏ।</p><p>ଚାହାର କଅଁଳ ପତ୍ରକୁ ସତେଜ ଅବସ୍ଥାରେ ପ୍ରକ୍ରିୟାକରଣ କରାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=80">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୦–୮୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=79" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୯–୮୬</a></small></article>
+<article id="exercise-24"><h2>କାମ · ପୃ. ୧୩ (୨). ବିଦ୍ୟାଳୟ ପଡ଼ିଆରେ ଧାନଚାଷ ଅଞ୍ଚଳର ମାନଚିତ୍ର କିପରି ତିଆରି କରିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଭାରତର ରୂପରେଖ ପଡ଼ିଆରେ ଆଙ୍କ। ପାଠରେ ଧାନଚାଷ ପାଇଁ ପ୍ରମୁଖ ରାଜ୍ୟ ଭାବେ ପଶ୍ଚିମବଙ୍ଗ, ଓଡ଼ିଶା, ଆନ୍ଧ୍ରପ୍ରଦେଶ ଓ ତାମିଲନାଡ଼ୁ ଉଲ୍ଲେଖ ଅଛି।</p><p>ଏଗୁଡ଼ିକର ଧାନଚାଷ ଅଂଶ ଚିହ୍ନାଇ ସବୁଜ ଘାସ ବିଛାଅ। ମାନଚିତ୍ରର ସୂଚୀରେ ସବୁଜ ରଙ୍ଗ ପାଖରେ ‘ଧାନଚାଷ’ ଲେଖ।</p><p>କେନାଲ ଓ ନଳକୂପରୁ ଜଳ ପାଉଥିବା ପଞ୍ଜାବ ଓ ହରିୟାଣାର ଧାନ ଅଞ୍ଚଳକୁ ମଧ୍ୟ ମାନଚିତ୍ର ସହ ମେଳାଅ। ଘାସ ଦେବାବେଳେ ରାଜ୍ୟର ସମସ୍ତ ଜମିକୁ ଧାନ କ୍ଷେତ ଦେଖାଇବା ପରିବର୍ତ୍ତେ ମାନଚିତ୍ରରେ ଚିହ୍ନିତ ଅଂଶକୁ ଅନୁସରଣ କର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬–୭୭</a></small></article>
+<article id="exercise-25"><h2>କାମ · ପୃ. ୧୩ (୩). କୃଷିରେ ରାସାୟନିକ ପଦାର୍ଥ ବ୍ୟବହାରର କୁପରିଣାମ କ’ଣ? ଦଳରେ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅଧିକ ରାସାୟନିକ ସାର ଓ କୀଟନାଶକ ବ୍ୟବହାରକୁ ମୃତ୍ତିକା ଓ ଜଳ ପ୍ରଦୂଷଣ ସହ ଯୋଡ଼ି ଆଲୋଚନା କର। ଗୋଟିଏ ଦଳ ମୃତ୍ତିକା ସମ୍ପର୍କରେ, ଅନ୍ୟ ଦଳ କ୍ଷେତରୁ ଜଳ ଉତ୍ସକୁ ବହିଯାଉଥିବା ପଦାର୍ଥ ସମ୍ପର୍କରେ ଉଦାହରଣ ଦେଉ।</p><p>ପ୍ରଥମ ଦଳ ଲେଖିପାରେ ଯେ ଅତ୍ୟଧିକ ପ୍ରୟୋଗରେ ଭୂମିର ସୂକ୍ଷ୍ମ ପୋଷକ କମିପାରେ ଓ ଲବଣ ମାତ୍ରା ବଢ଼ିପାରେ। ଦ୍ୱିତୀୟ ଦଳ ଜୈବ ବିବିଧତା ଓ ଭୂମିର ଉତ୍ପାଦନ କ୍ଷମତା ଉପରେ ପ୍ରଭାବ ଯୋଡ଼ିପାରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=84">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୪–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=84" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୪–୮୬</a></small></article>
+<article id="exercise-26"><h2>କାମ · ପୃ. ୧୩ (୪). ଜଳସେଚିତ ଅଞ୍ଚଳରେ କୃଷି କାର୍ଯ୍ୟର କେଉଁ ସୁବିଧା ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଫସଲକୁ ଆବଶ୍ୟକ ସମୟରେ ଜଳ ଦିଆଯାଏ, ବର୍ଷା ଉପରେ ନିର୍ଭରତା କମେ, ରବି ଋତୁରେ ଚାଷ ସମ୍ଭବ ହୁଏ। ସ୍ଥାନୀୟ ତାଲିକା ପାଇଁ ଜଳର ଉତ୍ସ, ଚାଷ ହେଉଥିବା ଫସଲ ଓ ସେଚନ ସମୟ ଲେଖ।</p><p>କେନାଲ ଥିଲେ କମ୍ ବର୍ଷାରେ ମଧ୍ୟ ଧାନ ଚାଷ ସମ୍ଭବ। ଖରିଫ୍ ଫସଲ ପରେ ଜମିକୁ ଜଳ ମିଳିଲେ ସେହି ଜମିରେ ରବି ଫସଲ ନିଆଯାଇପାରେ।</p><p>ଏହି ଦୁଇ ସୁବିଧାରୁ କେଉଁଟି ନିଜ ଅଞ୍ଚଳରେ ମିଳୁଛି, ଗୋଟିଏ କ୍ଷେତର ଉଦାହରଣରେ ବୁଝାଅ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=75">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୫–୭୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬–୮୬</a></small></article>
+<article id="exercise-27"><h2>ପାଠ ଭିତରେ · ପୃ. ୧. କୃଷି ଦ୍ୱାରା ମଣିଷର କେଉଁ ମୌଳିକ ଆବଶ୍ୟକତା ପୂରଣ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଧାନ, ଗହମ ଓ ଡାଲିରୁ ଆମେ ଖାଦ୍ୟ ପାଉ। କପାରୁ ମିଳୁଥିବା ତନ୍ତୁ ବୟନ ଶିଳ୍ପରେ ଲୁଗା ତିଆରିର କଞ୍ଚାମାଲ।</p><p>ତେଣୁ କୃଷି ଖାଦ୍ୟର ଆବଶ୍ୟକତା ପ୍ରତ୍ୟକ୍ଷ ଭାବେ ଏବଂ ବସ୍ତ୍ରର ଆବଶ୍ୟକତା କଞ୍ଚାମାଲ ଯୋଗାଇ ପୂରଣ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=74">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୪–୮୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-28"><h2>ପାଠ ଭିତରେ · ପୃ. ୧୦ (କ). କେତେକ ଅଞ୍ଚଳରେ ଚାଷୀ ଆତ୍ମହତ୍ୟା କରୁଥିବା ପ୍ରସଙ୍ଗରେ ଅଧ୍ୟାୟ କେଉଁ ଆର୍ଥିକ ଚାପଗୁଡ଼ିକୁ ବିଚାର କରିବାକୁ କହୁଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଚାଷର ଖର୍ଚ୍ଚ ଓ ଆୟକୁ ପୃଥକ୍ କରି ଦେଖ। ବିହନ, ରାସାୟନିକ ସାର ଓ ନଳକୂପ ପାଇଁ ଖର୍ଚ୍ଚ ହୁଏ।</p><p>ଅନ୍ୟପକ୍ଷରେ ଅମଳ ଅନିଶ୍ଚିତ, ଶସ୍ୟ ରଖିବା ସ୍ଥାନ ସୀମିତ, ବିକ୍ରି ଦର ମଧ୍ୟ ନିଶ୍ଚିତ ନୁହେଁ। ଏଗୁଡ଼ିକ କୃଷକ ପରିବାରର ଆର୍ଥିକ ଚାପ ବୁଝାଏ।</p><p>ଅଧ୍ୟାୟ କୌଣସି ନିର୍ଦ୍ଦିଷ୍ଟ ବ୍ୟକ୍ତିଙ୍କ ମୃତ୍ୟୁର କାରଣ ସ୍ଥିର କରିବା ପାଇଁ ତଥ୍ୟ ଦେଇନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୩–୮୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୩</a></small></article>
+<article id="exercise-29"><h2>ପାଠ ଭିତରେ · ପୃ. ୧୦ (ଖ). କୃଷିଭୂମି କମୁଥିବାବେଳେ କୃଷକଙ୍କ ପାଇଁ କି ପ୍ରକାର ନିୟୋଜନ ବ୍ୟବସ୍ଥା ହୋଇପାରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କେବଳ ଶସ୍ୟ ଚାଷରେ କାମ ସୀମିତ ରଖିବା ବଦଳରେ ପାଠର କୃଷିସଂଲଗ୍ନ କାମ ବିଚାର କରିହେବ। ପଶୁପାଳନ, କୁକୁଡ଼ା ଓ ବତକ ପାଳନ, ମତ୍ସ୍ୟ ପାଳନ, ଫଳ ଓ ଫୁଲ ଚାଷ କେତେକ ବିକଳ୍ପ।</p><p>ଯେଉଁଠି ଜଳାଶୟ ଅଛି ସେଠି ମତ୍ସ୍ୟ ପାଳନ, ଯେଉଁଠି ଫଳ ବିକ୍ରି ପାଇଁ ବଜାର ଅଛି ସେଠି ଉଦ୍ୟାନ କୃଷି ବିଚାର କରିହେବ। ସ୍ଥାନର ସମ୍ବଳ ଓ ଚାହିଦା ମେଳାଇ ବିକଳ୍ପ ବାଛିବା ଦରକାର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=74">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୪–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=83" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୩</a></small></article>
+<article id="exercise-30"><h2>ପାଠ ଭିତରେ · ପୃ. ୧୩. ଜେନେଟିକ ପରିବର୍ତ୍ତନ ଦ୍ୱାରା ତୁମ ଅଞ୍ଚଳରେ କ’ଣ ଚାଷ ହେଉଛି, ତାହାର ତାଲିକା ପ୍ରସ୍ତୁତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଠରେ ଜେନେଟିକ ଇଞ୍ଜିନିୟରିଂ ଦ୍ୱାରା ନୂତନ ଅଧିକ ଅମଳକ୍ଷମ ବିହନ ମିଳିବା କଥା ଅଛି। ସ୍ଥାନୀୟ ତାଲିକାର ପ୍ରତି ଧାଡ଼ିରେ ଗ୍ରାମ, ଫସଲ, ବିହନ କିସମ ଓ ସେହି କିସମର ପରିଚୟ କେଉଁଠୁ ଜଣାଗଲା ଲେଖ।</p><p>କେବଳ ଅଧିକ ଅମଳ ଦେଖି କିସମକୁ ଏହି ଶ୍ରେଣୀରେ ରଖିହେବ ନାହିଁ। ପାଠରେ ତୁମ ଗ୍ରାମର କୌଣସି ଯାଞ୍ଚିତ କିସମ ଦିଆଯାଇନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=86">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=86" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୬</a></small></article>
+
+</main></body></html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>अपठित अनुच्छेद · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>अपठित अनुच्छेद</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1rebLlUr1qmt3oz053ky9malUKlM87Hd0/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଧର୍ମ ଓ ବିଜ୍ଞାନର ନମୁନା ସମେତ ସଦାଚାର ଓ ମିତ୍ରତା ଅନୁଚ୍ଛେଦର ପାଞ୍ଚଟି ଲେଖାଏଁ ଉତ୍ତର।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 1–3</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୫)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (ख) (ii)</a> <a href="#exercise-2">1 (ख) (v)</a> <a href="#exercise-3">उदाहरण (i–v)</a> <a href="#exercise-4">1 (क), (i–v)</a> <a href="#exercise-5">1 (ख), (i–v)</a></nav></details>
+<article id="exercise-1"><h2>1 (ख) (ii). मित्र बनाते समय सावधानी क्यों जरूरी है?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନୁଚ୍ଛେଦରେ ବନ୍ଧୁଙ୍କ ପ୍ରଭାବର ଫଳ କୁହାଯାଇଛି। ଭଲ ସଙ୍ଗ ଉନ୍ନତିରେ ସହାୟ ଓ ଖରାପ ସଙ୍ଗ ଅବନତିର କାରଣ ହେବାରୁ ବାଛିବାବେଳେ ସାବଧାନତା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>संगति का हमारे जीवन पर प्रभाव पड़ता है। केवल बाहरी आकर्षण देखकर मित्रता करने से बाद में पछताना पड़ सकता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=153">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୩–୧୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=153" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୩–୧୫୫</a></small></article>
+<article id="exercise-2"><h2>1 (ख) (v). सच्चे मित्र की विशेषताएँ लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କାହାର ଗୁଣ ବର୍ଣ୍ଣନା ଓ ବନ୍ଧୁ ବାଛିବାର ଉପାୟ ଦୁଇଟି ଭିନ୍ନ ପ୍ରଶ୍ନ। ଏଠାରେ ଜଣେ ପ୍ରକୃତ ବନ୍ଧୁ ବିପଦରେ କିପରି ବ୍ୟବହାର କରେ ସେହି କଥା ପାଠରୁ ଦିଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>सच्चा मित्र निर्लोभी और विश्वासपात्र होता है। वह कठिनाई में साहस देता है और हमारी सफलता पर प्रसन्न होता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=153">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୩–୧୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=153" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୩–୧୫୫</a></small></article>
+<article id="exercise-3"><h2>उदाहरण (i–v). विज्ञान और धर्म पर दिए उदाहरण के पाँच उत्तर लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘क्या-क्या’ରେ ବିଜ୍ଞାନର ଅନେକ କାମ ଦରକାର, ‘कौन’ରେ ଧର୍ମ ଓ ବିଜ୍ଞାନ ଦୁଇ କର୍ତ୍ତା ଦରକାର। ପ୍ରଶ୍ନର ଶବ୍ଦରୁ ଉତ୍ତରର ପରିସର ଚିହ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(i) अनुच्छेद के अनुसार कुछ लोग विज्ञान का समर्थन करते हुए धर्म की उपेक्षा करते हैं। (ii) वे धर्म को अंधविश्वास कहकर उसकी हँसी उड़ाते हैं।</p><p>(iii) धर्म हृदय का विस्तार करता है, मानवीय आदर्शों की ओर ले जाता है और कर्तव्य के प्रति सजग करता है। (iv) विज्ञान बुद्धि बढ़ाता है और सत्य तथा प्रकृति के रहस्यों की खोज करता है।</p><p>(v) लेखक के अनुसार दोनों मानव का कल्याण करते हैं।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=153">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୩–୧୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=153" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୩–୧୫୪</a></small></article>
+<article id="exercise-4"><h2>1 (क), (i–v). सदाचार वाले अवतरण के आधार पर उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯେଉଁମାନେ ଆଜି ଦଣ୍ଡ ପାଇନାହାନ୍ତି ସେମାନଙ୍କ ଉଦାହରଣ ଆପତ୍ତିକାରୀ ଦିଅନ୍ତି। ବିବେକ ଜାଗିଲେ ଦୋଷ ପାଇଁ ପଶ୍ଚାତ୍ତାପ ଆସିବା ଲେଖକଙ୍କ ଜବାବ। ଉତ୍ତରରେ ଏହି ଦୁଇ ମତର ବକ୍ତା ଭିନ୍ନ ବୋଲି ଧ୍ୟାନ ଦିଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(i) कुछ लोग तर्क देते हैं कि भ्रष्टाचारी को दंड नहीं मिलता और उसे अपने काम पर शर्म नहीं आती। (ii) सदाचार मानव-जाति का गुण है और भ्रष्टाचार दोष है।</p><p>(iii) आज भय न हो तो कल विवेक जागने पर दोष से भय होगा। (iv) पछतावे से चिंता बढ़ती है, चिंता से रोग और रोग से अकाल-मृत्यु हो सकती है।</p><p>(v) प्रश्न यह है कि आज विवेक की सलाह मानें या मन को खुला छोड़ दें।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=154">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୪–୧୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=154" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୪–୧୫୫</a></small></article>
+<article id="exercise-5"><h2>1 (ख), (i–v). मित्रता वाले अवतरण के आधार पर उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଶ୍ନରେ ମିତ୍ର ବାଛିବା କଥା ଆସିଲେ ପାଠର ଅଭ୍ୟାସ, ସଂସ୍କାର ଓ ଆଚରଣକୁ ପ୍ରମାଣ କର। କେବଳ ହସମୁଖ ବେଶ ବା ଚାଟୁକାରିତା ଦେଖିଲେ ସଙ୍ଗର ପ୍ରକୃତ ପ୍ରଭାବ ଜଣାପଡ଼େନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(i) जिनसे हम अधिक मिलते-जुलते हैं, उन्हें मित्र बना लेते हैं। (ii) उनकी संगति का हम पर प्रभाव पड़ता है।</p><p>(iii) आदतें, पूर्व आचरण, विचार, संस्कार, व्यवहार और रुचि परखनी चाहिए। (iv) केवल हँसमुख चेहरा, चापलूसी और चतुराई देखकर मित्रता करने पर पछताना पड़ता है।</p><p>(v) सच्चा मित्र निर्लोभ, विश्वासपात्र, प्रेरणादायक और सहायक होता है। वह संघर्ष में साहस देता और हमारी सफलता पर खुश होता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=155">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/98%20-%20OD_HINDI_HINDIGRAMMAR_CLASS10_TERM1.pdf#page=155" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୫</a></small></article>
+
+</main></body></html>

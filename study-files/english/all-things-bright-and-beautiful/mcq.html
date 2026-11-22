@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All Things Bright and Beautiful · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>All Things Bright and Beautiful</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. Where do the children play?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>In the garden trees</li><li>In the meadows</li><li>On the mountain peak</li><li>In the river</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. In the meadows</b></p>
+<div class="lesson-body"><p>ପଡ଼ିଆରେ ଖେଳିବା ଓ ଜଳକୂଳରେ ଗଛ ସଂଗ୍ରହ କରିବା ଦୁଇଟି ଅଲଗା କାମ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨. Which pair describes the gifts in the last stanza?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Wind and water</li><li>Leaves and flowers</li><li>Eyes and lips</li><li>Fruit and wings</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Eyes and lips</b></p>
+<div class="lesson-body"><p>ଆଖି ଦେଖେ ଓ ଓଠ ସ୍ରଷ୍ଟାଙ୍କ ପ୍ରଶଂସା ବ୍ୟକ୍ତ କରେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୩. What explains the colour on the mountain top?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Fruit growing there</li><li>A winter storm</li><li>The water of the river</li><li>Light from the setting sun</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. Light from the setting sun</b></p>
+<div class="lesson-body"><p>ସୂର୍ଯ୍ୟାସ୍ତର ଆଲୋକ ଶୀର୍ଷକୁ ବାଇଗଣୀ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୪. Which observation appeals particularly to the sense of hearing?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The little bird singing</li><li>The purple mountain</li><li>The bright colours</li><li>The ripe garden fruit</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. The little bird singing</b></p>
+<div class="lesson-body"><p>ପକ୍ଷୀର ସ୍ୱର ଶୁଣାଯାଏ; ଅନ୍ୟ ତିନୋଟି ଦୃଶ୍ୟ ଚିତ୍ର।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୫. What is set beside the winter wind in the poem?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The tall trees</li><li>The pleasant summer sun</li><li>The gathered rushes</li><li>The purple peak</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. The pleasant summer sun</b></p>
+<div class="lesson-body"><p>ଦୁଇ ଋତୁର ଅନୁଭବକୁ ଏକ ସ୍ତବକରେ ରଖାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୬. Which plant is gathered at the waterside?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Forest trees</li><li>Lotus lilies</li><li>Rushes</li><li>Garden fruit</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Rushes</b></p>
+<div class="lesson-body"><p>ଜଳକୂଳର rushes ସଂଗ୍ରହ କରାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୭. Which example links a living creature with a tiny visible feature?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>River and bank</li><li>Sun and sky</li><li>Fruit and garden</li><li>Bird and wings</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. Bird and wings</b></p>
+<div class="lesson-body"><p>ଛୋଟ ପକ୍ଷୀର ଡେଣା ସୃଷ୍ଟିର ସୂକ୍ଷ୍ମତା ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୮. What does “green wood” refer to in the scene?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A green-painted house</li><li>A garden seat</li><li>A wooded place with tall trees</li><li>A wooden toy</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. A wooded place with tall trees</b></p>
+<div class="lesson-body"><p>ଗଛଗଛାଳିରେ ଭରା ବନର ଚିତ୍ର।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୯. Which image belongs to the garden?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A river-isle</li><li>Ripe fruit</li><li>Rushes by water</li><li>A mountain peak</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Ripe fruit</b></p>
+<div class="lesson-body"><p>ବଗିଚାରେ ପାଚିଥିବା ଫଳର ଉଦାହରଣ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୦. What do morning and sunset have in common in the poem?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>They brighten the sky</li><li>They chill the winter wind</li><li>They gather rushes</li><li>They shade the meadow</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. They brighten the sky</b></p>
+<div class="lesson-body"><p>କବି ଦୁଇ ସମୟର ଆକାଶର ଆଲୋକକୁ ପାଖାପାଖି ରଖିଛନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୧. The move from mountain to little bird chiefly conveys ___.</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>fear of nature</li><li>the loss of summer</li><li>a journey to a city</li><li>variety in creation</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. variety in creation</b></p>
+<div class="lesson-body"><p>ବଡ଼ ଓ ଛୋଟ ଉଭୟକୁ ଏକ ସୃଷ୍ଟିର ଅଂଶ ଭାବେ ଦେଖାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୧୨. Who is credited with making both great and small creatures?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The Lord God</li><li>The speaker alone</li><li>The children</li><li>The setting sun</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. The Lord God</b></p>
+<div class="lesson-body"><p>ସମସ୍ତ ସୃଷ୍ଟିର ଉତ୍ସ ଭାବେ କବି ଭଗବାନଙ୍କୁ ଦେଖନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧</small></article>
+<article><h2>୧୩. Which natural feature is described as running by?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The meadow</li><li>The wood</li><li>The fruit</li><li>The river</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. The river</b></p>
+<div class="lesson-body"><p>ପର୍ବତ ସହିତ ନଦୀର ପ୍ରବାହ ଉଲ୍ଲେଖ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୪. Which qualities are paired with the flowers and the birds respectively?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Darkness and stillness</li><li>Silence and ripe fruit</li><li>Glowing colours and tiny wings</li><li>Tiny wings and purple heads</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Glowing colours and tiny wings</b></p>
+<div class="lesson-body"><p>ଫୁଲର ରଙ୍ଗ ଓ ପକ୍ଷୀର ଡେଣା ଉପରେ କବିଙ୍କ ଧ୍ୟାନ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୫. Who gathers the plants described near the water?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The winter wind</li><li>The people represented by “we”</li><li>The mountain birds</li><li>The river itself</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. The people represented by “we”</b></p>
+<div class="lesson-body"><p>କବି we ଦ୍ୱାରା ମଣିଷଙ୍କ କାମକୁ ଯୋଡ଼ିଛନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୬. Which statement best links the last stanza to the opening?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The maker named at first is praised at the end</li><li>The scene changes to a market</li><li>All the creatures disappear</li><li>The speaker stops valuing nature</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. The maker named at first is praised at the end</b></p>
+<div class="lesson-body"><p>ଆରମ୍ଭର ସ୍ରଷ୍ଟାଙ୍କ ପ୍ରତି ଶେଷରେ କୃତଜ୍ଞତା ପ୍ରକାଶ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୭. A pupil calls a meadow a dense wood. Which feature corrects the mistake?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>It is a mountain peak</li><li>It is a band of rushes</li><li>It is a grove of fruit trees</li><li>It is an open grassy area</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. It is an open grassy area</b></p>
+<div class="lesson-body"><p>glossaryରେ meadow ଖୋଲା ଘାସ ପଡ଼ିଆ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୧୮. Why is it inaccurate to call the mountain itself purple throughout?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The poem is set underground</li><li>The colour described is on its sunlit top</li><li>The poem names only a river</li><li>The mountain is covered by rushes</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. The colour described is on its sunlit top</b></p>
+<div class="lesson-body"><p>ଏହା ଆଲୋକର ବିଶେଷ ଦୃଶ୍ୟ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୧୯. Which description pairs an action with its matching subject?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A flower opens</li><li>A garden sings</li><li>A bird ripens</li><li>A rush sets in the west</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. A flower opens</b></p>
+<div class="lesson-body"><p>ଫୁଲ ଫୁଟିବା ଓ ପକ୍ଷୀ ଗାଇବା ସୃଷ୍ଟିର ଦୁଇ ଦୃଶ୍ୟ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୨୦. Which expression includes creatures of every size?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Winter and summer</li><li>Sunset and morning</li><li>Purple and green</li><li>Great and small</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. Great and small</b></p>
+<div class="lesson-body"><p>great ଓ small ପରିସରର ଦୁଇ ପ୍ରାନ୍ତ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୨୧. What does the speaker call pleasant?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The gathering of fruit</li><li>The winter wind</li><li>The summer sun</li><li>The purple head</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. The summer sun</b></p>
+<div class="lesson-body"><p>ଗ୍ରୀଷ୍ମ ସୂର୍ଯ୍ୟର ଉଷ୍ଣତାକୁ ଏଠି ସୁଖଦ କୁହାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୨. Which two lines of thought meet at the close?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A competition and its reward</li><li>Human senses and praise of creation’s maker</li><li>Human work and the price of fruit</li><li>A long trip and a farewell</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Human senses and praise of creation’s maker</b></p>
+<div class="lesson-body"><p>ଦେଖିବା ଓ ପ୍ରଶଂସା ପ୍ରକାଶ କରିବା ଏକାଠି ଆସେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୩. Which is the broadest statement of the poem’s theme?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The loss of a garden</li><li>The dangers of winter</li><li>Gratitude for the whole of creation</li><li>The uses of grass alone</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Gratitude for the whole of creation</b></p>
+<div class="lesson-body"><p>ଅନେକ ଉଦାହରଣ ଏକାଠି ସୃଷ୍ଟିକର୍ତ୍ତାଙ୍କ ମହତ୍ତ୍ୱ ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+<article><h2>୨୪. Which feature belongs to winter in the poem?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Harvest music</li><li>Cold wind</li><li>Ripe summer sunshine</li><li>A storm of hail</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Cold wind</b></p>
+<div class="lesson-body"><p>ଶୀତର ଥଣ୍ଡା ପବନକୁ ଗ୍ରୀଷ୍ମ ଖରା ପାଖରେ ରଖାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୫. Which line of observation moves attention from nature to people?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>People receive the power to see</li><li>A little flower opens</li><li>The river runs by</li><li>The garden bears fruit</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. People receive the power to see</b></p>
+<div class="lesson-body"><p>ଶେଷ ସ୍ତବକରେ ସୃଷ୍ଟିକୁ ଅନୁଭବ କରୁଥିବା ମଣିଷ ଆସନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୬. Which place is matched with a use in the textbook glossary?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Mountain tops — making mats</li><li>Meadows — growing rushes only</li><li>Garden fruit — knitting clothes</li><li>Waterside plants — making baskets</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. Waterside plants — making baskets</b></p>
+<div class="lesson-body"><p>କେତେକ rushesରୁ ଝୁଡ଼ି ବା ଆସନ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୨୭. What does the phrase describing tall trees locate?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A village hearth</li><li>A purple cloud</li><li>A green wood</li><li>A bare hillside</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. A green wood</b></p>
+<div class="lesson-body"><p>ଉଚ୍ଚ ଗଛ ବନରେ ଦେଖାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୨୮. Which trait of the maker is affirmed by the speaker at the end?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Impatience</li><li>Greatness</li><li>Jealousy</li><li>Indifference</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Greatness</b></p>
+<div class="lesson-body"><p>ସୁନ୍ଦର ସୃଷ୍ଟିରୁ ସ୍ରଷ୍ଟାଙ୍କ ମହତ୍ତ୍ୱ ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧–୨</small></article>
+
+</main></body></html>

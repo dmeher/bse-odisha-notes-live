@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଜୈବ ସମ୍ବଳ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଜୈବ ସମ୍ବଳ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1pZgd9BH7My2p90Vf3-BXNBsbaAuGkY90/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଅରଣ୍ୟ ପାଠର ୫+୪+୩ ଓ ବନ୍ୟପ୍ରାଣୀ ପାଠର ୪+୧+୪ ଉପପ୍ରଶ୍ନ ମିଳାଯାଇଛି। କ୍ଷେତ୍ରକାର୍ଯ୍ୟର ତାଲିକା ନିଜ ଅଞ୍ଚଳର ତଥ୍ୟରେ ପୂରଣ କରିବାକୁ ହେବ। ଅରଣ୍ୟ ଓ ବନ୍ୟପ୍ରାଣୀ ପାଇଁ ଦୁଇଟି ଲେଖାଏଁ ସଂଗ୍ରହ କାର୍ଯ୍ୟରେ ନମୁନା ବା ପର୍ଯ୍ୟବେକ୍ଷଣ ପଦ୍ଧତି ଅଛି।</p><p>ସ୍ଥାନୀୟ ଗଛ କିପରି ଉଠିଛି ଓ ନିକଟ ଅରଣ୍ୟରେ ପ୍ରକୃତରେ କେଉଁ ପଶୁପକ୍ଷୀ ଅଛନ୍ତି ଜାଣିବାକୁ କ୍ଷେତ୍ର ତଥ୍ୟ ଦରକାର।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୮–୯, ୧୬</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୨୩)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">ଅରଣ୍ୟ · 1 (କ)</a> <a href="#exercise-2">ଅରଣ୍ୟ · 1 (ଖ)</a> <a href="#exercise-3">ଅରଣ୍ୟ · 1 (ଗ)</a> <a href="#exercise-4">ଅରଣ୍ୟ · 1 (ଘ)</a> <a href="#exercise-5">ଅରଣ୍ୟ · 1 (ଙ)</a> <a href="#exercise-6">ଅରଣ୍ୟ · 2 (କ)</a> <a href="#exercise-7">ଅରଣ୍ୟ · 2 (ଖ)</a> <a href="#exercise-8">ଅରଣ୍ୟ · 2 (ଗ)</a> <a href="#exercise-9">ଅରଣ୍ୟ · 2 (ଘ)</a> <a href="#exercise-10">ଅରଣ୍ୟ · 3 (କ–ଗ)</a> <a href="#exercise-11">ବନ୍ୟପ୍ରାଣୀ · 1 (କ)</a> <a href="#exercise-12">ବନ୍ୟପ୍ରାଣୀ · 1 (ଖ)</a> <a href="#exercise-13">ବନ୍ୟପ୍ରାଣୀ · 1 (ଗ)</a> <a href="#exercise-14">ବନ୍ୟପ୍ରାଣୀ · 1 (ଘ)</a> <a href="#exercise-15">ବନ୍ୟପ୍ରାଣୀ · 2 (କ)</a> <a href="#exercise-16">ବନ୍ୟପ୍ରାଣୀ · 3 (କ)</a> <a href="#exercise-17">ବନ୍ୟପ୍ରାଣୀ · 3 (ଖ)</a> <a href="#exercise-18">ବନ୍ୟପ୍ରାଣୀ · 3 (ଗ)</a> <a href="#exercise-19">ବନ୍ୟପ୍ରାଣୀ · 3 (ଘ)</a> <a href="#exercise-20">ଅରଣ୍ୟ · କାମ ୧</a> <a href="#exercise-21">ଅରଣ୍ୟ · କାମ ୨</a> <a href="#exercise-22">ବନ୍ୟପ୍ରାଣୀ · କାମ ୧</a> <a href="#exercise-23">ବନ୍ୟପ୍ରାଣୀ · କାମ ୨</a></nav></details>
+<article id="exercise-1"><h2>ଅରଣ୍ୟ · 1 (କ). ଆଶ୍ରୟ ବଳୟ କହିଲେ କ’ଣ ବୁଝ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉପକୂଳରେ ସମୁଦ୍ର ଆଡ଼ୁ ଆସୁଥିବା ପବନ ଓ ଜୁଆର ମଧ୍ୟରେ ଗଛଗୁଡ଼ିକ ଏକ ପ୍ରାକୃତିକ ପ୍ରତିବନ୍ଧକ ପରି ରହନ୍ତି। ଏଥିରେ ପଛପଟର ଜମି ଓ ବସତି ରକ୍ଷା ପାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉପକୂଳର ଅରଣ୍ୟ ପ୍ରବଳ ବାତାବର୍ତ୍ତ ଓ ଉଚ୍ଚ ଜୁଆରର ପ୍ରଭାବ ରୋକିବାରେ ସାହାଯ୍ୟ କରେ। ଏହି ସୁରକ୍ଷାଦାୟୀ ପ୍ରତିରୋଧକ ବଳୟକୁ ଆଶ୍ରୟ ବଳୟ କୁହାଯାଏ।</p><p>ଧାଡ଼ିରେ ଗଛ ରହିଲେ ବାୟୁର ବେଗ କମେ। ତେଣୁ ଉନ୍ମୁକ୍ତ ଭୂମିର ମାଟି ଉଡ଼ିଯିବା ଓ ଫସଲର କ୍ଷତି ହ୍ରାସ ପାଇପାରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩–୩୮</a></small></article>
+<article id="exercise-2"><h2>ଅରଣ୍ୟ · 1 (ଖ). ଋତୁକାଳୀନ ସ୍ଥାନାନ୍ତରଣ କାର୍ଯ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପର୍ବତର ଉଚ୍ଚ ଚାରଣଭୂମି ଶୀତଦିନେ ବରଫ ଆବୃତ ହୁଏ। ଉଷ୍ମ ଋତୁରେ ସେଠାକୁ ଯିବା ଓ ଶୀତରେ ତଳ ଅଞ୍ଚଳକୁ ଫେରିବା ପଶୁଙ୍କ ଖାଦ୍ୟ ଯୋଗାଣ ସହ ଜଡ଼ିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଋତୁ ବଦଳିଲେ ପଶୁପାଳକ ନିଜ ପଶୁଙ୍କୁ ଉପଯୁକ୍ତ ଚାରଣଭୂମିକୁ ନେଇଯାଆନ୍ତି। ହିମାଳୟ ଅଞ୍ଚଳର ଗୁଜ୍ଜରଙ୍କ ପଶୁଚାରଣ ଏହାର ଉଦାହରଣ।</p><p>ଏହି ସ୍ଥାନାନ୍ତରଣର କାରଣ ଭିନ୍ନ ଉଚ୍ଚତାରେ ଭିନ୍ନ ଋତୁରେ ଚାରଣଭୂମି ମିଳିବା। ପଶୁପାଳକ ଘାସ ମିଳୁଥିବା ଅଞ୍ଚଳ ସହ ନିଜ ଗୋଠର ଗତିକୁ ମେଳାନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=35">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୫–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=36" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୬–୩୮</a></small></article>
+<article id="exercise-3"><h2>ଅରଣ୍ୟ · 1 (ଗ). ପ୍ରାକୃତିକ ଅରଣ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକ ବୃକ୍ଷରୋପଣ କ୍ଷେତ୍ର ଓ ସ୍ୱାଭାବିକ ଅରଣ୍ୟ ଉଭୟରେ ଗଛ ଥାଏ। କିନ୍ତୁ ଅରଣ୍ୟ ନିଜେ ବଢ଼ିଛି କି ଯୋଜନାବଦ୍ଧ ଭାବେ ଲଗାଯାଇଛି ଦେଖି ‘ପ୍ରାକୃତିକ’ ଶବ୍ଦର ଅର୍ଥ ନିର୍ଣ୍ଣୟ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମନୁଷ୍ୟର ରୋପଣ ବିନା, ସ୍ଥାନୀୟ ବର୍ଷା, ଉତ୍ତାପ ଓ ମୃତ୍ତିକା ଅନୁସାରେ ବିସ୍ତୀର୍ଣ୍ଣ ଅଞ୍ଚଳରେ ନିଜେ ବଢ଼ିଥିବା ଗଛଲତାର ସମୂହ ହେଉଛି ପ୍ରାକୃତିକ ଅରଣ୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୦–୩୮</a></small></article>
+<article id="exercise-4"><h2>ଅରଣ୍ୟ · 1 (ଘ). ବୋରିୟଲ ଉଦ୍ଭିଦ କହିଲେ କ’ଣ ବୁଝ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୋରିୟଲ ନାମ ସହ ପର୍ବତର ଶୀତଳ ଅଞ୍ଚଳ ଓ ଉଦ୍ଭିଦର ଆଗମନ ଅଞ୍ଚଳକୁ ଏକାଠି ମନେ ରଖ। ଏଠାରେ ଉଦ୍ଭିଦର ଭୌଗୋଳିକ ସମ୍ପର୍କ ଚିହ୍ନାଇବା ଉଦ୍ଦେଶ୍ୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚୀନ ଓ ମଧ୍ୟ ଏସିଆରୁ ଆସି ହିମାଳୟ ଓ ଉଚ୍ଚ ପର୍ବତଶ୍ରେଣୀରେ ଦେଖାଯାଉଥିବା ସୂଚ୍ୟଗ୍ରପତ୍ରୀ ସରଳବର୍ଗୀୟ ଉଦ୍ଭିଦ ଏହି ଶ୍ରେଣୀର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=31" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୧–୩୮</a></small></article>
+<article id="exercise-5"><h2>ଅରଣ୍ୟ · 1 (ଙ). ୟିଉ (Yew) କେଉଁଠାରେ ଦେଖାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ହିମାଳୟର ୟିଉ ଗଛର ଔଷଧୀୟ ମୂଲ୍ୟ ରହିଛି। ଅତ୍ୟଧିକ ସଂଗ୍ରହ ଯୋଗୁଁ ଏହାର ସଂଖ୍ୟା କମିବା ଆଶଙ୍କାକୁ ପାଠରେ ସଂରକ୍ଷଣର ଏକ କାରଣ କରାଯାଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏହି ହିମାଳୟୀୟ ଔଷଧୀୟ ଉଦ୍ଭିଦ ହିମାଚଳ ପ୍ରଦେଶ ଓ ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ଦେଖାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=37">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=37" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୭–୩୮</a></small></article>
+<article id="exercise-6"><h2>ଅରଣ୍ୟ · 2 (କ). ଜୈବମଣ୍ଡଳ ଓ ପରିସଂସ୍ଥାର ପାର୍ଥକ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଟିଏ ଅରଣ୍ୟରେ ଗଛ, ହରିଣ, ମାଟି, ଜଳ ଓ ସୂର୍ଯ୍ୟକିରଣର ପାରସ୍ପରିକ କ୍ରିୟାକୁ ଏକ ପରିସଂସ୍ଥାରେ ଅଧ୍ୟୟନ କରାଯାଏ। ଜୈବମଣ୍ଡଳ ପୃଥିବୀର ସମସ୍ତ ଏପରି ଜୀବନଧାରୀ କ୍ଷେତ୍ରକୁ ସାମିଲ କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୃଥିବୀର ଜୀବନ ରହିଥିବା ସମଗ୍ର ଅଂଶ ଜୈବମଣ୍ଡଳ। ଏକ ଅଞ୍ଚଳର ଜୀବ ଓ ସେମାନଙ୍କ ଅଜୈବ ପରିବେଶର ପାରସ୍ପରିକ କ୍ରିୟାରେ ଗଠିତ ତନ୍ତ୍ର ପରିସଂସ୍ଥା।</p><p>ଜୈବମଣ୍ଡଳରେ ଅନେକ ପରିସଂସ୍ଥା ଥାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୦–୩୮</a></small></article>
+<article id="exercise-7"><h2>ଅରଣ୍ୟ · 2 (ଖ). ସଂରକ୍ଷିତ ଓ ସୁରକ୍ଷିତ ଅରଣ୍ୟରେ ଲୋକଙ୍କ ପ୍ରବେଶାଧିକାର କିପରି ଭିନ୍ନ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ତୁଳନାରେ ଗଛର ଜାତି ବା ବର୍ଷା ପରିମାଣ ନିର୍ଣ୍ଣାୟକ ନୁହେଁ। ଅରଣ୍ୟର ଆଇନଗତ ମାନ୍ୟତା ଯୋଗୁଁ ଅରଣ୍ୟଜାତ ଦ୍ରବ୍ୟ ନେବା ଓ ପଶୁ ଚରାଇବାର ଅଧିକାର ବଦଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସଂରକ୍ଷିତ ଅରଣ୍ୟରେ ସାଧାରଣ ଜନତାଙ୍କୁ କାଠ ସଂଗ୍ରହ ଓ ପଶୁଚାରଣର ଅନୁମତି ମିଳେନାହିଁ। ସୁରକ୍ଷିତ ଅରଣ୍ୟ ସରକାରୀ ତତ୍ତ୍ୱାବଧାନରେ ରହିଲେ ମଧ୍ୟ ଏହି କାର୍ଯ୍ୟ ନିମନ୍ତେ ଅନୁମତି ମିଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=31" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୧–୩୮</a></small></article>
+<article id="exercise-8"><h2>ଅରଣ୍ୟ · 2 (ଗ). ଚିରହରିତ୍ ଓ ପର୍ଣ୍ଣମୋଚୀ ଅରଣ୍ୟର ପାର୍ଥକ୍ୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପର୍ଣ୍ଣମୋଚୀ ଅରଣ୍ୟରେ ଶୁଷ୍କ ଋତୁର ଦୃଶ୍ୟ ଓ ଚିରହରିତ୍ ଅରଣ୍ୟରେ ବର୍ଷସାରା ସବୁଜ ଛତା ପରି ଦୃଶ୍ୟକୁ ତୁଳନା କର। ପାର୍ଥକ୍ୟଟି ପତ୍ର ଝଡ଼ିବାର ସମୟ ସହ ଜଡ଼ିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚିରହରିତ୍ ଅରଣ୍ୟରେ ସମସ୍ତ ଗଛ ଏକ ସମୟରେ ପତ୍ର ଝଡ଼ାନ୍ତି ନାହିଁ। ଉଷ୍ଣ ଓ ଆର୍ଦ୍ର ପରିବେଶରେ ଅରଣ୍ୟ ବର୍ଷସାରା ସବୁଜ ଦେଖାଯାଏ।</p><p>ପର୍ଣ୍ଣମୋଚୀ ଅରଣ୍ୟର ଗଛ ଶୁଷ୍କ ଋତୁରେ ପତ୍ର ଝଡ଼ାନ୍ତି। ଏହି ଋତୁରେ ଅରଣ୍ୟର ଦୃଶ୍ୟ ବଦଳିଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=33">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୩–୩୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨–୩୮</a></small></article>
+<article id="exercise-9"><h2>ଅରଣ୍ୟ · 2 (ଘ). ସୁନ୍ଦର ବନ ଓ କ୍ଷୁଦ୍ର ସୁନ୍ଦର ବନକୁ ପୃଥକ୍ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉଭୟ ଅରଣ୍ୟ ନଦୀମୁହାଣ ଓ ଜୁଆରଭଟ୍ଟା ପ୍ରଭାବିତ ପରିବେଶ ସହ ସମ୍ପୃକ୍ତ। ଗୋଟିକୁ ଗଙ୍ଗା–ବ୍ରହ୍ମପୁତ୍ର ଓ ଅନ୍ୟଟିକୁ ଓଡ଼ିଶାର ତିନି ନଦୀର ମୁହାଣ ସହ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗଙ୍ଗା–ବ୍ରହ୍ମପୁତ୍ରର ଯୁଗ୍ମ ତ୍ରିକୋଣଭୂମିର ସୁନ୍ଦରୀ ଗଛର ଜୁଆରିଆ ଅରଣ୍ୟ ସୁନ୍ଦର ବନ। ଓଡ଼ିଶାର ମହାନଦୀ–ବ୍ରାହ୍ମଣୀ–ବୈତରଣୀର ମିଶ୍ରିତ ତ୍ରିକୋଣଭୂମିର ହେନ୍ତାଳ ବନ କ୍ଷୁଦ୍ର ସୁନ୍ଦର ବନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=33">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୩–୩୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=33" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୩–୩୮</a></small></article>
+<article id="exercise-10"><h2>ଅରଣ୍ୟ · 3 (କ–ଗ). ମୁକ୍ତ ଅରଣ୍ୟ, ଚିର୍ ଓ ଶୋଲାସ୍‌ର ଅର୍ଥ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ତିନିଟି ଶବ୍ଦରୁ ‘ମୁକ୍ତ’ ବ୍ୟବହାର ଅଧିକାର, ‘ଚିର୍’ ଏକ ବୃକ୍ଷର ନାମ ଓ ‘ଶୋଲାସ୍’ ଏକ ଅଞ୍ଚଳର ଅରଣ୍ୟ ପ୍ରକାରକୁ ବୁଝାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(କ) କାଠ ସଂଗ୍ରହ ଓ ପଶୁଚାରଣ ଉପରେ ପ୍ରତିବନ୍ଧକ ନଥିବା ଅବର୍ଗୀକୃତ ଅରଣ୍ୟକୁ ମୁକ୍ତ ଅରଣ୍ୟ କୁହାଯାଏ। (ଖ) ଚିର୍ ହେଉଛି ଉପକ୍ରାନ୍ତୀୟ ପାର୍ବତ୍ୟ ସରଳବର୍ଗୀୟ ଅରଣ୍ୟର ପ୍ରଧାନ ବୃକ୍ଷ।</p><p>(ଗ) ଦକ୍ଷିଣ ଭାରତର ପାର୍ବତ୍ୟ ନାତିଶୀତୋଷ୍ଣ ଅରଣ୍ୟର ସ୍ଥାନୀୟ ନାମ ଶୋଲାସ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=31" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୧–୩୮</a></small></article>
+<article id="exercise-11"><h2>ବନ୍ୟପ୍ରାଣୀ · 1 (କ). ଜୈବ ବିବିଧତା କ’ଣ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (ଖ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକେ ଅରଣ୍ୟରେ ଅନେକ ପ୍ରକାର ଗଛ, ପକ୍ଷୀ, ପଶୁ ଓ ଅପଘଟକ ଜୀବ ଥାଇପାରନ୍ତି। ଜୈବ ବିବିଧତା କହିଲେ ସେହି ପ୍ରକାରଭେଦ ବୁଝାଯାଏ, କେବଳ ମୋଟ ଜୀବ ସଂଖ୍ୟା ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କୌଣସି ଅଞ୍ଚଳରେ ଦେଖାଯାଉଥିବା ବିଭିନ୍ନ ପ୍ରକାରର ଉଦ୍ଭିଦ, ପ୍ରାଣୀ ଓ ଅଣୁଜୀବଙ୍କ ବିବିଧତାକୁ ଜୈବ ବିବିଧତା କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯–୪୫</a></small></article>
+<article id="exercise-12"><h2>ବନ୍ୟପ୍ରାଣୀ · 1 (ଖ). ଲାଲ୍ ତଥ୍ୟ ପୁସ୍ତକ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରକୃତି ଓ ପ୍ରାକୃତିକ ସମ୍ବଳର ସଂରକ୍ଷଣ ନିମନ୍ତେ ଅନ୍ତରାଷ୍ଟ୍ରୀୟ ସଂଘ ଏହି ତଥ୍ୟ ଲିପିବଦ୍ଧ କଲା। କେଉଁ ଜାତି ଅଧିକ ବିପଦରେ ଅଛି ଜାଣିଲେ ସୁରକ୍ଷା କାମରେ ଅଗ୍ରାଧିକାର ଦିଆଯାଇପାରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିପଦରେ ଥିବା ପ୍ରଜାତିର ସ୍ଥିତି ବିଷୟରେ ତଥ୍ୟ ରଖୁଥିବା ପୁସ୍ତକ। ପାଠ ଅନୁସାରେ ୧୯୬୬ରେ ଏହା ପ୍ରଥମେ ପ୍ରକାଶ ପାଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧–୪୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨–୪୫</a></small></article>
+<article id="exercise-13"><h2>ବନ୍ୟପ୍ରାଣୀ · 1 (ଗ). ସଙ୍କଟାପନ୍ନ ପ୍ରାଣୀ କିଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାସସ୍ଥାନ କମିବା ବା ଶିକାର ବଢ଼ିବାରୁ ସଦସ୍ୟ ସଂଖ୍ୟା କମିପାରେ। ବାସସ୍ଥାନ ରକ୍ଷା ଓ ଶିକାର ନିୟନ୍ତ୍ରଣ ଏହି ଅବସ୍ଥାରେ ପ୍ରତ୍ୟକ୍ଷ ସାହାଯ୍ୟ ଦେଇପାରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯେଉଁ ଜାତିର ପ୍ରାଣୀଙ୍କ ସଂଖ୍ୟା ଏପରି କମୁଛି ଯେ ସୁରକ୍ଷା ନ ମିଳିଲେ ସେମାନେ ନିର୍ଦ୍ଦିଷ୍ଟ ଅଞ୍ଚଳରୁ ବିଲୁପ୍ତ ହୋଇପାରନ୍ତି, ସେମାନେ ସଙ୍କଟାପନ୍ନ। ବିପଦରେ ଥିବା ଜାତିର ସଦସ୍ୟ ଏବେ ମଧ୍ୟ ମିଳନ୍ତି।</p><p>‘ବିଲୁପ୍ତ’ ଓ ‘ସଙ୍କଟାପନ୍ନ’ ବୁଝିବାରେ ଏହି ଭେଦ ଜରୁରୀ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧–୪୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨–୪୫</a></small></article>
+<article id="exercise-14"><h2>ବନ୍ୟପ୍ରାଣୀ · 1 (ଘ). ବନ୍ୟପ୍ରାଣୀ ବୋର୍ଡ଼ର କାର୍ଯ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଟିଏ ପ୍ରାଣୀକୁ ରକ୍ଷା କରିବାକୁ ହେଲେ ତାହାର ଖାଦ୍ୟ ମିଳୁଥିବା ଭୂମି ଓ ପ୍ରଜନନ ସ୍ଥାନକୁ ମଧ୍ୟ ରକ୍ଷା କରିବାକୁ ହୁଏ। ସେଥିପାଇଁ ବୋର୍ଡ଼ର ପରାମର୍ଶରେ ପ୍ରାଣୀ ଓ ବାସସ୍ଥାନ ଉଭୟ ପ୍ରସଙ୍ଗ ଆସେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବନ୍ୟପ୍ରାଣୀ ସଂରକ୍ଷଣର ନୀତି ଓ ଉପାୟ ସମ୍ପର୍କରେ ସରକାରଙ୍କୁ ପରାମର୍ଶ ଦେବା ଏବଂ ପ୍ରାଣୀ ଓ ସେମାନଙ୍କ ବାସସ୍ଥାନର ସୁରକ୍ଷା ବ୍ୟବସ୍ଥା ପାଇଁ ସାହାଯ୍ୟ କରିବା ଏହାର କାର୍ଯ୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧–୪୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩–୪୫</a></small></article>
+<article id="exercise-15"><h2>ବନ୍ୟପ୍ରାଣୀ · 2 (କ). ଅପଘଟକ ଓ ପରପୋଷୀ ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ହରିଣ ଘାସ ଖାଇଲେ ଉତ୍ପାଦକରୁ ପରପୋଷୀକୁ ଶକ୍ତି ଯାଏ। ମୃତ ପତ୍ରକୁ କବକ ବିଘଟନ କଲେ ପୋଷକ ପଦାର୍ଥ ପୁଣି ମୃତ୍ତିକାକୁ ଫେରେ। ଏହି ଦୁଇ କାମ ପରିସଂସ୍ଥାକୁ ଚଳାଇଥାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅପଘଟକ ମୃତ ଉଦ୍ଭିଦ ଓ ପ୍ରାଣୀର ଅବଶେଷକୁ ଭାଙ୍ଗି ସରଳ ପଦାର୍ଥରେ ପରିଣତ କରେ। ଜୀବାଣୁ ଓ କବକ ଏହାର ଉଦାହରଣ।</p><p>ପରପୋଷୀ ନିଜେ ଖାଦ୍ୟ ପ୍ରସ୍ତୁତ କରିପାରେନାହିଁ ଏବଂ ଅନ୍ୟ ଜୀବରୁ ପୋଷଣ ପାଏ। ହରିଣ ଓ ବାଘ ପରପୋଷୀ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯–୪୫</a></small></article>
+<article id="exercise-16"><h2>ବନ୍ୟପ୍ରାଣୀ · 3 (କ). ଅଭୟାରଣ୍ୟକୁ ଗୋଟିଏ ବାକ୍ୟରେ ବୁଝାଅ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (କ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଭୟାରଣ୍ୟରେ ଶିକାର ଉପରେ ନିୟନ୍ତ୍ରଣ ରହିଲେ ପ୍ରାଣୀ ସେହି ଅଞ୍ଚଳରେ ନିଜ ଖାଦ୍ୟ ପାଇବା ଓ ବଂଶ ବୃଦ୍ଧି କରିବାର ସୁଯୋଗ ପାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବନ୍ୟ ପ୍ରାଣୀଙ୍କୁ ସେମାନଙ୍କ ପ୍ରାକୃତିକ ପରିବେଶରେ ସୁରକ୍ଷା ଦେବା ପାଇଁ ନିର୍ଦ୍ଧାରିତ ଅଞ୍ଚଳ ହେଉଛି ଅଭୟାରଣ୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩–୪୫</a></small></article>
+<article id="exercise-17"><h2>ବନ୍ୟପ୍ରାଣୀ · 3 (ଖ). ଜାତୀୟ ଉଦ୍ୟାନକୁ ଗୋଟିଏ ବାକ୍ୟରେ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉଦ୍ୟାନର ସୁରକ୍ଷା ଭିତରେ ପ୍ରାଣୀ ସହ ତାହାକୁ ଆଶ୍ରୟ ଦେଉଥିବା ଉଦ୍ଭିଦ ଓ ଅନ୍ୟ ପ୍ରାକୃତିକ ଉପାଦାନ ମଧ୍ୟ ଆସନ୍ତି। ଏଥିରେ ସମଗ୍ର ବାସସ୍ଥାନର ଭୂମିକା ସ୍ପଷ୍ଟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାକୃତିକ ପରିବେଶ ସହିତ ବନ୍ୟପ୍ରାଣୀ ଓ ଉଦ୍ଭିଦର ସୁରକ୍ଷା ପାଇଁ ନିର୍ଦ୍ଧାରିତ ସଂରକ୍ଷିତ କ୍ଷେତ୍ରକୁ ଜାତୀୟ ଉଦ୍ୟାନ କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=44" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୪–୪୫</a></small></article>
+<article id="exercise-18"><h2>ବନ୍ୟପ୍ରାଣୀ · 3 (ଗ). ବିଲୁପ୍ତ ଜାତିକୁ ଗୋଟିଏ ବାକ୍ୟରେ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠର ପଚାଶ ବର୍ଷର ମାନଦଣ୍ଡ ଏହି ଶ୍ରେଣୀକରଣ ବୁଝାଇବା ପାଇଁ ଦିଆଯାଇଛି। ନିଜ ଅଞ୍ଚଳରେ ଥରେ କୌଣସି ପ୍ରାଣୀ ନଦେଖିବା ତାହାର ବିଲୁପ୍ତିର ପ୍ରମାଣ ହୁଏନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠର ଶ୍ରେଣୀକରଣ ଅନୁସାରେ ବିଗତ ପଚାଶ ବର୍ଷ ମଧ୍ୟରେ ଯେଉଁ ଜାତିର କୌଣସି ସଦସ୍ୟ ଦେଖିବାକୁ ମିଳିନାହିଁ ତାହା ବିଲୁପ୍ତ ଜାତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨–୪୫</a></small></article>
+<article id="exercise-19"><h2>ବନ୍ୟପ୍ରାଣୀ · 3 (ଘ). ବିପଦପ୍ରବଣ ଜାତିର ଅର୍ଥ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯେଉଁ ପ୍ରତିକୂଳତା ସଂଖ୍ୟା କମାଉଛି ତାହା ଲାଗିରହିଲେ ଆଗକୁ ବିପଦ ବଢ଼ିପାରେ। ତେଣୁ ବିପଦପ୍ରବଣ ଅବସ୍ଥାରୁ ହିଁ ସଂରକ୍ଷଣ କଲେ ସଙ୍କଟାପନ୍ନ ହେବାର ଆଶଙ୍କା କମେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବର୍ତ୍ତମାନ ସ୍ଥିତି ଉଦ୍‌ବେଗଜନକ ନହେଲେ ମଧ୍ୟ ପ୍ରତିକୂଳ ପରିସ୍ଥିତି ଲାଗି ରହିଲେ ଯେଉଁ ଜାତି ସଙ୍କଟାପନ୍ନ ହୋଇପାରେ ତାହା ବିପଦପ୍ରବଣ ଜାତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=44" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୪–୪୫</a></small></article>
+<article id="exercise-20"><h2>ଅରଣ୍ୟ · କାମ ୧. ଅରଣ୍ୟଜାତ ବିଭିନ୍ନ ପଦାର୍ଥର ତାଲିକା ପ୍ରସ୍ତୁତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦ୍ରବ୍ୟର ନାମ ସହ ତାହାର ବ୍ୟବହାର ମେଳାଅ। ବାଉଁଶ ଓ କାଠ ନିର୍ମାଣ ପାଇଁ, ମହୁ ଓ ଫଳ ଖାଦ୍ୟ ପାଇଁ, ୟିଉ ଔଷଧୀୟ ଉପଯୋଗ ପାଇଁ ଦୃଷ୍ଟାନ୍ତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅରଣ୍ୟରୁ ମିଳୁଥିବା କାଠ, ଜାଳେଣି, ବାଉଁଶ, ଫଳ, ମହୁ ଓ ଔଷଧୀୟ ଉଦ୍ଭିଦକୁ ତାଲିକା କର। ପ୍ରତିଟି ପାଖରେ ଗୋଟିଏ ବ୍ୟବହାର ଲେଖ, ଯଥା କାଠରୁ ଆସବାବ କିମ୍ବା ଜାଳେଣିରୁ ତାପ।</p><p>ବ୍ୟବହାର ଅନୁସାରେ ତାଲିକା ସଜାଇଲେ ଅରଣ୍ୟର ମୂଲ୍ୟ ସ୍ପଷ୍ଟ ହୁଏ। କାଠ ନିର୍ମାଣ ଓ ଆସବାବ ପାଇଁ ଲାଗେ, ଔଷଧୀୟ ଉଦ୍ଭିଦ ଚିକିତ୍ସାରେ ଲାଗେ।</p><p>ସବୁ ଫଳକୁ ଏକ ‘କାଠ’ ସ୍ତମ୍ଭରେ ରଖ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨–୩୭</a></small></article>
+<article id="exercise-21"><h2>ଅରଣ୍ୟ · କାମ ୨. ସ୍ଥାନୀୟ ଅରଣ୍ୟଜାତ ବୃକ୍ଷରୁ କେଉଁଗୁଡ଼ିକ ପ୍ରାକୃତିକ ଓ କେଉଁଗୁଡ଼ିକ ମନୁଷ୍ୟକୃତ, ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରାକୃତିକ ଓ ମନୁଷ୍ୟକୃତ କେବଳ ଗଛର ନାମରୁ ନିର୍ଣ୍ଣୟ ହୁଏ ନାହିଁ। ଏକେ ଜାତିର ଗଛ ଜଙ୍ଗଲରେ ନିଜେ ଉଠିପାରେ ଓ ରାସ୍ତାକଡ଼ରେ ଲୋକେ ମଧ୍ୟ ଲଗାଇପାରନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ସ୍ତମ୍ଭ ରଖ। ଯେଉଁଠି ଗଛ ସ୍ୱାଭାବିକ ଭାବେ ବଢ଼ିଛି ସେଠାର ବୃକ୍ଷ ଓ ସ୍ଥାନ ପ୍ରଥମ ସ୍ତମ୍ଭରେ ଲେଖ।</p><p>ଲୋକମାନେ ରୋପଣ କରିଥିବା ଗଛ ଓ ତାହାର ସ୍ଥାନ ଦ୍ୱିତୀୟରେ ଲେଖ। କେବଳ ଗଛର ପ୍ରଜାତି ଦେଖି ରୋପଣର ଇତିହାସ ଜଣାପଡ଼େ ନାହିଁ।</p><p>ଏକେ ପ୍ରଜାତିର ଗଛ ମଣିଷ ଲଗାଇପାରେ ବା ନିଜେ ଉଠିପାରେ। ସେଥିପାଇଁ ପ୍ରଜାତି ସହିତ କେଉଁଠାରେ ମିଳିଲା ଓ ସେହି ଗଛଟି କିପରି ଉଠିଥିବା ଜଣାପଡ଼ିଲା ଲେଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=37" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୭</a></small></article>
+<article id="exercise-22"><h2>ବନ୍ୟପ୍ରାଣୀ · କାମ ୧. ତୁମ ଅଞ୍ଚଳରେ ଦେଖାଯାଉଥିବା ବନ୍ୟପ୍ରାଣୀ ସମ୍ବଳର ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାସସ୍ଥାନ ଭିତ୍ତିରେ ନିରୀକ୍ଷଣ ଅଲଗା କର। ଜଳାଶୟ ପାଖରେ ଦେଖାଯାଉଥିବା ପକ୍ଷୀ ଓ ଗଛରେ ରହୁଥିବା ପ୍ରାଣୀର ସ୍ଥାନ ଲେଖିଲେ ସେମାନଙ୍କ ଆଶ୍ରୟର ପାର୍ଥକ୍ୟ ବୁଝିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାଣୀର ନାମ, ଦେଖାଯାଇଥିବା ସ୍ଥାନ ଓ ତାରିଖର ସ୍ତମ୍ଭ କର। ନିଜେ ଦେଖିଥିବା ପ୍ରାଣୀ ଓ ଅନ୍ୟଙ୍କଠାରୁ ଶୁଣିଥିବା ବିବରଣୀକୁ ପୃଥକ୍ କର।</p><p>ଚିଲିକାର ଜଳଜ ପ୍ରାଣୀ ବା ଓଡ଼ିଶା ଉପକୂଳର କଇଁଛ ପାଠର ଉଦାହରଣ। ନିଜ ଅଞ୍ଚଳରେ ପ୍ରକୃତରେ ଦେଖାଯାଇଥିଲେ ହିଁ ସେଗୁଡ଼ିକୁ ସ୍ଥାନୀୟ ତାଲିକାରେ ରଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+<article id="exercise-23"><h2>ବନ୍ୟପ୍ରାଣୀ · କାମ ୨. ନିକଟସ୍ଥ ଅରଣ୍ୟରେ ଦେଖାଯାଉଥିବା ପଶୁ ଓ ପକ୍ଷୀଙ୍କ ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜଙ୍ଗଲର ଏକ ନିରୀକ୍ଷଣରେ ସମସ୍ତ ପ୍ରାଣୀ ଦେଖାଯିବା ଆବଶ୍ୟକ ନୁହେଁ। ଯାହା ନିଜେ ଦେଖିଛ ତାହା ଏବଂ ସ୍ଥାନୀୟ ଲୋକ ଜଣାଇଥିବା ତଥ୍ୟକୁ ପୃଥକ୍ ଟିପ୍ପଣୀରେ ରଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅରଣ୍ୟର ନାମ ଓ ଅବସ୍ଥିତି ଲେଖ। ପଶୁ ଓ ପକ୍ଷୀ ଦୁଇ ସ୍ତମ୍ଭରେ ପ୍ରତ୍ୟକ୍ଷ ଦେଖିଥିବା ପ୍ରାଣୀ ବା ଶିକ୍ଷକଙ୍କ ସହ ଯାଞ୍ଚ ହୋଇଥିବା ନାମ ଲେଖ।</p><p>ପାଠର ସବୁ ଉଦାହରଣ ନିଜ ଅରଣ୍ୟରେ ଅଛି ବୋଲି ଅନୁମାନ କରିହେବ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+
+</main></body></html>

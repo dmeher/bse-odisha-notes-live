@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">△DBC ∼ △CBA | ∠B = 50°, ∠BDC = 100° ଓ D, BA ଉପରେ |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="356.99,32.50 143.01,287.50 312.02,287.50 356.99,32.50" stroke="#244355" stroke-width="2.35"/>
+<polyline points="198.17,221.77 312.02,287.50" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="150.62,278.44 150.94,278.72 151.26,279.01 151.56,279.32 151.85,279.64 152.13,279.96 152.40,280.30 152.66,280.64 152.90,281.00 153.13,281.36 153.35,281.73 153.55,282.11 153.74,282.50 153.91,282.89 154.07,283.29 154.22,283.70 154.35,284.11 154.46,284.52 154.56,284.94 154.65,285.36 154.72,285.79 154.77,286.21 154.81,286.64 154.84,287.07 154.85,287.50" stroke="#a9571e" stroke-width="2.35"/>
+<polyline points="189.70,231.87 190.45,232.46 191.25,232.99 192.08,233.46 192.95,233.87 193.84,234.22 194.76,234.50 195.69,234.72 196.64,234.86 197.60,234.94 198.55,234.94 199.51,234.88 200.46,234.75 201.40,234.55 202.32,234.28 203.22,233.95 204.09,233.55 204.93,233.09 205.73,232.57 206.50,231.99 207.22,231.36 207.89,230.67 208.51,229.94 209.08,229.17 209.59,228.36" stroke="#a9571e" stroke-width="2.35"/>
+</g>
+<circle cx="356.99" cy="32.50" r="2.7" fill="#244355"/>
+<text x="365.98" y="21.01" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="143.01" cy="287.50" r="2.7" fill="#244355"/>
+<text x="134.02" y="298.99" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="312.02" cy="287.50" r="2.7" fill="#244355"/>
+<text x="318.15" y="300.99" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="198.17" cy="221.77" r="2.7" fill="#244355"/>
+<text x="185.17" y="216.77" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+</svg>

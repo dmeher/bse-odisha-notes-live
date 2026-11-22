@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଛନ୍ଦ ଓ ଅଳଙ୍କାର · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଛନ୍ଦ ଓ ଅଳଙ୍କାର</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/117tAjiGYIkUI1ylzp3TcmlP8eJYeaFp4/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣର ଆବୃତ୍ତିରେ କେଉଁ ଅଳଙ୍କାର ଦେଖାଯାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଉପମା</li><li>ରୂପକ</li><li>ଅନୁପ୍ରାସ</li><li>ଉତ୍ପ୍ରେକ୍ଷା</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଅନୁପ୍ରାସ</b></p>
+<div class="lesson-body"><p>ବର୍ଣ୍ଣର ପୁନଃପ୍ରୟୋଗ ଅନୁପ୍ରାସର ଶବ୍ଦସୌନ୍ଦର୍ଯ୍ୟ ଆଣେ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୬–୮</small></article>
+<article><h2>୨. ଗୋଟିଏ ଶବ୍ଦ ଏକାଧିକ ଅର୍ଥ ଦେଲେ କେଉଁ ଅଳଙ୍କାର ହୁଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଶ୍ଳେଷ</li><li>ଅନୁପ୍ରାସ</li><li>ଉପମା</li><li>ରୂପକ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ଶ୍ଳେଷ</b></p>
+<div class="lesson-body"><p>ଏକ ଶବ୍ଦର ଭିନ୍ନ ଅର୍ଥ ପ୍ରକାଶ ଶ୍ଳେଷର ବୈଶିଷ୍ଟ୍ୟ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୭</small></article>
+<article><h2>୩. ପାଠରେ ଛନ୍ଦର ପ୍ରାଥମିକ ଦୁଇ ଭେଦ କ’ଣ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଉପମା ଓ ରୂପକ</li><li>ଗଦ୍ୟ ଓ ପଦ୍ୟ</li><li>ଶବ୍ଦ ଓ ଅର୍ଥ</li><li>ମିତ୍ରାକ୍ଷର ଓ ଅମିତ୍ରାକ୍ଷର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ମିତ୍ରାକ୍ଷର ଓ ଅମିତ୍ରାକ୍ଷର</b></p>
+<div class="lesson-body"><p>ମିତ୍ରାକ୍ଷର ଭିତରେ ପୁଣି ପୂର୍ଣ୍ଣ, ଅପୂର୍ଣ୍ଣ ଓ ଏକାନ୍ତର ଭେଦ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୧</small></article>
+<article><h2>୪. ଉପମେୟର ଗୁଣ କାହା ସହ ମିଳାଯାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଯତି</li><li>ଉପମାନ</li><li>ଛନ୍ଦ</li><li>ବାକ୍ୟାଂଶ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଉପମାନ</b></p>
+<div class="lesson-body"><p>ସାଦୃଶ୍ୟ ଦେଖାଇବା ପାଇଁ ଉପମାନ ବ୍ୟବହୃତ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୬–୯</small></article>
+<article><h2>୫. “ପରି” ଶବ୍ଦ ତୁଳନାରେ କେଉଁ କାମ କରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଉପମେୟ</li><li>ଉପମାବାଚକ ପଦ</li><li>କର୍ତ୍ତା</li><li>ଉପମାନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଉପମାବାଚକ ପଦ</b></p>
+<div class="lesson-body"><p>ଏହା ଦୁଇ ପଦ ମଧ୍ୟର ସାଦୃଶ୍ୟ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୬–୯</small></article>
+<article><h2>୬. ଉପମାନ ଓ ଉପମେୟର ମିଳୁଥିବା ଗୁଣକୁ କ’ଣ କୁହାଯାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ସାଧାରଣ ଧର୍ମ</li><li>ଯତି</li><li>ଶ୍ଳିଷ୍ଟପଦ</li><li>କ୍ରିୟା</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ସାଧାରଣ ଧର୍ମ</b></p>
+<div class="lesson-body"><p>ତୁଳନାର ଆଧାର ହେଉଛି ଉଭୟର ସାଧାରଣ ଧର୍ମ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୬–୯</small></article>
+<article><h2>୭. ଶବ୍ଦକୁ ନ ଭାଙ୍ଗି ଭିନ୍ନ ଅର୍ଥ ବୁଝିଲେ ଶ୍ଳେଷର କେଉଁ ଭେଦ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଅନୁପ୍ରାସ</li><li>ସଭଙ୍ଗଶ୍ଳେଷ</li><li>ଉପମା</li><li>ଅଭଙ୍ଗଶ୍ଳେଷ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଅଭଙ୍ଗଶ୍ଳେଷ</b></p>
+<div class="lesson-body"><p>ଶବ୍ଦ ଅଖଣ୍ଡ ରହୁଥିବାରୁ ଏହା ଅଭଙ୍ଗଶ୍ଳେଷ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୬–୯</small></article>
+<article><h2>୮. ଅଳଙ୍କାର ବିଚାରରେ ବର୍ଣ୍ଣର ସଜାଣରେ ଚମତ୍କାର ଥିଲେ କେଉଁ ବିଭାଗ?</h2>
+<ol type="A"><li>ଶବ୍ଦାଳଙ୍କାର</li><li>ଅମିତ୍ରାକ୍ଷର</li><li>ବାକ୍ୟ ବିଚାର</li><li>ଅର୍ଥାଳଙ୍କାର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ଶବ୍ଦାଳଙ୍କାର</b></p>
+<div class="lesson-body"><p>ଏଠାରେ ଶବ୍ଦର ଧ୍ୱନି ଓ ବିନ୍ୟାସ ସୌନ୍ଦର୍ଯ୍ୟ ଆଣେ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୬–୯</small></article>
+<article><h2>୯. ଗୁଜରୀ ଛନ୍ଦରେ ଯତିପାତର ଠିକ୍ କ୍ରମ କ’ଣ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଚତୁର୍ଥ, ଷଷ୍ଠ, ଶେଷ</li><li>ଷଷ୍ଠ, ଅଷ୍ଟମ, ଶେଷ</li><li>ଦ୍ୱିତୀୟ, ଚତୁର୍ଥ, ଶେଷ</li><li>ତୃତୀୟ, ପଞ୍ଚମ, ଶେଷ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ତୃତୀୟ, ପଞ୍ଚମ, ଶେଷ</b></p>
+<div class="lesson-body"><p>ନଅ ଅକ୍ଷରର ପାଦରେ ତୃତୀୟ, ପଞ୍ଚମ ଓ ଶେଷ ଅକ୍ଷରରେ ଯତି ପଡ଼େ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୦. ନଟବାଣୀ ପାଦରେ ୩ ଓ ୬ ପରେ ପରବର୍ତ୍ତୀ ଯତି କେଉଁ ଅକ୍ଷରରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଅଷ୍ଟମ</li><li>ସପ୍ତମ</li><li>ଦଶମ</li><li>ନବମ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ନବମ</b></p>
+<div class="lesson-body"><p>ନଟବାଣୀର ବାର ଅକ୍ଷରରେ ୩, ୬, ୯ ଓ ୧୨ରେ ଯତିପାତ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୧. ଭାଗବତବାଣୀରେ ଗୋଟିଏ ପଦ ଗଢ଼ିବାକୁ କେତୋଟି ପାଦ ଦରକାର?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଛଅ</li><li>ଚାରି</li><li>ତିନି</li><li>ଦୁଇ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଦୁଇ</b></p>
+<div class="lesson-body"><p>ଦୁଇଟି ନବାକ୍ଷରୀ ପାଦ ମିଶି ଏହି ଛନ୍ଦର ଗୋଟିଏ ପଦ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୨. ବିଭାସକେଦାର ନାମରେ କେଉଁ ଛନ୍ଦକୁ ମଧ୍ୟ ଚିହ୍ନିବା?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ବଙ୍ଗଳାଶ୍ରୀ</li><li>ଗୁଜରୀ</li><li>ଶଙ୍କରାଭରଣ</li><li>ନଟବାଣୀ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ନଟବାଣୀ</b></p>
+<div class="lesson-body"><p>ପୁସ୍ତକରେ ନଟବାଣୀ ବା ବିଭାସକେଦାର ନାମରେ ଏହି ଛନ୍ଦ ଦିଆଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୧୩. ବଙ୍ଗଳାଶ୍ରୀର ଗୋଟିଏ ପାଦର ଅକ୍ଷରସଂଖ୍ୟା କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଚଉଦ</li><li>କୋଡ଼ିଏ</li><li>ନଅ</li><li>ବାର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. କୋଡ଼ିଏ</b></p>
+<div class="lesson-body"><p>ଏହି ଦୁଇପାଦୀ ପଦର ପ୍ରତ୍ୟେକ ପାଦରେ କୋଡ଼ିଏ ଅକ୍ଷର ଥାଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୧୪. ବଙ୍ଗଳାଶ୍ରୀରେ ୬ ଓ ୧୨ ପରେ ଆଉ କେଉଁ ଦୁଇଟି ଯତି ଅଛି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>୧୪ ଓ ୧୭</li><li>୧୫ ଓ ଶେଷ</li><li>୧୮ ଓ ଶେଷ</li><li>୧୩ ଓ ୧୬</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ୧୮ ଓ ଶେଷ</b></p>
+<div class="lesson-body"><p>ବଙ୍ଗଳାଶ୍ରୀର ଯତିସ୍ଥାନ ଷଷ୍ଠ, ଦ୍ୱାଦଶ, ଅଷ୍ଟାଦଶ ଓ ଶେଷ ଅକ୍ଷର।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୧୫. ଶଙ୍କରାଭରଣର କେଉଁ ପାଦ ଅନ୍ୟ ତିନି ପାଦଠାରୁ ଛୋଟ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଚତୁର୍ଥ</li><li>ଦ୍ୱିତୀୟ</li><li>ପ୍ରଥମ</li><li>ତୃତୀୟ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ତୃତୀୟ</b></p>
+<div class="lesson-body"><p>ତୃତୀୟ ପାଦରେ ଆଠ ଅକ୍ଷର, ଅନ୍ୟ ତିନୋଟି ପାଦରେ ଚଉଦ ଲେଖାଏଁ ଅକ୍ଷର ଥାଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୧୬. ଶଙ୍କରାଭରଣର ତୃତୀୟ ପାଦରେ ଯତିସ୍ଥାନ କେଉଁଗୁଡ଼ିକ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ତୃତୀୟ, ପଞ୍ଚମ ଓ ଶେଷ</li><li>ପ୍ରଥମ, ତୃତୀୟ ଓ ଶେଷ</li><li>ଦ୍ୱିତୀୟ, ଷଷ୍ଠ ଓ ଶେଷ</li><li>ଅଷ୍ଟମ, ଏକାଦଶ ଓ ଶେଷ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଦ୍ୱିତୀୟ, ଷଷ୍ଠ ଓ ଶେଷ</b></p>
+<div class="lesson-body"><p>ଆଠ ଅକ୍ଷରର ତୃତୀୟ ପାଦରେ ଦ୍ୱିତୀୟ, ଷଷ୍ଠ ଓ ଶେଷ ଅକ୍ଷରରେ ଯତି ପଡ଼େ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 5/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+
+</main></body></html>

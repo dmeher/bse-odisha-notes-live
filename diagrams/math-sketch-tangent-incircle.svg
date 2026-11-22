@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">△ABCର ଅନ୍ତଃବୃତ୍ତକୁ AB, BC, AC ଏବଂ ଅନ୍ୟ ସ୍ପର୍ଶକ XY ସ୍ପର୍ଶ କରୁଛନ୍ତି |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="227.79" cy="196.23" r="91.27" stroke="#244355" stroke-width="2.5"/>
+<polyline points="210.16,32.50 77.34,287.50 422.66,287.50 210.16,32.50" stroke="#244355" stroke-width="2.35"/>
+<polyline points="172.42,104.96 270.54,104.96" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="210.16" cy="32.50" r="2.7" fill="#244355"/>
+<text x="205.98" y="18.18" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="77.34" cy="287.50" r="2.7" fill="#244355"/>
+<text x="66.08" y="296.41" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="422.66" cy="287.50" r="2.7" fill="#244355"/>
+<text x="433.92" y="296.41" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="172.42" cy="104.96" r="2.7" fill="#244355"/>
+<text x="157.42" y="102.96" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">X</text>
+<circle cx="270.54" cy="104.96" r="2.7" fill="#244355"/>
+<text x="285.54" y="102.96" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">Y</text>
+</svg>

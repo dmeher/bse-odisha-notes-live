@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>କଳିଯୁଗର ସମାପ୍ତି ଏବଂ ମିଶ୍ରବାବୁ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>କଳିଯୁଗର ସମାପ୍ତି ଏବଂ ମିଶ୍ରବାବୁ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1gyUhkugtCJFcnDpqlq58qr2ZRqQwBapT/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୧୭। ଯାଞ୍ଚ କରାଯାଇଥିବା ଉତ୍ତର ପ୍ରଶ୍ନକ୍ରମରେ ଦିଆଯାଇଛି।</p><p>୧୭ରେ ସଂକଳନଗୁଡ଼ିକ ସଂଗ୍ରହ ଓ ପଠନ ଆବଶ୍ୟକ। ପାଠର ଲେଖକ ପରିଚୟରୁ ତାଲିକା ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୭</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୭)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a></nav></details>
+<article id="exercise-1"><h2>୧. ମଣିଷକୁ ‘ସ୍କ୍ରୁ ଢିଲା’ କାହିଁକି କୁହାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘କାରଖାନା’ ଓ ‘ସ୍କ୍ରୁ’ ଦୁହେଁ ଯନ୍ତ୍ରର ଶବ୍ଦ। ଗଳ୍ପରେ ଯନ୍ତ୍ରର ଚାଳ ବିଗିଡ଼ିବା ସହ ଲୋକର ଅସାଧାରଣ ଆଚରଣ ମିଳାଇ ଏହି ହାସ୍ୟ ତିଆରି ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲେଖକ ମୁଣ୍ଡକୁ କାରଖାନା ସହିତ ତୁଳନା କରିଛନ୍ତି। ଯନ୍ତ୍ରର ପେଞ୍ଚ ଢିଲା ହେଲା ପରି କେହି ଏକଜିଦିଆ ହୋଇ ଅସ୍ୱାଭାବିକ ଆଚରଣ କଲେ ହାସ୍ୟରେ ଏପରି କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=93">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୩–୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-2"><h2>୨. କାରଖାନାର ଫାଳେ ଭୁଶୁଡ଼ିବାର କଳ୍ପନା କେଉଁ ପ୍ରସଙ୍ଗରେ ଆସିଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜୟଦେବଙ୍କ ଦୃଷ୍ଟିରୁ ମିଶ୍ରବାବୁଙ୍କ ବେଶର ଅପରିଚିତ ରୂପ ଦେଖାଯାଉଛି। ବନ୍ଧୁଙ୍କୁ ନେଇ ତାଙ୍କ ବିସ୍ମୟ ଯେତେ ବଢ଼ିଛି, କାରଖାନା ଭୁଶୁଡ଼ିବାର କଳ୍ପନା ମଧ୍ୟ ସେତେ ବଡ଼ ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମିଶ୍ରବାବୁଙ୍କ ଅଦ୍ଭୁତ ଢଙ୍ଗରଙ୍ଗ ଦେଖି ଜୟଦେବ ଭାବିଲେ ତାଙ୍କ ମୁଣ୍ଡର ଅନେକ ନଟ୍‌ ବୋଲ୍‌ଟ ଏକାଥରେ ଖସିଯାଇଛି। ତାଙ୍କ ବିସ୍ମୟର ଏହା ରସାତ୍ମକ ବର୍ଣ୍ଣନା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=93">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୩–୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-3"><h2>୩. ଟ୍ରେନରେ ଚଢ଼ାଇବା ବେଳର ଦୃଶ୍ୟ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଟ୍ରେନ ମାତ୍ର ଦୁଇ ମିନିଟ ରହିବାରୁ ଜୟଦେବଙ୍କ ତରତର କାମର କାରଣ ବୁଝାଯାଏ। ସେହି ସମୟରେ ଆଈଙ୍କୁ ଛାଡ଼ିବାକୁ ନାତିନାତୁଣୀଙ୍କ ମନ ହେଉନଥିବାରୁ ବିଦାୟ ଦୃଶ୍ୟଟି ଜୀବନ୍ତ ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଟ୍ରେନ ମାତ୍ର ଦୁଇ ମିନିଟ୍ ରହେ। ନାତିନାତୁଣୀ ଆଈଙ୍କୁ ଜାବୁଡ଼ି ସକେଇଲେ।</p><p>ଟ୍ରେନ ଛାଡ଼ିବା ଆଗରୁ ଜୟଦେବ ତରତର ହୋଇ ସେମାନଙ୍କୁ ଡବାରେ ଚଢ଼ାଇଦେଲେ। ବିଦାୟର ଦୁଃଖ ସହ ତତ୍ପରତା ମିଶିଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-4"><h2>୪. କାର୍ ପାଖକୁ ଆସି ଜୟଦେବ ଓ ସ୍ତ୍ରୀ କାହାକୁ ଦେଖିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କାର୍‌ରେ ବସିଥିବା ଯାତ୍ରୀଙ୍କୁ ଚିହ୍ନିବାର ଦୁଇଟି ସୂତ୍ର ହେଉଛି ଆସନର ସ୍ଥାନ ଓ ହସ। ଧଳାଦାଢ଼ି ଦେଖି ପ୍ରଥମେ ଅଚିହ୍ନା ଲାଗିଥିବା ଲୋକକୁ ଚିହ୍ନା ହସରୁ ବନ୍ଧୁ ବୋଲି ଜାଣିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାମନାରେ ଜଣେ ଭଦ୍ରଲୋକ ଓ ଦୁଇ ପିଲା, ପଛରେ ଜଣେ ଝିଅ ଓ ଧଳାଦାଢ଼ି ବୁଢ଼ା। ଚିହ୍ନା ହସରୁ ମିଶ୍ରବାବୁଙ୍କୁ ଚିହ୍ନିଲେ।</p><p>ଅନ୍ୟମାନେ ତାଙ୍କ ଝିଅ ଗୌରୀ, ଜୋଇଁ ଓ ପିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-5"><h2>୫. ମିଶ୍ରବାବୁ ସପରିବାର ଭବାନୀପାଟଣା କାହିଁକି ଆସିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜୋଇଁଙ୍କ ବଦଳି ହେଉଛି ପ୍ରଥମ କାରଣ। ନୂଆ ସ୍ଥାନରେ ଘର ଠିକ୍ କରି ପିଲାମାନଙ୍କ ଶ୍ରେଣୀ ଆରମ୍ଭ ବେଳେ ଭର୍ତ୍ତି କରାଇବା ପରିବାରର ପରବର୍ତ୍ତୀ କାମ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜୋଇଁଙ୍କର ଭବାନୀପାଟଣା ବଦଳି ହୋଇଥିଲା। ଗୌରୀ ଘର ଠିକ୍ କରି ପିଲାଙ୍କୁ ସମୟରେ ସ୍କୁଲରେ ଭର୍ତ୍ତି କରିବାକୁ ଚାହୁଁଥିଲା।</p><p>ଜୟଦେବଙ୍କ ପାଖରେ ଦିନେ ଦୁଇଦିନ ରହିବା ଭାବି ମିଶ୍ରବାବୁ ସମସ୍ତଙ୍କୁ ଆଣିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-6"><h2>୬. ପାହାନ୍ତିଆ ପହରରେ ବନ୍ଧୁ ଦୁହେଁ କ’ଣ କରୁଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନାତିନାତୁଣୀଙ୍କ ବିଦାୟ ଓ ପିଲାଙ୍କ ସ୍କୁଲର ଚିନ୍ତା ମଧ୍ୟରେ ଦୁଇ ବନ୍ଧୁଙ୍କ ମିଳନ ହୁଏ। ଘରେ ଚା ଓ ଲୁଣିଆ ବିସ୍କୁଟ ସହ ହୀରାକୁଦ ବନ୍ଧ ସମୟର ସ୍ମୃତି ଫେରେ। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବାହାରେ ଦୁଇଟି ଚଉକି ପକାଇ ଶୀତଳ ପବନରେ ଗରମ ଚା ପିଉଥିଲେ। ଲୁଣିଆ ବିସ୍କୁଟ ଖାଉ ଖାଉ ହୀରାକୁଦ ବନ୍ଧ ସମୟର କଥା ମନେ ପକାଉଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪–୯୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-7"><h2>୭. ସକାଳର ପରିବେଶ କିପରି ଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କଡ଼େଇ, ରିକ୍‌ସା ଓ ପଡ଼ୋଶୀଙ୍କ ଶବ୍ଦରେ ଦୈନନ୍ଦିନ ସକାଳର ପରିବେଶ ତିଆରି ହୁଏ। ସେହି ପରିଚିତ ଶବ୍ଦ ମଝିରୁ ପକ୍ଷୀର ସ୍ୱରକୁ ମିଶ୍ରବାବୁ ଅଲଗା ଅର୍ଥରେ ଶୁଣୁଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଘରେ କଡ଼େଇର ଶବ୍ଦ, ରାସ୍ତାରେ କାଁ ଭାଁ ରିକ୍‌ସା, ପଡ଼ୋଶୀ ଘରୁ କୁଳି କରିବାର ଶବ୍ଦ। କାନ୍ଥରେ ଚାରୋଟି ବଣି ବସିଥିଲେ ଓ ଦୂର ଖପରଲି ଛାତରୁ କୁକୁଡ଼ା ଡାକୁଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=95">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୫–୯୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-8"><h2>୮. ମିଶ୍ରବାବୁ ସ୍ୱପ୍ନ ଦେଖୁଛନ୍ତି ବୋଲି ଜୟଦେବ କାହିଁକି ପଚାରିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜୟଦେବଙ୍କ କାନକୁ ଆସୁଥିବା ସ୍ୱର ଓ ମିଶ୍ରବାବୁ ଶୁଣାଉଥିବା କଥା ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଅଛି। ଏହି ପାର୍ଥକ୍ୟରୁ ‘ସ୍ୱପ୍ନ’ କଥା ତାଙ୍କ ମନରେ ଆସେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମିଶ୍ରବାବୁ ତାଙ୍କୁ ତୁନି ହୋଇ କାହାଣୀ ଶୁଣିବାକୁ କହିଲେ। ଅଥଚ ଜୟଦେବ ଚାରିଆଡ଼େ କାନ ଡେରି କାହାରି ଫିସ୍‌ଫିସ୍‌ ମଧ୍ୟ ଶୁଣିଲେ ନାହିଁ।</p><p>ତେଣୁ ସ୍ୱପ୍ନ କଥା କହିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=95">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୫–୯୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-9"><h2>୯. ଅବିଶ୍ୱାସରେ ଜୟଦେବ କ’ଣ ଜାଣିବାକୁ ଚାହିଁଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜୟଦେବ ସେହି ଶବ୍ଦ ନିଜେ ଶୁଣୁଥିଲେ ମଧ୍ୟ ତାହାରୁ ବାକ୍ୟର ଅର୍ଥ ପାଇଲେନାହିଁ। ବନ୍ଧୁଙ୍କ ଦାବି ସହ ନିଜ ଅଭିଜ୍ଞତା ନ ମିଳିବାରୁ ତାଙ୍କ ପ୍ରଶ୍ନ ଉଠିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମିଶ୍ରବାବୁ ସତରେ ବଣିମାନଙ୍କ କେଁ କଟର ଶୁଣୁଛନ୍ତି ଏବଂ ସେଥିରୁ କାହାଣୀ ବୁଝୁଛନ୍ତି କି ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=95">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୫–୯୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-10"><h2>୧୦. ମୁନ୍ନା, ମୁନ୍ନି ଓ ସେମାନଙ୍କ ମା’ଙ୍କ କଥାବାର୍ତ୍ତାର ବିଷୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଣିଷ ପକ୍ଷୀଙ୍କ ବେଶ ଦେଖେ, ଏଠି ଛୁଆ ବଣିମାନେ ମଣିଷର ଦାଢ଼ି ଦେଖି ନିଜ ମାଆକୁ ପଚାରୁଛନ୍ତି। ଦୃଷ୍ଟି ଏଭଳି ଓଲଟିଯିବାରୁ ସଂଳାପର ହାସ୍ୟ ପ୍ରକାଶ ପାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦାଢ଼ିଆ ବୁଢ଼ାଟି ନୂଆ କି ଓ ସେ ଦାଢ଼ି କାହିଁକି ରଖିଛି ବୋଲି ଛୁଆ ଦୁହେଁ ବାପାକୁ ପଚାରିଲେ। ଆଗ ଝିଣ୍ଟିକା ଖାଇବାକୁ କହିଲେ ମଧ୍ୟ ସେମାନେ ଉତ୍ତର ପାଇବାକୁ ଜିଦ କଲେ।</p><p>ମା’ ପଚାରିଲା, ମଣିଷ ମୁକ୍ତି ଖୋଜେ କିନ୍ତୁ ପକ୍ଷୀ କାହିଁକି ଖୋଜନ୍ତିନି। ବାପା ବୁଝାଇଲା, ମୁକ୍ତ ଆକାଶର ପକ୍ଷୀଙ୍କର ବନ୍ଧନ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=96">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୬–୯୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-11"><h2>୧୧. ବଣିଙ୍କ ଭାଷା ବିଷୟରେ ମିଶ୍ରବାବୁଙ୍କ ମତ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସର୍ଟହ୍ୟାଣ୍ଡର ଛୋଟ ଚିହ୍ନ ଦ୍ୱାରା ଅଧିକ କଥା ଲେଖି ହୁଏ। ତାହା ସହ ତୁଳନା କରି ମିଶ୍ରବାବୁ ବଣିର ଅଳ୍ପ ଶବ୍ଦରୁ ନିଜେ କିପରି ପୂରା କଥା ବୁଝୁଛନ୍ତି ଜଣାଉଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେ ତାହାକୁ ଚାଇନିଜ୍ ଭାଷା ଓ ସର୍ଟହ୍ୟାଣ୍ଡ ସହିତ ତୁଳନା କରିଛନ୍ତି। ତାଙ୍କ ମତରେ ଛୋଟ ଗୋଟିଏ ଶବ୍ଦରେ ବହୁ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ରହିଥାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=96">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୬–୯୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-12"><h2>୧୨. ଗଳ୍ପରେ ‘ସଂସାର ବନ୍ଧନ’ର ଅର୍ଥ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବଣି ପାଇଁ ମୁକ୍ତ ଆକାଶ ସ୍ୱାଭାବିକ। ମଣିଷ ସମ୍ପତ୍ତି ସଞ୍ଚୟ ଓ ଅନ୍ୟକୁ ବାନ୍ଧି ରଖିବାର ଚେଷ୍ଟାରେ ନିଜେ ବାନ୍ଧି ହୁଏ। (ପାଠର ପୃ. ୪–୬)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପରିବାରକୁ ପାଖରେ ରଖିବା ପାଇଁ ମଣିଷ ଘର, ସାମଗ୍ରୀ ଓ ସମ୍ପତ୍ତି ସଞ୍ଚୟ କରେ। ସେଥିରୁ ମୋହ, ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱିତା ଓ ଅଶାନ୍ତି ଜନ୍ମେ।</p><p>ଅନ୍ୟକୁ ବାନ୍ଧିବାକୁ ଯାଇ ନିଜେ ଫସିବା ହିଁ ଏହି ବନ୍ଧନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=96">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୬–୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-13"><h2>୧୩. ବେଶ ଦେଖି ମଣିଷ ଚିହ୍ନିବା ବିଷୟରେ ବାପ ବଣି କି ଉପଦେଶ ଦେଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଣିଷ ସମ୍ପତ୍ତି ସଞ୍ଚୟ ଓ ଅନ୍ୟକୁ ବାନ୍ଧି ରଖିବାର ଚେଷ୍ଟାରେ ନିଜେ ବାନ୍ଧି ହୁଏ। ବେଶ ଦେଖି ମଣିଷକୁ ସାଧୁ ବୋଲି ଚିହ୍ନିବାର ବିପଦ ମଧ୍ୟ ବାପ ବଣି ବୁଝାଏ। (ପାଠର ପୃ. ୪–୬)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଧଳା ଦାଢ଼ି ଦେଖି ସମସ୍ତଙ୍କୁ ସାଧୁ ବା ଧାର୍ମିକ ମନେ କରିବା ଭୁଲ। ସେହି ବେଶ ଦଳର ଚିହ୍ନ ହୋଇପାରେ, କୁକର୍ମ ମଧ୍ୟ ଘୋଡ଼ାଇପାରେ।</p><p>ପ୍ରକୃତ ପରିଚୟ ମିଳେ ଆଚରଣରୁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=96">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୬–୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-14"><h2>୧୪. ବାପ ବଣି ଅନୁସାରେ କଳିଯୁଗର ସମାପ୍ତି କିପରି ହେବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଣିଷର ଅଧର୍ମ ଓ ଯୁଦ୍ଧରେ ନିରପରାଧ ଜୀବ ମଧ୍ୟ ଲୋପ ପାଇବେ ବୋଲି ବାପ ବଣି ଆଶଙ୍କା କରେ। ଏହା ଗଳ୍ପର ପାତ୍ରର କଳିଯୁଗ-ସମାପ୍ତି ସମ୍ପର୍କିତ କଳ୍ପନା। (ପାଠର ପୃ. ୬)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମଣିଷର ଅଧର୍ମ ଓ ପରମାଣୁ ଯୁଦ୍ଧରେ ମଣିଷ ସହ ନିରପରାଧ ପ୍ରାଣୀ ଲୋପ ପାଇବେ। ଏହି ପ୍ରଳୟ ପରେ ସୃଷ୍ଟିଚକ୍ର ଅନୁସାରେ ନୂଆ ସୃଷ୍ଟି ଓ ସତ୍ୟଯୁଗ ଆରମ୍ଭ ହେବ ବୋଲି ବାପ ବଣି କଳ୍ପନା କରିଛି।</p><p>ବଣି ଦମ୍ପତିଙ୍କ ଆଲୋଚନାରେ ମଣିଷର କାମ ପାଇଁ ଅନ୍ୟ ଜୀବଙ୍କୁ ମଧ୍ୟ ପରିଣାମ ଭୋଗିବାକୁ ପଡ଼ିବାର ଦୁଃଖ ଅଛି। ବାପ ବଣି ନିଜ ପିଲାଙ୍କୁ ସେହି ଆଶଙ୍କା ବୁଝାଉଛି।</p><p>ପକ୍ଷୀପରିବାରର ଦୃଷ୍ଟିରୁ ମଣିଷର ଆଚରଣକୁ ବିଚାର କରିବାକୁ ଏହି କଳ୍ପନା ପାଠକଙ୍କୁ ବାଟ ଦେଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=98">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-15"><h2>୧୫. ଚକୁଳି ଆଣି ଜୟଦେବଙ୍କ ସ୍ତ୍ରୀ କ’ଣ ଶୁଣିଲେ ଓ କ’ଣ କଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଣିଷର ଅଧର୍ମ ଓ ଯୁଦ୍ଧରେ ନିରପରାଧ ଜୀବ ମଧ୍ୟ ଲୋପ ପାଇବେ ବୋଲି ବାପ ବଣି ଆଶଙ୍କା କରେ। ଏହା ଗଳ୍ପର ପାତ୍ରର କଳିଯୁଗ-ସମାପ୍ତି ସମ୍ପର୍କିତ କଳ୍ପନା। ଜୟଦେବଙ୍କ ସ୍ତ୍ରୀ ଚକୁଳି ଆଣି ଥାଳି ରଖନ୍ତି ଓ ହାତ ହଲାଇଲେ ପକ୍ଷୀ ଉଡ଼ିଯାଆନ୍ତି। (ପାଠର ପୃ. ୬)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମିଶ୍ରବାବୁ ବଣିଙ୍କ ଗପ ଶୁଣୁଛନ୍ତି ବୋଲି ଜୟଦେବ କହିଲେ। ସେ ଚକୁଳି ଥାଳି ଦୁଇଟି ଛୋଟ ଟେବୁଲରେ ରଖି ହାତ ହଲାଇଦେଲେ।</p><p>ଚାରୋଟି ବଣି ତାଳଗଛକୁ ଉଡ଼ିଗଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=98">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-16"><h2>୧୬. ଗଳ୍ପର ଭାବରୁ ଏକ ନିଜସ୍ୱ କ୍ଷୁଦ୍ରଗଳ୍ପ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଖୋଲା ଝରକା’ ନମୁନାରେ ପିଲା ଓ ବଣି ଏକ ଦୃଶ୍ୟକୁ ଦୁଇ ଦିଗରୁ ଦେଖନ୍ତି। ପୁସ୍ତକରେ ମଣିଷକୁ ପକ୍ଷୀଙ୍କ ଦୃଷ୍ଟିରୁ ଦେଖିବାର ଯେଉଁ ଭାବ ଅଛି ସେଠାରୁ ଏହି ନୂଆ କାହାଣୀ ଆରମ୍ଭ ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖୋଲା ଝରକା। ବାରଣ୍ଡାରେ ଛୁଆ ବଣିଟି ବସିଥିଲା।</p><p>ପିଲାଟି ତା’ ଆଗରେ ଦାନା ରଖି ଝରକା ବନ୍ଦ କରିଦେଲା। ଭାବିଲା, ଏବେ ରୋଜ ତା’ର ଗୀତ ଶୁଣିବ।</p><p>ବଣିଟି କିନ୍ତୁ ଦାନା ଛୁଇଁଲାନି। ବାହାରୁ ଆଉ ଗୋଟିଏ ବଣି ଡାକିଲାରୁ ସେ କାଚକୁ ଥଣ୍ଟ ଲଗାଇଲା।</p><p>ପିଲାଟି ଝରକା ଖୋଲିଦେଲା। ପରଦିନ ଦୁଇଟି ବଣି ଆସି ବାରଣ୍ଡାରୁ ଦାନା ଖାଇଲେ।</p><p>ଏଥର ପିଲାଟି ଝରକା ପାଖରେ ଠିଆ ହୋଇ କେବଳ ସେମାନଙ୍କ ଡାକ ଶୁଣିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=96">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୬–୯୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-17"><h2>୧୭. ଭୁବନେଶ୍ୱର ବେହେରାଙ୍କ ଗଳ୍ପ ପଢ଼ିବା ପାଇଁ ଏକ ସଂଗ୍ରହ ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତାଲିକାର ‘ଆନ୍‌ସାରୀ ଚାଚା ଏବଂ ଅନ୍ୟାନ୍ୟ ଗଳ୍ପ’ ପାଠ୍ୟଗଳ୍ପର ଉତ୍ସ ବୋଲି ଏବେ ଚିହ୍ନାଇହୁଏ। ସେହି ସଂକଳନର ଅନ୍ୟ କାହାଣୀ ପଢ଼ିଲେ ତାହାର ବକ୍ତା ଓ ହାସ୍ୟର ଏକ ଦୃଶ୍ୟ ନେଇ ମିଶ୍ରବାବୁଙ୍କ ଗଳ୍ପ ସହ ତୁଳନା କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲେଖକ ପରିଚୟରୁ ‘କଥା ଓ ଲଥା’, ‘ଫର ଫର ଉଡ଼େ’, ‘ଆନ୍‌ସାରୀ ଚାଚା ଏବଂ ଅନ୍ୟାନ୍ୟ ଗଳ୍ପ’ ଓ ‘ମନ୍ତ୍ରୀବର’ ତାଲିକାରେ ରଖିବି। ପଠିତ ଗଳ୍ପଟି ‘ଆନ୍‌ସାରୀ ଚାଚା ଏବଂ ଅନ୍ୟାନ୍ୟ ଗଳ୍ପ’ରୁ ଗୃହୀତ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=93">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+
+</main></body></html>

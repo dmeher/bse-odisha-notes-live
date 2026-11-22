@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="306" viewBox="0 0 520 306">
+  <title>V–I graph for an ohmic conductor at constant temperature</title>
+  <desc>Current I is the horizontal axis and potential difference V the vertical axis. Two marked points lie on a straight line through the origin. Dashed guides connect the points to both axes.</desc>
+  <rect x="1" y="1" width="518" height="304" rx="12" fill="#fbfaf4" stroke="#d7dfd4"/>
+  <g stroke="#284b40" fill="none" stroke-width="2.3"><path d="M76 32V244H466"/><path d="m69 43 7-13 7 13m371 194 13 7-13 7"/></g>
+  <g stroke="#8ba79a" fill="none" stroke-dasharray="5 5" stroke-width="1.5"><path d="M76 165H213V244M76 86H350V244"/></g>
+  <path d="M76 244 424 43" fill="none" stroke="#236959" stroke-width="3.5"/>
+  <g fill="#b86e34"><circle cx="213" cy="165" r="5"/><circle cx="350" cy="86" r="5"/></g>
+  <g font-family="sans-serif" font-size="17" fill="#263e35"><text x="49" y="269">O</text><text x="37" y="34">V (V)</text><text x="436" y="278">I (A)</text><text x="42" y="171">V₁</text><text x="42" y="92">V₂</text><text x="206" y="268">I₁</text><text x="343" y="268">I₂</text><text x="221" y="168">P</text><text x="358" y="88">Q</text></g>
+</svg>

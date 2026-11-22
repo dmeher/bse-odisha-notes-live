@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସମ୍ବଳ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସମ୍ବଳ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1QoXMNew_3TGAw3uXLbF8VbyZBDF6Gdcs/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ସମ୍ବଳର ଚାରି, ଭୂ-ସମ୍ବଳର ଦୁଇ ଓ ମୃତ୍ତିକାର ତିନି ମୁଖ୍ୟ ପ୍ରଶ୍ନର ସମସ୍ତ ଉପପ୍ରଶ୍ନ ମିଳାଯାଇଛି। ଭୂମି ବ୍ୟବହାର ଓ ସ୍ଥାନୀୟ ମୃତ୍ତିକା ନମୁନାର ରେକର୍ଡ ପଦ୍ଧତି ମଧ୍ୟ ରହିଛି। ସମ୍ବଳର ଛଅ ଏବଂ ଭୂମି ଓ ମୃତ୍ତିକାର ଚାରିଟି କାମରେ ପାଠ୍ୟ ଉଦାହରଣ ବା ନମୁନା ରେକର୍ଡ ଅଛି।</p><p>ନିଜ ଗ୍ରାମର ଭୂମି ବ୍ୟବହାର ଓ ଦୁଇ ସ୍ଥାନର ଏକ ଫୁଟ ଗଭୀରର ମୃତ୍ତିକାର ପ୍ରକୃତ ତୁଳନା ସ୍ଥାନୀୟ ପର୍ଯ୍ୟବେକ୍ଷଣ ଉପରେ ନିର୍ଭର କରେ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୪, ୭–୮, ୧୪, ୨୩</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୩୧)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">ସମ୍ବଳ · 1 (କ–ଖ)</a> <a href="#exercise-2">ସମ୍ବଳ · 2 (କ)</a> <a href="#exercise-3">ସମ୍ବଳ · 2 (ଖ)</a> <a href="#exercise-4">ସମ୍ବଳ · 3 (କ–ଖ)</a> <a href="#exercise-5">ସମ୍ବଳ · 4 (କ)</a> <a href="#exercise-6">ସମ୍ବଳ · 4 (ଖ)</a> <a href="#exercise-7">ସମ୍ବଳ · 4 (ଗ)</a> <a href="#exercise-8">ସମ୍ବଳ · 4 (ଘ)</a> <a href="#exercise-9">ଭୂ-ସମ୍ବଳ · 1 (କ)</a> <a href="#exercise-10">ଭୂ-ସମ୍ବଳ · 1 (ଖ)</a> <a href="#exercise-11">ଭୂ-ସମ୍ବଳ · 1 (ଗ)</a> <a href="#exercise-12">ଭୂ-ସମ୍ବଳ · 2 (କ–ଖ)</a> <a href="#exercise-13">ମୃତ୍ତିକା · 1 (କ)</a> <a href="#exercise-14">ମୃତ୍ତିକା · 1 (ଖ)</a> <a href="#exercise-15">ମୃତ୍ତିକା · 1 (ଗ)</a> <a href="#exercise-16">ମୃତ୍ତିକା · 2 (କ)</a> <a href="#exercise-17">ମୃତ୍ତିକା · 2 (ଖ)</a> <a href="#exercise-18">ମୃତ୍ତିକା · 2 (ଗ)</a> <a href="#exercise-19">ମୃତ୍ତିକା · 2 (ଘ)</a> <a href="#exercise-20">ମୃତ୍ତିକା · 3 (କ)</a> <a href="#exercise-21">ମୃତ୍ତିକା · 3 (ଖ–ଗ)</a> <a href="#exercise-22">କାମ · ପୃ. ୪ (୧)</a> <a href="#exercise-23">କାମ · ପୃ. ୪ (୨)</a> <a href="#exercise-24">କାମ · ପୃ. ୭ (୧)</a> <a href="#exercise-25">କାମ · ପୃ. ୭ (୨)</a> <a href="#exercise-26">କାମ · ପୃ. ୭ (୩)</a> <a href="#exercise-27">କାମ · ପୃ. ୭ (୪)</a> <a href="#exercise-28">ଭୂ-ସମ୍ବଳ · କାମ ୧</a> <a href="#exercise-29">ଭୂ-ସମ୍ବଳ · କାମ ୨</a> <a href="#exercise-30">ମୃତ୍ତିକା · କାମ ୧</a> <a href="#exercise-31">ମୃତ୍ତିକା · କାମ ୨</a></nav></details>
+<article id="exercise-1"><h2>ସମ୍ବଳ · 1 (କ–ଖ). (କ) କେଉଁଟି ଅପୂରଣୀୟ ସମ୍ବଳ? (i) ପବନ ଶକ୍ତି, (ii) ଶିକ୍ଷାନୁଷ୍ଠାନ, (iii) କୋଇଲା, (iv) ଜଳ। (ଖ) କେଉଁଟି ଗୋଷ୍ଠୀଗତ ସମ୍ବଳ? (i) ଗୃହ, (ii) ଶ୍ମଶାନ, (iii) ଚାଷ ଜମି, (iv) ରୋପଣ କୃଷି ଭୂମି।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ପ୍ରଶ୍ନରେ ପଦାର୍ଥ ବ୍ୟବହୃତ ହେଲେ ତାହାର ଭଣ୍ଡାର ପୁଣି ଭରେ କି ଦେଖ। ଦ୍ୱିତୀୟ ପ୍ରଶ୍ନରେ ମାଲିକାନା ବିଚାର କର। ନିଜ ଚାଷଜମିରେ ଏକ ପରିବାରର ଓ ଶ୍ମଶାନରେ ସମଗ୍ର ଗୋଷ୍ଠୀର ବ୍ୟବହାର ଅଧିକାର ଥାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(କ) (iii) କୋଇଲା, କାରଣ ଥରେ ବ୍ୟବହାର କଲେ ଏହାର ଭଣ୍ଡାର ଶୀଘ୍ର ପୂରଣ ହୁଏନାହିଁ। (ଖ) (ii) ଶ୍ମଶାନ, କାରଣ ସମୁଦାୟ ଏହାକୁ ବ୍ୟବହାର କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=8" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮–୧୪</a></small></article>
+<article id="exercise-2"><h2>ସମ୍ବଳ · 2 (କ). ନବୀକରଣଯୋଗ୍ୟ ଓ ନବୀକରଣ ଅଯୋଗ୍ୟ ସମ୍ବଳର ପାର୍ଥକ୍ୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅରଣ୍ୟ ପୁଣି ବଢ଼ିପାରେ, କିନ୍ତୁ ଗଛ ବଢ଼ିବାଠାରୁ ଦ୍ରୁତ ଗତିରେ କଟାଗଲେ ଏହି ସମ୍ବଳ ମଧ୍ୟ କମିଯାଏ। ନବୀକରଣଯୋଗ୍ୟ ସମ୍ବଳର ବ୍ୟବହାରରେ ମଧ୍ୟ ପରିଚାଳନା ଆବଶ୍ୟକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାକୃତିକ ପ୍ରକ୍ରିୟାରେ ବା ପରିଚାଳନା ଦ୍ୱାରା ପୁଣି ଉପଲବ୍ଧ ହେଉଥିବା ଜଳ ଓ ଅରଣ୍ୟ ନବୀକରଣଯୋଗ୍ୟ। କୋଇଲା ଓ ଖଣିଜ ତୈଳ ଗଠିତ ହେବାକୁ ଅତି ଦୀର୍ଘ ସମୟ ଲାଗୁଥିବାରୁ ମାନବ ଜୀବନକାଳ ମଧ୍ୟରେ ନବୀକରଣ ଅଯୋଗ୍ୟ।</p><p>ଏଠାରେ ମାନଦଣ୍ଡ ହେଲା ପୁଣି ଭରଣ ହେବାର ସମୟ। କୋଇଲା ଭୂତାତ୍ତ୍ୱିକ କାଳରେ ଗଠିତ ହୁଏ।</p><p>ଲୋକେ ଯେତେ ଶୀଘ୍ର ତାହା ଜଳାନ୍ତି, ସେତେ ଶୀଘ୍ର ଗଚ୍ଛିତ ପରିମାଣ ଫେରେ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=8" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮–୧୪</a></small></article>
+<article id="exercise-3"><h2>ସମ୍ବଳ · 2 (ଖ). ଅବିରାମ ସମ୍ବଳ ଓ ଅପୂରଣୀୟ ସମ୍ବଳକୁ ଉଦାହରଣ ଦେଇ ପୃଥକ୍ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କୋଇଲା ଜଳିଗଲେ ସେହି କୋଇଲାକୁ ଦ୍ୱିତୀୟ ଥର ଇନ୍ଧନ କରିହୁଏ ନାହିଁ। ଆଜିର ସୂର୍ଯ୍ୟକିରଣ ବ୍ୟବହାର କଲେ ପରବର୍ତ୍ତୀ ଦିନର ସୂର୍ଯ୍ୟକିରଣର ପ୍ରବାହ କମେନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସୂର୍ଯ୍ୟକିରଣ ଓ ପବନ ଭଳି ଅବିରାମ ସମ୍ବଳର ପ୍ରବାହ ବ୍ୟବହାରରେ ଶେଷ ହୁଏନାହିଁ। କୋଇଲା ପରି ଅପୂରଣୀୟ ସମ୍ବଳର ଗଚ୍ଛିତ ପରିମାଣ ବ୍ୟବହାର ସହିତ କମେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=8" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮–୧୪</a></small></article>
+<article id="exercise-4"><h2>ସମ୍ବଳ · 3 (କ–ଖ). ସମ୍ବଳ ଭଣ୍ଡାର ଓ ଜାତୀୟ ସମ୍ବଳକୁ ଗୋଟିଏ ଲେଖାଏଁ ବାକ୍ୟରେ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠାରେ ଦୁଇଟି ଭିନ୍ନ ଶ୍ରେଣୀକରଣ ଅଛି। ପ୍ରଥମଟିର ଆଧାର ଉପଯୋଗ କରିବାର କ୍ଷମତା, ଦ୍ୱିତୀୟଟିର ଆଧାର ମାଲିକାନା। ରାଷ୍ଟ୍ରର ସୀମା ଭିତରେ ଥିବା ଭୂମି, ଜଳ ଓ ଖଣିଜ ଜାତୀୟ ସମ୍ବଳର ଉଦାହରଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(କ) ଆବଶ୍ୟକତା ପୂରଣର କ୍ଷମତା ଥାଇ ମଧ୍ୟ ବର୍ତ୍ତମାନର ଜ୍ଞାନକୌଶଳରେ ବ୍ୟବହାର ହୋଇପାରୁ ନଥିବା ପଦାର୍ଥ ସମ୍ବଳ ଭଣ୍ଡାରର ଅନ୍ତର୍ଗତ। (ଖ) ରାଷ୍ଟ୍ରର ଅଧିକାର ଓ ନିୟନ୍ତ୍ରଣ ପରିସରରେ ଥିବା ସମ୍ବଳ ଜାତୀୟ ସମ୍ବଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯–୧୪</a></small></article>
+<article id="exercise-5"><h2>ସମ୍ବଳ · 4 (କ). କୌଣସି ପଦାର୍ଥ କିପରି ସମ୍ବଳରେ ପରିଣତ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମନୁଷ୍ୟ ନିଜ ଜ୍ଞାନ, ଦକ୍ଷତା ଓ ପ୍ରଯୁକ୍ତି କୌଶଳରେ କୌଣସି ପଦାର୍ଥର ଉପଯୋଗ ଚିହ୍ନେ। ସେହି ପଦାର୍ଥ ଆବଶ୍ୟକତା ପୂରଣ କରିପାରିଲେ ତାହା ସମ୍ବଳ ହୁଏ।</p><p>ଉଦାହରଣ ସ୍ୱରୂପ ପ୍ରବାହିତ ଜଳକୁ ଲୋକେ ପ୍ରଯୁକ୍ତି ଲଗାଇ ବିଦ୍ୟୁତ୍‌ରେ ପରିଣତ କରନ୍ତି। ଏଠାରେ ପ୍ରକୃତି ଜଳ ଦେଇଛି ଓ ମଣିଷ ତାହାର ଉପଯୋଗ କରିଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭–୧୪</a></small></article>
+<article id="exercise-6"><h2>ସମ୍ବଳ · 4 (ଖ). ସମ୍ବଳର ବିଶେଷତ୍ୱ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଟିଏ ନଦୀର ଜଳ ଘରେ, କ୍ଷେତରେ ଓ ଶକ୍ତି ଉତ୍ପାଦନରେ ଭିନ୍ନ ଅଭାବ ପୂରଣ କରେ। ପଦାର୍ଥର ଉପଯୋଗ ଓ ମଣିଷର ଆବଶ୍ୟକତା ମଧ୍ୟରେ ଏହି ସମ୍ପର୍କ ଥାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉପଯୋଗିତା ଓ ମାନବର ଅଭାବ ପୂରଣ କରିବାର କ୍ଷମତା ସମ୍ବଳର ମୁଖ୍ୟ ବିଶେଷତ୍ୱ। ମଣିଷର ଜ୍ଞାନ ଓ ଆବଶ୍ୟକତା ବଦଳିଲେ ଏକ ପଦାର୍ଥର ଉପଯୋଗ ମଧ୍ୟ ବଦଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭–୧୪</a></small></article>
+<article id="exercise-7"><h2>ସମ୍ବଳ · 4 (ଗ). ସମ୍ବଳ ସଂରକ୍ଷଣର ଅର୍ଥ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୁରୁଣା ଧାତୁକୁ ପୁନଃଚକ୍ରୀକରଣ କଲେ ସେହି କାମ ପାଇଁ ନୂଆ ଖଣିଜ କମ୍ ଉତ୍ତୋଳନ କରିବାକୁ ପଡ଼େ। ଏହା ଦୈନନ୍ଦିନ ଉପଯୋଗ ବଜାୟ ରଖି ଗଚ୍ଛିତ ସମ୍ବଳ ସଞ୍ଚୟ କରିବାର ଦୃଷ୍ଟାନ୍ତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅପଚୟ ରୋକି ସମ୍ବଳର ଯୋଜନାବଦ୍ଧ ଓ ବିବେକସମ୍ମତ ବ୍ୟବହାର କରିବା ଏବଂ ଭବିଷ୍ୟତ ପାଇଁ ଏହାର ଉପଲବ୍ଧତା ରଖିବା ହେଉଛି ସମ୍ବଳ ସଂରକ୍ଷଣ। ଧାତବ ବସ୍ତୁକୁ ଫିଙ୍ଗି ନଦେଇ ପୁନଃଚକ୍ରଣ କଲେ ନୂଆ ଖଣିଜ ଉତ୍ତୋଳନର ଚାହିଦା କମେ।</p><p>ଏହା ଉପଯୋଗ ସହିତ ସଂରକ୍ଷଣର ଉଦାହରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=11">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧–୧୪</a></small></article>
+<article id="exercise-8"><h2>ସମ୍ବଳ · 4 (ଘ). ଧାରଣୀୟ ବିକାଶ କହିଲେ କ’ଣ ବୁଝ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅରଣ୍ୟରୁ ଆଜିର ଆବଶ୍ୟକ କାଠ ନେବା ସହ ଗଛ ବଢ଼ିବାର ସୁଯୋଗ ରଖିଲେ ଭବିଷ୍ୟତ ପିଢ଼ି ସେହି ଅରଣ୍ୟର ଉପକାର ପାଇବ। ଏଠାରେ ସମୟ ଓ ପରିବେଶ ଉଭୟ ବିଚାରକୁ ନିଆଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭବିଷ୍ୟତ ପିଢ଼ିର ଆବଶ୍ୟକତା ପୂରଣ କ୍ଷମତା ଓ ପରିବେଶ ରକ୍ଷା କରି ବର୍ତ୍ତମାନ ପିଢ଼ିର ଆବଶ୍ୟକତା ପୂରଣ କରୁଥିବା ବିକାଶ ଧାରଣୀୟ ବିକାଶ। ଯଥା ଭୂମିକୁ ଚାଷରେ ଲଗାଇବା ସହିତ ତାହାର ଉର୍ବର ଉପର ସ୍ତର ସୁରକ୍ଷା କଲେ ପରେ ମଧ୍ୟ ସେହି ଭୂମିରୁ ଉତ୍ପାଦନ ସମ୍ଭବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=11">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧–୧୪</a></small></article>
+<article id="exercise-9"><h2>ଭୂ-ସମ୍ବଳ · 1 (କ). ଭୂ-ସମ୍ବଳର ବିନିଯୋଗ କିପରି କରାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉର୍ବର ସମତଳ ଓ ପାର୍ବତ୍ୟ ଅଞ୍ଚଳର ଢାଲୁ ଭୂମିରେ ଚାଷ, ବସତି ଓ ଅରଣ୍ୟର ବିସ୍ତାର ଏକା ହେବ ନାହିଁ। ଭୂମି କେଉଁ କାମରେ ଲାଗିବ ତାହା ବୁଝାଇବାକୁ ଏପରି ଭୂପ୍ରକୃତିର ଭେଦ ଦେଖାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମତଳ ଭୂମିରେ କୃଷି, ଜନବସତି ଓ ପରିବହନ ସୁବିଧା ଗଢ଼ିଉଠେ। ଅନ୍ୟ ସ୍ଥାନରେ ଅରଣ୍ୟ, ଚାରଣଭୂମି, ଫଳବଗିଚା ଓ ଶିଳ୍ପ ପାଇଁ ଜମି ବ୍ୟବହାର ହୁଏ।</p><p>ଜଳବାୟୁ, ମୃତ୍ତିକା, ଭୂପ୍ରକୃତି ଏବଂ ଲୋକଙ୍କ ଆବଶ୍ୟକତା ଏହି ବ୍ୟବହାରକୁ ପ୍ରଭାବିତ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=15">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫–୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫–୨୦</a></small></article>
+<article id="exercise-10"><h2>ଭୂ-ସମ୍ବଳ · 1 (ଖ). ଭାରତରେ ଭୂ-ସମ୍ବଳ କିପରି ବ୍ୟବହୃତ ହେଉଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭୂମି ବ୍ୟବହାର ହିସାବରେ ରାସ୍ତା ଓ ବସତିର ଜମି ଚାଷ ପାଇଁ ଉପଲବ୍ଧ ହୁଏ ନାହିଁ। ଚଳିତ ବର୍ଷ ପଡ଼ିଆ ରଖାଯାଇଥିବା ଚାଷଜମି ପରବର୍ତ୍ତୀ ବର୍ଷ ଚାଷ ହୋଇପାରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୂମିର ଏକ ଭାଗରେ ଚାଷ, ଅରଣ୍ୟ, ପଶୁଚାରଣ ଓ ଫଳବଗିଚା ଅଛି। ଅନ୍ୟ ଭାଗରେ ବସତି, ଶିଳ୍ପ, ଶିକ୍ଷାନୁଷ୍ଠାନ, ରାସ୍ତା ଓ ରେଳପଥ ଗଢ଼ିଛି।</p><p>କେତେକ ଭୂମି ପତିତ ବା ଅନାବାଦୀ ରହିଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=15">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫–୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫–୨୦</a></small></article>
+<article id="exercise-11"><h2>ଭୂ-ସମ୍ବଳ · 1 (ଗ). ଭୂ-କ୍ଷୟ ସମସ୍ୟାର ସମାଧାନ କିପରି କରାଯାଇପାରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅତିଚାରଣରୁ ଉଦ୍ଭିଦ ଆବରଣ କମିଗଲେ ପବନ ଓ ବର୍ଷାଜଳ ଉପରମାଟିକୁ ସହଜରେ ନେଇଯାଆନ୍ତି। ଘାସ ବଢ଼ିବାକୁ ସମୟ ଦେବା ଓ ଗଛ ଲଗାଇବା ସେହି କାରଣଟିକୁ ଦୂର କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୁନଃ ବନୀକରଣ, ଅତିଚାରଣ ଉପରେ ନିୟନ୍ତ୍ରଣ ଓ କ୍ଷୟିତ ଭୂମିର ପୁନରୁଦ୍ଧାର ଆବଶ୍ୟକ। ଶିଳ୍ପର ବର୍ଜ୍ୟବସ୍ତୁ ଓ ଖଣିକାର୍ଯ୍ୟରେ ନଷ୍ଟ ହେଉଥିବା ଭୂମିର ସୁରକ୍ଷା ପାଇଁ ସୁପରିଚାଳନା ଦରକାର।</p><p>ଢାଲୁ ଭୂମିରେ ଜଳର ବେଗ କମାଇବା ଏବଂ ଉଦ୍ଭିଦର ଚେର ଦ୍ୱାରା ଉପର ମୃତ୍ତିକାକୁ ଧରି ରଖିବା ଦୁଇଟି ପୃଥକ୍ ଉପାୟ। କ୍ଷୟର କାରଣ ସହ ପ୍ରତିକାରକୁ ମେଳାଇବାକୁ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=18">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮–୨୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=19" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯–୨୦</a></small></article>
+<article id="exercise-12"><h2>ଭୂ-ସମ୍ବଳ · 2 (କ–ଖ). ଅନାବାଦୀ ଭୂମି ଓ କ୍ଷୟିତ ଭୂମିର ଅର୍ଥ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନାବାଦୀ ବୋଲି କହିଲେ ଭୂମିର ଚାଷ ସ୍ଥିତି ଜଣାଯାଏ। କ୍ଷୟିତ କହିଲେ ଉପରମାଟି ବା ଗୁଣ ହରାଇବା ଜଣାଯାଏ। ଚାଷ ନକରି କିଛି ଦିନ ଜମି ପଡ଼ିଆ ରଖିବା ମାତ୍ରେ ତାହା କ୍ଷୟିତ ହୁଏନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(କ) ଯେଉଁ ଭୂମି ଆବାଦ ବା ଚାଷରେ ବ୍ୟବହୃତ ହୁଏନାହିଁ ତାହା ଅନାବାଦୀ ଭୂମି। (ଖ) ଜଳ, ପବନ ବା ମାନବୀୟ କାର୍ଯ୍ୟଦ୍ୱାରା ଗୁଣ ଓ ଉତ୍ପାଦନ କ୍ଷମତା ହରାଇଥିବା ଭୂମି କ୍ଷୟିତ ଭୂମି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=18">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮–୨୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=19" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯–୨୦</a></small></article>
+<article id="exercise-13"><h2>ମୃତ୍ତିକା · 1 (କ). ମୃତ୍ତିକା ଗଠନର ନିୟାମକଗୁଡ଼ିକ କ’ଣ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (ଖ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୂଳ ଶିଳାରୁ ଖଣିଜ କଣା ମିଳେ ଓ ଜୀବ ଅବଶେଷରୁ ଜୈବାଂଶ ମିଳେ। ବୃଷ୍ଟି ଓ ଉତ୍ତାପ ଶିଳାର ଅବକ୍ଷୟକୁ ପ୍ରଭାବିତ କରନ୍ତି। ଦୀର୍ଘ ସମୟ ଧରି ଏହି କାମ ଚାଲିଲେ ମୃତ୍ତିକାର ସ୍ତର ବିକାଶ ପାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୂଳ ଶିଳା, ଭୂପ୍ରକୃତି, ଜଳବାୟୁ, ଉଦ୍ଭିଦ ଓ ଅନ୍ୟ ଜୀବ ଏବଂ ସମୟ ମୃତ୍ତିକା ଗଠନକୁ ପ୍ରଭାବିତ କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=21">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୧–୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=21" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୧–୨୯</a></small></article>
+<article id="exercise-14"><h2>ମୃତ୍ତିକା · 1 (ଖ). ଦୋରସା ମୃତ୍ତିକା କାହାକୁ କହନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୃତ୍ତିକାର ଗଠନ ଚିହ୍ନିବାକୁ ତାହାର ଦାନାଗୁଡ଼ିକ ଲକ୍ଷ୍ୟ କର। ଦୋରସାରେ ଏକାକୀ ବାଲି ବା ମଟାଳ ଅଂଶ ପ୍ରାଧାନ୍ୟ ପାଏନାହିଁ। ମିଶ୍ରଣର ଅନୁପାତ ହିଁ ଏଠାରେ ଚିହ୍ନଟର ଆଧାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବାଲିଆ, ପଟୁ ଓ ମଟାଳ ଉପାଦାନ ପ୍ରାୟ ସମାନ ପରିମାଣରେ ମିଶିଲେ ଦୋରସା ମୃତ୍ତିକା ହୁଏ। ଏହା ଉର୍ବର ଓ ଆଖୁ ଚାଷ ପାଇଁ ଉପଯୋଗୀ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=21">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୧–୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨–୨୯</a></small></article>
+<article id="exercise-15"><h2>ମୃତ୍ତିକା · 1 (ଗ). ଅପସୃତ ମୃତ୍ତିକା କିପରି ସୃଷ୍ଟି ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନଦୀ ଉପରମୁଣ୍ଡରୁ ପଟୁ ବୋହିଆଣି ତଳମୁଣ୍ଡରେ ଜମା କରେ। ତେଣୁ ଏହି ମୃତ୍ତିକା ମିଳୁଥିବା ସ୍ଥାନ ଓ ତାହାର ମୂଳ ଶିଳା ଥିବା ସ୍ଥାନ ଭିନ୍ନ ହୋଇପାରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶିଳାର କ୍ଷୟଜାତ ଉପାଦାନ ଜଳ ବା ପବନରେ ମୂଳ ସ୍ଥାନରୁ ଅନ୍ୟତ୍ର ବହିଯାଇ ଜମିଲେ ପରିବାହିତ ବା ଅପସୃତ ମୃତ୍ତିକା ଗଠିତ ହୁଏ। ପଟୁମାଟି ଏହାର ଉଦାହରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=21">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୧–୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨–୨୯</a></small></article>
+<article id="exercise-16"><h2>ମୃତ୍ତିକା · 2 (କ). ପେଡ଼ାଲଫର ଓ ପେଡୋକାଲ ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବର୍ଷାରେ ଦ୍ରବଣୀୟ ପଦାର୍ଥ କେତେ ଧୋଇଯାଏ ତାହା ଦେଖ। ଆର୍ଦ୍ର ଅଞ୍ଚଳରେ ଧୋଇଯିବା ଅଧିକ, ଶୁଷ୍କ ଅଞ୍ଚଳରେ ବାଷ୍ପୀଭବନ ପରେ ଲବଣ ମୃତ୍ତିକାରେ ରହିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆର୍ଦ୍ର ଅଞ୍ଚଳରେ ବର୍ଷାଜଳ ଚୂନ ଆଦି ଧୋଇନେବା ଫଳରେ ପେଡ଼ାଲଫରରେ ଲୌହ ଓ ଆଲୁମିନିୟମର ଅଂଶ ଆପେକ୍ଷିକ ଭାବେ ଅଧିକ। ଶୁଷ୍କ ଅଞ୍ଚଳର ପେଡୋକାଲରେ ବାଷ୍ପୀଭବନ ଅଧିକ ଓ କ୍ୟାଲସିୟମ୍ ଜମା ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=22">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୨–୨୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨–୨୯</a></small></article>
+<article id="exercise-17"><h2>ମୃତ୍ତିକା · 2 (ଖ). ଖାଦର ଓ ଭାଙ୍ଗର ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଲେଖ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (କ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର) / ସେଟ୍ ୪, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (କ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନଦୀକୂଳକୁ ଲାଗିଥିବା ନିମ୍ନ ଭାଗକୁ ବନ୍ୟା ପହଞ୍ଚିଲେ ପୁନର୍ବାର ପଟୁ ଜମେ। ଉଚ୍ଚ ଭାଗର ପୁରୁଣା ପଟୁରେ ଏହି ନୂଆ ସ୍ତର ନିୟମିତ ଜମେ ନାହିଁ। ଏହା ଖାଦର ଓ ଭାଙ୍ଗରର ବୟସର ଭେଦ ବୁଝାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନଦୀର ବନ୍ୟାଜଳ ଦ୍ୱାରା ନିମ୍ନ ଭୂମିରେ ଜମା ହେଉଥିବା ନୂତନ ପଟୁମାଟି ଖାଦର। ଉଚ୍ଚତର ସ୍ଥାନରେ ଥିବା ପୁରୁଣା ପଟୁମାଟି ଭାଙ୍ଗର।</p><p>ପ୍ରତି ବନ୍ୟାରେ ନୂଆ ପଟୁ ପଡ଼ୁଥିବା ନିମ୍ନଭୂମି ଓ ପୁରୁଣା ପଟୁ ରହିଥିବା ଅପେକ୍ଷାକୃତ ଉଚ୍ଚଭୂମିକୁ ମେଳାଇ ଏହି ପାର୍ଥକ୍ୟ ଚିହ୍ନାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=23">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୩–୨୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩–୨୯</a></small></article>
+<article id="exercise-18"><h2>ମୃତ୍ତିକା · 2 (ଗ). କଂକର ଓ ତରାଇର ପାର୍ଥକ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଟିଏ ନାମ ମୃତ୍ତିକାରେ ଥିବା ଗୁଟିକାକୁ ସୂଚାଏ ଓ ଅନ୍ୟଟି ଆର୍ଦ୍ର ଭୂଖଣ୍ଡର ନାମ। ତେଣୁ ତୁଳନା କଲାବେଳେ କଂକରର ଗଠନ ଓ ତରାଇର ଅବସ୍ଥିତି ଉଭୟ ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭାଙ୍ଗରରେ ମିଳୁଥିବା ଚୂନଯୁକ୍ତ ଗୁଟିକାକୁ କଂକର କୁହାଯାଏ। ତରାଇ ହେଉଛି ଭାବରର ଦକ୍ଷିଣରେ ଭୂତଳ ଜଳ ଉପରକୁ ଆସି ଗଠିତ ଆର୍ଦ୍ର ଓ ସନ୍ତସନ୍ତିଆ ଅଞ୍ଚଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=23">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୩–୨୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩–୨୯</a></small></article>
+<article id="exercise-19"><h2>ମୃତ୍ତିକା · 2 (ଘ). ରେଗୁର ମୃତ୍ତିକା ଓ ବରି ମୃତ୍ତିକାକୁ ପୃଥକ୍ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରେଗୁର ମୃତ୍ତିକାର ଆର୍ଦ୍ରତା ଧରିବାର କ୍ଷମତା କାର୍ପାସ ଚାଷରେ ସାହାଯ୍ୟ କରେ। ବରି ମୃତ୍ତିକା ଚିହ୍ନିବାବେଳେ ସ୍ଥାନରେ ଜଳ ଜମିରହିବା ଓ ଜୈବାଂଶର ଭୂମିକାକୁ ଲକ୍ଷ୍ୟ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରେଗୁର ଦାକ୍ଷିଣାତ୍ୟର ବାସାଲ୍ଟ ଶିଳାରୁ ଗଠିତ କଳା ମୃତ୍ତିକା। ଏହା ଆର୍ଦ୍ରତା ଧରି ରଖେ ଓ କପାଚାଷ ପାଇଁ ଉପଯୋଗୀ।</p><p>ବରି କେରଳର ଜଳମଗ୍ନ ଅଞ୍ଚଳରେ ଉଦ୍ଭିଦ ଅବଶେଷ ଜମିବାରୁ ଗଠିତ ଜୈବପଦାର୍ଥଯୁକ୍ତ ମୃତ୍ତିକା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=24">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୪–୨୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=24" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୪–୨୯</a></small></article>
+<article id="exercise-20"><h2>ମୃତ୍ତିକା · 3 (କ). ଅବଶିଷ୍ଟ ମୃତ୍ତିକାକୁ ଗୋଟିଏ ବାକ୍ୟରେ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶିଳା କ୍ଷୟିତ ହେବା ଉଭୟ ପ୍ରକାର ମୃତ୍ତିକା ପାଇଁ ସମ୍ଭବ। ତାହାର କଣା ପରିବାହିତ ହେଲା କି ମୂଳ ଶିଳା ଉପରେ ରହିଲା, ସେଥିରୁ ଅବଶିଷ୍ଟ ମୃତ୍ତିକାକୁ ଚିହ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୂଳ ଶିଳାର କ୍ଷୟରୁ ସେହି ସ୍ଥାନରେ ହିଁ ଯେଉଁ ମୃତ୍ତିକା ରହିଯାଏ ତାହା ଅବଶିଷ୍ଟ ମୃତ୍ତିକା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=21">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୧–୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨–୨୯</a></small></article>
+<article id="exercise-21"><h2>ମୃତ୍ତିକା · 3 (ଖ–ଗ). ଚେର୍ଣ୍ଣୋଜେମ୍ ଓ ପୀତ ମୃତ୍ତିକା ସମ୍ବନ୍ଧରେ ଗୋଟିଏ ଲେଖାଏଁ ବାକ୍ୟ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୀତ ମୃତ୍ତିକାରେ ଲୌହଯୁକ୍ତ ଅଂଶର ଜଳୀୟ ଅବସ୍ଥା ସହ ରଙ୍ଗର ସମ୍ପର୍କ ଅଛି। ଅନ୍ୟ ପକ୍ଷରେ ଦାକ୍ଷିଣାତ୍ୟର କୃଷ୍ଣ ମୃତ୍ତିକା ପ୍ରସଙ୍ଗରେ ପାଠ ଚେର୍ଣ୍ଣୋଜେମ୍ ଶବ୍ଦ ବ୍ୟବହାର କରିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ଖ) ପାଠରେ ଦାକ୍ଷିଣାତ୍ୟର କୃଷ୍ଣ କାର୍ପାସ ମୃତ୍ତିକାର ଆନ୍ତର୍ଜାତିକ ନାମ କ୍ରାନ୍ତୀୟ ଚେର୍ଣ୍ଣୋଜେମ୍ ଦିଆଯାଇଛି। (ଗ) ଲୋହିତ ମୃତ୍ତିକାରେ ଥିବା ଲୌହ ଯୌଗିକ ଜଳଯୁକ୍ତ ହେଲେ ମୃତ୍ତିକାର ରଙ୍ଗ ହଳଦିଆ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=24">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୪–୨୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=24" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୪–୨୯</a></small></article>
+<article id="exercise-22"><h2>କାମ · ପୃ. ୪ (୧). ତୁମ ଅଞ୍ଚଳର ସମ୍ବଳ ଭଣ୍ଡାର, ସଂରକ୍ଷିତ, ପ୍ରଚ୍ଛନ୍ନ ଓ ବିକଶିତ ସମ୍ବଳ ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ଥାନୀୟ ଉଦାହରଣକୁ ଛାଣିବାବେଳେ ପ୍ରଥମେ ପଦାର୍ଥଟି ବ୍ୟବହାର ପାଇଁ କୌଶଳ ଅଛି କି ଦେଖ। ପରେ ତାହା ଏବେ ବିନିଯୋଗ ହେଉଛି, ଭବିଷ୍ୟତ ପାଇଁ ରଖାଯାଇଛି କିମ୍ବା ଅଞ୍ଚଳରେ ତାହାର ସମ୍ଭାବନା ମାତ୍ର ଅଛି ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପଦାର୍ଥର ନାମ, ତାହାର ସମ୍ଭାବ୍ୟ କାମ ଓ ବର୍ତ୍ତମାନ ବ୍ୟବହାର ଲେଖ। ପାଠରେ ପ୍ରବାହିତ ଜଳରୁ ଏଯାଏ ବିଦ୍ୟୁତ୍ ଉତ୍ପନ୍ନ ନହେବାକୁ ସଂରକ୍ଷିତ ସମ୍ବଳ ଏବଂ ଉପଯୋଗରେ ଆସିଥିବା ଜଳବିଦ୍ୟୁତ୍ ଶକ୍ତିକୁ ବିକଶିତ ସମ୍ବଳର ଉଦାହରଣ ଦିଆଯାଇଛି।</p><p>ନିଜ ଅଞ୍ଚଳର ପ୍ରତି ଧାଡ଼ିରେ ପ୍ରକୃତ ସ୍ଥାନ ଓ ଦେଖିଥିବା ବ୍ୟବହାର ଯୋଡ଼। ପ୍ରଚ୍ଛନ୍ନ ସମ୍ବଳର ପାଠ୍ୟ ଦୃଷ୍ଟାନ୍ତ ହେଉଛି ଗୁଜରାଟ ଓ ରାଜସ୍ଥାନର ଅବ୍ୟବହୃତ ପବନ ବା ସୌରଶକ୍ତି।</p><p>ସମ୍ବଳ ଭଣ୍ଡାର ଘରେ ଜମା ଥିବା ଦ୍ରବ୍ୟ ନୁହେଁ। ଏଥିରେ ଉପଯୋଗର ସମ୍ଭାବନା ଥିଲେ ମଧ୍ୟ ଦରକାରୀ ପ୍ରଯୁକ୍ତି ଉପଲବ୍ଧ ନଥାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-23"><h2>କାମ · ପୃ. ୪ (୨). ମାଲିକାନା ଅନୁସାରେ ଚାରି ପ୍ରକାର ସମ୍ବଳର ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗ୍ରାମର ଏକ କୂପ ବ୍ୟକ୍ତିଗତ ହୋଇପାରେ, ଆଉ ଗୋଚର ଜମିରେ ସମଗ୍ର ଗ୍ରାମର ଅଧିକାର ଥାଇପାରେ। ଉଦାହରଣଟି ଯେଉଁଠି ଅଛି ତାହା ଅପେକ୍ଷା କିଏ ବ୍ୟବହାର କରିପାରେ ଦେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବ୍ୟକ୍ତିଗତ — ନିଜ ଘର, ଚାଷଜମି ଓ କୂପ। ଗୋଷ୍ଠୀଗତ — ଗୋଚର ଭୂମି ଓ ସର୍ବସାଧାରଣ ପୁଷ୍କରିଣୀ।</p><p>ଜାତୀୟ — ଦେଶର କେନାଲ, ରେଳପଥ ଓ ଅରଣ୍ୟ। ଆନ୍ତର୍ଜାତୀୟ — ରାଷ୍ଟ୍ରର ଅନନ୍ୟ ଆର୍ଥନୀତିକ ଅଞ୍ଚଳ ବାହାରେ ଥିବା ସାମୁଦ୍ରିକ ସମ୍ବଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-24"><h2>କାମ · ପୃ. ୭ (୧). ଘରେ ବ୍ୟବହୃତ ପାଞ୍ଚଗୋଟି ସମ୍ବଳର ନାମ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଠର ଉଦାହରଣ ଆଧାରରେ ଜଳ, ଖାଦ୍ୟଶସ୍ୟ, କାଠ, ଗୃହ ଓ ବିଦ୍ୟୁତ୍ ଶକ୍ତି ଲେଖିହେବ। ପ୍ରତିଟିର ଘରୋଇ ବ୍ୟବହାର ଯୋଡ଼ ଓ ନିଜ ଘରେ ମିଳୁଥିବା ଉଦାହରଣ ବାଛ।</p><p>ନମୁନାର ଗୋଟିଏ ଧାଡ଼ିରେ ‘ଜଳ — ପାନ ଓ ରନ୍ଧନ’ ଲେଖ। କାଠ ଜାଳେଣି ବା ଆସବାବ, ଯେଉଁ କାମରେ ପ୍ରକୃତରେ ଲାଗୁଛି, ସେହି କାମଟି ଲେଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭–୧୩</a></small></article>
+<article id="exercise-25"><h2>କାମ · ପୃ. ୭ (୨). ବିଦ୍ୟାଳୟରେ ବ୍ୟବହୃତ ପାଞ୍ଚଗୋଟି ସମ୍ବଳର ନାମ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ତାଲିକାରେ ଜଳର କାମ ପାନୀୟ ଆବଶ୍ୟକତା ପୂରଣ, ଗୃହର କାମ ଶ୍ରେଣୀ ଚାଲିବାର ସ୍ଥାନ ଓ ବିଦ୍ୟୁତ୍‌ର କାମ ଆଲୋକ ଯୋଗାଇବା। ନିଜ ବିଦ୍ୟାଳୟରେ ଯାହା ଦେଖ ତାହା ସହ ନାମ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନମୁନା ତାଲିକା — ବିଦ୍ୟାଳୟ ଭୂମି, ଗୃହ, ଜଳ, ବିଦ୍ୟୁତ୍ ଓ କାଠ। ବ୍ୟବହାର ଭାବେ ଯଥାକ୍ରମେ ପଡ଼ିଆ, ଶ୍ରେଣୀକକ୍ଷ, ପାନୀୟ ଜଳ, ଆଲୋକ ଓ ଆସବାବ ଉଲ୍ଲେଖ କରିହେବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭–୧୩</a></small></article>
+<article id="exercise-26"><h2>କାମ · ପୃ. ୭ (୩). ବିଭିନ୍ନ ଶ୍ରେଣୀର ପାଞ୍ଚଟି ଲେଖାଏଁ ସମ୍ବଳର ନାମ ଓ ଉଦାହରଣ ସଂଗ୍ରହ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜୈବ ଶ୍ରେଣୀରେ ଉଦ୍ଭିଦ, ପଶୁ, ପକ୍ଷୀ, ମାଛ ଓ ମନୁଷ୍ୟ ଏବଂ ଅଜୈବ ଶ୍ରେଣୀରେ ବାୟୁ, ଜଳ, ଶିଳା, ସୂର୍ଯ୍ୟକିରଣ ଓ ଧାତବ ଖଣିଜ ରଖିପାର। ପ୍ରତି ଧାଡ଼ିରେ କେଉଁ ଆଧାରରେ ଶ୍ରେଣୀ ବାଛିଲ ତାହା ସୂଚାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାକୃତିକ ସମ୍ବଳର ଉଦାହରଣ ଭୂମି, ଜଳ, ମୃତ୍ତିକା, ଅରଣ୍ୟ ଓ ଖଣିଜ ପଦାର୍ଥ। ମନୁଷ୍ୟ ନିର୍ମିତ ସମ୍ବଳର ଉଦାହରଣ ଘର, ରାସ୍ତା, ରେଳପଥ, କେନାଲ ଓ ନଦୀବନ୍ଧ।</p><p>ନମୁନା ବା ଚିତ୍ର ନେଲେ ସଂଗ୍ରହ ସ୍ଥାନ ଲେଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭–୧୩</a></small></article>
+<article id="exercise-27"><h2>କାମ · ପୃ. ୭ (୪). ନିଜ ପରିବେଶରୁ ପାଞ୍ଚଗୋଟି ମାନବକୃତ ସମ୍ବଳର ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସଡ଼କ ଓ କେନାଲ ପାଇଁ ଭୂମି ଓ ଜଳ ପ୍ରକୃତିରୁ ମିଳେ। କିନ୍ତୁ ସେହି ସଡ଼କ ଓ କେନାଲର ନିର୍ମାଣ ମଣିଷର ଶ୍ରମ ଓ କୌଶଳରେ ହୋଇଥିବାରୁ ସେଗୁଡ଼ିକ ମାନବକୃତ ସମ୍ବଳ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗୃହ, ସଡ଼କ, କୂପ, କେନାଲ ଓ ବନ୍ଧ ପରି ମଣିଷ ତିଆରି କରିଥିବା ସମ୍ବଳ ଦେଖ। ତାଲିକାରେ ପ୍ରତିଟିର ସ୍ଥାନ ଓ ବ୍ୟବହାର ଲେଖ।</p><p>ନିଜ ଅଞ୍ଚଳରେ କୌଣସିଟି ନଥିଲେ ସେଥିରେ ଅନ୍ୟ ପ୍ରତ୍ୟକ୍ଷ ଉଦାହରଣ ରଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=7" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭–୧୩</a></small></article>
+<article id="exercise-28"><h2>ଭୂ-ସମ୍ବଳ · କାମ ୧. ନିଜ ଗ୍ରାମ ବା ସହରରେ ଭୂମିର ବ୍ୟବହାର କିପରି ହେଉଛି ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକେ ଜମିକୁ ଚାଷ ଓ ରାସ୍ତା ଉଭୟ ଭାବେ ଦୁଇଥର ଗଣନା କରନାହିଁ। ବର୍ତ୍ତମାନର ପ୍ରମୁଖ ବ୍ୟବହାର ବାଛି କ୍ଷେତ, ପଡ଼ିଆ ବା ବସତି ଭାବେ ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚାଷଜମି, ଗୋଚର, ରାସ୍ତା, ଘରବାଡ଼ି ବା ପଡ଼ିଆରୁ ଯେଉଁଗୁଡ଼ିକ ନିଜ ଅଞ୍ଚଳରେ ଅଛି ସେଗୁଡ଼ିକ ବାଛ। ସ୍ଥାନ, ବର୍ତ୍ତମାନ ବ୍ୟବହାର ଓ କାହାର ଆବଶ୍ୟକତା ପୂରଣ ହେଉଛି ଲେଖ।</p><p>ଅଞ୍ଚଳର ନାମ ନଜାଣି ଜମିର ପରିମାଣ ଅନୁମାନ କରନାହିଁ। ଗୋଟିଏ ନମୁନା ଧାଡ଼ି ହେଉଛି ‘ସର୍ବସାଧାରଣ ଗୋଚର ଭୂମି — ପଶୁଚାରଣ — ଗ୍ରାମର ପଶୁପାଳକ’।</p><p>ତୁମେ ଦେଖିଥିବା ସ୍ଥାନର ନାମ ଓ ବ୍ୟବହାର ମିଳିଲେ ହିଁ ସେହି ଧାଡ଼ି ନିଜ ତାଲିକାରେ ରଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=15">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫–୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-29"><h2>ଭୂ-ସମ୍ବଳ · କାମ ୨. ଭୂ-ସମ୍ବଳ ଆମର କେଉଁ ଆବଶ୍ୟକତା ପୂରଣ କରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କ୍ଷେତରୁ ଖାଦ୍ୟ ଉତ୍ପାଦନ ହୁଏ। ଅନ୍ୟ ଜମିରେ ଗଢ଼ିଥିବା ରାସ୍ତା ସେହି ଖାଦ୍ୟକୁ ବସତିକୁ ନେବାରେ ସାହାଯ୍ୟ କରେ। ଏପରି ଏକ ଉଦାହରଣରେ ଭୂମିର ଦୁଇଟି ପରସ୍ପର ସମ୍ବନ୍ଧିତ ଉପଯୋଗ ଦେଖାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚାଷ ପାଇଁ ଭୂମି ଖାଦ୍ୟ ଯୋଗାଏ। ଜମି ଉପରେ ଘର ବନାଇ ଆଶ୍ରୟ ମିଳେ।</p><p>ରାସ୍ତା ଓ ରେଳପଥ ପରିବହନରେ ସାହାଯ୍ୟ କରେ। ଗୋଚର ପଶୁପାଳନ ଓ ଅରଣ୍ୟ ଅନେକ ପ୍ରକାର ଜୀବିକାରେ ସହାୟକ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=15">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫–୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫–୨୦</a></small></article>
+<article id="exercise-30"><h2>ମୃତ୍ତିକା · କାମ ୧. ନିଜ ଅଞ୍ଚଳରୁ ବିଭିନ୍ନ ମୃତ୍ତିକା ସଂଗ୍ରହ କରି ପ୍ରକାର ଅନୁସାରେ ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ନମୁନାର ରଙ୍ଗ ଏକା ଥିଲେ ମଧ୍ୟ ଦାନାର ଆକାର ଭିନ୍ନ ହୋଇପାରେ। ତେଣୁ ରଙ୍ଗ ସହ ବାଲିଆ, ପଟୁ ବା ମଟାଳ କଣାର ଅନୁପାତ ଲେଖିବାରୁ ଶ୍ରେଣୀକରଣର ଆଧାର ସ୍ପଷ୍ଟ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରତି ନମୁନାର ସ୍ଥାନ, ରଙ୍ଗ, ଦାନାର ଆକାର ଓ ଆର୍ଦ୍ରତା ଲେଖ। ପୁସ୍ତକରେ ବର୍ଣ୍ଣିତ ମୃତ୍ତିକାର ଲକ୍ଷଣ ସହ ମେଳାଇ ନାମ ବାଛ।</p><p>କେବଳ ରଙ୍ଗରୁ ଚିହ୍ନଟ ନହେଲେ ଅନ୍ୟ ଲକ୍ଷଣ ଯାଞ୍ଚ କର। ଉଦାହରଣରେ ବାଲିଆ ଅଂଶ ଅଧିକ ଓ ଚିକିଟା ଅଂଶ ଅଧିକ ଥିବା ଦୁଇ ନମୁନାକୁ ପୃଥକ୍ ଧାଡ଼ିରେ ରଖି ଦାନାର ଭେଦ ଲେଖିହେବ।</p><p>ନମୁନା ମିଳିଥିବା ସ୍ଥାନକୁ ତାହାର ନାମ ସହ ରଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=21">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୧–୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨–୨୯</a></small></article>
+<article id="exercise-31"><h2>ମୃତ୍ତିକା · କାମ ୨. ଘର ଓ ବିଦ୍ୟାଳୟ ପାଖରେ ଏକ ଫୁଟ ଗଭୀରର ମୃତ୍ତିକା ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ କିପରି ଚିହ୍ନିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଘର ଓ ବିଦ୍ୟାଳୟର ନମୁନା ତୁଳନାରେ ଗଭୀରତା ସମାନ ରଖିଲେ ଭିନ୍ନ ସ୍ତରର ମାଟି ନେଇ ତୁଳନା କରିବାର ଭୁଲ ହୁଏନାହିଁ। ପାର୍ଥକ୍ୟ ନ ଦେଖିଲେ ସେହି ଫଳ ମଧ୍ୟ ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ସ୍ଥାନରେ ସମାନ ଗଭୀରତା ବାଛି ନମୁନା ନିଅ। ଘର ପାଖର ଓ ବିଦ୍ୟାଳୟ ପାଖର ମୃତ୍ତିକାର ରଙ୍ଗ, ବାଲି ଓ ଚିକିଟା ଅଂଶ, ଆର୍ଦ୍ରତା ଓ ଜୈବାଂଶ ଅଲଗା ଧାଡ଼ିରେ ଲେଖ।</p><p>ପାର୍ଥକ୍ୟ ପ୍ରକୃତ ନମୁନା ଉପରେ ନିର୍ଭର କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=21">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୧–୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=29" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୯</a></small></article>
+
+</main></body></html>

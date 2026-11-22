@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">ସ୍ଥୂଳକୋଣୀ △ABCରେ D–B–C, AD ⟂ BC ଏବଂ AD² = BD × DC |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="52.50,45.97 184.17,274.03 447.50,274.03 52.50,45.97" stroke="#244355" stroke-width="2.35"/>
+<polyline points="52.50,274.03 447.50,274.03" stroke="#244355" stroke-width="2.35"/>
+<polyline points="52.50,45.97 52.50,274.03" stroke="#087b79" stroke-width="2.35" stroke-dasharray="7 6"/>
+<polyline points="52.50,264.03 62.50,264.03 62.50,274.03" stroke="#a9571e" stroke-width="1.7"/>
+</g>
+<circle cx="52.50" cy="45.97" r="2.7" fill="#244355"/>
+<text x="40.38" y="38.47" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="184.17" cy="274.03" r="2.7" fill="#244355"/>
+<text x="184.17" y="289.03" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="447.50" cy="274.03" r="2.7" fill="#244355"/>
+<text x="459.62" y="281.53" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="52.50" cy="274.03" r="2.7" fill="#244355"/>
+<text x="42.50" y="287.03" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+</svg>

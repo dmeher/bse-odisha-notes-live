@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>‘ଣତ୍ୱ’ ବିଧି, ‘ଷତ୍ୱ’ ବିଧି ଓ ସାଧାରଣ ଅଶୁଦ୍ଧି · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>‘ଣତ୍ୱ’ ବିଧି, ‘ଷତ୍ୱ’ ବିଧି ଓ ସାଧାରଣ ଅଶୁଦ୍ଧି</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1WVw9B_Vz4JXO76cMlUo3Gc8UQEnFgGqU/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ନିମ୍ନରୁ କେଉଁ ଶବ୍ଦରେ ଣ ପ୍ରୟୋଗ ହୁଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଦିନ</li><li>ଦାନ</li><li>ଭାଷଣ</li><li>ଫେନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଭାଷଣ</b></p>
+<div class="lesson-body"><p>ଭାଷଣରେ ଷ ପରେ ଣ ରହିଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧</small></article>
+<article><h2>୨. କେଉଁ ପ୍ରୟୋଗରେ ଅର୍ଥର ଅନାବଶ୍ୟକ ପୁନରୁକ୍ତି ରହିଛି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ସେ ସପରିବାର ଗଲେ</li><li>ଭୋଜି ଖାଇଲେ</li><li>ଲୋକ ଆସିଲେ</li><li>ସପରିବାର ସହିତ ଗଲେ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ସପରିବାର ସହିତ ଗଲେ</b></p>
+<div class="lesson-body"><p>ସପରିବାର ଶବ୍ଦରେ ହିଁ ପରିବାର ସହିତ ଅର୍ଥ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧୪</small></article>
+<article><h2>୩. କେଉଁ ଯୋଡ଼ିର ଉଭୟ ଶବ୍ଦରେ ଦନ୍ତ୍ୟ ନ ଅଛି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଭାଷଣ ଓ ରଣ</li><li>ରଣ ଓ ତୃଣ</li><li>ଦିନ ଓ ଦାନ</li><li>ଦର୍ପଣ ଓ ତୃଣ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଦିନ ଓ ଦାନ</b></p>
+<div class="lesson-body"><p>ଦିନ ଓ ଦାନରେ ନ ପ୍ରୟୋଗ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧–୫</small></article>
+<article><h2>୪. କେଉଁ ଶବ୍ଦର ଶେଷ ଅଂଶରେ ମୂର୍ଦ୍ଧନ୍ୟ ଷ ସ୍ପଷ୍ଟ ଅଛି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ରାବଣ</li><li>ପୁରୁଷ</li><li>ମଦନ</li><li>ତୃଣ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ପୁରୁଷ</b></p>
+<div class="lesson-body"><p>ପୁରୁଷର ବର୍ଣ୍ଣବିନ୍ୟାସ ଷତ୍ୱ ବିଧିର ଉଦାହରଣରେ ଆସିଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧–୫</small></article>
+<article><h2>୫. ଦେଶଜ ଓ ବୈଦେଶିକ ଶବ୍ଦର ସ ବିଷୟରେ କେଉଁ ନିଷ୍ପତ୍ତି ଠିକ୍?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଶବ୍ଦର ଶେଷରେ ମାତ୍ର ରହେ</li><li>ତତ୍ସମର ଷତ୍ୱ ବିଧି ସେପରି ଲାଗୁ ହୁଏନାହିଁ</li><li>ସର୍ବଦା ଷ ହୁଏ</li><li>ସର୍ବଦା ଶ ହୁଏ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ତତ୍ସମର ଷତ୍ୱ ବିଧି ସେପରି ଲାଗୁ ହୁଏନାହିଁ</b></p>
+<div class="lesson-body"><p>ପାଠରେ ଶବ୍ଦର ଉତ୍ସକୁ ଧ୍ୟାନ ଦେବାକୁ କୁହାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧–୫</small></article>
+<article><h2>୬. “ବହୁତ ଲୋକମାନେ ଆସିଥିଲେ”ରେ କେଉଁ ସଂଶୋଧନ ସଂକ୍ଷିପ୍ତ ଓ ଶୁଦ୍ଧ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ବହୁତଗୁଡ଼ିଏ ଲୋକମାନେ ଆସିଥିଲେ</li><li>ବହୁତ ଲୋକଗଣମାନେ ଆସିଥିଲେ</li><li>ବହୁତ ଲୋକ ଆସିଥିଲେ</li><li>ସବୁ ବହୁତ ଲୋକମାନେ ଆସିଥିଲେ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ବହୁତ ଲୋକ ଆସିଥିଲେ</b></p>
+<div class="lesson-body"><p>ବହୁତ ଶବ୍ଦରେ ଅନେକ ଲୋକର ଅର୍ଥ ମିଳୁଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧୪</small></article>
+<article><h2>୭. ଭବିଷ୍ୟତ ସମ୍ପର୍କିତ ବାକ୍ୟରେ କେଉଁ ବନାନ ଲେଖିବା ଉଚିତ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଉଝଳ</li><li>ଉଜ୍ୱଲ</li><li>ଉଜ୍ଜ୍ୱଳ</li><li>ଉଜଳ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଉଜ୍ଜ୍ୱଳ</b></p>
+<div class="lesson-body"><p>ଶୁଦ୍ଧ ବନାନ ଉଜ୍ଜ୍ୱଳ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧୪</small></article>
+<article><h2>୮. “ଶିକ୍ଷୟିତ୍ରୀ ପ୍ରତ୍ୟେକ ଛାତ୍ରମାନଙ୍କୁ ପ୍ରଶ୍ନ ପଚାରିଲେ”ରେ କେଉଁ ପରିବର୍ତ୍ତନ ଉଚିତ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ପ୍ରତ୍ୟେକମାନେ ଛାତ୍ରକୁ</li><li>ପ୍ରତ୍ୟେକଗଣ ଛାତ୍ରକୁ</li><li>ପ୍ରତ୍ୟେକ ଛାତ୍ରଗଣମାନଙ୍କୁ</li><li>ପ୍ରତ୍ୟେକ ଛାତ୍ରକୁ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ପ୍ରତ୍ୟେକ ଛାତ୍ରକୁ</b></p>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟେକ କହିଲେ ଜଣ ଜଣଙ୍କୁ ଅଲଗା କରି ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୧୪</small></article>
+<article><h2>୯. ନିଃ + ଫଳ ମିଶିଲେ ଠିକ୍ ରୂପ କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ନିଷ୍ଫଳ</li><li>ନିର୍ଫଳ</li><li>ନିସ୍ଫଳ</li><li>ନିଶ୍ଫଳ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ନିଷ୍ଫଳ</b></p>
+<div class="lesson-body"><p>ପାଠର ବିସର୍ଗ ସନ୍ଧିଜାତ ଷତ୍ୱର ଉଦାହରଣ ହେଉଛି ନିଷ୍ଫଳ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୦. ଚତୁଃ + ପଦରୁ କେଉଁ ଶବ୍ଦ ହୁଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଚତୁସ୍ପଦ</li><li>ଚତୁଶ୍ପଦ</li><li>ଚତୁଷ୍ପଦ</li><li>ଚତୁର୍ପଦ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଚତୁଷ୍ପଦ</b></p>
+<div class="lesson-body"><p>ଏହି ବିସର୍ଗ ସନ୍ଧିରେ ଷ୍ ହୋଇ ଚତୁଷ୍ପଦ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୧. ଆବିଷ୍କାରର ଠିକ୍ ସନ୍ଧିବିଚ୍ଛେଦ କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଆ + ବିଶ୍ୱକାର</li><li>ଆବି + ଇଷ୍କାର</li><li>ଆବ୍ + କାର</li><li>ଆବିଃ + କାର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ଆବିଃ + କାର</b></p>
+<div class="lesson-body"><p>ପୁସ୍ତକର ଦୃଷ୍ଟାନ୍ତରେ ଆବିଃ ସହ କାର ମିଶି ଷ୍କ ହୋଇଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୨. ଉତ୍କର୍ଷରେ ଷ୍ ପୂର୍ବର ଧ୍ୱନି କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>କ୍</li><li>ମ୍</li><li>ତ୍</li><li>ର୍</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ର୍</b></p>
+<div class="lesson-body"><p>ବର୍ଣ୍ଣରୂପରେ ର୍ ପରେ ଷ୍ ଆସିଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୩. ଗବେଷଣାରେ ଷ୍ ଠିକ୍ ପୂର୍ବରୁ କେଉଁ ସ୍ୱର ଅଛି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଏ</li><li>ଓ</li><li>ଅ</li><li>ଆ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ଏ</b></p>
+<div class="lesson-body"><p>“ବେ”ର ଏ ସ୍ୱର ପରେ ଷ୍ ଆସିଥିବା ବର୍ଣ୍ଣବିଶ୍ଳେଷଣରେ ଦିଆଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୪. ଅବସାଦର ଶୁଦ୍ଧ ବନାନରେ କେଉଁ ବର୍ଣ୍ଣ ରହେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>କ୍ଷ</li><li>ସ</li><li>ଶ</li><li>ଷ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ସ</b></p>
+<div class="lesson-body"><p>ଏଠି ଅ ସ୍ୱର ପରେ ସ ଅପରିବର୍ତ୍ତିତ ରହେ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୫. ଭାସମାନ ଶବ୍ଦରେ ସ କାହିଁକି ରହିଛି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ର୍ ପରେ ଷ୍ ହୁଏ</li><li>ଆ ପରେ ସ ଅପରିବର୍ତ୍ତିତ</li><li>କ୍ ପରେ ଷ୍ ହୁଏ</li><li>ବିସର୍ଗରୁ ଷ୍ ହୁଏ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଆ ପରେ ସ ଅପରିବର୍ତ୍ତିତ</b></p>
+<div class="lesson-body"><p>“ଭା”ର ଆ ସ୍ୱର ପରେ “ସ” ଥିବାରୁ ତାହାର ପରିବର୍ତ୍ତନ ଘଟିନାହିଁ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୧୬. ରଚନା ଶବ୍ଦରେ ର ଥାଇ ମଧ୍ୟ ଦନ୍ତ୍ୟ ନ କାହିଁକି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ଶେଷରେ ଆ ଅଛି ମାତ୍ର</li><li>ମଝିରେ ଚ ଅଛି</li><li>ର ଅକ୍ଷରର ଅସ୍ତିତ୍ୱ ନାହିଁ</li><li>ନ ଆଗରେ ଷ୍ ଅଛି</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ମଝିରେ ଚ ଅଛି</b></p>
+<div class="lesson-body"><p>ଚ ବ୍ୟବଧାନରୁ ଏହି ଶବ୍ଦରେ ଣତ୍ୱ ଘଟିନାହିଁ।</p></div>
+</details>
+<small class="lesson-source">odia/odia-grammar/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+
+</main></body></html>

@@ -1,0 +1,1281 @@
+export default {
+  "subject": "english",
+  "setNumber": 4,
+  "objective": [
+    {
+      "chapter": "a-letter-to-god",
+      "pages": [
+        8
+      ],
+      "prompt": "What were the older boys doing before the rain?",
+      "options": [
+        "Working in the field",
+        "Playing near the house",
+        "Carrying a letter",
+        "Collecting hailstones"
+      ],
+      "correct": 0,
+      "answer": "ବଡ଼ ପିଲା କ୍ଷେତରେ କାମ କରୁଥିଲେ ଓ ଛୋଟମାନେ ଘର ପାଖେ ଖେଳୁଥିଲେ।",
+      "title": "A Letter to God",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "a-letter-to-god",
+      "pages": [
+        9,
+        10
+      ],
+      "prompt": "When did Lencho set about writing his first letter?",
+      "options": [
+        "On Saturday night",
+        "During the storm",
+        "After the next harvest",
+        "At daybreak on Sunday"
+      ],
+      "correct": 3,
+      "answer": "ପରବର୍ତ୍ତୀ ରବିବାର ସକାଳେ ସେ ଚିଠି ଲେଖିଲେ।",
+      "title": "A Letter to God",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "a-letter-to-god",
+      "pages": [
+        10
+      ],
+      "prompt": "What does the postmaster realise on opening the letter?",
+      "options": [
+        "The farmer cannot read",
+        "The lost crop is insured",
+        "A reply requires material help",
+        "The address is missing"
+      ],
+      "correct": 2,
+      "answer": "କାଗଜ ଓ କାଳି ସହିତ ପ୍ରକୃତ ଅର୍ଥ ଦରକାର।",
+      "title": "A Letter to God",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "a-letter-to-god",
+      "pages": [
+        11,
+        12
+      ],
+      "prompt": "When Lencho calls the employees “crooks”, he accuses them of ___.",
+      "options": [
+        "poor handwriting",
+        "dishonesty",
+        "laziness alone",
+        "forgetfulness"
+      ],
+      "correct": 1,
+      "answer": "ସେ ଅଭିଯୋଗ କରନ୍ତି ଯେ କର୍ମଚାରୀ ଟଙ୍କା ରଖିଦେଇଛନ୍ତି।",
+      "title": "A Letter to God",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "air-pollution-a-hidden-menace",
+      "pages": [
+        67
+      ],
+      "prompt": "Why do the factories described in the text burn fuel?",
+      "options": [
+        "To produce steam",
+        "To clean the air",
+        "To absorb road dust",
+        "To protect stone surfaces"
+      ],
+      "correct": 0,
+      "answer": "ବାଷ୍ପ ପାଇଁ ଜାଳେଣି ଜଳାଯାଏ।",
+      "title": "Air Pollution – A Hidden Menace",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "air-pollution-a-hidden-menace",
+      "pages": [
+        68
+      ],
+      "prompt": "Which effect is directly experienced by a person breathing polluted air?",
+      "options": [
+        "A cracked tyre",
+        "A soot-covered wall",
+        "A weakened marble surface",
+        "A scratchy throat"
+      ],
+      "correct": 3,
+      "answer": "ଗଳାରେ ଅସୁବିଧା ମଣିଷର ପ୍ରତ୍ୟକ୍ଷ ସ୍ୱାସ୍ଥ୍ୟ ସମସ୍ୟା।",
+      "title": "Air Pollution – A Hidden Menace",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "air-pollution-a-hidden-menace",
+      "pages": [
+        69
+      ],
+      "prompt": "What happens to water in lakes affected by acid rain?",
+      "options": [
+        "It becomes pure oxygen",
+        "It no longer dissolves anything",
+        "It becomes acidic",
+        "It stops moving"
+      ],
+      "correct": 2,
+      "answer": "ଅମ୍ଳୀୟ ପାଣିରେ ଜଳଜୀବ କ୍ଷତିଗ୍ରସ୍ତ ହୁଅନ୍ତି।",
+      "title": "Air Pollution – A Hidden Menace",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "air-pollution-a-hidden-menace",
+      "pages": [
+        70
+      ],
+      "prompt": "Why might pollution controls raise prices?",
+      "options": [
+        "All fuels become identical",
+        "Control devices cost money",
+        "Wind stops carrying emissions",
+        "Air no longer needs study"
+      ],
+      "correct": 1,
+      "answer": "ନୂଆ ଯନ୍ତ୍ରପାତି ପାଇଁ ଖର୍ଚ୍ଚ ଲାଗେ।",
+      "title": "Air Pollution – A Hidden Menace",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "schools-goodbye",
+      "pages": [
+        83
+      ],
+      "prompt": "What does the speaker suggest if the first job is temporary?",
+      "options": [
+        "Seek suitable work when possible",
+        "Give up learning",
+        "Refuse all advice",
+        "Treat it as a permanent choice"
+      ],
+      "correct": 0,
+      "answer": "ଅସ୍ଥାୟୀ କାମରୁ ସୁଯୋଗ ମିଳିଲେ ପସନ୍ଦର କାମ ଖୋଜିବା।",
+      "title": "School’s Goodbye",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "schools-goodbye",
+      "pages": [
+        84
+      ],
+      "prompt": "Which action demonstrates moral courage in the address?",
+      "options": [
+        "Betting on a rival",
+        "Ignoring suffering",
+        "Avoiding every responsibility",
+        "Standing up for what is good"
+      ],
+      "correct": 3,
+      "answer": "ସତ୍ ଓ ମହତ୍ କଥାର ସମର୍ଥନ ପାଇଁ ସାହସ ଦରକାର।",
+      "title": "School’s Goodbye",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "all-things-bright-and-beautiful",
+      "pages": [
+        2,
+        3
+      ],
+      "prompt": "Why is it inaccurate to call the mountain itself purple throughout?",
+      "options": [
+        "The poem is set underground",
+        "The colour described is on its sunlit top",
+        "The poem names only a river",
+        "The mountain is covered by rushes"
+      ],
+      "correct": 1,
+      "answer": "ଏହା ଆଲୋକର ବିଶେଷ ଦୃଶ୍ୟ।",
+      "title": "All Things Bright and Beautiful",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "all-things-bright-and-beautiful",
+      "pages": [
+        1,
+        2
+      ],
+      "prompt": "Which description pairs an action with its matching subject?",
+      "options": [
+        "A flower opens",
+        "A garden sings",
+        "A bird ripens",
+        "A rush sets in the west"
+      ],
+      "correct": 0,
+      "answer": "ଫୁଲ ଫୁଟିବା ଓ ପକ୍ଷୀ ଗାଇବା ସୃଷ୍ଟିର ଦୁଇ ଦୃଶ୍ୟ।",
+      "title": "All Things Bright and Beautiful",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "all-things-bright-and-beautiful",
+      "pages": [
+        1,
+        2
+      ],
+      "prompt": "Which expression includes creatures of every size?",
+      "options": [
+        "Winter and summer",
+        "Sunset and morning",
+        "Purple and green",
+        "Great and small"
+      ],
+      "correct": 3,
+      "answer": "great ଓ small ପରିସରର ଦୁଇ ପ୍ରାନ୍ତ ସୂଚାଏ।",
+      "title": "All Things Bright and Beautiful",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "all-things-bright-and-beautiful",
+      "pages": [
+        2
+      ],
+      "prompt": "What does the speaker call pleasant?",
+      "options": [
+        "The gathering of fruit",
+        "The winter wind",
+        "The summer sun",
+        "The purple head"
+      ],
+      "correct": 2,
+      "answer": "ଗ୍ରୀଷ୍ମ ସୂର୍ଯ୍ୟର ଉଷ୍ଣତାକୁ ଏଠି ସୁଖଦ କୁହାଯାଇଛି।",
+      "title": "All Things Bright and Beautiful",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "all-things-bright-and-beautiful",
+      "pages": [
+        2
+      ],
+      "prompt": "Which two lines of thought meet at the close?",
+      "options": [
+        "A competition and its reward",
+        "Human senses and praise of creation’s maker",
+        "Human work and the price of fruit",
+        "A long trip and a farewell"
+      ],
+      "correct": 1,
+      "answer": "ଦେଖିବା ଓ ପ୍ରଶଂସା ପ୍ରକାଶ କରିବା ଏକାଠି ଆସେ।",
+      "title": "All Things Bright and Beautiful",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "village-song",
+      "pages": [
+        36,
+        37
+      ],
+      "prompt": "What does the mother’s reference to feeding the child stress?",
+      "options": [
+        "Her long-standing care",
+        "The girl’s skill at cooking",
+        "The lover’s occupation",
+        "A journey for food"
+      ],
+      "correct": 0,
+      "answer": "ଶୈଶବରୁ ଯତ୍ନ ମନେ ପକାଇ ମାଆ ରହିବାକୁ କୁହନ୍ତି।",
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "village-song",
+      "pages": [
+        37
+      ],
+      "prompt": "Where do lotus lilies shine in the girl’s picture?",
+      "options": [
+        "In the loom",
+        "On the hearth",
+        "At the wedding table",
+        "Near the river-isles"
+      ],
+      "correct": 3,
+      "answer": "ନଦୀଦ୍ୱୀପର ପ୍ରାକୃତିକ ଦୃଶ୍ୟ।",
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "village-song",
+      "pages": [
+        37,
+        39
+      ],
+      "prompt": "Which songs in the mother’s speech refer to a possible future child?",
+      "options": [
+        "Forest-notes",
+        "Songs of the koil",
+        "Cradle-songs",
+        "Bridal songs alone"
+      ],
+      "correct": 2,
+      "answer": "cradle-song ହେଉଛି ଶିଶୁକୁ ଶୁଆଇବାର ଗୀତ।",
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "village-song",
+      "pages": [
+        36,
+        38
+      ],
+      "prompt": "Which expression is an affectionate form of address?",
+      "options": [
+        "Golden grain",
+        "Honey child",
+        "Bridal robes",
+        "Forest notes"
+      ],
+      "correct": 1,
+      "answer": "ମାଆ ଏଭଳି ସ୍ନେହରେ ଝିଅକୁ ଡାକନ୍ତି।",
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "village-song",
+      "pages": [
+        37
+      ],
+      "prompt": "Which action is repeated in the daughter’s replies?",
+      "options": [
+        "Listening to an invitation from the forest",
+        "Baking for the wedding",
+        "Preparing a cradle",
+        "Looking for the bridegroom"
+      ],
+      "correct": 0,
+      "answer": "ବନର ଆହ୍ୱାନ ତାଙ୍କ ମନକୁ ଆକର୍ଷଣ କରେ।",
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "a-tiger-in-the-house",
+      "pages": [
+        92
+      ],
+      "prompt": "How did Timothy’s attitude to the puppy change?",
+      "options": [
+        "He gave it to Toto",
+        "He ignored it from the first",
+        "He came to let it rest on his back",
+        "He chased it away forever"
+      ],
+      "correct": 2,
+      "answer": "ପ୍ରଥମେ ଭୟ କରୁଥିଲେ ମଧ୍ୟ ପରେ ଗ୍ରହଣ କଲା।",
+      "title": "A Tiger in the House",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "a-tiger-in-the-house",
+      "pages": [
+        95
+      ],
+      "prompt": "Why did Grandfather want the tiger moved to another cage?",
+      "options": [
+        "The tiger had escaped",
+        "The neighbouring leopard frightened it",
+        "The cage was empty",
+        "A puppy was waiting"
+      ],
+      "correct": 1,
+      "answer": "ଚିତାବାଘ ଗର୍ଜିଲେ ବାଘଟି ପଛକୁ ହଟୁଥିଲା।",
+      "title": "A Tiger in the House",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "the-beggar",
+      "pages": [
+        102
+      ],
+      "prompt": "What payment was promised for returning to cut wood monthly?",
+      "options": [
+        "Half a rouble",
+        "Thirty-five roubles",
+        "Five copecks",
+        "A full salary"
+      ],
+      "correct": 0,
+      "answer": "ପ୍ରଥମ ମାସିକ କାମ ଓ ପର ଚାକିରିର ଦରମାକୁ ଅଲଗା ରଖନ୍ତୁ।",
+      "title": "The Beggar",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "the-beggar",
+      "pages": [
+        104
+      ],
+      "prompt": "Where did Sergei learn about Lushkoff’s new life?",
+      "options": [
+        "In the woodshed",
+        "At the old school",
+        "Inside a post office",
+        "At a theatre ticket window"
+      ],
+      "correct": 3,
+      "answer": "ଦୁଇ ବର୍ଷ ପରେ ଥିଏଟରରେ ସାକ୍ଷାତ।",
+      "title": "The Beggar",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "the-village-judge",
+      "pages": [
+        112
+      ],
+      "prompt": "What was the first judgement if Jumman refused an allowance?",
+      "options": [
+        "The aunt must leave the village",
+        "Algu must pay the money",
+        "He must return the property",
+        "He must sell a bullock"
+      ],
+      "correct": 2,
+      "answer": "ଭତ୍ତା ନଦେଲେ ସମ୍ପତ୍ତି ଫେରାଇବା ରାୟ।",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "the-village-judge",
+      "pages": [
+        113
+      ],
+      "prompt": "Which fact best explains the bullock’s collapse?",
+      "options": [
+        "It was too young to walk",
+        "It was overloaded after repeated trips",
+        "It had been ill at the sale",
+        "Algu had poisoned it"
+      ],
+      "correct": 1,
+      "answer": "ଖାଦ୍ୟପାଣିର ଅଭାବ ସହିତ ଅତ୍ୟଧିକ କାମ ହୋଇଥିଲା।",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "a-grain-as-big-as-a-hens-egg",
+      "pages": [
+        118
+      ],
+      "prompt": "How did the first old peasant examine the grain?",
+      "options": [
+        "He felt it with his hands",
+        "He read its label",
+        "He compared two books",
+        "He sowed it immediately"
+      ],
+      "correct": 0,
+      "answer": "ତାଙ୍କ ଦୃଷ୍ଟି ଅତି ଦୁର୍ବଳ ଥିଲା।",
+      "title": "A Grain as Big as a Hen’s Egg",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "a-grain-as-big-as-a-hens-egg",
+      "pages": [
+        120
+      ],
+      "prompt": "What alone did people call their own in the grandfather’s account?",
+      "options": [
+        "All the land",
+        "The king’s stores",
+        "Their neighbours’ crops",
+        "Their labour"
+      ],
+      "correct": 3,
+      "answer": "ଜମି ଖୋଲା ଥିଲା; ନିଜର କଥା ଥିଲା ନିଜ ଶ୍ରମ।",
+      "title": "A Grain as Big as a Hen’s Egg",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "the-beggar",
+      "pages": [
+        102
+      ],
+      "prompt": "What did Sergei begin to feel on seeing the feeble man struggle with the wood?",
+      "options": [
+        "Pride in a completed job",
+        "Regret at setting him hard work in the cold",
+        "Doubt about the weather",
+        "Fear that he would steal the axe"
+      ],
+      "correct": 1,
+      "answer": "ଲୋକଟିର ଦୁର୍ବଳତା ଦେଖି କଠିନ କାମ ଦେଇଥିବାରୁ ତାଙ୍କର ଲଜ୍ଜା ଓ ଅନୁତାପ ଜନ୍ମିଲା।",
+      "title": "The Beggar",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "the-village-judge",
+      "pages": [
+        112
+      ],
+      "prompt": "What does Algu mean when he treats the aunt and his friend as equals?",
+      "options": [
+        "They own equal areas of land",
+        "They have paid the same amount",
+        "Their evidence deserves the same attention",
+        "Both have refused to speak"
+      ],
+      "correct": 2,
+      "answer": "ବିଚାରକ ହେଲେ ନିଜ ପରିଚିତଙ୍କୁ ଅଲଗା ସୁବିଧା ଦେବା ଚାଲିବ ନାହିଁ।",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "chapter": "tense-revisited",
+      "pages": [
+        10,
+        11
+      ],
+      "prompt": "Which completion indicates present relevance: I ___ my homework, so I am free now?",
+      "options": [
+        "am finish",
+        "will finished",
+        "have finished",
+        "would finish yesterday"
+      ],
+      "correct": 2,
+      "answer": "ଶେଷ କାମର ଫଳ ଏବେ ଅଛି।",
+      "title": "Tense Revisited",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "tense-revisited",
+      "pages": [
+        11
+      ],
+      "prompt": "They ___ for two hours when the car broke down.",
+      "options": [
+        "will have drove",
+        "had been driving",
+        "have driving",
+        "are drove"
+      ],
+      "correct": 1,
+      "answer": "ଅତୀତ ଘଟଣା ପୂର୍ବରୁ କିଛି ସମୟ ଧରି ଚାଲୁଥିବା କାମ।",
+      "title": "Tense Revisited",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "types-of-sentences",
+      "pages": [
+        20
+      ],
+      "prompt": "Which pattern fits “The wind blows”?",
+      "options": [
+        "SV",
+        "SVOO",
+        "SVOC",
+        "SVO"
+      ],
+      "correct": 0,
+      "answer": "subject ଓ intransitive verb ଅଛି, object ନାହିଁ।",
+      "title": "Types of Sentences",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "types-of-sentences",
+      "pages": [
+        26,
+        28
+      ],
+      "prompt": "A main clause with a subordinate clause forms a ___ sentence.",
+      "options": [
+        "simple only",
+        "compound with no subordinate element",
+        "fragment necessarily",
+        "complex"
+      ],
+      "correct": 3,
+      "answer": "ଅଧୀନ clause ଥିବା ଗଠନ complex।",
+      "title": "Types of Sentences",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "subject-verb-agreement",
+      "pages": [
+        34
+      ],
+      "prompt": "Either of the boys ___ won a medal.",
+      "options": [
+        "are",
+        "were",
+        "has",
+        "have"
+      ],
+      "correct": 2,
+      "answer": "either ଏକବଚନ କର୍ତ୍ତା।",
+      "title": "Subject Verb Agreement",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "subject-verb-agreement",
+      "pages": [
+        35
+      ],
+      "prompt": "Neither the teacher nor the pupils ___ present.",
+      "options": [
+        "was",
+        "are",
+        "is",
+        "has"
+      ],
+      "correct": 1,
+      "answer": "ଏଠି verb ପାଖର କର୍ତ୍ତା pupils ବହୁବଚନ।",
+      "title": "Subject Verb Agreement",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "non-finite-verb-forms",
+      "pages": [
+        42
+      ],
+      "prompt": "Please remind him ___ the letter.",
+      "options": [
+        "to write",
+        "write yesterday",
+        "writing to",
+        "wrote"
+      ],
+      "correct": 0,
+      "answer": "remind + object + to-infinitive।",
+      "title": "Non-finite Verb Forms",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "non-finite-verb-forms",
+      "pages": [
+        42
+      ],
+      "prompt": "Which is the missing form in “Please stop ___; I am studying”?",
+      "options": [
+        "talks",
+        "talked",
+        "to talking",
+        "talking"
+      ],
+      "correct": 3,
+      "answer": "କଥା କହିବା ବନ୍ଦ ପାଇଁ stop + -ing।",
+      "title": "Non-finite Verb Forms",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "prepositions",
+      "pages": [
+        53
+      ],
+      "prompt": "Meet me ___ the front door.",
+      "options": [
+        "out",
+        "since",
+        "at",
+        "along"
+      ],
+      "correct": 2,
+      "answer": "ନିର୍ଦ୍ଦିଷ୍ଟ ସ୍ଥାନରେ ସାକ୍ଷାତ।",
+      "title": "Prepositions",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "prepositions",
+      "pages": [
+        60
+      ],
+      "prompt": "The officer agreed ___ the proposal.",
+      "options": [
+        "along",
+        "to",
+        "between",
+        "onto"
+      ],
+      "correct": 1,
+      "answer": "proposalରେ ସମ୍ମତି ଦେବା agree to।",
+      "title": "Prepositions",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "phrasal-verbs",
+      "pages": [
+        71
+      ],
+      "prompt": "Can you ___ this word in the dictionary?",
+      "options": [
+        "look up",
+        "pull down",
+        "give in",
+        "call off"
+      ],
+      "correct": 0,
+      "answer": "ଶବ୍ଦକୋଷରେ ଅର୍ଥ ଖୋଜିବା ପାଇଁ look up।",
+      "title": "Phrasal Verbs",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "phrasal-verbs",
+      "pages": [
+        70
+      ],
+      "prompt": "She has run out of time. What does she lack?",
+      "options": [
+        "A watch only",
+        "A route to school",
+        "A timetable for tomorrow",
+        "Time remaining"
+      ],
+      "correct": 3,
+      "answer": "run out of ଅର୍ଥ ସରିଯିବା।",
+      "title": "Phrasal Verbs",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "noun-clauses-and-relative-clauses",
+      "pages": [
+        80
+      ],
+      "prompt": "Which word can introduce the object clause after “She said”?",
+      "options": [
+        "despite",
+        "during",
+        "that",
+        "because of"
+      ],
+      "correct": 2,
+      "answer": "that she was happy ସମଗ୍ରଟି କ’ଣ କହିଲେ ବୁଝାଏ।",
+      "title": "Noun Clauses and Relative Clauses",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "noun-clauses-and-relative-clauses",
+      "pages": [
+        81
+      ],
+      "prompt": "“The film depends on how it ends.” Which part follows the preposition?",
+      "options": [
+        "A bare infinitive",
+        "A noun clause",
+        "A defining relative clause",
+        "A coordinate clause"
+      ],
+      "correct": 1,
+      "answer": "how it ends ପୂରା clause onର object।",
+      "title": "Noun Clauses and Relative Clauses",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "adverb-clauses",
+      "pages": [
+        88
+      ],
+      "prompt": "In “They worked harder than we expected”, what does the subordinate clause express?",
+      "options": [
+        "Comparison",
+        "Place",
+        "Reason",
+        "Time"
+      ],
+      "correct": 0,
+      "answer": "ଦୁଇ ପରିମାଣର ତୁଳନା ଅଛି।",
+      "title": "Adverb Clauses",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "adverb-clauses",
+      "pages": [
+        88,
+        90
+      ],
+      "prompt": "Which sentence uses a clause to express purpose?",
+      "options": [
+        "She made a note although she was tired.",
+        "She made a note when she arrived.",
+        "She made a note because the teacher asked.",
+        "She made a note so that she could remember."
+      ],
+      "correct": 3,
+      "answer": "ମନେ ରଖିବା ହେଉଛି ଟିପ୍ପଣୀର ଲକ୍ଷ୍ୟ।",
+      "title": "Adverb Clauses",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "the-passive",
+      "pages": [
+        96,
+        97
+      ],
+      "prompt": "Which is the past simple passive of “They returned the book”?",
+      "options": [
+        "The book had returned them.",
+        "The book has been returning.",
+        "The book was returned.",
+        "The book is returned."
+      ],
+      "correct": 2,
+      "answer": "past simpleରେ was + past participle।",
+      "title": "The Passive",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "the-passive",
+      "pages": [
+        107,
+        108
+      ],
+      "prompt": "When is the by-phrase especially informative?",
+      "options": [
+        "When the writer wishes to conceal the agent",
+        "When the identity of the artist matters",
+        "When the agent is unknown",
+        "When the agent is irrelevant"
+      ],
+      "correct": 1,
+      "answer": "ଶିଳ୍ପୀ କିଏ ତାହା ମୁଖ୍ୟ ସୂଚନା ହେଲେ ଉଲ୍ଲେଖ ଦରକାର।",
+      "title": "The Passive",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "direct-and-indirect-speech",
+      "pages": [
+        115,
+        116
+      ],
+      "prompt": "Report “I don’t like sweets” after “She says”.",
+      "options": [
+        "She says that she does not like sweets.",
+        "She says that I did not like sweets.",
+        "She says did she like sweets.",
+        "She says she has not liked sweets yesterday."
+      ],
+      "correct": 0,
+      "answer": "ବର୍ତ୍ତମାନର reporting verbରେ tense ବଦଳ ଦରକାର ନାହିଁ।",
+      "title": "Direct and Indirect Speech",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    },
+    {
+      "chapter": "direct-and-indirect-speech",
+      "pages": [
+        119,
+        120
+      ],
+      "prompt": "Which normally replaces “here” when reporting from another place?",
+      "options": [
+        "then",
+        "that day",
+        "the day before",
+        "there"
+      ],
+      "correct": 3,
+      "answer": "ସ୍ଥାନ ବଦଳିଲେ here ବଦଳରେ there।",
+      "title": "Direct and Indirect Speech",
+      "source": "english/learn-and-practice-grammar/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view"
+    }
+  ],
+  "written": [
+    {
+      "number": "1 (a)",
+      "area": "Prose · ଗଦ୍ୟ",
+      "marks": 5,
+      "chapter": "a-letter-to-god",
+      "pages": [
+        9,
+        11
+      ],
+      "prompt": "What do the two letters reveal about the strengths and limitations of Lencho’s faith?",
+      "answer": "The first letter shows that faith gives Lencho hope after his crop has been ruined. He makes a definite request for the money needed to sow again and survive until harvest. His second letter shows the same confidence in God, but also a limitation in his reasoning. Because he assumes God must have sent everything, he blames innocent workers for the missing sum. ଦୁଇ ଚିଠିର ପ୍ରମାଣକୁ ଏକାଠି ବିଚାର କରନ୍ତୁ।",
+      "alternatives": [
+        {
+          "chapter": "air-pollution-a-hidden-menace",
+          "pages": [
+            66,
+            70
+          ],
+          "prompt": "How does the writer develop an argument from an accident to a shared responsibility?",
+          "answer": "An industrial disaster first shows how dangerous contaminated air can be. The writer then describes less visible exposure in ordinary life, links it with factories and traffic and traces damage to people, plants, water and buildings. Possible controls follow the account of damage. The movement of pollutants across frontiers finally explains why research, spending and cooperation all matter.",
+          "title": "Air Pollution – A Hidden Menace",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        }
+      ],
+      "title": "A Letter to God",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "1 (b)",
+      "area": "Poetry · ପଦ୍ୟ",
+      "marks": 5,
+      "chapter": "all-things-bright-and-beautiful",
+      "pages": [
+        1,
+        2
+      ],
+      "prompt": "Explain the role of light and colour in the poem about creation.",
+      "answer": "Colour appears first in the small opening flower. The scene then expands to a mountain top coloured by the setting sun and to a sky brightened at different times of day. The trees and meadows add familiar shades closer to human activity. These visible details prepare the last stanza: eyes allow people to see such things, and lips can express appreciation of their maker. ଶେଷର eyes ସହିତ ଆଗର ଦୃଶ୍ୟ ଯୋଡ଼ନ୍ତୁ।",
+      "alternatives": [
+        {
+          "chapter": "village-song",
+          "pages": [
+            36,
+            38
+          ],
+          "prompt": "How do the details of a wedding make the daughter’s decision more striking?",
+          "answer": "The lover is already on his way, the bridal cloth is being woven and cakes are on the hearth. These details make the invitation to stay immediate and concrete. Yet the girl thinks of flowers, streams and fairy voices instead. She hears the possibility of sorrow beneath the songs of family happiness. The decision matters because she turns from a future visibly prepared for her.",
+          "title": "Village Song",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        }
+      ],
+      "title": "All Things Bright and Beautiful",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "2 (i)",
+      "area": "Prose · ଗଦ୍ୟ",
+      "marks": 2.5,
+      "chapter": "schools-goodbye",
+      "pages": [
+        84
+      ],
+      "prompt": "What makes character a possession that must be protected?",
+      "answer": "Character directs the way a person uses strength and opportunity. Truthfulness, fairness and care for others can earn trust, while gambling or selfish conduct can damage it. ଚରିତ୍ର ଆଚରଣ ମାଧ୍ୟମରେ ପ୍ରକାଶ ପାଏ।",
+      "alternatives": [
+        {
+          "chapter": "a-letter-to-god",
+          "pages": [
+            10
+          ],
+          "prompt": "Why could a reply in ink alone never fulfil the postmaster’s intention?",
+          "answer": "Lencho needed money for food and sowing after the hailstorm. A letter without practical help would not meet that need or preserve his confidence in the answer.",
+          "title": "A Letter to God",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        }
+      ],
+      "title": "School’s Goodbye",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "2 (ii)",
+      "area": "Poetry · ପଦ୍ୟ",
+      "marks": 2.5,
+      "chapter": "village-song",
+      "pages": [
+        36,
+        37
+      ],
+      "prompt": "How do the mother’s affectionate words coexist with her anxiety?",
+      "answer": "Her tender form of address shows love. Her repeated questions about the jewels, the waiting lover and the wedding preparations show fear that her daughter is about to leave. ସମ୍ବୋଧନ ଓ ପ୍ରଶ୍ନରେ ଭିନ୍ନ ଭାବ ଚିହ୍ନନ୍ତୁ।",
+      "alternatives": [
+        {
+          "chapter": "all-things-bright-and-beautiful",
+          "pages": [
+            2,
+            3
+          ],
+          "prompt": "What do the meadows and the plants by water show about the speaker’s surroundings?",
+          "answer": "They show a landscape people actually use. The meadows offer space to play, and the waterside plants are gathered. Praise arises from ordinary experience as well as grand sights.",
+          "title": "All Things Bright and Beautiful",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        }
+      ],
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "2 (iii)",
+      "area": "Report / Summary",
+      "marks": 5,
+      "chapter": "village-song",
+      "pages": [
+        36,
+        38
+      ],
+      "prompt": "Summarise the two positions in this original passage and supply a title.\nOne voice in a family conversation describes a house waiting for a celebration. A dress is being woven and food is ready. The other voice pays little attention to these preparations. It hears the sound of water beyond the house and imagines flowers opening in a forest. What is an occasion for happiness to the first speaker feels uncertain to the second.",
+      "answer": "A House and a Forest\nOne speaker values the happiness promised by a family celebration. The other is drawn by flowers and water in the forest and feels uncertain about the joy that domestic preparations seem to promise.",
+      "alternatives": [
+        {
+          "chapter": "the-village-judge",
+          "pages": [
+            110,
+            115
+          ],
+          "prompt": "Write a report of a classroom role-play based on the two hearings in “The Village Judge”. Include the cases, the two verdicts and the class conclusion.",
+          "answer": "Two Village Hearings Recreated in Class\nClass X presented two short hearings from the village story. In the first, Algu decided that an old aunt must receive support or recover her property. In the second, Jumman held the buyer responsible for the price of an overworked bullock. After the role-play, pupils compared the judges’ personal feelings with their public duties. They concluded that each decision depended on the facts, despite the difficult relationship between the men.",
+          "title": "The Village Judge",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        }
+      ],
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "3",
+      "area": "Essay · ରଚନା",
+      "marks": 10,
+      "chapter": "schools-goodbye",
+      "pages": [
+        83,
+        84
+      ],
+      "prompt": "Write an essay in about 200 words on “Leisure as a Part of Education”.",
+      "answer": "Leisure as a Part of Education\nThe hours after lessons or work can appear unimportant because nobody has set a task for them. Yet the school farewell address treats leisure as one of the ways in which a person’s future is formed. A pupil who learns how to use free time has already gained a useful habit.\n\nA good book is one possibility. It allows the reader to keep learning when a teacher is no longer present. A hobby offers another kind of occupation and can provide the recreation needed for health. A companion can make such hours better or worse. A friend who encourages thoughtful choices has an influence that extends beyond a single afternoon.\n\nThis does not mean that every leisure hour must feel like another class. The speaker values recreation because people need a sound body as well as a sound mind. The important question is what an activity does to our habits. Gambling encourages a person to seek gain at somebody else’s expense. Reading, a useful interest and good company can instead give lasting satisfaction.\n\nSchool will eventually end for every pupil. Free time will remain. Learning to use it well can therefore carry one part of education far beyond the school gate.",
+      "alternatives": [
+        {
+          "chapter": "a-tiger-in-the-house",
+          "pages": [
+            91,
+            96
+          ],
+          "prompt": "Write an essay in about 200 words on “An Ending That Changes a Story”.",
+          "answer": "An Ending That Changes a Story\nAn ending can make a reader reconsider a scene that seemed clear a moment earlier. When Grandfather returns to the zoo, he approaches the cage where he left Timothy. His confidence is understandable because he discovered the tiger as a cub and watched it grow up in his home.\n\nThe animal in the cage allows him to touch its head and even licks his hand. A leopard in the next cage frightens it. Grandfather’s attention goes immediately to the animal’s comfort, and he asks that it be moved. Anyone who has followed the history of the cub can easily accept this as a meeting between old companions.\n\nA keeper then explains that Timothy died of pneumonia two months earlier. The tiger in the cage was captured in the hills and is considered dangerous. Suddenly the animal’s behaviour takes on a different meaning. It had not been greeting a familiar friend. Grandfather has been closer to danger than he realised.\n\nThe surprise works because the earlier details remain true. The cage was familiar, the animal did respond and Grandfather really did care. What changes is the meaning he and the reader gave those details. A single piece of information transforms the whole encounter.",
+          "title": "A Tiger in the House",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        },
+        {
+          "chapter": "a-grain-as-big-as-a-hens-egg",
+          "pages": [
+            117,
+            120
+          ],
+          "prompt": "Write an essay in about 200 words on “Learning from Experience”.",
+          "answer": "Learning from Experience\nA large grain of corn puzzles everyone who sees it. Its journey from children in a ravine to a king’s possession could have ended with its being kept as an interesting object. Instead, the king wants to know where and when grain of such a size grew.\n\nThe wise men first try to solve the puzzle themselves. A hen helps reveal that the object is indeed a grain, but their books cannot tell them its history. They recognise the limits of their knowledge and suggest questioning the peasants. The first man remembers no grain like it. His father remembers larger grain than people see now but cannot identify the king’s specimen. The eldest man finally recognises it from the days when he grew and ate such corn.\n\nEach answer is valuable, even when it admits uncertainty. It leads the king closer to the person with direct experience. The oldest man also explains what labour, land and sharing meant in his youth. At that point the object becomes more than a curiosity.\n\nThe story asks the reader to value knowledge gained through work and memory. Books begin the inquiry, but listening carefully to different generations gives the king the answer he came to seek.",
+          "title": "A Grain as Big as a Hen’s Egg",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        }
+      ],
+      "title": "School’s Goodbye",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "4 (i)",
+      "area": "Letter / Application",
+      "marks": 5,
+      "chapter": "village-song",
+      "pages": [
+        36,
+        38
+      ],
+      "prompt": "Write a letter of about 100 words telling a friend which voice in “Village Song” you found easier to understand and why.",
+      "answer": "Balasore\n20 November\nDear Asha,\nAt first I understood the mother more easily. The clothes and cakes make it clear that many people are already preparing for the wedding. Then I read the daughter’s replies aloud. She hears water and birds where her mother hears songs of marriage and family life. I began to see why repeating the same invitation could never settle their disagreement. The girl is attracted to a different future. I still feel the mother’s anxiety, but I would now listen to the girl before asking her to stay. Which voice do you understand better?\nYours,\nMina",
+      "alternatives": [
+        {
+          "chapter": "all-things-bright-and-beautiful",
+          "pages": [
+            1,
+            3
+          ],
+          "prompt": "Apply in about 100 words for a short supervised observation activity after your class reads the nature poem.",
+          "answer": "To\nThe Headteacher\nOur High School\n20 November\nSubject: Request for an observation activity\nSir/Madam,\nAfter reading our English poem on creation, we wish to practise describing what we see and hear. We request permission to spend a short period in the school grounds under our teacher’s supervision. Each pupil will note one small detail and one larger scene, then write two English sentences explaining what makes them interesting. We shall remain in the agreed area, avoid disturbing plants and return before the next period. We hope to compare our observations in class.\nYours faithfully,\nAsha\nClass X",
+          "title": "All Things Bright and Beautiful",
+          "source": "english/skills-of-communicative-english/source.pdf",
+          "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+        }
+      ],
+      "title": "Village Song",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "4 (ii) a",
+      "area": "Unseen passage",
+      "marks": 1,
+      "chapter": "the-village-judge",
+      "pages": [
+        111,
+        115
+      ],
+      "prompt": "Read this original passage and answer a–e in one or two sentences each.\nDuring a school reading, two friends were given the roles of judges in different scenes. The first pupil worried that an unfavourable ruling would look unkind. Her partner suggested writing two lists: facts that affected the dispute and feelings that belonged to the judge. When she compared the lists, she saw that being a friend did not alter the facts. In the next scene the two pupils exchanged roles. Each now understood why listening could be harder than announcing a decision.\n\nWhat roles did the pupils receive?",
+      "answer": "They played judges in different scenes.",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "4 (ii) b",
+      "area": "Unseen passage",
+      "marks": 1,
+      "chapter": "the-village-judge",
+      "pages": [
+        111,
+        115
+      ],
+      "prompt": "What worried the first pupil?",
+      "answer": "She feared that an unfavourable decision might appear unkind.",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "4 (ii) c",
+      "area": "Unseen passage",
+      "marks": 1,
+      "chapter": "the-village-judge",
+      "pages": [
+        111,
+        115
+      ],
+      "prompt": "Who suggested making lists?",
+      "answer": "Her partner suggested it.",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "4 (ii) d",
+      "area": "Unseen passage",
+      "marks": 1,
+      "chapter": "the-village-judge",
+      "pages": [
+        111,
+        115
+      ],
+      "prompt": "What belonged on the second list?",
+      "answer": "The judge’s personal feelings belonged there.",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "4 (ii) e",
+      "area": "Unseen passage",
+      "marks": 1,
+      "chapter": "the-village-judge",
+      "pages": [
+        111,
+        115
+      ],
+      "prompt": "What did exchanging roles help the pupils understand?",
+      "answer": "It helped them understand the difficulty of listening fairly before giving a judgement.",
+      "title": "The Village Judge",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "5 (a)",
+      "area": "Translation · ଅନୁବାଦ",
+      "marks": 2,
+      "chapter": "a-grain-as-big-as-a-hens-egg",
+      "pages": [
+        119
+      ],
+      "prompt": "Translate into English. ସବୁଠାରୁ ବୟସ୍କ ବ୍ୟକ୍ତି ବିନା ଆଶାବାଡ଼ିରେ ଚାଲିପାରୁଥିଲେ।",
+      "answer": "The oldest man could walk without a crutch.",
+      "title": "A Grain as Big as a Hen’s Egg",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "5 (b)",
+      "area": "Translation · ଅନୁବାଦ",
+      "marks": 2,
+      "chapter": "a-tiger-in-the-house",
+      "pages": [
+        95
+      ],
+      "prompt": "Translate into English. ଚିତାବାଘଟି ପାଖ ପିଞ୍ଜରାରେ ଥିଲା।",
+      "answer": "The leopard was in the next cage.",
+      "title": "A Tiger in the House",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "5 (c)",
+      "area": "Translation · ଅନୁବାଦ",
+      "marks": 2,
+      "chapter": "all-things-bright-and-beautiful",
+      "pages": [
+        2
+      ],
+      "prompt": "Translate into English. ଶୀତଦିନେ ଥଣ୍ଡା ପବନ ବହେ।",
+      "answer": "A cold wind blows in winter.",
+      "title": "All Things Bright and Beautiful",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "5 (d)",
+      "area": "Translation · ଅନୁବାଦ",
+      "marks": 2,
+      "chapter": "schools-goodbye",
+      "pages": [
+        84
+      ],
+      "prompt": "Translate into English. ଭଲ ପୁସ୍ତକ ଆମର ଅବସର ସମୟକୁ ମୂଲ୍ୟବାନ କରେ।",
+      "answer": "Good books make our leisure hours valuable.",
+      "title": "School’s Goodbye",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    },
+    {
+      "number": "5 (e)",
+      "area": "Translation · ଅନୁବାଦ",
+      "marks": 2,
+      "chapter": "air-pollution-a-hidden-menace",
+      "pages": [
+        67
+      ],
+      "prompt": "Translate into English. ଧୂଆଁ ବାୟୁ ସହିତ ମିଶିଯାଏ।",
+      "answer": "Smoke mixes with the air.",
+      "title": "Air Pollution – A Hidden Menace",
+      "source": "english/skills-of-communicative-english/source.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view"
+    }
+  ]
+};

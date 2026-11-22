@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385 192" width="385" height="192" role="img" aria-labelledby="title desc">
+  <title id="title">Positions in two groups of the periodic table</title>
+  <desc id="desc">Row for period 2 contains P in group 1 and Q in group 2. Row for period 3 contains R in group 1 and S in group 2.</desc>
+  <rect x="1" y="1" width="383" height="190" rx="10" fill="#fff" stroke="#cedbd5"/>
+  <style>text {font-family: sans-serif; font-size: 16px; fill: #152c24} .wire {stroke:#254d3f;stroke-width:2.5;fill:none}</style>
+<text x="225" y="28" text-anchor="middle">Group</text><text x="180" y="54" text-anchor="middle">1</text><text x="277" y="54" text-anchor="middle">2</text><text x="52" y="94" text-anchor="middle">Period 2</text><text x="52" y="145" text-anchor="middle">Period 3</text><path d="M130 64H326V163H130Z M228 64V163 M130 113H326" class="wire" /><text x="179" y="94" text-anchor="middle">P</text><text x="277" y="94" text-anchor="middle">Q</text><text x="179" y="145" text-anchor="middle">R</text><text x="277" y="145" text-anchor="middle">S</text>
+</svg>

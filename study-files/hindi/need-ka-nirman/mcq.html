@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>नीड़ का निर्माण · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>नीड़ का निर्माण</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1t1Ya3HwCQshJKbxEmR5AXGt7GdVTROZl/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ନିର୍ମାଣର ଆଶା କେଉଁ ଚିତ୍ରରେ ରହିଛି?</h2>
+<ol type="A"><li>ଧୂଳିଭରା ମେଘ</li><li>ତୃଣ ନେଇ ଉଡ଼ୁଥିବା ପକ୍ଷୀ</li><li>ଉପୁଡ଼ି ପଡ଼ିଥିବା ଗଛ</li><li>ଅନ୍ଧାର ଆକାଶ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ତୃଣ ନେଇ ଉଡ଼ୁଥିବା ପକ୍ଷୀ</b></p>
+<div class="lesson-body"><p>ପକ୍ଷୀ ନୂଆ ବସା ତିଆରି ପାଇଁ ଉପାଦାନ ନେଉଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୧–୪</small></article>
+<article><h2>୨. आँधी से दिन रात-सा क्यों लगने लगा?</h2>
+<ol type="A"><li>वर्ष का अंत हुआ</li><li>धूल भरे बादल छा गए</li><li>पक्षियों ने गाना छोड़ा</li><li>सूर्य जल्दी डूब गया</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. धूल भरे बादल छा गए</b></p>
+<div class="lesson-body"><p>ଧୂଳି ଓ ମେଘ ଆକାଶ ଘୋଡ଼ାଇଦେଲେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨</small></article>
+<article><h2>୩. नीड़ बनाने के लिए चिड़िया क्या लेकर उड़ती है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ऊन का धागा</li><li>फल</li><li>तिनका</li><li>रुई की डलिया</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. तिनका</b></p>
+<div class="lesson-body"><p>ତୃଣ ନେଇ ଉଡ଼ୁଥିବା ଚଢ଼େଇ ପୁନର୍ନିର୍ମାଣର ସଙ୍କେତ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୪. उषा की मुसकान किस दिशा से आती है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>उत्तर से</li><li>पश्चिम से</li><li>प्राची से</li><li>दक्षिण से</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. प्राची से</b></p>
+<div class="lesson-body"><p>प्राची ଅର୍ଥ ପୂର୍ବ ଦିଗ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୫. प्रलय की निस्तब्धता के बाद कौन-सा स्वर सुनाई देता है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सृष्टि का नव गान</li><li>दरवाजे की खटखट</li><li>तलवार का वार</li><li>बाँसुरी का अभ्यास</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. सृष्टि का नव गान</b></p>
+<div class="lesson-body"><p>ବିନାଶ ପରେ ସୃଷ୍ଟି ପୁଣି ଆରମ୍ଭ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୬. कवि किस सुख को नाश के दुःख से अधिक स्थायी दिखाते हैं?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>आराम का सुख</li><li>यश का सुख</li><li>धन गिनने का सुख</li><li>निर्माण का सुख</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. निर्माण का सुख</b></p>
+<div class="lesson-body"><p>ନୂଆ ଗଢ଼ିବାର ଆନନ୍ଦ ନାଶରେ ଚାପି ହୁଏ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୭. पवन और चिड़िया के चित्र में प्रमुख विरोध क्या है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>धन और व्यापार</li><li>दिन और भोजन</li><li>बलवान विनाश और छोटे जीव का साहस</li><li>नगर और गाँव</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. बलवान विनाश और छोटे जीव का साहस</b></p>
+<div class="lesson-body"><p>କ୍ଷୁଦ୍ର ଜୀବର ପ୍ରୟାସ ବେଗବାନ ପବନକୁ ଆହ୍ୱାନ କରେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୮. भीत जन-जन में भीत का अर्थ क्या है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>खुश हुआ</li><li>डरा हुआ</li><li>थका हुआ</li><li>खड़ा हुआ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. डरा हुआ</b></p>
+<div class="lesson-body"><p>ଝଡ଼ ଲୋକଙ୍କ ମନରେ ଭୟ ଆଣିଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୯. तूफान के सामने बड़े विटपों का क्या हुआ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>वे तिनके ले उड़े</li><li>वे जड़ सहित उखड़े</li><li>उन पर अधिक फूल खिले</li><li>वे घोंसले बन गए</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. वे जड़ सहित उखड़े</b></p>
+<div class="lesson-body"><p>ଉପୁଡ଼ି ପଡ଼ିଥିବା ବଡ଼ ଗଛ ଝଡ଼ର ବଳ ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୧୦. चिड़ियों की कतार बताने वाला शब्द कौन-सा है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>भूधर</li><li>नीरवता</li><li>खगपंक्ति</li><li>उत्पात</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. खगपंक्ति</b></p>
+<div class="lesson-body"><p>खग ପକ୍ଷୀ ଓ पंक्ति ଧାଡ଼ି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୧୧. आरंभ और अंत में नीड़ की पुनरावृत्ति क्या प्रकट करती है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सवेरे का डर</li><li>घोंसला छोड़ने की इच्छा</li><li>वर्षा की प्रतीक्षा</li><li>सृजन का बना रहने वाला संकल्प</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. सृजन का बना रहने वाला संकल्प</b></p>
+<div class="lesson-body"><p>ପୁଣି ଗଢ଼ିବା ଏହି ଆବୃତ୍ତିର କେନ୍ଦ୍ର।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 8/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+
+</main></body></html>

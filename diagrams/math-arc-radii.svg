@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 225">
+  <title>Central and inscribed angles subtending AB</title>
+  <rect width="320" height="225" rx="8" fill="white"/>
+  <g fill="none" stroke="#254b55" stroke-width="2">
+<circle cx="150" cy="110" r="82"/><path d="M82.8 157L150 110L217.2 157M82.8 157L150 28L217.2 157"/>
+  </g>
+  <g fill="#173940" font-family="sans-serif" font-size="15">
+    <text x="62" y="172">A</text>
+    <text x="221" y="174">B</text>
+    <text x="146" y="21">P</text>
+    <text x="146" y="129">O</text>
+  </g>
+</svg>

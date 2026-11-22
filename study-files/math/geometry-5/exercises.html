@@ -1,0 +1,1456 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ପରିମିତି · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ପରିମିତି</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1MjK0PoYIfcTWQVfLjZKKE4f9AmLY1P4m/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>5(a) · 1–25। 5(b) · 1–31। 5(c) · 1–17। 5(d) · 1–17। 5(e) · 1–16। 5(f) · 1–13। ଛଅ ଅନୁଶୀଳନୀର ପ୍ରତି ଉପପ୍ରଶ୍ନର ଏକକ, ସୂତ୍ର ଓ ଗଣନା ପ୍ରକାଶିତ। ପ୍ରଶ୍ନର ମାପ ଓ ମୁଦ୍ରିତ ଉତ୍ତରରେ ଅସଙ୍ଗତି ଥିବା ସ୍ଥଳରେ ପ୍ରଶ୍ନର ମାପରୁ ସମାଧାନ ଦର୍ଶାଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 7–9, 16–18, 27–28, 33–34, 39–41, 45।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୭୩)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">5(a) · 1(a)(i)</a> <a href="#exercise-2">5(a) · 1(a)(ii)</a> <a href="#exercise-3">5(a) · 1(a)(iii)</a> <a href="#exercise-4">5(a) · 1(a)(iv)</a> <a href="#exercise-5">5(a) · 1(b)(i)</a> <a href="#exercise-6">5(a) · 1(b)(ii)</a> <a href="#exercise-7">5(a) · 1(b)(iii)</a> <a href="#exercise-8">5(a) · 1(b)(iv)</a> <a href="#exercise-9">5(a) · 2(a)</a> <a href="#exercise-10">5(a) · 2(b)</a> <a href="#exercise-11">5(a) · 2(c)</a> <a href="#exercise-12">5(a) · 3(a)</a> <a href="#exercise-13">5(a) · 3(b)</a> <a href="#exercise-14">5(a) · 3(c)</a> <a href="#exercise-15">5(a) · 3(d)</a> <a href="#exercise-16">5(a) · 3(e)</a> <a href="#exercise-17">5(a) · 4</a> <a href="#exercise-18">5(a) · 5</a> <a href="#exercise-19">5(a) · 6</a> <a href="#exercise-20">5(a) · 7</a> <a href="#exercise-21">5(a) · 8</a> <a href="#exercise-22">5(a) · 9</a> <a href="#exercise-23">5(a) · 10</a> <a href="#exercise-24">5(a) · 11</a> <a href="#exercise-25">5(a) · 12</a> <a href="#exercise-26">5(a) · 13</a> <a href="#exercise-27">5(a) · 14</a> <a href="#exercise-28">5(a) · 15</a> <a href="#exercise-29">5(a) · 16</a> <a href="#exercise-30">5(a) · 17</a> <a href="#exercise-31">5(a) · 18</a> <a href="#exercise-32">5(a) · 19(a)</a> <a href="#exercise-33">5(a) · 19(b)</a> <a href="#exercise-34">5(a) · 20</a> <a href="#exercise-35">5(a) · 21</a> <a href="#exercise-36">5(a) · 22</a> <a href="#exercise-37">5(a) · 23</a> <a href="#exercise-38">5(a) · 24</a> <a href="#exercise-39">5(a) · 25</a> <a href="#exercise-40">5(b) · 1(i)</a> <a href="#exercise-41">5(b) · 1(ii)</a> <a href="#exercise-42">5(b) · 1(iii)</a> <a href="#exercise-43">5(b) · 1(iv)</a> <a href="#exercise-44">5(b) · 2(i)</a> <a href="#exercise-45">5(b) · 2(ii)</a> <a href="#exercise-46">5(b) · 3(i)</a> <a href="#exercise-47">5(b) · 3(ii)</a> <a href="#exercise-48">5(b) · 3(iii)</a> <a href="#exercise-49">5(b) · 3(iv)</a> <a href="#exercise-50">5(b) · 4(i)</a> <a href="#exercise-51">5(b) · 4(ii)</a> <a href="#exercise-52">5(b) · 5(i)</a> <a href="#exercise-53">5(b) · 5(ii)</a> <a href="#exercise-54">5(b) · 5(iii)</a> <a href="#exercise-55">5(b) · 6(i)</a> <a href="#exercise-56">5(b) · 6(ii)</a> <a href="#exercise-57">5(b) · 7(i)</a> <a href="#exercise-58">5(b) · 7(ii)</a> <a href="#exercise-59">5(b) · 7(iii)</a> <a href="#exercise-60">5(b) · 8</a> <a href="#exercise-61">5(b) · 9</a> <a href="#exercise-62">5(b) · 10</a> <a href="#exercise-63">5(b) · 11</a> <a href="#exercise-64">5(b) · 12</a> <a href="#exercise-65">5(b) · 13</a> <a href="#exercise-66">5(b) · 14</a> <a href="#exercise-67">5(b) · 15</a> <a href="#exercise-68">5(b) · 16</a> <a href="#exercise-69">5(b) · 17</a> <a href="#exercise-70">5(b) · 18</a> <a href="#exercise-71">5(b) · 19</a> <a href="#exercise-72">5(b) · 20</a> <a href="#exercise-73">5(b) · 21</a> <a href="#exercise-74">5(b) · 22</a> <a href="#exercise-75">5(b) · 23</a> <a href="#exercise-76">5(b) · 24</a> <a href="#exercise-77">5(b) · 25</a> <a href="#exercise-78">5(b) · 26</a> <a href="#exercise-79">5(b) · 27</a> <a href="#exercise-80">5(b) · 28(i)</a> <a href="#exercise-81">5(b) · 28(ii)</a> <a href="#exercise-82">5(b) · 29(i)</a> <a href="#exercise-83">5(b) · 29(ii)</a> <a href="#exercise-84">5(b) · 30</a> <a href="#exercise-85">5(b) · 31</a> <a href="#exercise-86">5(c) · 1(a)</a> <a href="#exercise-87">5(c) · 1(b)</a> <a href="#exercise-88">5(c) · 1(c)</a> <a href="#exercise-89">5(c) · 2(a)</a> <a href="#exercise-90">5(c) · 2(b)</a> <a href="#exercise-91">5(c) · 2(c)</a> <a href="#exercise-92">5(c) · 3</a> <a href="#exercise-93">5(c) · 4</a> <a href="#exercise-94">5(c) · 5</a> <a href="#exercise-95">5(c) · 6</a> <a href="#exercise-96">5(c) · 7</a> <a href="#exercise-97">5(c) · 8</a> <a href="#exercise-98">5(c) · 9</a> <a href="#exercise-99">5(c) · 10</a> <a href="#exercise-100">5(c) · 11(a)</a> <a href="#exercise-101">5(c) · 11(b)</a> <a href="#exercise-102">5(c) · 11(c)</a> <a href="#exercise-103">5(c) · 12</a> <a href="#exercise-104">5(c) · 13</a> <a href="#exercise-105">5(c) · 14</a> <a href="#exercise-106">5(c) · 15</a> <a href="#exercise-107">5(c) · 16</a> <a href="#exercise-108">5(c) · 17</a> <a href="#exercise-109">5(d) · 1</a> <a href="#exercise-110">5(d) · 2</a> <a href="#exercise-111">5(d) · 3</a> <a href="#exercise-112">5(d) · 4</a> <a href="#exercise-113">5(d) · 5</a> <a href="#exercise-114">5(d) · 6</a> <a href="#exercise-115">5(d) · 7</a> <a href="#exercise-116">5(d) · 8</a> <a href="#exercise-117">5(d) · 9</a> <a href="#exercise-118">5(d) · 10</a> <a href="#exercise-119">5(d) · 11</a> <a href="#exercise-120">5(d) · 12</a> <a href="#exercise-121">5(d) · 13</a> <a href="#exercise-122">5(d) · 14</a> <a href="#exercise-123">5(d) · 15</a> <a href="#exercise-124">5(d) · 16</a> <a href="#exercise-125">5(d) · 17</a> <a href="#exercise-126">5(e) · 1(i)</a> <a href="#exercise-127">5(e) · 1(ii)</a> <a href="#exercise-128">5(e) · 1(iii)</a> <a href="#exercise-129">5(e) · 2(i)</a> <a href="#exercise-130">5(e) · 2(ii)</a> <a href="#exercise-131">5(e) · 3(i)</a> <a href="#exercise-132">5(e) · 3(ii)</a> <a href="#exercise-133">5(e) · 4(i)</a> <a href="#exercise-134">5(e) · 4(ii)</a> <a href="#exercise-135">5(e) · 5</a> <a href="#exercise-136">5(e) · 6</a> <a href="#exercise-137">5(e) · 7(i)</a> <a href="#exercise-138">5(e) · 7(ii)</a> <a href="#exercise-139">5(e) · 8(i)</a> <a href="#exercise-140">5(e) · 8(ii)</a> <a href="#exercise-141">5(e) · 8(iii)</a> <a href="#exercise-142">5(e) · 9(i)</a> <a href="#exercise-143">5(e) · 9(ii)</a> <a href="#exercise-144">5(e) · 9(iii)</a> <a href="#exercise-145">5(e) · 10</a> <a href="#exercise-146">5(e) · 11</a> <a href="#exercise-147">5(e) · 12</a> <a href="#exercise-148">5(e) · 13</a> <a href="#exercise-149">5(e) · 14</a> <a href="#exercise-150">5(e) · 15</a> <a href="#exercise-151">5(e) · 16</a> <a href="#exercise-152">5(f) · 1(i)</a> <a href="#exercise-153">5(f) · 1(ii)</a> <a href="#exercise-154">5(f) · 1(iii)</a> <a href="#exercise-155">5(f) · 2(i)</a> <a href="#exercise-156">5(f) · 2(ii)</a> <a href="#exercise-157">5(f) · 2(iii)</a> <a href="#exercise-158">5(f) · 3(i)</a> <a href="#exercise-159">5(f) · 3(ii)</a> <a href="#exercise-160">5(f) · 3(iii)</a> <a href="#exercise-161">5(f) · 4</a> <a href="#exercise-162">5(f) · 5(i)</a> <a href="#exercise-163">5(f) · 5(ii)</a> <a href="#exercise-164">5(f) · 6</a> <a href="#exercise-165">5(f) · 7(i)</a> <a href="#exercise-166">5(f) · 7(ii)</a> <a href="#exercise-167">5(f) · 8</a> <a href="#exercise-168">5(f) · 9</a> <a href="#exercise-169">5(f) · 10</a> <a href="#exercise-170">5(f) · 11</a> <a href="#exercise-171">5(f) · 12</a> <a href="#exercise-172">5(f) · 13(i)</a> <a href="#exercise-173">5(f) · 13(ii)</a></nav></details>
+<article id="exercise-1"><h2>5(a) · 1(a)(i). ବ୍ୟାସାର୍ଦ୍ଧ 10 ସେ.ମି. ହେଲେ ବୃତ୍ତର ପରିଧି କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ପରିଧି C = 2πr।</li><li>r = 10 ବସାଇଲେ C ≈ 2 × (22/7) × 10 = 440/7।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>440/7 ସେ.ମି. (ଦତ୍ତ ଆସନ୍ନ ମାନରେ)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-2"><h2>5(a) · 1(a)(ii). ବ୍ୟାସାର୍ଦ୍ଧ 2.8 ସେ.ମି. ହେଲେ ବୃତ୍ତର ପରିଧି କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ପରିଧି C = 2πr।</li><li>r = 2.8 ବସାଇଲେ C ≈ 2 × (22/7) × 2.8 = 17.6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>17.6 ସେ.ମି. (ଦତ୍ତ ଆସନ୍ନ ମାନରେ)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-3"><h2>5(a) · 1(a)(iii). ବ୍ୟାସାର୍ଦ୍ଧ 14 ସେ.ମି. ହେଲେ ବୃତ୍ତର ପରିଧି କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ପରିଧି C = 2πr।</li><li>r = 14 ବସାଇଲେ C ≈ 2 × (22/7) × 14 = 88।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>88 ସେ.ମି. (ଦତ୍ତ ଆସନ୍ନ ମାନରେ)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-4"><h2>5(a) · 1(a)(iv). ବ୍ୟାସାର୍ଦ୍ଧ 4.2 ସେ.ମି. ହେଲେ ବୃତ୍ତର ପରିଧି କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ପରିଧି C = 2πr।</li><li>r = 4.2 ବସାଇଲେ C ≈ 2 × (22/7) × 4.2 = 26.4।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>26.4 ସେ.ମି. (ଦତ୍ତ ଆସନ୍ନ ମାନରେ)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-5"><h2>5(a) · 1(b)(i). ପରିଧି 34.9 ସେ.ମି. ହେଲେ ବ୍ୟାସାର୍ଦ୍ଧ ନିର୍ଣ୍ଣୟ କର। (π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>C = 2πr ସୂତ୍ରରେ ଉଭୟ ପାର୍ଶ୍ୱକୁ 2π ଦ୍ୱାରା ଭାଗ କଲେ r = C/(2π)।</li><li>ଦତ୍ତ ମାନରେ 2π ≈ 6.282। ତେଣୁ r ≈ 34.9/6.282 = 50/9 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>50/9 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-6"><h2>5(a) · 1(b)(ii). ପରିଧି 1047 ସେ.ମି. ହେଲେ ବ୍ୟାସାର୍ଦ୍ଧ ନିର୍ଣ୍ଣୟ କର। (π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>C = 2πr ସୂତ୍ରରେ ଉଭୟ ପାର୍ଶ୍ୱକୁ 2π ଦ୍ୱାରା ଭାଗ କଲେ r = C/(2π)।</li><li>ଦତ୍ତ ମାନରେ 2π ≈ 6.282। ତେଣୁ r ≈ 1047/6.282 = 500/3 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>500/3 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-7"><h2>5(a) · 1(b)(iii). ପରିଧି 25.128 ସେ.ମି. ହେଲେ ବ୍ୟାସାର୍ଦ୍ଧ ନିର୍ଣ୍ଣୟ କର। (π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>C = 2πr ସୂତ୍ରରେ ଉଭୟ ପାର୍ଶ୍ୱକୁ 2π ଦ୍ୱାରା ଭାଗ କଲେ r = C/(2π)।</li><li>ଦତ୍ତ ମାନରେ 2π ≈ 6.282। ତେଣୁ r ≈ 25.128/6.282 = 4 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>4 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-8"><h2>5(a) · 1(b)(iv). ପରିଧି 15.705 ସେ.ମି. ହେଲେ ବ୍ୟାସାର୍ଦ୍ଧ ନିର୍ଣ୍ଣୟ କର। (π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>C = 2πr ସୂତ୍ରରେ ଉଭୟ ପାର୍ଶ୍ୱକୁ 2π ଦ୍ୱାରା ଭାଗ କଲେ r = C/(2π)।</li><li>ଦତ୍ତ ମାନରେ 2π ≈ 6.282। ତେଣୁ r ≈ 15.705/6.282 = 2.5 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2.5 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-9"><h2>5(a) · 2(a). r = 56 ସେ.ମି., θ = 45° ହେଲେ ଚାପର ଦୈର୍ଘ୍ୟ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>ଚାପ ସମୁଦାୟ ପରିଧିର 45/360 = 1/8 ଅଂଶ।</li><li>L = (1/8) × 2 × (22/7) × 56 = 44।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ 44 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-10"><h2>5(a) · 2(b). ଚାପର ଦୈର୍ଘ୍ୟ 110 ମି. ଓ ଚାପର ଡିଗ୍ରୀ ପରିମାପ 75°। ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>110 = (75/360) × 2 × (22/7) × r।</li><li>r = (110 × 360 × 7)/(75 × 44) = 84।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ 84 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-11"><h2>5(a) · 2(c). ବ୍ୟାସ 9 ସେ.ମି. ଓ ଚାପର ଦୈର୍ଘ୍ୟ 22 ସେ.ମି.। ଚାପର ଡିଗ୍ରୀ ପରିମାପ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>ପରିଧି = π × 9 ≈ 198/7।</li><li>θ/360 = 22/(198/7) = 7/9।</li><li>θ = 360 × 7/9।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ 280°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-12"><h2>5(a) · 3(a). ବ୍ୟାସାର୍ଦ୍ଧ 10.5 ସେ.ମି. ଓ ଚାପର ଦୈର୍ଘ୍ୟ 11 ସେ.ମି.। ଚାପର ଡିଗ୍ରୀ ପରିମାପ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>ପରିଧି ≈ 2 × (22/7) × 10.5 = 66।</li><li>ଚାପଟି ପରିଧିର 11/66 = 1/6 ଅଂଶ।</li><li>θ = 360°/6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ 60°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-13"><h2>5(a) · 3(b). 21 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର 72° ଚାପର ଦୈର୍ଘ୍ୟ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>72°/360° = 1/5।</li><li>ଚାପର ଦୈର୍ଘ୍ୟ ≈ (1/5) × 2 × (22/7) × 21।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ 26.4 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-14"><h2>5(a) · 3(c). 10° ପରିମାପର ଚାପ 11 ସେ.ମି. ହେଲେ ବ୍ୟାସାର୍ଦ୍ଧ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>10° ଚାପ ସମଗ୍ର ପରିଧିର 10/360 = 1/36 ଅଂଶ।</li><li>ତେଣୁ ପରିଧି 36 × 11 = 396 ସେ.ମି.। r = 396/(2π) ≈ 396 × 7/44 = 63 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>63 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-15"><h2>5(a) · 3(d). ବ୍ୟାସାର୍ଦ୍ଧ x ଏକକ, ଚାପ y ଏକକ ଓ ଚାପର ପରିମାପ z°। π ମାଧ୍ୟମରେ x ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>ଦତ୍ତ ଚାପ ସମ୍ପୂର୍ଣ୍ଣ ପରିଧିର z/360 ଅଂଶ। ତେଣୁ y = (z/360) × 2πx।</li><li>ଉଭୟ ପାର୍ଶ୍ୱକୁ 180 ଦ୍ୱାରା ଗୁଣି πz ଦ୍ୱାରା ଭାଗ କଲେ x = 180y/(πz)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">x = 180y/(πz) ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-16"><h2>5(a) · 3(e). r ବ୍ୟାସାର୍ଦ୍ଧର ବୃତ୍ତରେ a ବାହୁ ଥିବା ବର୍ଗ ଅନ୍ତର୍ଲିଖିତ। a ଓ r ମଧ୍ୟରେ ସମ୍ପର୍କ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବର୍ଗର କର୍ଣ୍ଣ ବୃତ୍ତର କେନ୍ଦ୍ର ଦେଇ ଯାଏ, ତେଣୁ କର୍ଣ୍ଣ = 2r।</li><li>ପିଥାଗୋରାସ ଉପପାଦ୍ୟରୁ a² + a² = (2r)²। ତେଣୁ a² = 2r² ଓ a = √2 r।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">a = √2 r ବା a² = 2r²।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-17"><h2>5(a) · 4. ବିଷୁବରେଖାଠାରେ ପୃଥିବୀର ବ୍ୟାସ 12530 କି.ମି.। ବିଷୁବ ବୃତ୍ତର ପରିଧି କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ବ୍ୟାସ d ଦିଆଯାଇଛି, ତେଣୁ C = πd।</li><li>C ≈ (22/7) × 12530 = 22 × 1790 = 39380 କି.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>39380 କି.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-18"><h2>5(a) · 5. 44 ମି. ତାରରୁ 5 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର କେତୋଟି ବୃତ୍ତ ହେବ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମୁଦାୟ ତାର = 44 × 100 = 4400 ସେ.ମି. |</li><li>ଗୋଟିଏ ବୃତ୍ତ ପାଇଁ ତାର = 2π × 5 ≈ 220/7 ସେ.ମି. |</li><li>ବୃତ୍ତ ସଂଖ୍ୟା = 4400 ÷ (220/7) = 140।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>140ଟି ବୃତ୍ତ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-19"><h2>5(a) · 6. ବଳୟାକାର ରାସ୍ତାର ବାହାର ଓ ଭିତର ପରିଧି ଯଥାକ୍ରମେ 396 ଓ 352 ମିଟର। ପ୍ରସ୍ଥ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ R ଓ ଭିତର ବ୍ୟାସାର୍ଦ୍ଧ r ହେଲେ ପ୍ରସ୍ଥ = R − r।</li><li>ପରିଧିର ଅନ୍ତର = 2π(R − r) = 396 − 352 = 44।</li><li>R − r ≈ 44 × 7/44 = 7।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ 7 ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-20"><h2>5(a) · 7. ଦୁଇ ବୃତ୍ତର ପରିଧିର ଅନ୍ତର 44 ମି. ଓ ବ୍ୟାସାର୍ଦ୍ଧର ସମଷ୍ଟି 77 ମି.। ପରିଧି ଦୁଇଟି ନିର୍ଣ୍ଣୟ କର। (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ବଡ଼ ଓ ସାନ ପରିଧି C ଓ c ହେଲେ C + c = 2π(R + r) ≈ (44/7) × 77 = 484 ମି.।</li><li>C − c = 44। ଯୋଗ କଲେ 2C = 528, ତେଣୁ C = 264 ମି.। c = 484 − 264 = 220 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>264 ମି. ଓ 220 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=131" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୧</a></small></article>
+<article id="exercise-21"><h2>5(a) · 8. ଏକକୈନ୍ଦ୍ରିକ ବୃତ୍ତ ଦ୍ୱୟର ବ୍ୟାସାର୍ଦ୍ଧର ଅନୁପାତ 3 : 4 ଓ ପରିଧିର ସମଷ୍ଟି 308 ସେ.ମି.। ବଳୟର ପ୍ରସ୍ଥ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ବ୍ୟାସାର୍ଦ୍ଧ 3x ଓ 4x ହେଲେ ପରିଧିର ସମଷ୍ଟି = 2π(7x) ≈ 44x।</li><li>44x = 308 ରୁ x = 7। ପ୍ରସ୍ଥ = 4x − 3x = 7 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>7 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-22"><h2>5(a) · 9. ବଳୟାକାର ରାସ୍ତାର ବାହାର ଓ ଭିତର ପରିଧି 300 ମି. ଓ 200 ମି.। π ≈ √10 ନେଇ ପ୍ରସ୍ଥ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରିଧିର ଅନ୍ତର = 100 = 2π(R − r)। ରାସ୍ତାର ପ୍ରସ୍ଥ R − r = 50/π।</li><li>ପ୍ରଶ୍ନର ପାଇ ମାନ ବସାଇଲେ 50/√10 = 50√10/10 = 5√10 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5√10 ମି. ବା ପ୍ରାୟ 15.81 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-23"><h2>5(a) · 10. 7 ମି. ବ୍ୟାସାର୍ଦ୍ଧର ବୃତ୍ତରେ 11 କି.ମି. ଯିବାକୁ କେତେଥର ଘୂରିବାକୁ ହେବ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଥରେ ଘୂରିଲେ 2πr ≈ (44/7) × 7 = 44 ମି.।</li><li>11 କି.ମି. = 11000 ମି.। ଘୂର୍ଣ୍ଣନ ସଂଖ୍ୟା = 11000/44 = 250।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>250 ଥର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-24"><h2>5(a) · 11. ସାଇକେଲ ଚକର ବହିର୍ବ୍ୟାସ 42 ସେ.ମି. ଓ ମିନିଟ୍‌ରେ 80 ଘୂର୍ଣ୍ଣନ। ଘଣ୍ଟା ପ୍ରତି ବେଗ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚକ ଗୋଟିଏ ପୂର୍ଣ୍ଣ ଘେରା ବୁଲିଲେ ତାହାର ପରିଧି ସମାନ ଦୂରତା ଅତିକ୍ରମ କରେ। ମୋଟ ଦୂରତା ଓ ପରିଧିକୁ ଏକା ଏକକରେ ନେଇ ପରେ ଘେରା ସଂଖ୍ୟା ନିର୍ଣ୍ଣୟ କର।</li><li>ଗୋଟିଏ ଘୂର୍ଣ୍ଣନରେ ଦୂରତା = π × 42 ≈ 132 ସେ.ମି. |</li><li>ମିନିଟ୍ ପ୍ରତି ଦୂରତା = 132 × 80 = 10560 ସେ.ମି. |</li><li>ଘଣ୍ଟାକୁ 10560 × 60 = 633600 ସେ.ମି. |</li><li>100000 ସେ.ମି. = 1 କି.ମି. ତେଣୁ ବେଗ 6.336 କି.ମି./ଘଣ୍ଟା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6.336 କି.ମି./ଘଣ୍ଟା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-25"><h2>5(a) · 12. ବଡ଼ ଓ ସାନ ଚକର ପରିଧିର ଅନୁପାତ 4 : 1। 440 ମି. ବାଟରେ ସାନ ଚକ 15 ଥର ଅଧିକ ଘୂରେ। ଦୁଇଟି ପରିଧି କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବଡ଼ ଓ ସାନ ଚକର ପରିଧି 4x ଓ x ମି. ଧର। ଘୂର୍ଣ୍ଣନ ସଂଖ୍ୟା ଯଥାକ୍ରମେ 440/(4x) ଓ 440/x।</li><li>440/x − 110/x = 15 ରୁ 330 = 15x, ତେଣୁ x = 22। ଯାଞ୍ଚରେ ଘୂର୍ଣ୍ଣନ 5 ଓ 20, ଅନ୍ତର 15।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବଡ଼ ଚକ 88 ମି., ସାନ ଚକ 22 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-26"><h2>5(a) · 13. ଅର୍ଦ୍ଧବୃତ୍ତାକାର ଜମି ବାଡ଼ ବୁଲାଇବାର ଖର୍ଚ୍ଚ ମିଟରକୁ 75 ପଇସା, ମୋଟ 216 ଟଙ୍କା। ବ୍ୟାସ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>75 ପଇସା = 0.75 ଟଙ୍କା। ସମଗ୍ର ସୀମା = 216/0.75 = 288 ମି.।</li><li>ଅର୍ଦ୍ଧବୃତ୍ତର ସୀମାରେ ଚାପ ଓ ବ୍ୟାସ ଉଭୟ ଅଛି। (π + 2)r = 288, ଅର୍ଥାତ୍ (36/7)r = 288।</li><li>r = 56 ମି., ତେଣୁ ବ୍ୟାସ = 112 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>112 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-27"><h2>5(a) · 14. ଥରେ ବୃତ୍ତରେ ଘୂରି ପୁଣି ସିଧା କେନ୍ଦ୍ରକୁ ଯିବାରେ ଘୋଡ଼ାକୁ 10 ମିନିଟ୍ 12 ସେକେଣ୍ଡ ଲାଗେ। ସମବେଗରେ କେବଳ ପରିଧି ପାଇଁ ସମୟ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ପଥ = 2πr + r।</li><li>ବୃତ୍ତାକାର ପଥ ଓ ମୋଟ ପଥର ଅନୁପାତ = 2π/(2π + 1) ≈ (44/7)/(51/7) = 44/51।</li><li>ମୋଟ ସମୟ = 10 × 60 + 12 = 612 ସେକେଣ୍ଡ।</li><li>ଚାହିଁଥିବା ସମୟ = 612 × 44/51 = 528 ସେକେଣ୍ଡ = 8 ମିନିଟ୍ 48 ସେକେଣ୍ଡ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>8 ମିନିଟ୍ 48 ସେକେଣ୍ଡ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-28"><h2>5(a) · 15. ପରିଧି ଅପେକ୍ଷା ବ୍ୟାସ ବାଟ ଯିବାକୁ 45 ସେକେଣ୍ଡ କମ୍ ଲାଗେ। ବେଗ ମିନିଟ୍‌କୁ 80 ମି. ହେଲେ ବ୍ୟାସ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>45 ସେକେଣ୍ଡ = 3/4 ମିନିଟ୍। ପଥର ଅନ୍ତର = 80 × 3/4 = 60 ମି.।</li><li>ବ୍ୟାସ d ହେଲେ πd − d = 60। (15/7)d = 60 ରୁ d = 28 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>28 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-29"><h2>5(a) · 16. ତାରର ସମବାହୁ ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ 1936√3 ବର୍ଗମିଟର। ସମାନ ପରିସୀମା ଥିବା ବୃତ୍ତର ବ୍ୟାସ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତ୍ରିଭୁଜର ବାହୁ a ହେଲେ √3 a²/4 = 1936√3। ତେଣୁ a² = 7744, a = 88 ମି.।</li><li>ତାରର ଦୈର୍ଘ୍ୟ 3a = 264 ମି.। πd = 264 ରୁ d ≈ 264 × 7/22 = 84 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>84 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-30"><h2>5(a) · 17. 20 ସେ.ମି. ବାହୁ ଥିବା ବର୍ଗର ଅନ୍ତର୍ଲିଖିତ ବୃତ୍ତର ପରିଧି କେତେ? (π ≈ 3.14)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୃତ୍ତଟି ବର୍ଗର ବିପରୀତ ଦୁଇ ବାହୁକୁ ସ୍ପର୍ଶ କରେ।</li><li>ବାହୁଦ୍ୱୟ ମଧ୍ୟରେ ଦୂରତା ତାହାର ବ୍ୟାସ, d = 20 ସେ.ମି. |</li><li>C = πd ≈ 3.14 × 20 = 62.8 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>62.8 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-31"><h2>5(a) · 18. 42 ସେ.ମି. ବାହୁ ଥିବା ସମବାହୁ ତ୍ରିଭୁଜର ପରିଲିଖିତ ଓ ଅନ୍ତର୍ଲିଖିତ ବୃତ୍ତର ପରିଧି ନିର୍ଣ୍ଣୟ କର। (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତ୍ରିଭୁଜର ଉଚ୍ଚତା h = (√3/2) × 42 = 21√3 ସେ.ମି. |</li><li>ସାଧାରଣ କେନ୍ଦ୍ର ମଧ୍ୟମାକୁ 2 : 1 ଅନୁପାତରେ ଭାଗ କରେ।</li><li>ପରିବ୍ୟାସାର୍ଦ୍ଧ R = 2h/3 = 14√3, ଅନ୍ତଃବ୍ୟାସାର୍ଦ୍ଧ r = h/3 = 7√3।</li><li>2πR ≈ 88√3 ସେ.ମି. ଓ 2πr ≈ 44√3 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯଥାକ୍ରମେ 88√3 ସେ.ମି. ଓ 44√3 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-32"><h2>5(a) · 19(a). ବୃତ୍ତକଳାର ବ୍ୟାସାର୍ଦ୍ଧ 21 ସେ.ମି., ପରିସୀମା 64 ସେ.ମି.। ଚାପର ଡିଗ୍ରୀ ପରିମାପ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>ଚାପର ଦୈର୍ଘ୍ୟ L = 64 − 2 × 21 = 22 ସେ.ମି. |</li><li>ସମ୍ପୂର୍ଣ୍ଣ ପରିଧି = 2π × 21 ≈ 132 ସେ.ମି. |</li><li>θ = 360° × L/C = 360° × 22/132 = 60°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>60°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-33"><h2>5(a) · 19(b). 40° ଚାପର ବୃତ୍ତକଳାର ପରିସୀମା 26.98 ସେ.ମି. ହେଲେ ବ୍ୟାସାର୍ଦ୍ଧ କେତେ? (π ≈ 3.14)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>ଚାପ ପରିଧିର 40/360 = 1/9 ଭାଗ। ତେଣୁ 2r + 2πr/9 = 26.98।</li><li>r ≈ 26.98/(2 + 6.28/9) = 242.82/24.28 ≈ 10.0008 ସେ.ମି. |</li><li>ଦୁଇ ଦଶମିକ ସ୍ଥାନରେ 10.00 ସେ.ମି. |</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ 10 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-34"><h2>5(a) · 20. ବୃତ୍ତକଳାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ 90°, ବ୍ୟାସାର୍ଦ୍ଧ 5 ସେ.ମି.। ପରିସୀମା କେତେ? (π ≈ 3.1416)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>90° ଚାପ ହେଉଛି ପୂର୍ଣ୍ଣ ପରିଧିର ଚତୁର୍ଥାଂଶ। L = 2π × 5/4 ≈ 7.854 ସେ.ମି.।</li><li>ପରିସୀମା = L + 2r = 7.854 + 10 = 17.854 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>17.854 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=132" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୨</a></small></article>
+<article id="exercise-35"><h2>5(a) · 21. ଦୁଇ ବୃତ୍ତର ସମାନ ଦୈର୍ଘ୍ୟର ଚାପର ପରିମାପ 40° ଓ 60°। ସେମାନଙ୍କ ବ୍ୟାସାର୍ଦ୍ଧର ଅନୁପାତ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>ଚାପ L = 2πrθ/360। ଦୁଇ ଚାପ ସମାନ ହେବାରୁ r₁ × 40 = r₂ × 60।</li><li>r₁/r₂ = 60/40 = 3/2। କ୍ଷୁଦ୍ରତର କୋଣ ପାଇଁ ବଡ଼ ବ୍ୟାସାର୍ଦ୍ଧ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ପ୍ରଥମ : ଦ୍ୱିତୀୟ = 3 : 2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=133" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୩</a></small></article>
+<article id="exercise-36"><h2>5(a) · 22. ମିନିଟ୍ କଣ୍ଟାର ଅଗ୍ରଭାଗ 5 ମିନିଟ୍‌ରେ 7⅓ ସେ.ମି. ଚାପ ଅଙ୍କନ କରେ। କଣ୍ଟାର ଦୈର୍ଘ୍ୟ କେତେ? (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>60 ମିନିଟ୍‌ରେ ଗୋଟିଏ ପୂର୍ଣ୍ଣ ଘୂର୍ଣ୍ଣନ। 5 ମିନିଟ୍‌ର ଚାପ = ପରିଧିର 1/12 ଭାଗ।</li><li>ପରିଧି = 12 × 22/3 = 88 ସେ.ମି. |</li><li>କଣ୍ଟାର ଦୈର୍ଘ୍ୟ = ବ୍ୟାସାର୍ଦ୍ଧ = 88/(2π) ≈ 14 ସେ.ମି. |</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>14 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=133" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୩</a></small></article>
+<article id="exercise-37"><h2>5(a) · 23. ପ୍ରଥମ ବୃତ୍ତର ପରିଧି ଦ୍ୱିତୀୟର ତିନିଗୁଣ। ପ୍ରଥମର 10 ସେ.ମି. ଚାପ 30° ହେଲେ ଦ୍ୱିତୀୟର ପରିଧି କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>30° ଚାପ ପୂର୍ଣ୍ଣ ପରିଧିର 1/12 ଅଂଶ। ପ୍ରଥମ ପରିଧି 10 × 12 = 120 ସେ.ମି.।</li><li>ପ୍ରଥମଟି ଦ୍ୱିତୀୟର ତିନିଗୁଣ, ତେଣୁ ଦ୍ୱିତୀୟ ପରିଧି = 120/3 = 40 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>40 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=133" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୩</a></small></article>
+<article id="exercise-38"><h2>5(a) · 24. 6.282 ଏକକ ପରିଧିର ବୃତ୍ତ ସମବାହୁ ତ୍ରିଭୁଜରେ ଅନ୍ତର୍ଲିଖିତ। ତ୍ରିଭୁଜର ବାହୁ କେତେ? (π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ତଃବ୍ୟାସାର୍ଦ୍ଧ r = 6.282/(2 × 3.141) = 1 ଏକକ।</li><li>ସମବାହୁ ତ୍ରିଭୁଜରେ r = h/3 ଓ h = √3 a/2, ତେଣୁ r = √3 a/6। a = 6/√3 = 2√3 ଏକକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2√3 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=133" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୩</a></small></article>
+<article id="exercise-39"><h2>5(a) · 25. 60° ବୃତ୍ତକଳାର ଦୁଇ ବ୍ୟାସାର୍ଦ୍ଧ ଓ ଚାପକୁ ସ୍ପର୍ଶ କରୁଥିବା ବୃତ୍ତର ପରିଧି ଏବଂ ବୃତ୍ତକଳାର ପରିସୀମାର ଅନୁପାତ ପ୍ରମାଣ କର। (π ≈ 22/7)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 2r। ତେଣୁ ପରିଧି C = πdକୁ ବ୍ୟାସାର୍ଦ୍ଧ ଦ୍ୱାରା ଲେଖିଲେ C = 2πr। ଦୈର୍ଘ୍ୟର ଏକକ ଉଭୟ ପଟେ ଏକା ରହେ।</li><li>ବଡ଼ ବ୍ୟାସାର୍ଦ୍ଧ R, ଛୋଟଟି r।</li><li>ସାନ ବୃତ୍ତର କେନ୍ଦ୍ର କୋଣସମଦ୍ୱିଖଣ୍ଡକ ଉପରେ ଓ କେନ୍ଦ୍ରଦ୍ୱୟର ଦୂରତା R − r।</li><li>ସ୍ପର୍ଶବିନ୍ଦୁରେ ଲମ୍ବ ଟାଣିଲେ sin 30° = r/(R − r)।</li><li>ତେଣୁ R = 3r। ଛୋଟ ବୃତ୍ତର ପରିଧି = 2πR/3, ବୃତ୍ତକଳାର ପରିସୀମା = 2R + 2πR/6।</li><li>ଅନୁପାତ = 2π : (6 + π)। π ≈ 22/7 ନେଲେ 44 : 64 = 11 : 16।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନୁପାତ 11 : 16।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=133" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୩୩</a></small></article>
+<article id="exercise-40"><h2>5(b) · 1(i). ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ 31.5 ମି. ହେଲେ କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ A = πr²। ବ୍ୟାସାର୍ଦ୍ଧ ଦିଆଯାଇଛି, ଅଧା କରିବା ଦରକାର ନାହିଁ।</li><li>π ≈ 22/7 ନେଇ A ≈ (22/7) × 31.5 × 31.5 = 99 × 31.5 = 3118.5 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3118.5 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-41"><h2>5(b) · 1(ii). ବୃତ୍ତର ବ୍ୟାସ 112 ସେ.ମି. ହେଲେ କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସାର୍ଦ୍ଧ r = 112/2 = 56 ସେ.ମି.।</li><li>A = πr² ≈ (22/7) × 56 × 56 = 22 × 8 × 56 = 9856 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>9856 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-42"><h2>5(b) · 1(iii). ବୃତ୍ତର ପରିଧି 286 ସେ.ମି. ହେଲେ କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>C = 2πr ରୁ r ≈ 286 × 7/44 = 45.5 ସେ.ମି.।</li><li>A = πr² = Cr/2 ≈ 286 × 45.5/2 = 6506.5 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6506.5 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-43"><h2>5(b) · 1(iv). ବୃତ୍ତର ଅର୍ଦ୍ଧ ପରିଧି 44 ମି. ହେଲେ ସମଗ୍ର ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅର୍ଦ୍ଧ ପରିଧି πr = 44 ରୁ r ≈ 44 × 7/22 = 14 ମି.।</li><li>ସମଗ୍ର କ୍ଷେତ୍ରଫଳ A = πr² = (πr)r ≈ 44 × 14 = 616 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>616 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-44"><h2>5(b) · 2(i). ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ 154 ବର୍ଗମିଟର ହେଲେ ବ୍ୟାସ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>πr² = 154 ରୁ r² ≈ 154 × 7/22 = 49 ବର୍ଗମିଟର।</li><li>ଧନାତ୍ମକ ବର୍ଗମୂଳ r = 7 ମି.। ବ୍ୟାସ d = 2r = 14 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>14 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-45"><h2>5(b) · 2(ii). କ୍ଷେତ୍ରଫଳ 7546 ବର୍ଗମିଟର ହେଲେ ବୃତ୍ତର ପରିଧି କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>r² = 7546/π ≈ 7546 × 7/22 = 2401। ତେଣୁ r = 49 ମି.।</li><li>C = 2πr ≈ (44/7) × 49 = 308 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>308 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-46"><h2>5(b) · 3(i). ଚାପର ପରିମାପ 120° ଓ ବ୍ୟାସାର୍ଦ୍ଧ 28 ସେ.ମି. ହେଲେ ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୂର୍ଣ୍ଣ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ = π × 28² ≈ 2464 ବର୍ଗ ସେ.ମି.।</li><li>120° ହେଉଛି ପୂର୍ଣ୍ଣ କୋଣର 1/3 ଭାଗ।</li><li>ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ = 2464/3 = 821⅓ ବର୍ଗ ସେ.ମି. |</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>821⅓ ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-47"><h2>5(b) · 3(ii). ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ 7546 ବର୍ଗମିଟର ଓ ଚାପର ପରିମାପ 105°। ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>କୋଣର ଭାଗ 105/360 = 7/24। ସେହି ଅନୁପାତରେ କ୍ଷେତ୍ରଫଳ ବିଭକ୍ତ ହୁଏ।</li><li>ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ = 7546 × 7/24 = 26411/12 = 2200 11/12 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2200 11/12 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-48"><h2>5(b) · 3(iii). ବୃତ୍ତର ପରିଧି 396 ମି., ଚାପର ଦୈର୍ଘ୍ୟ 36 ମି.। ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରିଧିରୁ r = 396/(2π) ≈ 396 × 7/44 = 63 ମି.।</li><li>ଚାପର ଦୈର୍ଘ୍ୟ L ହେଲେ ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ S = rL/2 ≈ 63 × 36/2 = 1134 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1134 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-49"><h2>5(b) · 3(iv). ଚାପର ଦୈର୍ଘ୍ୟ 66 ମି. ଓ ପରିମାପ 70° ହେଲେ ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>L = (θ/360) × 2πr, ତେଣୁ r = 66 × 360/(70 × 2π) ≈ 54 ମି.।</li><li>S = rL/2 ≈ 54 × 66/2 = 1782 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1782 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-50"><h2>5(b) · 4(i). ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ 1848 ବର୍ଗମିଟର, ଚାପ 120°। ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>120° ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ ସମଗ୍ର ବୃତ୍ତର ଏକ ତୃତୀୟାଂଶ। ତେଣୁ πr² = 3 × 1848 = 5544।</li><li>r² ≈ 5544 × 7/22 = 1764। ଧନାତ୍ମକ ବର୍ଗମୂଳ r = 42 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>42 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-51"><h2>5(b) · 4(ii). ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ 48.4 ବର୍ଗ ଡେକାମିଟର, ଚାପର ଦୈର୍ଘ୍ୟ 121 ମି.। ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>1 ଡେକାମିଟର = 10 ମି., ତେଣୁ 1 ବର୍ଗ ଡେକାମିଟର = 100 ବର୍ଗମିଟର। S = 4840 ବର୍ଗମିଟର।</li><li>S = rL/2 ରୁ r = 2S/L = 9680/121 = 80 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>80 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-52"><h2>5(b) · 5(i). ବୃତ୍ତକଳାର ବ୍ୟାସାର୍ଦ୍ଧ 36 ମି. ଓ କ୍ଷେତ୍ରଫଳ 792 ବର୍ଗମିଟର। ଚାପର ଡିଗ୍ରୀ ପରିମାପ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>S = (θ/360)πr² ସୂତ୍ରରୁ θ = 360S/(πr²)।</li><li>θ ≈ 360 × 792 × 7/(22 × 36 × 36) = 70°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>70°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-53"><h2>5(b) · 5(ii). ବୃତ୍ତକଳା ଓ ସମଗ୍ର ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ ଯଥାକ୍ରମେ 924 ଓ 2464 ବର୍ଗ ସେ.ମି.। ଚାପର ପରିମାପ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>କୋଣର ଅନୁପାତ ଓ କ୍ଷେତ୍ରଫଳର ଅନୁପାତ ସମାନ। ତେଣୁ θ/360 = 924/2464 = 3/8।</li><li>θ = 360° × 3/8 = 135°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>135°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-54"><h2>5(b) · 5(iii). ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ 231 ବର୍ଗମିଟର ଓ ଚାପର ଦୈର୍ଘ୍ୟ 22 ମି.। ଚାପର ପରିମାପ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାପ ଓ ପୂର୍ଣ୍ଣ ପରିଧିର ଅନୁପାତ ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଓ 360°ର ଅନୁପାତ ସମାନ। ତେଣୁ ℓ/(2πr) = θ/360°।</li><li>S = rL/2 ରୁ r = 2 × 231/22 = 21 ମି.।</li><li>ପରିଧି 2πr ≈ 132 ମି.। θ = 360° × 22/132 = 60°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>60°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-55"><h2>5(b) · 6(i). ସମାନ କୋଣ ପରିମାପର ଦୁଇ ଏକକୈନ୍ଦ୍ରିକ ଚାପର ଦୈର୍ଘ୍ୟର ଅନ୍ତର 25 ମି., ବ୍ୟାସାର୍ଦ୍ଧର ସମଷ୍ଟି 80 ମି.। ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳର ଅନ୍ତର କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉଭୟ କୋଣର ରେଡ଼ିଆନ ପରିମାପ t ଓ ବ୍ୟାସାର୍ଦ୍ଧ R, r ଧର।</li><li>ଚାପ ଦୁଇଟି tR ଓ tr, ତେଣୁ t(R − r) = 25।</li><li>କ୍ଷେତ୍ରଫଳର ଅନ୍ତର = t(R² − r²)/2 = t(R − r)(R + r)/2 = 25 × 80/2 = 1000 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1000 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-56"><h2>5(b) · 6(ii). ସମାନ କୋଣର ଦୁଇ ଏକକୈନ୍ଦ୍ରିକ ଚାପର ଦୈର୍ଘ୍ୟର ସମଷ୍ଟି 50 ସେ.ମି., ବ୍ୟାସାର୍ଦ୍ଧର ଅନ୍ତର 24 ସେ.ମି.। ବୃତ୍ତକଳା ଦ୍ୱୟର କ୍ଷେତ୍ରଫଳର ଅନ୍ତର କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କୋଣ t ରେଡ଼ିଆନ ହେଲେ ଚାପର ସମଷ୍ଟି tR + tr = t(R + r) = 50 ସେ.ମି.।</li><li>କ୍ଷେତ୍ରଫଳର ଅନ୍ତର = t(R² − r²)/2 = t(R + r)(R − r)/2 = 50 × 24/2 = 600 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>600 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-57"><h2>5(b) · 7(i). x ବର୍ଗ ଏକକ କ୍ଷେତ୍ରଫଳର ବୃତ୍ତରେ ଅନ୍ତର୍ଲିଖିତ ସମକୋଣୀ ତ୍ରିଭୁଜର କର୍ଣ୍ଣ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>πr² = x ରୁ r = √(x/π)।</li><li>ଅର୍ଦ୍ଧବୃତ୍ତରେ କୋଣ ସମକୋଣ।</li><li>ସମକୋଣ ସମ୍ମୁଖର କର୍ଣ୍ଣ ବୃତ୍ତର ବ୍ୟାସ, ତେଣୁ ଏହାର ଦୈର୍ଘ୍ୟ 2r = 2√(x/π)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2√(x/π) ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-58"><h2>5(b) · 7(ii). x ବର୍ଗ ଏକକ କ୍ଷେତ୍ରଫଳର ବୃତ୍ତରେ ଅନ୍ତର୍ଲିଖିତ ବର୍ଗର ବାହୁ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୃତ୍ତର ବ୍ୟାସ 2√(x/π)। ଏହା ବର୍ଗର କର୍ଣ୍ଣ ସହ ସମାନ।</li><li>ବାହୁ a ହେଲେ a√2 = 2√(x/π)। ଉଭୟ ପାର୍ଶ୍ୱକୁ √2 ଦ୍ୱାରା ଭାଗ କଲେ a = √(2x/π)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√(2x/π) ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-59"><h2>5(b) · 7(iii). x ବର୍ଗ ଏକକ କ୍ଷେତ୍ରଫଳର ବୃତ୍ତରେ ଅନ୍ତର୍ଲିଖିତ ସମବାହୁ ତ୍ରିଭୁଜର ବାହୁ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସାର୍ଦ୍ଧ R = √(x/π)। ସମବାହୁ ତ୍ରିଭୁଜର ପରିକେନ୍ଦ୍ର ମଧ୍ୟମାକୁ 2 : 1ରେ ଭାଗ କରେ।</li><li>R = (2/3)(√3 a/2) = a/√3। ତେଣୁ a = √3 R = √(3x/π)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√(3x/π) ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=140" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୦</a></small></article>
+<article id="exercise-60"><h2>5(b) · 8. 42 ସେ.ମି. ଓ 56 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ଦୁଇ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳର ଯୋଗଫଳ ତୃତୀୟ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ। ଏହାର ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>πR² = π × 42² + π × 56²। ଉଭୟ ପାର୍ଶ୍ୱରୁ π କାଟିଲେ R² = 1764 + 3136 = 4900।</li><li>R = √4900 = 70 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>70 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-61"><h2>5(b) · 9. ସମାନ କ୍ଷେତ୍ରଫଳ ଥିବା ବର୍ଗ ଓ ବୃତ୍ତର ପରିସୀମାର ଅନୁପାତ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହୁ a ଓ ବ୍ୟାସାର୍ଦ୍ଧ r ହେଲେ a² = πr², ତେଣୁ a = r√π।</li><li>ପରିସୀମାର ଅନୁପାତ 4a : 2πr = 4r√π : 2πr = 2 : √π।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ବର୍ଗ : ବୃତ୍ତ = 2 : √π।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-62"><h2>5(b) · 10. 5 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ବୃତ୍ତ ଅପେକ୍ଷା ନଅଗୁଣ କ୍ଷେତ୍ରଫଳ ଥିବା ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>πR² = 9π × 5², ତେଣୁ R² = 9 × 25 = 225।</li><li>R = √225 = 15 ସେ.ମି.। କ୍ଷେତ୍ରଫଳ 9 ଗୁଣ ହେବାରୁ ବ୍ୟାସାର୍ଦ୍ଧ 3 ଗୁଣ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>15 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-63"><h2>5(b) · 11. ବୃତ୍ତର ପରିଧି ଯେତେ ଏକକ, କ୍ଷେତ୍ରଫଳ ସେତେ ବର୍ଗ ଏକକ। ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସାଂଖ୍ୟିକ ମାନ ସମାନ ହେବାରୁ πr² = 2πr।</li><li>r &gt; 0 ତେଣୁ ଉଭୟ ପାର୍ଶ୍ୱକୁ πr ଦ୍ୱାରା ଭାଗ କରି r = 2 ଏକକ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-64"><h2>5(b) · 12. C ବର୍ଗ ଏକକ କ୍ଷେତ୍ରଫଳର ବର୍ଗର ଅନ୍ତର୍ଲିଖିତ ଓ ପରିଲିଖିତ ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହୁ a = √C। ଅନ୍ତର୍ଲିଖିତ ବୃତ୍ତର ବ୍ୟାସ a, ତେଣୁ r = √C/2।</li><li>ପରିଲିଖିତ ବୃତ୍ତର ବ୍ୟାସ ବର୍ଗର କର୍ଣ୍ଣ a√2। ତେଣୁ R = √(2C)/2 = √(C/2)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯଥାକ୍ରମେ √C/2 ଓ √(C/2) ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-65"><h2>5(b) · 13. ସମାନ କ୍ଷେତ୍ରଫଳ ଥିବା ବୃତ୍ତ ଓ ସମବାହୁ ତ୍ରିଭୁଜର ବ୍ୟାସାର୍ଦ୍ଧ ଓ ବାହୁର ଅନୁପାତ ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ πr² ଓ ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ √3 a²/4। ସମାନ କଲେ r²/a² = √3/(4π)।</li><li>ଉଭୟ ଦୈର୍ଘ୍ୟ ଧନାତ୍ମକ। ତେଣୁ r/a = √(√3/(4π)) ଓ ପ୍ରଶ୍ନର ଅନୁପାତ ସିଦ୍ଧ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">r : a = √(√3/(4π)) : 1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-66"><h2>5(b) · 14. ଅର୍ଦ୍ଧବୃତ୍ତାକାର କ୍ଷେତ୍ରର ପରିସୀମା 252 ସେ.ମି. ହେଲେ କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରିସୀମା = ଚାପ + ବ୍ୟାସ = (π + 2)r। (36/7)r = 252 ରୁ r = 49 ସେ.ମି.।</li><li>ଅର୍ଦ୍ଧବୃତ୍ତର କ୍ଷେତ୍ରଫଳ = πr²/2 ≈ (22/7) × 49²/2 = 3773 ବର୍ଗ ସେ.ମି. |</li><li>7546 ବର୍ଗ ସେ.ମି. ହେଉଛି ସମଗ୍ର ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3773 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-67"><h2>5(b) · 15. ଅର୍ଦ୍ଧବୃତ୍ତର ପରିସୀମା ତାହାର ବ୍ୟାସଠାରୁ 44 ମି. ଅଧିକ। ଅର୍ଦ୍ଧବୃତ୍ତର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରିସୀମା − ବ୍ୟାସ = ଅର୍ଦ୍ଧ ପରିଧି = πr = 44 ମି.। ତେଣୁ r ≈ 14 ମି.।</li><li>କ୍ଷେତ୍ରଫଳ = πr²/2 = (πr)r/2 ≈ 44 × 14/2 = 308 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>308 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-68"><h2>5(b) · 16. ଅର୍ଦ୍ଧବୃତ୍ତାକାର ପଡ଼ିଆର କ୍ଷେତ୍ରଫଳ 2772 ବର୍ଗମିଟର। ମିଟର ପ୍ରତି 37 ପଇସାରେ ବାଡ଼ର ଖର୍ଚ୍ଚ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>πr²/2 = 2772 ରୁ r² ≈ 5544 × 7/22 = 1764, ତେଣୁ r = 42 ମି.।</li><li>ବାଡ଼ର ଦୈର୍ଘ୍ୟ = (π + 2)r ≈ (36/7) × 42 = 216 ମି.।</li><li>ଖର୍ଚ୍ଚ = 216 × 0.37 = 79.92 ଟଙ୍କା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>79.92 ଟଙ୍କା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-69"><h2>5(b) · 17. ବୃତ୍ତାକାର ରାସ୍ତାର ବାହାର ଓ ଭିତର ବ୍ୟାସ 56 ଓ 42 ସେ.ମି.। ରାସ୍ତାର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହାର ଓ ଭିତର ବ୍ୟାସାର୍ଦ୍ଧ ଯଥାକ୍ରମେ 28 ଓ 21 ସେ.ମି.।</li><li>ରାସ୍ତାର କ୍ଷେତ୍ରଫଳ = π(28² − 21²) = π × 7 × 49 ≈ 1078 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1078 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-70"><h2>5(b) · 18. 32 ମି. ବ୍ୟାସର ବଗିଚା ଭିତରେ ସୀମାକୁ ଲାଗି 352 ବର୍ଗମିଟର ରାସ୍ତା ଅଛି। ରାସ୍ତାର ପ୍ରସ୍ଥ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବଗିଚାର ବ୍ୟାସାର୍ଦ୍ଧ R = 16 ମି.। ଭିତର ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ r ହେଲେ π(256 − r²) = 352।</li><li>256 − r² ≈ 352 × 7/22 = 112 |</li><li>ତେଣୁ r² = 144, r = 12 ମି. |</li><li>ରାସ୍ତାର ପ୍ରସ୍ଥ = 16 − 12 = 4 ମି. |</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>4 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-71"><h2>5(b) · 19. ଦୁଇ ପରିଧିର ସମଷ୍ଟି 220 ସେ.ମି. ଓ କ୍ଷେତ୍ରଫଳର ଅନ୍ତର 770 ବର୍ଗ ସେ.ମି.। ଦୁଇ ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>R &gt; r ଧରିଲେ 2π(R + r) = 220, ଅର୍ଥାତ୍ R + r ≈ 35।</li><li>π(R − r)(R + r) = 770। π(R + r) = 110 ହେବାରୁ R − r = 770/110 = 7।</li><li>ଯୋଗ ଓ ବିୟୋଗ କରି R = (35 + 7)/2 = 21 ଓ r = (35 − 7)/2 = 14 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>21 ସେ.ମି. ଓ 14 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-72"><h2>5(b) · 20. ଏକ ତାରରୁ ଗଢ଼ା ବର୍ଗର କ୍ଷେତ୍ରଫଳ 484 ବର୍ଗ ସେ.ମି.। ସେହି ତାରକୁ ବୃତ୍ତାକାର କଲେ କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବର୍ଗର ବାହୁ √484 = 22 ସେ.ମି.। ତାରର ଦୈର୍ଘ୍ୟ = 4 × 22 = 88 ସେ.ମି.।</li><li>ବୃତ୍ତର ପରିଧି 88 ହେବାରୁ r ≈ 88 × 7/44 = 14 ସେ.ମି. |</li><li>A = Cr/2 ≈ 88 × 14/2 = 616 ବର୍ଗ ସେ.ମି. |</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>616 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-73"><h2>5(b) · 21. ଦୁଇ ବ୍ୟାସର ଅନୁପାତ 4 : 5 ଓ ପ୍ରଥମ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ 352 ବର୍ଗ ସେ.ମି.। ଦ୍ୱିତୀୟର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>A = πd²/4, ତେଣୁ ଦୁଇ କ୍ଷେତ୍ରଫଳର ଅନୁପାତ 4² : 5² = 16 : 25।</li><li>ଦ୍ୱିତୀୟର କ୍ଷେତ୍ରଫଳ = 352 × 25/16 = 550 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>550 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-74"><h2>5(b) · 22. ବୃତ୍ତରେ ଅନ୍ତର୍ଲିଖିତ ସମବାହୁ ତ୍ରିଭୁଜର ବାହୁ 14√3 ସେ.ମି.। ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମବାହୁ ତ୍ରିଭୁଜର ମଧ୍ୟମା h = (√3/2) × 14√3 = 21 ସେ.ମି. |</li><li>ପରିବ୍ୟାସାର୍ଦ୍ଧ = 2h/3 = 14 ସେ.ମି. |</li><li>A = π × 14² ≈ 616 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>616 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=141" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୧</a></small></article>
+<article id="exercise-75"><h2>5(b) · 23. ସମବାହୁ ତ୍ରିଭୁଜର ଅନ୍ତଃବୃତ୍ତର କ୍ଷେତ୍ରଫଳ 154 ବର୍ଗମିଟର। ତ୍ରିଭୁଜର ପରିସୀମା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>πr² = 154 ରୁ r² ≈ 49 ଓ r = 7 ମି. |</li><li>ଅନ୍ତଃକେନ୍ଦ୍ର ମଧ୍ୟମାର ଭୂମି ପଟର ଏକ ତୃତୀୟାଂଶରେ ଥାଏ, ତେଣୁ h = 3r = 21 ମି. |</li><li>a = 2h/√3 = 42/√3 = 14√3 ମି.। ପରିସୀମା = 3a = 42√3 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>42√3 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-76"><h2>5(b) · 24. ଗୋଟିଏ ବୃତ୍ତରେ ପ୍ରଥମ ବୃତ୍ତକଳାର ଚାପ ଦ୍ୱିତୀୟର ତିନିଗୁଣ। ପ୍ରଥମର କ୍ଷେତ୍ରଫଳ 9 ବର୍ଗ ସେ.ମି. ହେଲେ ଦ୍ୱିତୀୟର କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉଭୟର ବ୍ୟାସାର୍ଦ୍ଧ r ସମାନ। S = rL/2 ଅନୁସାରେ କ୍ଷେତ୍ରଫଳ ଚାପର ଦୈର୍ଘ୍ୟ ସହ ସମାନୁପାତୀ।</li><li>S₁/S₂ = L₁/L₂ = 3। ତେଣୁ S₂ = 9/3 = 3 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-77"><h2>5(b) · 25. 90° ବୃତ୍ତକଳାର ଚାରିପଟେ ମିଟରକୁ 1.50 ଟଙ୍କା ଦରରେ ବାଡ଼ ଦେବାକୁ 75 ଟଙ୍କା ପଡ଼ିଲା। ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାଡ଼ର ଦୈର୍ଘ୍ୟ = 75/1.50 = 50 ମି.। 90° ଚାପର ଦୈର୍ଘ୍ୟ = 2πr/4 = πr/2।</li><li>ସୀମା = 2r + πr/2 = 50। π ≈ 22/7 ନେଇ (25/7)r = 50 ରୁ r = 14 ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>14 ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-78"><h2>5(b) · 26. 7 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ତିନି ବୃତ୍ତ ପରସ୍ପରକୁ ସ୍ପର୍ଶ କରନ୍ତି। ମଝିର ଆବଦ୍ଧ କ୍ଷେତ୍ରର କ୍ଷେତ୍ରଫଳ ଦୁଇ ଦଶମିକ ସ୍ଥାନ ଯାଏ କେତେ? (√3 ≈ 1.73, π ≈ 3.14)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତିନି କେନ୍ଦ୍ରକୁ ଯୋଡ଼ିଲେ 14 ସେ.ମି. ବାହୁର ସମବାହୁ ତ୍ରିଭୁଜ ମିଳେ।</li><li>ଏହାର କ୍ଷେତ୍ରଫଳ = √3 × 14²/4 = 49√3।</li><li>ପ୍ରତି କୋଣରୁ 60° ବୃତ୍ତକଳା ବାଦ ଯିବ।</li><li>ତିନୋଟିର କ୍ଷେତ୍ରଫଳ = 3 × (60/360) × π × 7² = 49π/2।</li><li>ଅବଶିଷ୍ଟ = 49(1.73 − 3.14/2) = 49 × 0.16 = 7.84 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>7.84 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-79"><h2>5(b) · 27. 12 ସେ.ମି. ଓ 13 ସେ.ମି. ଅନ୍ତଃ ଓ ବହିଃବ୍ୟାସାର୍ଦ୍ଧ ଥିବା ବଳୟର କ୍ଷେତ୍ରଫଳ ସହ ସମାନ କ୍ଷେତ୍ରଫଳର ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବଳୟର କ୍ଷେତ୍ରଫଳ = π(13² − 12²) = π(13 − 12)(13 + 12) = 25π।</li><li>πr² = 25π ରୁ r² = 25 ଓ ଧନାତ୍ମକ r = 5 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-80"><h2>5(b) · 28(i). 60° ବୃତ୍ତକଳାର ଦୁଇ ବ୍ୟାସାର୍ଦ୍ଧ ଓ ଚାପକୁ ସ୍ପର୍ଶ କରୁଥିବା ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ 9π। ବଡ଼ ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସାନ ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ r = √(9π/π) = 3।</li><li>ତାହାର କେନ୍ଦ୍ର C କୋଣସମଦ୍ୱିଖଣ୍ଡକରେ।</li><li>ବଡ଼ କେନ୍ଦ୍ର O ଠାରୁ OC = R − 3।</li><li>C ଠାରୁ ଏକ ବ୍ୟାସାର୍ଦ୍ଧକୁ ଲମ୍ବ ଟାଣିଲେ ତାହା 3।</li><li>sin 30° = 3/OC = 1/2 ରୁ OC = 6।</li><li>ତେଣୁ R = 6 + 3 = 9।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>9 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-81"><h2>5(b) · 28(ii). 60° ବୃତ୍ତକଳାର ବ୍ୟାସାର୍ଦ୍ଧ 9 ଏକକ ଓ ତା’ ଭିତର ଅଙ୍କିତ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ 9π। କ୍ଷେତ୍ରଫଳ ଦ୍ୱୟର ଅନୁପାତ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କେନ୍ଦ୍ରସ୍ଥ କୋଣ θ ହେଲେ ବୃତ୍ତକଳାର ଅଂଶ θ/360°। ସେହି ଅଂଶକୁ ପୂର୍ଣ୍ଣ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ πr² ସହ ଗୁଣ କରିବା ଦରକାର।</li><li>ବୃତ୍ତକଳା OAXBର କ୍ଷେତ୍ରଫଳ = (60/360)π × 9² = 27π/2।</li><li>ଅନୁପାତ = (27π/2) : 9π = 27 : 18 = 3 : 2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ବୃତ୍ତକଳା : ବୃତ୍ତ = 3 : 2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-82"><h2>5(b) · 29(i). 8 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ବୃତ୍ତରେ 8 ସେ.ମି. ଜ୍ୟା ଛେଦନ କରୁଥିବା କ୍ଷୁଦ୍ରତର ବୃତ୍ତଖଣ୍ଡର କ୍ଷେତ୍ରଫଳ କେତେ? (√3 ≈ 1.732, π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କେନ୍ଦ୍ରସ୍ଥ କୋଣ θ ହେଲେ ବୃତ୍ତକଳାର ଅଂଶ θ/360°। ସେହି ଅଂଶକୁ ପୂର୍ଣ୍ଣ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ πr² ସହ ଗୁଣ କରିବା ଦରକାର।</li><li>ଦୁଇ ବ୍ୟାସାର୍ଦ୍ଧ ଓ ଜ୍ୟାର ଦୈର୍ଘ୍ୟ ସମାନ, ତେଣୁ ସମବାହୁ ତ୍ରିଭୁଜର କେନ୍ଦ୍ରସ୍ଥ କୋଣ 60°।</li><li>ବୃତ୍ତଖଣ୍ଡ = ବୃତ୍ତକଳା − ତ୍ରିଭୁଜ = (60/360)π × 8² − (√3/4) × 8²।</li><li>ଦତ୍ତ ମାନରେ 64 × 3.141/6 − 16 × 1.732 = 33.504 − 27.712 = 5.792 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5.792 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-83"><h2>5(b) · 29(ii). 8 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ବୃତ୍ତରେ 8√2 ସେ.ମି. ଜ୍ୟା ଛେଦନ କରୁଥିବା କ୍ଷୁଦ୍ରତର ବୃତ୍ତଖଣ୍ଡର କ୍ଷେତ୍ରଫଳ କେତେ? (π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(8√2)² = 8² + 8²। ତେଣୁ ଜ୍ୟାର ବିପରୀତରେ ଥିବା କେନ୍ଦ୍ରସ୍ଥ କୋଣ 90°।</li><li>90° ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ = π × 64/4; ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ = 8 × 8/2 = 32।</li><li>ପାର୍ଥକ୍ୟ ≈ 16 × 3.141 − 32 = 18.256 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>18.256 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-84"><h2>5(b) · 30. 20 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧ ଓ 60° କେନ୍ଦ୍ରସ୍ଥ କୋଣ ହେଲେ ସଂପୃକ୍ତ କ୍ଷୁଦ୍ର ବୃତ୍ତଖଣ୍ଡର କ୍ଷେତ୍ରଫଳ କେତେ? (√3 ≈ 1.732, π ≈ 3.141)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>60° ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ = π × 20²/6 ≈ 209.4 ବର୍ଗ ସେ.ମି.।</li><li>ଦୁଇ ବ୍ୟାସାର୍ଦ୍ଧ ମଧ୍ୟରେ ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ = (1/2) × 20² × sin 60° = 100√3 ≈ 173.2 ବର୍ଗ ସେ.ମି.।</li><li>ଚାପ ଓ ଜ୍ୟା ମଧ୍ୟର କ୍ଷେତ୍ରଫଳ = 209.4 − 173.2 = 36.2 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>36.2 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-85"><h2>5(b) · 31. 10 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧ ଓ 120° କେନ୍ଦ୍ରସ୍ଥ କୋଣ ହେଲେ ସଂପୃକ୍ତ କ୍ଷୁଦ୍ର ବୃତ୍ତଖଣ୍ଡର କ୍ଷେତ୍ରଫଳ କେତେ? (π ≈ 3.141, √3 ≈ 1.732)</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କେନ୍ଦ୍ରସ୍ଥ କୋଣ θ ହେଲେ ବୃତ୍ତକଳାର ଅଂଶ θ/360°। ସେହି ଅଂଶକୁ ପୂର୍ଣ୍ଣ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ πr² ସହ ଗୁଣ କରିବା ଦରକାର।</li><li>120° ବୃତ୍ତକଳାର କ୍ଷେତ୍ରଫଳ = (120/360)π × 10² ≈ 104.7 ବର୍ଗ ସେ.ମି.।</li><li>ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ = (1/2) × 10² × sin 120° = 25√3 ≈ 43.3 ବର୍ଗ ସେ.ମି.।</li><li>ବୃତ୍ତଖଣ୍ଡର କ୍ଷେତ୍ରଫଳ ≈ 104.7 − 43.3 = 61.4 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>61.4 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=142" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪୨</a></small></article>
+<article id="exercise-86"><h2>5(c) · 1(a). ଏକ ସରଳ ପ୍ରିଜିମ୍‌ର ତ୍ରିଭୁଜାକାର ଭୂମିର ବାହୁ 10, 6, 8 ସେ.ମି. ଓ ଉଚ୍ଚତା 20 ସେ.ମି.। ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ L ଓ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ W ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ଭୂମିର ପରିସୀମା P = 10 + 6 + 8 = 24 ସେ.ମି. |</li><li>ପାର୍ଶ୍ୱ ପୃଷ୍ଠଗୁଡ଼ିକର ମୋଟ କ୍ଷେତ୍ରଫଳ L = Ph = 24 × 20 = 480।</li><li>6² + 8² = 10² ହେତୁ ଭୂମି ସମକୋଣୀ ତ୍ରିଭୁଜ। ଏହାର କ୍ଷେତ୍ରଫଳ A = 6 × 8/2 = 24।</li><li>ଦୁଇଟି ସମାନ ତ୍ରିଭୁଜାକାର ପୃଷ୍ଠ ମିଶାଇ W = L + 2A = 480 + 48 = 528।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">L = 480 ବର୍ଗ ସେ.ମି., W = 528 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-87"><h2>5(c) · 1(b). ଭୂମିର ବାହୁ 5, 5, 6 ମିଟର ଓ ଉଚ୍ଚତା 8 ମିଟର ଥିବା ସରଳ ପ୍ରିଜିମ୍‌ର L ଓ W ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ଭୂମିର ପରିସୀମା = 5 + 5 + 6 = 16। ତେଣୁ L = 16 × 8 = 128।</li><li>ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜର ଶୀର୍ଷରୁ 6 ମିଟର ବାହୁ ଉପରେ ଲମ୍ବ ଏହାକୁ ଦୁଇଟି 3 ମିଟର ଖଣ୍ଡ କରେ।</li><li>ଲମ୍ବ = √(5² − 3²) = 4 ମିଟର।</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ A = 6 × 4/2 = 12। W = 128 + 2 × 12 = 152।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">L = 128 ବର୍ଗମିଟର, W = 152 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-88"><h2>5(c) · 1(c). ସରଳ ପ୍ରିଜିମ୍‌ର ଭୂମିରେ a = b = 15 ମିଟର, c = 24 ମିଟର ଓ ପ୍ରିଜିମ୍‌ର ଉଚ୍ଚତା 18 ମିଟର। L ଓ W ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଶ୍ନରେ ଦିଆଯାଇଥିବା ତିନି ବାହୁର ଯୋଗଫଳ = 15 + 15 + 24 = 54। L = 54 × 18 = 972।</li><li>ତ୍ରିଭୁଜାକାର ଭୂମିର ଉଚ୍ଚତା = √(15² − 12²) = 9। ଏହାର କ୍ଷେତ୍ରଫଳ A = 24 × 9/2 = 108।</li><li>W = 972 + 2 × 108 = 1188। ଯାଞ୍ଚ କଲେ W − L = 216 = 2A।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">L = 972 ବର୍ଗମିଟର, W = 1188 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-89"><h2>5(c) · 2(a). ଭୂମି ସମକୋଣୀ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ, ତାହାର କର୍ଣ୍ଣ 40 ମିଟର ଓ ପ୍ରିଜିମ୍‌ର ଉଚ୍ଚତା 50 ମିଟର। √2 ≃ 1.414 ନେଇ L ଓ W ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ସମାନ ବାହୁ x ହେଲେ 2x² = 40² |</li><li>ତେଣୁ x = 20√2 ମିଟର ଓ ଭୂମିର କ୍ଷେତ୍ରଫଳ A = x²/2 = 400 ବର୍ଗମିଟର।</li><li>ପରିସୀମା = 40 + 40√2। ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ L = 50(40 + 40√2) ≃ 4828।</li><li>W = L + 2A ≃ 4828 + 800 = 5628।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>L ≃ 4828 ବର୍ଗମିଟର, W ≃ 5628 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-90"><h2>5(c) · 2(b). ସୁଷମ ଷଡ଼ଭୁଜାକାର ଆଧାରର ବାହୁ 6 ଡେ.ମି. ଓ ପ୍ରିଜିମ୍‌ର ଉଚ୍ଚତା 20 ଡେ.ମି.। √3 ≃ 1.732 ନେଇ L ଓ W ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ଷଡ଼ଭୁଜର ଛଅଟି ସମାନ ବାହୁର ପରିସୀମା = 6 × 6 = 36 ଡେ.ମି.। L = 36 × 20 = 720।</li><li>କେନ୍ଦ୍ରକୁ ଛଅଟି ଶୀର୍ଷ ସହ ଯୋଡ଼ିଲେ ଛଅଟି ସମବାହୁ ତ୍ରିଭୁଜ ମିଳେ।</li><li>ଆଧାରର କ୍ଷେତ୍ରଫଳ A = 6 × (√3/4) × 6² = 54√3।</li><li>W = 720 + 108√3 ≃ 720 + 187.056 = 907.056।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">L = 720 ବର୍ଗ ଡେ.ମି., W ≃ 907.056 ବର୍ଗ ଡେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-91"><h2>5(c) · 2(c). ସମବାହୁ ତ୍ରିଭୁଜାକାର ଭୂମିର ବାହୁ 16 ସେ.ମି. ଓ ପ୍ରିଜିମ୍‌ର ଉଚ୍ଚତା 25 ସେ.ମି.। √3 ≃ 1.732 ନେଇ L ଓ W ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ତିନି ବାହୁର ପରିସୀମା = 3 × 16 = 48 ସେ.ମି.। L = 48 × 25 = 1200।</li><li>ଗୋଟିଏ ଆଧାରର କ୍ଷେତ୍ରଫଳ A = (√3/4) × 16² = 64√3।</li><li>W = 1200 + 2 × 64√3 ≃ 1200 + 221.696 = 1421.696। ଏକ ଦଶମିକ ସ୍ଥାନରେ ଏହା 1421.7।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">L = 1200 ବର୍ଗ ସେ.ମି., W ≃ 1421.696 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-92"><h2>5(c) · 3. ସରଳ ପ୍ରିଜମ୍‌ର ତ୍ରିଭୁଜାକାର ଭୂମିର ବାହୁ 13, 14 ଓ 15 ସେ.ମି.। ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 840 ବର୍ଗ ସେ.ମି.। ଉଚ୍ଚତା ଓ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭୂମିର ପରିସୀମା = 13 + 14 + 15 = 42।</li><li>ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ତେଣୁ h = 840/42 = 20।</li><li>ଭୂମିର ଅର୍ଦ୍ଧପରିସୀମା s = 21।</li><li>ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ = √[21(21 − 13)(21 − 14)(21 − 15)] = √7056 = 84।</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳରେ ଦୁଇ ତ୍ରିଭୁଜାକାର ପୃଷ୍ଠ ମଧ୍ୟ ଅଛି। କ୍ଷେତ୍ରଫଳ = 840 + 2 × 84 = 1008।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 20 ସେ.ମି. ଓ ସମଗ୍ର ପୃଷ୍ଠତଳ 1008 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-93"><h2>5(c) · 4. ସମବାହୁ ତ୍ରିଭୁଜାକାର ଭୂମି ଥିବା ଖୁଣ୍ଟର ପାର୍ଶ୍ୱତଳରେ ପ୍ରତି ବର୍ଗ ସେ.ମି. 15 ପଇସା ଦରରେ କାଗଜ ମଡ଼ାଇବାକୁ 18.90 ଟଙ୍କା ଲାଗିଲା। ଉଚ୍ଚତା 8√3 ସେ.ମି. ହେଲେ ଭୂମିର ବାହୁ କେତେ? √3 ≃ 1¾ ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>18.90 ଟଙ୍କା = 1890 ପଇସା। ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = 1890/15 = 126 ବର୍ଗ ସେ.ମି.।</li><li>ପ୍ରଶ୍ନର ଆସନ୍ନ ମାନ ଅନୁସାରେ ଉଚ୍ଚତା = 8 × 7/4 = 14 ସେ.ମି. |</li><li>ପରିସୀମା ≃ 126/14 = 9 ସେ.ମି. |</li><li>ତିନି ବାହୁ ସମାନ ହେତୁ ଗୋଟିଏ ବାହୁ ≃ 9/3 = 3 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୂମିର ବାହୁ ପ୍ରାୟ 3 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-94"><h2>5(c) · 5. 18 ମିଟର ଉଚ୍ଚ ସରଳ ପ୍ରିଜମ୍‌ର ତ୍ରିଭୁଜାକାର ଭୂମିର ବାହୁ 12, 16 ଓ 20 ମିଟର। ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>12² + 16² = 400 = 20² |</li><li>ତେଣୁ ଭୂମି ଏକ ସମକୋଣୀ ତ୍ରିଭୁଜ।</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ = 12 × 16/2 = 96।</li><li>ଭୂମିର ପରିସୀମା = 12 + 16 + 20 = 48। ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ = 48 × 18 = 864।</li><li>ଉପର ଓ ତଳ ପୃଷ୍ଠକୁ ନେଇ ସମଗ୍ର କ୍ଷେତ୍ରଫଳ = 864 + 2 × 96 = 1056।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1056 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-95"><h2>5(c) · 6. ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 2100 ବର୍ଗ ସେ.ମି., ଉଚ୍ଚତା 30 ସେ.ମି.। ଏହାର ସମକୋଣୀ ତ୍ରିଭୁଜାକାର ଆଧାରର ବୃହତ୍ତମ ବାହୁ 29 ସେ.ମି.। ଅନ୍ୟ ଦୁଇ ବାହୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ଆଧାରର ପରିସୀମା = 2100/30 = 70। ଅନ୍ୟ ଦୁଇ ବାହୁ x, y ହେଲେ x + y = 70 − 29 = 41।</li><li>କର୍ଣ୍ଣ 29 ହେତୁ x² + y² = 841। ତେଣୁ 2xy = 41² − 841 = 840, ଅର୍ଥାତ୍ xy = 420।</li><li>t² − 41t + 420 = (t − 20)(t − 21) = 0। ତେଣୁ ବାହୁଦ୍ୱୟ 20 ଓ 21।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନ୍ୟ ଦୁଇ ବାହୁ 20 ସେ.ମି. ଓ 21 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-96"><h2>5(c) · 7. ସରଳ ପ୍ରିଜମ୍‌ର ଭୂମି ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ। ଭୂମିର ଆଧାର 24 ସେ.ମି. ଓ ଅନ୍ୟ ଦୁଇ ବାହୁ ପ୍ରତ୍ୟେକ 13 ସେ.ମି.। ପ୍ରିଜମ୍‌ର ଉଚ୍ଚତା 20 ସେ.ମି.। ସମଗ୍ର ପୃଷ୍ଠତଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜରେ ଶୀର୍ଷରୁ ଆଧାର ଉପରେ ଲମ୍ବ ଆଧାରକୁ ଦୁଇଟି 12 ସେ.ମି. ଖଣ୍ଡ କରେ।</li><li>ଏହି ଲମ୍ବ √(13² − 12²) = 5।</li><li>ଗୋଟିଏ ତ୍ରିଭୁଜାକାର ପୃଷ୍ଠର କ୍ଷେତ୍ରଫଳ = 24 × 5/2 = 60। ପରିସୀମା = 24 + 13 + 13 = 50।</li><li>ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ = 50 × 20 = 1000। ସମଗ୍ର ପୃଷ୍ଠତଳ = 1000 + 2 × 60 = 1120।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1120 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-97"><h2>5(c) · 8. ସରଳ ପ୍ରିଜିମ୍‌ର ସମବାହୁ ତ୍ରିଭୁଜାକାର ଭୂମିର ବାହୁ 50 ସେ.ମି. ଓ ପ୍ରିଜିମ୍‌ର ଉଚ୍ଚତା 1.2 ମିଟର। √3 ≃ 1.732 ନେଇ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ଉଚ୍ଚତା 1.2 ମିଟର = 120 ସେ.ମି.। ଭୂମିର ପରିସୀମା = 3 × 50 = 150 ସେ.ମି.।</li><li>ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = 150 × 120 = 18000 ବର୍ଗ ସେ.ମି.।</li><li>ଦୁଇ ଭୂମିର ମୋଟ କ୍ଷେତ୍ରଫଳ = 2 × (√3/4) × 50² = 1250√3 ≃ 2165।</li><li>ତେଣୁ W ≃ 18000 + 2165 = 20165।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ପ୍ରାୟ 20165 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=151" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୧</a></small></article>
+<article id="exercise-98"><h2>5(c) · 9. ତ୍ରିଭୁଜାକାର ଭୂମିର ବାହୁ 13, 14, 15 ସେ.ମି. ଓ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 1050 ବର୍ଗ ସେ.ମି.। ଉଚ୍ଚତା ଓ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ପରିସୀମା P = 13 + 14 + 15 = 42। L = Ph ହେତୁ h = 1050/42 = 25।</li><li>ଅର୍ଦ୍ଧପରିସୀମା s = 21।</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ A = √[21(21 − 13)(21 − 14)(21 − 15)] = √7056 = 84।</li><li>W = L + 2A = 1050 + 168 = 1218।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 25 ସେ.ମି., ସମଗ୍ର ପୃଷ୍ଠତଳ 1218 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-99"><h2>5(c) · 10. ଏକ ସମବାହୁ ତ୍ରିଭୁଜାକାର ଭୂମି ବିଶିଷ୍ଟ କାଠବାଡ଼ିର ପାର୍ଶ୍ୱତଳରେ କାଗଜ ମଡ଼ାଇବା ପାଇଁ ବର୍ଗ ସେ.ମି. ପିଛା 15 ପଇସା ଦରରେ 18.90 ଟଙ୍କା ଖର୍ଚ୍ଚ ହେଲା। ଉଚ୍ଚତା 8√3 ସେ.ମି. ହେଲେ ଭୂମିର ବାହୁ କେତେ? √3 ≃ 1¾ ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କାଗଜ ମଡ଼ାଯାଇଥିବା କ୍ଷେତ୍ରଫଳ = 18.90/0.15 = 126 ବର୍ଗ ସେ.ମି.।</li><li>ଭୂମିର ବାହୁ a ହେଲେ ପରିସୀମା 3a। ଉଚ୍ଚତା ≃ 8 × 7/4 = 14 ସେ.ମି.।</li><li>126 ≃ 3a × 14। ତେଣୁ a ≃ 126/42 = 3 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୂମିର ବାହୁ ପ୍ରାୟ 3 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-100"><h2>5(c) · 11(a). ସିଲିଣ୍ଡରର ଭୂମିର ବ୍ୟାସ 16 ସେ.ମି. ଓ ଉଚ୍ଚତା 21 ସେ.ମି. ହେଲେ ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ d = 16 ହେତୁ ଭୂମିର ପରିଧି πd = 16π ସେ.ମି.।</li><li>ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = ପରିଧି × ଉଚ୍ଚତା = πdh।</li><li>π ≃ 22/7 ନେଲେ (22/7) × 16 × 21 = 1056 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1056 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-101"><h2>5(c) · 11(b). ସିଲିଣ୍ଡରର ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 1188 ବର୍ଗମିଟର ଓ ବ୍ୟାସ 18 ମିଟର ହେଲେ ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ 18 ମିଟର ହେତୁ ପରିଧି = 18π ମିଟର।</li><li>ପରିଧି × ଉଚ୍ଚତା = 1188। ତେଣୁ h = 1188/(18π)।</li><li>π ≃ 22/7 ନେଲେ h = (1188 × 7)/(18 × 22) = 21।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 21 ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-102"><h2>5(c) · 11(c). ସିଲିଣ୍ଡରର ଭୂମିର କ୍ଷେତ୍ରଫଳ 1386 ବର୍ଗ ସେ.ମି. ଓ ଉଚ୍ଚତା 36 ସେ.ମି. ହେଲେ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସିଲିଣ୍ଡର୍‌ର ବକ୍ରତଳ ଖୋଲିଲେ ଆୟତ। ଏହାର ଦୈର୍ଘ୍ୟ ଭୂମିର ପରିଧି 2πr ଓ ପ୍ରସ୍ଥ ଉଚ୍ଚତା h, ତେଣୁ ବକ୍ରତଳ 2πrh।</li><li>πr² = 1386। π ≃ 22/7 ନେଇ r² = 1386 × 7/22 = 441, ତେଣୁ r = 21 ସେ.ମି.।</li><li>ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = 2πrh = 2 × (22/7) × 21 × 36 = 4752।</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳରେ ଦୁଇଟି ବୃତ୍ତାକାର ଭୂମି ମଧ୍ୟ ଅଛି। ମୋଟ = 4752 + 2 × 1386 = 7524।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>7524 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-103"><h2>5(c) · 12. ରୋଲର୍‌ର ଦୈର୍ଘ୍ୟ 1.6 ମିଟର ଓ ଭୂମିଠାରୁ ଉଚ୍ଚତା 70 ସେ.ମି.। 26.4 ଏୟର୍‌ ସ୍ଥାନ ସମତଳ କରିବାକୁ ଏହା କେତେଥର ଘୂରିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରୋଲର୍‌ର ଗୋଲାକାର ପ୍ରାନ୍ତର ବ୍ୟାସ = 70 ସେ.ମି. = 0.7 ମିଟର।</li><li>ଗୋଟିଏ ଘୂର୍ଣ୍ଣନରେ ଅତିକ୍ରାନ୍ତ ଦୂରତା = πd ≃ (22/7) × 0.7 = 2.2 ମିଟର।</li><li>ପ୍ରତି ଘୂର୍ଣ୍ଣନରେ ସମତଳ ହେଉଥିବା କ୍ଷେତ୍ରଫଳ = ଦୈର୍ଘ୍ୟ × ପରିଧି = 1.6 × 2.2 = 3.52 ବର୍ଗମିଟର।</li><li>1 ଏୟର୍‌ = 100 ବର୍ଗମିଟର। ତେଣୁ ମୋଟ ଘୂର୍ଣ୍ଣନ = (26.4 × 100)/3.52 = 750।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>750 ଥର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-104"><h2>5(c) · 13. 1540 ବର୍ଗମିଟର ଭୂମିରେ ରୋଲର୍‌ 90 ଥର ଗଡ଼ାଇବାକୁ ପଡ଼େ। ରୋଲର୍‌ର ଦୈର୍ଘ୍ୟ ଓ ବ୍ୟାସ ସମାନ ହେଲେ ଦୈର୍ଘ୍ୟ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୈର୍ଘ୍ୟ ଓ ବ୍ୟାସ ପ୍ରତ୍ୟେକ x ମିଟର ହେଉ। ଥରେ ଗଡ଼ିଲେ ସମତଳ କ୍ଷେତ୍ରଫଳ = πx × x = πx²।</li><li>90πx² = 1540। π ≃ 22/7 ନେଲେ x² = (1540 × 7)/(90 × 22) = 49/9।</li><li>ଦୈର୍ଘ୍ୟ ଧନାତ୍ମକ, ତେଣୁ x = 7/3 = 2⅓ ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୈର୍ଘ୍ୟ 2⅓ ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-105"><h2>5(c) · 14. ସିଲିଣ୍ଡର ଆକାରର ସ୍ତମ୍ଭର ବକ୍ର ପୃଷ୍ଠତଳକୁ ବର୍ଗମିଟର ପିଛା 60 ପଇସା ଦରରେ ରଙ୍ଗ କରିବାକୁ 792 ଟଙ୍କା ଲାଗିଲା। ଭୂମିର କ୍ଷେତ୍ରଫଳ 154 ବର୍ଗମିଟର ହେଲେ ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>60 ପଇସା = 0.60 ଟଙ୍କା।</li><li>ରଙ୍ଗ ହୋଇଥିବା ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = 792/0.60 = 1320 ବର୍ଗମିଟର।</li><li>πr² = 154। π ≃ 22/7 ନେଲେ r² = 49 ଓ r = 7 ମିଟର। ଭୂମିର ପରିଧି = 2πr = 44 ମିଟର।</li><li>ପରିଧି × ଉଚ୍ଚତା = 1320। ତେଣୁ h = 1320/44 = 30 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 30 ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-106"><h2>5(c) · 15. ଦୁଇ ପାଖ ଖୋଲା ଫମ୍ପା ସିଲିଣ୍ଡରର ବହିଃ ବ୍ୟାସାର୍ଦ୍ଧ 5 ମିଟର, ଉଚ୍ଚତା 14 ମିଟର ଓ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 748 ବର୍ଗମିଟର। ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ r ମିଟର ନିଅ।</li><li>ବାହାର ଓ ଭିତର ବକ୍ର ପୃଷ୍ଠ ସହ ଦୁଇ ପ୍ରାନ୍ତର ବଳୟ ମିଶାଇ କ୍ଷେତ୍ରଫଳ = 2π[14(5 + r) + (5² − r²)]।</li><li>π ≃ 22/7 ନେଇ 748/(2π) = 119। ତେଣୁ 70 + 14r + 25 − r² = 119 ବା r² − 14r + 24 = 0।</li><li>(r − 2)(r − 12) = 0। ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ 5 ମିଟରରୁ କମ୍ ହେତୁ r = 2 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ 2 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଫମ୍ପା ନଳର ପ୍ରାନ୍ତରେ R ଓ r ବ୍ୟାସାର୍ଦ୍ଧର ବଳୟ ଏବଂ ଦୁଇ ବକ୍ର ପୃଷ୍ଠକୁ ଖୋଲିଲେ ମିଳୁଥିବା ଆୟତଚିତ୍ର।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjM4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+4Kyr4Kyu4K2N4Kyq4Ky+IOCsuOCsv+CssuCsv+Cso+CtjeCsoeCssOCssCDgrKrgrYPgrLfgrY3grKDgrKTgrLM8L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj7grKrgrY3grLDgrKTgrL8g4Kyq4K2N4Kyw4Ky+4Kyo4K2N4Kyk4Kyw4K2HIOCspuCtgeCshyDgrLjgrK7grJXgrYfgrKjgrY3grKbgrY3grLDgrL/grJUg4Kys4K2D4Kyk4K2N4KykIOCsruCsp+CtjeCtn+CssOCthyDgrKzgrLPgrZ8g4Kyl4Ky+4KyP4KWkIOCsqOCss+CssCDgrKzgrL7grLngrL7grLAg4KyTIOCsreCsv+CspOCssCDgrKzgrJXgrY3grLAg4Kyq4K2D4Ky34K2N4KygIOCsluCti+CssuCsv+CssuCthyDgrLjgrK7grL7grKgg4KyJ4Kya4K2N4Kya4Kyk4Ky+4KywIOCspuCtgeCsh+Csn+CsvyDgrIbgrZ/grKTgrJrgrL/grKTgrY3grLAg4Kyu4Ky/4Kyz4K2H4KWkPC9kZXNjPgogIDxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iMjM4IiByeD0iMTIiIGZpbGw9IiNmZmYiLz4KICA8ZyBzdHJva2U9IiMyNDRjNTUiIHN0cm9rZS13aWR0aD0iMiI+CiAgICA8Y2lyY2xlIGN4PSI5OSIgY3k9IjEwMCIgcj0iNjgiIGZpbGw9IiNjNGUzZTMiLz4KICAgIDxjaXJjbGUgY3g9Ijk5IiBjeT0iMTAwIiByPSI0MiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTk5IDEwMGg2OE05OSAxMDBsLTI5LjctMjkuNyIgZmlsbD0ibm9uZSIvPgogICAgPGNpcmNsZSBjeD0iOTkiIGN5PSIxMDAiIHI9IjIuNSIgZmlsbD0iIzI0NGM1NSIvPgogICAgPHJlY3QgeD0iMjI4IiB5PSI1NiIgd2lkdGg9IjIwNCIgaGVpZ2h0PSI5MSIgZmlsbD0iI2RlZWRmMCIvPgogICAgPHJlY3QgeD0iNDY5IiB5PSI1NiIgd2lkdGg9IjEyNiIgaGVpZ2h0PSI5MSIgZmlsbD0iI2ZhZjBkMiIvPgogIDwvZz4KICA8ZyBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMxNDNjNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPgogICAgPHRleHQgeD0iMTQyIiB5PSI5NCI+UjwvdGV4dD48dGV4dCB4PSI3OCIgeT0iOTQiPnI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMzAiIHk9IjQ2Ij4yz4BSPC90ZXh0Pjx0ZXh0IHg9IjUzMiIgeT0iNDYiPjLPgHI8L3RleHQ+CiAgICA8dGV4dCB4PSIyMTYiIHk9IjEwNyI+aDwvdGV4dD48dGV4dCB4PSI0NTgiIHk9IjEwNyI+aDwvdGV4dD4KICAgIDx0ZXh0IHg9IjEwMSIgeT0iMjAzIj7PgChSwrIg4oiSIHLCsik8L3RleHQ+PHRleHQgeD0iMzMwIiB5PSIyMDMiPjLPgFJoPC90ZXh0Pjx0ZXh0IHg9IjUzMyIgeT0iMjAzIj4yz4ByaDwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-107"><h2>5(c) · 16. 84 ସେ.ମି. ଲମ୍ବ ଲୁହା ନଳର ବେଧ 2 ସେ.ମି. ଓ ବହିଃ ବ୍ୟାସାର୍ଦ୍ଧ 8 ସେ.ମି.। ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ r = 8 − 2 = 6 ସେ.ମି. |</li><li>ନଳର ଦୁଇ ବକ୍ର ପୃଷ୍ଠର ମୋଟ କ୍ଷେତ୍ରଫଳ = 2π × 84 × (8 + 6) = 2352π |</li><li>ପ୍ରତ୍ୟେକ ପ୍ରାନ୍ତରେ ବଳୟର କ୍ଷେତ୍ରଫଳ π(8² − 6²) = 28π। ଦୁଇ ପ୍ରାନ୍ତରେ 56π।</li><li>ସମଗ୍ର କ୍ଷେତ୍ରଫଳ = 2352π + 56π = 2408π ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2408π ବର୍ଗ ସେ.ମି., ଅର୍ଥାତ୍ π ≃ 22/7 ନେଲେ 7568 ବର୍ଗ ସେ.ମି.।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଫମ୍ପା ନଳର ପ୍ରାନ୍ତରେ R ଓ r ବ୍ୟାସାର୍ଦ୍ଧର ବଳୟ ଏବଂ ଦୁଇ ବକ୍ର ପୃଷ୍ଠକୁ ଖୋଲିଲେ ମିଳୁଥିବା ଆୟତଚିତ୍ର।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjM4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+4Kyr4Kyu4K2N4Kyq4Ky+IOCsuOCsv+CssuCsv+Cso+CtjeCsoeCssOCssCDgrKrgrYPgrLfgrY3grKDgrKTgrLM8L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj7grKrgrY3grLDgrKTgrL8g4Kyq4K2N4Kyw4Ky+4Kyo4K2N4Kyk4Kyw4K2HIOCspuCtgeCshyDgrLjgrK7grJXgrYfgrKjgrY3grKbgrY3grLDgrL/grJUg4Kys4K2D4Kyk4K2N4KykIOCsruCsp+CtjeCtn+CssOCthyDgrKzgrLPgrZ8g4Kyl4Ky+4KyP4KWkIOCsqOCss+CssCDgrKzgrL7grLngrL7grLAg4KyTIOCsreCsv+CspOCssCDgrKzgrJXgrY3grLAg4Kyq4K2D4Ky34K2N4KygIOCsluCti+CssuCsv+CssuCthyDgrLjgrK7grL7grKgg4KyJ4Kya4K2N4Kya4Kyk4Ky+4KywIOCspuCtgeCsh+Csn+CsvyDgrIbgrZ/grKTgrJrgrL/grKTgrY3grLAg4Kyu4Ky/4Kyz4K2H4KWkPC9kZXNjPgogIDxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iMjM4IiByeD0iMTIiIGZpbGw9IiNmZmYiLz4KICA8ZyBzdHJva2U9IiMyNDRjNTUiIHN0cm9rZS13aWR0aD0iMiI+CiAgICA8Y2lyY2xlIGN4PSI5OSIgY3k9IjEwMCIgcj0iNjgiIGZpbGw9IiNjNGUzZTMiLz4KICAgIDxjaXJjbGUgY3g9Ijk5IiBjeT0iMTAwIiByPSI0MiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTk5IDEwMGg2OE05OSAxMDBsLTI5LjctMjkuNyIgZmlsbD0ibm9uZSIvPgogICAgPGNpcmNsZSBjeD0iOTkiIGN5PSIxMDAiIHI9IjIuNSIgZmlsbD0iIzI0NGM1NSIvPgogICAgPHJlY3QgeD0iMjI4IiB5PSI1NiIgd2lkdGg9IjIwNCIgaGVpZ2h0PSI5MSIgZmlsbD0iI2RlZWRmMCIvPgogICAgPHJlY3QgeD0iNDY5IiB5PSI1NiIgd2lkdGg9IjEyNiIgaGVpZ2h0PSI5MSIgZmlsbD0iI2ZhZjBkMiIvPgogIDwvZz4KICA8ZyBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMxNDNjNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPgogICAgPHRleHQgeD0iMTQyIiB5PSI5NCI+UjwvdGV4dD48dGV4dCB4PSI3OCIgeT0iOTQiPnI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMzAiIHk9IjQ2Ij4yz4BSPC90ZXh0Pjx0ZXh0IHg9IjUzMiIgeT0iNDYiPjLPgHI8L3RleHQ+CiAgICA8dGV4dCB4PSIyMTYiIHk9IjEwNyI+aDwvdGV4dD48dGV4dCB4PSI0NTgiIHk9IjEwNyI+aDwvdGV4dD4KICAgIDx0ZXh0IHg9IjEwMSIgeT0iMjAzIj7PgChSwrIg4oiSIHLCsik8L3RleHQ+PHRleHQgeD0iMzMwIiB5PSIyMDMiPjLPgFJoPC90ZXh0Pjx0ZXh0IHg9IjUzMyIgeT0iMjAzIj4yz4ByaDwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-108"><h2>5(c) · 17. 100 ସେ.ମି. ଲମ୍ବ ଲୁହା ନଳର ଲୁହାର ପ୍ରସ୍ଥ 4 ସେ.ମି. ଓ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 9152 ବର୍ଗ ସେ.ମି.। ବହିଃ ଓ ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବହିଃ ଓ ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ ଯଥାକ୍ରମେ R, r ହେଲେ R − r = 4।</li><li>ବକ୍ର ପୃଷ୍ଠଦ୍ୱୟ ଓ ପ୍ରାନ୍ତର ବଳୟଦ୍ୱୟ ମିଶାଇ କ୍ଷେତ୍ରଫଳ = 2π(R + r)[100 + (R − r)]।</li><li>9152 = 2π(R + r) × 104। π ≃ 22/7 ନେଲେ R + r = (9152 × 7)/(44 × 104) = 14।</li><li>R + r = 14 ଓ R − r = 4 ଯୋଗ କଲେ 2R = 18। ତେଣୁ R = 9 ଓ r = 5 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବହିଃ ବ୍ୟାସାର୍ଦ୍ଧ 9 ସେ.ମି., ଅନ୍ତଃ ବ୍ୟାସାର୍ଦ୍ଧ 5 ସେ.ମି.।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଫମ୍ପା ନଳର ପ୍ରାନ୍ତରେ R ଓ r ବ୍ୟାସାର୍ଦ୍ଧର ବଳୟ ଏବଂ ଦୁଇ ବକ୍ର ପୃଷ୍ଠକୁ ଖୋଲିଲେ ମିଳୁଥିବା ଆୟତଚିତ୍ର।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjM4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+4Kyr4Kyu4K2N4Kyq4Ky+IOCsuOCsv+CssuCsv+Cso+CtjeCsoeCssOCssCDgrKrgrYPgrLfgrY3grKDgrKTgrLM8L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj7grKrgrY3grLDgrKTgrL8g4Kyq4K2N4Kyw4Ky+4Kyo4K2N4Kyk4Kyw4K2HIOCspuCtgeCshyDgrLjgrK7grJXgrYfgrKjgrY3grKbgrY3grLDgrL/grJUg4Kys4K2D4Kyk4K2N4KykIOCsruCsp+CtjeCtn+CssOCthyDgrKzgrLPgrZ8g4Kyl4Ky+4KyP4KWkIOCsqOCss+CssCDgrKzgrL7grLngrL7grLAg4KyTIOCsreCsv+CspOCssCDgrKzgrJXgrY3grLAg4Kyq4K2D4Ky34K2N4KygIOCsluCti+CssuCsv+CssuCthyDgrLjgrK7grL7grKgg4KyJ4Kya4K2N4Kya4Kyk4Ky+4KywIOCspuCtgeCsh+Csn+CsvyDgrIbgrZ/grKTgrJrgrL/grKTgrY3grLAg4Kyu4Ky/4Kyz4K2H4KWkPC9kZXNjPgogIDxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iMjM4IiByeD0iMTIiIGZpbGw9IiNmZmYiLz4KICA8ZyBzdHJva2U9IiMyNDRjNTUiIHN0cm9rZS13aWR0aD0iMiI+CiAgICA8Y2lyY2xlIGN4PSI5OSIgY3k9IjEwMCIgcj0iNjgiIGZpbGw9IiNjNGUzZTMiLz4KICAgIDxjaXJjbGUgY3g9Ijk5IiBjeT0iMTAwIiByPSI0MiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTk5IDEwMGg2OE05OSAxMDBsLTI5LjctMjkuNyIgZmlsbD0ibm9uZSIvPgogICAgPGNpcmNsZSBjeD0iOTkiIGN5PSIxMDAiIHI9IjIuNSIgZmlsbD0iIzI0NGM1NSIvPgogICAgPHJlY3QgeD0iMjI4IiB5PSI1NiIgd2lkdGg9IjIwNCIgaGVpZ2h0PSI5MSIgZmlsbD0iI2RlZWRmMCIvPgogICAgPHJlY3QgeD0iNDY5IiB5PSI1NiIgd2lkdGg9IjEyNiIgaGVpZ2h0PSI5MSIgZmlsbD0iI2ZhZjBkMiIvPgogIDwvZz4KICA8ZyBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMxNDNjNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPgogICAgPHRleHQgeD0iMTQyIiB5PSI5NCI+UjwvdGV4dD48dGV4dCB4PSI3OCIgeT0iOTQiPnI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMzAiIHk9IjQ2Ij4yz4BSPC90ZXh0Pjx0ZXh0IHg9IjUzMiIgeT0iNDYiPjLPgHI8L3RleHQ+CiAgICA8dGV4dCB4PSIyMTYiIHk9IjEwNyI+aDwvdGV4dD48dGV4dCB4PSI0NTgiIHk9IjEwNyI+aDwvdGV4dD4KICAgIDx0ZXh0IHg9IjEwMSIgeT0iMjAzIj7PgChSwrIg4oiSIHLCsik8L3RleHQ+PHRleHQgeD0iMzMwIiB5PSIyMDMiPjLPgFJoPC90ZXh0Pjx0ZXh0IHg9IjUzMyIgeT0iMjAzIj4yz4ByaDwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=152" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୨</a></small></article>
+<article id="exercise-109"><h2>5(d) · 1. ସରଳ ପ୍ରିଜମ୍‌ର ସମଗ୍ର ପୃଷ୍ଠତଳ 2520 ବର୍ଗମିଟର। ତ୍ରିଭୁଜାକାର ଆଧାରର ବାହୁ 20, 21 ଓ 29 ମିଟର। ପ୍ରିଜମ୍‌ର ଆୟତନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>20² + 21² = 29² ହେତୁ ଆଧାର ଏକ ସମକୋଣୀ ତ୍ରିଭୁଜ।</li><li>ଆଧାରର କ୍ଷେତ୍ରଫଳ A = 20 × 21/2 = 210।</li><li>ଦୁଇ ଆଧାର ବାଦ ଦେଲେ ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ = 2520 − 2 × 210 = 2100।</li><li>ପରିସୀମା = 20 + 21 + 29 = 70।</li><li>ପ୍ରିଜମ୍‌ର ଉଚ୍ଚତା = 2100/70 = 30। ଏଣୁ ଆୟତନ = A × h = 210 × 30 = 6300।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6300 ଘନମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭</a></small></article>
+<article id="exercise-110"><h2>5(d) · 2. ସରଳ ପ୍ରିଜମ୍‌ର ଭୂମି ଏକ ସମକୋଣୀ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ। କର୍ଣ୍ଣ 8√2 ସେ.ମି. ଓ ପ୍ରିଜମ୍‌ର ଉଚ୍ଚତା 14 ସେ.ମି.। ଆୟତନ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମକୋଣ ସଂଲଗ୍ନ ଦୁଇ ବାହୁ x ହେଲେ 2x² = (8√2)² = 128। ତେଣୁ x² = 64 ଓ x = 8।</li><li>ଆଧାରର କ୍ଷେତ୍ରଫଳ = x²/2 = 32 ବର୍ଗ ସେ.ମି.।</li><li>ପ୍ରିଜମ୍‌ର ଆୟତନ = ଆଧାରର କ୍ଷେତ୍ରଫଳ × ଉଚ୍ଚତା = 32 × 14 = 448।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>448 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭</a></small></article>
+<article id="exercise-111"><h2>5(d) · 3. 2520 ଘନମିଟର ଆୟତନର ପ୍ରିଜମ୍‌ର ଆଧାର ସମକୋଣୀ ତ୍ରିଭୁଜ। ସମକୋଣ ସଂଲଗ୍ନ ବାହୁ 7 ଓ 24 ମିଟର। ପ୍ରିଜମ୍‌ର ଉଚ୍ଚତା ଓ ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ = 7 × 24/2 = 84। ଆୟତନ = 84h = 2520। ତେଣୁ h = 30।</li><li>ତ୍ରିଭୁଜର କର୍ଣ୍ଣ = √(7² + 24²) = √625 = 25। ପରିସୀମା = 7 + 24 + 25 = 56।</li><li>ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ = 56 × 30 = 1680 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 30 ମିଟର ଓ ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ 1680 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭</a></small></article>
+<article id="exercise-112"><h2>5(d) · 4. 15 ସେ.ମି. ଉଚ୍ଚ ପ୍ରିଜମ୍‌ର ଆୟତନ 360 ଘନ ସେ.ମି.। ସମକୋଣୀ ତ୍ରିଭୁଜାକାର ଆଧାରର କର୍ଣ୍ଣ 10 ସେ.ମି.। ଅନ୍ୟ ଦୁଇ ବାହୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆଧାରର କ୍ଷେତ୍ରଫଳ = 360/15 = 24। ଲମ୍ବ ବାହୁ x, y ହେଲେ xy/2 = 24, ତେଣୁ xy = 48।</li><li>ପିଥାଗୋରାସ୍ ଉପପାଦ୍ୟରୁ x² + y² = 100।</li><li>ତେଣୁ (x + y)² = 100 + 96 = 196, ଅର୍ଥାତ୍ x + y = 14।</li><li>x ଓ y ହେଉଛନ୍ତି t² − 14t + 48 = (t − 6)(t − 8) = 0ର ମୂଳ। ଉଭୟ ଧନାତ୍ମକ ମାନ 6 ଓ 8।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6 ସେ.ମି. ଓ 8 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭</a></small></article>
+<article id="exercise-113"><h2>5(d) · 5. ଗୋଟିଏ ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳର 8/9 ଅଂଶ। ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳ 96 ବର୍ଗମିଟର ଓ ଆୟତନ 48 ଘନମିଟର ହେଲେ ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମଗ୍ର ପୃଷ୍ଠତଳ W ହେଲେ (8/9)W = 96। ତେଣୁ W = 96 × 9/8 = 108 ବର୍ଗମିଟର।</li><li>ସମାନ ଦୁଇ ଆଧାରର ମୋଟ କ୍ଷେତ୍ରଫଳ = 108 − 96 = 12।</li><li>ଗୋଟିଏ ଆଧାରର କ୍ଷେତ୍ରଫଳ = 12/2 = 6 ବର୍ଗମିଟର।</li><li>ଆୟତନ = ଆଧାରର କ୍ଷେତ୍ରଫଳ × ଉଚ୍ଚତା। ତେଣୁ h = 48/6 = 8 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 8 ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭</a></small></article>
+<article id="exercise-114"><h2>5(d) · 6. ସରଳ ପ୍ରିଜିମ୍‌ର ଆଧାରର ପରିସୀମା 56 ମିଟର, ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 1680 ବର୍ଗମିଟର ଓ ଆୟତନ 2520 ଘନମିଟର। ଆଧାରର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = ଆଧାରର ପରିସୀମା × ଉଚ୍ଚତା। ତେଣୁ 56h = 1680।</li><li>h = 1680/56 = 30 ମିଟର। ଏବେ ଆଧାରର କ୍ଷେତ୍ରଫଳ A ପାଇଁ 30A = 2520।</li><li>A = 2520/30 = 84 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଧାରର କ୍ଷେତ୍ରଫଳ 84 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭</a></small></article>
+<article id="exercise-115"><h2>5(d) · 7. ସରଳ ପ୍ରିଜିମ୍‌ର ଆୟତନ 84√3 ଘନ ସେ.ମି. ଓ ଉଚ୍ଚତା 7 ସେ.ମି.। ସମବାହୁ ତ୍ରିଭୁଜାକାର ଆଧାରର ପ୍ରତ୍ୟେକ ବାହୁର ଦୈର୍ଘ୍ୟ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆଧାରର କ୍ଷେତ୍ରଫଳ A = ଆୟତନ/ଉଚ୍ଚତା = 84√3/7 = 12√3 ବର୍ଗ ସେ.ମି.।</li><li>ସମବାହୁ ତ୍ରିଭୁଜର ବାହୁ a ହେଲେ A = (√3/4)a²। ତେଣୁ (√3/4)a² = 12√3।</li><li>ଉଭୟ ପକ୍ଷକୁ 4/√3 ଦ୍ୱାରା ଗୁଣ କଲେ a² = 48। ଧନାତ୍ମକ ବାହୁ a = √48 = 4√3 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟେକ ବାହୁର ଦୈର୍ଘ୍ୟ 4√3 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭</a></small></article>
+<article id="exercise-116"><h2>5(d) · 8. 336 ସେ.ମି. ଉଚ୍ଚ ସରଳ ପ୍ରିଜିମ୍‌ର ଭୂମିର ବାହୁ 21, 72, 75 ସେ.ମି.। ସମାନ ଆୟତନର ଅନ୍ୟ ପ୍ରିଜିମ୍‌ର ଉଚ୍ଚତା 288 ସେ.ମି. ଓ ତାହାର ସମକୋଣୀ ତ୍ରିଭୁଜାକାର ଭୂମିର କର୍ଣ୍ଣ 42√2 ସେ.ମି.। ଭୂମିର ବାହୁଗୁଡ଼ିକ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>21² + 72² = 75²। ତେଣୁ ପ୍ରଥମ ଭୂମିର କ୍ଷେତ୍ରଫଳ = 21 × 72/2 = 756 ବର୍ଗ ସେ.ମି.।</li><li>ସମାନ ଆୟତନରୁ ଦ୍ୱିତୀୟ ଭୂମିର କ୍ଷେତ୍ରଫଳ = 756 × 336/288 = 882 ବର୍ଗ ସେ.ମି. |</li><li>ଲମ୍ବ ବାହୁ x, y ହେଲେ xy = 2 × 882 = 1764।</li><li>କର୍ଣ୍ଣରୁ x² + y² = (42√2)² = 3528। ତେଣୁ (x − y)² = 3528 − 2 × 1764 = 0।</li><li>x = y ଓ xy = 1764 ହେତୁ x = y = 42 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ୱିତୀୟ ଭୂମିର ଲମ୍ବ ବାହୁ 42 ସେ.ମି. ଓ 42 ସେ.ମି., କର୍ଣ୍ଣ 42√2 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=157" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୭–୧୫୮</a></small></article>
+<article id="exercise-117"><h2>5(d) · 9. 8√3 ମିଟର ଉଚ୍ଚ ସରଳ ପ୍ରିଜିମ୍‌ର ଭୂମି ଏକ ସମବାହୁ ତ୍ରିଭୁଜ। ଆୟତନ 864 ଘନମିଟର ହେଲେ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ ପ୍ରିଜିମ୍‌ର ପାର୍ଶ୍ୱତଳଗୁଡ଼ିକ ଆୟତ। ପ୍ରତି ଆୟତର ଉଚ୍ଚତା ଏକା, ପ୍ରସ୍ଥଗୁଡ଼ିକର ସମଷ୍ଟି ଭୂମିର ପରିସୀମା। ତେଣୁ ପାର୍ଶ୍ୱତଳର କ୍ଷେତ୍ରଫଳ = ଭୂମିର ପରିସୀମା × ଉଚ୍ଚତା।</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ A = 864/(8√3) = 36√3 ବର୍ଗମିଟର।</li><li>ଭୂମିର ବାହୁ a ନେଲେ (√3/4)a² = 36√3।</li><li>a² = 144 ଓ a = 12 ମିଟର।</li><li>ପରିସୀମା 36 ମିଟର ହେତୁ ପାର୍ଶ୍ୱ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = 36 × 8√3 = 288√3।</li><li>ସମଗ୍ର କ୍ଷେତ୍ରଫଳ = 288√3 + 2 × 36√3 = 360√3 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 360√3 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-118"><h2>5(d) · 10. 4 ମିଟର ବ୍ୟାସ ଓ 9 ମିଟର ଗଭୀର କୂଅ ଖୋଳି ସେଥିରୁ ବାହାରିଥିବା ମାଟିକୁ 12 ମିଟର ବ୍ୟାସର ସିଲିଣ୍ଡର ଆକୃତିର ସ୍ତୂପରେ ଗଦା କରାଗଲା। ସ୍ତୂପର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କୂଅର ବ୍ୟାସାର୍ଦ୍ଧ 4/2 = 2 ମିଟର। ଖୋଳା ମାଟିର ଆୟତନ = π × 2² × 9 = 36π ଘନମିଟର।</li><li>ସ୍ତୂପର ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ 12/2 = 6 ମିଟର।</li><li>ଉଚ୍ଚତା H ହେଲେ ସ୍ତୂପର ଆୟତନ = π × 6² × H = 36πH।</li><li>ଉଭୟ ଆୟତନ ସମାନ ହେତୁ 36πH = 36π। ତେଣୁ H = 1 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସ୍ତୂପର ଉଚ୍ଚତା 1 ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-119"><h2>5(d) · 11. ସିଲିଣ୍ଡର ଆକାରର ସ୍ତମ୍ଭ ତିଆରି କରିବାକୁ ପ୍ରତି 100 ଘନ ଡେ.ମି.କୁ 8 ଟଙ୍କା ଦରରେ 352 ଟଙ୍କା ଖର୍ଚ୍ଚ ହୁଏ। ଭୂମିର ବ୍ୟାସ 20 ଡେ.ମି. ହେଲେ ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୋଟ ଆୟତନ = (352/8) × 100 = 4400 ଘନ ଡେ.ମି.।</li><li>ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ = 20/2 = 10 ଡେ.ମି.। ଭୂମିର କ୍ଷେତ୍ରଫଳ = 100π ବର୍ଗ ଡେ.ମି.।</li><li>ଉଚ୍ଚତା = ଆୟତନ/ଭୂମିର କ୍ଷେତ୍ରଫଳ = 4400/(100π) ≃ (44 × 7)/22 = 14 ଡେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 14 ଡେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-120"><h2>5(d) · 12. 28 ମିଟର ଉଚ୍ଚ ସିଲିଣ୍ଡର ଏବଂ 5½ ମିଟର ଦୈର୍ଘ୍ୟ ବିଶିଷ୍ଟ ବାହୁ ଥିବା ସମଘନର ଆୟତନ ସମାନ। ସିଲିଣ୍ଡରର ଭୂମିର ବ୍ୟାସ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମଘନର ବାହୁ 11/2 ମିଟର। ଏହାର ଆୟତନ = (11/2)³ = 1331/8 ଘନମିଟର।</li><li>ସିଲିଣ୍ଡରର ବ୍ୟାସାର୍ଦ୍ଧ r ହେଲେ 28πr² = 1331/8।</li><li>π ≃ 22/7 ନେଇ 88r² = 1331/8, ତେଣୁ r² = 121/64।</li><li>r = 11/8 ମିଟର। ବ୍ୟାସ = 2r = 11/4 = 2¾ ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୂମିର ବ୍ୟାସ 2¾ ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-121"><h2>5(d) · 13. ସିଲିଣ୍ଡରର ଘନଫଳ 9504 ଘନ ସେ.ମି. ଓ ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 1584 ବର୍ଗ ସେ.ମି.। ଏହାର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସିଲିଣ୍ଡର୍‌ର ବକ୍ରତଳ ଖୋଲିଲେ ଆୟତ। ଏହାର ଦୈର୍ଘ୍ୟ ଭୂମିର ପରିଧି 2πr ଓ ପ୍ରସ୍ଥ ଉଚ୍ଚତା h, ତେଣୁ ବକ୍ରତଳ 2πrh।</li><li>ଆୟତନ V = πr²h ଏବଂ ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ L = 2πrh। ଉଭୟର ଭାଗଫଳ V/L = r/2।</li><li>r/2 = 9504/1584 = 6। ତେଣୁ r = 12 ସେ.ମି.।</li><li>2π × 12 × h = 1584। π ≃ 22/7 ନେଇ h = (1584 × 7)/(24 × 22) = 21 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 21 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-122"><h2>5(d) · 14. ସିଲିଣ୍ଡରର ଉଚ୍ଚତା ଭୂମିର ବ୍ୟାସର ଦୁଇଗୁଣ ଓ ଘନଫଳ 539 ଘନ ଡେ.ମି.। ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସାର୍ଦ୍ଧ r ହେଲେ ବ୍ୟାସ 2r ଓ ଉଚ୍ଚତା h = 4r। ଆୟତନ = πr² × 4r = 4πr³।</li><li>π ≃ 22/7 ନେଇ r³ = (539 × 7)/88 = 343/8। ତେଣୁ r = 7/2 ଡେ.ମି. ଓ h = 14 ଡେ.ମି.।</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = 2πr(h + r) = 2 × (22/7) × (7/2) × (35/2) = 385।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>385 ବର୍ଗ ଡେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-123"><h2>5(d) · 15. ନିଦା ସମବର୍ତ୍ତୁଳର ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 701¼ ବର୍ଗ ସେ.ମି. ଓ ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 528 ବର୍ଗ ସେ.ମି.। ଆୟତନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ଭୂମିର ମୋଟ କ୍ଷେତ୍ରଫଳ 2πr² = 701¼ − 528 = 173¼ = 693/4। ତେଣୁ πr² = 693/8।</li><li>π ≃ 22/7 ନେଲେ r² = (693 × 7)/(8 × 22) = 441/16, ଅର୍ଥାତ୍ r = 21/4 ସେ.ମି.।</li><li>ବକ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 2πrh = 528 ଓ 2πr = 33 ହେତୁ h = 16 ସେ.ମି.।</li><li>ଆୟତନ = πr²h = (693/8) × 16 = 1386 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟତନ 1386 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-124"><h2>5(d) · 16. ସରଳ ବୃତ୍ତଭୂମିକ ସିଲିଣ୍ଡରର ଉଚ୍ଚତା ଓ ବ୍ୟାସର ଅନୁପାତ 3 : 2 ଓ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 1232 ବର୍ଗ ସେ.ମି.। ଘନଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ 2r ନେଲେ h/(2r) = 3/2 ବା h = 3r।</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = 2πr(h + r) = 8πr² = 1232।</li><li>π ≃ 22/7 ନେଲେ r² = 1232 × 7/176 = 49।</li><li>r = 7 ସେ.ମି. ଓ h = 21 ସେ.ମି.। ଘନଫଳ = (22/7) × 7² × 21 = 3234 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଘନଫଳ 3234 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-125"><h2>5(d) · 17. ଉଭୟ ପ୍ରାନ୍ତ ବନ୍ଦ ଫମ୍ପା ସିଲିଣ୍ଡରରେ ବ୍ୟବହୃତ ଧାତୁର ଘନଫଳ 4928 ଘନ ସେ.ମି., ପୃଷ୍ଠତଳଦ୍ୱୟର କ୍ଷେତ୍ରଫଳର ଅନ୍ତର 352 ବର୍ଗ ସେ.ମି. ଓ ଉଚ୍ଚତା 28 ସେ.ମି.। ଏହାର ଭିତର ଓ ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ R ଓ ଭିତର ବ୍ୟାସାର୍ଦ୍ଧ r ନିଅ।</li><li>ପୁସ୍ତକର ଉତ୍ତର ଅନୁସାରେ ପୃଷ୍ଠତଳଦ୍ୱୟ ହେଲେ ସମାନ ଉଚ୍ଚତାର ଦୁଇ ବକ୍ର ପୃଷ୍ଠ।</li><li>ପ୍ରାନ୍ତ ଢାଙ୍କୁଥିବା ପାତର ବେଧ ପୃଥକ୍ ଦିଆଯାଇନାହିଁ।</li><li>କ୍ଷେତ୍ରଫଳର ଅନ୍ତର = 2πh(R − r) = 352।</li><li>π ≃ 22/7 ଓ h = 28 ନେଲେ 176(R − r) = 352, ତେଣୁ R − r = 2।</li><li>ଧାତୁର ଘନଫଳ = πh(R² − r²) = 4928।</li><li>ତେଣୁ (R − r)(R + r) = 4928/88 = 56।</li><li>ଏହାରୁ R + r = 28।</li><li>ଯୋଗ ଓ ଅନ୍ତରରୁ R = (28 + 2)/2 = 15 ଓ r = (28 − 2)/2 = 13 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭିତର ବ୍ୟାସାର୍ଦ୍ଧ 13 ସେ.ମି., ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ 15 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=158" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫୮</a></small></article>
+<article id="exercise-126"><h2>5(e) · 1(i). କୋନ୍ ଆକୃତିର ଟୋପିର ଉଚ୍ଚତା 3.5 ସେ.ମି. ଓ ବକ୍ର ଉଚ୍ଚତା 9.1 ସେ.ମି.। ଲାଗିଥିବା କପଡ଼ା ଓ ଭୂମିର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ଉଚ୍ଚତା h, ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ r ଓ ବକ୍ର ଉଚ୍ଚତା ℓ ନେଲେ ℓ² = h² + r² |</li><li>ତେଣୁ r = √(9.1² − 3.5²) = 8.4 ସେ.ମି. |</li><li>ଟୋପି ତଳୁ ଖୋଲା। କପଡ଼ାର କ୍ଷେତ୍ରଫଳ = πrℓ = (22/7) × 8.4 × 9.1 = 240.24 ବର୍ଗ ସେ.ମି.।</li><li>ବୃତ୍ତାକାର ଭୂମିର କ୍ଷେତ୍ରଫଳ = πr² = (22/7) × 8.4² = 221.76 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କପଡ଼ା 240.24 ବର୍ଗ ସେ.ମି. ଓ ଭୂମିର କ୍ଷେତ୍ରଫଳ 221.76 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩</a></small></article>
+<article id="exercise-127"><h2>5(e) · 1(ii). କୋନ୍ ଆକୃତିର ଟୋପିର ଉଚ୍ଚତା 5.6 ସେ.ମି. ଓ ବକ୍ର ଉଚ୍ଚତା 11.9 ସେ.ମି.। ଲାଗିଥିବା କପଡ଼ା ଓ ଭୂମିର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ଉଚ୍ଚତା h, ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ r ଓ ବକ୍ର ଉଚ୍ଚତା ℓ ନେଲେ ℓ² = h² + r² |</li><li>ତେଣୁ r = √(11.9² − 5.6²) = 10.5 ସେ.ମି. |</li><li>ଟୋପି ତଳୁ ଖୋଲା।</li><li>କପଡ଼ାର କ୍ଷେତ୍ରଫଳ = πrℓ = (22/7) × 10.5 × 11.9 = 392.7 ବର୍ଗ ସେ.ମି. |</li><li>ବୃତ୍ତାକାର ଭୂମିର କ୍ଷେତ୍ରଫଳ = πr² = (22/7) × 10.5² = 346.5 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କପଡ଼ା 392.7 ବର୍ଗ ସେ.ମି. ଓ ଭୂମିର କ୍ଷେତ୍ରଫଳ 346.5 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩</a></small></article>
+<article id="exercise-128"><h2>5(e) · 1(iii). କୋନ୍ ଆକୃତିର ଟୋପିର ଉଚ୍ଚତା 3.5 ସେ.ମି. ଓ ବକ୍ର ଉଚ୍ଚତା 12.5 ସେ.ମି.। ଲାଗିଥିବା କପଡ଼ା ଓ ଭୂମିର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ଉଚ୍ଚତା h, ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ r ଓ ବକ୍ର ଉଚ୍ଚତା ℓ ନେଲେ ℓ² = h² + r² |</li><li>ତେଣୁ r = √(12.5² − 3.5²) = 12 ସେ.ମି. |</li><li>ଟୋପି ତଳୁ ଖୋଲା।</li><li>କପଡ଼ାର କ୍ଷେତ୍ରଫଳ = πrℓ = (22/7) × 12 × 12.5 = 471 3/7 ବର୍ଗ ସେ.ମି. |</li><li>ବୃତ୍ତାକାର ଭୂମିର କ୍ଷେତ୍ରଫଳ = πr² = (22/7) × 12² = 452 4/7 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କପଡ଼ା 471 3/7 ବର୍ଗ ସେ.ମି. ଓ ଭୂମିର କ୍ଷେତ୍ରଫଳ 452 4/7 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩</a></small></article>
+<article id="exercise-129"><h2>5(e) · 2(i). କୋନ୍ ଆକୃତିର ତମ୍ବୁର ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ 10.5 ମି. ଓ ବକ୍ର ଉଚ୍ଚତା 14.5 ମି.। ଭିତରର ଆୟତନ ଓ ଲାଗିଥିବା କପଡ଼ାର ପରିମାଣ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>h = √(ℓ² − r²) = √(14.5² − 10.5²) = √100 = 10 ମି.।</li><li>V = πr²h/3 = (22/7) × 10.5² × 10/3 = 1155 ଘନମିଟର।</li><li>ତମ୍ବୁର କପଡ଼ା ବକ୍ରତଳକୁ ଘୋଡ଼ାଏ।</li><li>ଏହାର କ୍ଷେତ୍ରଫଳ πrℓ = (22/7) × 10.5 × 14.5 = 478.5 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟତନ 1155 ଘନମିଟର ଓ କପଡ଼ା 478.5 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩</a></small></article>
+<article id="exercise-130"><h2>5(e) · 2(ii). କୋନ୍ ଆକୃତିର ତମ୍ବୁ ପାଇଁ ଉପପ୍ରଶ୍ନରେ h = 24 ମି. ଓ ℓ = 25 ମି. ଦିଆଯାଇଛି। ଭିତରର ଆୟତନ ଓ କପଡ଼ାର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>r = √(ℓ² − h²) = √(25² − 24²) = 7 ମି.।</li><li>V = πr²h/3 = (22/7) × 49 × 24/3 = 1232 ଘନମିଟର।</li><li>ବକ୍ରତଳ = πrℓ = (22/7) × 7 × 25 = 550 ବର୍ଗମିଟର।</li><li>ମୂଳ ନିର୍ଦ୍ଦେଶରେ r ଓ ℓ ଦତ୍ତ ବୋଲି ଲେଖାଅଛି।</li><li>ଯଦି 24 ମି.କୁ r ଧରାଯାଏ, h = √(25² − 24²) = 7 ମି. |</li><li>ସେତେବେଳେ V = 4224 ଘନମିଟର ଓ πrℓ = 1885 5/7 ବର୍ଗମିଟର ହୁଏ।</li><li>ଉତ୍ତରମାଳା ଏହି ମାନ ଦେଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୁଦ୍ରିତ h = 24 ମି. ଅନୁସାରେ ଆୟତନ 1232 ଘନମିଟର ଓ କପଡ଼ା 550 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩</a></small></article>
+<article id="exercise-131"><h2>5(e) · 3(i). କୋନ୍‌ର ଆୟତନ 12936 ଘନମିଟର ଓ ଉଚ୍ଚତା 28 ମିଟର। ଭୂମି ଓ ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର। π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ A ହେଲେ V = Ah/3। ତେଣୁ A = 3 × 12936/28 = 1386।</li><li>πr² = 1386 ରୁ r² = 1386 × 7/22 = 441, ଅର୍ଥାତ୍ r = 21 ମି. |</li><li>ℓ = √(21² + 28²) = 35 ମି. |</li><li>ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ = πrℓ = (22/7) × 21 × 35 = 2310 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୂମିର କ୍ଷେତ୍ରଫଳ 1386 ବର୍ଗମିଟର ଓ ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ 2310 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩</a></small></article>
+<article id="exercise-132"><h2>5(e) · 3(ii). କୋନ୍‌ର ଆୟତନ 9240 ଘନ ଏକକ ଓ ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ 21 ଏକକ। ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର। π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ πr² = (22/7) × 21² = 1386।</li><li>V = πr²h/3 ରୁ h = 3 × 9240/1386 = 20 ଏକକ।</li><li>ବକ୍ର ଉଚ୍ଚତା ℓ = √(21² + 20²) = √841 = 29 ଏକକ।</li><li>ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ = πrℓ = (22/7) × 21 × 29 = 1914 ବର୍ଗ ଏକକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1914 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=163" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୩</a></small></article>
+<article id="exercise-133"><h2>5(e) · 4(i). କୋନ୍‌ର ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ 550 ବର୍ଗ ସେ.ମି. ଓ ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ 7 ସେ.ମି.। ଆୟତନ ଏବଂ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର। π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>πrℓ = 550 ରୁ ℓ = 550 ÷ [(22/7) × 7] = 25 ସେ.ମି.। h = √(25² − 7²) = 24 ସେ.ମି.।</li><li>V = πr²h/3 = (22/7) × 7² × 24/3 = 1232 ଘନ ସେ.ମି.।</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ πr² = 154। ଏଥିରେ ବକ୍ରତଳ ଯୋଡ଼ିଲେ 154 + 550 = 704 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟତନ 1232 ଘନ ସେ.ମି. ଓ ସମଗ୍ର ପୃଷ୍ଠତଳ 704 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-134"><h2>5(e) · 4(ii). କୋନ୍‌ର ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ 4070 ବର୍ଗ ସେ.ମି. ଓ ବକ୍ର ଉଚ୍ଚତା 37 ସେ.ମି.। ଭୂମିର କ୍ଷେତ୍ରଫଳ ଓ ଆୟତନ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>πrℓ = 4070। r = 4070 × 7/(22 × 37) = 35 ସେ.ମି.।</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ A = (22/7) × 35² = 3850 ବର୍ଗ ସେ.ମି. |</li><li>h = √(37² − 35²) = 12 ସେ.ମି. |</li><li>ଆୟତନ = Ah/3 = 3850 × 12/3 = 15400 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୂମିର କ୍ଷେତ୍ରଫଳ 3850 ବର୍ଗ ସେ.ମି. ଓ ଆୟତନ 15400 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-135"><h2>5(e) · 5. କୋନ୍‌ର ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 2816 ବର୍ଗ ସେ.ମି. ଓ ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ 14 ସେ.ମି.। ଆୟତନ ଓ ବକ୍ରପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳ = πr(r + ℓ) = 44(14 + ℓ) = 2816। ତେଣୁ ℓ = 64 − 14 = 50 ସେ.ମି.।</li><li>h = √(50² − 14²) = 48 ସେ.ମି.। ଆୟତନ = (22/7) × 14² × 48/3 = 9856 ଘନ ସେ.ମି.।</li><li>ବକ୍ରପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ = πrℓ = 44 × 50 = 2200 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟତନ 9856 ଘନ ସେ.ମି. ଓ ବକ୍ରପୃଷ୍ଠତଳ 2200 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-136"><h2>5(e) · 6. ଏକ କୋନ୍‌ର ସମଗ୍ର ପୃଷ୍ଠତଳ 1386 ବର୍ଗ ସେ.ମି. ଓ ବକ୍ରତଳ 770 ବର୍ଗ ସେ.ମି.। ଆୟତନ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ବୃତ୍ତାକାର ଭୂମିର କ୍ଷେତ୍ରଫଳ = 1386 − 770 = 616।</li><li>πr² = 616 ରୁ r² = 196, r = 14 ସେ.ମି. |</li><li>πrℓ = 770 ରୁ ℓ = 770/44 = 17.5 ସେ.ମି.। h = √(17.5² − 14²) = 10.5 ସେ.ମି.।</li><li>ଆୟତନ = ଭୂମିର କ୍ଷେତ୍ରଫଳ × ଉଚ୍ଚତା/3 = 616 × 10.5/3 = 2156 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2156 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-137"><h2>5(e) · 7(i). ଆୟତନ 12936 ଘନ ସେ.ମି. ଓ r : h = 3 : 4 ହେଲେ କୋନ୍‌ର ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>r = 3x, h = 4x ଧର। ତେବେ ℓ = √(9x² + 16x²) = 5x।</li><li>V = π(3x)²(4x)/3 = 12πx³ = 12936। ତେଣୁ x³ = 12936 × 7/(12 × 22) = 343, x = 7।</li><li>r = 21 ଓ ℓ = 35 ସେ.ମି.। ବକ୍ରତଳ = πrℓ = (22/7) × 21 × 35 = 2310 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2310 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-138"><h2>5(e) · 7(ii). ଆୟତନ 17248 ଘନମିଟର ଓ r : ℓ = 4 : 5 ହେଲେ କୋନ୍‌ର ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>r = 4x, ℓ = 5x ହେଲେ h = √(25x² − 16x²) = 3x।</li><li>V = π(4x)²(3x)/3 = 16πx³। x³ = 17248 × 7/(16 × 22) = 343। ତେଣୁ x = 7।</li><li>r = 28 ମି. ଓ ℓ = 35 ମି.। ବକ୍ରତଳ = (22/7) × 28 × 35 = 3080 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3080 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-139"><h2>5(e) · 8(i). ଦୁଇ କୋନ୍‌ର ବ୍ୟାସାର୍ଦ୍ଧର ଅନୁପାତ 3 : 5 ଓ ଉଚ୍ଚତାର ଅନୁପାତ 1 : 3। ଆୟତନର ଅନୁପାତ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆୟତନ V = πr²h/3। ଦୁଇ ଆୟତନର ଅନୁପାତରେ ସାଧାରଣ ଗୁଣକ π/3 କଟିଯାଏ।</li><li>V₁ : V₂ = (3² × 1) : (5² × 3) = 9 : 75। ଉଭୟକୁ 3 ଦ୍ୱାରା ଭାଗ କଲେ 3 : 25।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3 : 25।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-140"><h2>5(e) · 8(ii). ଦୁଇ କୋନ୍‌ର ବ୍ୟାସାର୍ଦ୍ଧର ଅନୁପାତ 2 : 7 ଓ ବକ୍ର ଉଚ୍ଚତାର ଅନୁପାତ 3 : 8। ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳ S = πrℓ। ତେଣୁ S₁/S₂ = (r₁/r₂) × (ℓ₁/ℓ₂)।</li><li>ଦତ୍ତ ମାନ ବସାଇଲେ (2/7) × (3/8) = 6/56 = 3/28। ତେଣୁ ଅନୁପାତ 3 : 28।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3 : 28।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-141"><h2>5(e) · 8(iii). ଦୁଇ କୋନ୍‌ର ଭୂମିର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ 1 : 9 ଓ ବକ୍ରତଳର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ 5 : 21। ବକ୍ର ଉଚ୍ଚତାର ଅନୁପାତ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ଭୂମିର କ୍ଷେତ୍ରଫଳ πr² ହେତୁ r₁/r₂ = √(1/9) = 1/3।</li><li>ବକ୍ରତଳର ଅନୁପାତ (r₁/r₂) × (ℓ₁/ℓ₂) = 5/21। ତେଣୁ ℓ₁/ℓ₂ = (5/21) ÷ (1/3) = 5/7।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5 : 7।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-142"><h2>5(e) · 9(i). କୋନ୍‌ର ଉଚ୍ଚତା ବକ୍ର ଉଚ୍ଚତାର ଅଧା। ବ୍ୟାସାର୍ଦ୍ଧ 5√3 ସେ.ମି. ହେଲେ ଘନଫଳ କେତେ? π ପାଇଁ 3.14 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ℓ = 2h। ℓ² = r² + h² ରୁ 4h² = 75 + h²।</li><li>3h² = 75, ତେଣୁ h = 5 ସେ.ମି.।</li><li>V = πr²h/3 = 3.14 × 75 × 5/3 = 392.5 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>392.5 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-143"><h2>5(e) · 9(ii). କୋନ୍‌ର ଉଚ୍ଚତା ଏହାର ବ୍ୟାସାର୍ଦ୍ଧର ଅଧା ଓ ବକ୍ର ଉଚ୍ଚତା 50 ସେ.ମି.। ଘନଫଳ କେତେ? π ପାଇଁ 3.14 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>r = 2h ହେତୁ 50² = (2h)² + h² = 5h²। ତେଣୁ h² = 500, h = 10√5 ଓ r = 20√5 ସେ.ମି.।</li><li>V = πr²h/3 = (3.14/3) × (20√5)² × 10√5 = 62800√5/3 ଘନ ସେ.ମି.।</li><li>ଉତ୍ତରମାଳାରେ 20940√5 ଅଛି।</li><li>ପ୍ରଶ୍ନରେ ଦିଆଯାଇଥିବା 3.14 ନେଲେ √5ର ଗୁଣାଙ୍କ 62800/3 = 20933⅓ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>62800√5/3 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-144"><h2>5(e) · 9(iii). କୋନ୍‌ର ଉଚ୍ଚତା ଓ ଭୂମିର ବ୍ୟାସର ଅନୁପାତ 2 : 3। ବକ୍ର ଉଚ୍ଚତା 20 ସେ.ମି. ହେଲେ ଘନଫଳ କେତେ? π ପାଇଁ √10 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ଦିଆଯାଇଥିବା ଅନୁପାତ h : 2r = 2 : 3। ତେଣୁ h : r = 4 : 3। h = 4x, r = 3x ଧର।</li><li>ℓ² = 16x² + 9x² = 25x²। 5x = 20 ରୁ x = 4। ତେଣୁ h = 16 ଓ r = 12 ସେ.ମି.।</li><li>V = πr²h/3 = √10 × 12² × 16/3 = 768√10 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>768√10 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-145"><h2>5(e) · 10. 21 ସେ.ମି. ବାହୁ ବିଶିଷ୍ଟ ସମଘନାକାର କାଠଖଣ୍ଡରୁ ବୃହତ୍ତମ ଆୟତନର କୋନ୍ କାଟିଲେ ତାହାର ଘନଫଳ ଓ ସମଗ୍ର ପୃଷ୍ଠତଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>ପୁସ୍ତକରେ ବିଚାରିତ କୋନ୍‌ର ଭୂମି ଗୋଟିଏ ଫଳକର ଅନ୍ତର୍ଲିଖିତ ବୃତ୍ତ।</li><li>ତାର ବ୍ୟାସ 21 ସେ.ମି., r = 10.5 ସେ.ମି. ଓ h = 21 ସେ.ମି. |</li><li>ଘନଫଳ = (22/7) × 10.5² × 21/3 = 2425.5 ଘନ ସେ.ମି. |</li><li>ℓ = √(10.5² + 21²) = 10.5√5 ସେ.ମି. |</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳ = πr(r + ℓ) = (22/7) × 10.5² × (1 + √5) = 346.5(1 + √5) ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଘନଫଳ 2425.5 ଘନ ସେ.ମି. ଓ ସମଗ୍ର ପୃଷ୍ଠତଳ 346.5(1 + √5) ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-146"><h2>5(e) · 11. ବ୍ୟାସାର୍ଦ୍ଧ 12 ସେ.ମି. ଓ କେନ୍ଦ୍ରସ୍ଥ କୋଣ 120° ଥିବା ବୃତ୍ତକଳା ଆକୃତିର ଟିଣପତ୍ରର ଦୁଇ ବ୍ୟାସାର୍ଦ୍ଧକୁ ଯୋଡ଼ି କୋନ୍ ପାତ୍ର କରାଗଲା। କେତେ ପାଣି ଧରିବ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କେନ୍ଦ୍ରସ୍ଥ କୋଣ θ ହେଲେ ବୃତ୍ତକଳାର ଅଂଶ θ/360°। ସେହି ଅଂଶକୁ ପୂର୍ଣ୍ଣ ବୃତ୍ତର କ୍ଷେତ୍ରଫଳ πr² ସହ ଗୁଣ କରିବା ଦରକାର।</li><li>କୋନ୍‌ର ବକ୍ର ଉଚ୍ଚତା ℓ = 12।</li><li>ବୃତ୍ତକଳାର ଚାପଦୈର୍ଘ୍ୟ = (120/360) × 2π × 12 = 8π ସେ.ମି. |</li><li>ଏହି ଚାପ ଭୂମିର ପରିଧି ହୁଏ। 2πr = 8π ରୁ r = 4। h = √(12² − 4²) = √128 = 8√2 ସେ.ମି.।</li><li>ପାତ୍ରର ଆୟତନ = πr²h/3 = (22/7) × 16 × 8√2/3 = 2816√2/21 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2816√2/21 ଘନ ସେ.ମି. ପାଣି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-147"><h2>5(e) · 12. ବ୍ୟାସ 6 ସେ.ମି. ଓ ଉଚ୍ଚତା 8 ସେ.ମି. ଥିବା ନିଦା କୋନ୍‌କୁ ଭିତର ବ୍ୟାସ 8 ସେ.ମି. ଥିବା ସିଲିଣ୍ଡରର ପାଣିରେ ସମ୍ପୂର୍ଣ୍ଣ ବୁଡ଼ାଗଲା। ଜଳସ୍ତର କେତେ ବଢ଼ିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କୋନ୍‌ର ବ୍ୟାସାର୍ଦ୍ଧ 6/2 = 3 ସେ.ମି. |</li><li>ଅପସାରିତ ପାଣିର ଆୟତନ = କୋନ୍‌ର ଆୟତନ = π × 3² × 8/3 = 24π |</li><li>ସିଲିଣ୍ଡରର ବ୍ୟାସାର୍ଦ୍ଧ 4 ସେ.ମି. |</li><li>ଜଳସ୍ତର x ସେ.ମି. ବଢ଼ିଲେ ସେହି ଅଂଶର ଆୟତନ = π × 4² × x = 16πx।</li><li>16πx = 24π ରୁ x = 24/16 = 1.5 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1.5 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=164" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୪</a></small></article>
+<article id="exercise-148"><h2>5(e) · 13. ତମ୍ବୁର ନିମ୍ନ ଅଂଶ 35 ମି. ବ୍ୟାସାର୍ଦ୍ଧ ଓ 8 ମି. ଉଚ୍ଚତାର ସିଲିଣ୍ଡର। ଉପର ଅଂଶ ସେହି ବ୍ୟାସାର୍ଦ୍ଧ ଓ 12 ମି. ଉଚ୍ଚତାର କୋନ୍। ତମ୍ବୁ ପାଇଁ କେତେ କପଡ଼ା ଲାଗିବ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସରଳ କୋନ୍‌ର ଶୀର୍ଷ, ଭୂମିର କେନ୍ଦ୍ର ଓ ପରିଧିର ଏକ ବିନ୍ଦୁ ନେଲେ ସମକୋଣୀ ତ୍ରିଭୁଜ ମିଳେ। କର୍ଣ୍ଣ ℓ, ସଂଲଗ୍ନ ବାହୁ h ଓ r, ତେଣୁ ℓ² = h² + r² |</li><li>କୋନ୍‌ର ବକ୍ର ଉଚ୍ଚତା ℓ = √(35² + 12²) = √1369 = 37 ମି.।</li><li>ସିଲିଣ୍ଡରର ବକ୍ରତଳ = 2πrh = 2 × (22/7) × 35 × 8 = 1760 ବର୍ଗମିଟର।</li><li>କୋନ୍‌ର ବକ୍ରତଳ = πrℓ = (22/7) × 35 × 37 = 4070 ବର୍ଗମିଟର।</li><li>ଦୁଇ ବାହାର ପୃଷ୍ଠର ମୋଟ = 1760 + 4070 = 5830 ବର୍ଗମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5830 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=165" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୫</a></small></article>
+<article id="exercise-149"><h2>5(e) · 14. ନିମ୍ନରେ 30 ମି. ଉଚ୍ଚତାର ସିଲିଣ୍ଡର ଓ ଉପରେ କୋନ୍ ଥିବା ତମ୍ବୁର ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ 21 ମି.। ଭୂପୃଷ୍ଠରୁ ମୋଟ ଉଚ୍ଚତା 58 ମି. ହେଲେ କ୍ୟାନ୍‌ଭାସ୍‌ର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉପର କୋନ୍‌ର ଉଚ୍ଚତା = 58 − 30 = 28 ମି.। ଏହାର ବକ୍ର ଉଚ୍ଚତା = √(21² + 28²) = 35 ମି.।</li><li>ସିଲିଣ୍ଡରର ପାର୍ଶ୍ୱରେ କ୍ୟାନ୍‌ଭାସ୍ = 2π × 21 × 30 = 3960 ବର୍ଗମିଟର।</li><li>ଉପର କୋନ୍‌ରେ ଲାଗିବ π × 21 × 35 = 2310 ବର୍ଗମିଟର।</li><li>ମୋଟ କ୍ୟାନ୍‌ଭାସ୍ = 3960 + 2310 = 6270 ବର୍ଗମିଟର।</li><li>ଉତ୍ତରମାଳାରେ 163548 ବର୍ଗମିଟର ମୁଦ୍ରିତ ଅଛି।</li><li>ଦିଆଯାଇଥିବା ମାପରୁ ଦୁଇ ବକ୍ରତଳର ଯୋଗଫଳ 6270 ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6270 ବର୍ଗମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=165" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୫</a></small></article>
+<article id="exercise-150"><h2>5(e) · 15. ଜଳପୂର୍ଣ୍ଣ କୋନ୍ ପାତ୍ରର ଉପର ଧାରର ବ୍ୟାସାର୍ଦ୍ଧ 2.5 ସେ.ମି. ଓ ଗଭୀରତା 11 ସେ.ମି.। 0.25 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର କେତୋଟି ସୀସା ଗୋଲି ଏଥିରେ ପକାଇଲେ ପାଣିର 2/5 ଅଂଶ ବାହାରିଯିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କୋନ୍‌ର ଆୟତନ = π × 2.5² × 11/3। ବାହାରିଥିବା ଜଳର ଆୟତନ ଏହାର 2/5 ଅଂଶ।</li><li>ଗୋଟିଏ ଗୋଲିର ଆୟତନ = (4/3)π × 0.25³ |</li><li>ବୁଡ଼ିଥିବା ସବୁ ଗୋଲିର ଆୟତନ ଅପସାରିତ ଜଳର ଆୟତନ ସହ ସମାନ।</li><li>ଗୋଲି ସଂଖ୍ୟା = (2/5) × (2.5² × 11)/(4 × 0.25³) = (2/5) × 1100 = 440।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>440ଟି ସୀସା ଗୋଲି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=165" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୫</a></small></article>
+<article id="exercise-151"><h2>5(e) · 16. ସମକୋଣୀ ତ୍ରିଭୁଜର ସମକୋଣ ସଂଲଗ୍ନ ବାହୁ 12 ଓ 5 ସେ.ମି.। ବୃହତ୍ତମ ବାହୁକୁ ସ୍ଥିର ରଖି ଘୂରାଇଲେ ଘନବସ୍ତୁର ଘନଫଳ ଓ ସମଗ୍ର ପୃଷ୍ଠତଳ କେତେ? π ମାଧ୍ୟମରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୃହତ୍ତମ ବାହୁ କର୍ଣ୍ଣ = √(12² + 5²) = 13।</li><li>ଘୂର୍ଣ୍ଣନ-ଅକ୍ଷ କର୍ଣ୍ଣ ହେଲେ ସାଧାରଣ ବୃତ୍ତାକାର ଭୂମିରେ ଯୋଡ଼ା ଦୁଇଟି କୋନ୍ ହୁଏ।</li><li>ସାଧାରଣ ବ୍ୟାସାର୍ଦ୍ଧ r ହେଉଛି ସମକୋଣ ଶୀର୍ଷରୁ କର୍ଣ୍ଣ ଉପରେ ଅଙ୍କିତ ଲମ୍ବ।</li><li>ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳରୁ (1/2) × 12 × 5 = (1/2) × 13 × r, ତେଣୁ r = 60/13।</li><li>ଦୁଇ କୋନ୍‌ର ଉଚ୍ଚତାର ଯୋଗ 13।</li><li>ମୋଟ ଘନଫଳ = πr² × 13/3 = 1200π/13 ଘନ ସେ.ମି. |</li><li>ବକ୍ର ଉଚ୍ଚତା ଦୁଇଟି 12 ଓ 5।</li><li>ବାହାର ପୃଷ୍ଠର କ୍ଷେତ୍ରଫଳ = πr(12 + 5) = 1020π/13 ବର୍ଗ ସେ.ମି. |</li><li>ଉତ୍ତରମାଳାର 100π ଓ 90π ମାନ 12 ସେ.ମି. ବାହୁକୁ ଅକ୍ଷ କଲେ ମିଳେ।</li><li>ସେତେବେଳେ ଗୋଟିଏ କୋନ୍‌ର h = 12, r = 5 ଓ ℓ = 13 ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଘନଫଳ 1200π/13 ଘନ ସେ.ମି. ଓ ସମଗ୍ର ପୃଷ୍ଠତଳ 1020π/13 ବର୍ଗ ସେ.ମି.।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="13 ସେ.ମି. କର୍ଣ୍ଣ ABରେ ଘୂର୍ଣ୍ଣନ। ଦୁଇ କୋନ୍‌ର ସାଧାରଣ ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ CH = 60/13 ସେ.ମି. ଓ ଦୁଇ ବକ୍ର ଉଚ୍ଚତା AC = 5 ସେ.ମି., BC = 12 ସେ.ମି.।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMzY2IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+4KyV4Kyw4K2N4Kyj4K2N4KyjIEFCIOCsmuCsvuCssOCsv+CsquCsvuCsluCssOCthyDgrLjgrK7grJXgrYvgrKPgrYAg4Kyk4K2N4Kyw4Ky/4Kyt4K2B4Kyc4KywIOCsmOCtguCssOCtjeCso+CtjeCso+CsqDwvdGl0bGU+CiAgPGRlc2MgaWQ9ImRlc2MiPuCsuOCsruCsleCti+Cso+CtgCDgrKTgrY3grLDgrL/grK3grYHgrJwgQUJD4KywIEFDID0gNSBjbSwgQkMgPSAxMiBjbSDgrJMgQUIgPSAxMyBjbeClpCDgrJXgrLDgrY3grKPgrY3grKMgQULgrJXgrYEg4KyF4KyV4K2N4Ky3IOCssOCsluCsvyDgrJjgrYLgrLDgrL7grIfgrLLgrYcgQyDgrKzgrL/grKjgrY3grKbgrYEg4KyP4KyVIOCsrOCtg+CspOCtjeCspCDgrIbgrJngrY3grJXgrYfgpaQgQ0gg4Ky44K2H4Ky54Ky/IOCsrOCtg+CspOCtjeCspOCssCDgrKzgrY3grZ/grL7grLjgrL7grLDgrY3grKbgrY3grKfgpaQg4Kys4K2D4Kyk4K2N4Kyk4KywIOCspuCtgeCsh+CsquCsn+CthyBBIOCskyBCIOCstuCtgOCssOCtjeCstyDgrKXgrL7grIcg4Kym4K2B4KyH4Kyf4Ky/IOCsleCti+CsqOCtjSDgrJfgrKDgrL/grKQg4Ky54K2B4KyP4KWkPC9kZXNjPgogIDxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMzY2IiByeD0iMTIiIGZpbGw9IiNmYWY5ZjMiLz4KICA8ZyBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPHBhdGggZD0iTTQ1IDE3MiBMMTAzIDMzLjUgTDQzNSAxNzIgTDEwMyAzMTAuNSBaIiBmaWxsPSIjZTRlZWViIiBzdHJva2U9IiMyMDU4NTEiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICA8cGF0aCBkPSJNMTAzIDMzLjUgQzcyIDMzLjUgNzIgMzEwLjUgMTAzIDMxMC41IiBmaWxsPSJub25lIiBzdHJva2U9IiM1NTgwODAiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDUiLz4KICAgIDxwYXRoIGQ9Ik0xMDMgMzMuNSBDMTM0IDMzLjUgMTM0IDMxMC41IDEwMyAzMTAuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDQ3YTcxIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxwYXRoIGQ9Ik0zNCAxNzIgSDQ1NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDU1ZDY5IiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWRhc2hhcnJheT0iNiA0Ii8+CiAgICA8cGF0aCBkPSJNMTAzIDMzLjUgVjE3MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOWE0ZTFkIiBzdHJva2Utd2lkdGg9IjIuMiIvPgogICAgPHBhdGggZD0iTTEwMyAxNjIgSDExMyBWMTcyIE05OC44IDQzLjYgTDEwOC45IDQ3LjggTDExMy4xIDM3LjciIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMxNWQ1NyIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KICAgIDxwYXRoIGQ9Ik00NSAzMjYgVjMzOCBNNDUgMzMyIEg0MzUgTTQzNSAzMjYgVjMzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzE4MTdmIiBzdHJva2Utd2lkdGg9IjEuMyIvPgogICAgPGcgZmlsbD0iIzIwNTg1MSI+PGNpcmNsZSBjeD0iNDUiIGN5PSIxNzIiIHI9IjMiLz48Y2lyY2xlIGN4PSI0MzUiIGN5PSIxNzIiIHI9IjMiLz48Y2lyY2xlIGN4PSIxMDMiIGN5PSIzMy41IiByPSIzIi8+PGNpcmNsZSBjeD0iMTAzIiBjeT0iMTcyIiByPSIyLjgiLz48L2c+CiAgPC9nPgogIDxnIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjMTczZjNjIj4KICAgIDx0ZXh0IHg9IjI0IiB5PSIxODMiPkE8L3RleHQ+PHRleHQgeD0iNDUwIiB5PSIxODkiPkI8L3RleHQ+PHRleHQgeD0iOTgiIHk9IjIzIj5DPC90ZXh0Pjx0ZXh0IHg9Ijg3IiB5PSIxOTMiPkg8L3RleHQ+CiAgICA8dGV4dCB4PSI0OCIgeT0iOTIiIHRyYW5zZm9ybT0icm90YXRlKC02OCA0OCA5MikiPjUgY208L3RleHQ+CiAgICA8dGV4dCB4PSIyNjMiIHk9Ijg4IiB0cmFuc2Zvcm09InJvdGF0ZSgyMi42IDI2MyA4OCkiPjEyIGNtPC90ZXh0PgogICAgPHRleHQgeD0iMjE4IiB5PSIzNTMiPjEzIGNtPC90ZXh0PgogICAgPHRleHQgeD0iMTQzIiB5PSIxNDMiIGZpbGw9IiM4MTQ0MWQiPkNIID0gNjAvMTMgY208L3RleHQ+CiAgPC9nPgo8L3N2Zz4K"></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=165" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୫</a></small></article>
+<article id="exercise-152"><h2>5(f) · 1(i). ଗୋଟିଏ ଗୋଲକର ବ୍ୟାସାର୍ଦ୍ଧ 21 ସେ.ମି.। ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ଓ ଆୟତନ ନିର୍ଣ୍ଣୟ କର। π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସାର୍ଦ୍ଧ r = 21 ସେ.ମି.।</li><li>ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ S = 4πr² = 4 × (22/7) × 21² = 5544 ବର୍ଗ ସେ.ମି.।</li><li>ଆୟତନ V = (4/3)πr³ = Sr/3 = 5544 × 21/3 = 38808 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 5544 ବର୍ଗ ସେ.ମି. ଓ ଆୟତନ 38808 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-153"><h2>5(f) · 1(ii). ଗୋଟିଏ ଗୋଲକର ବ୍ୟାସ 14 ସେ.ମି.। ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ଓ ଆୟତନ ନିର୍ଣ୍ଣୟ କର। π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସ ଦିଆଯାଇଥିବାରୁ ପ୍ରଥମେ ବ୍ୟାସାର୍ଦ୍ଧ ନିଅ। r = 14/2 = 7 ସେ.ମି.।</li><li>ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ S = 4πr² = 4 × (22/7) × 7² = 616 ବର୍ଗ ସେ.ମି.।</li><li>ଆୟତନ V = (4/3)πr³ = Sr/3 = 616 × 7/3 = 1437⅓ ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 616 ବର୍ଗ ସେ.ମି. ଓ ଆୟତନ 1437⅓ ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-154"><h2>5(f) · 1(iii). ଗୋଟିଏ ଗୋଲକର ବ୍ୟାସାର୍ଦ୍ଧ 10.5 ସେ.ମି.। ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ଓ ଆୟତନ ନିର୍ଣ୍ଣୟ କର। π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବ୍ୟାସାର୍ଦ୍ଧ r = 10.5 ସେ.ମି.।</li><li>ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ S = 4πr² = 4 × (22/7) × 10.5² = 1386 ବର୍ଗ ସେ.ମି.।</li><li>ଆୟତନ V = (4/3)πr³ = Sr/3 = 1386 × 10.5/3 = 4851 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 1386 ବର୍ଗ ସେ.ମି. ଓ ଆୟତନ 4851 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-155"><h2>5(f) · 2(i). 3, 4 ଓ 5 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ତିନି ଧାତବ ଗୋଲକକୁ ତରଳାଇ ଗୋଟିଏ ଗୋଲକ କଲେ ନୂତନ ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତରଳାଇ ଗଢ଼ିବାରେ ଧାତୁର ମୋଟ ଆୟତନ ସମାନ ରହେ।</li><li>ନୂଆ ବ୍ୟାସାର୍ଦ୍ଧ R ହେଲେ (4/3)πR³ ତିନି ପୁରୁଣା ଗୋଲକର ଆୟତନର ଯୋଗଫଳ।</li><li>ସାଧାରଣ ଗୁଣକ (4/3)π କାଟିଲେ R³ = 3³ + 4³ + 5³ = 27 + 64 + 125 = 216।</li><li>6³ = 216 ହୋଇଥିବାରୁ R = 6 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-156"><h2>5(f) · 2(ii). 8, 6 ଓ 1 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ତିନି ଧାତବ ଗୋଲକକୁ ତରଳାଇ ଗୋଟିଏ ଗୋଲକ କଲେ ନୂତନ ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତରଳାଇ ଗଢ଼ିବାରେ ଧାତୁର ମୋଟ ଆୟତନ ସମାନ ରହେ।</li><li>ନୂଆ ବ୍ୟାସାର୍ଦ୍ଧ R ହେଲେ (4/3)πR³ ତିନି ପୁରୁଣା ଗୋଲକର ଆୟତନର ଯୋଗଫଳ।</li><li>ସାଧାରଣ ଗୁଣକ (4/3)π କାଟିଲେ R³ = 8³ + 6³ + 1³ = 512 + 216 + 1 = 729।</li><li>9³ = 729 ହୋଇଥିବାରୁ R = 9 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>9 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-157"><h2>5(f) · 2(iii). 17, 14 ଓ 7 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ତିନି ଧାତବ ଗୋଲକକୁ ତରଳାଇ ଗୋଟିଏ ଗୋଲକ କଲେ ନୂତନ ବ୍ୟାସାର୍ଦ୍ଧ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତରଳାଇ ଗଢ଼ିବାରେ ଧାତୁର ମୋଟ ଆୟତନ ସମାନ ରହେ।</li><li>ନୂଆ ବ୍ୟାସାର୍ଦ୍ଧ R ହେଲେ (4/3)πR³ ତିନି ପୁରୁଣା ଗୋଲକର ଆୟତନର ଯୋଗଫଳ।</li><li>ସାଧାରଣ ଗୁଣକ (4/3)π କାଟିଲେ R³ = 17³ + 14³ + 7³ = 4913 + 2744 + 343 = 8000।</li><li>20³ = 8000 ହୋଇଥିବାରୁ R = 20 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>20 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-158"><h2>5(f) · 3(i). ଦୁଇଟି ଗୋଲକର ବ୍ୟାସର ଅନୁପାତ 3 : 4। ଆୟତନ ଏବଂ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତ୍ୟେକ ବ୍ୟାସକୁ 2 ଦ୍ୱାରା ଭାଗ କଲେ ଅନୁପାତ ବଦଳେ ନାହିଁ। ତେଣୁ r₁ : r₂ = 3 : 4।</li><li>V = (4/3)πr³ ରୁ V₁ : V₂ = 3³ : 4³ = 27 : 64।</li><li>S = 4πr² ରୁ S₁ : S₂ = 3² : 4² = 9 : 16।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟତନ 27 : 64 ଓ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 9 : 16।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-159"><h2>5(f) · 3(ii). ଦୁଇଟି ଗୋଲକର ବ୍ୟାସାର୍ଦ୍ଧର ଅନୁପାତ 1 : 3। ଆୟତନ ଏବଂ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଗୋଲକର ବ୍ୟାସାର୍ଦ୍ଧକୁ ଯଥାକ୍ରମେ 1x ଓ 3x ଲେଖ।</li><li>V = (4/3)πr³ ରୁ V₁ : V₂ = 1³ : 3³ = 1 : 27।</li><li>S = 4πr² ରୁ S₁ : S₂ = 1² : 3² = 1 : 9।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟତନ 1 : 27 ଓ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 1 : 9।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-160"><h2>5(f) · 3(iii). ଦୁଇଟି ଗୋଲକର ବ୍ୟାସାର୍ଦ୍ଧର ଅନୁପାତ 2 : 5। ଆୟତନ ଏବଂ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ଗୋଲକର ବ୍ୟାସାର୍ଦ୍ଧକୁ ଯଥାକ୍ରମେ 2x ଓ 5x ଲେଖ।</li><li>V = (4/3)πr³ ରୁ V₁ : V₂ = 2³ : 5³ = 8 : 125।</li><li>S = 4πr² ରୁ S₁ : S₂ = 2² : 5² = 4 : 25।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟତନ 8 : 125 ଓ ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 4 : 25।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-161"><h2>5(f) · 4. ଗୋଲକର ଆୟତନ 792/7 ଘନ ସେ.ମି. ହେଲେ ତାହାର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>V = (4/3)πr³। ଏଥିରୁ r³ = (792/7) × (3/4) × (7/22) = 27।</li><li>r = ∛27 = 3 ସେ.ମି.।</li><li>S = 4πr² = 4 × (22/7) × 3² = 792/7 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>792/7 ବା 113 1/7 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-162"><h2>5(f) · 5(i). ଗୋଲକର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 616 ବର୍ଗ ସେ.ମି. ହେଲେ ତାହାର ଆୟତନ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>S = 4πr²। ତେଣୁ r² = 616 × 7/(4 × 22) = 49, r = 7 ସେ.ମି.।</li><li>V = (4/3)πr³ = (4πr²)r/3 = Sr/3।</li><li>V = 616 × 7/3 = 4312/3 = 1437⅓ ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1437⅓ ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-163"><h2>5(f) · 5(ii). ଗୋଲକର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ 5544 ବର୍ଗ ସେ.ମି. ହେଲେ ବ୍ୟାସାର୍ଦ୍ଧ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୃଷ୍ଠତଳ ପାଇଁ 4πr² = 5544। ଉଭୟ ପକ୍ଷକୁ 4π ଦ୍ୱାରା ଭାଗ କର।</li><li>r² = 5544 × 7/(4 × 22) = 441। ଦୈର୍ଘ୍ୟ ଧନାତ୍ମକ, ତେଣୁ r = √441 = 21 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>21 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-164"><h2>5(f) · 6. ଗୋଟିଏ ଗୋଲକର ଘନଫଳ 19404 ଘନମିଟର। ଏହାର ସମଘନଫଳ ବିଶିଷ୍ଟ ଅର୍ଦ୍ଧଗୋଲକର ବ୍ୟାସାର୍ଦ୍ଧ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅର୍ଦ୍ଧଗୋଲକର ଘନଫଳ = (2/3)πR³। ସମଘନଫଳ ଶର୍ତ୍ତରୁ (2/3)πR³ = 19404।</li><li>R³ = 19404 × 3 × 7/(2 × 22) = 9261 ଘନମିଟର।</li><li>21 × 21 × 21 = 9261 ହେତୁ ବ୍ୟାସାର୍ଦ୍ଧ R = 21 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>21 ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-165"><h2>5(f) · 7(i). 9 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ଧାତବ ଗୋଲକକୁ ତରଳାଇ 1 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର କେତୋଟି ଛୋଟ ଗୋଲକ ତିଆରି କରିହେବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଲକ ସଂଖ୍ୟା n ହେଲେ n × ଗୋଟିଏ କ୍ଷୁଦ୍ର ଗୋଲକର ଆୟତନ = ବଡ଼ ଗୋଲକର ଆୟତନ।</li><li>n = [(4/3)π × 9³] ÷ [(4/3)π × 1³] = (9/1)³ = 729।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>729ଟି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-166"><h2>5(f) · 7(ii). 9 ସେ.ମି. ବ୍ୟାସାର୍ଦ୍ଧର ଧାତବ ଗୋଲକକୁ ତରଳାଇ 1 ସେ.ମି. ବ୍ୟାସର ବୃତ୍ତାକାର ପ୍ରସ୍ଥଚ୍ଛେଦ ଥିବା କେତେ ଲମ୍ବର ତାର କରିହେବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୃତ୍ତାକାର ପ୍ରସ୍ଥଚ୍ଛେଦର ବ୍ୟାସାର୍ଦ୍ଧ = 1/2 ସେ.ମି. |</li><li>ତାରଟି ସିଲିଣ୍ଡର ହେତୁ ଦୈର୍ଘ୍ୟ L ସେ.ମି. ହେଲେ ଆୟତନ π(1/2)²L।</li><li>ଗୋଲକର ଆୟତନ = (4/3)π × 9³ = 972π। ତେଣୁ πL/4 = 972π।</li><li>L = 4 × 972 = 3888 ସେ.ମି.। 100 ସେ.ମି. = 1 ମିଟର ହେତୁ ଦୈର୍ଘ୍ୟ 38.88 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3888 ସେ.ମି. ବା 38.88 ମିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-167"><h2>5(f) · 8. ଅର୍ଦ୍ଧଗୋଲକାକୃତି ପାଣିଟାଙ୍କିର ଭିତର ବ୍ୟାସ 4.2 ମିଟର ହେଲେ କେତେ ଲିଟର ପାଣି ଧରିବ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଧାରଣକ୍ଷମତା ପାଇଁ ଭିତର ବ୍ୟାସାର୍ଦ୍ଧ r = 4.2/2 = 2.1 ମିଟର ନିଅ।</li><li>ଅର୍ଦ୍ଧଗୋଲକର ଆୟତନ = (2/3)πr³ = (2/3) × (22/7) × 2.1³ = 19.404 ଘନମିଟର।</li><li>1 ଘନମିଟର = 1000 ଲିଟର। ତେଣୁ ଧାରଣକ୍ଷମତା = 19.404 × 1000 = 19404 ଲିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>19404 ଲିଟର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-168"><h2>5(f) · 9. ସମାନ ଭୂମି ବିଶିଷ୍ଟ ଅର୍ଦ୍ଧଗୋଲକ, ସିଲିଣ୍ଡର ଓ କୋନ୍‌ର ଆୟତନ ସମାନ ହେଲେ ସେହି କ୍ରମରେ ଉଚ୍ଚତାର ଅନୁପାତ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସାଧାରଣ ଭୂମିର ବ୍ୟାସାର୍ଦ୍ଧ r ଧର। ଅର୍ଦ୍ଧଗୋଲକର ଉଚ୍ଚତା r ଓ ଆୟତନ (2/3)πr³।</li><li>ସିଲିଣ୍ଡର ପାଇଁ πr²h₂ = (2/3)πr³, ତେଣୁ h₂ = 2r/3।</li><li>କୋନ୍ ପାଇଁ πr²h₃/3 = (2/3)πr³, ତେଣୁ h₃ = 2r।</li><li>ଉଚ୍ଚତାର ଅନୁପାତ r : 2r/3 : 2r। ପ୍ରତି ପଦକୁ 3/r ଦ୍ୱାରା ଗୁଣ କଲେ 3 : 2 : 6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3 : 2 : 6।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-169"><h2>5(f) · 10. ଫମ୍ପା ଧାତବ ଗୋଲକର ଅନ୍ତଃବ୍ୟାସାର୍ଦ୍ଧ 3 ସେ.ମି. ଓ ବହିଃବ୍ୟାସାର୍ଦ୍ଧ 6 ସେ.ମି.। ପ୍ରତି ଘନ ସେ.ମି. ଧାତୁର ବସ୍ତୁତ୍ୱ 8 ଗ୍ରାମ ହେଲେ ଗୋଲକର ବସ୍ତୁତ୍ୱ କେତେ? π ପାଇଁ 22/7 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ସୀମା ମଝିରେ ଧାତୁ ରହେ। ଭିତର ଖାଲି ଅଂଶକୁ ବାହାର ମାପର ସମୁଦାୟରୁ କାଟିଲେ ହିଁ ବସ୍ତୁର ନିଜ ମାପ ମିଳେ।</li><li>ବାହାର ଗୋଲକର ଆୟତନରୁ ଫମ୍ପା ଅଂଶର ଆୟତନ ବିୟୋଗ କର। ଧାତୁର ଆୟତନ = (4/3)π(6³ − 3³)।</li><li>6³ − 3³ = 216 − 27 = 189। ତେଣୁ ଧାତୁର ଆୟତନ = 252π = 792 ଘନ ସେ.ମି.।</li><li>ପ୍ରତି ଘନ ସେ.ମି.ର ବସ୍ତୁତ୍ୱ 8 ଗ୍ରାମ। ମୋଟ ବସ୍ତୁତ୍ୱ = 792 × 8 = 6336 ଗ୍ରାମ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6336 ଗ୍ରାମ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-170"><h2>5(f) · 11. ଅର୍ଦ୍ଧଗୋଲକ ଆକୃତିର ପାତ୍ରର ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ 8 ସେ.ମି. ଓ ମୋଟେଇ 1 ସେ.ମି.। ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ କେତେ? π ପାଇଁ √10 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ R = 8 ଓ ଭିତର ବ୍ୟାସାର୍ଦ୍ଧ r = 8 − 1 = 7 ସେ.ମି.।</li><li>ବାହାର ଓ ଭିତର ବକ୍ରତଳର ଯୋଗ = 2πR² + 2πr²। ଉପର ମୁହଁର ବଳୟର କ୍ଷେତ୍ରଫଳ = π(R² − r²)।</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳ = π(3R² + r²) = π(3 × 64 + 49) = 241π = 241√10 ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>241√10 ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-171"><h2>5(f) · 12. ନିଦା ସୀସା ସମଘନରୁ ବୃହତ୍ତମ ଗୋଲକ କାଟିନେଲେ ଅବଶିଷ୍ଟ ଆୟତନ 12870 ଘନ ସେ.ମି. ହୁଏ। ସମଘନର ବାହୁ କେତେ? π ପାଇଁ 3.14 ନିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମଘନର ବାହୁ a ସେ.ମି. ହେଲେ ବୃହତ୍ତମ ଗୋଲକର ବ୍ୟାସ a ଓ ବ୍ୟାସାର୍ଦ୍ଧ a/2।</li><li>ଗୋଲକର ଆୟତନ = (4/3)π(a/2)³ = πa³/6।</li><li>ଅବଶିଷ୍ଟ ଆୟତନ = a³ − πa³/6 = a³(6 − 3.14)/6 = 12870।</li><li>a³ = 12870 × 6/2.86 = 27000। 30³ = 27000 ହେତୁ ବାହୁ 30 ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>30 ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-172"><h2>5(f) · 13(i). ଅର୍ଦ୍ଧଗୋଲକାକୃତି ପାତ୍ରର ମୋଟେଇ 1 ସେ.ମି. ଓ ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ 10 ସେ.ମି.। π ମାଧ୍ୟମରେ ସମଗ୍ର ପୃଷ୍ଠତଳର କ୍ଷେତ୍ରଫଳ ପ୍ରକାଶ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>R = 10 ଓ r = 10 − 1 = 9 ସେ.ମି.। ବାହାର ବକ୍ରତଳ = 2π × 10² ଓ ଭିତର ବକ୍ରତଳ = 2π × 9²।</li><li>ମୁହଁର ବଳୟର କ୍ଷେତ୍ରଫଳ = π(10² − 9²) = 19π।</li><li>ସମଗ୍ର ପୃଷ୍ଠତଳ = 200π + 162π + 19π = 381π ବର୍ଗ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>381π ବର୍ଗ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+<article id="exercise-173"><h2>5(f) · 13(ii). ଅର୍ଦ୍ଧଗୋଲକାକୃତି ପାତ୍ରର ମୋଟେଇ 1 ସେ.ମି. ଓ ବାହାର ବ୍ୟାସାର୍ଦ୍ଧ 10 ସେ.ମି.। ଏଥିରେ ବ୍ୟବହୃତ ଧାତୁର ଆୟତନ π ମାଧ୍ୟମରେ ପ୍ରକାଶ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭିତର ବ୍ୟାସାର୍ଦ୍ଧ = 10 − 1 = 9 ସେ.ମି. |</li><li>ଧାତୁର ଆୟତନ = ବାହାର ଅର୍ଦ୍ଧଗୋଲକର ଆୟତନ − ଭିତର ଅର୍ଦ୍ଧଗୋଲକର ଆୟତନ।</li><li>V = (2/3)π(10³ − 9³) = (2/3)π(1000 − 729)।</li><li>1000 − 729 = 271। ତେଣୁ V = 542π/3 ଘନ ସେ.ମି.।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>542π/3 ଘନ ସେ.ମି.।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=169" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬୯</a></small></article>
+
+</main></body></html>

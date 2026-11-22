@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Village Song · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>Village Song</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. Who calls the girl “honey child”?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A minstrel</li><li>Her mother</li><li>Her lover</li><li>A fairy</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Her mother</b></p>
+<div class="lesson-body"><p>ମାଆ ସ୍ନେହରେ ଝିଅକୁ ଏହିପରି ଡାକନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬–୩୮</small></article>
+<article><h2>୨. What draws the daughter away?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Her wedding cakes</li><li>The jewels</li><li>The voices from the forest</li><li>Her bridal robes</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. The voices from the forest</b></p>
+<div class="lesson-body"><p>ବନର ଆହ୍ୱାନ ତାକୁ ଘର ଛାଡ଼ି ଯିବାକୁ ପ୍ରେରିତ କରେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬–୩୮</small></article>
+<article><h2>୩. What is the girl’s response to bridal and cradle songs?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>She forgets the forest</li><li>She demands bridal cakes</li><li>She begins weaving clothes</li><li>She hears a note of sorrow</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. She hears a note of sorrow</b></p>
+<div class="lesson-body"><p>ସାଂସାରିକ ସୁଖ କ୍ଷଣସ୍ଥାୟୀ ବୋଲି ସେ ଅନୁଭବ କରେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭–୩୮</small></article>
+<article><h2>୪. Where are the bridal robes being prepared?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>In the loom</li><li>On the hearth</li><li>On a river-isle</li><li>Under the champa tree</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. In the loom</b></p>
+<div class="lesson-body"><p>ବସ୍ତ୍ର ବୁଣାଯାଉଛି; hearthରେ ଖାଦ୍ୟ ପ୍ରସ୍ତୁତ ହେଉଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୫. Which pair best expresses the poem’s form?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A description and a receipt</li><li>A mother’s appeal and a daughter’s reply</li><li>A king’s order and a traveller’s report</li><li>A prayer and a sermon</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. A mother’s appeal and a daughter’s reply</b></p>
+<div class="lesson-body"><p>ଦୁଇ ବକ୍ତାଙ୍କ ପାଳିକରି କହିବାରେ ଗୀତଟି ଗଢ଼ିଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୮</small></article>
+<article><h2>୬. Which person is coming to marry the girl?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The speaker’s brother</li><li>A traveller</li><li>Her lover</li><li>A minstrel</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Her lover</b></p>
+<div class="lesson-body"><p>ମାଆ ଝିଅକୁ ଆସୁଥିବା ବରଙ୍କ କଥା ମନେ ପକାନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬</small></article>
+<article><h2>୭. Which image appeals chiefly to hearing?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The champa buds</li><li>The koil near the river-isles</li><li>The colour of bridal robes</li><li>The bright lotus lilies</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. The koil near the river-isles</b></p>
+<div class="lesson-body"><p>କୋଇଲିର ପରିଚୟ ତାହାର ସ୍ୱର ସହ ଯୋଡ଼ା।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୮. Which colours are connected with the bridal robes?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Silver and saffron</li><li>Green and black</li><li>Scarlet and blue</li><li>Purple and white</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. Silver and saffron</b></p>
+<div class="lesson-body"><p>ତନ୍ତରେ ବୁଣାହେଉଥିବା ପୋଷାକ ଏହି ରଙ୍ଗରେ ଚମକୁଛି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୯. Who mentions the cakes on the hearth?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The daughter</li><li>The lover</li><li>The fairy folk</li><li>The mother</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. The mother</b></p>
+<div class="lesson-body"><p>ବିବାହ ପ୍ରସ୍ତୁତିର ବିବରଣୀ ମାଆଙ୍କ ଯୁକ୍ତିର ଅଂଶ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୧୦. What does the falling water contribute to the girl’s forest?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Food for the wedding</li><li>A loom</li><li>Music</li><li>Jewellery</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Music</b></p>
+<div class="lesson-body"><p>ଝରଣାର ଶବ୍ଦ ତାଙ୍କ ପାଇଁ ମଧୁର।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭–୩୮</small></article>
+<article><h2>୧୧. The mother’s opening questions mainly try to ___.</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>choose a colour for the cloth</li><li>invite the fairies to eat</li><li>persuade her child to stay</li><li>ask directions to the island</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. persuade her child to stay</b></p>
+<div class="lesson-body"><p>ବିଦାୟକୁ ଅଟକାଇବା ପାଇଁ ସ୍ନେହଭରା ପ୍ରଶ୍ନ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬</small></article>
+<article><h2>୧୨. What does the daughter ask her mother to listen to?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The footsteps of the lover</li><li>The voices of the fairy folk</li><li>The loom</li><li>The cradle-song only</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. The voices of the fairy folk</b></p>
+<div class="lesson-body"><p>ସେ ମାଆଙ୍କୁ ବନର ଆହ୍ୱାନ ଶୁଣିବାକୁ କୁହେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୧୩. What do the opening champa buds help describe?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The forest the daughter imagines</li><li>The jewellery she wears</li><li>The bridal food</li><li>The mother&#39;s childhood room</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. The forest the daughter imagines</b></p>
+<div class="lesson-body"><p>ଚମ୍ପା ଫୁଲ ବନର ଆକର୍ଷଣର ଅଂଶ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୧୪. Which word in the glossary means the rhythm of a song?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Leisure</li><li>Loom</li><li>Hearth</li><li>Cadence</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. Cadence</b></p>
+<div class="lesson-body"><p>cadence ଅର୍ଥ ଲୟ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୮</small></article>
+<article><h2>୧୫. Which contrast helps explain the girl’s refusal to stay?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A wedding and a journey to school</li><li>City streets and work</li><li>Today’s joy and tomorrow’s sorrow</li><li>Winter crops and summer crops</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Today’s joy and tomorrow’s sorrow</b></p>
+<div class="lesson-body"><p>ସୁଖର ଅସ୍ଥାୟିତ୍ୱ ଝିଅର ଉତ୍ତରରେ ପ୍ରକାଶ ପାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭–୩୮</small></article>
+<article><h2>୧୬. What does the mother’s reference to feeding the child stress?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Her long-standing care</li><li>The girl’s skill at cooking</li><li>The lover’s occupation</li><li>A journey for food</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. Her long-standing care</b></p>
+<div class="lesson-body"><p>ଶୈଶବରୁ ଯତ୍ନ ମନେ ପକାଇ ମାଆ ରହିବାକୁ କୁହନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬–୩୭</small></article>
+<article><h2>୧୭. Where do lotus lilies shine in the girl’s picture?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>In the loom</li><li>On the hearth</li><li>At the wedding table</li><li>Near the river-isles</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. Near the river-isles</b></p>
+<div class="lesson-body"><p>ନଦୀଦ୍ୱୀପର ପ୍ରାକୃତିକ ଦୃଶ୍ୟ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୧୮. Which songs in the mother’s speech refer to a possible future child?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Forest-notes</li><li>Songs of the koil</li><li>Cradle-songs</li><li>Bridal songs alone</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Cradle-songs</b></p>
+<div class="lesson-body"><p>cradle-song ହେଉଛି ଶିଶୁକୁ ଶୁଆଇବାର ଗୀତ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭–୩୯</small></article>
+<article><h2>୧୯. Which expression is an affectionate form of address?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Golden grain</li><li>Honey child</li><li>Bridal robes</li><li>Forest notes</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Honey child</b></p>
+<div class="lesson-body"><p>ମାଆ ଏଭଳି ସ୍ନେହରେ ଝିଅକୁ ଡାକନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬–୩୮</small></article>
+<article><h2>୨୦. Which action is repeated in the daughter’s replies?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Listening to an invitation from the forest</li><li>Baking for the wedding</li><li>Preparing a cradle</li><li>Looking for the bridegroom</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. Listening to an invitation from the forest</b></p>
+<div class="lesson-body"><p>ବନର ଆହ୍ୱାନ ତାଙ୍କ ମନକୁ ଆକର୍ଷଣ କରେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୨୧. What is the girl choosing between?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Domestic celebration and the call of nature</li><li>Two different bridegrooms</li><li>A city and a school</li><li>Two kinds of work</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. Domestic celebration and the call of nature</b></p>
+<div class="lesson-body"><p>ବିବାହର ଆୟୋଜନ ଓ ବନର ଆକର୍ଷଣ ମଧ୍ୟରେ ଦ୍ୱନ୍ଦ୍ୱ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬–୩୭</small></article>
+<article><h2>୨୨. What effect does the mother fear the girl’s departure will have on the lover?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>It will improve his work</li><li>It will call him to school</li><li>It will make him a singer</li><li>It will grieve him</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. It will grieve him</b></p>
+<div class="lesson-body"><p>ମାଆ ବରଙ୍କ ଦୁଃଖ କଥା ମନେ ପକାନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୬</small></article>
+<article><h2>୨୩. What are the champa buds doing in the forest image?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Becoming jewellery</li><li>Covering the loom</li><li>Opening</li><li>Falling into the hearth</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Opening</b></p>
+<div class="lesson-body"><p>blowing ଏଠି କଢ଼ି ଫୁଟିବା ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୨୪. Whose perspective gives the forest sounds their special sweetness?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The mother’s alone</li><li>The daughter’s</li><li>The bridegroom’s</li><li>The tailor’s</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. The daughter’s</b></p>
+<div class="lesson-body"><p>ଝିଅର ମନର ଆକର୍ଷଣ ସ୍ୱରକୁ ଅଧିକ ମଧୁର କରେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭</small></article>
+<article><h2>୨୫. Which detail combines smell and the mother’s picture of comfort?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Sandal-scented leisure</li><li>The wind of death</li><li>The rush of a stream</li><li>The silver gleam of cloth</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. Sandal-scented leisure</b></p>
+<div class="lesson-body"><p>ଚନ୍ଦନର ସୁଗନ୍ଧ ମାଆଙ୍କ ସୁଖର ଚିତ୍ରର ଅଂଶ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୩୭–୩୮</small></article>
+
+</main></body></html>

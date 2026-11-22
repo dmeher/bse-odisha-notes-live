@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">ଚତୁର୍ଭୁଜର କର୍ଣ୍ଣ AC ଓ BD ପରସ୍ପରକୁ Oରେ ଛେଦ କରନ୍ତି |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="133.12,32.50 62.29,287.50 437.71,287.50 345.62,32.50 133.12,32.50" stroke="#244355" stroke-width="2.35"/>
+<polyline points="133.12,32.50 437.71,287.50" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="62.29,287.50 345.62,32.50" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="133.12" cy="32.50" r="2.7" fill="#244355"/>
+<text x="123.66" y="21.44" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="62.29" cy="287.50" r="2.7" fill="#244355"/>
+<text x="50.71" y="295.93" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="437.71" cy="287.50" r="2.7" fill="#244355"/>
+<text x="449.29" y="295.93" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="345.62" cy="32.50" r="2.7" fill="#244355"/>
+<text x="354.02" y="20.50" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="243.22" cy="124.67" r="2.7" fill="#244355"/>
+<text x="243.22" y="139.67" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">O</text>
+</svg>

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ରାଘବଙ୍କ ଲଙ୍କା ଯାତ୍ରାନୁକୂଳ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ରାଘବଙ୍କ ଲଙ୍କା ଯାତ୍ରାନୁକୂଳ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1mPaDIDoNXx3IViJN1g4YW5Cy_gXuXLm4/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୨୬। ପୁସ୍ତକର ପ୍ରଶ୍ନକ୍ରମରେ ଉତ୍ତର ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୩–୫</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୨୬)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a> <a href="#exercise-18">୧୮</a> <a href="#exercise-19">୧୯</a> <a href="#exercise-20">୨୦</a> <a href="#exercise-21">୨୧</a> <a href="#exercise-22">୨୨</a> <a href="#exercise-23">୨୩</a> <a href="#exercise-24">୨୪</a> <a href="#exercise-25">୨୫</a> <a href="#exercise-26">୨୬</a></nav></details>
+<article id="exercise-1"><h2>୧. ସିନ୍ଧୁ, ପର୍ବତ ଓ ଆକାଶର ତିନିଟି ଲେଖାଏଁ ପ୍ରତିଶବ୍ଦ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କପିମାନେ ଯେଉଁ ‘ଗିରି’ ପକାଇଲେ ତାହା ପର୍ବତ, ଓ ଯେଉଁ ‘ସିନ୍ଧୁ’ ପୋତିବା କଥା ରାମ ଭାବିଲେ ତାହା ସାଗର। ପକ୍ଷୀରୂପୀ ଚରଙ୍କ ଯାତ୍ରାରେ ଆକାଶର ପ୍ରସଙ୍ଗ ଆସେ। ଏହି ତିନି ଦୃଶ୍ୟର ସ୍ଥାନକୁ ଅଲଗା କରି ପ୍ରତିଶବ୍ଦ ସଜାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସିନ୍ଧୁ — ସମୁଦ୍ର, ସାଗର, ଅର୍ଣ୍ଣବ। ପର୍ବତ — ଗିରି, ଶୈଳ, ଅଚଳ।</p><p>ଆକାଶ — ନଭ, ବ୍ୟୋମ, ଗଗନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=14" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪</a></small></article>
+<article id="exercise-2"><h2>୨. ପ୍ରାପତି, ଜନମି ଓ ଦଇବର ଗଦ୍ୟରୂପ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ସୀତା ପ୍ରାପତିରେ’ କହିବାରେ ସୀତାଙ୍କୁ ପାଇବାର କଥା ଅଛି, ସେଥିପାଇଁ ଗଦ୍ୟରେ ‘ପ୍ରାପ୍ତି’ | ‘ବଡ଼କୁଳେ ଜନମି’ରେ ଜନ୍ମ ହେବା କଥା ଅଛି। ଚରଙ୍କ ‘ଦଇବ’ ପ୍ରସଙ୍ଗରେ ପ୍ରାଣ ବଞ୍ଚିବାକୁ ସେମାନେ ଦୈବର ଫଳ କହୁଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାପତି — ପ୍ରାପ୍ତି। ଜନମି — ଜନ୍ମି।</p><p>ଦଇବ — ଦୈବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=14" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୪</a></small></article>
+<article id="exercise-3"><h2>୩. ଦିଆଯାଇଥିବା ସାତଟି ଶବ୍ଦର ବିପରୀତାର୍ଥ ଦିଅ।</h2>
+<div class="question-parts"><p>ଆଶା, ନିଃଶ୍ୱାସ, ପ୍ରସନ୍ନ, ଜ୍ୟେଷ୍ଠ, ଜନ୍ମ, ପୁଣ୍ୟ, ବିରସ।</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିପରୀତ ପଦ ବାଛିବାବେଳେ ପ୍ରଥମ ପଦର ଅର୍ଥ ଦେଖ। ପିତା ସମାନ କୁହାଯାଇଥିବା ‘ଜ୍ୟେଷ୍ଠ’ ଭାଇଠାରୁ ସାନ ଭାଇ ହେଉଛି କନିଷ୍ଠ। ଚରଙ୍କ ଖବର ଶୁଣି ରାବଣଙ୍କ ମନର ‘ବିରସ’ ଓ ତାଙ୍କ ମୁଖର ହସର ଫରକ ଧ୍ୟାନ ଦିଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଶା — ନିରାଶା। ନିଃଶ୍ୱାସ — ପ୍ରଶ୍ୱାସ।</p><p>ପ୍ରସନ୍ନ — ଅପ୍ରସନ୍ନ। ଜ୍ୟେଷ୍ଠ — କନିଷ୍ଠ।</p><p>ଜନ୍ମ — ମୃତ୍ୟୁ। ପୁଣ୍ୟ — ପାପ।</p><p>ବିରସ — ସରସ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-4"><h2>୪. ପିତୃବ୍ୟ, ବ୍ୟୋମ, ପ୍ରସନ୍ନ, ଅନୁଜ ଓ ସତ୍ୱରକୁ ବାକ୍ୟରେ ବସାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଙ୍ଗଦ ଓ ସୁଗ୍ରୀବଙ୍କ ସମ୍ପର୍କରୁ ‘ପିତୃବ୍ୟ’ର ଅର୍ଥ ବାପାଙ୍କ ସାନ ଭାଇ ବୁଝିହୁଏ। ରାବଣଙ୍କଠାରୁ ବିଭୀଷଣ ବୟସରେ ସାନ, ତେଣୁ ସେ ‘ଅନୁଜ’। ଚରମାନେ ଭୟରେ ଯେପରି ଶୀଘ୍ର ଫେରିଲେ ତାହା ‘ସତ୍ୱର’ର ଅର୍ଥ ଦେଖାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସୁଗ୍ରୀବ ଅଙ୍ଗଦଙ୍କ ପିତୃବ୍ୟ। ପକ୍ଷୀ ବ୍ୟୋମରେ ଉଡ଼ିଗଲା।</p><p>ରାମ ବରୁଣଙ୍କୁ ପ୍ରସନ୍ନ କରିବାକୁ ଚାହିଁଲେ। ବିଭୀଷଣ ରାବଣଙ୍କ ଅନୁଜ।</p><p>ଦୂତ ସତ୍ୱର ଫେରିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩–୧୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-5"><h2>୫. ବଜ୍ରାଘାତ, ପ୍ରତ୍ୟୁତ୍ତର ଓ ନିଃଶ୍ୱାସର ସନ୍ଧିବିଚ୍ଛେଦ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ଦୁଇ ମୂଳ ପଦ ଅଲଗା କରି ପୁଣି ଯୋଡ଼ି ଯାଞ୍ଚ କର। ‘ବଜ୍ର’ ସହ ‘ଆଘାତ’ ମିଶିଲେ ‘ବଜ୍ରାଘାତ’ ହୁଏ। ‘ପ୍ରତି’ର ଶେଷ ଇ ପରେ ‘ଉତ୍ତର’ର ଉ ଆସିଲେ ଯ୍ ହୋଇ ‘ପ୍ରତ୍ୟୁତ୍ତର’ ହୁଏ। ‘ନିଃଶ୍ୱାସ’ରେ ବିସର୍ଗ ରହିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବଜ୍ର + ଆଘାତ। ପ୍ରତି + ଉତ୍ତର।</p><p>ନିଃ + ଶ୍ୱାସ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩–୧୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-6"><h2>୬. ଚାରି ଶବ୍ଦର ବ୍ୟାସବାକ୍ୟ ସହ ସମାସ ଚିହ୍ନାଅ।</h2>
+<div class="question-parts"><p>ବିଭୂତିଭୂଷଣ, ବିଂଶତିକର, ଦେବରିପୁ, ହୀନପରାକ୍ରମ।</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ବିଂଶତିକର’ କହିଲେ କୋଡ଼ିଏଟି ହାତର ଅଧିକାରୀ ରାବଣଙ୍କୁ ବୁଝାଏ। ବ୍ୟାସବାକ୍ୟରେ ‘ଯାହାର’ ଆସିବାରୁ ବହୁବ୍ରୀହି ଚିହ୍ନିହୁଏ। ‘ଦେବରିପୁ’ରେ ‘ଦେବଙ୍କ’ ଓ ‘ରିପୁ’ ମଧ୍ୟରେ ସମ୍ବନ୍ଧ, ତେଣୁ ଷଷ୍ଠୀ ତତ୍ପୁରୁଷ। ‘ହୀନ’ ଶବ୍ଦଟି ପରାକ୍ରମର ଗୁଣ କହୁଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଭୂତିଭୂଷଣ — ବିଭୂତି ଭୂଷଣ ଯାହାର, ବହୁବ୍ରୀହି। ବିଂଶତିକର — ବିଂଶତି କର ଯାହାର, ବହୁବ୍ରୀହି।</p><p>ଦେବରିପୁ — ଦେବଙ୍କ ରିପୁ, ଷଷ୍ଠୀ ତତ୍ପୁରୁଷ। ହୀନପରାକ୍ରମ — ହୀନ ପରାକ୍ରମ, କର୍ମଧାରୟ (ପାଠରେ ପରାକ୍ରମକୁ ହୀନ କୁହାଯାଇଛି)।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩–୧୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-7"><h2>୭. ‘କେଁ କେଁ’ ପରି ପାଞ୍ଚ ଧ୍ୱନ୍ୟାତ୍ମକ ଯୁଗ୍ମଶବ୍ଦ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପକ୍ଷୀଙ୍କ କଣ୍ଠର ଧ୍ୱନିକୁ କବି ‘କେଁ କେଁ’ ଲେଖି ଶୁଣାଇଛନ୍ତି। ସେହିପରି ଧ୍ୱନିକୁ ଦୁଇଥର କହିଲେ ଯୁଗ୍ମଶବ୍ଦ ହୁଏ। ଉଦାହରଣରେ ‘ଟପ୍ ଟପ୍’ ଓ ‘ଖଟ୍ ଖଟ୍’ ଉଚ୍ଚାରଣ କରି ଦୁଇ ପ୍ରକାର ସ୍ୱରର ଫରକ ଶୁଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଝର ଝର, କଳ କଳ, ଟପ୍ ଟପ୍, ଝମ୍ ଝମ୍, ଖଟ୍ ଖଟ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩–୧୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-8"><h2>୮. ରାମଚନ୍ଦ୍ର ସିନ୍ଧୁ ପୋତିବାକୁ କାହିଁକି ଚାହିଁଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସୀତାଙ୍କୁ ଉଦ୍ଧାର କରିବା ପାଇଁ ଲଙ୍କାରେ ପହଞ୍ଚିବା ଆବଶ୍ୟକ। ବାନରମାନେ ପର୍ବତ ପକାଇଲେ ମଧ୍ୟ ସେଗୁଡ଼ିକ ସମୁଦ୍ରରେ ବୁଡ଼ିଯାଏ। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାଗର ଅତିକ୍ରମ କରି ସୈନ୍ୟ ସହିତ ଲଙ୍କା ଯିବା ଓ ସୀତାଙ୍କୁ ଉଦ୍ଧାର କରିବା ପାଇଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-9"><h2>୯. ରାଘବ ଶବ୍ଦଟି କାହାକୁ ବୁଝାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ରାଘବ’ ବଂଶସୂଚକ ସମ୍ବୋଧନ। ଲଙ୍କାକୁ ଯାଇ ସୀତାଙ୍କୁ ଉଦ୍ଧାର କରିବା ପାଇଁ ଉଦ୍ୟମ କରୁଥିବା ରଘୁବଂଶୀ ହିଁ ରାମ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରଘୁବଂଶର ରାମଚନ୍ଦ୍ରଙ୍କୁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-10"><h2>୧୦. ବରୁଣଙ୍କୁ ପ୍ରସନ୍ନ କରିବାକୁ ରାମ କ’ଣ କଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମୁଦ୍ର ଉପରେ ପର୍ବତ ସ୍ଥିର ରହୁ ନଥିଲା। ସେହି ଜଳପଥର ବାଧା ଦୂର କରିବା ପାଇଁ ପ୍ରଥମେ ରାମ ତପସ୍ୟାର ଉପାୟ ନେଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉପବାସ କରି କୁଶଶଯ୍ୟାରେ ଶୟନ କଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-11"><h2>୧୧. ରାବଣ ନିଜ ଅନୁଜଙ୍କୁ କି ବାର୍ତ୍ତା ପଠାଇଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରାବଣ ଶୁକ ଓ ସାରଣଙ୍କୁ ଚର କରି ପଠାନ୍ତି। ବିଭୀଷଣଙ୍କୁ ବଡ଼ଭାଇ ପିତା ସମାନ ବୋଲି ମନେ ପକାଇବା ଓ ଅଙ୍ଗଦଙ୍କୁ ପିତାଙ୍କ ଶତ୍ରୁ ପ୍ରତି ଭକ୍ତିର ପ୍ରଶ୍ନ ଉଠାଇବାକୁ କହନ୍ତି। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜ୍ୟେଷ୍ଠଭ୍ରାତା ପିତା ସମାନ ବୋଲି ସ୍ମରଣ କରାଇ ରାବଣ ବିଭୀଷଣଙ୍କୁ ନିଜ ପାଖକୁ ଫେରିବାକୁ କହିଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-12"><h2>୧୨. ଅଙ୍ଗଦଙ୍କୁ ରାବଣ କି ସନ୍ଦେଶ ଦେଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଙ୍ଗଦ ବାଳୀଙ୍କ ପୁଅ ଓ ସୁଗ୍ରୀବଙ୍କ ପୁତୁରା। ରାବଣ ଏହି ସମ୍ପର୍କକୁ ନେଇ ଅଙ୍ଗଦଙ୍କ ମନରେ ବିରୋଧ ଜନ୍ମାଇବାକୁ ଚେଷ୍ଟା କରନ୍ତି। ପିତୃବ୍ୟଙ୍କ ସହ କଳହ ହେଲେ କପିସେନା ଫେରିଯିବ ବୋଲି ସେ ଆଶା କରିଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପିତାଙ୍କ ଶତ୍ରୁଙ୍କୁ ଭକ୍ତି କରିବାର ଯଥାର୍ଥତା ପଚାରି ରାବଣ ଅଙ୍ଗଦଙ୍କୁ ପ୍ରରୋଚିତ କଲେ। ପିତୃବ୍ୟଙ୍କ ସହ ବିବାଦ କରି ସେନାକୁ ଫେରାଇ ନେବାକୁ ପରାମର୍ଶ ଦେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-13"><h2>୧୩. ଅଙ୍ଗଦଙ୍କ ପାଖେ ରାବଣଙ୍କ ବାର୍ତ୍ତା କେଉଁମାନେ ପହଞ୍ଚାଇଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଶୁକ ସାରଣ କରି ଚାର’ ପଦରେ ଚାର ଅର୍ଥ ଦୂତ। ଦୁହେଁ ରାବଣଙ୍କଠାରୁ ବାର୍ତ୍ତା ନେଲେ, ପକ୍ଷୀର ରୂପରେ ସାଗର ପାର ହେଲେ, ପୁଣି ଶୁଣିଥିବା କଥା ରାବଣଙ୍କୁ ଆସି ଜଣାଇଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରାବଣଙ୍କ ଦୁଇ ମନ୍ତ୍ରୀ ଶୁକ ଓ ସାରଣ ସେହି ବାର୍ତ୍ତା ନେଇ ଯାଇଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩–୧୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-14"><h2>୧୪. ରାବଣଙ୍କ ବାର୍ତ୍ତା ପାଇ ଅଙ୍ଗଦଙ୍କ ପ୍ରତିକ୍ରିୟା କ’ଣ ଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରାବଣ ଚାହୁଁଥିଲେ ଅଙ୍ଗଦ ରାମଙ୍କ ପକ୍ଷ ଛାଡ଼ନ୍ତୁ। ଅଙ୍ଗଦଙ୍କ କ୍ରୋଧ ଓ ଶୂନ୍ୟରେ ପଡ଼ିଥିବା ପ୍ରହାରରୁ ସେ ଏହି ପ୍ରସ୍ତାବକୁ କିପରି ଗ୍ରହଣ କଲେ ତାହା ବୁଝାଯାଏ। ଏହା ଦେଖି ଦୂତ ଦୁହେଁ ଭୟରେ ଫେରିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଙ୍ଗଦ କ୍ରୋଧରେ ଏକ ପ୍ରଚଣ୍ଡ ଚାପୁଡ଼ା ମାରିଲେ। ତାହା ଦୂତଙ୍କ ଦେହରେ ନ ବାଜି ଶୂନ୍ୟରେ ପଡ଼ିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-15"><h2>୧୫. ଶୁକ ଓ ସାରଣ ଫେରିବା ପରେ କ’ଣ କହିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଫେରି ଆସି ଦୂତ ଦୁହେଁ ପ୍ରଥମେ ଦୁଇ ବାର୍ତ୍ତାର ଫଳ ଜଣାଇଲେ। ବିଭୀଷଣଙ୍କ କଥା ସୀତାଙ୍କୁ ସମର୍ପଣ କରିବା ବିଷୟରେ ଥିଲା, ଅଙ୍ଗଦଙ୍କ ଉତ୍ତର ତାଙ୍କ ପ୍ରହାରରେ ପ୍ରକାଶ ପାଇଲା। ରାବଣ ପୁଣି ପଚାରିବାରୁ ଚର ଦୁହେଁ ରାମଙ୍କ ସେନା ଓ କୁଶଶଯ୍ୟାର ଖବର ଦେଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଭୀଷଣ ସୀତାଙ୍କୁ ଫେରାଇବାର ସର୍ତ୍ତ ରଖିଛନ୍ତି ବୋଲି ଜଣାଇଲେ। ଅଙ୍ଗଦଙ୍କ ପ୍ରହାରରୁ ଦୈବାତ୍ ବଞ୍ଚିବାର ବିବରଣୀ ଓ ରାମଙ୍କ ସେନାର ବିଶାଳତା କହିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-16"><h2>୧୬. ଅଙ୍ଗଦଙ୍କ ପ୍ରହାର ବାଜିଥିଲେ ମନ୍ତ୍ରୀଦ୍ୱୟଙ୍କର କି ଦଶା ହୋଇଥାନ୍ତା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଙ୍ଗଦଙ୍କ କରାଘାତ ଶୂନ୍ୟରେ ପଡ଼େ। ବାଜିଥିଲେ ଚୂର୍ଣ୍ଣ ହୋଇଥାନ୍ତେ ବୋଲି ଚରଦ୍ୱୟ ରାବଣଙ୍କୁ କହନ୍ତି। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବଜ୍ରାଘାତ ପରି ସେହି ପ୍ରହାରରେ ସେମାନେ ଚୂର୍ଣ୍ଣ ହୋଇଥାନ୍ତେ ବା ପାତାଳକୁ ଚାଲିଯାଇଥାନ୍ତେ ବୋଲି ମନ୍ତ୍ରୀଦ୍ୱୟ ନିଜ ଅନୁଭୂତି ଜଣାଇଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-17"><h2>୧୭. ରାମଙ୍କ ସୈନ୍ୟସଂଖ୍ୟା ସମ୍ପର୍କରେ ଦୂତ କିପରି ଧାରଣା ଦେଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚରମାନେ ସୈନ୍ୟସଂଖ୍ୟାକୁ ସାଗରର ଶଙ୍ଖ ସହ ତୁଳନା କରନ୍ତି। ‘ଶଙ୍ଖ’ର ସଂଖ୍ୟାବାଚକ ଓ ସାମୁଦ୍ରିକ ଅର୍ଥର ଖେଳ ସେନାର ବିପୁଳତା ବୁଝାଏ। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାଗରରେ ଯେତେ ଶଙ୍ଖ ଜନ୍ମେ ତା’ଠାରୁ ମଧ୍ୟ ଅଧିକ ବୋଲି କହି ସେମାନେ ସେନାର ବିପୁଳତା ଦର୍ଶାଇଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-18"><h2>୧୮. ସାଗର ତରିବା ପାଇଁ ରାମ କ’ଣ ଚିନ୍ତା କଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସୀତାଙ୍କ ପାଖକୁ ପହଞ୍ଚିବାରେ ପ୍ରତିବନ୍ଧକ ଥିଲା ସମୁଦ୍ର। କପିମାନଙ୍କ ଗିରି ବୁଡ଼ିଗଲା, ଏପରିକି ଜଳରେ ବୁଦ୍‌ବୁଦ ମଧ୍ୟ ଦିଶିଲା ନାହିଁ। ସେହି ଫଳ ଦେଖି ରାମ ଦ୍ୱିତୀୟ ଉପାୟ ନେଲେ, ଜଳାଧିପତି ବରୁଣଙ୍କୁ ପ୍ରସନ୍ନ କରିବାକୁ ଅନାହାରରେ ଦର୍ଭଶଯ୍ୟାରେ ରହିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରଥମେ ପର୍ବତ ପକାଇ ସାଗର ପୋତିବାର କଥା ଭାବିଲେ। ତାହା ଫଳପ୍ରଦ ନ ହେବାରୁ ବରୁଣଙ୍କୁ ପ୍ରସନ୍ନ କରିବା ନିମିତ୍ତ ଅନାହାରରେ କୁଶଶଯ୍ୟାରେ ଶୋଇଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="exercise-19"><h2>୧୯. ବରୁଣଙ୍କୁ ପ୍ରସନ୍ନ କରିବା ପାଇଁ କୁଶଶଯ୍ୟାରେ ଶୟନ କରିବାର ପ୍ରସଙ୍ଗ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କପିମାନେ ଯେତେ ଗିରି ପକାନ୍ତି ସବୁ ବୁଡ଼ିଯାଏ, ଜଳରେ ବୁଦ୍‌ବୁଦ ମଧ୍ୟ ଦିଶେନାହିଁ। ବିଷଣ୍ଣ ରାମ ବରୁଣଙ୍କୁ ପ୍ରସନ୍ନ କରିବାକୁ ଉପବାସରେ କୁଶଶଯ୍ୟା ଗ୍ରହଣ କରନ୍ତି। (ପାଠର ପୃ. ୧–୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସୀତାଙ୍କୁ ଆଣିବା ପାଇଁ ଲଙ୍କା ଯିବା ଦରକାର। ପର୍ବତ ଜଳରେ ବୁଡ଼ିଯିବା ଦେଖି ରାମ ବିସ୍ମିତ ହେଲେ।</p><p>ସାଗରାଧିପତି ବରୁଣଙ୍କ କୃପା ପାଇବା ଆଶାରେ ଖାଦ୍ୟ ଛାଡ଼ି ସେ ଦର୍ଭ ବା କୁଶର ଶଯ୍ୟା ଗ୍ରହଣ କଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-20"><h2>୨୦. ବିଭୂତି ଭୋଗ ଓ ବିଭୂତିଭୂଷଣଙ୍କ ଶରଣ ପ୍ରସଙ୍ଗ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକା ଶବ୍ଦ ‘ବିଭୂତି’ର ଦୁଇ ଅର୍ଥକୁ ଧ୍ୟାନ ଦିଅ। ପ୍ରଥମ ଥର ତାହା ଲଙ୍କାର ଐଶ୍ୱର୍ଯ୍ୟ, ଦ୍ୱିତୀୟ ଥର ଭୂଷଣ ଭାବେ ଭସ୍ମ। ପାଠର ଶବ୍ଦାର୍ଥରେ ଦ୍ୱିତୀୟଟି ରାମଚନ୍ଦ୍ରଙ୍କ ଉଦ୍ଦେଶ୍ୟରେ କଥିତ। ଏହି ଫରକ ଦେଖାଇ ରାବଣ ବିଭୀଷଣଙ୍କୁ ଲଙ୍କାକୁ ଫେରାଇବାକୁ ଚାହାନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚରମାନଙ୍କ ମାଧ୍ୟମରେ ରାବଣ ନିଜ ଅନୁଜଙ୍କୁ ତାଙ୍କ ପୂର୍ବ ସମ୍ପଦ ଓ ବଡ଼କୁଳର ଜନ୍ମ ମନେ ପକାଇଛନ୍ତି। ଏତେ ଐଶ୍ୱର୍ଯ୍ୟ ଭୋଗ କରୁଥିବା ଲୋକ କିପରି ଭସ୍ମକୁ ଭୂଷଣ କରିଥିବା ରାମଙ୍କ ଶରଣକୁ ଗଲେ, ସେ କଥା ତାଚ୍ଛଲ୍ୟରେ ପଚାରିଛନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩–୧୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-21"><h2>୨୧. ବଜ୍ରପାତ ପରି ଚାପୁଡ଼ାର ତାତ୍ପର୍ଯ୍ୟ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚରମାନେ ରାବଣଙ୍କୁ ନିଜେ ଦେଖିଥିବା ଓ କଳ୍ପନା କରିଥିବା କଥା ଜଣାନ୍ତି। ଅଙ୍ଗଦଙ୍କ ପ୍ରହାର ଶୂନ୍ୟରେ ପଡ଼ିବା ସେମାନେ ଦେଖିଛନ୍ତି। ଦେହରେ ବାଜିଥିଲେ କ’ଣ ହୋଇଥାନ୍ତା ଭାବି ତାହାକୁ ବଜ୍ରାଘାତ ସହ ତୁଳନା କରିଛନ୍ତି। ଏହି ତୁଳନାରେ ଅଙ୍ଗଦଙ୍କ ବଳ ସହ ଚରଙ୍କ ଭୟ ମଧ୍ୟ ଦିଶେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଙ୍ଗଦଙ୍କୁ ନିଜ ପକ୍ଷରୁ ଫେରାଇବା ପାଇଁ ଦୁଇ ଦୂତ ସନ୍ଦେଶ ଦେଇଥିଲେ। ଅଙ୍ଗଦଙ୍କ କ୍ରୋଧରେ ସେମାନେ ଏତେ ଭୟଭୀତ ଯେ ତାଙ୍କ ଚାପୁଡ଼ା ଲାଗିଥିଲେ ଚୂର୍ଣ୍ଣ ହୋଇଥାନ୍ତେ ବୋଲି କହନ୍ତି।</p><p>ସେମାନଙ୍କ ବଞ୍ଚିବା ନିଜ ବଳର ଫଳ ବୋଲି ନ ଭାବି ଦୈବର ରକ୍ଷା ବୋଲି ମନେ କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-22"><h2>୨୨. ଲଙ୍କା ଯାତ୍ରା ପାଇଁ ରାଘବଙ୍କ ପ୍ରୟାସ ବର୍ଣ୍ଣନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସୀତାଙ୍କୁ ପାଇବାର ଆକାଂକ୍ଷାରେ ରାଘବ ସିନ୍ଧୁ ପୋତି ଯାତ୍ରାପଥ କରିବା କଥା ଭାବନ୍ତି। କପିମାନେ ଯେତେ ଗିରି ପକାନ୍ତି ସବୁ ବୁଡ଼ିଯାଏ, ଜଳରେ ବୁଦ୍‌ବୁଦ ମଧ୍ୟ ଦିଶେନାହିଁ। (ପାଠର ପୃ. ୧–୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସୀତାଙ୍କ ପ୍ରାପ୍ତିର ଆଶାରେ ରାମ ଲଙ୍କା ଯିବାକୁ ମନ ବଳାଇଲେ। ମଝିରେ ସମୁଦ୍ର ଥିବାରୁ ପର୍ବତ ପକାଇ ତାହାକୁ ପୋତିବାର କଥା ଭାବିଲେ।</p><p>କପିମାନେ ଯେତେ ଗିରି ପକାଇଲେ ସେସବୁ ଜଳରେ ବୁଡ଼ିଗଲା। ଏଥିରେ ଅଟକି ନ ଯାଇ ରାମ ଅନ୍ୟ ଉପାୟ ଗ୍ରହଣ କଲେ।</p><p>ସମୁଦ୍ରର ଅଧିପତି ବରୁଣଙ୍କ ପ୍ରସନ୍ନତା ପାଇଁ ସେ ଖାଦ୍ୟ ତ୍ୟାଗ କରି ଦର୍ଭଶଯ୍ୟାରେ ଶୟନ କଲେ।</p><p>ସାଗର ଏଠାରେ ନିର୍ଦ୍ଦିଷ୍ଟ ବାଧା। ବାନରମାନେ ପକାଇଥିବା ପର୍ବତ ନିମଜ୍ଜିତ ହେଲାରୁ ବୁଝାଗଲା ଯେ କେବଳ ବଳ ପ୍ରୟୋଗ କରି ପଥ ତିଆରି ହେଉନାହିଁ।</p><p>କୁଶଶଯ୍ୟାରେ ଉପବାସ ଓ ବରୁଣଙ୍କୁ ପ୍ରସନ୍ନ କରିବାର ଉଦ୍ୟମରେ ରାଘବଙ୍କ ଧୈର୍ଯ୍ୟ ପ୍ରକାଶ ପାଏ। ସୀତାଙ୍କ ଉଦ୍ଧାରର ଲକ୍ଷ୍ୟ ସ୍ଥିର ଥିଲା, ବାଧା ଦେଖି ସେ ଉପାୟ ବଦଳାଇଥିଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-23"><h2>୨୩. ଦୂତ ପ୍ରେରଣରେ ରାବଣଙ୍କ କୂଟନୀତି କିପରି ଦିଶେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ଦୂତଙ୍କ ପାଖରେ ବାର୍ତ୍ତା ଦୁଇଟି କାହିଁକି ଅଲଗା ବିଚାର କର। ବିଭୀଷଣଙ୍କ ମନରେ କୁଳ ଓ ଐଶ୍ୱର୍ଯ୍ୟର ଟାଣ, ଅଙ୍ଗଦଙ୍କ ମନରେ ପିତାଙ୍କ ଶତ୍ରୁ ପ୍ରତି କ୍ରୋଧ ଜନ୍ମାଇବା ରାବଣଙ୍କ ଉଦ୍ଦେଶ୍ୟ। ଉଭୟ ବାର୍ତ୍ତାର ଫଳ ଦେଖାଏ ଯେ ଚର ପଠାଇ ସେ ଆଶା କରିଥିବା ଭେଦ ସୃଷ୍ଟି କରିପାରିଲେ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶୁକ ଓ ସାରଣଙ୍କ ଜରିଆରେ ସେ ଦୁଇ ଜଣଙ୍କୁ ଦୁଇ ପ୍ରକାର ବାର୍ତ୍ତା ପଠାନ୍ତି। ବିଭୀଷଣଙ୍କୁ ଜ୍ୟେଷ୍ଠଭ୍ରାତା, କୁଳ ଓ ପୂର୍ବ ଐଶ୍ୱର୍ଯ୍ୟର କଥା କହି ଫେରାଇବାକୁ ଚାହାନ୍ତି।</p><p>ଅଙ୍ଗଦଙ୍କୁ ନିଜ ପିତାଙ୍କ କଥା କହି ତାଙ୍କ ପକ୍ଷରେ ମତଭେଦ ଘଟାଇବାକୁ ଚେଷ୍ଟା କରନ୍ତି। ଫେରନ୍ତା ଦୂତଙ୍କଠାରୁ ରାମଙ୍କ ବଳ ଓ ଅବସ୍ଥା ମଧ୍ୟ ଜାଣିନିଅନ୍ତି।</p><p>ତାଙ୍କ ଚେଷ୍ଟାରେ ପ୍ରତିପକ୍ଷର ମନୋବଳ ଓ ସମ୍ପର୍କକୁ ପ୍ରଭାବିତ କରିବାର ଇଚ୍ଛା ଦିଶେ।</p><p>ବିଭୀଷଣଙ୍କୁ ଭାଇର ସମ୍ପର୍କ ଦେଖାଇବା ଓ ଅଙ୍ଗଦଙ୍କୁ ନିଜ ପିତାଙ୍କ କଥା ମନେ ପକାଇବାର ଉଦ୍ଦେଶ୍ୟ ଏକ ନୁହେଁ। ଦୁହିଁଙ୍କ ଭିନ୍ନ ଦୁର୍ବଳତା ଅଛି ଭାବି ରାବଣ ଅଲଗା ସନ୍ଦେଶ ବାଛିଛନ୍ତି।</p><p>କିନ୍ତୁ ବିଭୀଷଣ ନ୍ୟାୟର ସର୍ତ୍ତ ରଖିଲେ ଓ ଅଙ୍ଗଦ କ୍ରୋଧରେ ତାହା ପ୍ରତ୍ୟାଖ୍ୟାନ କଲେ। ଦୂତଙ୍କ ଫେରି ଆସିବାରେ ଉପାୟର ସୀମା ମଧ୍ୟ ଦିଶିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-24"><h2>୨୪. ପାଠର ସାମାଜିକ ବାର୍ତ୍ତା ଜଣାଇ ସାନଭାଇକୁ ପତ୍ର ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପତ୍ରର ମଝି ଅଂଶରେ ପାଠରୁ ଗୋଟିଏ ଘଟଣା ଓ ତା’ର ଶିକ୍ଷା ଯୋଡ଼। କପିମାନେ ପକାଇଥିବା ଗିରି ବୁଡ଼ିଗଲା ପରେ ମଧ୍ୟ ରାମ ଆଉ ଏକ ଉପାୟ ଭାବିଲେ। ଅଙ୍ଗଦଙ୍କ ପ୍ରସଙ୍ଗରୁ କଳହ କରାଇବାକୁ ଚାହୁଁଥିବା ଲୋକର କଥାକୁ ପରଖିବାର ଶିକ୍ଷା ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନିଜ ଗ୍ରାମ, ତାରିଖ …</p><p>ସ୍ନେହର ଭାଇ,</p><p>ଆଜି ରାଘବଙ୍କ ଲଙ୍କାଯାତ୍ରାର ପ୍ରସଙ୍ଗ ପଢ଼ିଲି। କଠିନ କାମରେ ପ୍ରଥମ ଉପାୟ ବ୍ୟର୍ଥ ହେଲେ ରାମଙ୍କ ପରି ଧୈର୍ଯ୍ୟ ରଖି ଆଉ ଉପାୟ ଭାବିବା ଉଚିତ।</p><p>ବିଭୀଷଣଙ୍କ ଉତ୍ତର ମୋତେ ବିଶେଷ ଭଲ ଲାଗିଲା। ଭାଇଙ୍କ ପ୍ରତି ସମ୍ମାନ ଥିଲେ ମଧ୍ୟ ସୀତାଙ୍କ ପ୍ରତି ଅନ୍ୟାୟକୁ ସେ ଗ୍ରହଣ କରିନାହାନ୍ତି।</p><p>ଆମେ ମଧ୍ୟ କାହାରି କଥାରେ ନିଜ ସାଙ୍ଗ ଉପରେ ସନ୍ଦେହ କରିବା ଆଗରୁ ସତ୍ୟ ବିଚାର କରିବା। ତୋତେ କେଉଁ ଘଟଣା ଭଲ ଲାଗିଲା ଜଣାଇବୁ।</p><p>ତୋର ବଡ଼ଭାଇ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-25"><h2>୨୫. ସେତୁବନ୍ଧ ବିଷୟରେ ଶ୍ରେଣୀଚିତ୍ର ପ୍ରସ୍ତୁତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚିତ୍ରର ତଳେ ପାଠର କେଉଁ ଅଂଶ ଦେଖାଯାଏ ତାହା ଲେଖ। ଏହି ପଦଗୁଡ଼ିକରେ ରାମ ଉପାୟ ଭାବୁଛନ୍ତି, କପିମାନଙ୍କ ଗିରି ବୁଡ଼ୁଛି ଓ ରାମ କୁଶଶଯ୍ୟାରେ ରହୁଛନ୍ତି। ସେତୁବନ୍ଧର ଯେଉଁ ଅଲଗା ଚିତ୍ର ତୁମେ ସଂଗ୍ରହ କରିବ ତାହା ସହ ଏହି ପ୍ରସଙ୍ଗର ସମ୍ପର୍କ ଜଣାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚିତ୍ର ତଳେ ଲେଖିବାର ନମୁନା — “ମଝିରେ ସିନ୍ଧୁ, ସେପଟେ ଲଙ୍କା। ରାମ ସାଗର ପାର ହେବାର ଉପାୟ ଖୋଜୁଛନ୍ତି।</p><p>କପିମାନେ ଗିରି ଆଣିଛନ୍ତି।” ଚିତ୍ରରେ ଜଳ, ତଟ ଓ କପିସେନାକୁ ଚିହ୍ନାଅ। ପଠିତ ଅଂଶରେ ଦର୍ଭଶଯ୍ୟା ପର୍ଯ୍ୟନ୍ତ ଘଟଣା ଦିଆଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-26"><h2>୨୬. ବୈଦେହୀଶ ବିଳାସରୁ ପସନ୍ଦର ପଦ ବାଛି ଆବୃତ୍ତି କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ପଦରେ ଦୁଇଟି ଭାବ ଅଛି। ଆଗ ସୀତାଙ୍କୁ ପାଇବାର ଆଶା, ତା’ପରେ ସିନ୍ଧୁ ପୋତି ଯିବାର ବିଚାର। ଆବୃତ୍ତି ସମୟରେ ଦୁଇ ପାଦ ମଝିରେ ଅଳ୍ପ ବିରାମ ଦେଲେ ଶ୍ରୋତା ରାମଙ୍କ ଇଚ୍ଛାରୁ ତାଙ୍କ ଉପାୟ ପର୍ଯ୍ୟନ୍ତ ଘଟଣାଟି ବୁଝିପାରିବେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପଠିତ ଅଂଶର ପ୍ରଥମ ପଦର ଚୟନ — “ବଳିଲା ରାଘବ ଆଶା ସୀତା ପ୍ରାପତିରେ / ବିଚାରିଲେ ସିନ୍ଧୁ ପୋତି ଯିବା ପର୍ବତରେ ଯେ।” ପ୍ରଥମ ପାଦରେ ଲକ୍ଷ୍ୟ, ଦ୍ୱିତୀୟରେ ଉପାୟ ଅଛି। ଆବୃତ୍ତିରେ ଦୁଇ ଭାବ ମଝିରେ ବିରାମ ଦେବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+
+</main></body></html>

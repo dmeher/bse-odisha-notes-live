@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">ବାମେ △ABCରେ AB, AC ଉପରେ D, E ଓ 50°, 65° କୋଣ | ଡାହାଣେ △PQRରେ MN ∥ QR |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="138.37,67.93 52.50,252.07 224.24,252.07 138.37,67.93" stroke="#244355" stroke-width="2.35"/>
+<polyline points="353.04,95.36 267.17,252.07 447.50,252.07 353.04,95.36" stroke="#244355" stroke-width="2.35"/>
+<polyline points="81.12,190.69 195.62,190.69" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="301.52,189.39 409.72,189.39" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<text x="138.37" y="91.93" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">50°</text>
+<text x="76.50" y="244.07" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">65°</text>
+<text x="172.62" y="181.69" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">65°</text>
+<circle cx="138.37" cy="67.93" r="2.7" fill="#244355"/>
+<text x="138.37" y="52.93" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="52.50" cy="252.07" r="2.7" fill="#244355"/>
+<text x="43.50" y="262.07" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="224.24" cy="252.07" r="2.7" fill="#244355"/>
+<text x="234.24" y="262.07" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="81.12" cy="190.69" r="2.7" fill="#244355"/>
+<text x="68.12" y="185.69" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="195.62" cy="190.69" r="2.7" fill="#244355"/>
+<text x="208.62" y="185.69" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">E</text>
+<circle cx="353.04" cy="95.36" r="2.7" fill="#244355"/>
+<text x="353.04" y="80.36" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">P</text>
+<circle cx="301.52" cy="189.39" r="2.7" fill="#244355"/>
+<text x="288.52" y="184.39" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">M</text>
+<circle cx="409.72" cy="189.39" r="2.7" fill="#244355"/>
+<text x="422.72" y="184.39" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">N</text>
+<circle cx="267.17" cy="252.07" r="2.7" fill="#244355"/>
+<text x="260.17" y="267.07" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">Q</text>
+<circle cx="447.50" cy="252.07" r="2.7" fill="#244355"/>
+<text x="454.50" y="266.07" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">R</text>
+</svg>

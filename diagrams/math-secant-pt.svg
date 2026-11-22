@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 225">
+  <title>Secant PAB and tangent PT</title>
+  <rect width="320" height="225" rx="8" fill="white"/>
+  <g fill="none" stroke="#254b55" stroke-width="2">
+<circle cx="120" cy="110" r="68"/><path d="M269 110H50M269 110L151 49.5"/>
+  </g>
+  <g fill="#173940" font-family="sans-serif" font-size="15">
+    <text x="274" y="115">P</text>
+    <text x="181" y="131">A</text>
+    <text x="39" y="117">B</text>
+    <text x="148" y="40">T</text>
+  </g>
+</svg>

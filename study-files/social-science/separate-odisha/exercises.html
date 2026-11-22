@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1x_ExOgYtCCtrMWE5t9975dxMaS76k_Ut/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଚାରି ପାଠର ପ୍ରତ୍ୟେକ ଲିଖିତ ଉପପ୍ରଶ୍ନ, ପ୍ରଶ୍ନ ୫ରେ ସୂଚିତ ପାଞ୍ଚଟି କାମ ଓ ଶିଳ୍ପ-ଶିକ୍ଷା ବିଷୟକ ଅତିରିକ୍ତ ପ୍ରକଳ୍ପ ପୃଥକ୍ ଭାବେ ଯାଞ୍ଚ ହୋଇଛି।</p><p>ପାଠ ବାହାରର ଅନ୍ୟୂନ ଦଶଟି ପତ୍ରିକାର ସ୍ଥାନ ଓ ସମୟ, ଉତ୍କଳ ସମ୍ମିଳନୀର ସାମ୍ପ୍ରତିକ ରୂପ ଏବଂ ମଧୁବାବୁଙ୍କ ଶିଳ୍ପ ଓ ଶିକ୍ଷା ସମ୍ବନ୍ଧୀୟ କାର୍ଯ୍ୟର ପୂର୍ଣ୍ଣ ବିବରଣୀ ପାଇଁ ଅତିରିକ୍ତ ତଥ୍ୟ ଆବଶ୍ୟକ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୨–୩, ୫–୬, ୧୦–୧୨, ୧୭, ୨୦–୨୨, ୨୪, ୨୭–୨୮</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୪୧)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">ପ୍ରଥମ ପାଠ · ୧ (କ)</a> <a href="#exercise-2">ପ୍ରଥମ ପାଠ · ୧ (ଖ)</a> <a href="#exercise-3">ପ୍ରଥମ ପାଠ · ୧ (ଗ)</a> <a href="#exercise-4">ପ୍ରଥମ ପାଠ · ୧ (ଘ)</a> <a href="#exercise-5">ପ୍ରଥମ ପାଠ · ୧ (ଙ)</a> <a href="#exercise-6">ପ୍ରଥମ ପାଠ · ୨ (କ)</a> <a href="#exercise-7">ପ୍ରଥମ ପାଠ · ୨ (ଖ)</a> <a href="#exercise-8">ପ୍ରଥମ ପାଠ · ୨ (ଗ)</a> <a href="#exercise-9">ପ୍ରଥମ ପାଠ · ୨ (ଘ)</a> <a href="#exercise-10">ପ୍ରଥମ ପାଠ · ୨ (ଙ)</a> <a href="#exercise-11">ପ୍ରଥମ ପାଠ · ୨ (ଚ)</a> <a href="#exercise-12">ପ୍ରଥମ ପାଠ · ୨ (ଛ)</a> <a href="#exercise-13">ପ୍ରଥମ ପାଠ · ୨ (ଜ)</a> <a href="#exercise-14">ପ୍ରଥମ ପାଠ · ୨ (ଝ)</a> <a href="#exercise-15">ପ୍ରଥମ ପାଠ · ୨ (ଞ)</a> <a href="#exercise-16">ପ୍ରଥମ ପାଠ · ୩ (କ)</a> <a href="#exercise-17">ପ୍ରଥମ ପାଠ · ୩ (ଖ)</a> <a href="#exercise-18">ପ୍ରଥମ ପାଠ · ୩ (ଗ)</a> <a href="#exercise-19">ପ୍ରଥମ ପାଠ · ୩ (ଘ)</a> <a href="#exercise-20">ପ୍ରଥମ ପାଠ · ୩ (ଙ)</a> <a href="#exercise-21">ପ୍ରଥମ ପାଠ · ୩ (ଚ)</a> <a href="#exercise-22">ପ୍ରଥମ ପାଠ · ୩ (ଛ)</a> <a href="#exercise-23">ପ୍ରଥମ ପାଠ · ୩ (ଜ)</a> <a href="#exercise-24">ପ୍ରଥମ ପାଠ · ୩ (ଝ)</a> <a href="#exercise-25">ପ୍ରଥମ ପାଠ · ୩ (ଞ)</a> <a href="#exercise-26">ପ୍ରଥମ ପାଠ · ୪ (କ)</a> <a href="#exercise-27">ପ୍ରଥମ ପାଠ · ୪ (ଖ)</a> <a href="#exercise-28">ପ୍ରଥମ ପାଠ · ୪ (ଗ)</a> <a href="#exercise-29">ପ୍ରଥମ ପାଠ · ୪ (ଘ)</a> <a href="#exercise-30">ପ୍ରଥମ ପାଠ · ୫ · କାମ ୧</a> <a href="#exercise-31">ପ୍ରଥମ ପାଠ · ୫ · କାମ ୨</a> <a href="#exercise-32">ଦ୍ୱିତୀୟ ପାଠ · ୧ (କ)</a> <a href="#exercise-33">ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଖ)</a> <a href="#exercise-34">ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଗ)</a> <a href="#exercise-35">ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଘ)</a> <a href="#exercise-36">ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଙ)</a> <a href="#exercise-37">ଦ୍ୱିତୀୟ ପାଠ · ୨ (କ)</a> <a href="#exercise-38">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଖ)</a> <a href="#exercise-39">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଗ)</a> <a href="#exercise-40">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଘ)</a> <a href="#exercise-41">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଙ)</a> <a href="#exercise-42">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଚ)</a> <a href="#exercise-43">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଛ)</a> <a href="#exercise-44">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଜ)</a> <a href="#exercise-45">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଝ)</a> <a href="#exercise-46">ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଞ)</a> <a href="#exercise-47">ଦ୍ୱିତୀୟ ପାଠ · ୩ (କ)</a> <a href="#exercise-48">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଖ)</a> <a href="#exercise-49">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଗ)</a> <a href="#exercise-50">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଘ)</a> <a href="#exercise-51">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଙ)</a> <a href="#exercise-52">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଚ)</a> <a href="#exercise-53">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଛ)</a> <a href="#exercise-54">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଜ)</a> <a href="#exercise-55">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଝ)</a> <a href="#exercise-56">ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଞ)</a> <a href="#exercise-57">ଦ୍ୱିତୀୟ ପାଠ · ୪ (କ)</a> <a href="#exercise-58">ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଖ)</a> <a href="#exercise-59">ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଗ)</a> <a href="#exercise-60">ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଘ)</a> <a href="#exercise-61">ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଙ)</a> <a href="#exercise-62">ଦ୍ୱିତୀୟ ପାଠ · ୫ · କାମ ୧</a> <a href="#exercise-63">ଦ୍ୱିତୀୟ ପାଠ · ତୁମେ ଜାଣିଛ କି</a> <a href="#exercise-64">ତୃତୀୟ ପାଠ · ୧ (କ)</a> <a href="#exercise-65">ତୃତୀୟ ପାଠ · ୧ (ଖ)</a> <a href="#exercise-66">ତୃତୀୟ ପାଠ · ୧ (ଗ)</a> <a href="#exercise-67">ତୃତୀୟ ପାଠ · ୧ (ଘ)</a> <a href="#exercise-68">ତୃତୀୟ ପାଠ · ୧ (ଙ)</a> <a href="#exercise-69">ତୃତୀୟ ପାଠ · ୧ (ଚ)</a> <a href="#exercise-70">ତୃତୀୟ ପାଠ · ୧ (ଛ)</a> <a href="#exercise-71">ତୃତୀୟ ପାଠ · ୧ (ଜ)</a> <a href="#exercise-72">ତୃତୀୟ ପାଠ · ୧ (ଝ)</a> <a href="#exercise-73">ତୃତୀୟ ପାଠ · ୧ (ଞ)</a> <a href="#exercise-74">ତୃତୀୟ ପାଠ · ୨ (କ)</a> <a href="#exercise-75">ତୃତୀୟ ପାଠ · ୨ (ଖ)</a> <a href="#exercise-76">ତୃତୀୟ ପାଠ · ୨ (ଗ)</a> <a href="#exercise-77">ତୃତୀୟ ପାଠ · ୨ (ଘ)</a> <a href="#exercise-78">ତୃତୀୟ ପାଠ · ୨ (ଙ)</a> <a href="#exercise-79">ତୃତୀୟ ପାଠ · ୨ (ଚ)</a> <a href="#exercise-80">ତୃତୀୟ ପାଠ · ୨ (ଛ)</a> <a href="#exercise-81">ତୃତୀୟ ପାଠ · ୨ (ଜ)</a> <a href="#exercise-82">ତୃତୀୟ ପାଠ · ୨ (ଝ)</a> <a href="#exercise-83">ତୃତୀୟ ପାଠ · ୨ (ଞ)</a> <a href="#exercise-84">ତୃତୀୟ ପାଠ · ୨ (ଟ)</a> <a href="#exercise-85">ତୃତୀୟ ପାଠ · ୨ (ଠ)</a> <a href="#exercise-86">ତୃତୀୟ ପାଠ · ୨ (ଡ)</a> <a href="#exercise-87">ତୃତୀୟ ପାଠ · ୨ (ଢ)</a> <a href="#exercise-88">ତୃତୀୟ ପାଠ · ୩ (କ)</a> <a href="#exercise-89">ତୃତୀୟ ପାଠ · ୩ (ଖ)</a> <a href="#exercise-90">ତୃତୀୟ ପାଠ · ୩ (ଗ)</a> <a href="#exercise-91">ତୃତୀୟ ପାଠ · ୩ (ଘ)</a> <a href="#exercise-92">ତୃତୀୟ ପାଠ · ୩ (ଙ)</a> <a href="#exercise-93">ତୃତୀୟ ପାଠ · ୩ (ଚ)</a> <a href="#exercise-94">ତୃତୀୟ ପାଠ · ୩ (ଛ)</a> <a href="#exercise-95">ତୃତୀୟ ପାଠ · ୩ (ଜ)</a> <a href="#exercise-96">ତୃତୀୟ ପାଠ · ୩ (ଝ)</a> <a href="#exercise-97">ତୃତୀୟ ପାଠ · ୩ (ଞ)</a> <a href="#exercise-98">ତୃତୀୟ ପାଠ · ୩ (ଟ)</a> <a href="#exercise-99">ତୃତୀୟ ପାଠ · ୩ (ଠ)</a> <a href="#exercise-100">ତୃତୀୟ ପାଠ · ୩ (ଡ)</a> <a href="#exercise-101">ତୃତୀୟ ପାଠ · ୩ (ଢ)</a> <a href="#exercise-102">ତୃତୀୟ ପାଠ · ୪ (କ)</a> <a href="#exercise-103">ତୃତୀୟ ପାଠ · ୪ (ଖ)</a> <a href="#exercise-104">ତୃତୀୟ ପାଠ · ୪ (ଗ)</a> <a href="#exercise-105">ତୃତୀୟ ପାଠ · ୪ (ଘ)</a> <a href="#exercise-106">ତୃତୀୟ ପାଠ · ୪ (ଙ)</a> <a href="#exercise-107">ତୃତୀୟ ପାଠ · ୪ (ଚ)</a> <a href="#exercise-108">ତୃତୀୟ ପାଠ · ୪ (ଛ)</a> <a href="#exercise-109">ତୃତୀୟ ପାଠ · ୪ (ଜ)</a> <a href="#exercise-110">ତୃତୀୟ ପାଠ · ୫ · କାମ ୧</a> <a href="#exercise-111">ଚତୁର୍ଥ ପାଠ · ୧ (କ)</a> <a href="#exercise-112">ଚତୁର୍ଥ ପାଠ · ୧ (ଖ)</a> <a href="#exercise-113">ଚତୁର୍ଥ ପାଠ · ୧ (ଗ)</a> <a href="#exercise-114">ଚତୁର୍ଥ ପାଠ · ୧ (ଘ)</a> <a href="#exercise-115">ଚତୁର୍ଥ ପାଠ · ୧ (ଙ)</a> <a href="#exercise-116">ଚତୁର୍ଥ ପାଠ · ୨ (କ)</a> <a href="#exercise-117">ଚତୁର୍ଥ ପାଠ · ୨ (ଖ)</a> <a href="#exercise-118">ଚତୁର୍ଥ ପାଠ · ୨ (ଗ)</a> <a href="#exercise-119">ଚତୁର୍ଥ ପାଠ · ୨ (ଘ)</a> <a href="#exercise-120">ଚତୁର୍ଥ ପାଠ · ୨ (ଙ)</a> <a href="#exercise-121">ଚତୁର୍ଥ ପାଠ · ୨ (ଚ)</a> <a href="#exercise-122">ଚତୁର୍ଥ ପାଠ · ୨ (ଛ)</a> <a href="#exercise-123">ଚତୁର୍ଥ ପାଠ · ୨ (ଜ)</a> <a href="#exercise-124">ଚତୁର୍ଥ ପାଠ · ୨ (ଝ)</a> <a href="#exercise-125">ଚତୁର୍ଥ ପାଠ · ୨ (ଞ)</a> <a href="#exercise-126">ଚତୁର୍ଥ ପାଠ · ୩ (କ)</a> <a href="#exercise-127">ଚତୁର୍ଥ ପାଠ · ୩ (ଖ)</a> <a href="#exercise-128">ଚତୁର୍ଥ ପାଠ · ୩ (ଗ)</a> <a href="#exercise-129">ଚତୁର୍ଥ ପାଠ · ୩ (ଘ)</a> <a href="#exercise-130">ଚତୁର୍ଥ ପାଠ · ୩ (ଙ)</a> <a href="#exercise-131">ଚତୁର୍ଥ ପାଠ · ୩ (ଚ)</a> <a href="#exercise-132">ଚତୁର୍ଥ ପାଠ · ୩ (ଛ)</a> <a href="#exercise-133">ଚତୁର୍ଥ ପାଠ · ୩ (ଜ)</a> <a href="#exercise-134">ଚତୁର୍ଥ ପାଠ · ୩ (ଝ)</a> <a href="#exercise-135">ଚତୁର୍ଥ ପାଠ · ୩ (ଞ)</a> <a href="#exercise-136">ଚତୁର୍ଥ ପାଠ · ୪ (କ)</a> <a href="#exercise-137">ଚତୁର୍ଥ ପାଠ · ୪ (ଖ)</a> <a href="#exercise-138">ଚତୁର୍ଥ ପାଠ · ୪ (ଗ)</a> <a href="#exercise-139">ଚତୁର୍ଥ ପାଠ · ୪ (ଘ)</a> <a href="#exercise-140">ଚତୁର୍ଥ ପାଠ · ୪ (ଙ)</a> <a href="#exercise-141">ଚତୁର୍ଥ ପାଠ · ୫ · କାମ ୧</a></nav></details>
+<article id="exercise-1"><h2>ପ୍ରଥମ ପାଠ · ୧ (କ). ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଓଡ଼ିଶାରେ ଉଚ୍ଚ ଶିକ୍ଷାର ବିକାଶ ଓ ତାହାର ଫଳାଫଳ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୮୫୪ର ଚାର୍ଲସ ଉଡ୍‌ଙ୍କ ଶିକ୍ଷା ସଂସ୍କାର ଓ ୧୮୫୭ରେ କଲିକତା ବିଶ୍ୱବିଦ୍ୟାଳୟ ସ୍ଥାପନରୁ ଉଚ୍ଚଶିକ୍ଷା ପାଇଁ ସୁଯୋଗ ବଢ଼ିଲା। ୧୮୬୭ରେ କଟକ ଜିଲ୍ଲା ସ୍କୁଲ ଉନ୍ନୀତ ହେଲା ଓ ୧୮୭୬ରେ ରେଭେନ୍ସା କଲେଜ ଜନ୍ମଲାଭ କଲା।</p><p>ଉଚ୍ଚଶିକ୍ଷିତ ଯୁବକମାନେ ସାମାଜିକ ସମସ୍ୟା ବିଚାର କଲେ ଏବଂ ଅନ୍ୟାୟ ବିରୋଧରେ ଜନମତ ଗଢ଼ିଲେ। ବିଭିନ୍ନ ଶାସନ ଅଧୀନରେ ବିଚ୍ଛିନ୍ନ ଓଡ଼ିଆମାନଙ୍କ ଅସୁବିଧା ବିଷୟରେ ଏହି ଶିକ୍ଷିତ ଗୋଷ୍ଠୀ ଆଲୋଚନା କଲା।</p><p>ଭାଷା ରକ୍ଷା ଓ ଜନସାଧାରଣଙ୍କ ସ୍ୱାର୍ଥ ପାଇଁ ସଙ୍ଗଠିତ ଉଦ୍ୟମର ଏକ ଭିତ୍ତି ପ୍ରସ୍ତୁତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-2"><h2>ପ୍ରଥମ ପାଠ · ୧ (ଖ). ଓଡ଼ିଶାରେ ସମ୍ବାଦପତ୍ରର କିପରି ବିକାଶ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୮୩୭ରେ କଟକ ମିଶନ ପ୍ରେସ ସ୍ଥାପନ ପରେ ଓଡ଼ିଆ ଲେଖା ଛାପିବା ସହଜ ହେଲା। କଟକର ‘ଉତ୍କଳ ଦୀପିକା’, ବାଲେଶ୍ୱରର ‘ସମ୍ବାଦ ବାହିକା’ ଓ ‘ବୋଧଦାୟିନୀ’, ବାମଣ୍ଡାର ‘ସମ୍ବଲପୁର ହିତୈଷିଣୀ’ ବିଭିନ୍ନ ଅଞ୍ଚଳର ସମସ୍ୟା ପାଠକଙ୍କ ପାଖକୁ ଆଣିଲେ।</p><p>ଏହିପରି ଜନମତ ଓ ଜାତୀୟ ଚେତନାର ବିକାଶ ହେଲା। ଗୌରୀଶଙ୍କର ରାୟ ‘ଉତ୍କଳ ଦୀପିକା’ର ସମ୍ପାଦନା କରୁଥିଲେ।</p><p>ଫକୀରମୋହନ ସେନାପତିଙ୍କ ସମ୍ପାଦନାରେ ବାଲେଶ୍ୱରର ଦୁଇଟି ପତ୍ର ପ୍ରକାଶ ପାଉଥିଲା। ସମ୍ବାଦପତ୍ର ଦ୍ୱାରା ଦୂରସ୍ଥ ଅଞ୍ଚଳର ପାଠକ ମଧ୍ୟ ଅନ୍ୟ ଅଞ୍ଚଳର ଅଭିଯୋଗ ଜାଣିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-3"><h2>ପ୍ରଥମ ପାଠ · ୧ (ଗ). ଓଡ଼ିଆ-ବଙ୍ଗଳାଭାଷା ବିବାଦ କିପରି ଓଡ଼ିଶାରେ ଜାତୀୟ ଚେତନା ସୃଷ୍ଟି କରିବାରେ ସାହାଯ୍ୟ କରିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବଙ୍ଗଳା ଭାଷା କାର୍ଯ୍ୟାଳୟରେ ସ୍ଥାନ ପାଇଲା। ଓଡ଼ିଆ ପାଠ୍ୟପୁସ୍ତକ କମ୍ ଥିବା ଆଳରେ ବିଦ୍ୟାଳୟରୁ ମଧ୍ୟ ଓଡ଼ିଆ ହଟାଇବାର ଉଦ୍ୟମ ହେଲା।</p><p>ଲେଖକ ଓ ଶିକ୍ଷିତ ଲୋକେ ମାତୃଭାଷାର ରକ୍ଷା ପାଇଁ ଏକାଠି ହେଲେ। କେତେକ ବଙ୍ଗଭାଷୀ ମଧ୍ୟ ଏହାକୁ ସମର୍ଥନ କଲେ।</p><p>ଭାଷାର ସ୍ୱାତନ୍ତ୍ର୍ୟ ରକ୍ଷା ବିଚ୍ଛିନ୍ନ ଅଞ୍ଚଳମାନଙ୍କ ସାଧାରଣ ଦାବି ହେଲା। ପାଠ୍ୟପୁସ୍ତକ କମ୍ ରହିବା ଏକ ମୁଦ୍ରଣ ଓ ଶିକ୍ଷା ସମସ୍ୟା ଥିଲା।</p><p>ତାକୁ ଭାଷାର ସ୍ୱାତନ୍ତ୍ର୍ୟ ଅସ୍ୱୀକାରର କାରଣ କରାଯିବାରୁ ଲେଖକମାନେ ମାତୃଭାଷାରେ ସାହିତ୍ୟ ଓ ପାଠ୍ୟପୁସ୍ତକ ରଚନାରେ ମନ ଦେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-4"><h2>ପ୍ରଥମ ପାଠ · ୧ (ଘ). ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଗଠିତ ହୋଇଥିବା କେଉଁ ଅନୁଷ୍ଠାନଗୁଡ଼ିକ ଜାତୀୟ ଜାଗରଣକୁ ବଳବତ୍ତର କରିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କଟକର ଉତ୍କଳ ସଭା, ଉତ୍କଳ ଭାଷା ଉଦ୍ଦୀପନୀ ସଭା ଓ ଉତ୍କଳ ଉଲ୍ଲାସିନୀ ସଭା, ବାଲେଶ୍ୱରର ଉତ୍କଳ ଭାଷା ଉନ୍ନତି ବିଧାୟିନୀ ସଭା ଓ ବ୍ରହ୍ମପୁରର ଉତ୍କଳ ହିତବାଦିନୀ ସଭା ଭାଷା ଓ ସଂସ୍କୃତିର ଉନ୍ନତି କଲେ। ଏହି ସଭାଗୁଡ଼ିକର ଆଲୋଚନା ଓ ସାମୂହିକ ଉଦ୍ୟମ ଲୋକଙ୍କ ମନରେ ଏକତା ସୃଷ୍ଟି କଲା।</p><p>ପ୍ରତ୍ୟେକ ଅନୁଷ୍ଠାନ ନିଜ ଅଞ୍ଚଳରେ କାର୍ଯ୍ୟ କଲେ ମଧ୍ୟ ମାତୃଭାଷାର ସୁରକ୍ଷା ଥିଲା ସାଧାରଣ ଲକ୍ଷ୍ୟ। ସଭାରେ ଲୋକଙ୍କ ଆଲୋଚନା ବ୍ୟକ୍ତିଗତ ଅଭିଯୋଗକୁ ସାମୂହିକ ଦାବିରେ ପରିଣତ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=56">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୬–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-5"><h2>ପ୍ରଥମ ପାଠ · ୧ (ଙ). ଧର୍ମକ୍ଷେତ୍ରରେ ଓଡ଼ିଶାରେ ଦେଖା ଦେଇଥିବା ‘ନବଜାଗରଣ’ କ’ଣ ଏବଂ ଓଡ଼ିଆ ଜାତୀୟତା ବିକାଶ ଦିଗରେ ଏହା କିପରି ସହାୟକ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଧର୍ମସଂସ୍କାରର ଆବଶ୍ୟକତାରୁ ଓଡ଼ିଶାର ମାଟିରେ ସତ୍ୟ ମହିମା ଧର୍ମର ବିକାଶ ହେଲା। ମହିମା ଗୋସ୍ୱାମୀ ଏହାର ପ୍ରବର୍ତ୍ତକ ଓ ଭୀମଭୋଇ ମୁଖ୍ୟ ପ୍ରଚାରକ ଥିଲେ।</p><p>ଭୀମଭୋଇଙ୍କ ଓଡ଼ିଆ କବିତା ମାନବପ୍ରେମ ଓ ଅନ୍ୟଙ୍କ ପାଇଁ ତ୍ୟାଗର ଭାବ ପ୍ରଚାର କଲା। ସାଧାରଣ ଭାଷାରେ ଏହି ଚିନ୍ତାଧାରା ଲୋକଙ୍କ ଭିତରେ ଜାତିପ୍ରୀତି ବଢ଼ାଇଲା।</p><p>ସାମାଜିକ ଅସମାନତାକୁ ପ୍ରଶ୍ନ କରିବା ଓ ଦୁଃଖୀ ମଣିଷ ପାଇଁ ଚିନ୍ତା କରିବାରେ ଏହି ଜାଗରଣର ପରିଚୟ ମିଳେ। ଓଡ଼ିଆରେ ରଚିତ ଗୀତ ଲୋକଙ୍କ ପାଖରେ ସେହି ବାର୍ତ୍ତା ପହଞ୍ଚାଇଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=56">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୬–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-6"><h2>ପ୍ରଥମ ପାଠ · ୨ (କ). କେବେ ଓଡ଼ିଶା ତା’ର ସ୍ୱାଧୀନତା ହରାଇଥିଲା ଏବଂ କେବେ ଇଂରେଜମାନେ ଓଡ଼ିଶା ଅଧିକାର କଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ୱାଧୀନତା ହରାଇବା ଓ ଇଂରେଜ ଅଧିକାର ଏକା ବର୍ଷର ଘଟଣା ନୁହେଁ। ପରବର୍ତ୍ତୀ ଶାସନ ବିଭାଜନରେ ଓଡ଼ିଆ ଅଞ୍ଚଳ ଭିନ୍ନ ପ୍ରଶାସନରେ ରହିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୫୬୮ରେ ଓଡ଼ିଶା ସ୍ୱାଧୀନତା ହରାଇଲା। ୧୮୦୩ରେ ଇଂରେଜମାନେ ଓଡ଼ିଶା ଅଧିକାର କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-7"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଖ). ଓଡ଼ିଶାରେ ଶିକ୍ଷାର ପ୍ରସାର ପାଇଁ କ’ଣ ସହାୟକ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହାର ସ୍ଥାନୀୟ ଫଳ କଟକ ଜିଲ୍ଲା ସ୍କୁଲର ଉନ୍ନତି ଓ ପରେ ରେଭେନ୍ସା କଲେଜ ପ୍ରତିଷ୍ଠାରେ ଦେଖାଗଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚାର୍ଲସ ଉଡ୍‌ଙ୍କ ପାଠ୍ୟକ୍ରମ ସଂସ୍କାର ଓ କଲିକତା ବିଶ୍ୱବିଦ୍ୟାଳୟ ସ୍ଥାପନ ଶିକ୍ଷାର ପ୍ରସାରରେ ସାହାଯ୍ୟ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-8"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଗ). ଓଡ଼ିଶାରେ ଶିକ୍ଷିତ ଯୁବଗୋଷ୍ଠୀର ସଂକଳ୍ପ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶିକ୍ଷିତ ଯୁବକ ନିଜ ଅଞ୍ଚଳର ସମସ୍ୟା ସଭା ଓ ପତ୍ରପତ୍ରିକାରେ ଉଠାଇବାରୁ ତାହା ସାଧାରଣ ଆଲୋଚନାର ବିଷୟ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନ୍ୟାୟ ଓ ଅନୀତି ବିରୋଧରେ ସ୍ୱର ଉଠାଇବା ଓ ଓଡ଼ିଶାରେ ଜାତୀୟ ଚେତନା ବଢ଼ାଇବା ସେମାନଙ୍କ ସଂକଳ୍ପ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-9"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଘ). କେବେ ଓଡ଼ିଶାରେ ପ୍ରଥମ ମୁଦ୍ରଣ ଯନ୍ତ୍ର ପ୍ରତିଷ୍ଠା କରାଯାଇଥିଲା ଏବଂ ଏହାର ନାମ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୁଦ୍ରଣଯନ୍ତ୍ର ପହଞ୍ଚିବାରୁ ଓଡ଼ିଆ ଲେଖାର ଅନେକ ପ୍ରତି କରି ବିଭିନ୍ନ ଅଞ୍ଚଳର ପାଠକଙ୍କ ନିକଟରେ ପହଞ୍ଚାଇବା ସହଜ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୮୩୭ରେ କଟକ ମିଶନ ପ୍ରେସ ସ୍ଥାପିତ ହୋଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-10"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଙ). ‘ଉତ୍କଳ ଦୀପିକା’ର ସମ୍ପାଦକଙ୍କର ନାମ କ’ଣ ଥିଲା ଏବଂ ଏହା କେଉଁଠାରୁ ପ୍ରକାଶ ପାଉଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି କଟକ ପତ୍ରଠାରୁ ବାଲେଶ୍ୱରର ଫକୀରମୋହନ ସମ୍ପାଦିତ ‘ସମ୍ବାଦ ବାହିକା’କୁ ପୃଥକ୍ କରି ଚିହ୍ନିବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗୌରୀଶଙ୍କର ରାୟ ସମ୍ପାଦକ ଥିଲେ। ପତ୍ରଟି କଟକରୁ ପ୍ରକାଶ ପାଉଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-11"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଚ). ଫକୀରମୋହନ ସେନାପତିଙ୍କ ସମ୍ପାଦନାରେ ପ୍ରକାଶିତ ସମ୍ବାଦ ପତ୍ରଗୁଡ଼ିକର ନାମ କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାଲେଶ୍ୱର ଏହି ଦୁଇ ପ୍ରକାଶନର କେନ୍ଦ୍ର ଥିଲା। ସମ୍ପାଦକଙ୍କୁ ପତ୍ରିକା ସହ ତାହାର ପ୍ରକାଶନସ୍ଥଳ ସହିତ ମଧ୍ୟ ମେଳାଇହେବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>‘ସମ୍ବାଦ ବାହିକା’ ଓ ‘ବୋଧଦାୟିନୀ’ ଫକୀରମୋହନଙ୍କ ସମ୍ପାଦନାରେ ପ୍ରକାଶ ପାଉଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-12"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଛ). ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଓଡ଼ିଶାରେ ପାଠ୍ୟପୁସ୍ତକର ସଂଖ୍ୟା ବହୁତ କମ୍ ଥିବାର କାରଣ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଅଭାବକୁ ଦେଖାଇ ବିଦ୍ୟାଳୟରେ ଅନ୍ୟ ଭାଷା ପ୍ରଚଳନ ସପକ୍ଷରେ ଯୁକ୍ତି ହୋଇଥିଲା। ତେଣୁ ଓଡ଼ିଆ ପାଠ୍ୟପୁସ୍ତକ ରଚନା ଭାଷାରକ୍ଷା ସହ ଯୋଡ଼ିହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଛାପାଖାନାର ଅଭାବ ଓ ବୁଦ୍ଧିଜୀବୀଙ୍କ ସଂଖ୍ୟା କମ୍ ଥିବାରୁ ଓଡ଼ିଆ ପାଠ୍ୟପୁସ୍ତକ କମ୍ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-13"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଜ). ଓଡ଼ିଆ ଭାଷାର ସୁରକ୍ଷା ଓ ବିକାଶ ପାଇଁ କଟକରେ କେଉଁ ପ୍ରମୁଖ ଅନୁଷ୍ଠାନ ପ୍ରତିଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାଲେଶ୍ୱରର ଉତ୍କଳ ଭାଷା ଉନ୍ନତି ବିଧାୟିନୀ ସଭା ଆଉ ଗୋଟିଏ ଅନୁଷ୍ଠାନ। ପ୍ରଶ୍ନଟି କଟକରେ ପ୍ରତିଷ୍ଠିତ ସଭାମାନଙ୍କ ନାମ ମାଗୁଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କଟକରେ ଉତ୍କଳ ସଭା, ଉତ୍କଳ ଭାଷା ଉଦ୍ଦୀପନୀ ସଭା ଓ ଉତ୍କଳ ଉଲ୍ଲାସିନୀ ସଭା କାମ କରୁଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-14"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଝ). କିଏ ମହିମା ଧର୍ମର ପ୍ରଧାନ ପ୍ରବର୍ତ୍ତକ ଥିଲେ ଏବଂ କିଏ ଏହାର ମୁଖ୍ୟ ପ୍ରଚାରକ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରବର୍ତ୍ତକ ଧର୍ମଧାରାର ସୂତ୍ରପାତ କଲେ। ଭୀମଭୋଇ ଓଡ଼ିଆ କବିତା ମାଧ୍ୟମରେ ଏହାର ବାର୍ତ୍ତା ଲୋକଙ୍କୁ ପହଞ୍ଚାଇଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମହିମା ଗୋସ୍ୱାମୀ ପ୍ରବର୍ତ୍ତକ ଓ ଭୀମଭୋଇ ମୁଖ୍ୟ ପ୍ରଚାରକ ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-15"><h2>ପ୍ରଥମ ପାଠ · ୨ (ଞ). ସ୍ଥାନୀୟ ସ୍ୱାୟତ୍ତ ଶାସନ ବ୍ୟବସ୍ଥା ପ୍ରବର୍ତ୍ତନ ପାଇଁ ରିପନଙ୍କୁ ଧନ୍ୟବାଦ ଦେବା ଉଦ୍ଦେଶ୍ୟରେ କେବେ ଏବଂ କେଉଁଠାରେ ଏକ ବିରାଟ ସାଧାରଣ ସଭା ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ୱାୟତ୍ତ ଶାସନରେ ସ୍ଥାନୀୟ କାର୍ଯ୍ୟରେ ଲୋକଙ୍କ ଅଂଶଗ୍ରହଣର ସୁଯୋଗ ଥିଲା। ସେଥିପାଇଁ କଟକର ସଭା ରିପନଙ୍କ ପଦକ୍ଷେପକୁ ସ୍ୱାଗତ କଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୮୮୨ ଜୁନ୍ ୩୦ରେ କଟକରେ ସାଧାରଣ ସଭା ବସିଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-16"><h2>ପ୍ରଥମ ପାଠ · ୩ (କ). କଲିକତା ବିଶ୍ୱବିଦ୍ୟାଳୟ କେବେ ପ୍ରତିଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାର୍ଲସ ଉଡ୍‌ଙ୍କ ସଂସ୍କାର ୧୮୫୪ରେ। ତାହା ପରର ଘଟଣା ହେଲା କଲିକତା ବିଶ୍ୱବିଦ୍ୟାଳୟ ପ୍ରତିଷ୍ଠା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୮୫୭ରେ କଲିକତା ବିଶ୍ୱବିଦ୍ୟାଳୟ ପ୍ରତିଷ୍ଠିତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-17"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଖ). ରେଭେନ୍ସା କଲେଜ କେବେ ଜନ୍ମଲାଭ କରିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କଟକ ଜିଲ୍ଲା ସ୍କୁଲର ଉନ୍ନତି ୧୮୬୭ରେ ହୋଇଥିଲା। କଲେଜ ଗଠନ ତାହା ପରର ପଦକ୍ଷେପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୮୭୬ରେ ରେଭେନ୍ସା କଲେଜ ଜନ୍ମଲାଭ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-18"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଗ). ୧୮୬୭ରେ କେଉଁ ଶିକ୍ଷାନୁଷ୍ଠାନକୁ ଉନ୍ନୀତ କରାଯାଇ ଏକ ଇଣ୍ଟରମିଡିଏଟ୍ ମହାବିଦ୍ୟାଳୟ କରାଗଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ନୂଆ କଲେଜ ପ୍ରତିଷ୍ଠାର ତାରିଖ ନୁହେଁ। ଜିଲ୍ଲା ସ୍କୁଲ ଉନ୍ନୀତ ହେବା ପରେ ରେଭେନ୍ସା କଲେଜ ଜନ୍ମଲାଭ କଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କଟକ ଜିଲ୍ଲା ସ୍କୁଲକୁ ଉନ୍ନୀତ କରାଗଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-19"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଘ). କିଏ ଓଡ଼ିଶାର ପ୍ରଥମ ସ୍ନାତକ ହୋଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶିକ୍ଷାରୁ ଜନଜୀବନକୁ ସମ୍ପର୍କ ଦେଖାଇବା ପାଇଁ ମଧୁସୂଦନଙ୍କ ପରବର୍ତ୍ତୀ ଉଦ୍ୟମ ମନେ ପକାଅ। ସେ ଭାଷାଭିତ୍ତିକ ଏକତ୍ରୀକରଣ ଦାବିର ନେତୃତ୍ୱ ନେଇଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମଧୁସୂଦନ ଦାସ ଓଡ଼ିଶାର ପ୍ରଥମ ସ୍ନାତକ ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-20"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଙ). ‘ସମ୍ବଲପୁର ହିତୈଷିଣୀ’ର ପ୍ରକାଶକ କିଏ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ସମ୍ବଲପୁର ହିତୈଷିଣୀ’ର ନାମରେ ସମ୍ବଲପୁର ଥିଲେ ମଧ୍ୟ ଏହାର ପ୍ରକାଶନସ୍ଥଳ ବାମଣ୍ଡା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନୀଳମଣି ବିଦ୍ୟାରତ୍ନ ବାମଣ୍ଡାରୁ ଏହା ପ୍ରକାଶ କରିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-21"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଚ). ମରହଟ୍ଟାମାନେ କେଉଁ ଭାଷାକୁ ଓଡ଼ିଶାର ରାଜଭାଷା ରୂପେ ମାନ୍ୟତା ଦେଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ମରହଟ୍ଟା ଶାସନର ରାଜଭାଷା। ପରେ ଇଂରେଜ ଶାସନରେ କଟକରେ ବଙ୍ଗଳା ପ୍ରଚଳନର ପ୍ରଶ୍ନ ଥିଲା ଅନ୍ୟ ପ୍ରସଙ୍ଗ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମରହଟ୍ଟାମାନେ ପାର୍ଶୀ ଭାଷାକୁ ରାଜଭାଷା ଭାବେ ଗ୍ରହଣ କରିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-22"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଛ). ‘ଉତ୍କଳ ଭାଷା ଉନ୍ନତି ବିଧାୟିନୀ ସଭା’ କେଉଁଠାରେ ଅବସ୍ଥିତ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଭାଷା ସଭାର ସ୍ଥାନ ବାଲେଶ୍ୱର। କଟକର ସମାନ ଉଦ୍ଦେଶ୍ୟ ଥିବା ସଭାଗୁଡ଼ିକର ନାମ ଅଲଗା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏହା ବାଲେଶ୍ୱରରେ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-23"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଜ). ଭୀମଭୋଇ କେଉଁ ଧର୍ମକୁ ଭିତ୍ତିକରି ତାଙ୍କର କବିତା ଗୁଡ଼ିକ ରଚନା କରିଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭୀମଭୋଇଙ୍କ ରଚନାରେ ଅନ୍ୟ ମଣିଷର ଦୁଃଖ ଓ ତ୍ୟାଗର ଭାବ ଥିଲା। ଏହା ମହିମା ଧର୍ମର ବାର୍ତ୍ତାକୁ ବୋଧଗମ୍ୟ କଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୀମଭୋଇ ମହିମା ଧର୍ମ ଉପରେ କବିତା ରଚନା କରିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-24"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଝ). ଟି.ଇ. ରେଭେନ୍ସା କେଉଁଠାରେ ନୂତନ ନଦୀବନ୍ଧ ନିର୍ମାଣ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନଦୀବନ୍ଧ ନିର୍ମାଣ ପାଠର ଜନହିତକର କାର୍ଯ୍ୟର ଉଦାହରଣ। ସେହି ପ୍ରସଙ୍ଗରେ ଦୁଇଟି ସ୍ଥାନକୁ ଏକାଠି ମନେ ରଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଳି ଓ ବାଙ୍କୀଠାରେ ନଦୀବନ୍ଧ ନିର୍ମାଣ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=57">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-25"><h2>ପ୍ରଥମ ପାଠ · ୩ (ଞ). ଲର୍ଡ଼ ରିପନ କେବେ ସ୍ଥାନୀୟ ସ୍ୱାୟତ୍ତ ଶାସନ ବ୍ୟବସ୍ଥା ପ୍ରବର୍ତ୍ତନ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସେହିବର୍ଷ ଜୁନ୍ ୩୦ରେ କଟକରେ ରିପନଙ୍କୁ ଧନ୍ୟବାଦ ପାଇଁ ଜନସଭା ହୋଇଥିଲା। ନୀତି ଓ ତାହାର ସ୍ଥାନୀୟ ପ୍ରତିକ୍ରିୟା ଏପରି ଯୋଡ଼ି ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲର୍ଡ ରିପନ ୧୮୮୨ରେ ଏହି ବ୍ୟବସ୍ଥା ପ୍ରବର୍ତ୍ତନ କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-26"><h2>ପ୍ରଥମ ପାଠ · ୪ (କ). କେବେ କଟକରେ ଏକ ହିତକାରୀ ଦାତବ୍ୟ ବିଦ୍ୟାଳୟ ପ୍ରତିଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<ol type="A"><li>୧୮୦୩</li><li>୧୮୨୩</li><li>୧୮୪୧</li><li>୧୮୫୪</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ୧୮୨୩</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଘଟଣାକ୍ରମରେ ଏହି ବିଦ୍ୟାଳୟ ଚାର୍ଲସ ଉଡ୍‌ଙ୍କ ୧୮୫୪ର ଶିକ୍ଷା ସଂସ୍କାର ଓ ରେଭେନ୍ସା କଲେଜ ପ୍ରତିଷ୍ଠାର ଆଗର ଘଟଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ୧୮୨୩।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-27"><h2>ପ୍ରଥମ ପାଠ · ୪ (ଖ). କିଏ “ବୋଧଦାୟିନୀ”ର ସମ୍ପାଦକ ଥିଲେ ?</h2>
+<ol type="A"><li>ଫକୀରମୋହନ ସେନାପତି</li><li>ରାଧାନାଥ ରାୟ</li><li>ଗୌରୀଶଙ୍କର ରାୟ</li><li>ନୀଳମଣି ବିଦ୍ୟାରତ୍ନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ଫକୀରମୋହନ ସେନାପତି</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାଲେଶ୍ୱରର ‘ବୋଧଦାୟିନୀ’ ଓ ‘ସମ୍ବାଦ ବାହିକା’ ଉଭୟ ସହ ଫକୀରମୋହନଙ୍କ ନାମ ଯୋଡ଼ି ମନେ ରଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(i) ଫକୀରମୋହନ ସେନାପତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-28"><h2>ପ୍ରଥମ ପାଠ · ୪ (ଗ). ମୁଖ୍ୟତଃ କେଉଁ ଅଞ୍ଚଳଗୁଡ଼ିକୁ ନେଇ ଓଡ଼ିଶା ଇଂରେଜମାନଙ୍କ ଦ୍ୱାରା ଶାସିତ ହେଉଥିଲା ?</h2>
+<ol type="A"><li>ଗଞ୍ଜାମ, ପୁରୀ, କଟକ</li><li>ପୁରୀ, କଟକ, ବାଲେଶ୍ୱର</li><li>କଟକ, ବାଲେଶ୍ୱର, ସମ୍ବଲପୁର</li><li>ପୁରୀ, ଗଞ୍ଜାମ, ସମ୍ବଲପୁର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ପୁରୀ, କଟକ, ବାଲେଶ୍ୱର</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଞ୍ଜାମ ମାନ୍ଦ୍ରାଜ ଓ ସମ୍ବଲପୁର କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶରେ ଥିଲା। ତେଣୁ ଏହି ଦୁଇ ନାମ ଥିବା ବିକଳ୍ପଗୁଡ଼ିକ ଏହି ତିନି ଉପକୂଳ ଜିଲ୍ଲାର ତାଲିକା ସହ ମେଳ ଖାଏ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ପୁରୀ, କଟକ, ବାଲେଶ୍ୱର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪–୬୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-29"><h2>ପ୍ରଥମ ପାଠ · ୪ (ଘ). କେବେ କଟକର କଲେକ୍ଟର ବଙ୍ଗଳାଭାଷାକୁ ସରକାରୀ ଭାଷା ରୂପେ ସ୍ୱୀକୃତି ଦେଇଥିଲେ ?</h2>
+<ol type="A"><li>୧୮୦୩</li><li>୧୮୪୯</li><li>୧୮୬୬</li><li>୧୮୬୮</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ୧୮୪୯</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା କଟକରେ ବଙ୍ଗଳାକୁ ମାନ୍ୟତା ଦେବାର ବର୍ଷ। ସମ୍ବଲପୁରର କଚେରିରେ ହିନ୍ଦୀ ପ୍ରଚଳନ ଆଉ ଏକ ପରବର୍ତ୍ତୀ ଘଟଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ୧୮୪୯।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫–୫୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୫୯</a></small></article>
+<article id="exercise-30"><h2>ପ୍ରଥମ ପାଠ · ୫ · କାମ ୧. ପାଠରେ ଦିଆଯାଇଥିବା ପତ୍ରିକାଗୁଡ଼ିକ ବ୍ୟତୀତ ଊନବିଂଶ ଶତାବ୍ଦୀରେ ପ୍ରକାଶିତ ଅନ୍ୟୂନ ଦଶଟି ପତ୍ରିକାର ପ୍ରକାଶ ସ୍ଥାନ ଓ ସମୟ ସହ ତାଲିକା ପ୍ରସ୍ତୁତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଓଡ଼ିଆ ସାହିତ୍ୟ ପୁସ୍ତକର ‘ଓଡ଼ିଆ ସାହିତ୍ୟ କଥା’ (ଏକାଦଶ ଅଧ୍ୟାୟ, PDF ପୃ. ୨) ଅନୁସାରେ ପ୍ରଥମ ଇତିହାସ ପାଠରେ ଥିବା ଚାରିଟି ଉଦାହରଣ ବ୍ୟତୀତ ଏହି ନାମ ଓ ବର୍ଷ ଲେଖିପାର। (୧) ଉତ୍କଳ ହିତୈଷିଣୀ—୧୮୬୯, (୨) ଉତ୍କଳପୁତ୍ର—୧୮୭୩, (୩) ଉତ୍କଳ ଦର୍ପଣ—୧୮୭୩, (୪) ଉତ୍କଳ ମଧୁପ—୧୮୭୮, (୫) ଓଡ଼ିଆ ଓ ନବସଂବାଦ—୧୮୮୮, (୬) ଉତ୍କଳ ପ୍ରଭା—୧୮୯୧ ଓ (୭) ଉତ୍କଳ ସାହିତ୍ୟ—୧୮୯୭।</p><p>‘ଉତ୍କଳ ସାହିତ୍ୟ’ର ସମ୍ପାଦକ ବିଶ୍ୱନାଥ କର ଥିଲେ (ସେହି ଅଧ୍ୟାୟ, PDF ପୃ. ୫)। ଏହି ସୂଚୀରେ ପ୍ରକାଶ ସ୍ଥାନଗୁଡ଼ିକ ଦିଆଯାଇନାହିଁ।</p><p>ପ୍ରକଳ୍ପ ସମ୍ପୂର୍ଣ୍ଣ କରିବାକୁ ପ୍ରତ୍ୟେକ ପ୍ରକାଶ ସ୍ଥାନ ଓ ଆଉ ଅନ୍ୟୂନ ତିନୋଟି ପତ୍ରିକାର ନାମ, ସ୍ଥାନ ଓ ବର୍ଷ ଯାଞ୍ଚ କରିବାକୁ ହେବ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫</a></small></article>
+<article id="exercise-31"><h2>ପ୍ରଥମ ପାଠ · ୫ · କାମ ୨. ଓଡ଼ିଆ ଭାଷାର ବିକାଶକୁ ସମର୍ଥନ କରୁଥିବା ବିଶିଷ୍ଟ ବଙ୍ଗଭାଷୀ ବ୍ୟକ୍ତି ଓ ଇଂରେଜ ଅଧିକାରୀଙ୍କ ନାମ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବଙ୍ଗଭାଷୀ ସମର୍ଥକଙ୍କ ମଧ୍ୟରେ ବଙ୍ଗର ଲେଖକ ବାସୁଦେବ ବନ୍ଦୋପାଧ୍ୟାୟଙ୍କ ନାମ ମିଳେ। ଇଂରେଜ ସମର୍ଥକଙ୍କ ମଧ୍ୟରେ ପାଠ ଭାଷାବିତ୍ ଜନ୍ ବିମ୍ସ ଓ ଗୋଲ୍ଡସବରୀଙ୍କ ନାମ ଦେଇଛି।</p><p>ଏହି ତିନିଜଣ ଓଡ଼ିଆର ସ୍ୱତନ୍ତ୍ର ଭାଷା ମାନ୍ୟତା ବିରୋଧରେ ଆସିଥିବା ମତକୁ ପ୍ରତ୍ୟାଖ୍ୟାନ କରିଥିଲେ। ସମର୍ଥକଙ୍କ ନାମ ପାଇଁ ଏହି ଅଧ୍ୟାୟର PDF ପୃ. ୧୩ ଦେଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-32"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୧ (କ). ‘ଉତ୍କଳ ସଭା’ ସମ୍ପର୍କରେ ଏକ ଟିପ୍ପଣୀ ଲେଖ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୮୮୨ ଅଗଷ୍ଟ ୧୬ରେ ମଧୁସୂଦନଙ୍କ ଉଦ୍ୟମରେ କଟକରେ ଉତ୍କଳ ସଭା ଗଠିତ ହେଲା। କାଶୀନାଥ ଦାସ ପ୍ରଥମ ସଭାପତି ଓ ଗୌରୀଶଙ୍କର ରାୟ ସମ୍ପାଦକ ଥିଲେ।</p><p>ସ୍ୱାୟତ୍ତ ଶାସନ ଓ ଓଡ଼ିଆଙ୍କ ସମସ୍ୟା ଉପରେ ଜନମତ ଗଠନ କରିଥିବା ଏହି ସଭା ଓଡ଼ିଶାର ପ୍ରଥମ ସୁସଂଗଠିତ ରାଜନୀତିକ ଅନୁଷ୍ଠାନ ଥିଲା। ୧୮୮୬ରେ କଲିକତାରେ ଜାତୀୟ କଂଗ୍ରେସର ଦ୍ୱିତୀୟ ଅଧିବେଶନକୁ ସଭାର ପ୍ରତିନିଧି ଯାଇଥିଲେ।</p><p>ସଭାର କାର୍ଯ୍ୟକ୍ଷେତ୍ର ସୀମିତ ଥିବାରୁ ମଧୁସୂଦନ ପରେ ସମଗ୍ର ଓଡ଼ିଆ ଅଞ୍ଚଳ ପାଇଁ ଏକ ବଡ଼ ସଂସ୍ଥା ଚାହିଁଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-33"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଖ). ଉତ୍କଳ ସମ୍ମିଳନୀ କିପରି ଜନ୍ମ ଲାଭ କଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗଞ୍ଜାମ ଜାତୀୟ ସଭାର ସଫଳତା ପରେ ମଧୁସୂଦନ କଟକରେ ଉତ୍କଳ ସଭା ଡକାଇଲେ। ସମସ୍ତ ଓଡ଼ିଆ ଅଞ୍ଚଳର ଏକତ୍ରୀକରଣ ପାଇଁ ଏକ ସାଧାରଣ ଅନୁଷ୍ଠାନ ଗଢ଼ିବାକୁ ସ୍ଥିର ହେଲା।</p><p>ଗଡ଼ଜାତ ରାଜାମାନେ ସହଯୋଗ କଲେ। ୧୯୦୩ ଡିସେମ୍ବର ୩୦–୩୧ରେ କଟକରେ ପ୍ରଥମ ଅଧିବେଶନରୁ ଉତ୍କଳ ସମ୍ମିଳନୀର କାର୍ଯ୍ୟ ଆରମ୍ଭ ହେଲା।</p><p>ସମ୍ବଲପୁର, ଗଞ୍ଜାମ ଓ ଉପକୂଳର ଓଡ଼ିଆମାନେ ଭିନ୍ନ ପ୍ରଶାସନରେ ଥିଲେ। ତେଣୁ ଗୋଟିଏ ଅଞ୍ଚଳର ସଭା ସବୁ ଅଞ୍ଚଳର ପ୍ରତିନିଧିତ୍ୱ କରିପାରୁ ନଥିଲା।</p><p>ସମ୍ମିଳନୀ ଏହି ଅଭାବ ପୂରଣ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-34"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଗ). ଉତ୍କଳ ସମ୍ମିଳନୀର ଗଠନରେ କେଉଁ ଗଡ଼ଜାତ ରାଜାମାନେ ମଧୁସୂଦନଙ୍କୁ ସକ୍ରିୟ ସହଯୋଗ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଖଲ୍ଲିକୋଟର ହରିହର ମର୍ଦ୍ଦରାଜ ଦେବ ଗଞ୍ଜାମରେ ସଙ୍ଗଠନକୁ ପ୍ରେରଣା ଦେଲେ। କନିକାର ରାଜେନ୍ଦ୍ର ନାରାୟଣ ଭଞ୍ଜଦେଓ ମଧୁସୂଦନଙ୍କୁ ଉତ୍ସାହିତ କରି ଅଭ୍ୟର୍ଥନା କମିଟିର ଦାୟିତ୍ୱ ନେଲେ।</p><p>ମୟୂରଭଞ୍ଜର ଶ୍ରୀରାମଚନ୍ଦ୍ର ଭଞ୍ଜଦେଓ ପ୍ରସ୍ତାବକୁ ସମର୍ଥନ କଲେ ଏବଂ ପ୍ରଥମ ଅଧିବେଶନରେ ସଭାପତିତ୍ୱ କଲେ। ଖଲ୍ଲିକୋଟରେ ଗଞ୍ଜାମର ପ୍ରତିନିଧି ଏକାଠି ହେବା ଏବଂ କଟକରେ ବିଭିନ୍ନ ଅଞ୍ଚଳର ପ୍ରତିନିଧିଙ୍କ ଅଧିବେଶନ ଦୁଇଟି ଭିନ୍ନ ପଦକ୍ଷେପ ଥିଲା।</p><p>ରାଜାମାନଙ୍କ ସହଯୋଗ ମଧୁସୂଦନଙ୍କୁ ସ୍ଥାନୀୟ ସଭାରୁ ବୃହତ୍ତର ସମ୍ମିଳନୀ ଗଢ଼ିବାରେ ସାହାଯ୍ୟ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-35"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଘ). ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନରେ କେଉଁ ଅଞ୍ଚଳର ଓ କେଉଁ ବର୍ଗର ସାଧାରଣ ଲୋକ ଯୋଗ ଦେଇଥିଲେ ଏବଂ ଏଠାରେ ମଧୁସୂଦନ କ’ଣ ଆହ୍ୱାନ ଦେଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମାନ୍ଦ୍ରାଜ, କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶ ଓ ବଙ୍ଗଳାର ଓଡ଼ିଆ ପ୍ରତିନିଧି, ଗଡ଼ଜାତ ରାଜା, ଜମିଦାର, ଆଇନଜୀବୀ, କର୍ମଚାରୀ, ବ୍ୟବସାୟୀ ଓ ଛାତ୍ର ଯୋଗଦେଲେ। ମଧୁସୂଦନ ଆଞ୍ଚଳିକ ଓ ସାମ୍ପ୍ରଦାୟିକ ଭେଦ ଭୁଲିବାକୁ କହିଲେ।</p><p>ଆତ୍ମଗର୍ବ ଓ ସ୍ୱାର୍ଥପରତା ଛାଡ଼ି ମାତୃଭୂମିର ସେବାରେ ଏକତ୍ର ହେବା ତାଙ୍କ ଆହ୍ୱାନ ଥିଲା। ୧୯୦୩ ଡିସେମ୍ବର ୩୦ ଓ ୩୧ରେ କଟକରେ ଅଧିବେଶନ ଅନୁଷ୍ଠିତ ହେଲା।</p><p>ଏକତ୍ରୀକରଣ ସହିତ କଳା ଓ ସାହିତ୍ୟର ଉନ୍ନତି କଥା ମଧ୍ୟ ଏଠାରେ ଉଠିଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-36"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୧ (ଙ). ମଧୁସୂଦନ କାହିଁକି ଉତ୍କଳ ସମ୍ମିଳନୀ ତ୍ୟାଗ କଲେ ଏବଂ ପୁନଃସଂଗଠିତ ଉତ୍କଳ ସମ୍ମିଳନୀର କାର୍ଯ୍ୟ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଚକ୍ରଧରପୁର ଅଧିବେଶନରେ ସମ୍ମିଳନୀ କଂଗ୍ରେସର ଅସହଯୋଗ ନୀତି ଗ୍ରହଣ କଲା। ଅଣରାଜନୀତିକ ଉପାୟରେ ଭାଷାଭିତ୍ତିକ ଏକତ୍ରୀକରଣକୁ ଗୁରୁତ୍ୱ ଦେଉଥିବା ମଧୁସୂଦନ ସମ୍ମିଳନୀରୁ ଅଲଗା ହେଲେ।</p><p>୧୯୨୪ରେ ପୁନଃସଂଗଠିତ ସମ୍ମିଳନୀ ବିଚ୍ଛିନ୍ନ ଓଡ଼ିଆ ଅଞ୍ଚଳର ସୀମା ଓ ପୃଥକ ପ୍ରଦେଶ ଦାବି ସରକାରଙ୍କ ନିକଟରେ ଉପସ୍ଥାପନ କଲା। ଏଠାରେ ବିବାଦ ଥିଲା ସଂଗ୍ରାମର ପନ୍ଥାକୁ ନେଇ।</p><p>ପୁନର୍ଗଠନ ପରେ ମଧ୍ୟ ପୃଥକ୍ ପ୍ରଦେଶ ପାଇଁ ଭାଷାଭିତ୍ତିକ ଅଞ୍ଚଳଗୁଡ଼ିକର ଦାବି ଏକାଠି କରିବାର କାର୍ଯ୍ୟ ଚାଲିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=63">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୩–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-37"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (କ). କେଉଁଠାରେ ଏବଂ କାହା ପ୍ରେରଣାରେ ଗଞ୍ଜାମ ଜାତୀୟ ସମିତି ଗଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରମ୍ଭାର ଗଞ୍ଜାମ ଉଦ୍ୟମ ପରେ ସମଗ୍ର ଓଡ଼ିଆ ଅଞ୍ଚଳ ପାଇଁ କଟକରେ ଅଧିବେଶନ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରମ୍ଭାଠାରେ ଖଲ୍ଲିକୋଟ ରାଜା ହରିହର ମର୍ଦ୍ଦରାଜ ଦେବଙ୍କ ପ୍ରେରଣାରେ ସମିତି ଗଠିତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-38"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଖ). ମଧୁବାବୁ କ’ଣ ପାଇଁ ଏକ ବୃହତ୍ ଜାତୀୟ ଅନୁଷ୍ଠାନର ଆବଶ୍ୟକତା ଅନୁଭବ କଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଞ୍ଜାମ ମାନ୍ଦ୍ରାଜ ଓ ସମ୍ବଲପୁର କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶରେ ଥିଲା। ତେଣୁ ଗୋଟିଏ ସହରର ସଭା ସବୁ ଅଞ୍ଚଳର ଦାବି ରଖିପାରୁ ନଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସ୍ଥାନୀୟ ସଭାର କାର୍ଯ୍ୟ ସୀମିତ ଥିଲା। ସମସ୍ତ ବିଚ୍ଛିନ୍ନ ଓଡ଼ିଆ ଅଞ୍ଚଳର ପ୍ରତିନିଧିତ୍ୱ ଓ ଏକତ୍ରୀକରଣ ପାଇଁ ବୃହତ୍ ସଙ୍ଗଠନ ଆବଶ୍ୟକ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-39"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଗ). ୧୯୦୩ରେ କେଉଁଠାରେ ‘ଉତ୍କଳ ସଭା’ର ଏକ ସଭା ଆହୂତ ହୋଇଥିଲା ଏବଂ ଏଠାରେ କ’ଣ ନିଷ୍ପତ୍ତି ନିଆଯାଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ଉତ୍କଳ ସଭାର ପ୍ରସ୍ତୁତି ବୈଠକ। ଏଥିରୁ ଅଧିକ ବ୍ୟାପକ ଉତ୍କଳ ସମ୍ମିଳନୀର ଅଧିବେଶନ ପାଇଁ ପଥ ପ୍ରସ୍ତୁତ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କଟକରେ ସଭା ବସିଲା। ଓଡ଼ିଶା ଓ ଏହାର ବିଚ୍ଛିନ୍ନାଞ୍ଚଳର ଏକତ୍ରୀକରଣ ପାଇଁ ଜାତୀୟ ଅନୁଷ୍ଠାନ ଗଠନର ନିଷ୍ପତ୍ତି ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-40"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଘ). ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନ ପାଇଁ କେଉଁମାନେ ସଭାପତି ଓ ସମ୍ପାଦକ ଭାବେ ମନୋନୀତ ହୋଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଭ୍ୟର୍ଥନା କମିଟି ଆୟୋଜନ କଲା। ଅଧିବେଶନର ସଭାପତି ପଦ ଥିଲା ଅଲଗା, ଯାହା ମୟୂରଭଞ୍ଜ ମହାରାଜା ଅଳଙ୍କୃତ କଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଭ୍ୟର୍ଥନା କମିଟିର ଅଧ୍ୟକ୍ଷ ରାଜେନ୍ଦ୍ର ନାରାୟଣ ଭଞ୍ଜଦେଓ ଓ ସମ୍ପାଦକ ମଧୁସୂଦନ ଦାସ ଥିଲେ। ଅଧିବେଶନରେ ସଭାପତିତ୍ୱ କଲେ ଶ୍ରୀରାମଚନ୍ଦ୍ର ଭଞ୍ଜ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-41"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଙ). ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନ କେବେ ଏବଂ କେଉଁଠାରେ ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମୟୂରଭଞ୍ଜ ମହାରାଜାଙ୍କ ସଭାପତିତ୍ୱରେ ଭିନ୍ନ ପ୍ରଦେଶର ପ୍ରତିନିଧି କଟକରେ ଏକାଠି ହେଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୦୩ ଡିସେମ୍ବର ୩୦ ଓ ୩୧ରେ କଟକରେ ପ୍ରଥମ ଅଧିବେଶନ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-42"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଚ). ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନରେ ଖଲ୍ଲିକୋଟ, କନିକା ଓ ମୟୂରଭଞ୍ଜର ରାଜାଙ୍କ ବ୍ୟତୀତ ଅନ୍ୟ କେଉଁ ରାଜାମାନେ ଯୋଗ ଦେଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଡ଼ଜାତର ନାମ ଓ ରାଜାଙ୍କ ନାମ ଯୋଡ଼ି କରି ଲେଖ। ରାଜାମାନଙ୍କ ଯୋଗଦାନରେ ସମ୍ମିଳନୀ ଉପକୂଳ ଜିଲ୍ଲା ବାହାରକୁ ମଧ୍ୟ ପହଞ୍ଚିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଢେଙ୍କାନାଳର ସୁରପ୍ରତାପ ମହେନ୍ଦ୍ର ବାହାଦୁର, କେନ୍ଦୁଝରର ଧନୁର୍ଜୟ ନାରାୟଣ ଭଞ୍ଜଦେଓ, ଆଠଗଡ଼ର ବିଶ୍ୱନାଥ ବେବର୍ତ୍ତା ପଟ୍ଟନାୟକ ଓ ତାଳଚେରର କିଶୋର ଚନ୍ଦ୍ର ହରିଚନ୍ଦନ ଯୋଗ ଦେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-43"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଛ). ଉତ୍କଳ ସମ୍ମିଳନୀର ପ୍ରଥମ ଅଧିବେଶନରେ କେଉଁ ପ୍ରସ୍ତାବ ଗୃହୀତ ହୋଇଥିଲା ଏବଂ କ’ଣ ଅନୁମୋଦିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କଳା ଓ ସାହିତ୍ୟ ସମ୍ପର୍କିତ ନିଷ୍ପତ୍ତିରୁ ବୁଝାଯାଏ ଯେ ସମ୍ମିଳନୀର କାମ ପ୍ରଶାସନିକ ସୀମା ବଦଳାଇବା ସହ ସାଂସ୍କୃତିକ ଉନ୍ନତି ମଧ୍ୟ ଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କଳା ଓ ସାହିତ୍ୟର ଉନ୍ନତି ପ୍ରସ୍ତାବ ଗୃହୀତ ହେଲା ଏବଂ ରିସ୍ଲେ ସର୍କୁଲାର ଅନୁମୋଦିତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-44"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଜ). ଉତ୍କଳ ସମ୍ମିଳନୀର ଅଷ୍ଟମ ଅଧିବେଶନ କେଉଁଠାରେ ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ଏବଂ ଏଠାରେ ମଧୁସୂଦନ ସରକାରଙ୍କ କେଉଁ ନିଷ୍ପତ୍ତିକୁ ବିରୋଧ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିହାର ସହିତ ଓଡ଼ିଶା ମିଶିଲେ ମଧ୍ୟ ସମସ୍ତ ଓଡ଼ିଆ ଅଞ୍ଚଳ ଏକତ୍ର ହେଉ ନଥିଲା। ତେଣୁ ପୃଥକ୍ ପ୍ରଦେଶ ଦାବି ଉଠିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବ୍ରହ୍ମପୁର ଅଧିବେଶନରେ ମଧୁସୂଦନ ମିଳିତ ବିହାର–ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନକୁ ବିରୋଧ କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-45"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଝ). ଉତ୍କଳ ସମ୍ମିଳନୀର ଦଶମ ଅଧିବେଶନ କେବେ ଏବଂ କେଉଁଠାରେ ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଷ୍ଟମ ଅଧିବେଶନ ବ୍ରହ୍ମପୁର ଓ ଦଶମ ଅଧିବେଶନ ପାରଳାଖେମୁଣ୍ଡିରେ। ଅଧିବେଶନର କ୍ରମ ସହ ସ୍ଥାନ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୧୪ ଡିସେମ୍ବର ୨୬–୨୭ରେ ପାରଳାଖେମୁଣ୍ଡିରେ ଦଶମ ଅଧିବେଶନ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-46"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୨ (ଞ). ୧୯୨୫ରେ ଉତ୍କଳ ସମ୍ମିଳନୀର ଅଧିବେଶନ କେଉଁଠାରେ ଏବଂ କାହା ଅଧ୍ୟକ୍ଷତାରେ ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ୧୯୨୪ର ପୁନର୍ଗଠନ ପରର ଅଧିବେଶନ। ୧୯୦୩ର ପ୍ରଥମ ଅଧିବେଶନ ମଧ୍ୟ କଟକରେ ହୋଇଥିଲେ ଦୁଇଟିର ସଭାପତି ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୨୫ରେ କଳ୍ପତରୁ ଦାସଙ୍କ ଅଧ୍ୟକ୍ଷତାରେ କଟକରେ ଅଧିବେଶନ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-47"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (କ). କାହା ନେତୃତ୍ୱରେ ‘ବଙ୍ଗ ଜାତୀୟ ସଭା’ ଗଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ବଙ୍ଗ ଜାତୀୟ ସଭା’ର ନେତୃତ୍ୱ ଏବଂ ଓଡ଼ିଶାର ଉତ୍କଳ ସଭାର ନେତୃତ୍ୱକୁ ପୃଥକ୍ କରି ଚିହ୍ନ। ଦୁଇଟି ଭିନ୍ନ ଅଞ୍ଚଳର ଅନୁଷ୍ଠାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାର୍ ସୁରେନ୍ଦ୍ରନାଥ ବାନାର୍ଜୀ ଏହାର ନେତୃତ୍ୱ ନେଇଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-48"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଖ). ଗଞ୍ଜାମ ଜାତୀୟ ସମିତିର ଉଦ୍ଦେଶ୍ୟ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ୍ଦ୍ରାଜ ଅଧୀନ ଗଞ୍ଜାମର ଦାବିକୁ ଅନ୍ୟ ବିଚ୍ଛିନ୍ନ ଓଡ଼ିଆ ଅଞ୍ଚଳର ଦାବି ସହ ଯୋଡ଼ିବା ଏହି ଉଦ୍ଦେଶ୍ୟର ତାତ୍ପର୍ଯ୍ୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦକ୍ଷିଣାଞ୍ଚଳ ଓ ଅନ୍ୟ ଓଡ଼ିଆ ଅଞ୍ଚଳକୁ ଏକ ଶାସନାଧୀନ କରିବା ସମିତିର ଉଦ୍ଦେଶ୍ୟ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-49"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଗ). ବୈକୁଣ୍ଠ ନାଥ ଦେ କେଉଁ ଅଞ୍ଚଳର ବ୍ୟକ୍ତି ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମ୍ମିଳନୀରେ କଟକ ବା ଗଞ୍ଜାମ ସହ ଉତ୍ତର ଉପକୂଳର ପ୍ରତିନିଧି ମଧ୍ୟ ଥିଲେ। ବୈକୁଣ୍ଠନାଥଙ୍କ ସ୍ଥାନ ବାଲେଶ୍ୱର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବୈକୁଣ୍ଠନାଥ ଦେ ବାଲେଶ୍ୱରର ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-50"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଘ). ଉତ୍କଳ ସମ୍ମିଳନୀର ଅଷ୍ଟମ ଅଧିବେଶନ କେବେ ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ବ୍ରହ୍ମପୁରର ଅଧିବେଶନ, ଯେଉଁଠାରେ ବିହାର–ଓଡ଼ିଶା ପ୍ରଶ୍ନରେ ମଧୁସୂଦନ ନିଜ ମତ ଦେଇଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୧୨ ଏପ୍ରିଲ୍ ୬–୭ରେ ଅଷ୍ଟମ ଅଧିବେଶନ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-51"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଙ). ଉତ୍କଳ ସମ୍ମିଳନୀର ଦଶମ ଅଧିବେଶନରେ କିଏ ଅଧ୍ୟକ୍ଷତା କରିଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଅଧିବେଶନରେ ବିକ୍ରମଦେବ ଖଣ୍ଡିତ ଶରୀରର ଉପମା ଦେଇ ବିଚ୍ଛିନ୍ନ ଓଡ଼ିଆ ଅଞ୍ଚଳର ଦୁରବସ୍ଥା ବୁଝାଇଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜୟପୁର ମହାରାଜା ବିକ୍ରମଦେବ ବର୍ମା ଅଧ୍ୟକ୍ଷତା କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-52"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଚ). ୧୯୨୦ରେ ଉତ୍କଳ ସମ୍ମିଳନୀର ଅଧିବେଶନ କେଉଁଠାରେ ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଅଧିବେଶନରେ କଂଗ୍ରେସର ଅସହଯୋଗ ନୀତି ଗୃହୀତ ହେବା ପରେ ମଧୁସୂଦନ ସମ୍ମିଳନୀରୁ ଅଲଗା ହେଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସିଂହଭୂମି ଜିଲ୍ଲାର ଚକ୍ରଧରପୁରରେ ଅଧିବେଶନ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-53"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଛ). କେବେ ଉତ୍କଳ ସମ୍ମିଳନୀକୁ ପୁନର୍ବାର ସଂଗଠିତ କରାଯାଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୁନର୍ଗଠିତ ସମ୍ମିଳନୀ ବିଚ୍ଛିନ୍ନ ଅଞ୍ଚଳ ଓ ପ୍ରଦେଶ ସୀମା ପ୍ରସଙ୍ଗ ସରକାରଙ୍କ ନିକଟରେ ଉଠାଇଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୨୪ରେ ପୁନଃସଂଗଠନ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-54"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଜ). ମଧୁସୂଦନ କେବେ ପ୍ରାଣତ୍ୟାଗ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତାଙ୍କ ଦେହାନ୍ତ ପରେ ୧୯୩୬ରେ ପୃଥକ୍ ପ୍ରଦେଶ କାର୍ଯ୍ୟକାରୀ ହେଲା। ତେଣୁ ସେ ଏହାର ଉଦ୍‌ଘାଟନ ଦେଖି ନଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୪ ଫେବୃୟାରୀ ୪ରେ ମଧୁସୂଦନଙ୍କ ଦେହାନ୍ତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-55"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଝ). କେଉଁଦିନ ଉତ୍କଳ ସମ୍ମିଳନୀର ଶେଷ ବୈଠକ ବସିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମ୍ମିଳନୀର ଶେଷ ବୈଠକ ୧୯୩୫ର, ଓ ପୃଥକ୍ ପ୍ରଦେଶର ଉଦ୍‌ଘାଟନ ତାହା ପର ବର୍ଷର ଘଟଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୫ ଫେବୃୟାରୀ ୧୧ରେ କଟକରେ ଶେଷ ବୈଠକ ବସିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-56"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୩ (ଞ). ଓଡ଼ିଶା କେବେଠାରୁ ଏକ ସ୍ୱତନ୍ତ୍ର ପ୍ରଦେଶ ହେଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୃଥକ୍ ପ୍ରଦେଶ ହେବା ଓ ଭାରତ ସ୍ୱାଧୀନ ହେବା ଦୁଇଟି ଅଲଗା ଘଟଣା। ୧୯୩୬ରେ ଓଡ଼ିଶା ବ୍ରିଟିଶ୍ ଶାସନରେ ହିଁ ପୃଥକ୍ ପ୍ରଦେଶ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୬ ଏପ୍ରିଲ୍ ୧ରୁ ଓଡ଼ିଶା ସ୍ୱତନ୍ତ୍ର ପ୍ରଦେଶ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-57"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୪ (କ). କେଉଁଟି ଓଡ଼ିଶାର ପ୍ରଥମ ସୁସଂଗଠିତ ରାଜନୀତିକ ଅନୁଷ୍ଠାନ ?</h2>
+<ol type="A"><li>ଗଞ୍ଜାମ ଜାତୀୟ ସମିତି</li><li>ଉତ୍କଳ ସଭା</li><li>ଗଞ୍ଜାମ ଜାତୀୟ ସଭା</li><li>ଉତ୍କଳ ସମ୍ମିଳନୀ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଉତ୍କଳ ସଭା</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୮୮୨ରେ କଟକରେ ଗଠିତ ଏହି ସଭା ଓ ୧୯୦୩ର ଉତ୍କଳ ସମ୍ମିଳନୀର ନାମ ପୃଥକ୍।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ଉତ୍କଳ ସଭା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=60">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-58"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଖ). କିଶୋର ଚନ୍ଦ୍ର ହରିଚନ୍ଦନ କେଉଁ ଗଡ଼ଜାତର ରାଜା ଥିଲେ ?</h2>
+<ol type="A"><li>ଢେଙ୍କାନାଳ</li><li>ତାଳଚେର</li><li>ଆଠଗଡ଼</li><li>କେନ୍ଦୁଝର</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ତାଳଚେର</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମ୍ମିଳନୀରେ ଗଡ଼ଜାତର ରାଜାମାନେ ଅଂଶ ନେଇଥିଲେ। କିଶୋରଚନ୍ଦ୍ରଙ୍କ ରାଜ୍ୟ ଓ ମୟୂରଭଞ୍ଜର ସଭାପତିଙ୍କ ରାଜ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ତାଳଚେର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-59"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଗ). ‘ଉତ୍କଳ ସମ୍ମିଳନୀ’ର ପ୍ରଥମ ଅଧିବେଶନରେ କିଏ ସଭାପତିତ୍ୱ କରିଥିଲେ ?</h2>
+<ol type="A"><li>ରାଜେନ୍ଦ୍ର ନାରାୟଣ ଭଞ୍ଜଦେଓ</li><li>ଧନୁର୍ଜୟ ନାରାୟଣ ଭଞ୍ଜଦେଓ</li><li>ଶ୍ରୀରାମ ଚନ୍ଦ୍ର ଭଞ୍ଜ</li><li>ହରିହର ମର୍ଦ୍ଦରାଜ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଶ୍ରୀରାମ ଚନ୍ଦ୍ର ଭଞ୍ଜ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉତ୍କଳ ସମ୍ମିଳନୀ ଗଠନ ପାଇଁ ମଧୁସୂଦନଙ୍କ ଉଦ୍ୟମ ଥିଲା। ପ୍ରଥମ ଅଧିବେଶନର ସଭାପତି ଥିଲେ ମୟୂରଭଞ୍ଜର ମହାରାଜା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ଶ୍ରୀରାମଚନ୍ଦ୍ର ଭଞ୍ଜ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-60"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଘ). ‘ଉତ୍କଳ ସମ୍ମିଳନୀ’ର ପ୍ରଥମ ଅଧିବେଶନ କେଉଁ ଭାଷାରେ ପରିଚାଳିତ ହୋଇଥିଲା ?</h2>
+<ol type="A"><li>ଇଂରାଜୀ</li><li>ଓଡ଼ିଆ</li><li>ବଙ୍ଗାଳୀ</li><li>ହିନ୍ଦୀ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଓଡ଼ିଆ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ୍ଦ୍ରାଜ, ବଙ୍ଗ ଓ କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶରୁ ପ୍ରତିନିଧି ଆସିଥିଲେ। ଭିନ୍ନ ପ୍ରଶାସନର ଲୋକଙ୍କୁ ମାତୃଭାଷା ଏକାଠି କରିଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ଓଡ଼ିଆ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-61"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୪ (ଙ). ‘ଉତ୍କଳ ସମ୍ମିଳନୀ’ ତରଫରୁ ମଣ୍ଟେଗୁ ଓ ଚେମ୍ସ୍ଫୋର୍ଡ଼ଙ୍କୁ କେବେ ଦାବି ପତ୍ର ଦିଆଯାଇଥିଲା ?</h2>
+<ol type="A"><li>୧୯୧୨</li><li>୧୯୧୪</li><li>୧୯୧୭</li><li>୧୯୧୮</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ୧୯୧୭</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଦାବି ମଣ୍ଟେଗୁ–ଚେମ୍ସଫୋର୍ଡ ଶାସନ ସଂସ୍କାର ଆଲୋଚନା ସହ ସମ୍ପୃକ୍ତ। ପରେ ପୃଥକ୍ ପ୍ରଦେଶ ପ୍ରସଙ୍ଗ ଗୋଲଟେବୁଲ ବୈଠକରେ ମଧ୍ୟ ଉଠିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ୧୯୧୭।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=61">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୧–୬୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-62"><h2>ଦ୍ୱିତୀୟ ପାଠ · ୫ · କାମ ୧. ଉତ୍କଳ ସମ୍ମିଳନୀର ବର୍ତ୍ତମାନର ରୂପରେଖ ସମ୍ବନ୍ଧରେ ଏକ ଟିପ୍ପଣୀ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଟିପ୍ପଣୀର ଐତିହାସିକ ଭିତ୍ତି ଏପରି ହୋଇପାରେ। ୧୯୦୩ରେ କଟକରେ ପ୍ରଥମ ଅଧିବେଶନ ହେଲା।</p><p>ସମ୍ମିଳନୀର ଶାଖା ଓ ପ୍ରଚାରକମାନଙ୍କ ମାଧ୍ୟମରେ ଓଡ଼ିଆ ଏକତାର ବାର୍ତ୍ତା ପ୍ରସାରିତ ହେଲା। ୧୯୨୪ରେ ସମ୍ମିଳନୀ ପୁନର୍ଗଠିତ ହେଲା ଏବଂ ୧୯୨୫ରେ କଳ୍ପତରୁ ଦାସଙ୍କ ସଭାପତିତ୍ୱରେ କଟକରେ ଅଧିବେଶନ ହେଲା।</p><p>ଆଜିର କର୍ମକର୍ତ୍ତା, ଶାଖା ଓ କାର୍ଯ୍ୟକ୍ରମ ଏହି ପାଠରେ ଦିଆଯାଇନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩</a></small></article>
+<article id="exercise-63"><h2>ଦ୍ୱିତୀୟ ପାଠ · ତୁମେ ଜାଣିଛ କି. ଓଡ଼ିଶାରେ ଶିଳ୍ପ ଓ ଶିକ୍ଷାର ବିକାଶ ପ୍ରତି ମଧୁବାବୁଙ୍କ ଅବଦାନର ବିବରଣୀ ପ୍ରସ୍ତୁତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମଧୁସୂଦନ ଦାସ ଓଡ଼ିଶାର ପ୍ରଥମ ସ୍ନାତକ ଥିଲେ। ପରେ ସେ ସ୍ନାତକୋତ୍ତର ଓ ଆଇନ ଡିଗ୍ରୀ ହାସଲ କଲେ।</p><p>ସେ ସମ୍ମିଳନୀରେ ବ୍ୟବସାୟୀ, ଛାତ୍ର ଓ ଅନ୍ୟାନ୍ୟ ବର୍ଗଙ୍କୁ ଏକାଠି କରି ମାତୃଭୂମିର ଉନ୍ନତି ପାଇଁ ଆହ୍ୱାନ ଦେଲେ। ଏଥିରୁ ଶିକ୍ଷିତ ଲୋକ ଓ ବ୍ୟବସାୟୀଙ୍କ ସହଯୋଗ ଉପରେ ତାଙ୍କ ଗୁରୁତ୍ୱ ବୁଝାଯାଏ।</p><p>ସେ ସ୍ଥାପନ କରିଥିବା ଶିଳ୍ପ ଓ ଶିକ୍ଷାନୁଷ୍ଠାନର ନାମ ଏବଂ ପ୍ରତିଷ୍ଠାବର୍ଷ ଏହି ପାଠରେ ଦିଆଯାଇନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩</a></small></article>
+<article id="exercise-64"><h2>ତୃତୀୟ ପାଠ · ୧ (କ). ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଓଡ଼ିଶାର ଭୌଗୋଳିକ ସ୍ଥିତି କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଓଡ଼ିଆ ଭାଷାଭାଷୀ ଲୋକ ଭିନ୍ନ ଶାସନ ଅଧୀନରେ ରହୁଥିଲେ। କଟକ, ପୁରୀ ଓ ବାଲେଶ୍ୱର ଇଂରେଜଙ୍କ ପ୍ରତ୍ୟକ୍ଷ ଶାସନରେ ଓ ଗଡ଼ଜାତଗୁଡ଼ିକ ପରୋକ୍ଷ ଶାସନରେ ଥିଲେ।</p><p>ଗଞ୍ଜାମ ମାନ୍ଦ୍ରାଜ, ସମ୍ବଲପୁର କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶ, ମେଦିନିପୁର ବଙ୍ଗ ଓ ସିଂହଭୂମି ଛୋଟନାଗପୁର ଅଧୀନରେ ରହିଥିଲା। ଏହି ବିଚ୍ଛିନ୍ନତା ଦୂର କରିବା ଆନ୍ଦୋଳନର ଉଦ୍ଦେଶ୍ୟ ଥିଲା।</p><p>ଏହାର ପରିଣାମ ଭାଷା ବ୍ୟବହାରରେ ଦେଖାଦେଲା। ସମ୍ବଲପୁରର କଚେରିରେ ହିନ୍ଦୀ ପ୍ରଚଳନ ଓ ମାନ୍ଦ୍ରାଜ ଅଧୀନ ଗଞ୍ଜାମର ମିଶ୍ରଣ ଦାବି ଏହି ଭିନ୍ନ ପ୍ରଶାସନର ଦୁଇଟି ଉଦାହରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-65"><h2>ତୃତୀୟ ପାଠ · ୧ (ଖ). ଓଡ଼ିଶାର ଭାଷା ଆନ୍ଦୋଳନ କେଉଁ ପରିସ୍ଥିତିରେ ଆରମ୍ଭ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୮୪୯ରେ କଟକର କଲେକ୍ଟର ବଙ୍ଗଳାକୁ ସରକାରୀ ଭାଷାର ମାନ୍ୟତା ଦେଲେ। କେତେକ ଲେଖକ ଓଡ଼ିଆର ସ୍ୱାତନ୍ତ୍ର୍ୟ ଅସ୍ୱୀକାର କଲେ।</p><p>ଅନ୍ୟ ଶାସନ ଅଧୀନରେ ଥିବା ଓଡ଼ିଆ ଅଞ୍ଚଳରେ ମଧ୍ୟ ମାତୃଭାଷା ଅବହେଳିତ ହେଲା। ସେଥିପାଇଁ ବିଦ୍ୟାଳୟ ଓ କଚେରିରେ ଓଡ଼ିଆ ରଖିବା ଏବଂ ଅଞ୍ଚଳଗୁଡ଼ିକୁ ଏକତ୍ର କରିବା ଦାବି ଉଠିଲା।</p><p>ଗଞ୍ଜାମ ଉତ୍କଳ ହିତବାଦିନୀ ସଭା ଗଞ୍ଜାମକୁ ମାନ୍ଦ୍ରାଜରୁ ଅଲଗା କରିବାକୁ ଚାହିଁଲା। ସମ୍ବଲପୁରରେ କଚେରିରୁ ଓଡ଼ିଆ ହଟାଇବା ପରେ ସେହି ଭାଷାର ପୁନଃପ୍ରଚଳନ ଦାବି ଉଠିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-66"><h2>ତୃତୀୟ ପାଠ · ୧ (ଗ). ସାହିତ୍ୟିକମାନଙ୍କର ଓଡ଼ିଆ ଭାଷା ଆନ୍ଦୋଳନକୁ ଅବଦାନ ସମ୍ପର୍କରେ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଫକୀରମୋହନ ସେନାପତି ଓ ରାଧାନାଥ ରାୟ ଓଡ଼ିଆର ସ୍ୱାତନ୍ତ୍ର୍ୟ ବିରୋଧୀ ମତକୁ ପ୍ରତିବାଦ କଲେ। ନୀଳମଣି ବିଦ୍ୟାରତ୍ନ ‘ସମ୍ବଲପୁର ହିତୈଷିଣୀ’ରେ କଚେରିରୁ ଓଡ଼ିଆ ଭାଷା ହଟାଇବାର ସମାଲୋଚନା କଲେ।</p><p>ଗଙ୍ଗାଧର ମେହେର ତାଙ୍କୁ ସାଧୁବାଦ ଦେଲେ। ଏପରି ଲେଖା ଏକ ଅଞ୍ଚଳର ସମସ୍ୟାକୁ ସମସ୍ତ ଓଡ଼ିଆଙ୍କ ଦାବିରେ ପରିଣତ କଲା।</p><p>ସାହିତ୍ୟିକମାନେ ଦୁଇ ଉପାୟରେ ସାହାଯ୍ୟ କଲେ। ଓଡ଼ିଆ ସାହିତ୍ୟ ସୃଷ୍ଟି ଭାଷାର ସ୍ୱାତନ୍ତ୍ର୍ୟ ଦର୍ଶାଇଲା।</p><p>ପତ୍ରିକାରେ ସରକାରୀ ନିଷ୍ପତ୍ତିର ସମାଲୋଚନା ଲୋକଙ୍କ ସମ୍ମୁଖରେ ପ୍ରଶାସନିକ ଅସୁବିଧାକୁ ରଖିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-67"><h2>ତୃତୀୟ ପାଠ · ୧ (ଘ). ସମ୍ବଲପୁରର କୋର୍ଟ କଚେରୀରେ ଓଡ଼ିଆ ଭାଷା ଉଚ୍ଛେଦ ହେଲା ପରେ କ’ଣ ପ୍ରତିକ୍ରିୟା ସୃଷ୍ଟି କରିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୮୯୫ରେ ସମ୍ବଲପୁର କୋର୍ଟ କଚେରିରେ ଓଡ଼ିଆ ବଦଳରେ ହିନ୍ଦୀ ଚଳାଗଲା। ପତ୍ରପତ୍ରିକାରେ ପ୍ରତିବାଦ ହେଲା ଓ ସ୍ଥାନୀୟ ନେତା ସଙ୍ଗଠିତ ହେଲେ।</p><p>୧୯୦୧ରେ ସେମାନେ ସିମଳାଠାରେ କର୍ଜନଙ୍କୁ ସ୍ମାରକପତ୍ର ଦେଲେ। ଏହି ଉଦ୍ୟମ ପରେ ୧୯୦୩ ଜାନୁଆରୀ ୧ରୁ କଚେରିରେ ଓଡ଼ିଆ ପୁଣି ପ୍ରଚଳିତ ହେଲା।</p><p>ନୀଳମଣି ବିଦ୍ୟାରତ୍ନ ସମ୍ପାଦିତ ‘ସମ୍ବଲପୁର ହିତୈଷିଣୀ’ ଏହି ନିଷ୍ପତ୍ତିକୁ ସମାଲୋଚନା କଲା। ଜନମତ ଓ ପ୍ରତିନିଧିଙ୍କ ଉଦ୍ୟମ ଫଳରେ କଚେରିରେ ଭାଷାର ସ୍ଥାନ ଫେରିପାଇବା ଏକ ପ୍ରଥମ ସଫଳତା ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-68"><h2>ତୃତୀୟ ପାଠ · ୧ (ଙ). ଲର୍ଡ଼ କର୍ଜନଙ୍କ ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ଗଠନର ଆଭିମୁଖ୍ୟ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଓଡ଼ିଶା ଗସ୍ତରେ ସ୍ଥାନୀୟ କଳା ଓ ସ୍ଥାପତ୍ୟ ଦେଖି କର୍ଜନ ଓଡ଼ିଆ ଅଞ୍ଚଳର ଏକତ୍ରୀକରଣର ଆବଶ୍ୟକତା ବୁଝିଲେ। ତାଙ୍କ ସମୟରେ ସମ୍ବଲପୁରରେ କଚେରିର ଭାଷା ପୁନଃସ୍ଥାପିତ ହେଲା।</p><p>ରିସ୍ଲେ ସର୍କୁଲାରରେ ଅଞ୍ଚଳ ମିଶ୍ରଣର ପ୍ରସ୍ତାବ ଆସିଲା। ମାନ୍ଦ୍ରାଜର ଆପତ୍ତି ସତ୍ତ୍ୱେ ସେ ଭାଷାଭିତ୍ତିକ ମିଶ୍ରଣର ଯଥାର୍ଥତା ଦର୍ଶାଇଲେ।</p><p>୧୯୦୪ ଜାନୁଆରୀ ୫ରେ କର୍ଜନ ଦକ୍ଷିଣର ଓଡ଼ିଆ ଅଞ୍ଚଳ ମିଶାଇବା ପାଇଁ ମାନ୍ଦ୍ରାଜ ଗଭର୍ଣ୍ଣରଙ୍କୁ ପତ୍ର ଲେଖିଲେ। କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶ ରିସ୍‌ଲେ ସର୍କୁଲାରକୁ ମାନିଥିଲେ ମଧ୍ୟ ମାନ୍ଦ୍ରାଜ ଭିନ୍ନ ମତ ଦେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=67">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-69"><h2>ତୃତୀୟ ପାଠ · ୧ (ଚ). ଉତ୍କଳ ସମ୍ମିଳନୀର ଅଷ୍ଟମ ଅଧିବେଶନରେ ମଧୁସୂଦନ ଦାସ ଏବଂ ଦଶମ ଅଧିବେଶନରେ ଜୟପୁରର ରାଜା ବିକ୍ରମଦେବ ବର୍ମା କ’ଣ କହିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବ୍ରହ୍ମପୁରର ଅଷ୍ଟମ ଅଧିବେଶନରେ ମଧୁସୂଦନ ବିହାର ସହ ଓଡ଼ିଶାକୁ ଯୋଡ଼ିବା ନିଷ୍ପତ୍ତିକୁ ବିରୋଧ କରି ଓଡ଼ିଆଙ୍କ ପୃଥକ ପ୍ରଦେଶ ଦାବି କଲେ। ଦଶମ ଅଧିବେଶନରେ ବିକ୍ରମଦେବ ବର୍ମା ଛିନ୍ନ ମସ୍ତକ, ଗୋଡ଼ ଓ ଶରୀରର ଉପମା ଦେଇ ଖଣ୍ଡିତ ଓଡ଼ିଶାର ଯନ୍ତ୍ରଣା ପ୍ରକାଶ କଲେ।</p><p>ଦୁଇ ବକ୍ତବ୍ୟ ଏକାଠି ପଢ଼ିଲେ ଦାବିର ଦୁଇ ଦିଗ ବୁଝାଯାଏ। ମଧୁସୂଦନ ପ୍ରଶାସନିକ ସମାଧାନ ଚାହିଁଥିଲେ।</p><p>ବିକ୍ରମଦେବ ବୁଝାଇଥିଲେ ଯେ ବିଚ୍ଛିନ୍ନ ଅଞ୍ଚଳଗୁଡ଼ିକର ଅଧିବାସୀ ନିଜକୁ ଗୋଟିଏ ଜାତିର ଅଙ୍ଗ ମାନୁଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=68">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-70"><h2>ତୃତୀୟ ପାଠ · ୧ (ଛ). ସିହ୍ନା ପ୍ରସ୍ତାବ ସମ୍ପର୍କରେ ଏକ ସଂକ୍ଷିପ୍ତ ଟିପ୍ପଣୀ ଲେଖ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୯୨୦ ଫେବୃୟାରୀ ୨୦ରେ ସଚ୍ଚିଦାନନ୍ଦ ସିହ୍ନା କେନ୍ଦ୍ରୀୟ ପରିଷଦରେ ବଙ୍ଗ, ମାନ୍ଦ୍ରାଜ ଓ କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶର ଓଡ଼ିଆ ଅଞ୍ଚଳଗୁଡ଼ିକୁ ଓଡ଼ିଶା ଡିଭିଜନରେ ମିଶାଇବାର ପ୍ରସ୍ତାବ ଦେଲେ। ରାଜେନ୍ଦ୍ର ନାରାୟଣ ଭଞ୍ଜଦେଓ ସମର୍ଥନ କଲେ।</p><p>ସମ୍ପୃକ୍ତ ପ୍ରଦେଶଗୁଡ଼ିକ ଅରାଜି ହେଲେ ଏବଂ ବିହାର–ଓଡ଼ିଶା ସରକାର ଉପପ୍ରଦେଶ ପାହ୍ୟାର ପ୍ରସ୍ତାବ ଦେଲେ। ଏଥିରେ ଅଞ୍ଚଳଗୁଡ଼ିକୁ କେଉଁ ପ୍ରଶାସନ ତଳେ ଏକାଠି ରଖାଯିବ ତାହା ସ୍ପଷ୍ଟ ହୋଇଥିଲା।</p><p>ଅନ୍ୟ ପ୍ରଦେଶର ଆପତ୍ତି ରହିବାରୁ ପ୍ରସ୍ତାବ ଆଗତ ହେବା ମାତ୍ରେ ପୃଥକ୍ ପ୍ରଦେଶ ଗଠିତ ହେଲା ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=68">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୮–୬୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-71"><h2>ତୃତୀୟ ପାଠ · ୧ (ଜ). ଫିଲିପ୍ ଡଫ୍ କମିଟି କେବେ, କାହିଁକି ଓ କିପରି ଗଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗଞ୍ଜାମବାସୀଙ୍କ ମିଶ୍ରଣ ଦାବି ବାରମ୍ବାର ଉଠିବାରୁ ଏହାର ଯଥାର୍ଥତା ଯାଞ୍ଚ ପାଇଁ ୧୯୨୪ ଶେଷଭାଗରେ ଫିଲିପ୍–ଡଫ୍ କମିଟି ଗଠିତ ହେଲା। ଗଡ଼ଜାତ ପଲିଟିକାଲ ଏଜେଣ୍ଟ ସି. ଏଲ୍. ଫିଲିପ୍ ଓ ମାନ୍ଦ୍ରାଜ ପ୍ରେସିଡେନ୍ସିର ଜିଲ୍ଲାପାଳ ଏ. ସି. ଡଫ୍ ଏହାର ସଦସ୍ୟ ଥିଲେ।</p><p>କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି ଐତିହାସିକ ତଥ୍ୟ ଦେଇଥିଲେ। ପ୍ରତିନିଧିଙ୍କ ବକ୍ତବ୍ୟ ସହ ଅଞ୍ଚଳର ଭାଷା ଓ ଇତିହାସ ବିଚାରକୁ ନିଆଗଲା।</p><p>ତେଣୁ କମିଟିର କାମ ଥିଲା ମିଶ୍ରଣ ଦାବି ପଛରେ ସ୍ଥାନୀୟ ଜନମତ ଓ ତଥ୍ୟ ଖୋଜିବା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=69">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୯–୭୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-72"><h2>ତୃତୀୟ ପାଠ · ୧ (ଝ). ପ୍ରଥମ ଗୋଲଟେବୁଲ ବୈଠକରେ ଭାଗ ନେବାକୁ ଯାଇଥିବା ସମୟରେ ଇଂଲଣ୍ଡରେ କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତିଙ୍କ କାର୍ଯ୍ୟାବଳୀ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଲଣ୍ଡନର ପ୍ରଥମ ଗୋଲଟେବୁଲ ବୈଠକକୁ ଯାଇ ମହାରାଜା ଭାରତ ସଚିବ ସାମୁଏଲ ହୋରଙ୍କ ନିକଟରେ ଓଡ଼ିଆଙ୍କ ଦାବି ରଖିଲେ। ୧୯୩୧ ଜାନୁଆରୀ ୧୬ର ଭାଷଣରେ ଭାଷା ଓ ଇତିହାସର ଆଧାରରେ ପୃଥକ ଓଡ଼ିଶା ଗଠନର ଯୁକ୍ତି ବୁଝାଇଲେ।</p><p>ଏହିପରି ଦାବି ଇଂଲଣ୍ଡର ନୀତିନିର୍ଦ୍ଧାରକଙ୍କ ସମ୍ମୁଖରେ ପହଞ୍ଚିଲା। ଦେଶ ଭିତରେ ସଭା ବା ସ୍ମାରକପତ୍ର ଦ୍ୱାରା ଯେଉଁ ଦାବି ଉଠୁଥିଲା, ତାହାକୁ ସେ ଭାରତର ସାମ୍ବିଧାନିକ ସଂସ୍କାର ଆଲୋଚନା ସହ ଯୋଡ଼ିଲେ।</p><p>ପ୍ରଦେଶର ସୀମା ପ୍ରଶ୍ନ ପରବର୍ତ୍ତୀ ପର୍ଯ୍ୟାୟରେ ବିଚାର ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=70">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୦–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-73"><h2>ତୃତୀୟ ପାଠ · ୧ (ଞ). ଓ’ଡ଼ନେଲ୍ କମିଟି କାହିଁକି ଓ କିପରି ଗଠିତ ହୋଇଥିଲା ଏବଂ ଓଡ଼ିଆମାନେ କାହିଁକି ଏହାର ନିଷ୍ପତ୍ତିରେ ସନ୍ତୁଷ୍ଟ ହୋଇ ନଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୯୩୧ ସେପ୍ଟେମ୍ବର ୧୩ରେ ସୀମା ନିର୍ଦ୍ଧାରଣ ପାଇଁ ସାମୁଏଲ ଓ’ଡନେଲଙ୍କ ଅଧ୍ୟକ୍ଷତାରେ ଏଚ୍. ଏମ୍. ମେହେଟ୍ଟା ଓ ଟି. ଆର୍. ଫୁକନଙ୍କୁ ନେଇ କମିଟି ଗଠିତ ହେଲା। ତିନି ସହଯୋଗୀ ସଦସ୍ୟ ମଧ୍ୟ ଥିଲେ।</p><p>ପାରଳାଖେମୁଣ୍ଡି, ମଞ୍ଜୁଷା, ମେଦିନୀପୁର ଓ ସିଂହଭୂମି ବାଦ୍ ପଡ଼ିବାରୁ ଓଡ଼ିଆମାନେ ଅସନ୍ତୁଷ୍ଟ ହୋଇ ପ୍ରତିବାଦ କଲେ। ପୃଥକ୍ ପ୍ରଦେଶର ନୀତି ସ୍ୱୀକୃତ ହେଲେ ମଧ୍ୟ କେଉଁ ଅଞ୍ଚଳ ଏହାର ସୀମା ଭିତରେ ରହିବ, ତାହା ଥିଲା ବିବାଦ।</p><p>ତେଣୁ ବାଦ୍ ପଡ଼ିଥିବା ଅଞ୍ଚଳ ପାଇଁ ପୁଣି ଦାବି ଉଠିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=71">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୧–୭୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-74"><h2>ତୃତୀୟ ପାଠ · ୨ (କ). ଗଞ୍ଜାମ ଓ ସମ୍ବଲପୁର ଯଥାକ୍ରମେ କେଉଁ ମସିହାରେ ଇଂରେଜମାନଙ୍କ ଦ୍ୱାରା ଅଧିକୃତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦକ୍ଷିଣର ଗଞ୍ଜାମ ଓ ପଶ୍ଚିମର ସମ୍ବଲପୁର ଏକେ ସମୟରେ ହସ୍ତାନ୍ତର ହୋଇନଥିଲା। ତାହାର ଫଳ ଭିନ୍ନ ପ୍ରଦେଶରେ ବିଭକ୍ତ ଓଡ଼ିଆ ଅଞ୍ଚଳ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠ ଅନୁସାରେ ଗଞ୍ଜାମ ୧୭୫୯ରେ ଓ ସମ୍ବଲପୁର ୧୮୪୯ରେ ଅଧିକୃତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-75"><h2>ତୃତୀୟ ପାଠ · ୨ (ଖ). ଓଡ଼ିଆ ଆନ୍ଦୋଳନରେ ଗଞ୍ଜାମବାସୀ କିପରି ଅଂଶ ଗ୍ରହଣ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ସଭାର ଦାବି ମାନ୍ଦ୍ରାଜ ପ୍ରେସିଡେନ୍ସିରୁ ଗଞ୍ଜାମକୁ ଅଲଗା କରିବା। ସେଥିପାଇଁ ଭାଷା ସୁରକ୍ଷା ସହ ଶାସନସୀମାର ପ୍ରଶ୍ନ ଯୋଡ଼ିହୋଇଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗଞ୍ଜାମ ଉତ୍କଳ ହିତବାଦିନୀ ସଭା ଗଢ଼ି ଲୋକେ ମାତୃଭାଷାର ରକ୍ଷା ଓ ଗଞ୍ଜାମର ଓଡ଼ିଶା ସହ ମିଶ୍ରଣ ଦାବି କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-76"><h2>ତୃତୀୟ ପାଠ · ୨ (ଗ). କିଏ ଏବଂ କେବେ ସମ୍ବଲପୁରର କୋର୍ଟ କଚେରୀରୁ ଓଡ଼ିଆ ଭାଷା ଉଚ୍ଛେଦ କରି ହିନ୍ଦୀ ଭାଷା ପ୍ରଚଳନ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଓଡ଼ିଆ ଉଚ୍ଛେଦ ଓ ପରେ ଏହାର ପୁନଃପ୍ରଚଳନ ତାରିଖକୁ ପୃଥକ୍ କର। ପୁନଃପ୍ରଚଳନ ୧୯୦୩ ଜାନୁଆରୀ ୧ରେ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୮୯୫ ଜାନୁଆରୀ ୧୫ରେ କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶର ମୁଖ୍ୟ କମିଶନର ସାର୍ ଆଣ୍ଡ୍ରୁ ଫ୍ରେଜର ଏହା କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-77"><h2>ତୃତୀୟ ପାଠ · ୨ (ଘ). ନୀଳମଣି ବିଦ୍ୟାରତ୍ନ କେଉଁ ପତ୍ରିକାରେ ଇଂରେଜ ସରକାରଙ୍କ ଭାଷାନୀତିର ସମାଲୋଚନା କରିଥିଲେ ଏବଂ ଏଥିପାଇଁ କିଏ ତାଙ୍କୁ ଅଭିନନ୍ଦନ ଜଣାଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ସମ୍ବଲପୁର କଚେରିରେ ଭାଷା ବଦଳାଇବା ବିରୋଧରେ ସମ୍ବାଦପତ୍ର ମାଧ୍ୟମରେ ଜନମତ ସୃଷ୍ଟିର ଉଦାହରଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>‘ସମ୍ବଲପୁର ହିତୈଷିଣୀ’ରେ ସମାଲୋଚନା କରିବାରୁ ଗଙ୍ଗାଧର ମେହେର ନୀଳମଣିଙ୍କୁ ସାଧୁବାଦ ଦେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-78"><h2>ତୃତୀୟ ପାଠ · ୨ (ଙ). ଲର୍ଡ଼ କର୍ଜନ ଓଡ଼ିଶା ଗସ୍ତରେ ଆସିବା ଦ୍ୱାରା କି ଲାଭ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଆଭିମୁଖ୍ୟର ଏକ ଫଳ ହେଲା ଦକ୍ଷିଣର ଓଡ଼ିଆ ଅଞ୍ଚଳ ମିଶାଇବା ପାଇଁ ମାନ୍ଦ୍ରାଜ ଗଭର୍ଣ୍ଣରଙ୍କୁ ତାଙ୍କ ପତ୍ର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କର୍ଜନ ଏକତ୍ରୀକରଣର ଆବଶ୍ୟକତା ବୁଝିଲେ। ୧୯୦୩ ଜାନୁଆରୀ ୧ରୁ ସମ୍ବଲପୁର କଚେରିରେ ଓଡ଼ିଆ ପୁଣି ଚଳିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-79"><h2>ତୃତୀୟ ପାଠ · ୨ (ଚ). ‘ରିସ୍ଲେ ସର୍କୁଲାର’ କେବେ ଓ କାହା ଦ୍ୱାରା ପ୍ରକାଶିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରିସ୍‌ଲେ ସର୍କୁଲାର ଅଞ୍ଚଳ ମିଶ୍ରଣ ସହ ସମ୍ପୃକ୍ତ। ସେହି ବର୍ଷ ଆଗରୁ କଚେରିରେ ଓଡ଼ିଆ ଭାଷା ପୁନଃପ୍ରଚଳିତ ହୋଇଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୦୩ ଡିସେମ୍ବର ୩ରେ ଗୃହ ସଚିବ ହେନ୍ରୀ ରିସ୍ଲେ ଏହା ପ୍ରକାଶ କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-80"><h2>ତୃତୀୟ ପାଠ · ୨ (ଛ). ସାଇମନ କମିଶନ ଭାରତ ଗସ୍ତବେଳେ ଉତ୍କଳ ସମ୍ମିଳନୀର ସଭ୍ୟମାନେ କେଉଁଠାରେ ଓ କାହିଁକି ତାଙ୍କୁ ଭେଟିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଟନାରେ ପ୍ରତିନିଧି ସ୍ମାରକପତ୍ର ଦେବା ଓ ଲଣ୍ଡନରେ ମହାରାଜାଙ୍କ ଭାଷଣ ଥିଲା ଦାବି ଉପସ୍ଥାପନର ଦୁଇଟି ପୃଥକ୍ ଅବସର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଟନାଠାରେ କମିଶନକୁ ଭେଟି ସମ୍ମିଳନୀର ସଭ୍ୟମାନେ ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ଗଠନ ଦାବି ଜଣାଇଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=69">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୯–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-81"><h2>ତୃତୀୟ ପାଠ · ୨ (ଜ). ଅଟ୍ଲି ସବ୍ କମିଟିରେ ଓଡ଼ିଆ ସଦସ୍ୟ କେଉଁମାନେ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସଦସ୍ୟଙ୍କ ନାମ ସହ କମିଟିର କାମ ମେଳାଅ। ଓଡ଼ିଆ ଅଞ୍ଚଳର ପୃଥକ୍ ପ୍ରଦେଶ ପାଇଁ ଏହି ସବ୍‌କମିଟି ସୁପାରିଶ କରିଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରାଜେନ୍ଦ୍ର ନାରାୟଣ ଭଞ୍ଜଦେଓ ଓ ଲକ୍ଷ୍ମୀଧର ମହାନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=69">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୯–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-82"><h2>ତୃତୀୟ ପାଠ · ୨ (ଝ). ଅଟ୍ଲି ସବ୍ କମିଟିରେ କେଉଁ ଅଞ୍ଚଳକୁ ନେଇ ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ ପାଇଁ ସୁପାରିସ କରିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଅଞ୍ଚଳ ତାଲିକା ଗୋଟିଏ କମିଟିର ସୁପାରିଶ। ୧୯୩୬ର ଚୂଡ଼ାନ୍ତ ଛଅଟି ଜିଲ୍ଲା ସହ ସୁପାରିଶକୁ ଏକ କରିବା ଠିକ୍ ହେବ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଓଡ଼ିଶା ଡିଭିଜନ, ଅନୁଗୁଳ, ମେଦିନୀପୁର, ଗଞ୍ଜାମ ଓ ଖଡ଼ିଆଳକୁ ଏକତ୍ର କରିବାର ସୁପାରିସ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=69">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୯–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-83"><h2>ତୃତୀୟ ପାଠ · ୨ (ଞ). କେବେ ଓ କେଉଁଠାରେ ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ ସମ୍ପର୍କରେ ମହାତ୍ମା ଗାନ୍ଧୀଙ୍କୁ ଅବଗତ କରାଯାଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ଭାରତରେ କରାଚୀ ଅଧିବେଶନର ନିଷ୍ପତ୍ତି। ସେହି ବର୍ଷ ଜାନୁଆରୀରେ ଲଣ୍ଡନରେ ମହାରାଜା ଓଡ଼ିଶାର ଦାବି ଉଠାଇଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୧ ମାର୍ଚ୍ଚ ୨୯ରେ କରାଚୀ କଂଗ୍ରେସ ଅଧିବେଶନରେ ଗାନ୍ଧିଜୀଙ୍କୁ ଏହା ଜଣାଗଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=69">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୯–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-84"><h2>ତୃତୀୟ ପାଠ · ୨ (ଟ). ଓ’ଡ଼ନେଲ୍ କମିଟି ପ୍ରସ୍ତାବର ପ୍ରତିବାଦ କରିବା ପାଇଁ କେବେ ଏବଂ କେଉଁଠାରେ ଉତ୍କଳ ସମ୍ମିଳନୀର ଜରୁରୀ ଅଧିବେଶନ ବସିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତିବାଦର କାରଣ ଥିଲା ପ୍ରସ୍ତାବିତ ସୀମାରୁ କେତେକ ଓଡ଼ିଆ ଅଞ୍ଚଳ ବାଦ୍ ପଡ଼ିବା। ଏହା ପୃଥକ୍ ପ୍ରଦେଶ ଦାବିର ବିରୋଧ ନଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୨ ଅଗଷ୍ଟ ୨୧ରେ ବ୍ରହ୍ମପୁରରେ ଜରୁରୀ ଅଧିବେଶନ ବସିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=71">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୧–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-85"><h2>ତୃତୀୟ ପାଠ · ୨ (ଠ). ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ ସମ୍ପର୍କରେ ଶ୍ୱେତପତ୍ର କେବେ ପ୍ରକାଶ ପାଇଥିଲା ଏବଂ ଏଥିରେ ପ୍ରସ୍ତାବିତ ଓଡ଼ିଶାର କ୍ଷେତ୍ରଫଳ କେତେ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶ୍ୱେତପତ୍ରରେ ପ୍ରସ୍ତାବ ପ୍ରକାଶ ପାଇଲା। ପ୍ରଦେଶ ଗଠନର ଆଇନଗତ ସ୍ୱୀକୃତି ଓ କାର୍ଯ୍ୟାରମ୍ଭ ପରବର୍ତ୍ତୀ ପର୍ଯ୍ୟାୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୩ ମାର୍ଚ୍ଚ ୧୭ରେ ଶ୍ୱେତପତ୍ର ପ୍ରକାଶ ପାଇଲା। ଏହି ଅନୁଚ୍ଛେଦରେ କ୍ଷେତ୍ରଫଳ ୨୧,୫୪୫ ବର୍ଗମାଇଲ ଦିଆଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=71">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୧–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-86"><h2>ତୃତୀୟ ପାଠ · ୨ (ଡ). ଶ୍ୱେତପତ୍ରରେ ପ୍ରସ୍ତାବିତ ଓଡ଼ିଶାରୁ କେଉଁ ଅଞ୍ଚଳ ଗୁଡ଼ିକ ବାଦ୍ ଦିଆଯାଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରସ୍ତାବରେ କେଉଁ ଅଞ୍ଚଳ ବାଦ୍ ପଡ଼ିଲା ତାହାରୁ ସେଠାକାର ପ୍ରତିନିଧିମାନେ ପୁଣି କାହିଁକି ଦାବି କଲେ ତାହା ବୁଝାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜୟପୁର ଓ ପାରଳାଖେମୁଣ୍ଡି ବାଦ୍ ପଡ଼ିଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=71">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୧–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-87"><h2>ତୃତୀୟ ପାଠ · ୨ (ଢ). ଭାରତ ଶାସନ ଆଇନ ୧୯୩୫ର କେଉଁ ଧାରାରେ ଓଡ଼ିଶାକୁ ଏକ ପୃଥକ ପ୍ରଦେଶ ଭାବେ ସ୍ୱୀକୃତି ଦିଆଗଲା ଏବଂ କେବେ ‘ଭାରତ ଶାସନ (ଓଡ଼ିଶା ଗଠନ) ନିର୍ଦ୍ଦେଶ ୧୯୩୬’ ଘୋଷିତ ହେଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୩୬ ମାର୍ଚ୍ଚରେ ଗଠନ ନିର୍ଦ୍ଦେଶ ଓ ଏପ୍ରିଲରେ ପ୍ରଦେଶ କାର୍ଯ୍ୟକାରୀ ହେବା ଏହି ସ୍ୱୀକୃତି ପରର ଦୁଇ ପଦକ୍ଷେପ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଧାରା ୨୮୯ରେ ସ୍ୱୀକୃତି ମିଳିଲା। ୧୯୩୬ ମାର୍ଚ୍ଚ ୩ରେ ଗଠନ ନିର୍ଦ୍ଦେଶ ଘୋଷିତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=71">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୧–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-88"><h2>ତୃତୀୟ ପାଠ · ୩ (କ). ବଙ୍ଗ ପ୍ରେସିଡେନ୍ସି ସହିତ କେଉଁ ଓଡ଼ିଆ ଭାଷାଭାଷୀ ଅଞ୍ଚଳ ମିଶି ରହିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମେଦିନିପୁର ବଙ୍ଗ ଅଧୀନରେ, ଗଞ୍ଜାମ ମାନ୍ଦ୍ରାଜ ଅଧୀନରେ ଏବଂ ସମ୍ବଲପୁର କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶ ଅଧୀନରେ ଥିଲା। ଅଞ୍ଚଳ ଓ ପ୍ରଶାସନକୁ ଯୋଡ଼ି କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମେଦିନିପୁର ବଙ୍ଗ ପ୍ରେସିଡେନ୍ସିରେ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-89"><h2>ତୃତୀୟ ପାଠ · ୩ (ଖ). ଓଡ଼ିଶାର କେଉଁ ଗଭର୍ଣ୍ଣର ଓଡ଼ିଆ ଭାଷାର ସ୍ୱାତନ୍ତ୍ର୍ୟ ବିରୋଧୀ ମନ୍ତବ୍ୟକୁ ବିରୋଧ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସେ ଓଡ଼ିଆର ପୃଥକ୍ ଭାଷା ଭାବରେ ପରିଚୟ ଅସ୍ୱୀକାର କରୁଥିବା ମତକୁ ବିରୋଧ କରିଥିଲେ। ଏହା ଭାଷା ବିବାଦର ପ୍ରସଙ୍ଗ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗୋଲ୍ଡସବରୀ ଏହି ମତକୁ ବିରୋଧ କରିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-90"><h2>ତୃତୀୟ ପାଠ · ୩ (ଗ). ୧୮୮୮ରେ ଓଡ଼ିଶା ଗସ୍ତରେ ଆସିଥିବା ବଙ୍ଗର ଗଭର୍ଣ୍ଣର କିଏ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କଟକରେ ଉତ୍କଳ ସଭା ପକ୍ଷରୁ ବିଚ୍ଛିନ୍ନ ଅଞ୍ଚଳ ପ୍ରସଙ୍ଗରେ ତାଙ୍କୁ ସ୍ମାରକପତ୍ର ଦିଆଯାଇଥିଲା। ସେ ଏହି ଦାବି ଗ୍ରହଣ କରିନଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାର୍ ଏସ୍. ସି. ବେଲି ଓଡ଼ିଶା ଆସିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-91"><h2>ତୃତୀୟ ପାଠ · ୩ (ଘ). ସାର ଆଣ୍ଡ୍ରୁ୍ୟଫ୍ରେଜର କିଏ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମ୍ବଲପୁର କଚେରିରେ ଓଡ଼ିଆ ପରିବର୍ତ୍ତେ ହିନ୍ଦୀ ପ୍ରଚଳନ ନିଷ୍ପତ୍ତି ସହ ତାଙ୍କ ପଦ ଓ ନାମ ଯୋଡ଼ିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେ କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶର ମୁଖ୍ୟ କମିଶନର ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-92"><h2>ତୃତୀୟ ପାଠ · ୩ (ଙ). ସମ୍ବଲପୁର କୋର୍ଟ କଚେରୀରେ ଓଡ଼ିଆ ଭାଷା କେବେଠାରୁ ପୁନଃପ୍ରଚଳିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୮୯୫ରେ ହଟିଥିବା ଭାଷା ପୁଣି କଚେରିକୁ ଫେରିବାରେ ପତ୍ରିକାର ପ୍ରତିବାଦ ଓ କର୍ଜନଙ୍କୁ ସ୍ମାରକପତ୍ର ଦୁଇଟି ଉପାୟ ଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୦୩ ଜାନୁଆରୀ ୧ରୁ ଓଡ଼ିଆ ପୁଣି ପ୍ରଚଳିତ ହୋଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-93"><h2>ତୃତୀୟ ପାଠ · ୩ (ଚ). ଲର୍ଡ଼ ଆମ୍ପ୍ଥିଲ୍ କିଏ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦକ୍ଷିଣର ଓଡ଼ିଆ ଅଞ୍ଚଳ ମିଶାଇବା ପ୍ରସଙ୍ଗରେ ଆମ୍ପଥିଲ୍ କର୍ଜନଙ୍କ ମତ ସହ ଏକମତ ନଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲର୍ଡ ଆମ୍ପଥିଲ୍ ମାନ୍ଦ୍ରାଜର ଗଭର୍ଣ୍ଣର ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-94"><h2>ତୃତୀୟ ପାଠ · ୩ (ଛ). ବିହାର-ଓଡ଼ିଶା ପ୍ରଦେଶ କେବେ ଗଠନ କରାଯାଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ପ୍ରଦେଶ ବିହାର ଓ ଓଡ଼ିଶାର ମିଳିତ ପ୍ରଶାସନ ଥିଲା। ୧୯୩୬ରେ ଓଡ଼ିଶା ପୃଥକ୍ ପ୍ରଦେଶ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠରେ ୧୯୧୨ ଅଗଷ୍ଟ ୧ ତାରିଖ ଦିଆଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-95"><h2>ତୃତୀୟ ପାଠ · ୩ (ଜ). ବଙ୍ଗ, ମାନ୍ଦ୍ରାଜ ଓ କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶ ସରକାର ସିହ୍ନାଙ୍କ ପ୍ରସ୍ତାବ ଅଗ୍ରାହ୍ୟ କରିବା ପରେ ବିହାର-ଓଡ଼ିଶା ସରକାର ଓଡ଼ିଶା ପାଇଁ କ’ଣ ପ୍ରସ୍ତାବ ଦେଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉପପ୍ରଦେଶ ପାହ୍ୟା ଥିଲା ପୂର୍ଣ୍ଣ ପୃଥକ୍ ପ୍ରଦେଶ ଦାବିଠାରୁ ସୀମିତ ପ୍ରସ୍ତାବ। ସିହ୍ନା ପ୍ରସ୍ତାବର ପ୍ରତିକ୍ରିୟାରେ ଏହା ଉଠିଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଓଡ଼ିଶାକୁ ଉପପ୍ରଦେଶର ପାହ୍ୟା ଦେବାକୁ ପ୍ରସ୍ତାବ ଦେଇଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=68">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୮–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-96"><h2>ତୃତୀୟ ପାଠ · ୩ (ଝ). କେନ୍ଦ୍ରୀୟ ବିଧାୟକ ପରିଷଦର କେଉଁ ସଦସ୍ୟ ଅଟ୍ଲି ସବ୍ କମିଟିର ସଦସ୍ୟ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠାରେ କେନ୍ଦ୍ରୀୟ ବିଧାୟକ ପରିଷଦର ସଦସ୍ୟଙ୍କୁ ଚିହ୍ନିବା ଦରକାର। ମାନ୍ଦ୍ରାଜ ପରିଷଦରେ ଏହି ପ୍ରସଙ୍ଗ ଉଠାଇଥିବା ଶଶିଭୂଷଣ ରଥଙ୍କ ପରିଚୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଡକ୍ଟର ସୁରୱାର୍ଦ୍ଦି ଏହାର ସଦସ୍ୟ ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=68">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୮–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-97"><h2>ତୃତୀୟ ପାଠ · ୩ (ଞ). ଓ’ଡନେଲ କମିଟି କେବେ ନିଯୁକ୍ତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସୀମା ନିର୍ଦ୍ଧାରଣ କରିବା କମିଟିର ଦାୟିତ୍ୱ ଥିଲା। ଏହା ନିଯୁକ୍ତ ହେବା ସମୟ ଓ ପରେ ଶ୍ୱେତପତ୍ର ପ୍ରକାଶ ପାଇବାର ସମୟ ଅଲଗା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୧ ସେପ୍ଟେମ୍ବର ୧୩ରେ କମିଟି ନିଯୁକ୍ତ ହୋଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=68">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୮–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-98"><h2>ତୃତୀୟ ପାଠ · ୩ (ଟ). ପାରଳାଖେମୁଣ୍ଡିର କେଉଁ ଅନୁଷ୍ଠାନ ପାରଳାଖେମୁଣ୍ଡିକୁ ଓଡ଼ିଶାରେ ମିଶାଇବା ପାଇଁ ଓ’ଡ଼ନେଲ କମିଟି ନିକଟରେ ଦାବି କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାରଳାଖେମୁଣ୍ଡି ବାଦ୍ ପଡ଼ିବାର ଆଶଙ୍କାରୁ ସେଠାରେ ମିଶ୍ରଣ ଦାବି ତୀବ୍ର ହୋଇଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାରଳାଖେମୁଣ୍ଡି ଉତ୍କଳ ହିତୈଷିଣୀ ସମାଜ ଦାବି କରିଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=70">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୦–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-99"><h2>ତୃତୀୟ ପାଠ · ୩ (ଠ). ତୃତୀୟ ଗୋଲ୍ ଟେବୁଲ୍ ବୈଠକ ପରେ କିଏ ପୃଥକ୍ ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନର ଘୋଷଣା କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭାରତ ସଚିବ ଲଣ୍ଡନରେ ଦାବି ଶୁଣୁଥିବା ବ୍ରିଟିଶ୍ କର୍ତ୍ତୃପକ୍ଷ। ଓଡ଼ିଶା ପକ୍ଷରୁ ଦାବି ରଖିଥିବା ପ୍ରତିନିଧିଙ୍କ ଭୂମିକା ଅଲଗା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭାରତ ସଚିବ ସାମୁଏଲ ହୋର୍ ଘୋଷଣା କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=70">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୦–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-100"><h2>ତୃତୀୟ ପାଠ · ୩ (ଡ). ମିଳିତ ସଂସଦୀୟ କମିଟି ପ୍ରସ୍ତାବରେ ଓଡ଼ିଶାର କ୍ଷେତ୍ରଫଳ କେତେ ବର୍ଗମାଇଲକୁ ବୃଦ୍ଧି କରାଯାଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ସଂଖ୍ୟା ଭୂଭାଗର ଆୟତନ, ଜନସଂଖ୍ୟା ନୁହେଁ। ମାପର ଏକକ ବର୍ଗମାଇଲକୁ ସଂଖ୍ୟା ସହ ରଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ୍ଷେତ୍ରଫଳ ୩୨,୬୯୫ ବର୍ଗମାଇଲକୁ ବଢ଼ିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=70">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୦–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-101"><h2>ତୃତୀୟ ପାଠ · ୩ (ଢ). ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ କେବେ ସୃଷ୍ଟି ହେଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସୀମା କମିଟିର ସୁପାରିଶ ଓ ୧୯୩୫ର ଆଇନ ପରେ ଏହି ତାରିଖରୁ ଅଲଗା ପ୍ରଶାସନ କାମ ଆରମ୍ଭ କଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୬ ଏପ୍ରିଲ୍ ୧ରେ ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠିତ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=70">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୦–୭୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-102"><h2>ତୃତୀୟ ପାଠ · ୪ (କ). ସମ୍ବଲପୁରର କେତେକ ନେତୃସ୍ଥାନୀୟ ବ୍ୟକ୍ତି କେଉଁଠାରେ କର୍ଜନଙ୍କୁ ଏକ ସ୍ମାରକପତ୍ର ଦେଇଥିଲେ ?</h2>
+<ol type="A"><li>କଲିକତା</li><li>ଦିଲ୍ଲୀ</li><li>ସିମଳା</li><li>କଟକ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ସିମଳା</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୦୧ରେ ପ୍ରତିନିଧିମାନେ ସିମଳା ଯାଇଥିଲେ। ପରେ ୧୯୦୩ରୁ ସମ୍ବଲପୁର କଚେରିରେ ଓଡ଼ିଆ ପୁନଃପ୍ରଚଳିତ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ସିମଳା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-103"><h2>ତୃତୀୟ ପାଠ · ୪ (ଖ). କେଉଁ ଅଞ୍ଚଳଟି କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶର ଅନ୍ତର୍ଭୁକ୍ତ ନ ଥିଲା ?</h2>
+<ol type="A"><li>ବାମଣ୍ଡା</li><li>ସୋନପୁର</li><li>ବଣାଇ</li><li>ରେଢ଼ାଖୋଲ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ବଣାଇ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାମଣ୍ଡା, ସୋନପୁର ଓ ରେଢ଼ାଖୋଲ କେନ୍ଦ୍ରୀୟ ପ୍ରଦେଶ ପଟର ତାଲିକାରେ ଅଛି। ପ୍ରଶ୍ନଟି ତାଲିକା ବାହାରର ଅଞ୍ଚଳ ମାଗୁଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ବଣାଇ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=67">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-104"><h2>ତୃତୀୟ ପାଠ · ୪ (ଗ). ଲର୍ଡ଼ କର୍ଜନ କେବେ ମାନ୍ଦ୍ରାଜ ଗଭର୍ଣ୍ଣରଙ୍କୁ ଓଡ଼ିଶାରେ ଓଡ଼ିଆ ଭାଷାଭାଷୀ ଅଞ୍ଚଳ ମିଶ୍ରଣର ଯୌକ୍ତିକତା ବିଷୟରେ ଲେଖିଥିଲେ ?</h2>
+<ol type="A"><li>୧୯୦୩ ଡିସେମ୍ବର ୩</li><li>୧୯୦୪ ଜାନୁୟାରୀ ୫</li><li>୧୯୦୪ ଜୁନ୍ ୨୦</li><li>୧୯୦୫ ଜୁଲାଇ ୧୯</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ୧୯୦୪ ଜାନୁୟାରୀ ୫</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୦୩ ଡିସେମ୍ବରର ଘଟଣା ରିସ୍‌ଲେ ସର୍କୁଲାର। ମାନ୍ଦ୍ରାଜ ଗଭର୍ଣ୍ଣରଙ୍କୁ କର୍ଜନଙ୍କ ପତ୍ର ତାହା ପରର ଘଟଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ୧୯୦୪ ଜାନୁଆରୀ ୫।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=67">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-105"><h2>ତୃତୀୟ ପାଠ · ୪ (ଘ). କାହା ନେତୃତ୍ୱରେ ଉତ୍କଳ ସମ୍ମିଳନୀର ସାତଜଣିଆ କମିଟି ଦ୍ୱାରା ମଣ୍ଟେଗୁ ଓ ଚେମ୍ସ୍ଫୋର୍ଡ଼ଙ୍କୁ ଦାବିପତ୍ର ଦିଆଯାଇଥିଲା ?</h2>
+<ol type="A"><li>କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି</li><li>ବିକ୍ରମଦେବ ଶର୍ମା</li><li>ମଧୁସୂଦନ ଦାସ</li><li>ରାଜେନ୍ଦ୍ର ନାରାୟଣ ଭଞ୍ଜ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ମଧୁସୂଦନ ଦାସ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧୁସୂଦନଙ୍କ ସାତଜଣିଆ କମିଟି ଦାବି ଉପସ୍ଥାପନ କରିଥିଲା। ପରେ ସଚ୍ଚିଦାନନ୍ଦ ସିହ୍ନା କେନ୍ଦ୍ରୀୟ ପରିଷଦରେ ପ୍ରସ୍ତାବ ଦେଇଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ମଧୁସୂଦନ ଦାସ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=68">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୮–୬୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-106"><h2>ତୃତୀୟ ପାଠ · ୪ (ଙ). କିଏ ମାନ୍ଦ୍ରାଜ ବିଧାନ ପରିଷଦର ସଦସ୍ୟ ଥିଲେ ?</h2>
+<ol type="A"><li>ବିଶ୍ୱନାଥ କର</li><li>ଶଶିଭୂଷଣ ରଥ</li><li>ନୀଳକଣ୍ଠ ଦାସ</li><li>ଭୁବନାନନ୍ଦ ଦାସ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଶଶିଭୂଷଣ ରଥ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଞ୍ଜାମ ମାନ୍ଦ୍ରାଜ ପ୍ରେସିଡେନ୍ସି ଅଧୀନରେ ଥିଲା। ତେଣୁ ସେହି ବିଧାନ ପରିଷଦରେ ଅଞ୍ଚଳ ମିଶ୍ରଣ ଦାବି ଉଠିଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ଶଶିଭୂଷଣ ରଥ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=68">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୮–୬୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-107"><h2>ତୃତୀୟ ପାଠ · ୪ (ଚ). ଫିଲିପ୍-ଡଫ୍ କମିଟି କେବେ ନିଯୁକ୍ତ ହୋଇଥିଲା ?</h2>
+<ol type="A"><li>୧୯୧୯</li><li>୧୯୨୧</li><li>୧୯୨୪</li><li>୧୯୨୮</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ୧୯୨୪</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଞ୍ଜାମବାସୀଙ୍କ ମିଶ୍ରଣ ଦାବିର ଅନୁସନ୍ଧାନ ଥିଲା ଫିଲିପ୍–ଡଫ୍ କମିଟିର କାମ। ପ୍ରଦେଶର ସୀମାନିର୍ଦ୍ଧାରଣ କମିଟି ତାହା ପରେ ଆସିଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ୧୯୨୪।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=69">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-108"><h2>ତୃତୀୟ ପାଠ · ୪ (ଛ). କେବେ ମହାରାଜା କୃଷ୍ଣଚନ୍ଦ୍ର ଇଂଲଣ୍ଡରେ ସ୍ୱତନ୍ତ୍ର ଓଡ଼ିଶା ସମ୍ପର୍କରେ ଏକ ଐତିହାସିକ ଭାଷଣ ଦେଇଥିଲେ ?</h2>
+<ol type="A"><li>୧୯୩୦ ନଭେମ୍ବର ୧୨</li><li>୧୯୩୧ ଜାନୁୟାରୀ ୧୬</li><li>୧୯୩୧ ଜାନୁୟାରୀ ୧୯</li><li>୧୯୩୩ ଜୁଲାଇ ୩</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ୧୯୩୧ ଜାନୁୟାରୀ ୧୬</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମହାରାଜା ପ୍ରଥମ ଗୋଲଟେବୁଲ ବୈଠକର ଅବସରରେ ଓଡ଼ିଆଙ୍କ ଭାଷା ଓ ଇତିହାସ ଆଧାରରେ ପ୍ରଦେଶ ଦାବି ଉପସ୍ଥାପନ କଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ୧୯୩୧ ଜାନୁଆରୀ ୧୬।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=70">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୦–୭୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-109"><h2>ତୃତୀୟ ପାଠ · ୪ (ଜ). କିଏ ଓ’ଡନେଲ କମିଟିର ସହଯୋଗୀ ସଦସ୍ୟ ନ ଥିଲେ ?</h2>
+<ol type="A"><li>ସଚ୍ଚିଦାନନ୍ଦ ସିହ୍ନା</li><li>ସି.ଭି.ଏସ୍. ନରସିଂହ ରାଜୁ</li><li>କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି</li><li>ମଧୁସୂଦନ ଦାସ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ମଧୁସୂଦନ ଦାସ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧୁସୂଦନ ପରବର୍ତ୍ତୀ ହବାକ୍‌ଙ୍କ ଅଧ୍ୟକ୍ଷତାରେ ଗଠିତ ପ୍ରଶାସନିକ କମିଟିର ସଦସ୍ୟ ଥିଲେ। ଦୁଇ କମିଟିର ନାମ ଓ କାମ ଅଲଗା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iv) ମଧୁସୂଦନ ଦାସ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=71">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୧–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୫</a></small></article>
+<article id="exercise-110"><h2>ତୃତୀୟ ପାଠ · ୫ · କାମ ୧. ଗୋଲଟେବୁଲ ବୈଠକ ଚାଲିଥିବା ବେଳେ ଇଂଲଣ୍ଡର ପ୍ରଧାନମନ୍ତ୍ରୀ କିଏ ଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ରାମ୍ସେ ମାକ୍‌ଡୋନାଲଡ୍ ଇଂଲଣ୍ଡର ପ୍ରଧାନମନ୍ତ୍ରୀ ଥିଲେ। ଇତିହାସର ପ୍ରଥମ ଅଧ୍ୟାୟର ଆଇନ ଅମାନ୍ୟ ଆନ୍ଦୋଳନ ପାଠରେ ଗୋଲଟେବୁଲ ବୈଠକ ପ୍ରସଙ୍ଗରେ ତାଙ୍କ ନାମ ମିଳେ (ସେହି ଅଧ୍ୟାୟର PDF ପୃ. ୨୦–୨୧)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=70" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୦</a></small></article>
+<article id="exercise-111"><h2>ଚତୁର୍ଥ ପାଠ · ୧ (କ). ୧୯୩୬ ଏପ୍ରିଲ ୧ ତାରିଖରେ ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନ କିପରି ହେଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଓଡ଼ିଆ ଅଞ୍ଚଳର ଏକତ୍ରୀକରଣ ପାଇଁ ମଧୁସୂଦନ ଦାସ, କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି ଓ ଉତ୍କଳ ସମ୍ମିଳନୀ ଦୀର୍ଘଦିନ ଉଦ୍ୟମ କଲେ। ସୀମା ନିର୍ଦ୍ଧାରଣ ଓ ସଂସଦୀୟ ବିଚାର ପରେ ୧୯୩୫ ଆଇନ ପୃଥକ ପ୍ରଦେଶକୁ ସ୍ୱୀକୃତି ଦେଲା।</p><p>୧୯୩୬ ଏପ୍ରିଲ୍ ୧ରେ କଟକ, ପୁରୀ, ବାଲେଶ୍ୱର, ସମ୍ବଲପୁର, ଗଞ୍ଜାମ ଓ କୋରାପୁଟ ଜିଲ୍ଲାକୁ ନେଇ ପ୍ରଦେଶ ଗଠିତ ହେଲା। ୧୯୩୫ ଆଇନର ଧାରା ୨୮୯ରେ ଏହାକୁ ସ୍ୱୀକୃତି ମିଳିଥିଲା।</p><p>୧୯୩୬ ମାର୍ଚ୍ଚ ୩ରେ ଗଠନ ନିର୍ଦ୍ଦେଶ ପ୍ରକାଶ ପାଇଲା ଓ ଏପ୍ରିଲ ପହିଲାରୁ ନୂଆ ପ୍ରଶାସନ କାର୍ଯ୍ୟ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=72">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୨–୭୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-112"><h2>ଚତୁର୍ଥ ପାଠ · ୧ (ଖ). ନୂତନ ଓଡ଼ିଶାର ଉଦ୍ଘାଟନ ଦିବସ ପାଳନର ଏକ ବିବରଣୀ ପ୍ରଦାନ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୯୩୬ ଏପ୍ରିଲ୍ ୧ରେ କଟକ ରେଭେନ୍ସା କଲେଜ ହଲ୍‌ରେ ନୂତନ ଓଡ଼ିଶା ପ୍ରଦେଶର ଉଦ୍‌ଘାଟନ ହେଲା। ପାଟନା ହାଇକୋର୍ଟର ମୁଖ୍ୟ ବିଚାରପତି ପ୍ରଥମ ରାଜ୍ୟପାଳ ସାର୍ ଜନ୍ ଅଷ୍ଟିନ୍ ହବାକ୍‌ଙ୍କୁ ଶପଥପାଠ କରାଇଲେ।</p><p>ଇଂଲଣ୍ଡର ସମ୍ରାଟ ଓ ଭାଇସ୍ରାୟଙ୍କ ଶୁଭେଚ୍ଛାବାର୍ତ୍ତା ଉପସ୍ଥିତ ଜନତାଙ୍କୁ ପଢ଼ି ଶୁଣାଗଲା। ଏହି ଉତ୍ସବ ଭାଷାଭିତ୍ତିକ ପ୍ରଦେଶର ପ୍ରଶାସନିକ ଆରମ୍ଭ ଥିଲା।</p><p>ସେତେବେଳେ ନିର୍ବାଚିତ ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଠିତ ହୋଇ ନଥିଲା। ଅନ୍ତରୀଣ ଶାସନ ରାଜ୍ୟପାଳ ଓ ତାଙ୍କ ଉପଦେଷ୍ଟା ପରିଷଦଙ୍କ ଦାୟିତ୍ୱରେ ରହିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-113"><h2>ଚତୁର୍ଥ ପାଠ · ୧ (ଗ). ନିର୍ବାଚିତ ସରକାର ଗଠନ ହେବା ପର୍ଯ୍ୟନ୍ତ ନୂତନ ଓଡ଼ିଶାର ଶାସନ ପାଇଁ କି କି ପଦକ୍ଷେପ ନିଆଯାଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଜନ୍ ଅଷ୍ଟିନ୍ ହବାକ୍‌ଙ୍କ ଅଧ୍ୟକ୍ଷତାରେ ପ୍ରଶାସନିକ କମିଟି ପୂର୍ବରୁ ପ୍ରସ୍ତାବ ଦେଇଥିଲା। ନିର୍ବାଚିତ ସରକାର ଗଠନ ପର୍ଯ୍ୟନ୍ତ ରାଜ୍ୟପାଳ ଶାସନ ମୁଖ୍ୟ ଥିଲେ।</p><p>ତାଙ୍କ ମନୋନୀତ ୨୦ ଜଣ ସଦସ୍ୟଙ୍କ ଉପଦେଷ୍ଟା ପରିଷଦ କାମ କଲା। ଲକ୍ଷ୍ମୀଧର ମହାନ୍ତି ଉପସଭାପତି ଥିଲେ।</p><p>ଏହି ସମୟରେ ମନ୍ତ୍ରୀପଦ ନଥିଲା। ଉପଦେଷ୍ଟା ପରିଷଦରେ ତିନି ଜଣ ସରକାରୀ ସଦସ୍ୟ ଥିଲେ।</p><p>ଅନ୍ୟ ସତର ଜଣ ପୂର୍ବରୁ ଓଡ଼ିଶାର କୌଣସି ଅଞ୍ଚଳକୁ ପ୍ରାଦେଶିକ ବିଧାନସଭାରେ ପ୍ରତିନିଧିତ୍ୱ କରିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-114"><h2>ଚତୁର୍ଥ ପାଠ · ୧ (ଘ). ନୂତନ ଓଡ଼ିଶାର ପ୍ରଥମ ବିଧାନସଭା ପାଇଁ ଅନୁଷ୍ଠିତ ନିର୍ବାଚନର ଏକ ବିବରଣୀ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୯୩୭ରେ ପ୍ରଥମ ବିଧାନସଭା ପାଇଁ ୬୦ଟି ଆସନ ମଧ୍ୟରୁ ୫୬ଟିରେ ପ୍ରତ୍ୟକ୍ଷ ନିର୍ବାଚନ ହେଲା। ଚାରିଜଣ ମନୋନୀତ ହେବାର ବ୍ୟବସ୍ଥା ଥିଲା।</p><p>କଂଗ୍ରେସ ୩୬, ଜାତୀୟ ଦଳ ୪, ସଂଯୁକ୍ତ ଦଳ ୬ ଓ ସ୍ୱାଧୀନ ଦଳ ସହ ନିର୍ଦ୍ଦଳୀୟ ପ୍ରାର୍ଥୀ ୧୦ ଆସନ ପାଇଲେ। ଆରମ୍ଭରେ କଂଗ୍ରେସ ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଢ଼ିବାକୁ ମନା କଲା।</p><p>ଜାନୁଆରୀ ୧୮ରୁ ୨୩ ପର୍ଯ୍ୟନ୍ତ ଭୋଟ ହେଲା। ୩୬ଟି ଆସନ ପାଇ କଂଗ୍ରେସ ସଂଖ୍ୟାଗରିଷ୍ଠ ଥିଲା।</p><p>କିନ୍ତୁ ଦଳର ନୀତି ଯୋଗୁଁ ନିର୍ବାଚନରେ ବିଜୟ ଓ ପ୍ରଥମ ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଠନ ପୃଥକ୍ ଘଟଣା ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-115"><h2>ଚତୁର୍ଥ ପାଠ · ୧ (ଙ). ୧୯୪୧ ମସିହାରେ ଗଠିତ ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳର ଗଠନ ଓ କାର୍ଯ୍ୟାବଳୀ ସମ୍ପର୍କରେ ଏକ ଟିପ୍ପଣୀ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୯୪୧ ନଭେମ୍ବର ୨୪ରେ କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତିଙ୍କ ନେତୃତ୍ୱରେ ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଠିତ ହେଲା। ଗୋଦାବରୀଶ ମିଶ୍ର ଓ ଅବ୍ଦୁସ୍ ଶୋଭନ ଖାଁ ମନ୍ତ୍ରୀ ଥିଲେ।</p><p>ଯୁଦ୍ଧରେ ସରକାରଙ୍କୁ ସାହାଯ୍ୟ କରିଥିବାରୁ କଂଗ୍ରେସ ଏହାର ସମାଲୋଚନା କଲା। ଏହି ସମୟରେ ଉତ୍କଳ ବିଶ୍ୱବିଦ୍ୟାଳୟ ଓ କଟକ ଭେଷଜ ମହାବିଦ୍ୟାଳୟ ପ୍ରତିଷ୍ଠିତ ହେଲା।</p><p>୧୯୪୪ ଜୁନ୍ ୨୯ରେ ମହାରାଜା ଇସ୍ତଫା ଦେଲେ। ପାଠରେ ଉଲ୍ଲେଖ ଅଛି ଯେ ମହାରାଜା ପ୍ରଧାନମନ୍ତ୍ରୀ ପଦରୁ ପାଇଥିବା ସମସ୍ତ ଅର୍ଥ ଉତ୍କଳ ବିଶ୍ୱବିଦ୍ୟାଳୟକୁ ଦାନ କଲେ।</p><p>ଯୁଦ୍ଧକାଳୀନ ରାଜନୀତିକୁ ନେଇ ମତଭେଦ ସତ୍ତ୍ୱେ ଉଚ୍ଚଶିକ୍ଷାର ଏହି ଦୁଇଟି ଅନୁଷ୍ଠାନ ତାଙ୍କ ଶାସନକାଳର ଅବଦାନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=79">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-116"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (କ). ନୂତନ ଓଡ଼ିଶାର ପ୍ରଥମ ବିଧାନ ସଭାରେ ଏକକ ସଂଖ୍ୟା ଗରିଷ୍ଠତା ସତ୍ତ୍ୱେ କାହିଁକି କଂଗ୍ରେସ ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଠନ ପାଇଁ ରାଜି ହୋଇ ନଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆସନ ଜିତିବା ଓ ଶାସନଭାର ନେବା ଦୁଇଟି ଭିନ୍ନ ନିଷ୍ପତ୍ତି। ରାଜ୍ୟପାଳଙ୍କ ବିଶେଷ କ୍ଷମତା ନେଇ କଂଗ୍ରେସର ଆପତ୍ତି ଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୫ ଆଇନରେ ରାଜ୍ୟପାଳଙ୍କ ବିଶେଷ କ୍ଷମତା ଯୋଗୁଁ ନିର୍ବାଚିତ ମନ୍ତ୍ରିମଣ୍ଡଳର ନିଷ୍ପତ୍ତିରେ ହସ୍ତକ୍ଷେପ ହୋଇପାରେ ବୋଲି କଂଗ୍ରେସ ଆଶଙ୍କା କରୁଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-117"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଖ). ଓଡ଼ିଶାର ପ୍ରଥମ ପ୍ରଧାନମନ୍ତ୍ରୀ ମହାରାଜା କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତିଙ୍କର ସମୟ କାଳ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ମହାରାଜା କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତିଙ୍କ ପ୍ରଥମ ମନ୍ତ୍ରିମଣ୍ଡଳ। ୧୯୪୧ର ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳ ତାଙ୍କର ଆଉ ଏକ କାର୍ଯ୍ୟକାଳ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରଥମ କାର୍ଯ୍ୟକାଳ ୧୯୩୭ ଏପ୍ରିଲ୍ ୧ରୁ ଜୁଲାଇ ୧୩ ପର୍ଯ୍ୟନ୍ତ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-118"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଗ). କଂଗ୍ରେସ କାହିଁକି ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଠନ କରିବାକୁ ରାଜି ହେଲା ଏବଂ ବିଶ୍ୱନାଥ ଦାଶ କେବେଠାରୁ ଓଡ଼ିଶାର ପ୍ରଧାନମନ୍ତ୍ରୀ ହେଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆଶ୍ୱାସନା ପରେ କଂଗ୍ରେସ ପ୍ରାରମ୍ଭିକ ଆପତ୍ତିରୁ ଓହରି ଶାସନଭାର ନେଲା। ସେଥିପାଇଁ ନିର୍ବାଚନ ଓ କଂଗ୍ରେସ ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଠନ ଏକେ ସମୟରେ ହୋଇନଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାଦେଶିକ ମନ୍ତ୍ରିମଣ୍ଡଳକୁ ଗଭର୍ଣ୍ଣର ଜେନେରାଲଙ୍କ ସହଯୋଗର ଆଶ୍ୱାସନରୁ କଂଗ୍ରେସ ରାଜି ହେଲା। ୧୯୩୭ ଜୁଲାଇ ୧୯ରେ ବିଶ୍ୱନାଥ ଦାସ ପ୍ରଧାନମନ୍ତ୍ରୀ ହେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-119"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଘ). ବିଶ୍ୱନାଥ ଦାସଙ୍କ ମନ୍ତ୍ରିମଣ୍ଡଳରେ ଥିବା ଅନ୍ୟ ଦୁଇଜଣ ମନ୍ତ୍ରୀ କିଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏମାନେ ବିଶ୍ୱନାଥ ଦାସଙ୍କ ମନ୍ତ୍ରିମଣ୍ଡଳରେ ଥିଲେ। ଗୋଦାବରୀଶ ମିଶ୍ର ଓ ଅବ୍ଦୁସ୍ ଶୋଭନ ଖାଁଙ୍କ ନାମ ପରବର୍ତ୍ତୀ ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳ ସହ ଯୋଡ଼ିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନିତ୍ୟାନନ୍ଦ କାନୁନ୍‌ଗୋ ଓ ବୋଧରାମ ଦୁବେ ତାଙ୍କ ମନ୍ତ୍ରିମଣ୍ଡଳର ଅନ୍ୟ ଦୁଇଜଣ ମନ୍ତ୍ରୀ ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-120"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଙ). ଓଡ଼ିଶାର ପ୍ରଥମ ବିଧାନ ସଭାର ବାଚସ୍ପତି ଓ ଉପବାଚସ୍ପତି କିଏ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାଚସ୍ପତି ଓ ଉପବାଚସ୍ପତି ବିଧାନସଭାର ପଦ। ମନ୍ତ୍ରିମଣ୍ଡଳର ସଦସ୍ୟ ତାଲିକାଠାରୁ ଏହି ଦୁଇଟି ପଦକୁ ପୃଥକ୍ ରଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୁକୁନ୍ଦ ପ୍ରସାଦ ଦାସ ବାଚସ୍ପତି ଓ ନନ୍ଦକିଶୋର ଦାସ ଉପବାଚସ୍ପତି ହେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-121"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଚ). ବିଶ୍ୱନାଥ ଦାସଙ୍କ ମନ୍ତ୍ରିମଣ୍ଡଳ କେବେ ଓ କାହିଁକି ଇସ୍ତଫା ଦେଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦ୍ୱିତୀୟ ବିଶ୍ୱଯୁଦ୍ଧ ପ୍ରସଙ୍ଗରେ କଂଗ୍ରେସର ନୀତି ପ୍ରାଦେଶିକ ଶାସନକୁ ପ୍ରଭାବିତ କଲା। ଇସ୍ତଫା ଏହି ମତଭେଦର ଫଳ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଇଂରେଜ ସରକାରଙ୍କ ଯୁଦ୍ଧନୀତିକୁ ବିରୋଧ କରି ୧୯୩୯ ନଭେମ୍ବରରେ ମନ୍ତ୍ରିମଣ୍ଡଳ ଇସ୍ତଫା ଦେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-122"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଛ). ଅଷ୍ଟିନ୍ ହବାକ୍ଙ୍କ ପରେ କିଏ ଓଡ଼ିଶାର ରାଜ୍ୟପାଳ ଦାୟିତ୍ୱ ନେଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉଇଲିୟମ୍ ଲୁଇସ୍ ଓଡ଼ିଶା ରାଜ୍ୟପାଳଙ୍କ ପଦ ନେଲେ। ଏହାକୁ ପ୍ରାଦେଶିକ ପ୍ରଧାନମନ୍ତ୍ରୀ ପରିବର୍ତ୍ତନ ସହ ମିଶାଇବା ଉଚିତ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୪୧ ଏପ୍ରିଲ୍ ୧ରେ ଉଇଲିୟମ୍ ଲୁଇସ୍ ଦାୟିତ୍ୱ ନେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-123"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଜ). କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତିଙ୍କ ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳରେ ଥିବା ଅନ୍ୟ ଦୁଇଜଣ ମନ୍ତ୍ରୀଙ୍କର ନାମ ଲେଖ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଦୁଇ ମନ୍ତ୍ରୀଙ୍କ ସହ ମହାରାଜା କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି ୧୯୪୧ର ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳର ନେତୃତ୍ୱ ନେଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପଣ୍ଡିତ ଗୋଦାବରୀଶ ମିଶ୍ର ଓ ମୌଲବୀ ଅବ୍ଦୁସ୍ ଶୋଭନ ଖାଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=79">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-124"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଝ). କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତିଙ୍କ ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳଦ୍ୱାରା ଓଡ଼ିଆମାନଙ୍କର କେଉଁ ଦୁଇଟି ଆକାଂକ୍ଷା ଫଳବତୀ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଦୁଇ ଶିକ୍ଷାନୁଷ୍ଠାନରେ ଗୋଟିଏ ଉଚ୍ଚଶିକ୍ଷା ଓ ଅନ୍ୟଟି ଚିକିତ୍ସା ଶିକ୍ଷାର ସୁଯୋଗ ବଢ଼ାଇଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉତ୍କଳ ବିଶ୍ୱବିଦ୍ୟାଳୟ ଓ କଟକ ଭେଷଜ ମହାବିଦ୍ୟାଳୟ ପ୍ରତିଷ୍ଠାର ଆକାଂକ୍ଷା ପୂରଣ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=79">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-125"><h2>ଚତୁର୍ଥ ପାଠ · ୨ (ଞ). ହରେକୃଷ୍ଣ ମହତାବଙ୍କ ମନ୍ତ୍ରିମଣ୍ଡଳ ସମୟର ଉଲ୍ଲେଖନୀୟ କାର୍ଯ୍ୟ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତିନି କାର୍ଯ୍ୟର ପରିସର ପୃଥକ୍। ଗଡ଼ଜାତ ମିଶ୍ରଣ ରାଜ୍ୟର ସୀମା, ହୀରାକୁଦ ଜଳସମ୍ବଳ ଏବଂ ନୂଆ ରାଜଧାନୀ ପ୍ରଶାସନ ସହ ସମ୍ପୃକ୍ତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗଡ଼ଜାତ ମିଶ୍ରଣ, ହୀରାକୁଦ ନଦୀବନ୍ଧ ଯୋଜନା ଆରମ୍ଭ ଓ ଭୁବନେଶ୍ୱରରେ ନୂଆ ରାଜଧାନୀ ପ୍ରତିଷ୍ଠା ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=79">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-126"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (କ). ନୂତନ ଓଡ଼ିଶାର ରାଜଧାନୀ କେଉଁଠାରେ ଅବସ୍ଥାପିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ୧୯୩୬ର ପ୍ରଦେଶ ଗଠନ ସମୟର ପ୍ରଶ୍ନ। ଭୁବନେଶ୍ୱରରେ ନୂଆ ରାଜଧାନୀ ପ୍ରତିଷ୍ଠା ପରବର୍ତ୍ତୀ ଘଟଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନୂତନ ଓଡ଼ିଶାର ରାଜଧାନୀ କଟକରେ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-127"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଖ). ନୂତନ ଓଡ଼ିଶାର ଆୟତନ କେତେ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି କ୍ଷେତ୍ରଫଳ ଗଠନ ସମୟର ଛଅ ଜିଲ୍ଲାବିଶିଷ୍ଟ ପ୍ରଦେଶର। ପରବର୍ତ୍ତୀ ଗଡ଼ଜାତ ମିଶ୍ରଣ ପୂର୍ବର ସୀମାକୁ ଏଠାରେ ଧରାଯାଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରଦେଶର ଆୟତନ ୩୨,୬୯୫ ବର୍ଗମାଇଲ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-128"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଗ). କେଉଁ ସ୍ଥାନରେ ନୂତନ ଓଡ଼ିଶାର ଉଦ୍ଘାଟନ ଉତ୍ସବ ଅନୁଷ୍ଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୩୬ ଏପ୍ରିଲ୍ ୧ରେ ଏହି ଉତ୍ସବରେ ପ୍ରଥମ ରାଜ୍ୟପାଳ ଶପଥ ନେଲେ। ଘଟଣାକୁ ତାହାର ସ୍ଥଳ ସହ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କଟକର ରେଭେନ୍ସା କଲେଜ ହଲ୍‌ରେ ଉତ୍ସବ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-129"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଘ). କିଏ ଓଡ଼ିଶାର ପ୍ରଥମ ରାଜ୍ୟପାଳଙ୍କୁ ଶପଥ ପାଠ କରାଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶପଥପାଠ କରାଇଥିବା ମୁଖ୍ୟ ବିଚାରପତି ଓ ଶପଥ ନେଇଥିବା ରାଜ୍ୟପାଳ ଜନ୍ ଅଷ୍ଟିନ୍ ହବାକ୍ ଭିନ୍ନ ବ୍ୟକ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଟନା ହାଇକୋର୍ଟର ମୁଖ୍ୟ ବିଚାରପତି ସାର୍ କୋଟ୍‌ନେ ଟେରେଲ ଶପଥପାଠ କରାଇଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-130"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଙ). କାହା ଅଧ୍ୟକ୍ଷତାରେ ଓଡ଼ିଶା ପ୍ରାଶାସନିକ କମିଟି ଗଠିତ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ପ୍ରଶାସନିକ କମିଟି ନୂତନ ପ୍ରଦେଶର ଶାସନ ବ୍ୟବସ୍ଥା ବିଚାର କଲା। ଓ’ଡନେଲ୍ କମିଟିର କାମ ଥିଲା ତାହାର ସୀମା ଚିହ୍ନଟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜନ୍ ଅଷ୍ଟିନ୍ ହବାକ୍ ଅଧ୍ୟକ୍ଷ ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-131"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଚ). ଓଡ଼ିଶାର ପ୍ରଥମ ବିଧାନ ସଭାରେ ସମୁଦାୟ କେତୋଟି ଆସନ ଥିଲା ଏବଂ ସେଥି ମଧ୍ୟରୁ କେତୋଟି ନିର୍ବାଚିତ ସଦସ୍ୟଙ୍କ ପାଇଁ ଉଦ୍ଦିଷ୍ଟ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୫୬ ନିର୍ବାଚିତ ଓ ୪ ମନୋନୀତ ସଦସ୍ୟ ମିଶିଲେ ବିଧାନସଭାର ସମୁଦାୟ ୬୦ଟି ଆସନର ହିସାବ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୬୦ଟି ଆସନ ମଧ୍ୟରୁ ୫୬ଟି ନିର୍ବାଚିତ ସଦସ୍ୟଙ୍କ ପାଇଁ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-132"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଛ). କିଏ ସଂଯୁକ୍ତ ଦଳର ନେତୃତ୍ୱ ନେଇଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସଂଯୁକ୍ତ ଦଳର ନେତା କନିକାର ରାଜା। ପାରଳାଖେମୁଣ୍ଡିର ମହାରାଜା ଜାତୀୟ ଦଳର ନେତା ଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କନିକା ରାଜା ଶୈଳେନ୍ଦ୍ର ନାରାୟଣ ଭଞ୍ଜଦେଓ ସଂଯୁକ୍ତ ଦଳର ନେତୃତ୍ୱ ନେଇଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-133"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଜ). ବିଶ୍ୱନାଥ ଦାଶଙ୍କ ଇସ୍ତଫା ପରେ କେଉଁ ଆଇନ୍ ଅନୁଯାୟୀ ରାଜ୍ୟପାଳ ଓଡ଼ିଶାର ପ୍ରତ୍ୟକ୍ଷ ଶାସନ ଦାୟିତ୍ୱ ଗ୍ରହଣ କଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନିର୍ବାଚିତ ମନ୍ତ୍ରିମଣ୍ଡଳ ଇସ୍ତଫା ଦେବା ପରେ ଆଇନର ଏହି ବ୍ୟବସ୍ଥାରେ ରାଜ୍ୟପାଳ ପ୍ରଶାସନ ଚଳାଇଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୩୫ ଭାରତ ଶାସନ ଆଇନର ଧାରା ୯୩ ଅନୁଯାୟୀ ରାଜ୍ୟପାଳ ଦାୟିତ୍ୱ ନେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-134"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଝ). କିଏ ଉତ୍କଳ ବିଶ୍ୱବିଦ୍ୟାଳୟକୁ ତାଙ୍କର ଅର୍ଜିତ ସମସ୍ତ ଅର୍ଥ ଦାନ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶିକ୍ଷା ପାଇଁ ମହାରାଜାଙ୍କ ଅବଦାନ ସହ ତାଙ୍କ ପଦର ଦରମାର ଏହି ବିନିଯୋଗକୁ ପାଠ ସମ୍ପୃକ୍ତ କରିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମହାରାଜା କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି ପ୍ରଧାନମନ୍ତ୍ରୀ ଭାବେ ଅର୍ଜିତ ସମସ୍ତ ଅର୍ଥ ଉତ୍କଳ ବିଶ୍ୱବିଦ୍ୟାଳୟକୁ ଦାନ କରିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-135"><h2>ଚତୁର୍ଥ ପାଠ · ୩ (ଞ). ହରେକୃଷ୍ଣ ମହତାବ କେବେ ଓଡ଼ିଶାର ପ୍ରଧାନମନ୍ତ୍ରୀ ରୂପେ ଶପଥ ଗ୍ରହଣ କରିଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ହରେକୃଷ୍ଣ ମହତାବଙ୍କ ଶପଥର ତାରିଖ। ତାଙ୍କ କାର୍ଯ୍ୟକାଳ ପରେ ଗଡ଼ଜାତ ମିଶ୍ରଣ ଓ ଭୁବନେଶ୍ୱରରେ ରାଜଧାନୀ ପ୍ରତିଷ୍ଠା ପର୍ଯ୍ୟନ୍ତ ବ୍ୟାପିଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୪୬ ଏପ୍ରିଲ୍ ୨୩ରେ ସେ ଶପଥ ଗ୍ରହଣ କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-136"><h2>ଚତୁର୍ଥ ପାଠ · ୪ (କ). କେଉଁଟି ନୂତନ ଓଡ଼ିଶାର ଜିଲ୍ଲା ନ ଥିଲା ?</h2>
+<ol type="A"><li>ସମ୍ବଲପୁର</li><li>ଗଞ୍ଜାମ</li><li>ଅନୁଗୁଳ</li><li>କୋରାପୁଟ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଅନୁଗୁଳ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୩୬ର ଛଅ ଜିଲ୍ଲା ହେଲେ କଟକ, ପୁରୀ, ବାଲେଶ୍ୱର, ସମ୍ବଲପୁର, ଗଞ୍ଜାମ ଓ କୋରାପୁଟ। ତାଲିକାରୁ ଅନୁଗୁଳ ବାଦ୍ ପଡ଼େ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ଅନୁଗୁଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=76">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-137"><h2>ଚତୁର୍ଥ ପାଠ · ୪ (ଖ). କିଏ ଉପଦେଷ୍ଟା ପରିଷଦର ଉପସଭାପତି ଥିଲେ ?</h2>
+<ol type="A"><li>ମଧୁସୂଦନ ଦାସ</li><li>ଲକ୍ଷ୍ମୀଧର ମହାନ୍ତି</li><li>କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି</li><li>ବିଶ୍ୱନାଥ ଦାଶ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଲକ୍ଷ୍ମୀଧର ମହାନ୍ତି</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉପଦେଷ୍ଟା ପରିଷଦରେ କୋଡ଼ିଏ ଜଣ ମନୋନୀତ ସଦସ୍ୟ ଥିଲେ। ରାଜ୍ୟପାଳ ଶାସନମୁଖ୍ୟ, ଲକ୍ଷ୍ମୀଧର ମହାନ୍ତି ପରିଷଦର ଉପସଭାପତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ଲକ୍ଷ୍ମୀଧର ମହାନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-138"><h2>ଚତୁର୍ଥ ପାଠ · ୪ (ଗ). କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି କେଉଁ ଦଳର ନେତୃତ୍ୱ ନେଇଥିଲେ ?</h2>
+<ol type="A"><li>ସଂଯୁକ୍ତ ଦଳ</li><li>ଜାତୀୟ କଂଗ୍ରେସ</li><li>ଜାତୀୟ ଦଳ</li><li>ସ୍ୱାଧୀନ ଦଳ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଜାତୀୟ ଦଳ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୩୭ ନିର୍ବାଚନରେ ମହାରାଜାଙ୍କ ଜାତୀୟ ଦଳ ଓ ଜାତୀୟ କଂଗ୍ରେସ ପୃଥକ୍ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀ ଥିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iii) ଜାତୀୟ ଦଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-139"><h2>ଚତୁର୍ଥ ପାଠ · ୪ (ଘ). କିଏ କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତିଙ୍କ ପ୍ରଥମ ମନ୍ତ୍ରିମଣ୍ଡଳରେ ଜଣେ ମନ୍ତ୍ରୀ ଥିଲେ ?</h2>
+<ol type="A"><li>ଅବଦୁସ୍ ଶୋଭନ ଖାଁ</li><li>ଲତିଫୁର ରେହମାନ</li><li>ଗୋଦାବରୀଶ ମିଶ୍ର</li><li>ନିତ୍ୟାନନ୍ଦ କାନୁନ୍ଗୋ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଲତିଫୁର ରେହମାନ</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୩୭ ଏପ୍ରିଲ୍ ୧ରେ ଗଠିତ ପ୍ରଥମ ମନ୍ତ୍ରିମଣ୍ଡଳରେ ମହାରାଜାଙ୍କ ସହ ମାନ୍ଧାତା ଗୋରାଚାନ୍ଦ ପଟ୍ଟନାୟକ ଓ ମୌଲବୀ ଲତିଫୁର ରେହମାନ ଥିଲେ। ଗୋଦାବରୀଶ ମିଶ୍ର ଓ ଅବ୍ଦୁସ୍ ଶୋଭନ ଖାଁ ପରବର୍ତ୍ତୀ ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳର ସଦସ୍ୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ii) ଲତିଫୁର ରେହମାନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=78">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୮–୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-140"><h2>ଚତୁର୍ଥ ପାଠ · ୪ (ଙ). କେବେ କୃଷ୍ଣଚନ୍ଦ୍ର ଗଜପତି ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳର ପ୍ରଧାନମନ୍ତ୍ରୀ ପଦରୁ ଇସ୍ତଫା ଦେଇଥିଲେ ?</h2>
+<ol type="A"><li>୧୯୩୭ ଜୁଲାଇ ୧୩</li><li>୧୯୩୭ ଜୁଲାଇ ୧୯</li><li>୧୯୪୧ ନଭେମ୍ବର ୨୪</li><li>୧୯୪୪ ଜୁନ୍ ୨୯</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. ୧୯୪୪ ଜୁନ୍ ୨୯</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୪୧ ନଭେମ୍ବର ୨୪ ମିଳିତ ମନ୍ତ୍ରିମଣ୍ଡଳ ଗଠନର ତାରିଖ। ୧୯୪୪ ଜୁନ୍ ୨୯ ଇସ୍ତଫାର ତାରିଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(iv) ୧୯୪୪ ଜୁନ୍ ୨୯।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=79">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=80" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୦–୮୧</a></small></article>
+<article id="exercise-141"><h2>ଚତୁର୍ଥ ପାଠ · ୫ · କାମ ୧. ଆର୍ଥିକ ସ୍ୱାବଲମ୍ବନଶୀଳତା ସମ୍ବନ୍ଧରେ ମଧୁସୂଦନ ଦାସଙ୍କ ଚିନ୍ତାଧାରାର ସମୀକ୍ଷାମୂଳକ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନିଜ ପ୍ରଦେଶର ଉନ୍ନତି ନିମନ୍ତେ ଲୋକେ ନିଜେ ଦାୟିତ୍ୱ ନେବା ସ୍ୱାବଲମ୍ବନର ମୂଳ କଥା। ମଧୁବାବୁ ଉତ୍କଳ ସମ୍ମିଳନୀରେ ବ୍ୟକ୍ତିଗତ ସ୍ୱାର୍ଥ ତ୍ୟାଗ କରି ମାତୃଭୂମିର ସେବା କରିବାକୁ ଆହ୍ୱାନ ଦେଇଥିଲେ।</p><p>ବ୍ୟବସାୟୀ, ଶିକ୍ଷିତ ଯୁବକ ଓ ଅନ୍ୟାନ୍ୟ ବର୍ଗଙ୍କୁ ସେ ଏହି କାର୍ଯ୍ୟରେ ସାମିଲ କରିଥିଲେ। ଆର୍ଥିକ ଦୃଷ୍ଟିରୁ ଏହାର ଅର୍ଥ ହେଉଛି ଓଡ଼ିଶାବାସୀଙ୍କ ଶିକ୍ଷା, ଶ୍ରମ ଓ ସହଯୋଗକୁ ପ୍ରଦେଶର ଉନ୍ନତିରେ ଲଗାଇବା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=77" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୭</a></small></article>
+
+</main></body></html>

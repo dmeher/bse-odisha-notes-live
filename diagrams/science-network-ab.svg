@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 170" width="460" height="170" role="img" aria-labelledby="title desc">
+  <title id="title">Mixed resistor network between A and B</title>
+  <desc id="desc">A connects through a 2 ohm resistor to a junction. A 3 ohm top branch and a 6 ohm bottom branch both meet at terminal B.</desc>
+  <rect x="1" y="1" width="458" height="168" rx="10" fill="#fff" stroke="#cedbd5"/>
+  <style>text {font-family: sans-serif; font-size: 16px; fill: #152c24} .wire {stroke:#254d3f;stroke-width:2.5;fill:none}</style>
+<path d="M43 85H84 M146 85H199 V43H240 M302 43H355V127H302 M240 127H199V85 M355 85H414" class="wire" /><path d="M84 85 h3 l4 -8 8 16 8 -16 8 16 8 -16 8 16 8 -16 4 8 h3" class="wire" stroke-linejoin="round"/><text x="115" y="68.5" text-anchor="middle">2 Ω</text><path d="M240 43 h3 l4 -8 8 16 8 -16 8 16 8 -16 8 16 8 -16 4 8 h3" class="wire" stroke-linejoin="round"/><text x="271" y="26.5" text-anchor="middle">3 Ω</text><path d="M240 127 h3 l4 -8 8 16 8 -16 8 16 8 -16 8 16 8 -16 4 8 h3" class="wire" stroke-linejoin="round"/><text x="271" y="110.5" text-anchor="middle">6 Ω</text><circle cx="43" cy="85" r="4" fill="#254d3f"/><circle cx="199" cy="85" r="4" fill="#254d3f"/><circle cx="355" cy="85" r="4" fill="#254d3f"/><circle cx="414" cy="85" r="4" fill="#254d3f"/><text x="38" y="114" text-anchor="middle">A</text><text x="417" y="114" text-anchor="middle">B</text>
+</svg>

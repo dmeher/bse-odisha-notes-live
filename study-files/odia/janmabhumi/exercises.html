@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଜନ୍ମଭୂମି · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଜନ୍ମଭୂମି</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1gzF0442mLad4AEJDS0isfuQRKZt6ttgc/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୫୦। ଯାଞ୍ଚ କରାଯାଇଥିବା ଉତ୍ତର ପ୍ରଶ୍ନକ୍ରମରେ ଦିଆଯାଇଛି।</p><p>୪୭ରେ ମୌଖିକ ଲୋକଗୀତ ସଂଗ୍ରହ, ୪୮ରେ ପୂର୍ଣ୍ଣ ବହି ପଠନ ଓ ୪୯ରେ ଦଳୀୟ ପଦ୍ୟାନ୍ତ ଆବଶ୍ୟକ। ପାଠଭିତ୍ତିକ ତାଲିକା ଓ କାର୍ଯ୍ୟ ଯୋଜନା ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୬–୯</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୫୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a> <a href="#exercise-18">୧୮</a> <a href="#exercise-19">୧୯</a> <a href="#exercise-20">୨୦</a> <a href="#exercise-21">୨୧</a> <a href="#exercise-22">୨୨</a> <a href="#exercise-23">୨୩</a> <a href="#exercise-24">୨୪</a> <a href="#exercise-25">୨୫</a> <a href="#exercise-26">୨୬</a> <a href="#exercise-27">୨୭</a> <a href="#exercise-28">୨୮</a> <a href="#exercise-29">୨୯</a> <a href="#exercise-30">୩୦</a> <a href="#exercise-31">୩୧</a> <a href="#exercise-32">୩୨</a> <a href="#exercise-33">୩୩</a> <a href="#exercise-34">୩୪</a> <a href="#exercise-35">୩୫</a> <a href="#exercise-36">୩୬</a> <a href="#exercise-37">୩୭</a> <a href="#exercise-38">୩୮</a> <a href="#exercise-39">୩୯</a> <a href="#exercise-40">୪୦</a> <a href="#exercise-41">୪୧</a> <a href="#exercise-42">୪୨</a> <a href="#exercise-43">୪୩</a> <a href="#exercise-44">୪୪</a> <a href="#exercise-45">୪୫</a> <a href="#exercise-46">୪୬</a> <a href="#exercise-47">୪୭</a> <a href="#exercise-48">୪୮</a> <a href="#exercise-49">୪୯</a> <a href="#exercise-50">୫୦</a></nav></details>
+<article id="exercise-1"><h2>୧. ‘ଆୟୁସୂର୍ଯ୍ୟ’ର ବ୍ୟାସବାକ୍ୟ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସୂର୍ଯ୍ୟର ଉଦୟ ଓ ଅସ୍ତ ସହ ଜୀବନକାଳର ଅଗ୍ରଗତି ମିଳୁଛି। ବ୍ୟାସବାକ୍ୟରେ ତେଣୁ ଆୟୁ ଓ ସୂର୍ଯ୍ୟର ଆରୋପ ସ୍ପଷ୍ଟ କରିବାକୁ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖ — ଆୟୁ ରୂପକ ସୂର୍ଯ୍ୟ। ଆୟୁ ଉପରେ ସୂର୍ଯ୍ୟତ୍ୱ ଆରୋପିତ ହୋଇଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+<article id="exercise-2"><h2>୨. ‘ଧର୍ମାନ୍ତର’ର ବିଗ୍ରହବାକ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଅନ୍ତର’ ଏହି ସମସ୍ତପଦରେ ଅନ୍ୟ ବୁଝାଏ। ତେଣୁ ବିଗ୍ରହରେ ‘ଅନ୍ୟ’ ଶବ୍ଦ ଧର୍ମର ପୂର୍ବରେ ବସେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ — ଅନ୍ୟ ଧର୍ମ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+<article id="exercise-3"><h2>୩. ‘ପୁନର୍ଜନ୍ମ’ର ଠିକ୍ ସନ୍ଧିବିଚ୍ଛେଦ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅର୍ଥକୁ ଭାଙ୍ଗିଲେ ‘ପୁଣି ଜନ୍ମ’। ସନ୍ଧିବିଚ୍ଛେଦରେ ର୍‌ ସହ ମିଶିଥିବା ମୂଳ ରୂପ ‘ପୁନଃ’ ପୃଥକ୍ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଘ — ପୁନଃ + ଜନ୍ମ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+<article id="exercise-4"><h2>୪. ଦିଆଯାଇଥିବା ବିକଳ୍ପରେ ‘ଶୁଷ୍କ’ର ଗଠନ ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଠନ ମାଗିଥିବାରୁ ଧାତୁ ଓ ତା’ପରେ ଲାଗୁଥିବା ଅଂଶ ଅଲଗା ଲେଖ। ‘ଶୁଷ୍କ ତୃଣ’ ପ୍ରସଙ୍ଗ ଏହାର ଅର୍ଥ ସ୍ମରଣ କରାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖ — ଶୁଷ୍ + କ। ଶୁଖିଯାଇଥିବା ଅର୍ଥରେ ଶବ୍ଦଟି ବ୍ୟବହୃତ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+<article id="exercise-5"><h2>୫. ‘ଶରୀର ସମ୍ବନ୍ଧୀୟ’ ଅର୍ଥରେ ଶୁଦ୍ଧ ଶବ୍ଦଟି କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଶ୍ନରେ ଶରୀର ନାମରୁ ସମ୍ପର୍କ ବୁଝାଉଥିବା ବିଶେଷଣ ମାଗିଛି। ବନାନରେ ‘ଶା’ ଓ ‘ରୀ’କୁ ଲକ୍ଷ୍ୟ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ — ଶାରୀରିକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+<article id="exercise-6"><h2>୬. ଏକପରିବାରତ୍ୱର ପ୍ରମାଣ ଥିବା ଉକ୍ତି ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗାଁରେ ବଂଶ ବା ଜାତିର ଭିନ୍ନତା ଥିଲେ ମଧ୍ୟ ଘରେ ଘରେ ଆତ୍ମୀୟ ସମ୍ବୋଧନ ଚାଲୁଥିଲା। “ଏକପରିବାରତ୍ୱ” ପାଇଁ ଏଥିରେ କଥା ଓ ଆଚରଣର ପ୍ରମାଣ ଅଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ — ଜାତି ବର୍ଣ୍ଣ ନିର୍ବିଶେଷରେ ଭାଇ, ଭଉଣୀ, କକା, ଖୁଡ଼ୀ ଆଦି ସମ୍ପର୍କ ରଖିବା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=45" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୫</a></small></article>
+<article id="exercise-7"><h2>୭. ଛଅଟି ଶବ୍ଦର ବିପରୀତାର୍ଥ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ୱୀକାର ଓ ବାଞ୍ଛିତ ଆଗରେ ନିଷେଧସୂଚକ ‘ଅ’ ଯୋଡ଼ିଲେ ଅସ୍ୱୀକାର ଓ ଅବାଞ୍ଛିତ ମିଳେ। ସ୍ମରଣର ବିପରୀତ ବିସ୍ମରଣ ଅର୍ଥାତ୍ ଭୁଲିଯିବା।</li><li>ଅନ୍ୟ ତିନିଟିରେ ପଦର ଅର୍ଥ ମେଳାଅ। ବିଶାଳ ଓ କ୍ଷୁଦ୍ର ଆକାରର, ପ୍ରଶଂସା ଓ ନିନ୍ଦା ମୂଲ୍ୟାୟନର, ମଧୁର ଓ କଟୁ ରୁଚି ବା କଥାର ଭିନ୍ନତା ସୂଚାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଶାଳ — କ୍ଷୁଦ୍ର। ସ୍ମରଣ — ବିସ୍ମରଣ।</p><p>ଅସ୍ୱୀକାର — ସ୍ୱୀକାର। ଅବାଞ୍ଛିତ — ବାଞ୍ଛିତ।</p><p>ପ୍ରଶଂସା — ନିନ୍ଦା। ମଧୁର — କଟୁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-8"><h2>୮. ଅଭିଜାତ ଆଦି ଛଅଟି ଶବ୍ଦକୁ ବାକ୍ୟରେ ଲଗାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନମୁନା ବାକ୍ୟରେ ‘ଅଭିଜାତ’ ଏକ ଶ୍ରେଣୀର ପରିଚୟ ଓ ‘ପ୍ରତ୍ୟୟ’ ଗୋବିନ୍ଦ ଭାଇଙ୍କ ବିଶ୍ୱାସକୁ ବୁଝାଏ। ଶେଷଟିକୁ ବ୍ୟାକରଣର ପ୍ରତ୍ୟୟ ଅର୍ଥରେ ପଢ଼ିଲେ ପ୍ରସଙ୍ଗ ବଦଳିଯିବ।</li><li>ସିକ୍ତ ଅର୍ଥ ଭିଜା, ଶୀର୍ଣ୍ଣ ଅର୍ଥ ଦୁର୍ବଳ ଓ କ୍ଷୀଣ। ପ୍ରବଞ୍ଚନାରେ ଠକିବାର ଭାବ ଏବଂ ଅକର୍ମାରେ କାମ ନ କରିବାର ଭାବ ରଖି ବାକ୍ୟ ଗଢ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନମୁନା ବାକ୍ୟ — ଅଭିଜାତ ଶ୍ରେଣୀର ଆଚରଣକୁ ଲେଖକ ପରଖିଛନ୍ତି। ଗୋବିନ୍ଦ ଭାଇଙ୍କ ପୁରୁଣା ପ୍ରତ୍ୟୟ ଫେରିଲାନି।</p><p>ବର୍ଷାରେ ମାଟି ସିକ୍ତ ହେଲା। କଥା ଦେଇ ନ ଫେରିବା ପ୍ରବଞ୍ଚନା।</p><p>ଗୋବିନ୍ଦ ଭାଇ ଆଜୀବନ ଅକର୍ମା ରହିଲେ। ଶୀର୍ଣ୍ଣ ଶିଶୁଟି ଅତିଥିଙ୍କୁ ଚାହିଁଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧–୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-9"><h2>୯. ତିନିଟି ରୂଢ଼ିକୁ ବାକ୍ୟରେ ବ୍ୟବହାର କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ପାଦରେ ଦଳିଦେବା’ରେ ପ୍ରକୃତରେ ଗୋଡ଼ରେ ମାଡ଼ିବା କଥା ନୁହେଁ। ଅଧିକାର ବା ନୀତିକୁ ଅଗ୍ରାହ୍ୟ କରିବା ଏହାର ରୂଢ଼ ଅର୍ଥ।</li><li>‘ପାର ପାଇବା’ ଫଳଭୋଗରୁ ରକ୍ଷା ପାଇବା। ‘କଣ୍ଟ କରିବା’ ନିର୍ଦ୍ଦିଷ୍ଟ ସମୟ ଧାର୍ଯ୍ୟ କରିବା। ତେଣୁ ଶେଷ ଉଦାହରଣରେ ଫେରିବାର ସମୟ ‘ତିନି ଦିନ’ ଉଲ୍ଲେଖ ଅଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନମୁନା ବାକ୍ୟ — ସ୍ୱାର୍ଥ ପାଇଁ କାହାର ଅଧିକାର ପାଦରେ ଦଳିଦେବା ଅନ୍ୟାୟ। କୃତକର୍ମର ଫଳରୁ କେହି ପାର ପାଆନ୍ତି ନାହିଁ।</p><p>ତିନି ଦିନରେ ଫେରିବାକୁ ସେ କଣ୍ଟ କରିଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-10"><h2>୧୦. ‘ଜୀବୀ’ ଶେଷରେ ଥିବା ପାଞ୍ଚଟି ଶବ୍ଦ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଦର ପ୍ରଥମ ଅଂଶରେ ଜୀବିକା ବା କାମର ପରିଚୟ ଅଛି। କୃଷିଜୀବୀରେ ‘କୃଷି’, ଆଇନଜୀବୀରେ ‘ଆଇନ’, ଉଭୟର ଶେଷ ଅଂଶ ‘ଜୀବୀ’।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କୃଷିଜୀବୀ, ବୁଦ୍ଧିଜୀବୀ, ଆଇନଜୀବୀ, ବୃତ୍ତିଜୀବୀ, କର୍ମଜୀବୀ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-11"><h2>୧୧. ଦୁଇ ସ୍ତମ୍ଭର ଶବ୍ଦ ମିଳାଇ ସାତଟି ବାକ୍ୟ ଗଢ଼।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ଶବ୍ଦଟି କାହାର ଗୁଣ ବୁଝାଉଛି ଦେଖ। ଶସ୍ୟରେ ସବୁଜ ହୋଇଥାଏ ଧରଣୀ, ସ୍ତୂପ ପରି ଜମେ ମେଘ, ସୁନେଲି ଶିଷ ଥାଏ ଧାନ୍ୟର।</li><li>ଯୁକ୍ତିବାଦୀ ଜୀବରେ ବିଚାରଶକ୍ତି, ଅଭ୍ରଂକଷ ପ୍ରାସାଦରେ ଉଚ୍ଚତା, ଦୋଳାୟମାନ ପଦପଲ୍ଲବରେ ପାଦର ଦୋଳନ ଦେଖାଯାଏ। ଅହେତୁକ ବ୍ୟଥାରେ ମନର ଯନ୍ତ୍ରଣାର କାରଣ ଅସ୍ପଷ୍ଟ। ଏହି ଅର୍ଥ ରଖି ପ୍ରତ୍ୟେକ ଯୋଡ଼ାକୁ ସମ୍ପୂର୍ଣ୍ଣ ବାକ୍ୟରେ ବସାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶସ୍ୟଶ୍ୟାମଳା ଧରଣୀ ଚାଷୀଙ୍କ ଶ୍ରମର ଫଳ। ସ୍ତୂପୀକୃତ ମେଘ ପାହାଡ଼ ଉପରେ ଘୋଟିଲା।</p><p>ହେମନ୍ତରେ ସ୍ୱର୍ଣ୍ଣଶୀର୍ଷ ଧାନ୍ୟ ପବନରେ ଦୋହଲେ। ମଣିଷ ଯୁକ୍ତିବାଦୀ ଜୀବ।</p><p>ଦ୍ୱାରକାର ଅଭ୍ରଂକଷ ପ୍ରାସାଦ ଜଳରେ ବୁଡ଼ିଗଲା। ଦୋଳାୟମାନ ପଦପଲ୍ଲବ ଦେଖି ବ୍ୟାଧର ଭ୍ରମ ହେଲା।</p><p>ବଂଶୀସ୍ୱନ ଶୁଣି ଗୋପକନ୍ୟାର ମନରେ ଅହେତୁକ ବ୍ୟଥା ଜାଗେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-12"><h2>୧୨. ପଲ୍ଲୀଟି ଲେଖକଙ୍କର ମା’ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଲ୍ଲୀରେ ରୂପ, ରସ, ଗନ୍ଧ ଓ ସ୍ପର୍ଶ ସହ ପ୍ରଥମ ପରିଚୟ ହେଲା। ତାହାର ଫଳ, ଶାକ ଓ ତଣ୍ଡୁଳ ତାଙ୍କୁ ପୁଷ୍ଟ କଲା। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାତୃଗର୍ଭରୁ ଭୂମିଷ୍ଠ ହୋଇ ପ୍ରଥମେ ସେହି ମାଟି ଛୁଇଁଥିଲେ। ସେଠାରେ ରୂପ, ରସ, ଗନ୍ଧ ଓ ସ୍ପର୍ଶର ପରିଚୟ ପାଇଥିଲେ।</p><p>ଶୈଶବରୁ ପୋଷଣ ଓ ଆଶ୍ରୟ ଦେଇଥିବା ପଲ୍ଲୀ ତାଙ୍କ ପାଇଁ ମା’।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-13"><h2>୧୩. ଜନ୍ମଭୂମିକୁ ଧାତ୍ରୀ ଓ ଶିକ୍ଷୟିତ୍ରୀ କହିବାର ଅର୍ଥ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଲ୍ଲୀରେ ରୂପ, ରସ, ଗନ୍ଧ ଓ ସ୍ପର୍ଶ ସହ ପ୍ରଥମ ପରିଚୟ ହେଲା। ତାହାର ଫଳ, ଶାକ ଓ ତଣ୍ଡୁଳ ତାଙ୍କୁ ପୁଷ୍ଟ କଲା। ମାତା, ଧାତ୍ରୀ ଓ ଶିକ୍ଷୟିତ୍ରୀ ଏହି ତିନି ସମ୍ବୋଧନ ଭିନ୍ନ ଭିନ୍ନ ଅନୁଭବକୁ ଧରିଛି। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିପଦ ସମୟରେ ଫଳମୂଳ ଆଦି ଦେଇ ପଲ୍ଲୀ ତାଙ୍କୁ ପାଳନ କଲା, ତେଣୁ ଧାତ୍ରୀ। ତାହାର ପ୍ରକୃତି ଓ ମଣିଷଙ୍କଠାରୁ ପ୍ରଥମ ଅନୁଭବ ଓ ଜୀବନଶିକ୍ଷା ପାଇଲେ, ତେଣୁ ଶିକ୍ଷୟିତ୍ରୀ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-14"><h2>୧୪. ‘ଏ ସମସ୍ତ’ କେଉଁ ଭୂଖଣ୍ଡକୁ ବୁଝାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୃଥିବୀ, ଏସିଆ, ଭାରତ, ଓଡ଼ିଶା ଓ ନିଜ ପଲ୍ଲୀ ପରସ୍ପର ସହ ଜଡ଼ିତ। ବ୍ୟାପକ ଅର୍ଥରେ ସବୁ ଜନ୍ମଭୂମି। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପଲ୍ଲୀଗ୍ରାମ, ଓଡ଼ିଶା, ଭାରତବର୍ଷ, ଏସିଆ ମହାଦେଶ ଓ ସମଗ୍ର ପୃଥିବୀକୁ। ଗୋଟିଏ ଅନ୍ୟଟିର ଅନ୍ତର୍ଗତ, ତେଣୁ ବ୍ୟାପକ ଅର୍ଥରେ ସବୁ ତାଙ୍କ ଜନ୍ମଭୂମି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-15"><h2>୧୫. ବୟସ ବଢ଼ିବା ସହ ଜନ୍ମଭୂମି ସହ ଲେଖକଙ୍କ ସମ୍ପର୍କରେ କି ପରିବର୍ତ୍ତନ ହେଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବୟସ ବଢ଼ିଲେ ଏହା ସହ ସମ୍ପର୍କ ଆହୁରି ଘନିଷ୍ଠ ହେବା କଥା। ନିଜ ଜୀବନରେ ଓଲଟା ଘଟୁଥିବା ଦେଖି ଲେଖକ ତାହାର କାରଣ ଖୋଜନ୍ତି। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆୟୁ ବଢ଼ିଲେ ସମ୍ପର୍କ ଅଧିକ ଘନିଷ୍ଠ ହେବା କଥା। ଅଥଚ ପଲ୍ଲୀରୁ ଦୂରେଇ ରହିବାରୁ ତାହା ଦିନକୁ ଦିନ କ୍ଷୀଣ ହୋଇ ଲୀନ ହେବାକୁ ବସିଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬</a></small></article>
+<article id="exercise-16"><h2>୧୬. ସମୟସ୍ରୋତରେ ନିଜ ଅବସ୍ଥାକୁ କାହା ସହ ତୁଳନା କରିଛନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜଳସ୍ରୋତରେ ତୃଣ ନିଜ ଗତି ନିଜେ ବାଛିପାରେନାହିଁ। ଲେଖକଙ୍କ ଜୀବନରେ ସମୟ ହେଉଛି ସ୍ରୋତ ଓ ନିଜେ ଲେଖକ ହେଉଛନ୍ତି ତୃଣ।</li><li>ପଲ୍ଲୀର ରୂପ ମନେ ପଡ଼ୁଥିଲେ ମଧ୍ୟ ସେ ସେହି ଜୀବନକୁ ଫେରିବାକୁ ସାହସ କରିପାରୁନାହାନ୍ତି। ‘ନିଃସହାୟ’ ଶବ୍ଦ ଏହି ଅନ୍ତର୍ଦ୍ୱନ୍ଦ୍ୱ ପ୍ରକାଶ କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନିଃସହାୟ ଶୁଷ୍କ ତୃଣ ସହିତ। ଶିକ୍ଷା ଓ ସମାଜର ପ୍ରଚଳିତ ଧାରା ତାଙ୍କୁ ଏପରି ଭସାଇ ନେଇଛି ଯେ ଜନ୍ମଭୂମିକୁ ସ୍ମରଣ କଲେ ବି ସେଠାକୁ ଫେରିବାର ନୈତିକ ସାହସ ପାଉନାହାନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=40">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୦–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-17"><h2>୧୭. ଜନ୍ମଭୂମିର କି ରୂପ ତାଙ୍କ ଆଖିରେ ଭାସେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ତଟିନୀ-ବେଷ୍ଟିତ’ ଶବ୍ଦରୁ ନଦୀ ଘେରିଥିବା ପଲ୍ଲୀର ଅବସ୍ଥାନ ବୁଝାଯାଏ। ଶାଳତରୁ ତାହାର ପ୍ରାକୃତିକ ଓ ଭଞ୍ଜଙ୍କ କୀର୍ତ୍ତି ତାହାର ଐତିହାସିକ ପରିଚୟ।</li><li>ଜାତିସ୍ମର ଯେପରି ପୂର୍ବଜୀବନର ଛବି ଦେଖେ, ଲେଖକ ସେପରି ଦୂରେ ରହି ନିଜ ପଲ୍ଲୀକୁ ମନ ଭିତରେ ଦେଖୁଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରାଶି ରାଶି ଶାଳତରୁ ମଝିରେ ନଦୀବେଷ୍ଟିତ ପଲ୍ଲୀ। ଭଞ୍ଜମାନଙ୍କ କୀର୍ତ୍ତିରେ ଶୋଭିତ ତାହାର ରୂପ ଜାତିସ୍ମରର ସ୍ମୃତି ପରି ଫେରିଆସେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-18"><h2>୧୮. ଧର୍ମାନ୍ତରର ଦୃଷ୍ଟାନ୍ତରେ କେଉଁ ପରିବର୍ତ୍ତନ ଉଲ୍ଲେଖ ଅଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଦୃଷ୍ଟାନ୍ତରେ ନାମ ଓ ପୋଷାକ ବାହ୍ୟ ପରିଚୟର ଚିହ୍ନ, ଭାଷା ଓ ବ୍ୟବହାର ଦୈନନ୍ଦିନ ଜୀବନର ଚିହ୍ନ। ଲେଖକ ପରିବର୍ତ୍ତନର ଦୁଇଟିଯାକ ରୂପ ଦେଖାନ୍ତି।</li><li>ତାହା ସହ ସେ ନିଜ ଶିକ୍ଷିତ ଜୀବନକୁ ତୁଳନା କରନ୍ତି। ପୁରୁଣା ପରିଚୟ ଓ ଜନ୍ମଭୂମି ସହ ସମ୍ପର୍କ କିପରି ଶିଥିଳ ହେଲା ତାହା ଏହି ତୁଳନାର ବିଷୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲେଖକଙ୍କ ଦୃଷ୍ଟାନ୍ତରେ କେତେକ ଦୀକ୍ଷିତ ବ୍ୟକ୍ତି ନାମ, ପଦବୀ, ଭାଷା, ଆହାର, ବ୍ୟବହାର ଓ ବେଶଭୂଷା ବଦଳାଇ ଜାତୀୟତା ଓ ଜନ୍ମଭୂମିକୁ ଭୁଲନ୍ତି। ଦୃଷ୍ଟାନ୍ତଟି ପ୍ରଚଳିତ ଶିକ୍ଷାର ପ୍ରଭାବ ବୁଝାଇବାକୁ ଆସିଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-19"><h2>୧୯. ପଲ୍ଲୀର ଏକପରିବାରତ୍ୱର କି ପ୍ରମାଣ ମିଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭାଇ, କକା, ଖୁଡ଼ୀ, ମାଉସୀ ଭଳି ସମ୍ବୋଧନ ଜାତିର ସୀମା ଅତିକ୍ରମ କରି ପଲ୍ଲୀରେ ଆତ୍ମୀୟତା ତିଆରି କରେ। କାମ, ପର୍ବ ଓ ଦୁଃଖସୁଖରେ ଭାଗ ନେବା ତାକୁ ସ୍ଥାୟୀ କରେ। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମତଭେଦ ଥିଲେ ବି ଜାତିଧର୍ମ ନିର୍ବିଶେଷରେ ଗ୍ରାମବାସୀ ପରସ୍ପରକୁ ଭାଇ, ଭଉଣୀ, କକା, ଖୁଡ଼ୀ, ମାଉସୀ ଆଦି ସମ୍ବୋଧନ କରନ୍ତି। ଚାଷର ଶ୍ରମ, କଷ୍ଟ ଓ ପର୍ବର ଆନନ୍ଦ ମଧ୍ୟ ଏକାଠି ବାଣ୍ଟନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-20"><h2>୨୦. ସାର ମାଉସୀ ପୂର୍ବେ କ’ଣ ପଚାରୁଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାଉସୀଙ୍କ ସମ୍ବୋଧନରେ ଘରର ବଡ଼ ଲୋକ ଓ ଛୋଟ ପିଲାର ସ୍ୱାଭାବିକ ଘନିଷ୍ଠତା ଥିଲା। ପରର ମର୍ଯ୍ୟାଦାସୂଚକ ସମ୍ବୋଧନ ସହ ଏହାକୁ ମିଳାଇ ପଢ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପିଣ୍ଡାରୁ ଲେଖକଙ୍କୁ ଦେଖି ଆପଣାର ପୁଅ ପରି ‘କେବେ ଆସିଲୁ ବାପା?’ ବୋଲି ପଚାରୁଥିଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-21"><h2>୨୧. ପରେ ମାଉସୀଙ୍କ ପ୍ରଶ୍ନ କିପରି ବଦଳିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ପ୍ରଶ୍ନର ବିଷୟକୁ ଦେଖ। ମାଉସୀ ଆଗମନ ବିଷୟରେ ଆଗରୁ ମଧ୍ୟ ପଚାରୁଥିଲେ, ଏବେ ମଧ୍ୟ ପଚାରନ୍ତି।</li><li>ଯାହା ବଦଳିଛି ତାହା ସମ୍ବୋଧନ। ‘ବାପା’ରେ ଗାଁପିଲା ପ୍ରତି ସ୍ନେହ, ‘ବାବୁ’ରେ ବାହାରୁ ଆସିଥିବା ଜଣେ ସମ୍ମାନିତ ଅତିଥି ପ୍ରତି ଦୂରତା ଅଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏବେ ସେ ‘କେବେ ଆସିଲ ବାବୁ?’ କହନ୍ତି। ‘ବାପା’ରୁ ‘ବାବୁ’ ହେବାରେ ଔପଚାରିକ ସମ୍ମାନ ଓ ମାନସିକ ଦୂରତା ଜଣାପଡ଼େ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-22"><h2>୨୨. ଗୋବିନ୍ଦ ଭାଇ କି ପ୍ରକାର ଲୋକ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗାଁରେ ରହିଲେ ବୋଲି ଗୋବିନ୍ଦ ଭାଇ ସମସ୍ତଙ୍କ ଜୀବନଧାରାକୁ ଗ୍ରହଣ କରିନଥିଲେ। କୁଟୀରକୁ ‘ଦୁର୍ଗ’ କହି ଲେଖକ ତାଙ୍କ ସ୍ୱତନ୍ତ୍ର ମନୋଭାବକୁ ଚିତ୍ରିତ କରିଛନ୍ତି।</li><li>ଅନ୍ୟମାନଙ୍କ ସହ ସେ କିପରି ଥିଲେ ଓ ବାଳକ ଲେଖକଙ୍କୁ କିପରି ସ୍ନେହ କରୁଥିଲେ, ଏହି ଦୁଇ ବିଷୟ ଭିନ୍ନ। ଦ୍ୱିତୀୟଟିର ପରିଚୟ ତାଙ୍କ ଚଉତିଶା ବ୍ୟାଖ୍ୟାରୁ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେ ଆଜୀବନ ଅକର୍ମା ଓ ଅବିବାହିତ। ଗାଁ ମଝିର କ୍ଷୁଦ୍ର କୁଟୀରକୁ ନିଜ ଦୁର୍ଗ କରି ସମଗ୍ର ବିଶ୍ୱ ବିରୋଧରେ ବିଦ୍ରୋହ ଘୋଷଣା କଲା ପରି ରହନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-23"><h2>୨୩. ଗୋବିନ୍ଦ ଭାଇ ଲେଖକଙ୍କୁ କିପରି ସତ୍କାର କରୁଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସତ୍କାରର ଦୁଇଟି କାମ ଚିହ୍ନ। ପ୍ରଥମଟି କୁଟୀରରେ ମାନ ଦେଇ ବସାଇବା, ଦ୍ୱିତୀୟଟି ନିଜର ପ୍ରିୟ ରଚନା ପଢ଼ି ତାହାର ଅର୍ଥ ବୁଝାଇବା।</li><li>ତେଣୁ ଆତିଥ୍ୟ ଏଠି ଏକାଠି ବସି ସାହିତ୍ୟର ରସ ନେବାରେ ପ୍ରକାଶ ପାଇଛି। ଅତୀତର ଏହି ସହଜ ସମ୍ପର୍କକୁ ମନେ ପକାଇ ଲେଖକ ବର୍ତ୍ତମାନର ଦୂରତା ଅନୁଭବ କରୁଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବହୁ ମାନ ସହ କୁଟୀରରେ ବସାଇ ‘ମନବୋଧ ଚଉତିଶା’ର ବ୍ୟାଖ୍ୟା ଶୁଣାଉଥିଲେ। ଦୀର୍ଘ ବିଚ୍ଛେଦ ପରେ ଲେଖକ ସେ ପୁରୁଣା ପ୍ରତ୍ୟୟ ଫେରି ପାଉନାହାନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-24"><h2>୨୪. ଗ୍ରାମର ‘ନବାଗତ ଅତିଥି’ କେଉଁମାନେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅତିଥି କହିବାରେ ଲେଖକଙ୍କ ଅନୁଭବର ଦୂରତା ଅଛି। ପିଲାମାନେ ସେହି ଗାଁର ହୋଇଥିଲେ ବି ତାଙ୍କ ଶିଶୁବେଳର ପରିଚିତ ସଙ୍ଗୀ ନୁହନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲେଖକ ଦୂରେଇ ରହିଥିବା ସମୟରେ ଗ୍ରାମରେ ଜନ୍ମ ନେଇଥିବା ନୂଆ ପିଢ଼ିର ଶିଶୁମାନେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-25"><h2>୨୫. ଶିଶୁ ସମାବେଶ ଦେଖି ଲେଖକ କ’ଣ ଲକ୍ଷ୍ୟ କଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୀର୍ଣ୍ଣ ଓ ମଳିନ ଶବ୍ଦ ଦୁଇଟି ପିଲାଙ୍କ ଶରୀର ଓ ବାହ୍ୟ ଦଶାକୁ ଦେଖାଏ। ସେମାନଙ୍କୁ ଦେଖି ଲେଖକ ଗାଁର ଶିଶୁମାନଙ୍କ ଅଯତ୍ନ ଅନୁଭବ କରନ୍ତି।</li><li>ପିଲାମାନଙ୍କ ଆଖିରେ ଲେଖକ ମଧ୍ୟ ଅପରିଚିତ। ଗାଁର ପୁଅ ଫେରିଥିଲେ ମଧ୍ୟ ନୂଆ ପିଢ଼ି ସହ ତାଙ୍କର ସହଜ ପରିଚୟ ଗଢ଼ିନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯୁଆଡ଼େ ଚାହିଁଲେ ଶୀର୍ଣ୍ଣ, ମଳିନ, ଅବହେଳିତ ଶିଶୁ। ସେମାନଙ୍କ ଦଶାରେ ଗ୍ରାମର ଅଭାବ ଓ ଅଯତ୍ନର ପରିଚୟ ମିଳେ।</p><p>କେହି ତାଙ୍କୁ ଚିହ୍ନନ୍ତି ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-26"><h2>୨୬. ଶିଶୁମାନେ ଲେଖକଙ୍କୁ ଦେଖିଲେ କ’ଣ କରନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜେବ୍ରା ଓ ଜିରାଫର ତୁଳନାରେ ଅତି ପରିଚିତ ଗାଁ ଭିତରେ ଲେଖକଙ୍କ ଅପରିଚିତ ହୋଇଯିବା ବୁଝାଯାଏ। ଦୂରେଇ ରହିବାର ଏକ ପରିଣାମ ଏହି ବିସ୍ମୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଫ୍ରିକାରୁ ଆସିଥିବା ଜେବ୍ରା କି ଜିରାଫକୁ ଦେଖିବା ପରି ଅଚିହ୍ନା ବିସ୍ମୟରେ ସେମାନେ ତାଙ୍କୁ ଚାହିଁରହନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-27"><h2>୨୭. ଗ୍ରାମର ଯୁବକମାନେ କିପରି ସମୟ ବିତାନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାକିରି ନମିଳିବାରୁ ଏହି ଯୁବକମାନେ ଗାଁରେ ରହିଛନ୍ତି। ସେମାନଙ୍କ ସହ ଆଲୋଚନା କଲେ ଲେଖକ ଦେଖନ୍ତି ଯେ ଦଳ ଓ ମତବାଦ ପ୍ରସଙ୍ଗକୁ ନିୟନ୍ତ୍ରଣ କରୁଛି।</li><li>ପ୍ରକୃତି ବା ସାହିତ୍ୟ ନେଇ କଥା ଉଠିଲେ ମଧ୍ୟ ତାହାକୁ ଯୁବକମାନେ ସେହି ରାଜନୈତିକ ଦୃଷ୍ଟିରେ ଦେଖନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚାକିରି ନ ପାଇ ଗାଁରେ ରହିଥିବା ଶିକ୍ଷିତ ଓ ଅର୍ଦ୍ଧଶିକ୍ଷିତ ଯୁବକମାନେ ବିଭିନ୍ନ ରାଜନୈତିକ ଦଳ ଓ ମତବାଦରେ ନିଜକୁ ଜଡ଼ାଇଛନ୍ତି। ତାହା ହିଁ ସେମାନଙ୍କ ଆଲୋଚନାର କେନ୍ଦ୍ର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=41">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୧–୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-28"><h2>୨୮. ଯୁବକମାନଙ୍କ ସହ ପ୍ରକୃତି ଉପଭୋଗ କରିବା କଠିନ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଲେଖକ ଫୁଲର ରୂପ ଓ ରଙ୍ଗ ଉପଭୋଗ କରିବାକୁ ଚାହାନ୍ତି। ଯୁବକମାନେ ସେହି ରଙ୍ଗରେ ଯୁଦ୍ଧ ଓ ଆଗାମୀ ପରିବର୍ତ୍ତନର ସଙ୍କେତ ଦେଖନ୍ତି।</li><li>ସ୍ଥଳପଦ୍ମରେ ‘ଆହବର ରକ୍ତ’ ଦେଖିବା ତୃତୀୟ ଦୃଷ୍ଟାନ୍ତ। ବାଧା ଫୁଲର ଅଭାବରେ ନୁହେଁ, ଏକା ଦୃଶ୍ୟର ଭିନ୍ନ ଅନୁଭବରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେମାନଙ୍କ ଦୃଷ୍ଟିକୁ ରାଜନୈତିକ ମତବାଦ ନିୟନ୍ତ୍ରଣ କରେ। ପଳାଶ ଫୁଲରେ ସେମାନେ ବିଦ୍ରୋହର ନିଆଁ ଓ କୃଷ୍ଣଚୂଡ଼ାରେ ଭବିଷ୍ୟତର ଲାଲ ପତାକା ଦେଖନ୍ତି।</p><p>ଲେଖକଙ୍କ ସହଜ ସୌନ୍ଦର୍ଯ୍ୟବୋଧ ସହ ଏହା ମେଳ ଖାଏନି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-29"><h2>୨୯. ଶିକ୍ଷିତମାନେ ଗାଁର କର୍ମଯୋଜନାରେ ସାଥି ହୋଇପାରନ୍ତି ନାହିଁ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଲ୍ଲୀ ପାଇଁ ଅର୍ଥ ସାହାଯ୍ୟ ଦେବା ଓ ପଲ୍ଲୀବାସୀଙ୍କ ସହ ଖରାବର୍ଷାରେ ଖଟିବା ଭିନ୍ନ। ଦ୍ୱିତୀୟଟି ପାଇଁ ନିଜର ସୁଖ ଓ ପ୍ରଚଳିତ ମର୍ଯ୍ୟାଦାବୋଧ ଛାଡ଼ିବାକୁ ହୁଏ।</li><li>ପ୍ରଶ୍ନରେ ‘ସାଥି’ ଅର୍ଥ ଶ୍ରମଜୀବୀଙ୍କ ଦୈନିକ ଅସୁବିଧାରେ ସମାନ ଭାଗୀ ହେବା। ସେଠାରେ ଲେଖକ ନିଜ ସମାଜର ଅସମର୍ଥତା ସ୍ୱୀକାର କରିଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମର କାମରେ ଗ୍ରୀଷ୍ମର ଝାଞ୍ଜି, ବର୍ଷା ଓ ଶୀତର କଷ୍ଟ ସହିବାକୁ ହୁଏ। ଶାରୀରିକ ଶକ୍ତି ଥିଲେ ମଧ୍ୟ ଆଭିଜାତ୍ୟ ଛାଡ଼ି ଶ୍ରମରେ ଭାଗ ନେବାକୁ ସେମାନଙ୍କ ନୈତିକ ଶକ୍ତିର ଅଭାବ ରହେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-30"><h2>୩୦. କେଉଁ ପର୍ବରେ ଦୋଳିଖେଳ ପ୍ରଧାନ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଲ୍ଲୀର ପର୍ବପର୍ବାଣି ସହ ପିଲାବେଳର ଖେଳ ମନେପଡ଼େ। ପ୍ରଶ୍ନରେ ‘ଦୋଳିଖେଳ’ ସଙ୍କେତ ଦିଆଯାଇଥିବାରୁ ଏଠାରେ ରଜର ନାମ ହେବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରଜପର୍ବରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-31"><h2>୩୧. ରଜ ପରର ‘ନିଷ୍ଠୁର ବାସ୍ତବତା’ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକେ ବର୍ଷା ଦୃଶ୍ୟର ଦୁଇ ଦିଗ ଅଛି। ଦୋଳି ଓ ରଜର ଆନନ୍ଦ ଆଖିରେ ପଡ଼େ, ହେଲେ ତା’ ପରେ ମାଟିରେ ଖଟୁଥିବା ଚାଷୀଙ୍କ କଷ୍ଟ ମଧ୍ୟ ଦେଖିବା ଦରକାର।</li><li>ହେମନ୍ତର ‘ସ୍ୱର୍ଣ୍ଣଶୀର୍ଷ ଧାନ୍ୟ’ ଏହି ପୂର୍ବ ଶ୍ରମର ଫଳ। ଏହା ମନେ ରଖିଲେ ଉତ୍ସବରୁ ଚାଷବାସକୁ ବର୍ଣ୍ଣନା କାହିଁକି ଫେରିଛି ବୁଝାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୋଳିଖେଳ ଓ ଉତ୍ସବ ସରିଲେ ବର୍ଷାରେ ଭିଜି ଚାଷ କରିବାର କଠିନ ସମୟ ଆସେ। ଶ୍ରମଜୀବୀଙ୍କ ସମବେତ ଯତ୍ନରୁ ହିଁ ହେମନ୍ତରେ ଶସ୍ୟ ମିଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-32"><h2>୩୨. ଶିକ୍ଷିତ ଶ୍ରେଣୀ କାୟକ୍ଳେଶ ଓ ଆଭିଜାତ୍ୟ ମଧ୍ୟରୁ କାହାକୁ ବାଛେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କାୟକ୍ଳେଶ ଅର୍ଥ ଶରୀରରେ ସହୁଥିବା କଷ୍ଟ। ପଲ୍ଲୀବାସୀଙ୍କ ସହ ଶ୍ରମ କରିବାରେ ଏହି କଷ୍ଟ ଅଛି।</li><li>ଶିକ୍ଷିତ ଲୋକଙ୍କ ସମ୍ମୁଖରେ ଦ୍ୱିତୀୟ ବାଧା ହେଉଛି ଶ୍ରମ କଲେ ଆଭିଜାତ୍ୟ କମିଯିବ ବୋଲି ସମାଜର ଧାରଣା। ପ୍ରସଙ୍ଗରେ ପସନ୍ଦଟିକୁ ଲେଖକ ପ୍ରଶଂସା କରିନାହାନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଭିଜାତ୍ୟକୁ। ପ୍ରଚଳିତ ସମାଜ ଶାରୀରିକ କଷ୍ଟରୁ ଦୂରେଇ ରହିବାକୁ ମର୍ଯ୍ୟାଦାର ଚିହ୍ନ ମନେ କରେ।</p><p>ସେହି ଚିହ୍ନ ଛାଡ଼ିବା ଅପେକ୍ଷା ଲୋକେ ଶ୍ରମ ଛାଡ଼ନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-33"><h2>୩୩. କାହାକୁ ବ୍ୟଙ୍ଗରେ ଜୀବନଯୁଦ୍ଧର ଦିଗ୍‌ବିଜୟୀ କୁହାଯାଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦିଗ୍‌ବିଜୟୀ ଶବ୍ଦ ସାଧାରଣତଃ ମହାନ ବିଜେତାକୁ ବୁଝାଏ। ଏଠି ନୀତି ଭାଙ୍ଗି ଶୀଘ୍ର ଧନ ଅର୍ଜନ କରୁଥିବା ଲୋକ ସେହି ଉପାଧି ପାଇଛି।</li><li>ଶବ୍ଦର ପ୍ରଶଂସାସୂଚକ ବାହ୍ୟ ଅର୍ଥ ଓ ଲୋକଟିର ଆଚରଣ ମଧ୍ୟରେ ଅମେଳ ହିଁ ବ୍ୟଙ୍ଗ। ସମାଜ ସଫଳତା ମାପିବାରେ ନୀତି ଛାଡ଼ି କେବଳ ସମ୍ପଦକୁ ଦେଖୁଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯିଏ ନୀତିକୁ ଦଳିଦେଇ ଅଳ୍ପ ଆୟ ଓ ବିପୁଳ ସମ୍ପଦର ବ୍ୟବଧାନ ଶୀଘ୍ର କମାଇପାରେ, ସମାଜ ତାକୁ ସଫଳ ବୀର ଭାବେ ସମ୍ମାନ କରେ। ଏହି ମୂଲ୍ୟବୋଧର ତ୍ରୁଟିକୁ ଲେଖକ ଦର୍ଶାଇଛନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-34"><h2>୩୪. ଗ୍ରାମର ବିଦ୍ୟାର୍ଥୀଙ୍କୁ ପ୍ରଥମେ ଲୋକେ କିପରି ଦେଖନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପିତାମାତାଙ୍କ ଆଶା ଓ ବୃଦ୍ଧମାନଙ୍କ ପ୍ରଶଂସାରେ ପଲ୍ଲୀ ନିଜ ପିଲାର ସଫଳତାକୁ ସମସ୍ତଙ୍କ ସଫଳତା ବୋଲି ଦେଖେ।</li><li>ପ୍ରବନ୍ଧରେ ଏହି ଆରମ୍ଭଟି ପରବର୍ତ୍ତୀ ବିଚ୍ଛେଦକୁ ବୁଝାଏ। ସହରରେ ପ୍ରତିଷ୍ଠିତ ସେହି ପିଲା ସହ ଗାଁର ସମ୍ପର୍କ ପୂର୍ବଭଳି ରହେନି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶିକ୍ଷାରେ ଉନ୍ନତି କରୁଥିବା ପିଲାମାନେ ପିତାମାତାଙ୍କ ଆଶାଭରସା ଓ ବୃଦ୍ଧମାନଙ୍କ ପ୍ରଶଂସାର ଦୃଷ୍ଟାନ୍ତ ହୁଅନ୍ତି। ଗାଁ ସେମାନଙ୍କୁ ନେଇ ଭବିଷ୍ୟତର ସ୍ୱପ୍ନ ଦେଖେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-35"><h2>୩୫. ଗ୍ରାମତ୍ୟାଗ ସହ କେଉଁ ପୌରାଣିକ ଘଟଣାର ତୁଳନା ହୋଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋପପୁରର ସ୍ନେହରେ ବଢ଼ିଥିବା କୃଷ୍ଣ ମଥୁରା ଓ ଦ୍ୱାରକାରୁ ଆଉ ଫେରିଲେନି। ନଗରରେ ପ୍ରତିଷ୍ଠା ପାଇ ଗାଁ ଛାଡ଼ିଥିବା ପିଲାଙ୍କ ସହ ଏହାର ତୁଳନା ହୋଇଛି। (ପାଠର ପୃ. ୩–୪)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତିନି ଦିନରେ ଫେରିବାକୁ କଣ୍ଟ କରି ଶ୍ରୀକୃଷ୍ଣ ଗୋପପୁର ଛାଡ଼ି ମଥୁରା ଯାଇ ଆଉ ଫେରିଲେନି। ଶିକ୍ଷିତ ସନ୍ତାନଙ୍କ ସ୍ଥାୟୀ ଗ୍ରାମତ୍ୟାଗ ସହ ଏହାର ତୁଳନା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-36"><h2>୩୬. କୃଷ୍ଣଙ୍କୁ ମହାଭାରତର କର୍ଣ୍ଣଧାର କାହିଁକି କୁହାଯାଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘କର୍ଣ୍ଣଧାର’ ଆକ୍ଷରିକ ଭାବେ ନାଆଁକୁ ଦିଗ ଦିଏ। ଘଟଣାର ଦିଗ ନିର୍ଦ୍ଦେଶ କରିଥିବା ମଣିଷ ପାଇଁ ଏଠାରେ ଶବ୍ଦଟି ପ୍ରୟୋଗ ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମହାଭାରତର ମହାସମର ତାଙ୍କ ନିର୍ଦ୍ଦେଶରେ ପରିଚାଳିତ ହୋଇଥିଲା। ନୌକାର କର୍ଣ୍ଣଧାର ପରି ସେ ଘଟଣାକୁ ଦିଗ ଦେଇଥିଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-37"><h2>୩୭. କୃଷ୍ଣଙ୍କ ବଂଶର ଶେଷ ଦଶା କ’ଣ ହେଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଭାସତୀର୍ଥରେ ବଂଶଧରଙ୍କ ପରସ୍ପର କଳହ ବଂଶବିନାଶର କାରଣ। ପ୍ରାସାଦ ସମୁଦ୍ରରେ ଲୀନ ହେବା ଦ୍ୱାରକାର ଐଶ୍ୱର୍ଯ୍ୟର ଦଶା।</li><li>ଏହି ଦୁଇ ଘଟଣା ଦ୍ୱାରା ଗୋଟିଏ ବଂଶର ସମ୍ପର୍କ ଓ ତାହାର ରାଜକୀୟ ସମ୍ପତ୍ତି ଉଭୟର ଅନ୍ତ ଦେଖାଯାଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ୱାରକାର ପ୍ରାସାଦ ସମୁଦ୍ରରେ ଲୀନ ହେଲା। ପ୍ରଭାସତୀର୍ଥର ଏରକା ବନରେ ମଦ୍ୟପ ବଂଶଗୋଷ୍ଠୀ ପରସ୍ପର କଳହରେ ନଷ୍ଟ ହେଲେ।</p><p>କୃଷ୍ଣ ଶେଷକୁ ସବୁ ହରାଇଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=43">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-38"><h2>୩୮. ଭଲ ବିଶ୍ୱବାସୀ କିଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଲେଖକ ଦାୟିତ୍ୱକୁ ଗାଁରୁ ଓଡ଼ିଶା, ଓଡ଼ିଶାରୁ ଭାରତ ଓ ସେଠାରୁ ବିଶ୍ୱକୁ ବିସ୍ତାର କରନ୍ତି। ସମ୍ମୁଖର ଲୋକଙ୍କ ସୁଖଦୁଃଖରେ ସାଥୀ ନ ହୋଇ ବିଶ୍ୱସେବାର ଦାବି କଲେ କଥା ଓ କର୍ମର ମେଳ ରହେନାହିଁ। (ପାଠର ପୃ. ୪)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯିଏ ପ୍ରଥମେ ନିଜ ଗାଁ ପ୍ରତି କର୍ତ୍ତବ୍ୟ କରି ସେହି ମହାନୁଭବତାକୁ ଓଡ଼ିଶା, ଭାରତ ଓ ସମଗ୍ର ବିଶ୍ୱ ପର୍ଯ୍ୟନ୍ତ ବିସ୍ତାର କରେ। ନିକଟର ମଣିଷଙ୍କ ହିତରୁ ବିଶ୍ୱହିତର ଆରମ୍ଭ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=47" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୭</a></small></article>
+<article id="exercise-39"><h2>୩୯. ଶୁଷ୍କ ତୃଣର ଉପମାର ସପ୍ରସଙ୍ଗ ସରଳାର୍ଥ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>‘ଜନ୍ମଭୂମି’ରେ କୃଷ୍ଣଚନ୍ଦ୍ର ପାଣିଗ୍ରାହୀ ଶିକ୍ଷିତ ଜୀବନର ପରାଧୀନତା ସ୍ୱୀକାର କରୁଛନ୍ତି। ସ୍ରୋତରେ ତୃଣ ପଥ ବାଛିପାରେନାହିଁ।</p><p>ସେହିପରି ଶିକ୍ଷା, ଜୀବିକା ଓ ଆଭିଜାତ୍ୟର ଚାପରେ ସେ ଜନ୍ମପଲ୍ଲୀକୁ ଭଲପାଇ ମଧ୍ୟ ତାହାର କର୍ମଜୀବନକୁ ଫେରିପାରନ୍ତି ନାହିଁ।</p><p>ଶୁଷ୍କ ତୃଣ ଭାସୁଥିବା ପାଣିକୁ ନିଜେ ରୋକିପାରେନାହିଁ ଓ ନିଜ ମନମତେ କୂଳ ମଧ୍ୟ ବାଛିପାରେନାହିଁ। ମନରେ ପଲ୍ଲୀ ପାଇଁ ଭଲପାଇବା ଅଛି, ହେଲେ ପୂର୍ବ ଅଭ୍ୟାସ ଓ ଶିକ୍ଷିତ ଜୀବନର ପରମ୍ପରା ଲେଖକଙ୍କୁ ଅନ୍ୟ ଦିଗକୁ ନେଉଛି।</p><p>ତେଣୁ ଉପମାଟି ଦେଶପ୍ରେମର ଅଭାବ ଅପେକ୍ଷା ନିଜ କାର୍ଯ୍ୟର ଅସହାୟତାକୁ ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-40"><h2>୪୦. କୃଷ୍ଣଙ୍କ ‘କୃତକର୍ମର ପରିଣାମ’ର ପ୍ରସଙ୍ଗ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ତାଙ୍କର’ ସର୍ବନାମଟି ଶ୍ରୀକୃଷ୍ଣଙ୍କୁ ସୂଚାଏ। ଗୋପପୁରରେ ଗୋଚାରଣ ଓ ଦ୍ୱାରକାରେ ରାଜଭୋଗ ତାଙ୍କ ଜୀବନର ଦୁଇ ଅବସ୍ଥା।</li><li>ପାଦର ପରିବର୍ତ୍ତନଟି ଏହି ଦୁଇ ଅବସ୍ଥାକୁ ବ୍ୟାଧର ଭ୍ରମ ସହ ଯୋଡ଼େ। ଶ୍ରମ ଓ ସ୍ନେହର ପଲ୍ଲୀ ଛାଡ଼ି ଐଶ୍ୱର୍ଯ୍ୟ ବାଛିବାର ପରିଣାମ ଭାବେ ଲେଖକ ଗାଥାକୁ ପଢ଼ିଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗୋପପୁରରେ ଗୋଚାରଣ କରୁଥିବା କୃଷ୍ଣଙ୍କ ପାଦ କଠିନ ଥିଲା। ଦ୍ୱାରକାର ରାଜଭୋଗରେ ତାହା କୋମଳ ଓ ରକ୍ତାଭ ହେଲା।</p><p>ଅରଣ୍ୟରେ ସେହି ପାଦକୁ ହରିଣର କାନ ଭାବି ବ୍ୟାଧ ଶର ମାରିଲା। ଜନ୍ମଭୂମିର ସାଧାରଣ ଜୀବନ ଛାଡ଼ିବା ସହ ଲେଖକ ଏହି ପରିଣାମକୁ ଯୋଡ଼ିଛନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=43">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-41"><h2>୪୧. ପଳାଶ, ସ୍ଥଳପଦ୍ମ ଓ କୃଷ୍ଣଚୂଡ଼ାରେ ଯୁବକମାନେ କ’ଣ ଦେଖନ୍ତି? ପ୍ରସଙ୍ଗ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଏମାନେ’ ଗାଁର ରାଜନୀତିରେ ମଗ୍ନ ଯୁବକ। ‘ବହ୍ନି’ ନିଆଁ, ‘ଆହବ’ ଯୁଦ୍ଧ ଓ ‘କେତନ’ ପତାକା। ଏହି ତିନୋଟି ଅର୍ଥରୁ ପ୍ରତ୍ୟେକ ଫୁଲର ଚିତ୍ର ଖୋଲେ।</li><li>ପୁଷ୍ପର ରଙ୍ଗରେ ସେମାନେ ନିଜ ମତବାଦକୁ ଦେଖୁଛନ୍ତି। ଏଥିପାଇଁ ମାଟି ଏକ ହୋଇଥିଲେ ମଧ୍ୟ ଲେଖକ ଓ ଯୁବକଙ୍କ ପ୍ରକୃତି ଅନୁଭବ ଏକ ହୋଇପାରୁନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦଳୀୟ ରାଜନୀତିରେ ମଗ୍ନ ଯୁବକଙ୍କ ଦୃଷ୍ଟିରେ ପ୍ରକୃତି ବି ରାଜନୀତିର ପ୍ରତୀକ ପାଲଟେ। ଫୁଟନ୍ତା ପଳାଶ ବିଦ୍ରୋହର ନିଆଁ, ସ୍ଥଳପଦ୍ମ ଯୁଦ୍ଧର ରକ୍ତ ଓ ନଇଁଥିବା କୃଷ୍ଣଚୂଡ଼ା ଆଗାମୀ ଯୁଗର ରକ୍ତପତାକା ପରି ଦିଶେ।</p><p>ଏହି ମାନସିକ ବ୍ୟବଧାନରୁ ଲେଖକ ସେମାନଙ୍କ ସହ ଏକାଠି ପଲ୍ଲୀସୌନ୍ଦର୍ଯ୍ୟ ଉପଭୋଗ କରିପାରନ୍ତି ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-42"><h2>୪୨. ପଲ୍ଲୀକୁ ଫେରିବାର ନୈତିକ ସାହସ ନାହିଁ ବୋଲି ଲେଖକ କାହିଁକି କହନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଶିକ୍ଷା ଓ ଜୀବିକା ତାଙ୍କ ମନରେ ଏକପ୍ରକାର ପୁନର୍ଜନ୍ମ ଆଣିଛି। ସାର ମାଉସୀଙ୍କ ସମ୍ବୋଧନ ବଦଳିଛି, ଗୋବିନ୍ଦ ଭାଇଙ୍କ ବିଶ୍ୱାସ ଫେରି ମିଳୁନାହିଁ, ଗାଁର ଶିଶୁ ତାଙ୍କୁ ଚିହ୍ନନ୍ତିନି।</p><p>ଗାଁକୁ ଟଙ୍କା ପଠାଇବା ସହଜ, କିନ୍ତୁ ଚାଷୀଙ୍କ ସହ ଝାଞ୍ଜି ଓ ବର୍ଷାରେ କାମ କରିବା ପାଇଁ ଆଭିଜାତ୍ୟ ଛାଡ଼ିବା ଦରକାର। ଶରୀରର ଅକ୍ଷମତା ନୁହେଁ, ଏହି ମନୋଭାବ ତାଙ୍କ ଫେରିବାରେ ବାଧା।</p><p>ଲେଖକ ଏଠାରେ ଶିକ୍ଷିତ ସମାଜର ଦୋଷ ଆଲୋଚନା କରିବାବେଳେ ନିଜକୁ ମଧ୍ୟ ତାହା ଭିତରେ ରଖିଛନ୍ତି। ପଲ୍ଲୀର ପିଲାମାନଙ୍କୁ ପଢ଼ାଇ ଉନ୍ନତି କରିବାର ଆଶା ସେହି ସମାଜର ଥିଲା।</p><p>ଶିକ୍ଷା ପାଇଲା ପରେ ସହରର ଅଭ୍ୟାସ, ଆଭିଜାତ୍ୟ ଓ ଶରୀରଶ୍ରମ ପ୍ରତି ବିମୁଖତା ସେହି ପିଲାଙ୍କୁ ନିଜ ପଲ୍ଲୀଠାରୁ ଦୂରେଇ ଦେଲା। କେବଳ ସ୍ମୃତିରେ ଗାଁକୁ ଫେରିବା ଅପେକ୍ଷା ସେଠାରେ ମିଶି କାମ କରିବାକୁ ସେ ବେଶି କଠିନ ମନେ କରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-43"><h2>୪୩. ଗ୍ରାମର ଏକପରିବାରତ୍ୱ ପରମ୍ପରା ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗୋଟିଏ ପଟେ ଜାତି ବର୍ଣ୍ଣ ଊର୍ଦ୍ଧ୍ୱରେ ମାଉସୀ, କକା, ଭାଇ ପ୍ରଭୃତି ସମ୍ବୋଧନ ଲୋକଙ୍କୁ ଆତ୍ମୀୟ କରେ। ଅନ୍ୟପଟେ କର୍ମ ଓ କ୍ଳେଶ ସେ ସମ୍ପର୍କକୁ ଜୀବନ୍ତ ରଖେ।</p><p>ମେଘ ଆସିବାକୁ ଚାଷୀ ଏକାଠି ଅପେକ୍ଷା କରନ୍ତି, ରଜ ଆନନ୍ଦରେ ଦୋଳି ଖେଳନ୍ତି, ପରେ ପୁଣି ବିଲରେ ଖଟନ୍ତି। ସେମାନଙ୍କ ସମ୍ମିଳିତ ଯତ୍ନରୁ ଗାଁ ଶସ୍ୟମୟ ହୁଏ।</p><p>କଥା ଓ କାମର ଏହି ଦୁଇ ସମ୍ପର୍କ ଗାଁକୁ ପରିବାର କରେ।</p><p>ଏହି ପରିବାରର ଚିହ୍ନ କେବଳ ଏକାଠି ରହିବା ନୁହେଁ, ଏକ ଘରର ପିଲା ପ୍ରତି ଅନ୍ୟ ଘରର ଦାୟିତ୍ୱ। ସାର ମାଉସୀଙ୍କ ପଚାରିବା ଓ ଗୋବିନ୍ଦ ଭାଇଙ୍କ ଆତିଥ୍ୟରେ ସମ୍ପର୍କ ଆତ୍ମୀୟଙ୍କ ଭଳି ଥିଲା।</p><p>ଲେଖକଙ୍କ ବୟସ ଓ ସାମାଜିକ ସ୍ଥାନ ବଦଳିବା ସହ ସେହି ସ୍ୱାଭାବିକ ବ୍ୟବହାରରେ ଦୂରତା ଆସିଛି। ସ୍ମୃତି ଓ ବର୍ତ୍ତମାନର ଏହି ପାର୍ଥକ୍ୟ ପୁରୁଣା ଏକତାର ମୂଲ୍ୟ ଜଣାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-44"><h2>୪୪. ‘ମନୁଷ୍ୟ ପରମ୍ପରାର ଦାସ’ ମତଟି ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରବନ୍ଧରେ ମଣିଷ ଯୁକ୍ତିବାଦୀ ଜୀବ ବୋଲି କହିବା ପରେ ତାହାର ଆଚରଣକୁ ମେଳାଇ ଦେଖାଯାଇଛି। ଗୋଟିଏ ଚଳଣିର ବ୍ୟବହାରିକ ପ୍ରୟୋଜନ ଦେଖାଇ ନପାରିଲେ ମଧ୍ୟ ଲୋକେ ତାହାକୁ ଗ୍ରହଣ କରନ୍ତି।</li><li>ନେକ୍‌ଟାଇର ଦୃଷ୍ଟାନ୍ତରୁ ଲେଖକ ଶ୍ରମର ପ୍ରଶ୍ନକୁ ଫେରିଛନ୍ତି। ପୋଷାକଠାରୁ ଅଧିକ ଗଭୀର ଫଳ ହେଉଛି ଗାଁର ପୁଅ ନିଜ ଲୋକଙ୍କ ଶ୍ରମରେ ଭାଗ ନ ନେବା। ପରମ୍ପରା ଏଠି ଆଚରଣ ବାଛିବାର ସ୍ୱାଧୀନତାକୁ ସୀମିତ କରୁଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଚରଣ ସବୁବେଳେ ଯୁକ୍ତି ଦ୍ୱାରା ନିର୍ଦ୍ଧାରିତ ହୁଏନି। ନେକ୍‌ଟାଇର ବିଶେଷ ପ୍ରୟୋଜନ ନ ଥିଲେ ମଧ୍ୟ ଲୋକେ ଆଭିଜାତ୍ୟର ଚିହ୍ନ ଭାବେ ତାକୁ ଛାଡ଼ନ୍ତିନି।</p><p>ସେହିପରି କାୟକ୍ଳେଶ ଏଡ଼ାଇବା ସମ୍ମାନର ଚିହ୍ନ ବୋଲି ପ୍ରଚଳିତ ବିଶ୍ୱାସ ଶ୍ରମ କରିବାକୁ ସମର୍ଥ ଲୋକଙ୍କୁ ମଧ୍ୟ ବାଧା ଦିଏ। ଏପରି ଚଳଣି ମଣିଷର ବିଚାର ଓ ଜୀବନପଥ ନିୟନ୍ତ୍ରଣ କରିଥାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-45"><h2>୪୫. ଶିକ୍ଷିତ ପଲ୍ଲୀସନ୍ତାନଙ୍କ ସହ କୃଷ୍ଣଙ୍କ ତୁଳନା ବିଚାର କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗୋପପୁରର ସ୍ନେହରେ ବଢ଼ି କୃଷ୍ଣ ଫେରିବା କଥା ଦେଇ ମଥୁରା ଗଲେ, ପରେ ଦ୍ୱାରକାର ଐଶ୍ୱର୍ଯ୍ୟରେ ରହିଲେ। ଗାଁର ବିଦ୍ୟାର୍ଥୀ ମଧ୍ୟ ପିତାମାତା ଓ ପଡ଼ୋଶୀଙ୍କ ଭରସାରେ ବଢ଼ି ଶିକ୍ଷା ଓ ପ୍ରତିଷ୍ଠା ପାଇଲେ ସ୍ଥାୟୀ ଭାବରେ ଚାଲିଯାଆନ୍ତି।</p><p>ଉଭୟ ଚିତ୍ରରେ ପଛରେ ରହିଯାନ୍ତି ସ୍ନେହ ଦେଇଥିବା ଲୋକ। ଦ୍ୱାରକାର ଐଶ୍ୱର୍ଯ୍ୟ ଗଲା, ଗୋପପୁରର ସ୍ମୃତି ରହିଲା।</p><p>ଉପମାଟି ସେହି ମାନବିକ ଋଣକୁ ଚିହ୍ନାଏ।</p><p>କୃଷ୍ଣଙ୍କ ପାଇଁ ଗୋପପୁର ଯେପରି ବାଲ୍ୟସ୍ମୃତି ଓ ସ୍ନେହର ଭୂମି, ଶିକ୍ଷିତ ପୁଅର ଗାଁ ସେହିପରି ତାହାର ପ୍ରଥମ ଶିକ୍ଷା ଓ ଲାଳନପାଳନର ଭୂମି। ଉନ୍ନତି ଲାଭ କଲା ପରେ ଜନ୍ମସ୍ଥାନ ପ୍ରତି ପ୍ରତିଶ୍ରୁତି କାମରେ କେତେ ରହୁଛି, ତୁଳନାଟି ସେହି ପ୍ରଶ୍ନ ଉଠାଉଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-46"><h2>୪୬. ଶିକ୍ଷିତ ସମାଜ ପାଇଁ ଲେଖକଙ୍କ ପରାମର୍ଶ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଶ୍ଚାତ୍ୟ ଶିକ୍ଷାରୁ ପାଇଥିବା ମର୍ଯ୍ୟାଦା ଯେପରି ପଲ୍ଲୀର ଶ୍ରମ ଓ ଲୋକଙ୍କଠାରୁ ବିଚ୍ଛିନ୍ନ ନ କରେ। ମହାନୁଭବତାର ଆରମ୍ଭ ହେଉ ନିଜ ଗାଁର ମଣିଷ ଓ ସେମାନଙ୍କ କାମରୁ।</p><p>ସେହି ଦାୟିତ୍ୱକୁ ଓଡ଼ିଶାରୁ ଭାରତ ଓ ଭାରତରୁ ବିଶ୍ୱକୁ ବଢ଼ାଇବା ଶିକ୍ଷାର ସାର୍ଥକତା। ନିକଟର କର୍ତ୍ତବ୍ୟ ଛାଡ଼ି ବିଶ୍ୱର ଭାର ନେବାର ଅଭିନୟ ପ୍ରବଞ୍ଚନା।</p><p>ପରାମର୍ଶର ମୂଳରେ ଶିଶୁବେଳର ଋଣ ରହିଛି। ଗାଁର ଆହାରରେ ଯେଉଁ ଦେହ ବଢ଼ିଥିଲା ଓ ତାହାର ଲୋକଙ୍କଠାରୁ ଯେଉଁ ପ୍ରଥମ ଶିକ୍ଷା ମିଳିଥିଲା, ଶିକ୍ଷିତ ସନ୍ତାନ ତାହାକୁ କାର୍ଯ୍ୟରେ ଶୁଝିପାରେ।</p><p>ପଲ୍ଲୀର ପରିଶ୍ରମୀ ଲୋକଙ୍କ ସହ ମିଶିବା ଓ ନିଜ ଜ୍ଞାନ ସେମାନଙ୍କ କାମରେ ଲଗାଇବାରୁ ବୃହତ୍ତର ସମାଜ ପ୍ରତି ଦାୟିତ୍ୱ ଆରମ୍ଭ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-47"><h2>୪୭. ରଜ ଓ କୁମାର ପୂର୍ଣ୍ଣିମାର ଗୀତ ସଂଗ୍ରହ କିପରି କରିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନମୁନା ସଂଗ୍ରହ ଧାଡ଼ିରେ ‘ପର୍ବ, ଗୀତର ପ୍ରଥମ ପଦ, ଗାୟକ ବା ଗାୟିକା, ସ୍ଥାନ’ ରଖିବି। ଏକା ଗୀତ ଦୁଇ ଭାବରେ ଶୁଣିଲେ ଦୁଇ ପାଠକୁ ଅଲଗା ରଖିବି।</li><li>ରଜ ଓ କୁମାର ପୂର୍ଣ୍ଣିମାର ଗୀତକୁ ପର୍ବ ଅନୁସାରେ ସଜାଇ ସାହିତ୍ୟ ଶିକ୍ଷକଙ୍କୁ ଦେଖାଇବି। ଏହି ସଂଗ୍ରହ ପାଇଁ ଗାଁରେ ଗୀତ ଶୁଣିବା ହିଁ ମୂଳ କାମ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ପର୍ବ ପାଇଁ ଦୁଇଟି ପତ୍ର ରଖିବି। ଗାଁର ଗାୟିକାଙ୍କ ପାଖରୁ ଗୀତ ଶୁଣି ମୂଳ ଶବ୍ଦ, ଗାଁର ନାମ ଓ କେଉଁ ଅବସରରେ ବୋଲାଯାଏ ଲେଖିବି।</p><p>‘ଜନ୍ମଭୂମି’ରେ ରଜଦୋଳିର ଦୃଶ୍ୟ ଅଛି, ସମ୍ପୂର୍ଣ୍ଣ ଲୋକଗୀତ ମୁଦ୍ରିତ ହୋଇନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=42">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୨–୪୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-48"><h2>୪୮. ଲେଖକଙ୍କ ଅନ୍ୟ ବହି ପଢ଼ିବା ପାଇଁ ତାଲିକା ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୁସ୍ତକ ତାଲିକାରେ ରଚନାର ପ୍ରକାର ରଖ। ‘ମୋ ସମୟର ଓଡ଼ିଶା’ ଆତ୍ମଜୀବନୀ, ‘ଜନ୍ମଭୂମି’ ପ୍ରବନ୍ଧଟି ‘ପ୍ରବନ୍ଧ ମାନସ’ରୁ ଗୃହୀତ।</li><li>ବହିଟି ପଢ଼ିବାବେଳେ ପ୍ରବନ୍ଧର ସ୍ମୃତି ସହ ମେଳ ଥିବା ଘଟଣା, ତାହାର ପୃଷ୍ଠା ଓ ଦୁଇ ଧାଡ଼ିର ନିଜ ଟିପ୍ପଣୀ ରଖିହେବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରଥମେ ଆତ୍ମଜୀବନୀ ‘ମୋ ସମୟର ଓଡ଼ିଶା’, ପରେ ‘ପ୍ରବନ୍ଧ ମାନସ’ ଓ ‘ଇତିହାସ ଓ କିମ୍ବଦନ୍ତୀ’। ଜନ୍ମଭୂମି ଓ ଲେଖକଙ୍କ ଶୈଶବ ସମ୍ପର୍କିତ ତଥ୍ୟ ପଢ଼ି ପୃଷ୍ଠା ସହ ଟିପିବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=40">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୦–୪୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-49"><h2>୪୯. ପଲ୍ଲୀ କବିତା ନେଇ ପଦ୍ୟାନ୍ତ ପ୍ରତିଯୋଗିତାର ଯୋଜନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତିଯୋଗିତା ପୂର୍ବରୁ ପଢ଼ିଥିବା ପଲ୍ଲୀ କବିତାର ନାମ, ପଦର ଆରମ୍ଭ ଓ ଶେଷ ଅକ୍ଷର ନେଇ ଗୋଟିଏ ଅଭ୍ୟାସ ତାଲିକା କର। ଏହା ପର ଦଳର ପଦ ବାଛିବାରେ ସାହାଯ୍ୟ କରେ।</li><li>ପ୍ରତି ଉତ୍ତରରେ ଦୁଇଟି କଥା ମେଳାଅ। ଆରମ୍ଭ ଅକ୍ଷର ମେଳିବା ଦରକାର ଓ କହିଥିବା ପଦଟି ମୂଳ କବିତାର ହେବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ଦଳ ପ୍ରଥମେ ପଢ଼ିଥିବା ପଲ୍ଲୀ କବିତାର ପଦ ମନେ ରଖିବେ। ପ୍ରଥମ ଦଳର ପଦର ଶେଷ ଅକ୍ଷରରୁ ଦ୍ୱିତୀୟ ଦଳ ପର ପଦ ଆରମ୍ଭ କରିବ।</p><p>ଶିକ୍ଷକ ମୂଳ ପାଠ ସହ ଶବ୍ଦ ଓ ଉଚ୍ଚାରଣ ମେଳାଇବେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-50"><h2>୫୦. ନିଜ ଜନ୍ମଭୂମି ସମ୍ପର୍କରେ ଏକ କବିତା ବା ପ୍ରବନ୍ଧ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ଏକ ନମୁନା ପ୍ରବନ୍ଧ। ନିଜ ଲେଖାରେ ନିଜେ ଦେଖିଥିବା ଗୋଟିଏ ସ୍ଥାନ ବା ଘଟଣା ବାଛ। ତାହାର ରୂପ, ଗନ୍ଧ କିମ୍ବା ଶବ୍ଦ ଦେଇ ପାଠକକୁ ସେହି ଦୃଶ୍ୟ ଦେଖାଅ।</li><li>ଦୃଶ୍ୟ ସହ ସେଠାର ମଣିଷଙ୍କ ଏକ କାମ ଯୋଡ଼। ପଠିତ ପ୍ରବନ୍ଧରେ ରଜର ଆନନ୍ଦ ଓ ଚାଷୀଙ୍କ ଶ୍ରମ ଯେପରି ଜଡ଼ିତ, ନିଜ ଅନୁଭବରେ ସେହି ସମ୍ପର୍କ କିପରି ଦେଖିଲ ତାହା କହ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନମୁନା ପ୍ରବନ୍ଧ — ମୋ ଜନ୍ମଭୂମି। ପ୍ରଥମ ବର୍ଷାରେ ମାଟିରୁ ଯେଉଁ ଗନ୍ଧ ଉଠେ, ସେତେବେଳେ ମୋର ଗାଁ ମନେ ପଡ଼େ।</p><p>ଏଠି ବର୍ଷା ଦେଖି ଚାଷୀ ବିଲକୁ ଯାଆନ୍ତି, ପିଲାମାନେ ରଜରେ ଦୋଳି ଖେଳନ୍ତି। ମୋ ପାଇଁ ଏହି ମାଟିର ସୌନ୍ଦର୍ଯ୍ୟ ତାହାର ଲୋକଙ୍କ ଶ୍ରମ ସହ ମିଶିଛି।</p><p>ମୁଁ ପାଠ ପଢ଼ି ଯେଉଁଠି ରହେ, ସେମାନଙ୍କ ସୁଖଦୁଃଖରେ ଭାଗ ନେବାକୁ ଚାହେଁ। ନିଜ ଗାଁକୁ ଭଲପାଇବାରୁ ଅନ୍ୟ ଗାଁର ଲୋକଙ୍କ ମମତା ବୁଝିବା ଶିଖିବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=40">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୦–୪୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+
+</main></body></html>

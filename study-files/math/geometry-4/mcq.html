@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ତ୍ରିକୋଣମିତି · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ତ୍ରିକୋଣମିତି</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/15Bf8NQP29BHLqI2KXWZdXjamh3q27s6L/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ଦର୍ଶକର ସ୍ତରଠାରୁ ଉପର ଅଂଶର ଉଚ୍ଚତା h, ଭୂସମାନ୍ତର ଦୂରତା d। କୌଣିକ ଉନ୍ନତି θ ପାଇଁ tan θ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>d/h</li><li>h/d</li><li>h + d</li><li>h × d</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. h/d</b></p>
+<div class="lesson-body"><p>tan θ ହେଉଛି ଲମ୍ବ ଓ ଭୂମିର ଅନୁପାତ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୨. ଭୂମି ସହ ସିଡ଼ି 60° କୋଣ କରେ। ସିଡ଼ିର ପାଦ କାନ୍ଥରୁ 3 ମିଟର ଦୂରରେ। ସିଡ଼ିର ଦୈର୍ଘ୍ୟ କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="କାନ୍ଥ AC ଓ ଭୂମି BC ସହ ଏକ ସମକୋଣୀ ତ୍ରିଭୁଜ କରୁଥିବା ସିଡ଼ି AB।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+TGFkZGVyIEFCIGxlYW5pbmcgYWdhaW5zdCBhIHZlcnRpY2FsIHdhbGw8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSAzMlYxNzVIMjYyTDY1IDMyIE02NSAxNjZoOXY5Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjQ5IiB5PSIyOSI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MyIgeT0iMTkzIj5CPC90ZXh0PgogICAgPHRleHQgeD0iNDciIHk9IjE5NSI+QzwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>9 ମି.</li><li>3/2 ମି.</li><li>3√3 ମି.</li><li>6 ମି.</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 6 ମି.</b></p>
+<div class="lesson-body"><p class="lesson-equation">cos 60° = 3/ℓ = 1/2 ⇒ ℓ = 6।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୨୩</small></article>
+<article><h2>୩. cos(A + B) ର ବିସ୍ତାର କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>cos A cos B + sin A sin B</li><li>sin A sin B + sin A cos B</li><li>cos A cos B − sin A sin B</li><li>sin A cos B − cos A sin B</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. cos A cos B − sin A sin B</b></p>
+<div class="lesson-body"><p>ଯୋଗ କୋଣର cos ସୂତ୍ରରେ ଦୁଇ ଗୁଣଫଳର ବିୟୋଗ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୪</small></article>
+<article><h2>୪. ସମତଳ ଭୂମିରେ ବୃକ୍ଷଠାରୁ 120 ମିଟର ଦୂରରେ କୌଣିକ ଉନ୍ନତି 30°। ବୃକ୍ଷର ଉଚ୍ଚତା କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>40√3 ମି.</li><li>60 ମି.</li><li>240 ମି.</li><li>120√3 ମି.</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 40√3 ମି.</b></p>
+<div class="lesson-body"><p class="lesson-equation">h = 120 tan 30° = 120/√3 = 40√3।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୨୩</small></article>
+<article><h2>୫. tan 45° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/√3</li><li>1</li><li>0</li><li>√3</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 1</b></p>
+<div class="lesson-body"><p>45°–45°–90° ତ୍ରିଭୁଜର ଲମ୍ବ ଓ ଭୂମି ସମାନ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୫–୭</small></article>
+<article><h2>୬. A ଓ B ସୂକ୍ଷ୍ମକୋଣ। tan A = 1/3 ଓ tan B = 1/2 ହେଲେ A + B କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>90°</li><li>60°</li><li>45°</li><li>30°</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 45°</b></p>
+<div class="lesson-body"><p>tan(A + B) = (1/3 + 1/2)/(1 − 1/6) = 1। ହର ଧନାତ୍ମକ ଓ ଉଭୟ କୋଣ ସୂକ୍ଷ୍ମ।</p><p>ତେଣୁ A + B = 45°।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୭. sin 27° cos 18° + cos 27° sin 18° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/√2</li><li>1/2</li><li>√3/2</li><li>1</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 1/√2</b></p>
+<div class="lesson-body"><p class="lesson-equation">sin(A + B) ସୂତ୍ରରୁ ରାଶିଟି sin(27° + 18°) = sin 45° = 1/√2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୮. ସୂର୍ଯ୍ୟର କୌଣିକ ଉନ୍ନତି 60° ରୁ 30° ହେଲା। ଏକେ ଲମ୍ବ ସ୍ତମ୍ଭର ଛାଇର ଦୈର୍ଘ୍ୟ ପ୍ରଥମର କେତେ ଗୁଣ ହେବ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/√3</li><li>1/3</li><li>3</li><li>√3</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 3</b></p>
+<div class="lesson-body"><p>ଉଚ୍ଚତା h ହେଲେ ପ୍ରଥମ ଛାଇ h/√3 ଓ ଦ୍ୱିତୀୟ ଛାଇ h√3। ସେମାନଙ୍କ ଅନୁପାତ 3।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୯. cos 62° cos 2° + sin 62° sin 2° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/√2</li><li>1/2</li><li>0</li><li>√3/2</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 1/2</b></p>
+<div class="lesson-body"><p>cos(A − B) ବ୍ୟବହାର କର। କୋଣର ଅନ୍ତର 60°, ତେଣୁ cos 60° = 1/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୧୦. ଭୂମି ସହ 60° କୋଣ କରୁଥିବା 12 ମିଟର ସିଡ଼ିର ପାଦ କାନ୍ଥରୁ କେତେ ମିଟର ଦୂରରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>4</li><li>6</li><li>12</li><li>24</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 6</b></p>
+<div class="lesson-body"><p>ଭୂସମାନ୍ତର ଦୂରତା = ସିଡ଼ିର ଦୈର୍ଘ୍ୟ × cos 60° = 12/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୧୧. 3 ମିଟର ଉଚ୍ଚତାରୁ ଏକ ସ୍ତମ୍ଭର ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 45°। ଭୂସମାନ୍ତର ଦୂରତା 20 ମିଟର। ସ୍ତମ୍ଭର ଉଚ୍ଚତା କେତେ ମିଟର?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>3</li><li>20</li><li>23</li><li>17</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 23</b></p>
+<div class="lesson-body"><p>ଦର୍ଶକର ସ୍ତର ଉପରେ ଉଚ୍ଚତା = 20 tan 45° = 20। ସମୁଦାୟ ଉଚ୍ଚତାରେ 3 ମିଟର ଯୋଗ ହେବ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୧୨. cos 63° cos 3° + sin 63° sin 3° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/2</li><li>0</li><li>1/√2</li><li>√3/2</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 1/2</b></p>
+<div class="lesson-body"><p>cos(A − B) ବ୍ୟବହାର କର। କୋଣର ଅନ୍ତର 60°, ତେଣୁ cos 60° = 1/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୧୩. sin 28° cos 17° + cos 28° sin 17° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/2</li><li>1/√2</li><li>1</li><li>√3/2</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 1/√2</b></p>
+<div class="lesson-body"><p class="lesson-equation">sin(A + B) ସୂତ୍ରରୁ ରାଶିଟି sin(28° + 17°) = sin 45° = 1/√2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୧୪. cos 128° + sin 38° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1</li><li>0</li><li>2 sin 38°</li><li>−1</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 0</b></p>
+<div class="lesson-body"><p>cos(90° + 38°) = −sin 38°। ତେଣୁ ଦୁଇ ପଦର ଯୋଗ 0।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୩–୧୦</small></article>
+<article><h2>୧୫. ଭୂମି ସହ 60° କୋଣ କରୁଥିବା 14 ମିଟର ସିଡ଼ିର ପାଦ କାନ୍ଥରୁ କେତେ ମିଟର ଦୂରରେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="AB ସିଡ଼ି, AC କାନ୍ଥ ଓ BC ଭୂମି। କାନ୍ଥ ଓ ଭୂମି ପରସ୍ପର ପ୍ରତି ଲମ୍ବ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+TGFkZGVyIEFCIGxlYW5pbmcgYWdhaW5zdCBhIHZlcnRpY2FsIHdhbGw8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSAzMlYxNzVIMjYyTDY1IDMyIE02NSAxNjZoOXY5Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjQ5IiB5PSIyOSI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MyIgeT0iMTkzIj5CPC90ZXh0PgogICAgPHRleHQgeD0iNDciIHk9IjE5NSI+QzwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>14</li><li>5</li><li>7</li><li>28</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 7</b></p>
+<div class="lesson-body"><p>ଭୂସମାନ୍ତର ଦୂରତା = ସିଡ଼ିର ଦୈର୍ଘ୍ୟ × cos 60° = 14/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୧୬. ସମତଳ ଉପରେ ଥିବା ଏକ ଗଛର ପାଦଠାରୁ 18 ମିଟର ଦୂରରେ ତାହାର ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 30°। ଗଛର ଉଚ୍ଚତା କେତେ ମିଟର?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>18√3</li><li>9√3</li><li>6√3</li><li>6</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 6√3</b></p>
+<div class="lesson-body"><p>tan 30° = h/18। h = 18/√3 = 6√3 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୧୭. cot 112° × cot 158° ର ଚିହ୍ନ ଓ ମାନ କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>+1</li><li>−1</li><li>+2</li><li>0</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. +1</b></p>
+<div class="lesson-body"><p>cot(90° + 22°) = −tan 22° ଓ cot(180° − 22°) = −cot 22°। ଗୁଣଫଳ +1।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪–୧୦</small></article>
+<article><h2>୧୮. 4 ମିଟର ଉଚ୍ଚତାରୁ ଏକ ସ୍ତମ୍ଭର ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 45°। ଭୂସମାନ୍ତର ଦୂରତା 30 ମିଟର। ସ୍ତମ୍ଭର ଉଚ୍ଚତା କେତେ ମିଟର?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>4</li><li>30</li><li>26</li><li>34</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 34</b></p>
+<div class="lesson-body"><p>ଦର୍ଶକର ସ୍ତର ଉପରେ ଉଚ୍ଚତା = 30 tan 45° = 30। ସମୁଦାୟ ଉଚ୍ଚତାରେ 4 ମିଟର ଯୋଗ ହେବ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୧୯. cos 72° cos 12° + sin 72° sin 12° କେଉଁ ଅନୁପାତ ସହ ସମାନ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>sin 30°</li><li>cos 84°</li><li>sin 60°</li><li>tan 60°</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. sin 30°</b></p>
+<div class="lesson-body"><p>cos(A − B) ସୂତ୍ର ଅନୁସାରେ ରାଶିଟି cos 60°। ଅନୁପୂରକ କୋଣର ସମ୍ପର୍କରୁ ଏହା sin 30°।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୨୦. sin 29° cos 16° + cos 29° sin 16° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/2</li><li>1</li><li>1/√2</li><li>√3/2</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 1/√2</b></p>
+<div class="lesson-body"><p class="lesson-equation">sin(A + B) ସୂତ୍ରରୁ ରାଶିଟି sin(29° + 16°) = sin 45° = 1/√2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୨୧. ଭୂମି ସହ 60° କୋଣ କରୁଥିବା 16 ମିଟର ସିଡ଼ିର ପାଦ କାନ୍ଥରୁ କେତେ ମିଟର ଦୂରରେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="AB ସିଡ଼ି, AC କାନ୍ଥ ଓ BC ଭୂମି। କାନ୍ଥ ଓ ଭୂମି ପରସ୍ପର ପ୍ରତି ଲମ୍ବ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+TGFkZGVyIEFCIGxlYW5pbmcgYWdhaW5zdCBhIHZlcnRpY2FsIHdhbGw8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSAzMlYxNzVIMjYyTDY1IDMyIE02NSAxNjZoOXY5Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjQ5IiB5PSIyOSI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MyIgeT0iMTkzIj5CPC90ZXh0PgogICAgPHRleHQgeD0iNDciIHk9IjE5NSI+QzwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>8</li><li>6</li><li>16</li><li>32</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 8</b></p>
+<div class="lesson-body"><p>ଭୂସମାନ୍ତର ଦୂରତା = ସିଡ଼ିର ଦୈର୍ଘ୍ୟ × cos 60° = 16/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୨୨. cos 64° cos 4° + sin 64° sin 4° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/2</li><li>1/√2</li><li>0</li><li>√3/2</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 1/2</b></p>
+<div class="lesson-body"><p>cos(A − B) ବ୍ୟବହାର କର। କୋଣର ଅନ୍ତର 60°, ତେଣୁ cos 60° = 1/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୨୩. tan 75° ନିର୍ଣ୍ଣୟ ପାଇଁ tan(45° + 30°) ବିସ୍ତାର କଲେ ହରରେ କେଉଁ ପଦ ମିଳେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>tan 45° + tan 30°</li><li>tan 45° − tan 30°</li><li>1 − tan 45° tan 30°</li><li>1 + tan 45° tan 30°</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 1 − tan 45° tan 30°</b></p>
+<div class="lesson-body"><p>tan(A + B) = (tan A + tan B)/(1 − tan A tan B)। ଯୋଗର ସୂତ୍ରରେ ହରରେ ବିୟୋଗ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୨୪. 5 ମିଟର ଉଚ୍ଚତାରୁ ଏକ ସ୍ତମ୍ଭର ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 45°। ଭୂସମାନ୍ତର ଦୂରତା 40 ମିଟର। ସ୍ତମ୍ଭର ଉଚ୍ଚତା କେତେ ମିଟର?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>45</li><li>35</li><li>40</li><li>5</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 45</b></p>
+<div class="lesson-body"><p>ଦର୍ଶକର ସ୍ତର ଉପରେ ଉଚ୍ଚତା = 40 tan 45° = 40। ସମୁଦାୟ ଉଚ୍ଚତାରେ 5 ମିଟର ଯୋଗ ହେବ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୨୫. cos 65° cos 5° + sin 65° sin 5° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/√2</li><li>√3/2</li><li>1/2</li><li>0</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 1/2</b></p>
+<div class="lesson-body"><p>cos(A − B) ବ୍ୟବହାର କର। କୋଣର ଅନ୍ତର 60°, ତେଣୁ cos 60° = 1/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୨୬. ସମତଳର ଦୁଇ ବିନ୍ଦୁରୁ ଏକ ସ୍ତମ୍ଭର ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 30° ଓ 60°। ଦୁଇ ବିନ୍ଦୁ ପାଦଦେଶର ଏକେ ପାର୍ଶ୍ୱରେ। ସେମାନଙ୍କର ପାଦଦେଶଠାରୁ ଦୂରତାର ଅନୁପାତ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1 : 3</li><li>1 : √3</li><li>3 : 1</li><li>√3 : 1</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 3 : 1</b></p>
+<div class="lesson-body"><p>ପ୍ରଥମ ଦୂରତା h/tan 30° = h√3। ଦ୍ୱିତୀୟ ଦୂରତା h/tan 60° = h/√3।</p><p>ତେଣୁ ପ୍ରଥମ : ଦ୍ୱିତୀୟ = 3 : 1।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୨୭. 6 ମିଟର ଉଚ୍ଚତାରୁ ଏକ ସ୍ତମ୍ଭର ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 45°। ଭୂସମାନ୍ତର ଦୂରତା 50 ମିଟର। ସ୍ତମ୍ଭର ଉଚ୍ଚତା କେତେ ମିଟର?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>6</li><li>50</li><li>44</li><li>56</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 56</b></p>
+<div class="lesson-body"><p>ଦର୍ଶକର ସ୍ତର ଉପରେ ଉଚ୍ଚତା = 50 tan 45° = 50। ସମୁଦାୟ ଉଚ୍ଚତାରେ 6 ମିଟର ଯୋଗ ହେବ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୨୮. θ ସୂକ୍ଷ୍ମକୋଣ। sin(90° + θ)/cos(180° − θ) ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>0</li><li>−1</li><li>1</li><li>tan θ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. −1</b></p>
+<div class="lesson-body"><p>ଲବ cos θ ଓ ହର −cos θ। θ ସୂକ୍ଷ୍ମକୋଣ ହେତୁ cos θ ≠ 0।</p><p>ଭାଗଫଳ −1।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୪–୧୦</small></article>
+<article><h2>୨୯. ଭୂମି ସହ 60° କୋଣ କରୁଥିବା 18 ମିଟର ସିଡ଼ିର ପାଦ କାନ୍ଥରୁ କେତେ ମିଟର ଦୂରରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>9</li><li>36</li><li>18</li><li>7</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 9</b></p>
+<div class="lesson-body"><p>ଭୂସମାନ୍ତର ଦୂରତା = ସିଡ଼ିର ଦୈର୍ଘ୍ୟ × cos 60° = 18/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୩୦. sin 30° cos 15° + cos 30° sin 15° ର ମାନ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>√3/2</li><li>1/2</li><li>1/√2</li><li>1</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 1/√2</b></p>
+<div class="lesson-body"><p class="lesson-equation">sin(A + B) ସୂତ୍ରରୁ ରାଶିଟି sin(30° + 15°) = sin 45° = 1/√2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+
+</main></body></html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>କାଳର କପୋଳ ତଳେ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>କାଳର କପୋଳ ତଳେ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1qnbNZcea6QuwPz3110hBSu2zzwyfUN-A/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୧୨। ଯାଞ୍ଚ କରାଯାଇଥିବା ଉତ୍ତର ପ୍ରଶ୍ନକ୍ରମରେ ଦିଆଯାଇଛି।</p><p>୧୧ରେ ଅନ୍ୟ ଗଳ୍ପ ପଢ଼ିବାକୁ କୁହାଯାଇଛି। ସେଗୁଡ଼ିକର ପୂରା ପାଠ PDFରେ ନାହିଁ। ପାଠନ-ନୋଟର ନମୁନା ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୬</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୨)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a></nav></details>
+<article id="exercise-1"><h2>୧. ଦୟାନଦୀ କୂଳରେ ଯୁଦ୍ଧ କାହିଁକି ହୋଇଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଳ୍ପରେ ଦୟାନଦୀ ଯୁଦ୍ଧର ସ୍ଥାନଚିହ୍ନ। ମଗଧର ରାଜ୍ୟବିସ୍ତାରର ଇଚ୍ଛା ସହ କଳିଙ୍ଗବାସୀଙ୍କ ସ୍ୱାଧୀନ ରହିବାର ସଂକଳ୍ପ ମୁହାଁମୁହିଁ ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମଗଧ ସମ୍ରାଟ ଅଶୋକ କଳିଙ୍ଗକୁ ଜୟ କରିବା ପାଇଁ ଆକ୍ରମଣ କରିଥିଲେ। କଳିଙ୍ଗର ପ୍ରତିରୋଧ ଫଳରେ ଯୁଦ୍ଧ ହୋଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=100">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୦–୧୦୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-2"><h2>୨. ରାଜେଶ୍ୱରୀଙ୍କ ଚରିତ୍ରର ବିଶେଷତା ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କଳିଙ୍ଗର ସ୍ୱାଧୀନତାକୁ ସେ ନିଜ ସୁରକ୍ଷାଠାରୁ ବଡ଼ ମନେ କରନ୍ତି। ରାଜ୍ୟର ସଙ୍କଟ ବୁଝିବାର ବୁଦ୍ଧି, ସଭାସଦଙ୍କ ସହଯୋଗ ଲୋଡ଼ିବାର ନମ୍ରତା, ନିଷ୍ପତ୍ତି ନେବାର ଦୃଢ଼ତା ଓ ପ୍ରାଣ ଦେବାର ସାହସ ତାଙ୍କର ପରିଚୟ।</p><p>ମହାରାଜ ଅସୁସ୍ଥ, ସୀମା ଆଡ଼କୁ ମଗଧର ସେନା ଆସୁଛି। ଏପରି ବେଳେ ସେ କେବଳ ରାଜପଦର ମର୍ଯ୍ୟାଦା ଭାବିନଥିଲେ।</p><p>ସଭାରୁ ସହଯୋଗ ଲୋଡ଼ି ଯୋଦ୍ଧାଙ୍କ ଭିତରେ ଦାୟିତ୍ୱ ବାଣ୍ଟିଲେ ଓ ନିଜେ ମଧ୍ୟ ପ୍ରତିରୋଧରେ ରହିଲେ। ଏଥିରେ ତାଙ୍କ ସାହସ ସହ ସଙ୍ଗଠନ କରିବାର ଦକ୍ଷତା ମିଶିଛି।</p><p>ସାଧାରଣ ପ୍ରଜାଙ୍କ ସହ ଏହି ମିଳିତ ଶକ୍ତି ହିଁ କଳିଙ୍ଗର ପ୍ରତିରୋଧକୁ ଦୀର୍ଘ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=100">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୦–୧୦୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-3"><h2>୩. ଅଙ୍ଗଦଙ୍କୁ ମିଳିଥିବା ଉଜ୍ଜ୍ୱଳ ପୁରୁଷଙ୍କ ଭୂମିକା କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଙ୍ଗଦ ଶିଳାଲେଖ ପାଖରେ ଇତିହାସ ପଢ଼ୁଥିଲେ। ଉଜ୍ଜ୍ୱଳ ପୁରୁଷଙ୍କ ସହ ଯିବା ପରେ ରାଜସଭାର ନିଷ୍ପତ୍ତି ଓ ଯୁଦ୍ଧ ନିଜ ଆଖି ଆଗରେ ଘଟୁଥିବା ପରି ଦେଖିଲେ। ପାତ୍ରଟି ଦୁଇ କାଳକୁ ଯୋଡ଼ିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୀର୍ଘଦେହୀ ପୁରୁଷ ଅଙ୍ଗଦଙ୍କୁ ବର୍ତ୍ତମାନରୁ ପ୍ରାଚୀନ କଳିଙ୍ଗର ରାଜସଭା ଓ ଯୁଦ୍ଧର ଘଟଣା ଭିତରକୁ ନେଇଯାନ୍ତି। ସେ ଗବେଷକଙ୍କ ପ୍ରଶ୍ନକୁ ଦୃଶ୍ୟରେ ପରିଣତ କରନ୍ତି।</p><p>ତାଙ୍କର ରହସ୍ୟମୟ ପରିଚୟ ଅଙ୍ଗଦଙ୍କୁ ଇତିହାସପୁରୁଷ କଥା ଭାବିବାକୁ ପ୍ରେରଣା ଦିଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=100">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୦–୧୦୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-4"><h2>୪. କଳିଙ୍ଗର ଉତ୍ତରାଧିକାର ନିଷ୍ପତ୍ତି କିପରି ହେଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମହାରାଣୀ କୁରୁବକୀ ରାଜଜେମା ରାଜେଶ୍ୱରୀଙ୍କୁ ଭାର ଦେବାର ପ୍ରସ୍ତାବ ଜଣାନ୍ତି। ମହାମନ୍ତ୍ରୀ ପୁତ୍ର ପରି କନ୍ୟାର ଉତ୍ତରାଧିକାର ଓ ରାଜଜେମାଙ୍କ ଯୋଗ୍ୟତା ସପକ୍ଷରେ ମତ ଦିଅନ୍ତି। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅସୁସ୍ଥ ମହାରାଜ ଏକମାତ୍ର ଦାୟାଦ ରାଜଜେମା ରାଜେଶ୍ୱରୀଙ୍କୁ ଦାୟିତ୍ୱ ଦେବାକୁ ଚାହାନ୍ତି। ମହାରାଣୀ ଏହି ବିଚାର ସଭାରେ ଜଣାନ୍ତି।</p><p>ପୁତ୍ର ପରି କନ୍ୟାକୁ ସିଂହାସନ ଦେବାର ପରମ୍ପରା ଓ ରାଜଜେମାଙ୍କ ଯୋଗ୍ୟତା ଦର୍ଶାଇ ମହାମନ୍ତ୍ରୀ ପ୍ରସ୍ତାବ ସମର୍ଥନ କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-5"><h2>୫. ମଗଧର ବିଶାଳ ସେନା ବିରୁଦ୍ଧରେ ରାଜେଶ୍ୱରୀଙ୍କ ସଙ୍ଗଠନର ବିଶେଷତା କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନେତୃତ୍ୱକୁ ଭାଗ କରିବାରୁ ଜଣକୁ ହରାଇଲେ ସମଗ୍ର ପ୍ରତିରୋଧ ଭାଙ୍ଗିଯିବାର ଆଶଙ୍କା କମିଲା। ନିଜେ ସଂଗ୍ରାମରେ ଯୋଗ ଦେବାରେ ରାଜାଙ୍କ ଦାୟିତ୍ୱବୋଧ ମଧ୍ୟ ଦିଶେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏକମାତ୍ର ସେନାପତି ଉପରେ ନିର୍ଭର ନ କରି ସେ ବିଶ୍ୱସ୍ତ ଯୋଦ୍ଧାମାନଙ୍କୁ ପୃଥକ୍ ନେତୃତ୍ୱର ଦାୟିତ୍ୱ ଦେଲେ। ନିଜେ ମଧ୍ୟ ଯୁଦ୍ଧରେ ଅଂଶ ନେଲେ।</p><p>ଏପରି ଉଦ୍ୟମରୁ ଅଶୋକଙ୍କ ଶୀଘ୍ର ବିଜୟର ଆଶା ପୂରା ହେଲା ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=102">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୨–୧୦୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-6"><h2>୬. ରାଜନୀତିରେ ଷଡ଼ଯନ୍ତ୍ରକୁ ବ୍ରହ୍ମାସ୍ତ୍ର କହିବାର ପ୍ରସଙ୍ଗ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହାର ଆକ୍ରମଣ ଓ ଭିତରର ବିଶ୍ୱାସଭଙ୍ଗ ଦୁଇଟି ଭିନ୍ନ ସଙ୍କଟ। କଳିଙ୍ଗ ଲୋକେ ବହୁ ସମୟ ପ୍ରତିରୋଧ କରିପାରିବାରୁ ତାଙ୍କ ଭିତରେ ଭେଦ ସୃଷ୍ଟି କରିବାର ଯୋଜନା ଆସିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୀର୍ଘ ଯୁଦ୍ଧରେ ମଗଧର ବଳ କଳିଙ୍ଗର ପ୍ରତିରୋଧକୁ ଶୀଘ୍ର ଭାଙ୍ଗିପାରିଲା ନାହିଁ। ତେଣୁ ସାମରିକ ବଳ ବ୍ୟତୀତ ଅନ୍ତର୍ଦ୍ୱନ୍ଦ୍ୱ ଓ ବିଶ୍ୱାସଭଙ୍ଗ କିପରି ଫଳକୁ ବଦଳାଇପାରେ, ତାହା ବୁଝାଇବା ପାଇଁ ଗଳ୍ପରେ ଏହି ଉପମା ଆସିଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=102">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୨–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-7"><h2>୭. ଇତିହାସପୁରୁଷ ସମ୍ପର୍କିତ ପ୍ରଶ୍ନ କିଏ କାହାକୁ କଲେ, କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଙ୍ଗଦ ପଥପ୍ରଦର୍ଶକଙ୍କୁ ଇତିହାସପୁରୁଷ କି ବୋଲି ପଚାରନ୍ତି। ଏହି ଶେଷ ପ୍ରଶ୍ନ ପୁଣି ବର୍ତ୍ତମାନକୁ ଫେରାଏ ଓ ଲିପିରେ ନ ଥିବା ପରାଜିତଙ୍କ ଭୂମିକା ବିଷୟରେ ଭାବିବାକୁ ଦିଏ। (ପାଠର ପୃ. ୪–୫)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଙ୍ଗଦ ଚୌଧୁରୀ ଦୀର୍ଘଦେହୀ ପଥପ୍ରଦର୍ଶକଙ୍କୁ ଏହି ପ୍ରଶ୍ନ କଲେ। ଅତୀତର ରାଜସଭା, ପ୍ରତିରୋଧ ଓ ଯୁଦ୍ଧର ଶେଷ ତାଙ୍କ ସମ୍ମୁଖରେ ଜୀବନ୍ତ କରିବାର କ୍ଷମତା ଦେଖି ସେ ସାଧାରଣ ମଣିଷଙ୍କଠାରୁ ଭିନ୍ନ ବୋଲି ଅଙ୍ଗଦ ଭାବିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=103">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୩–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-8"><h2>୮. ଗଳ୍ପର ଘୋଷଣା ଅନୁସାରେ ଅଶୋକ ଯୁଦ୍ଧବିରତି କାହିଁକି କଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରାଜ୍ୟବିଜୟ ପରେ ମଧ୍ୟ ମୃତ ମଣିଷଙ୍କ ଦୃଶ୍ୟ ରହିଗଲା। ଅଶୋକ ସେହି ମାନବିକ କ୍ଷତିକୁ ବୁଝିଥିବାରୁ ବିଜୟ ଉତ୍ସବ ଅପେକ୍ଷା ହତ୍ୟା ବନ୍ଦ କରିବାର କଥା ତାଙ୍କ ମୁହଁରୁ ଆସେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯୁଦ୍ଧର ବିଭୀଷିକା ଓ ନରହତ୍ୟା ଦେଖି ସେ ମର୍ମାହତ ହେଲେ। ହତ୍ୟା ବନ୍ଦ କରି ଅହିଂସା ଆଦର୍ଶ ଗ୍ରହଣ କରିବାର ନିଷ୍ପତ୍ତି ଘୋଷଣା କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=103">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୩–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-9"><h2>୯. ମହାମନ୍ତ୍ରୀଙ୍କ କଥାର ଉତ୍ତରରେ ରାଜେଶ୍ୱରୀ କ’ଣ କହିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶତ୍ରୁ ନିକଟକୁ ଆସିବାରେ ଦରବାରର ପରିସ୍ଥିତି ବଦଳିଛି। ସାଧାରଣ ପ୍ରଶାସନଠାରୁ ରାଜ୍ୟର ତତ୍କାଳୀନ ରକ୍ଷା ବଡ଼ ଦାୟିତ୍ୱ ହେବାରୁ ଆଦେଶର ତୀବ୍ରତା ଜଣାପଡ଼େ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାଧାରଣ ରାଜ୍ୟପରିଚାଳନାର ସମୟ ଏବେ ନୁହେଁ। ଶତ୍ରୁ ରାଜ୍ୟ ଭିତରକୁ ମାଡ଼ି ଆସୁଥିବାରୁ ତୁରନ୍ତ କାର୍ଯ୍ୟ ନ କଲେ କଳିଙ୍ଗକୁ ରକ୍ଷା କରାଯାଇପାରିବ ନାହିଁ ବୋଲି ସେ ପ୍ରକାଶ କଲେ।</p><p>ସଭାସଦମାନଙ୍କ ସହଯୋଗ ମାଗିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-10"><h2>୧୦. ମହାରାଣୀ କୁରୁବକୀ ମହାରାଜଙ୍କ ବିଷୟରେ କି ସମ୍ବାଦ ଦେଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମହାରାଜ ଅସୁସ୍ଥ, ମଗଧ ସୈନ୍ୟ ଆଗେଇ ଆସୁଛନ୍ତି। ମହାରାଣୀ କୁରୁବକୀ ରାଜଜେମା ରାଜେଶ୍ୱରୀଙ୍କୁ ଭାର ଦେବାର ପ୍ରସ୍ତାବ ଜଣାନ୍ତି। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମହାରାଜାଙ୍କ ଅବସ୍ଥାର ପରିବର୍ତ୍ତନ ହୋଇନାହିଁ। ସେ ନିଜର ଏକମାତ୍ର ଦାୟାଦ ରାଜଜେମାଙ୍କୁ ଦାୟିତ୍ୱ ଦେବାର ପ୍ରସ୍ତାବ ସଭାସଦଙ୍କ ବିଚାର ପାଇଁ ପଠାଇଛନ୍ତି ବୋଲି ମହାରାଣୀ କହିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=101">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-11"><h2>୧୧. ଲେଖିକାଙ୍କ ଅନ୍ୟ ଗଳ୍ପ ପଢ଼ିବା ପାଇଁ ପାଠନ ନୋଟ ସଜାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଠାଗାରରେ ନନ୍ଦିନୀ ଶତପଥୀଙ୍କ ଗଳ୍ପ ଖୋଜି ନାମ ଓ ପୁସ୍ତକର ବିବରଣୀ ଲେଖିବି। ପଢ଼ିସାରି ଗୋଟିଏ ପାତ୍ରର କଥା ଲେଖି ଅଙ୍ଗଦଙ୍କ ଅନୁଭୂତି ସହ ତୁଳନା କରିବି।</p><p>ଅନ୍ୟ ଗଳ୍ପର ପାଠ ଏହି PDFରେ ସାମିଲ ନାହିଁ।</p><p>ଲେଖକ ପରିଚୟରେ ‘କେତୋଟି କଥା’ ଓ ‘ସପ୍ତଦଶୀ’ ତାଙ୍କ ଓଡ଼ିଆ କ୍ଷୁଦ୍ରଗଳ୍ପର ଦୁଇଟି ସଂକଳନ ବୋଲି ଦିଆଯାଇଛି। ପାଠାଗାରରେ ଏହି ନାମ ଧରି ଅନ୍ୟ ଗଳ୍ପର ସନ୍ଧାନ କରିବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=100">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+<article id="exercise-12"><h2>୧୨. ଗଳ୍ପରୁ ଶ୍ରେଣୀ ଅଭିନୟ ପାଇଁ ନାଟ୍ୟରୂପ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୃଶ୍ୟରେ ଅଙ୍ଗଦଙ୍କ ପ୍ରଶ୍ନ, ଦ୍ୱିତୀୟରେ ପ୍ରାଚୀନ ସଭାର ଭିନ୍ନ ମତ ଓ ଶେଷରେ ଯୁଦ୍ଧର ପରିଣାମ ରଖିହୁଏ। ସମୟ ବଦଳିବା ସହ ମଞ୍ଚର ସ୍ଥାନ ବଦଳିଲେ ଦର୍ଶକ ବର୍ତ୍ତମାନ ଓ ଅତୀତର ସମ୍ପର୍କ ଧରିପାରିବେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୃଶ୍ୟ ୧, ଧଉଳି। ଅଙ୍ଗଦ — ଶିଳାଲେଖରେ ଅଶୋକଙ୍କ କଥା ପଢ଼ୁଛି।</p><p>କଳିଙ୍ଗ ପଟର କଥା କାହିଁ? ପଥପ୍ରଦର୍ଶକ — ମୋ ସହ ଆସ।</p><p>ଦୃଶ୍ୟ ୨, ରାଜସଭା। କୁରୁବକୀ — ରାଜ୍ୟର ଭାର ରାଜଜେମା ନିଅନ୍ତୁ ବୋଲି ମହାରାଜ ଇଚ୍ଛା କରିଛନ୍ତି।</p><p>ରାଜେଶ୍ୱରୀ — ଆମେ ସମସ୍ତେ ମିଶି କଳିଙ୍ଗ ପାଇଁ ଠିଆ ହେବା।</p><p>ଦୃଶ୍ୟ ୩, ଦୟାତୀର। ଘୋଷକ — ନରହତ୍ୟାରେ ମର୍ମାହତ ସମ୍ରାଟ ଯୁଦ୍ଧବିରତି ଘୋଷଣା କରିଛନ୍ତି।</p><p>ଅଙ୍ଗଦ — ଆପଣ କ’ଣ ଇତିହାସପୁରୁଷ? ଆଲୋକ କମେ।</p><p>ଶାନ୍ତିସ୍ତୂପ ଉପରେ ତାରା ଦିଶେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=100">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୦–୧୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=105" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୫</a></small></article>
+
+</main></body></html>

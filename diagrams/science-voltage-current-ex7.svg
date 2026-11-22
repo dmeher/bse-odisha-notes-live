@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 560 268"><title id="title">V–I graph</title><desc id="desc">Current in amperes on the horizontal axis. Voltage in volts on the vertical axis. Five observations and a best-fit straight line through the origin.</desc><rect width="100%" height="100%" fill="white"/>
+<path d="M54 239L54 29" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="54" y="257" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">0</text>
+<path d="M157 239L157 29" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="157" y="257" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">1</text>
+<path d="M260 239L260 29" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="260" y="257" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">2</text>
+<path d="M363 239L363 29" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="363" y="257" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">3</text>
+<path d="M466 239L466 29" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="466" y="257" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">4</text>
+<path d="M54 239L507.2 239" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="243" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">0</text>
+<path d="M54 211L507.2 211" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="215" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">2</text>
+<path d="M54 183L507.2 183" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="187" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">4</text>
+<path d="M54 155L507.2 155" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="159" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">6</text>
+<path d="M54 127L507.2 127" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="131" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">8</text>
+<path d="M54 99L507.2 99" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="103" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">10</text>
+<path d="M54 71L507.2 71" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="75" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">12</text>
+<path d="M54 43L507.2 43" fill="none" stroke="#d3dcd8" stroke-width="1"/>
+<text x="43" y="47" text-anchor="end" font-size="14" font-family="sans-serif" fill="#162c28">14</text>
+<path d="M54 239L512.35 239" fill="none" stroke="#283a35" stroke-width="2"/><path d="M504.35 242.50 L512.35 239.00 L504.35 235.50" fill="none" stroke="#283a35" stroke-width="2"/>
+<path d="M54 239L54 19.2" fill="none" stroke="#283a35" stroke-width="2"/><path d="M57.50 27.20 L54.00 19.20 L50.50 27.20" fill="none" stroke="#283a35" stroke-width="2"/>
+<text x="524" y="244" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">I (A)</text>
+<text x="48" y="13" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">V (V)</text>
+<path d="M54 239L496.9 38.53" fill="none" stroke="#367c63" stroke-width="2"/>
+<circle cx="105.5" cy="216.6" r="3.5" fill="#833f25"/>
+<text x="110.5" y="207.6" text-anchor="start" font-size="12" font-family="sans-serif" fill="#162c28">(0.5, 1.6)</text>
+<circle cx="157" cy="191.4" r="3.5" fill="#833f25"/>
+<text x="162" y="182.4" text-anchor="start" font-size="12" font-family="sans-serif" fill="#162c28">(1, 3.4)</text>
+<circle cx="260" cy="145.2" r="3.5" fill="#833f25"/>
+<text x="265" y="136.2" text-anchor="start" font-size="12" font-family="sans-serif" fill="#162c28">(2, 6.7)</text>
+<circle cx="363" cy="96.20000000000002" r="3.5" fill="#833f25"/>
+<text x="368" y="87.2" text-anchor="start" font-size="12" font-family="sans-serif" fill="#162c28">(3, 10.2)</text>
+<circle cx="466" cy="54.20000000000002" r="3.5" fill="#833f25"/>
+<text x="471" y="45.2" text-anchor="start" font-size="12" font-family="sans-serif" fill="#162c28">(4, 13.2)</text></svg>

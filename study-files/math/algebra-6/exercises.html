@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସ୍ଥାନାଙ୍କ ଜ୍ୟାମିତି · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସ୍ଥାନାଙ୍କ ଜ୍ୟାମିତି</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1Kwa7S1nolzTHd-Za9E8gU1qLxHPrxoyw/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>6(a) · 1–15। 6(b) · 1–20। 6(c) · 1–18। ଦୂରତା, ବିଭାଜନ, ଭରକେନ୍ଦ୍ର ଓ କ୍ଷେତ୍ରଫଳ ସମ୍ବନ୍ଧୀୟ ପ୍ରତି ଉପପ୍ରଶ୍ନ ପ୍ରକାଶିତ। 6(c) 16ର ଦାବି ପାଇଁ ଆବଶ୍ୟକ ସର୍ତ୍ତ ଓ ଏହାର ବିପରୀତ ଉଦାହରଣ ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 7–8, 12–14, 17–18।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୦୫)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">6(a) · 1(i)</a> <a href="#exercise-2">6(a) · 1(ii)</a> <a href="#exercise-3">6(a) · 1(iii)</a> <a href="#exercise-4">6(a) · 1(iv)</a> <a href="#exercise-5">6(a) · 1(v)</a> <a href="#exercise-6">6(a) · 1(vi)</a> <a href="#exercise-7">6(a) · 2(i)</a> <a href="#exercise-8">6(a) · 2(ii)</a> <a href="#exercise-9">6(a) · 2(iii)</a> <a href="#exercise-10">6(a) · 2(iv)</a> <a href="#exercise-11">6(a) · 2(v)</a> <a href="#exercise-12">6(a) · 3(i)</a> <a href="#exercise-13">6(a) · 3(ii)</a> <a href="#exercise-14">6(a) · 3(iii)</a> <a href="#exercise-15">6(a) · 3(iv)</a> <a href="#exercise-16">6(a) · 3(v)</a> <a href="#exercise-17">6(a) · 4(i)</a> <a href="#exercise-18">6(a) · 4(ii)</a> <a href="#exercise-19">6(a) · 4(iii)</a> <a href="#exercise-20">6(a) · 4(iv)</a> <a href="#exercise-21">6(a) · 4(v)</a> <a href="#exercise-22">6(a) · 4(vi)</a> <a href="#exercise-23">6(a) · 5(i)</a> <a href="#exercise-24">6(a) · 5(ii)</a> <a href="#exercise-25">6(a) · 5(iii)</a> <a href="#exercise-26">6(a) · 5(iv)</a> <a href="#exercise-27">6(a) · 5(v)</a> <a href="#exercise-28">6(a) · 5(vi)</a> <a href="#exercise-29">6(a) · 6(i)</a> <a href="#exercise-30">6(a) · 6(ii)</a> <a href="#exercise-31">6(a) · 6(iii)</a> <a href="#exercise-32">6(a) · 6(iv)</a> <a href="#exercise-33">6(a) · 6(v)</a> <a href="#exercise-34">6(a) · 7</a> <a href="#exercise-35">6(a) · 8</a> <a href="#exercise-36">6(a) · 9</a> <a href="#exercise-37">6(a) · 10</a> <a href="#exercise-38">6(a) · 11</a> <a href="#exercise-39">6(a) · 12</a> <a href="#exercise-40">6(a) · 13</a> <a href="#exercise-41">6(a) · 14</a> <a href="#exercise-42">6(a) · 15</a> <a href="#exercise-43">6(b) · 1(i)</a> <a href="#exercise-44">6(b) · 1(ii)</a> <a href="#exercise-45">6(b) · 1(iii)</a> <a href="#exercise-46">6(b) · 1(iv)</a> <a href="#exercise-47">6(b) · 2(i)</a> <a href="#exercise-48">6(b) · 2(ii)</a> <a href="#exercise-49">6(b) · 2(iii)</a> <a href="#exercise-50">6(b) · 2(iv)</a> <a href="#exercise-51">6(b) · 2(v)</a> <a href="#exercise-52">6(b) · 2(vi)</a> <a href="#exercise-53">6(b) · 2(vii)</a> <a href="#exercise-54">6(b) · 2(viii)</a> <a href="#exercise-55">6(b) · 3(i)</a> <a href="#exercise-56">6(b) · 3(ii)</a> <a href="#exercise-57">6(b) · 3(iii)</a> <a href="#exercise-58">6(b) · 3(iv)</a> <a href="#exercise-59">6(b) · 4</a> <a href="#exercise-60">6(b) · 5</a> <a href="#exercise-61">6(b) · 6</a> <a href="#exercise-62">6(b) · 7</a> <a href="#exercise-63">6(b) · 8</a> <a href="#exercise-64">6(b) · 9</a> <a href="#exercise-65">6(b) · 10</a> <a href="#exercise-66">6(b) · 11</a> <a href="#exercise-67">6(b) · 12</a> <a href="#exercise-68">6(b) · 13</a> <a href="#exercise-69">6(b) · 14</a> <a href="#exercise-70">6(b) · 15</a> <a href="#exercise-71">6(b) · 16</a> <a href="#exercise-72">6(b) · 17</a> <a href="#exercise-73">6(b) · 18</a> <a href="#exercise-74">6(b) · 19</a> <a href="#exercise-75">6(b) · 20(i–iv)</a> <a href="#exercise-76">6(c) · 1(i)</a> <a href="#exercise-77">6(c) · 1(ii)</a> <a href="#exercise-78">6(c) · 1(iii)</a> <a href="#exercise-79">6(c) · 1(iv)</a> <a href="#exercise-80">6(c) · 1(v)</a> <a href="#exercise-81">6(c) · 2(i)</a> <a href="#exercise-82">6(c) · 2(ii)</a> <a href="#exercise-83">6(c) · 2(iii)</a> <a href="#exercise-84">6(c) · 2(iv)</a> <a href="#exercise-85">6(c) · 2(v)</a> <a href="#exercise-86">6(c) · 3(i)</a> <a href="#exercise-87">6(c) · 3(ii)</a> <a href="#exercise-88">6(c) · 3(iii)</a> <a href="#exercise-89">6(c) · 3(iv)</a> <a href="#exercise-90">6(c) · 3(v)</a> <a href="#exercise-91">6(c) · 4</a> <a href="#exercise-92">6(c) · 5</a> <a href="#exercise-93">6(c) · 6</a> <a href="#exercise-94">6(c) · 7</a> <a href="#exercise-95">6(c) · 8</a> <a href="#exercise-96">6(c) · 9</a> <a href="#exercise-97">6(c) · 10</a> <a href="#exercise-98">6(c) · 11</a> <a href="#exercise-99">6(c) · 12</a> <a href="#exercise-100">6(c) · 13</a> <a href="#exercise-101">6(c) · 14</a> <a href="#exercise-102">6(c) · 15</a> <a href="#exercise-103">6(c) · 16</a> <a href="#exercise-104">6(c) · 17</a> <a href="#exercise-105">6(c) · 18</a></nav></details>
+<article id="exercise-1"><h2>6(a) · 1(i). (0, 0) ଓ (4, 3) ମଧ୍ୟରେ ଦୂରତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |4 − (0)| = 4, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |3 − (0)| = 3। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 16 + 9 = 25।</li><li>ଭୁଜର ଅନ୍ତର 4 − (0) = 4, କୋଟିର ଅନ୍ତର 3 − (0) = 3।</li><li>ଦୂରତାର ବର୍ଗ = (4)² + (3)² = 16 + 9 = 25।</li><li>ଧନାତ୍ମକ ବର୍ଗମୂଳ ନେଲେ ଦୂରତା = 5।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-2"><h2>6(a) · 1(ii). (0, 2) ଓ (-6, 2) ମଧ୍ୟରେ ଦୂରତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |−6 − (0)| = 6, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |2 − (2)| = 0। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 36 + 0 = 36।</li><li>ଭୁଜର ଅନ୍ତର -6 − (0) = -6, କୋଟିର ଅନ୍ତର 2 − (2) = 0।</li><li>ଦୂରତାର ବର୍ଗ = (-6)² + (0)² = 36 + 0 = 36।</li><li>ଧନାତ୍ମକ ବର୍ଗମୂଳ ନେଲେ ଦୂରତା = 6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-3"><h2>6(a) · 1(iii). (-3, 0) ଓ (5, 6) ମଧ୍ୟରେ ଦୂରତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |5 − (−3)| = 8, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |6 − (0)| = 6। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 64 + 36 = 100।</li><li>ଭୁଜର ଅନ୍ତର 5 − (-3) = 8, କୋଟିର ଅନ୍ତର 6 − (0) = 6।</li><li>ଦୂରତାର ବର୍ଗ = (8)² + (6)² = 64 + 36 = 100।</li><li>ଧନାତ୍ମକ ବର୍ଗମୂଳ ନେଲେ ଦୂରତା = 10।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>10 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-4"><h2>6(a) · 1(iv). (2, 4) ଓ (1, 3) ମଧ୍ୟରେ ଦୂରତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |1 − (2)| = 1, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |3 − (4)| = 1। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 1 + 1 = 2।</li><li>ଭୁଜର ଅନ୍ତର 1 − (2) = -1, କୋଟିର ଅନ୍ତର 3 − (4) = -1।</li><li>ଦୂରତାର ବର୍ଗ = (-1)² + (-1)² = 1 + 1 = 2।</li><li>ଧନାତ୍ମକ ବର୍ଗମୂଳ ନେଲେ ଦୂରତା = √2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√2 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-5"><h2>6(a) · 1(v). (-2, -2) ଓ (-3, -5) ମଧ୍ୟରେ ଦୂରତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |−3 − (−2)| = 1, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |−5 − (−2)| = 3। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 1 + 9 = 10।</li><li>ଭୁଜର ଅନ୍ତର -3 − (-2) = -1, କୋଟିର ଅନ୍ତର -5 − (-2) = -3।</li><li>ଦୂରତାର ବର୍ଗ = (-1)² + (-3)² = 1 + 9 = 10।</li><li>ଧନାତ୍ମକ ବର୍ଗମୂଳ ନେଲେ ଦୂରତା = √10।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√10 ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-6"><h2>6(a) · 1(vi). (a, −b) ଓ (−a, b) ମଧ୍ୟରେ ଦୂରତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭୁଜର ଅନ୍ତର −2a ଓ କୋଟିର ଅନ୍ତର 2b।</li><li>ଦୂରତାର ବର୍ଗ = 4a² + 4b²। ବର୍ଗମୂଳ ନେଲେ √4 × √(a² + b²) ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2√(a² + b²) ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-7"><h2>6(a) · 2(i). (0, 1) ଓ (−1, 0) ମୂଳବିନ୍ଦୁଠାରୁ ସମଦୂରବର୍ତ୍ତୀ କି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ବିନ୍ଦୁର ମୂଳବିନ୍ଦୁଠାରୁ ଦୂରତାର ବର୍ଗ = 0² + 1² = 1।</li><li>ଦ୍ୱିତୀୟ ବିନ୍ଦୁ ପାଇଁ ଦୂରତାର ବର୍ଗ = (−1)² + 0² = 1।</li><li>ବର୍ଗଦ୍ୱୟ ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ହଁ, ଦୂରତା ସମାନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-8"><h2>6(a) · 2(ii). (2, 3) ଓ (4, 3/2) ମୂଳବିନ୍ଦୁଠାରୁ ସମଦୂରବର୍ତ୍ତୀ କି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ବିନ୍ଦୁର ମୂଳବିନ୍ଦୁଠାରୁ ଦୂରତାର ବର୍ଗ = 2² + 3² = 13।</li><li>ଦ୍ୱିତୀୟ ବିନ୍ଦୁ ପାଇଁ ଦୂରତାର ବର୍ଗ = 4² + (3/2)² = 73/4।</li><li>ବର୍ଗଦ୍ୱୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନା, ଦୂରତା ଭିନ୍ନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-9"><h2>6(a) · 2(iii). (√7, √19) ଓ (−√7, −√19) ମୂଳବିନ୍ଦୁଠାରୁ ସମଦୂରବର୍ତ୍ତୀ କି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ବିନ୍ଦୁର ମୂଳବିନ୍ଦୁଠାରୁ ଦୂରତାର ବର୍ଗ = 7 + 19 = 26।</li><li>ଦ୍ୱିତୀୟ ବିନ୍ଦୁ ପାଇଁ ଦୂରତାର ବର୍ଗ = 7 + 19 = 26।</li><li>ବର୍ଗଦ୍ୱୟ ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ହଁ, ଦୂରତା ସମାନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-10"><h2>6(a) · 2(iv). (4, −2) ଓ (2, 4) ମୂଳବିନ୍ଦୁଠାରୁ ସମଦୂରବର୍ତ୍ତୀ କି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ବିନ୍ଦୁର ମୂଳବିନ୍ଦୁଠାରୁ ଦୂରତାର ବର୍ଗ = 16 + 4 = 20।</li><li>ଦ୍ୱିତୀୟ ବିନ୍ଦୁ ପାଇଁ ଦୂରତାର ବର୍ଗ = 4 + 16 = 20।</li><li>ବର୍ଗଦ୍ୱୟ ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ହଁ, ଦୂରତା ସମାନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-11"><h2>6(a) · 2(v). (0, 4) ଓ (2, 2) ମୂଳବିନ୍ଦୁଠାରୁ ସମଦୂରବର୍ତ୍ତୀ କି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ବିନ୍ଦୁର ମୂଳବିନ୍ଦୁଠାରୁ ଦୂରତାର ବର୍ଗ = 0 + 16 = 16।</li><li>ଦ୍ୱିତୀୟ ବିନ୍ଦୁ ପାଇଁ ଦୂରତାର ବର୍ଗ = 4 + 4 = 8।</li><li>ବର୍ଗଦ୍ୱୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନା, ଦୂରତା ଭିନ୍ନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-12"><h2>6(a) · 3(i). A(3, 3), B(9, 0), C(12, 21)। ଦୂରତା ସୂତ୍ରରେ ସମକୋଣଟି ଚିହ୍ନଟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |9 − (3)| = 6, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |0 − (3)| = 3। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 36 + 9 = 45।</li><li>AB² = (6)² + (−3)² = 45।</li><li>BC² = (3)² + (21)² = 450।</li><li>CA² = (−9)² + (−18)² = 405।</li><li>450 = 405 + 45। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">∠A = 90°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-13"><h2>6(a) · 3(ii). A(1, 1), B(3, 4), C(0, 6)। ଦୂରତା ସୂତ୍ରରେ ସମକୋଣଟି ଚିହ୍ନଟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |3 − (1)| = 2, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |4 − (1)| = 3। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 4 + 9 = 13।</li><li>AB² = (2)² + (3)² = 13।</li><li>BC² = (−3)² + (2)² = 13।</li><li>CA² = (1)² + (−5)² = 26।</li><li>26 = 13 + 13। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>∠B = 90°। AB = BC ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-14"><h2>6(a) · 3(iii). A(−1, −2), B(5, −2), C(5, 6)। ଦୂରତା ସୂତ୍ରରେ ସମକୋଣଟି ଚିହ୍ନଟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |5 − (−1)| = 6, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |−2 − (−2)| = 0। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 36 + 0 = 36।</li><li>AB² = (6)² + (0)² = 36।</li><li>BC² = (0)² + (8)² = 64।</li><li>CA² = (−6)² + (−8)² = 100।</li><li>100 = 36 + 64। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">∠B = 90°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-15"><h2>6(a) · 3(iv). A(12, 8), B(−2, 6), C(6, 0)। ଦୂରତା ସୂତ୍ରରେ ସମକୋଣଟି ଚିହ୍ନଟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |−2 − (12)| = 14, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |6 − (8)| = 2। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 196 + 4 = 200।</li><li>AB² = (−14)² + (−2)² = 200।</li><li>BC² = (8)² + (−6)² = 100।</li><li>CA² = (6)² + (8)² = 100।</li><li>200 = 100 + 100। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>∠C = 90°। BC = CA ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-16"><h2>6(a) · 3(v). A(1, 6), B(5, −1), C(7, 2)। ଦୂରତା ସୂତ୍ରରେ ସମକୋଣଟି ଚିହ୍ନଟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଦୁଇ ବିନ୍ଦୁର ଭୂସମାନ୍ତର ବ୍ୟବଧାନ |5 − (1)| = 4, ଉଲ୍ଲମ୍ବ ବ୍ୟବଧାନ |−1 − (6)| = 7। ଏହି ଦୁଇ ବ୍ୟବଧାନର ବର୍ଗର ସମଷ୍ଟି 16 + 49 = 65।</li><li>AB² = (4)² + (−7)² = 65।</li><li>BC² = (2)² + (3)² = 13।</li><li>CA² = (−6)² + (4)² = 52।</li><li>65 = 13 + 52। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">∠C = 90°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-17"><h2>6(a) · 4(i). A(8, 2), B(5, −3), C(0, 0)। ତ୍ରିଭୁଜ ସମଦ୍ୱିବାହୁ ବୋଲି ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−3)² + (−5)² = 34।</li><li>BC² = (−5)² + (3)² = 34।</li><li>CA² = (8)² + (2)² = 68।</li><li>68 = 34 + 34। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>∠B = 90°। AB = BC ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-18"><h2>6(a) · 4(ii). A(0, 6), B(−5, 3), C(3, 1)। ତ୍ରିଭୁଜ ସମଦ୍ୱିବାହୁ ବୋଲି ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−5)² + (−3)² = 34।</li><li>BC² = (8)² + (−2)² = 68।</li><li>CA² = (−3)² + (5)² = 34।</li><li>68 = 34 + 34। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>∠A = 90°। AB = CA ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-19"><h2>6(a) · 4(iii). A(8, 9), B(−6, 1), C(0, −5)। ତ୍ରିଭୁଜ ସମଦ୍ୱିବାହୁ ବୋଲି ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−14)² + (−8)² = 260।</li><li>BC² = (6)² + (−6)² = 72।</li><li>CA² = (8)² + (14)² = 260।</li><li>ବାହୁର ଦୈର୍ଘ୍ୟର ବର୍ଗ ସମାନ ହେଲେ ବାହୁ ସମାନ।</li><li>ତିନି ବର୍ଗ ଭିନ୍ନ ହେଲେ ତିନି ବାହୁ ମଧ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>AB = CA ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-20"><h2>6(a) · 4(iv). A(7, 1), B(11, 4), C(4, −3)। ତ୍ରିଭୁଜ ସମଦ୍ୱିବାହୁ ବୋଲି ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (4)² + (3)² = 25।</li><li>BC² = (−7)² + (−7)² = 98।</li><li>CA² = (3)² + (4)² = 25।</li><li>ବାହୁର ଦୈର୍ଘ୍ୟର ବର୍ଗ ସମାନ ହେଲେ ବାହୁ ସମାନ।</li><li>ତିନି ବର୍ଗ ଭିନ୍ନ ହେଲେ ତିନି ବାହୁ ମଧ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>AB = CA ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-21"><h2>6(a) · 4(v). A(0, 0), B(4, 0), C(0, −4)। ତ୍ରିଭୁଜ ସମଦ୍ୱିବାହୁ ବୋଲି ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (4)² + (0)² = 16।</li><li>BC² = (−4)² + (−4)² = 32।</li><li>CA² = (0)² + (4)² = 16।</li><li>32 = 16 + 16। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>∠A = 90°। AB = CA ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-22"><h2>6(a) · 4(vi). A(2, 2), B(−2, 4), C(2, 6)। ତ୍ରିଭୁଜ ସମଦ୍ୱିବାହୁ ବୋଲି ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−4)² + (2)² = 20।</li><li>BC² = (4)² + (2)² = 20।</li><li>CA² = (0)² + (−4)² = 16।</li><li>ବାହୁର ଦୈର୍ଘ୍ୟର ବର୍ଗ ସମାନ ହେଲେ ବାହୁ ସମାନ।</li><li>ତିନି ବର୍ଗ ଭିନ୍ନ ହେଲେ ତିନି ବାହୁ ମଧ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>AB = BC ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-23"><h2>6(a) · 5(i). A(1, 1), B(−1, −1), C(−√3, √3)। ବାହୁଗୁଡ଼ିକ ଯାଞ୍ଚ କରି ତ୍ରିଭୁଜର ପ୍ରକାର ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−2)² + (−2)² = 8।</li><li>BC² = (1 − √3)² + (1 + √3)² = 8।</li><li>CA² = (1 + √3)² + (1 − √3)² = 8।</li><li>ବାହୁର ଦୈର୍ଘ୍ୟର ବର୍ଗ ସମାନ ହେଲେ ବାହୁ ସମାନ।</li><li>ତିନି ବର୍ଗ ଭିନ୍ନ ହେଲେ ତିନି ବାହୁ ମଧ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-24"><h2>6(a) · 5(ii). A(3, −3), B(−3, 3), C(3·√3, 3·√3)। ବାହୁଗୁଡ଼ିକ ଯାଞ୍ଚ କରି ତ୍ରିଭୁଜର ପ୍ରକାର ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−6)² + (6)² = 72।</li><li>BC² = (3 + 3·√3)² + (−3 + 3·√3)² = 72।</li><li>CA² = (3 − 3·√3)² + (−3·√3 − 3)² = 72।</li><li>ବାହୁର ଦୈର୍ଘ୍ୟର ବର୍ଗ ସମାନ ହେଲେ ବାହୁ ସମାନ।</li><li>ତିନି ବର୍ଗ ଭିନ୍ନ ହେଲେ ତିନି ବାହୁ ମଧ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-25"><h2>6(a) · 5(iii). A(1, 2), B(3, 4), C(5, 8)। ବାହୁଗୁଡ଼ିକ ଯାଞ୍ଚ କରି ତ୍ରିଭୁଜର ପ୍ରକାର ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (2)² + (2)² = 8।</li><li>BC² = (2)² + (4)² = 20।</li><li>CA² = (−4)² + (−6)² = 52।</li><li>ବାହୁର ଦୈର୍ଘ୍ୟର ବର୍ଗ ସମାନ ହେଲେ ବାହୁ ସମାନ।</li><li>ତିନି ବର୍ଗ ଭିନ୍ନ ହେଲେ ତିନି ବାହୁ ମଧ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଷମବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-26"><h2>6(a) · 5(iv). A(1, 2), B(2, 4), C(3, 5)। ବାହୁଗୁଡ଼ିକ ଯାଞ୍ଚ କରି ତ୍ରିଭୁଜର ପ୍ରକାର ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (1)² + (2)² = 5।</li><li>BC² = (1)² + (1)² = 2।</li><li>CA² = (−2)² + (−3)² = 13।</li><li>ବାହୁର ଦୈର୍ଘ୍ୟର ବର୍ଗ ସମାନ ହେଲେ ବାହୁ ସମାନ।</li><li>ତିନି ବର୍ଗ ଭିନ୍ନ ହେଲେ ତିନି ବାହୁ ମଧ୍ୟ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଷମବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-27"><h2>6(a) · 5(v). A(−2, 3), B(8, 3), C(6, 7)। ବାହୁଗୁଡ଼ିକ ଯାଞ୍ଚ କରି ତ୍ରିଭୁଜର ପ୍ରକାର ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (10)² + (0)² = 100।</li><li>BC² = (−2)² + (4)² = 20।</li><li>CA² = (−8)² + (−4)² = 80।</li><li>100 = 20 + 80। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">∠C = 90°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-28"><h2>6(a) · 5(vi). A(−6, −8), B(−16, 12), C(−26, −18)। ବାହୁଗୁଡ଼ିକ ଯାଞ୍ଚ କରି ତ୍ରିଭୁଜର ପ୍ରକାର ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−10)² + (20)² = 500।</li><li>BC² = (−10)² + (−30)² = 1000।</li><li>CA² = (20)² + (10)² = 500।</li><li>1000 = 500 + 500। ପିଥାଗୋରସ୍ ଉପପାଦ୍ୟର ବିପରୀତ ଅନୁସାରେ କର୍ଣ୍ଣର ବିପରୀତ କୋଣ ସମକୋଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>∠A = 90°। AB = CA ହେତୁ ସମଦ୍ୱିବାହୁ ତ୍ରିଭୁଜ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=113" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୩</a></small></article>
+<article id="exercise-29"><h2>6(a) · 6(i). A(−8, 3), B(−2, −1), C(6, −2), D(0, 2)। ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ସାମାନ୍ତରିକ ଚିତ୍ର ଗଠନ କରନ୍ତି ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ACର ମଧ୍ୟବିନ୍ଦୁ ((x₁ + x₃)/2, (y₁ + y₃)/2) = (−1, 1/2)।</li><li>BDର ମଧ୍ୟବିନ୍ଦୁ ମଧ୍ୟ (−1, 1/2)।</li><li>କର୍ଣ୍ଣଦ୍ୱୟ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କରନ୍ତି। ତେଣୁ ABCD ସାମାନ୍ତରିକ ଚିତ୍ର।</li><li>ଦୂରତା ସୂତ୍ରରେ AB², BC², CD², DA² କ୍ରମେ 52, 65, 52, 65। AC² = 221, BD² = 13।</li><li>ବିପରୀତ ବାହୁ ଦୁଇ ଯୋଡ଼ା ମଧ୍ୟ ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ABCD ଏକ ସାମାନ୍ତରିକ ଚିତ୍ର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-30"><h2>6(a) · 6(ii). A(−2, −1), B(1, 0), C(4, 3), D(1, 2)। ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ସାମାନ୍ତରିକ ଚିତ୍ର ଗଠନ କରନ୍ତି ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ACର ମଧ୍ୟବିନ୍ଦୁ ((x₁ + x₃)/2, (y₁ + y₃)/2) = (1, 1)। BDର ମଧ୍ୟବିନ୍ଦୁ ମଧ୍ୟ (1, 1)।</li><li>କର୍ଣ୍ଣଦ୍ୱୟ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କରନ୍ତି। ତେଣୁ ABCD ସାମାନ୍ତରିକ ଚିତ୍ର।</li><li>ଦୂରତା ସୂତ୍ରରେ AB², BC², CD², DA² କ୍ରମେ 10, 18, 10, 18। AC² = 52, BD² = 4।</li><li>ବିପରୀତ ବାହୁ ଦୁଇ ଯୋଡ଼ା ମଧ୍ୟ ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ABCD ଏକ ସାମାନ୍ତରିକ ଚିତ୍ର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-31"><h2>6(a) · 6(iii). A(0, −1), B(2, 1), C(0, 3), D(−2, 1)। ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ବର୍ଗଚିତ୍ର ଗଠନ କରନ୍ତି ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ACର ମଧ୍ୟବିନ୍ଦୁ ((x₁ + x₃)/2, (y₁ + y₃)/2) = (0, 1)। BDର ମଧ୍ୟବିନ୍ଦୁ ମଧ୍ୟ (0, 1)।</li><li>କର୍ଣ୍ଣଦ୍ୱୟ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କରନ୍ତି। ତେଣୁ ABCD ସାମାନ୍ତରିକ ଚିତ୍ର।</li><li>ଦୂରତା ସୂତ୍ରରେ AB², BC², CD², DA² କ୍ରମେ 8, 8, 8, 8। AC² = 16, BD² = 16।</li><li>ଚାରି ବାହୁ ଓ କର୍ଣ୍ଣଦ୍ୱୟ ସମାନ ହେତୁ ବର୍ଗଚିତ୍ର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ABCD ଏକ ବର୍ଗଚିତ୍ର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-32"><h2>6(a) · 6(iv). A(0, 5), B(−1, 2), C(−4, 3), D(−3, 6)। ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ବର୍ଗଚିତ୍ର ଗଠନ କରନ୍ତି ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ACର ମଧ୍ୟବିନ୍ଦୁ ((x₁ + x₃)/2, (y₁ + y₃)/2) = (−2, 4)।</li><li>BDର ମଧ୍ୟବିନ୍ଦୁ ମଧ୍ୟ (−2, 4)।</li><li>କର୍ଣ୍ଣଦ୍ୱୟ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କରନ୍ତି। ତେଣୁ ABCD ସାମାନ୍ତରିକ ଚିତ୍ର।</li><li>ଦୂରତା ସୂତ୍ରରେ AB², BC², CD², DA² କ୍ରମେ 10, 10, 10, 10। AC² = 20, BD² = 20।</li><li>ଚାରି ବାହୁ ଓ କର୍ଣ୍ଣଦ୍ୱୟ ସମାନ ହେତୁ ବର୍ଗଚିତ୍ର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ABCD ଏକ ବର୍ଗଚିତ୍ର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-33"><h2>6(a) · 6(v). A(−2, 3), B(−4, −1), C(−6, 0), D(−4, 4)। ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ଆୟତଚିତ୍ର ଗଠନ କରନ୍ତି ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ACର ମଧ୍ୟବିନ୍ଦୁ ((x₁ + x₃)/2, (y₁ + y₃)/2) = (−4, 3/2)।</li><li>BDର ମଧ୍ୟବିନ୍ଦୁ ମଧ୍ୟ (−4, 3/2)।</li><li>କର୍ଣ୍ଣଦ୍ୱୟ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କରନ୍ତି। ତେଣୁ ABCD ସାମାନ୍ତରିକ ଚିତ୍ର।</li><li>ଦୂରତା ସୂତ୍ରରେ AB², BC², CD², DA² କ୍ରମେ 20, 5, 20, 5। AC² = 25, BD² = 25।</li><li>କର୍ଣ୍ଣଦ୍ୱୟ ସମାନ ହେତୁ ଏହା ଆୟତଚିତ୍ର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ABCD ଏକ ଆୟତଚିତ୍ର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-34"><h2>6(a) · 7. P(1, 1) ବିନ୍ଦୁ A(0, 2), B(2, 0), C(0, 0) ଠାରୁ ସମଦୂରବର୍ତ୍ତୀ ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>PA² = (−1)² + (1)² = 2।</li><li>PB² = (1)² + (−1)² = 2।</li><li>PC² = (−1)² + (−1)² = 2।</li><li>ଦୂରତା ଅଋଣାତ୍ମକ। ତେଣୁ ତିନିଟି ବର୍ଗ ମାନ ସମାନ ଥିଲେ ତାଙ୍କ ଧନାତ୍ମକ ବର୍ଗମୂଳ ମଧ୍ୟ ସମାନ। ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ପାଇଁ ସେହି ମାନ √2 ଏକକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">PA = PB = PC = √2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-35"><h2>6(a) · 8. C(x, 3) ବିନ୍ଦୁ A(2, 4), B(3, 5)ଠାରୁ ସମଦୂରବର୍ତ୍ତୀ ହେଲେ x ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>CA² = CB² ହେତୁ (x − 2)² + 1 = (x − 3)² + 4।</li><li>ବିସ୍ତାର କଲେ −4x + 5 = −6x + 13। ଏଣୁ 2x = 8।</li><li>x = 4 ବସାଇ ଦେଖ। CA² = (4 − 2)² + (3 − 4)² = 5, CB² = (4 − 3)² + (3 − 5)² = 5। ତେଣୁ ଉଭୟ ଦୂରତା √5।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">x = 4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-36"><h2>6(a) · 9. P(2, y) ଓ Q(−1, 2)ର ଦୂରତା 5 ଏକକ। y ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>PQ² = 3² + (y − 2)² = 25।</li><li>(y − 2)² = 16ରୁ y − 2 = ±4।</li><li>ଦୁଇ ମାନରେ |y − 2| = 4 | x-ସ୍ଥାନାଙ୍କର ବ୍ୟବଧାନ 3 ସ୍ଥିର। 3² + 4² = 25 ହେତୁ ଉଭୟ ମାନ ପାଇଁ PQ = 5।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">y = 6 ବା −2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-37"><h2>6(a) · 10. A(1, 1), B(2, 2), C(3, 3) ଏକରେଖୀୟ ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (1)² + (1)² = 2।</li><li>BC² = (1)² + (1)² = 2।</li><li>CA² = (−2)² + (−2)² = 8।</li><li>ବର୍ଗମୂଳ ନେଲେ CA = AB + BC। ତେଣୁ ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>B ଅନ୍ୟ ଦୁଇ ବିନ୍ଦୁର ମଧ୍ୟବର୍ତ୍ତୀ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-38"><h2>6(a) · 11. A(1, 4), B(−1, 6), C(2, 3) ଏକରେଖୀୟ ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (−2)² + (2)² = 8।</li><li>BC² = (3)² + (−3)² = 18।</li><li>CA² = (−1)² + (1)² = 2।</li><li>ବର୍ଗମୂଳ ନେଲେ BC = CA + AB। ତେଣୁ ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>A ଅନ୍ୟ ଦୁଇ ବିନ୍ଦୁର ମଧ୍ୟବର୍ତ୍ତୀ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-39"><h2>6(a) · 12. A(1, 0), B(2, −3), C(−1, 6) ଏକରେଖୀୟ ବୋଲି ଦର୍ଶାଅ। (1, 0)ର ଅବସ୍ଥାନ ମଧ୍ୟ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (1)² + (−3)² = 10।</li><li>BC² = (−3)² + (9)² = 90।</li><li>CA² = (2)² + (−6)² = 40।</li><li>ବର୍ଗମୂଳ ନେଲେ BC = CA + AB। ତେଣୁ ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>A ଅନ୍ୟ ଦୁଇ ବିନ୍ଦୁର ମଧ୍ୟବର୍ତ୍ତୀ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-40"><h2>6(a) · 13. x-ଅକ୍ଷ ଉପରେ (5, 4) ଓ (−2, 3) ଠାରୁ ସମଦୂରବର୍ତ୍ତୀ ଏକ ବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ଅକ୍ଷ ଉପରେ ବିନ୍ଦୁ (x, 0)। ସମାନ ଦୂରତାର ବର୍ଗ ନେଲେ (x − 5)² + 16 = (x + 2)² + 9।</li><li>−10x + 41 = 4x + 13ରୁ 14x = 28।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(2, 0)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-41"><h2>6(a) · 14. O(0, 0), A(1, 2), B(3, 8), C(3, −1) ହେଲେ AB = 2CO ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB² = (2)² + (6)² = 40।</li><li>CO² = (−3)² + (1)² = 10।</li><li>40 = 4 × 10 ହେତୁ ଦୈର୍ଘ୍ୟର ବର୍ଗମୂଳ ନେଲେ AB = 2CO।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">AB = 2√10 = 2CO।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-42"><h2>6(a) · 15. ସମବାହୁ ତ୍ରିଭୁଜର ଦୁଇ ଶୀର୍ଷ (0, 3) ଓ (4, 3)। ତୃତୀୟ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦତ୍ତ ବାହୁ 4 ଏକକ, ମଧ୍ୟବିନ୍ଦୁ (2, 3)। ତୃତୀୟ ଶୀର୍ଷ ଲମ୍ବ ସମଦ୍ୱିଖଣ୍ଡକ x = 2ରେ।</li><li>ତୃତୀୟ ଶୀର୍ଷ (2, y) ନେଲେ 2² + (y − 3)² = 4²।</li><li>(y − 3)² = 12ରୁ y = 3 ± 2√3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(2, 3 + 2√3) ବା (2, 3 − 2√3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪</a></small></article>
+<article id="exercise-43"><h2>6(b) · 1(i). (1, −2) ଯଦି (4, 2) ଓ (k, −6)ର ମଧ୍ୟବିନ୍ଦୁ, kର ମାନ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>x-ସ୍ଥାନାଙ୍କରୁ (4 + k)/2 = 1, ତେଣୁ k = −2।</li><li>y-ସ୍ଥାନାଙ୍କ (2 − 6)/2 = −2 ମଧ୍ୟ ମେଳ ଖାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">k = −2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-44"><h2>6(b) · 1(ii). (−2, 3) ଓ (3, −2)ର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>x = (−2 + 3)/2 = 1/2।</li><li>y = (3 − 2)/2 = 1/2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(1/2, 1/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-45"><h2>6(b) · 1(iii). ମଧ୍ୟବିନ୍ଦୁ ମୂଳବିନ୍ଦୁ ଓ ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (2, 3) ହେଲେ ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ କେଉଁଟି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ (x, y) ନିଅ।</li><li>(2 + x)/2 = (3 + y)/2 = 0 ହେତୁ x = −2, y = −3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(−2, −3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-46"><h2>6(b) · 1(iv). (0, 2) ଓ (2, 0)କୁ ସଂଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡକୁ 1 : 2 ଅନୁପାତରେ ଅନ୍ତର୍ବିଭାଜନ କରୁଥିବା ବିନ୍ଦୁ କେଉଁଟି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ତର୍ବିଭାଜନରେ AP : PB = m : n ହେଲେ Aର ସ୍ଥାନାଙ୍କକୁ nରେ ଓ Bର ସ୍ଥାନାଙ୍କକୁ mରେ ଗୁଣ କରାଯାଏ। ଉଭୟ ସ୍ଥାନାଙ୍କ ପାଇଁ ହର m + n।</li><li>ବିଭାଜନ ସୂତ୍ରରେ ପ୍ରଥମ ବିନ୍ଦୁର ଓଜନ 2 ଓ ଦ୍ୱିତୀୟର 1।</li><li>x = (2 × 0 + 1 × 2)/3 = 2/3, y = (2 × 2 + 1 × 0)/3 = 4/3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(2/3, 4/3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-47"><h2>6(b) · 2(i). (3, 4) ଓ (1, −2)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ସ୍ଥାନାଙ୍କ = [(3) + (1)]/2 = 2।</li><li>y-ସ୍ଥାନାଙ୍କ = [(4) + (−2)]/2 = 1।</li><li>ଯାଞ୍ଚରେ ପ୍ରଥମ ପ୍ରାନ୍ତରୁ ମଧ୍ୟବିନ୍ଦୁ ଓ ମଧ୍ୟବିନ୍ଦୁରୁ ଦ୍ୱିତୀୟ ପ୍ରାନ୍ତ ପର୍ଯ୍ୟନ୍ତ x ଓ y ସ୍ଥାନାଙ୍କର ପରିବର୍ତ୍ତନ ଉଭୟଥର (−1, −3)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(2, 1)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-48"><h2>6(b) · 2(ii). (−1, 3) ଓ (4, 0)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ସ୍ଥାନାଙ୍କ = [(−1) + (4)]/2 = 3/2।</li><li>y-ସ୍ଥାନାଙ୍କ = [(3) + (0)]/2 = 3/2।</li><li>ଯାଞ୍ଚରେ ପ୍ରଥମ ପ୍ରାନ୍ତରୁ ମଧ୍ୟବିନ୍ଦୁ ଓ ମଧ୍ୟବିନ୍ଦୁରୁ ଦ୍ୱିତୀୟ ପ୍ରାନ୍ତ ପର୍ଯ୍ୟନ୍ତ x ଓ y ସ୍ଥାନାଙ୍କର ପରିବର୍ତ୍ତନ ଉଭୟଥର (5/2, −3/2)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(3/2, 3/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-49"><h2>6(b) · 2(iii). (1/2, 1/3) ଓ (1/3, 1/2)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ସ୍ଥାନାଙ୍କ = [(1/2) + (1/3)]/2 = 5/12।</li><li>y-ସ୍ଥାନାଙ୍କ = [(1/3) + (1/2)]/2 = 5/12।</li><li>ଯାଞ୍ଚରେ ପ୍ରଥମ ପ୍ରାନ୍ତରୁ ମଧ୍ୟବିନ୍ଦୁ ଓ ମଧ୍ୟବିନ୍ଦୁରୁ ଦ୍ୱିତୀୟ ପ୍ରାନ୍ତ ପର୍ଯ୍ୟନ୍ତ x ଓ y ସ୍ଥାନାଙ୍କର ପରିବର୍ତ୍ତନ ଉଭୟଥର (−1/12, 1/12)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(5/12, 5/12)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-50"><h2>6(b) · 2(iv). (0, −3) ଓ (−4, 0)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ସ୍ଥାନାଙ୍କ = [(0) + (−4)]/2 = −2।</li><li>y-ସ୍ଥାନାଙ୍କ = [(−3) + (0)]/2 = −3/2।</li><li>ଯାଞ୍ଚରେ ପ୍ରଥମ ପ୍ରାନ୍ତରୁ ମଧ୍ୟବିନ୍ଦୁ ଓ ମଧ୍ୟବିନ୍ଦୁରୁ ଦ୍ୱିତୀୟ ପ୍ରାନ୍ତ ପର୍ଯ୍ୟନ୍ତ x ଓ y ସ୍ଥାନାଙ୍କର ପରିବର୍ତ୍ତନ ଉଭୟଥର (−2, 3/2)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(−2, −3/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-51"><h2>6(b) · 2(v). (−1, −2) ଓ (3, −1)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ସ୍ଥାନାଙ୍କ = [(−1) + (3)]/2 = 1।</li><li>y-ସ୍ଥାନାଙ୍କ = [(−2) + (−1)]/2 = −3/2।</li><li>ଯାଞ୍ଚରେ ପ୍ରଥମ ପ୍ରାନ୍ତରୁ ମଧ୍ୟବିନ୍ଦୁ ଓ ମଧ୍ୟବିନ୍ଦୁରୁ ଦ୍ୱିତୀୟ ପ୍ରାନ୍ତ ପର୍ଯ୍ୟନ୍ତ x ଓ y ସ୍ଥାନାଙ୍କର ପରିବର୍ତ୍ତନ ଉଭୟଥର (2, 1/2)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(1, −3/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-52"><h2>6(b) · 2(vi). (a, b) ଓ (c, d)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>x-ସ୍ଥାନାଙ୍କ = [(a) + (c)]/2 = (a + c)/2।</li><li>y-ସ୍ଥାନାଙ୍କ = [(b) + (d)]/2 = (b + d)/2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>((a + c)/2, (b + d)/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-53"><h2>6(b) · 2(vii). (−2, 1) ଓ (−3, −4)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ସ୍ଥାନାଙ୍କ = [(−2) + (−3)]/2 = −5/2।</li><li>y-ସ୍ଥାନାଙ୍କ = [(1) + (−4)]/2 = −3/2।</li><li>ଯାଞ୍ଚରେ ପ୍ରଥମ ପ୍ରାନ୍ତରୁ ମଧ୍ୟବିନ୍ଦୁ ଓ ମଧ୍ୟବିନ୍ଦୁରୁ ଦ୍ୱିତୀୟ ପ୍ରାନ୍ତ ପର୍ଯ୍ୟନ୍ତ x ଓ y ସ୍ଥାନାଙ୍କର ପରିବର୍ତ୍ତନ ଉଭୟଥର (−1/2, −5/2)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(−5/2, −3/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-54"><h2>6(b) · 2(viii). (a·t₁², 2·a·t₁) ଓ (a·t₂², 2·a·t₂)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>x-ସ୍ଥାନାଙ୍କ = [(a·t₁²) + (a·t₂²)]/2 = a·(t₁² + t₂²)/2।</li><li>y-ସ୍ଥାନାଙ୍କ = [(2·a·t₁) + (2·a·t₂)]/2 = a·(t₁ + t₂)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(a·(t₁² + t₂²)/2, a·(t₁ + t₂))।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-55"><h2>6(b) · 3(i). (h, −1) ଓ (2, k)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।</li><li>ତେଣୁ h + 4 = 0 ଏବଂ k − 5 = 0।</li><li>ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −4, k = 5। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">h = −4, k = 5।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-56"><h2>6(b) · 3(ii). (5, 3) ଓ (h, k)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।</li><li>ତେଣୁ h + 7 = 0 ଏବଂ k − 1 = 0।</li><li>ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −7, k = 1। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">h = −7, k = 1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-57"><h2>6(b) · 3(iii). (h + 1, k) ଓ (k, −h − 1)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।</li><li>ତେଣୁ h + k + 3 = 0 ଏବଂ −h + k − 5 = 0।</li><li>ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −4, k = 1। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">h = −4, k = 1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-58"><h2>6(b) · 3(iv). (h − k, −h + k) ଓ (2·h, 2·k)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।</li><li>ତେଣୁ 3·h − k + 2 = 0 ଏବଂ −h + 3·k − 4 = 0।</li><li>ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −1/4, k = 5/4। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">h = −1/4, k = 5/4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-59"><h2>6(b) · 4. ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (2, 3) ଓ ମଧ୍ୟବିନ୍ଦୁ (0, 0)। ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ ସ୍ଥିର କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ଅପର ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ = 2 × ମଧ୍ୟବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ − ପ୍ରଥମ ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ।</li><li>x = 2(0) − (2) = -2। y = 2(0) − (3) = -3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(−2, −3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-60"><h2>6(b) · 5. ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (−2, 4) ଓ ମଧ୍ୟବିନ୍ଦୁ (1, 2)। ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ ସ୍ଥିର କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ଅପର ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ = 2 × ମଧ୍ୟବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ − ପ୍ରଥମ ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ।</li><li>x = 2(1) − (-2) = 4। y = 2(2) − (4) = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(4, 0)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-61"><h2>6(b) · 6. ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (3, 5) ଓ ମଧ୍ୟବିନ୍ଦୁ (2, 1)। ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ ସ୍ଥିର କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>ଅପର ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ = 2 × ମଧ୍ୟବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ − ପ୍ରଥମ ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ।</li><li>x = 2(2) − (3) = 1। y = 2(1) − (5) = -3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(1, −3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-62"><h2>6(b) · 7. (6, −2), (2, −4)କୁ ଯୋଗ କରୁଥିବା ଖଣ୍ଡ ଓ (x, 1), (−2, y)କୁ ଯୋଗ କରୁଥିବା ଖଣ୍ଡ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କଲେ x ଓ y କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ (4, −3)। ଦ୍ୱିତୀୟର ମଧ୍ୟବିନ୍ଦୁ ((x − 2)/2, (1 + y)/2)।</li><li>ଅନୁରୂପ ସ୍ଥାନାଙ୍କ ସମାନ କଲେ x − 2 = 8 ଓ 1 + y = −6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">x = 10, y = −7।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-63"><h2>6(b) · 8. A(2, 3), B(1, 4)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡକୁ 3 : 2 ଅନୁପାତରେ ଅନ୍ତର୍ବିଭାଜନ କରୁଥିବା ବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ତର୍ବିଭାଜନରେ AP : PB = m : n ହେଲେ Aର ସ୍ଥାନାଙ୍କକୁ nରେ ଓ Bର ସ୍ଥାନାଙ୍କକୁ mରେ ଗୁଣ କରାଯାଏ। ଉଭୟ ସ୍ଥାନାଙ୍କ ପାଇଁ ହର m + n।</li><li>AP : PB = 3 : 2। ଅନ୍ତର୍ବିଭାଜନ ସୂତ୍ରର ହର 3 + 2 = 5।</li><li>x = [3(1) + 2(2)]/5 = 7/5।</li><li>y = [3(4) + 2(3)]/5 = 18/5।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(7/5, 18/5)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-64"><h2>6(b) · 9. A(−2, 3), B(5, −7)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡକୁ 3 : 4 ଅନୁପାତରେ ବହିର୍ବିଭାଜନ କରୁଥିବା ବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ତର୍ବିଭାଜନରେ AP : PB = m : n ହେଲେ Aର ସ୍ଥାନାଙ୍କକୁ nରେ ଓ Bର ସ୍ଥାନାଙ୍କକୁ mରେ ଗୁଣ କରାଯାଏ। ଉଭୟ ସ୍ଥାନାଙ୍କ ପାଇଁ ହର m + n।</li><li>AP : PB = 3 : 4। ବହିର୍ବିଭାଜନ ସୂତ୍ରର ହର 3 − 4 = -1।</li><li>x = [3(5) − 4(-2)]/-1 = −23।</li><li>y = [3(-7) − 4(3)]/-1 = 33।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(−23, 33)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-65"><h2>6(b) · 10. (5, 9) ବିନ୍ଦୁ (7, −3) ଓ (4, k)କୁ ସଂଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡକୁ 2 : 1 ଅନୁପାତରେ ଅନ୍ତର୍ବିଭାଜନ କଲେ k କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>x-ସ୍ଥାନାଙ୍କ (2 × 4 + 7)/3 = 5।</li><li>y-ସ୍ଥାନାଙ୍କ 9 = (2k − 3)/3, ଏଣୁ 2k − 3 = 27 ଓ k = 15।</li><li>ଅନ୍ତର୍ବିଭାଜନରେ x-ସ୍ଥାନାଙ୍କ ଯାଞ୍ଚ କର। (2 × 4 + 1 × 7)/(2 + 1) = 5। ତେଣୁ y ପାଇଁ ମଧ୍ୟ ଏହି କ୍ରମରେ ଗୁଣକ ଲଗାଇ (2k − 3)/3 = 9 ସମାଧାନ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">k = 15।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-66"><h2>6(b) · 11. ସ୍ଥାନାଙ୍କ ଜ୍ୟାମିତି ସାହାଯ୍ୟରେ ପ୍ରମାଣ କର ଯେ ତ୍ରିଭୁଜର ମଧ୍ୟମାତ୍ରୟ ଏକବିନ୍ଦୁଗାମୀ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୀର୍ଷ A(x₁,y₁), B(x₂,y₂), C(x₃,y₃) ନିଅ।</li><li>BCର ମଧ୍ୟବିନ୍ଦୁ D = ((x₂ + x₃)/2, (y₂ + y₃)/2)।</li><li>ADରେ AG : GD = 2 : 1 ଥିବା ବିନ୍ଦୁର x-ସ୍ଥାନାଙ୍କ [x₁ + 2(x₂ + x₃)/2]/3 = (x₁ + x₂ + x₃)/3।</li><li>y-ସ୍ଥାନାଙ୍କ ମଧ୍ୟ (y₁ + y₂ + y₃)/3।</li><li>ଶୀର୍ଷମାନଙ୍କ ନାମ ଚକ୍ରାକାରେ ବଦଳାଇଲେ ଅନ୍ୟ ଦୁଇ ମଧ୍ୟମା ପାଇଁ ମଧ୍ୟ ସେହି ଦୁଇ ସ୍ଥାନାଙ୍କ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତିନି ମଧ୍ୟମା ଏକେ ଭରକେନ୍ଦ୍ର Gରେ ମିଳନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-67"><h2>6(b) · 12. (h, 5), (−4, k), (8, 9) ଶୀର୍ଷର ତ୍ରିଭୁଜର ଭରକେନ୍ଦ୍ର (−2, 6) ହେଲେ h ଓ k କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |</li><li>(h − 4 + 8)/3 = −2ରୁ h + 4 = −6।</li><li>(5 + k + 9)/3 = 6ରୁ k + 14 = 18।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">h = −10, k = 4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-68"><h2>6(b) · 13. ABCର ଭରକେନ୍ଦ୍ର (1, 1), A(3, −4), B(−4, 7)। C ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |</li><li>C(x, y) ନିଅ। (3 − 4 + x)/3 = 1ରୁ x = 4।</li><li>(−4 + 7 + y)/3 = 1ରୁ y = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>C(4, 0)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-69"><h2>6(b) · 14. (−4, 1), (3, −4), (1, 3) ଶୀର୍ଷ ଥିବା ତ୍ରିଭୁଜର ଭରକେନ୍ଦ୍ର ମୂଳବିନ୍ଦୁ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |</li><li>x-ସ୍ଥାନାଙ୍କ (−4 + 3 + 1)/3 = 0।</li><li>y-ସ୍ଥାନାଙ୍କ (1 − 4 + 3)/3 = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">G = (0, 0)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-70"><h2>6(b) · 15. A(1, 2), B(5, −4)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡକୁ 3 : 1 ଅନୁପାତରେ ଅନ୍ତର୍ବିଭାଜନ କରୁଥିବା ବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନ୍ତର୍ବିଭାଜନରେ AP : PB = m : n ହେଲେ Aର ସ୍ଥାନାଙ୍କକୁ nରେ ଓ Bର ସ୍ଥାନାଙ୍କକୁ mରେ ଗୁଣ କରାଯାଏ। ଉଭୟ ସ୍ଥାନାଙ୍କ ପାଇଁ ହର m + n।</li><li>AP : PB = 3 : 1। ଅନ୍ତର୍ବିଭାଜନ ସୂତ୍ରର ହର 3 + 1 = 4।</li><li>x = [3(5) + 1(1)]/4 = 4।</li><li>y = [3(-4) + 1(2)]/4 = −5/2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(4, −5/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-71"><h2>6(b) · 16. (1, 5) ଓ (7, 2)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ସମତ୍ରିଖଣ୍ଡକାରୀ ବିନ୍ଦୁଦ୍ୱୟ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମଗ୍ର x ଓ y ସ୍ଥାନାଙ୍କର ପରିବର୍ତ୍ତନ (6, −3)। ପ୍ରତି ତୃତୀୟାଂଶ ପାଇଁ ଏହା (2, −1)।</li><li>ପ୍ରଥମ ପ୍ରାନ୍ତରେ ଥରେ (2, −1) ଯୋଗ କଲେ (3, 4)। ଆଉ ଥରେ ଯୋଗ କଲେ (5, 3)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(3, 4) ଓ (5, 3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-72"><h2>6(b) · 17. O(0, 0), A(2a, 0), B(0, 2b)। OAB ସମକୋଣୀ ଓ କର୍ଣ୍ଣର ମଧ୍ୟବିନ୍ଦୁ ତିନି ଶୀର୍ଷଠାରୁ ସମଦୂରବର୍ତ୍ତୀ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।</li><li>OA x-ଅକ୍ଷରେ ଓ OB y-ଅକ୍ଷରେ ହେତୁ OA ⟂ OB।</li><li>କର୍ଣ୍ଣ ABର ମଧ୍ୟବିନ୍ଦୁ M(a, b)। MO² = a² + b²।</li><li>MA² = (2a − a)² + (0 − b)² = a² + b² |</li><li>ସେହିପରି MB² = (0 − a)² + (2b − b)² = a² + b² |</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ତ୍ରିଭୁଜ ଅବିକଳ ଥିଲେ ∠AOB = 90° ଓ MO = MA = MB।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-73"><h2>6(b) · 18. ସ୍ଥାନାଙ୍କ ଜ୍ୟାମିତିରେ ସାମାନ୍ତରିକ ଚିତ୍ରର କର୍ଣ୍ଣଦ୍ୱୟ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କରନ୍ତି ବୋଲି ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>A(0, 0), B(a, 0), D(b, c) ନିଅ। AB ସହ DC ସମାନ୍ତର ଓ ସମାନ ହେତୁ C(a + b, c)।</li><li>ACର ମଧ୍ୟବିନ୍ଦୁ ((a + b)/2, c/2)। BDର ମଧ୍ୟବିନ୍ଦୁ ମଧ୍ୟ ((a + b)/2, c/2)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>AC ଓ BDର ମଧ୍ୟବିନ୍ଦୁ ଏକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-74"><h2>6(b) · 19. ଆୟତଚିତ୍ରର କର୍ଣ୍ଣଦ୍ୱୟ ସର୍ବସମ ଓ ପରସ୍ପରକୁ ସମଦ୍ୱିଖଣ୍ଡ କରନ୍ତି ବୋଲି ସ୍ଥାନାଙ୍କ ଦ୍ୱାରା ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>A(0, 0), B(a, 0), C(a, b), D(0, b) ନିଅ।</li><li>AC² = a² + b² = BD²। ଏଣୁ AC = BD।</li><li>ଉଭୟ କର୍ଣ୍ଣର ପ୍ରାନ୍ତବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ ଯୋଗ କରି 2ରେ ଭାଗ କଲେ (a/2, b/2) ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">AC = BD ଓ ଉଭୟର ମଧ୍ୟବିନ୍ଦୁ (a/2, b/2)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-75"><h2>6(b) · 20(i–iv). ଚିତ୍ର 6.7ରେ ABC ସମବାହୁ, A(a, 0), BC ଓ AC ଉପରେ ନିର୍ଭର କରି ଅନ୍ୟ ଶୀର୍ଷ, ତିନି ବାହୁ, Bରୁ ମଧ୍ୟମାର ଦୈର୍ଘ୍ୟ ଓ ଭରକେନ୍ଦ୍ର G ନିର୍ଣ୍ଣୟ କର।</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ସ୍ଥାନାଙ୍କ ଅକ୍ଷ ଉପରେ ସମବାହୁ △ABC | A(a, 0), O ଓ F ମଧ୍ୟବିନ୍ଦୁ, CO ଓ BF ମଧ୍ୟମାର ଛେଦ G।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grLjgrY3grKXgrL7grKjgrL7grJngrY3grJUg4KyF4KyV4K2N4Ky3IOCsieCsquCssOCthyDgrLjgrK7grKzgrL7grLngrYEg4pazQUJDIHwgQShhLCAwKSwgTyDgrJMgRiDgrK7grKfgrY3grZ/grKzgrL/grKjgrY3grKbgrYEsIENPIOCskyBCRiDgrK7grKfgrY3grZ/grK7grL7grLAg4Kyb4K2H4KymIEcgfDwvdGl0bGU+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJ4PSI4IiBmaWxsPSIjZmZmY2Y1Ii8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+Cjxwb2x5bGluZSBwb2ludHM9IjEwMy40MywyMzcuMzAgMzk2LjU3LDIzNy4zMCIgc3Ryb2tlPSIjNTU3MTgxIiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjQ3Ljk5LDI4Ny41MCAyNDcuOTksMzIuNTAiIHN0cm9rZT0iIzU1NzE4MSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjM0MC4zNSwyMzcuMzAgMTU1LjYzLDIzNy4zMCAyNDcuOTksNzcuMzMgMzQwLjM1LDIzNy4zMCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMTU1LjYzLDIzNy4zMCAyOTQuMTcsMTU3LjMyIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNDcuOTksNzcuMzMgMjQ3Ljk5LDIzNy4zMCIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8dGV4dCB4PSI5NS40MyIgeT0iMjI2LjMwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WOKAsjwvdGV4dD4KPHRleHQgeD0iNDA1LjU3IiB5PSIyMjYuMzAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5YPC90ZXh0Pgo8dGV4dCB4PSIyNTcuOTkiIHk9IjMyLjUwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WTwvdGV4dD4KPHRleHQgeD0iMjU3Ljk5IiB5PSIyOTAuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5Z4oCyPC90ZXh0Pgo8Y2lyY2xlIGN4PSIzNDAuMzUiIGN5PSIyMzcuMzAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNTQuMzUiIHk9IjI1Mi4zMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkEoYSwgMCk8L3RleHQ+CjxjaXJjbGUgY3g9IjE1NS42MyIgY3k9IjIzNy4zMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjE0OS42MyIgeT0iMjUyLjMwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QjwvdGV4dD4KPGNpcmNsZSBjeD0iMjQ3Ljk5IiBjeT0iNzcuMzMiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMzQuOTkiIHk9IjcwLjMzIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMjk0LjE3IiBjeT0iMTU3LjMyIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzA3LjE3IiB5PSIxNTQuMzIiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNDcuOTkiIGN5PSIxODMuOTgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMzQuOTkiIHk9IjE4MS45OCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkc8L3RleHQ+CjxjaXJjbGUgY3g9IjI0Ny45OSIgY3k9IjIzNy4zMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIzNi45OSIgeT0iMjUxLjMwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+TzwvdGV4dD4KPC9zdmc+Cg=="></div><figcaption>ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 6.7 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 14 <label class="figure-switch"><input type="checkbox"> ବଡ଼ ଆକାରରେ ଦେଖନ୍ତୁ</label></figcaption></figure>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |</li><li>ଚିତ୍ରରେ C ଧନାତ୍ମକ y-ଅକ୍ଷ ଉପରେ ଓ O, ABର ମଧ୍ୟବିନ୍ଦୁ।</li><li>ତେଣୁ B(−a, 0), AB = 2a, a &gt; 0।</li><li>AC = 2a। ସମକୋଣୀ AOCରେ OC = √[(2a)² − a²] = √3a। ତେଣୁ C(0, √3a)।</li><li>ସମବାହୁ ତ୍ରିଭୁଜର ସମସ୍ତ ମଧ୍ୟମା ସମାନ। ଏଣୁ Bର ମଧ୍ୟମା OC ପରି √3a।</li><li>ଶୀର୍ଷ ସ୍ଥାନାଙ୍କର ହାରାହାରି ନେଲେ G = ((−a + a + 0)/3, (0 + 0 + √3a)/3)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(i) B(−a, 0), C(0, √3a)। (ii) 2a।</p><p>(iii) √3a। (iv) G(0, √3a/3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=120" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୦</a></small></article>
+<article id="exercise-76"><h2>6(c) · 1(i). A(2, 5), B(−3, 5), C(0, 5)। ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (−5, 0) ଓ (−2, 0)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(−5)(0) − (0)(−2)| = 0।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(2)(0) + (−3)(0) + (0)(0)| = |0|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟକୁ 2 ଦ୍ୱାରା ଭାଗ କଲେ 0 ବର୍ଗ ଏକକ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-77"><h2>6(c) · 1(ii). A(a, −2), B(2, 5), C(2, 10)। ଏକରେଖୀୟତା ପାଇଁ a ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(a)(−5) + (2)(12) + (2)(−7)| = |10 − 5·a|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ −5·(a − 2) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ a = 2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">a = 2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-78"><h2>6(c) · 1(iii). A(−2, −2), B(0, y), C(3, 3)। ଏକରେଖୀୟତା ପାଇଁ y ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(−2)(y − 3) + (0)(5) + (3)(−y − 2)| = |−5·y|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ −5·y = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ y = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">y = 0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-79"><h2>6(c) · 1(iv). A(k, −2), B(1, 4), C(−2, 7)। ଏକରେଖୀୟତା ପାଇଁ k ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(k)(−3) + (1)(9) + (−2)(−6)| = |21 − 3·k|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ −3·(k − 7) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ k = 7।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">k = 7।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-80"><h2>6(c) · 1(v). A(4, −5), B(1, a), C(−2, 7)। ଏକରେଖୀୟତା ପାଇଁ a ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(4)(a − 7) + (1)(12) + (−2)(−a − 5)| = |6·a − 6|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ 6·(a − 1) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ a = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">a = 1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-81"><h2>6(c) · 2(i). A(3, 0), B(4, 5), C(2, 0)। ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (1, 5) ଓ (−1, 0)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(1)(0) − (5)(−1)| = 5।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(3)(5) + (4)(0) + (2)(−5)| = |5|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟକୁ 2 ଦ୍ୱାରା ଭାଗ କଲେ 5/2 ବର୍ଗ ଏକକ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5/2 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-82"><h2>6(c) · 2(ii). A(0, 0), B(1, 0), C(1, 1)। ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (1, 0) ଓ (1, 1)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(1)(1) − (0)(1)| = 1।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(0)(−1) + (1)(1) + (1)(0)| = |1|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟକୁ 2 ଦ୍ୱାରା ଭାଗ କଲେ 1/2 ବର୍ଗ ଏକକ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/2 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-83"><h2>6(c) · 2(iii). A(−2, 1), B(2, −3), C(4, −4)। ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (4, −4) ଓ (6, −5)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(4)(−5) − (−4)(6)| = 4।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(−2)(1) + (2)(−5) + (4)(4)| = |4|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟକୁ 2 ଦ୍ୱାରା ଭାଗ କଲେ 2 ବର୍ଗ ଏକକ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-84"><h2>6(c) · 2(iv). A(5, 7), B(6, 4), C(2, −5)। ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (1, −3) ଓ (−3, −12)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(1)(−12) − (−3)(−3)| = 21।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(5)(9) + (6)(−12) + (2)(3)| = |−21|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟକୁ 2 ଦ୍ୱାରା ଭାଗ କଲେ 21/2 ବର୍ଗ ଏକକ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>21/2 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-85"><h2>6(c) · 2(v). A(5, 2), B(−1, 3), C(1, −2)। ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (−6, 1) ଓ (−4, −4)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(−6)(−4) − (1)(−4)| = 28।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(5)(5) + (−1)(−4) + (1)(−1)| = |28|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟକୁ 2 ଦ୍ୱାରା ଭାଗ କଲେ 14 ବର୍ଗ ଏକକ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>14 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-86"><h2>6(c) · 3(i). A(1, 1), B(4, 3), C(−2, −1)। ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (3, 2) ଓ (−3, −2)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(3)(−2) − (2)(−3)| = 0।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(1)(4) + (4)(−2) + (−2)(−2)| = |0|।</li><li>କ୍ଷେତ୍ରଫଳ 0 ହେତୁ ତିନି ବିନ୍ଦୁ ଏକ ସରଳରେଖାରେ ଅଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-87"><h2>6(c) · 3(ii). A(−1, −5), B(0, −3), C(4, 5)। ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (1, 2) ଓ (5, 10)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(1)(10) − (2)(5)| = 0।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(−1)(−8) + (0)(10) + (4)(−2)| = |0|।</li><li>କ୍ଷେତ୍ରଫଳ 0 ହେତୁ ତିନି ବିନ୍ଦୁ ଏକ ସରଳରେଖାରେ ଅଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-88"><h2>6(c) · 3(iii). A(1, 4), B(3, −2), C(−3, 16)। ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (2, −6) ଓ (−4, 12)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(2)(12) − (−6)(−4)| = 0।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(1)(−18) + (3)(12) + (−3)(6)| = |0|।</li><li>କ୍ଷେତ୍ରଫଳ 0 ହେତୁ ତିନି ବିନ୍ଦୁ ଏକ ସରଳରେଖାରେ ଅଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-89"><h2>6(c) · 3(iv). A(−4·a, −6·a), B(−a, −2·a), C(5·a, 6·a)। ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(−4·a)(−8·a) + (−a)(12·a) + (5·a)(−4·a)| = |0|।</li><li>କ୍ଷେତ୍ରଫଳ 0 ହେତୁ ତିନି ବିନ୍ଦୁ ଏକ ସରଳରେଖାରେ ଅଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-90"><h2>6(c) · 3(v). A(−a, 2·b), B(0, b), C(a/2, b/2)। ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(−a)(b/2) + (0)(−3·b/2) + (a/2)(b)| = |0|।</li><li>କ୍ଷେତ୍ରଫଳ 0 ହେତୁ ତିନି ବିନ୍ଦୁ ଏକ ସରଳରେଖାରେ ଅଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-91"><h2>6(c) · 4. A(1, −3), B(2, −5), C(x, 1)। କ୍ଷେତ୍ରଫଳ 4 ବର୍ଗ ଏକକ ହେଲେ x ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(1)(−6) + (2)(4) + (x)(2)| = |2·x + 2|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟ ନିୟମରୁ 2·(x + 1) = 8 କିମ୍ବା −8।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ x = −5 ବା 3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">x = −5 ବା 3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-92"><h2>6(c) · 5. A(3, −5), B(k, 0), C(−4, 7)। କ୍ଷେତ୍ରଫଳ 95/2 ବର୍ଗ ଏକକ ହେଲେ k ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(3)(−7) + (k)(12) + (−4)(−5)| = |12·k − 1|।</li><li>ନିରପେକ୍ଷ ମୂଲ୍ୟ ନିୟମରୁ 12·k − 1 = 95 କିମ୍ବା −95।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ k = −47/6 ବା 8।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">k = −47/6 ବା 8।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-93"><h2>6(c) · 6. A(2, 3), B(0, 5), C(1, y)। ଏକରେଖୀୟତା ପାଇଁ y ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(2)(5 − y) + (0)(y − 3) + (1)(−2)| = |8 − 2·y|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ −2·(y − 4) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ y = 4।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">y = 4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-94"><h2>6(c) · 7. A(2, 3), B(3, k), C(5, 9)। ଏକରେଖୀୟତା ପାଇଁ k ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(2)(k − 9) + (3)(6) + (5)(3 − k)| = |15 − 3·k|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ −3·(k − 5) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ k = 5।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">k = 5।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-95"><h2>6(c) · 8. (1, 1), (3, 5), (x, y) ଏକରେଖୀୟ ହେବାର ସର୍ତ୍ତ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(1)(5 − y) + (3)(y − 1) + (x)(−4)| = |−4·x + 2·y + 2|।</li><li>କ୍ଷେତ୍ରଫଳ ଶୂନ ହେଲେ −4x + 2y + 2 = 0। ଏହାକୁ 2ରେ ଭାଗ କରି yକୁ ଅଲଗା କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">y = 2x − 1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-96"><h2>6(c) · 9. A(1, 0), B(2, 4), C(0, 5), D(−2, 1)। ଚତୁର୍ଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AC କର୍ଣ୍ଣ ଅଙ୍କନ କରି ABC ଓ ACD ଦୁଇ ତ୍ରିଭୁଜରେ ଭାଗ କର।</li><li>ABC ପାଇଁ 2 × କ୍ଷେତ୍ରଫଳ = |(1)(−1) + (2)(5) + (0)(−4)| = |9।</li><li>ACD ପାଇଁ 2 × କ୍ଷେତ୍ରଫଳ = |(1)(4) + (0)(1) + (−2)(−5)| = |14।</li><li>ଉଭୟ କ୍ଷେତ୍ରଫଳର ଯୋଗ 9/2 + 7 = 23/2 ବର୍ଗ ଏକକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>23/2 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-97"><h2>6(c) · 10. A(−2, 3), B(3, −2), C(7, 4), D(1, 5)। ଚତୁର୍ଭୁଜର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AC କର୍ଣ୍ଣ ଅଙ୍କନ କରି ABC ଓ ACD ଦୁଇ ତ୍ରିଭୁଜରେ ଭାଗ କର।</li><li>ABC ପାଇଁ 2 × କ୍ଷେତ୍ରଫଳ = |(−2)(−6) + (3)(1) + (7)(5)| = |50।</li><li>ACD ପାଇଁ 2 × କ୍ଷେତ୍ରଫଳ = |(−2)(−1) + (7)(2) + (1)(−1)| = |15।</li><li>ଉଭୟ କ୍ଷେତ୍ରଫଳର ଯୋଗ 25 + 15/2 = 65/2 ବର୍ଗ ଏକକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>65/2 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-98"><h2>6(c) · 11. A(1, 1), AB ଓ ACର ମଧ୍ୟବିନ୍ଦୁ ଯଥାକ୍ରମେ D(−1, −2), E(3, 2)। B, Cର ସ୍ଥାନାଙ୍କ ଓ ABCର କ୍ଷେତ୍ରଫଳ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଶୀର୍ଷକୁ ଆଧାର କଲେ ଅନ୍ୟ ଦୁଇ ଶୀର୍ଷର ସ୍ଥାନାଙ୍କ ଅନ୍ତର (−2, −3) ଓ (2, 1)। ଦୁଇଗୁଣ କ୍ଷେତ୍ରଫଳ = |(−2)(1) − (−3)(2)| = 4।</li><li>B = 2D − A = (−2 − 1, −4 − 1) = (−3, −5)।</li><li>C = 2E − A = (6 − 1, 4 − 1) = (5, 3)।</li><li>2 × କ୍ଷେତ୍ରଫଳ = |(1)(−8) + (−3)(2) + (5)(6)| = |16|।</li><li>16/2 = 8 ବର୍ଗ ଏକକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>B(−3, −5), C(5, 3)। କ୍ଷେତ୍ରଫଳ 8 ବର୍ଗ ଏକକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-99"><h2>6(c) · 12. A(3, 0), B(5, −1), C(p, p)। ଏକରେଖୀୟତା ପାଇଁ p ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(3)(−p − 1) + (5)(p) + (p)(1)| = |3·p − 3|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ 3·(p − 1) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ p = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">p = 1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-100"><h2>6(c) · 13. A(p, 2·p), B(3·p, 3·p), C(3, 1)। ଏକରେଖୀୟତା ପାଇଁ p ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(p)(3·p − 1) + (3·p)(1 − 2·p) + (3)(−p)| = |−3·p² − p|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ −p·(3·p + 1) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ p = −1/3 ବା 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">p = −1/3 ବା 0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-101"><h2>6(c) · 14. A(x, −1), B(2, −1), C(2, 1)। ଏକରେଖୀୟତା ପାଇଁ x ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(x)(−2) + (2)(2) + (2)(0)| = |4 − 2·x|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ −2·(x − 2) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ x = 2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">x = 2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-102"><h2>6(c) · 15. (x, y) ବିନ୍ଦୁ (a, 0) ଓ (0, b)ର ସଂଯୋଗକାରୀ ରେଖାରେ ଥିଲେ x/a + y/b = 1 ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକରେଖୀୟତାରୁ a(b − y) + 0(y − 0) + x(0 − b) = 0।</li><li>ab − ay − bx = 0। ab ଦ୍ୱାରା ଭାଗ କଲେ ଆବଶ୍ୟକ ସୂତ୍ର ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">a ଓ b ଅଶୂନ୍ୟ ହେଲେ x/a + y/b = 1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-103"><h2>6(c) · 16. ମୁଦ୍ରିତ ଦାବି ଯାଞ୍ଚ କର। (a, b), (a′, b′), (a − a′, b − b′) ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ ନୁହନ୍ତି।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(a)(−b + 2·b′) + (a′)(−b′) + (a − a′)(b − b′)| = |a·b′ − a′·b|।</li><li>ତେଣୁ ଦ୍ୱିଗୁଣ କ୍ଷେତ୍ରଫଳ |ab′ − a′b।</li><li>ଏହା ଅଶୂନ୍ୟ ହେଲେ ବିନ୍ଦୁତ୍ରୟ ଏକରେଖୀୟ ହୁଅନ୍ତି ନାହିଁ।</li><li>ଉଦାହରଣରେ (a, b) = (4, 4), (a′, b′) = (1, 1) ନିଅ।</li><li>ତୃତୀୟ ବିନ୍ଦୁ (3, 3), ଏବଂ ତିନିଟି ଭିନ୍ନ ବିନ୍ଦୁ y = x ଉପରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦାବିଟି ab′ − a′b ≠ 0 ସର୍ତ୍ତରେ ଠିକ୍। ସବୁ ମାନ ପାଇଁ ଠିକ୍ ନୁହେଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-104"><h2>6(c) · 17. A(p + 1, 1), B(2·p + 1, 3), C(2·p + 2, 2·p)। ଏକରେଖୀୟତା ପାଇଁ p ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(p + 1)(3 − 2·p) + (2·p + 1)(2·p − 1) + (2·p + 2)(−2)| = |2·p² − 3·p − 2|।</li><li>ଏକରେଖୀୟ ବିନ୍ଦୁ ପାଇଁ କ୍ଷେତ୍ରଫଳ ଶୂନ। ତେଣୁ (p − 2)·(2·p + 1) = 0।</li><li>ସମୀକରଣ ସମାଧାନ କଲେ p = −1/2 ବା 2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">p = −1/2 ବା 2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-105"><h2>6(c) · 18. (x, y), (3, 4), (−5, −6) ଏକରେଖୀୟ ହେଲେ 5x − 4y + 1 = 0 ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>2 × କ୍ଷେତ୍ରଫଳ = |(x)(10) + (3)(−y − 6) + (−5)(y − 4)| = |10·x − 8·y + 2|।</li><li>ଏକରେଖୀୟତାରୁ 10x − 8y + 2 = 0। ଉଭୟ ପକ୍ଷକୁ 2 ଦ୍ୱାରା ଭାଗ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">5x − 4y + 1 = 0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+
+</main></body></html>

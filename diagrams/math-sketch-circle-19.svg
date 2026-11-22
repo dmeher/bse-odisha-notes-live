@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">ସମକୈନ୍ଦ୍ରିକ ବୃତ୍ତ S₁, S₂ ଓ ଜ୍ୟାରେ A–C–D–B କ୍ରମ |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="250.00" cy="160.00" r="127.50" stroke="#244355" stroke-width="2.5"/>
+<circle cx="250.00" cy="160.00" r="70.12" stroke="#244355" stroke-width="2.5"/>
+<polyline points="128.92,199.95 371.08,199.95" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<text x="360.67" y="70.04" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">S₁</text>
+<text x="313.71" y="109.56" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">S₂</text>
+<circle cx="128.92" cy="199.95" r="2.7" fill="#244355"/>
+<text x="114.92" y="205.95" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="192.37" cy="199.95" r="2.7" fill="#244355"/>
+<text x="192.37" y="214.95" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="307.63" cy="199.95" r="2.7" fill="#244355"/>
+<text x="307.63" y="214.95" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="371.08" cy="199.95" r="2.7" fill="#244355"/>
+<text x="386.08" y="204.95" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+</svg>

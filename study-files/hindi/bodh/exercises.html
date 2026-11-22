@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>बोध · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>बोध</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1naFuNF9V7CuiJVnzeze63oivFoAX1brB/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଛଅଟି ଗଦ୍ୟ ଅଭ୍ୟାସ, ଭାଷାଜ୍ଞାନ ଓ ଛଅଟି ଅଭ୍ୟାସ କାର୍ଯ୍ୟର ସମସ୍ତ ଉପପ୍ରଶ୍ନ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 11–20</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୩)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (क)</a> <a href="#exercise-2">2 (ख)</a> <a href="#exercise-3">1 (ख–च)</a> <a href="#exercise-4">1 (छ–ञ)</a> <a href="#exercise-5">2 (क–ठ)</a> <a href="#exercise-6">3 (क–त)</a> <a href="#exercise-7">4 (क–घ)</a> <a href="#exercise-8">5–6</a> <a href="#exercise-9">भाषा-ज्ञान 1–2</a> <a href="#exercise-10">अभ्यास-कार्य 1 (क–घ)</a> <a href="#exercise-11">अभ्यास-कार्य 2–3</a> <a href="#exercise-12">अभ्यास-कार्य 4 (क–च)</a> <a href="#exercise-13">अभ्यास-कार्य 5–6</a></nav></details>
+<article id="exercise-1"><h2>1 (क). पण्डित चन्द्रधर अपनी नौकरी पर क्यों पछताते थे?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାସ ଶେଷ ପର୍ଯ୍ୟନ୍ତ ପନ୍ଦର ଟଙ୍କା ପାଇଁ ଅପେକ୍ଷା ଓ ତାହା ଶୀଘ୍ର ଶେଷ ହେବାର କଥା ଗଳ୍ପରେ ଅଛି। ପଡ଼ୋଶୀଙ୍କ ସୁବିଧା ଦେଖିବା ଏହି ଅସନ୍ତୋଷକୁ ଆହୁରି ବଢ଼ାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>वेतन कम था और दूसरे विभागों की तरह अतिरिक्त आमदनी या तरक्की नहीं मिलती थी। पड़ोसियों का आराम देखकर वे अपनी दशा से दुखी होते थे।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୩–୬୩</a></small></article>
+<article id="exercise-2"><h2>2 (ख). पण्डितजी के पड़ोसी कौन थे?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ନାମ ମନେ ରଖିବା ସହ ଯାତ୍ରାରେ କାହା ସହ କ’ଣ ଘଟିଲା ଅଲଗା କର। ଠାକୁରଙ୍କୁ ରେଳ ଯାତ୍ରୀ ଚିହ୍ନିଲେ, ମୁଂଶୀଙ୍କୁ ଚୋଖେଲାଲ ଚିହ୍ନିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ठाकुर अतिबल सिंह और मुंशी बैजनाथ उनके पड़ोस में रहते थे।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୩–୬୩</a></small></article>
+<article id="exercise-3"><h2>1 (ख–च). मजदूर, बाजार-भाव, कृपा, दुरवस्था और अफसरों की प्रसन्नता पर उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଡ଼ୋଶୀଙ୍କଠାରୁ ମିଳୁଥିବା ସୁବିଧାର ପଛରେ ସେମାନଙ୍କ ପଦ ଥିଲା। ପଣ୍ଡିତଜୀ ଆରମ୍ଭରେ ସେହି ଲାଭକୁ ଦେଖନ୍ତି, ତାହାର ମାନବୀୟ ମୂଲ୍ୟ ଯାତ୍ରାରେ ଜଣାପଡ଼େ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ख) महीने भर की प्रतीक्षा के बाद पंद्रह रुपये मिलते और तुरन्त खर्च हो जाते। न अच्छे खाने का सुख था, न अच्छे कपड़े का, इसीलिए वे मजदूरों को बेहतर समझते।</p><p>(ग) दोनों के पद का बाजार में रोब था। चार पैसे की चीज एक टके में और लकड़ी-ईंधन मुफ्त मिलता था।</p><p>(घ) दूध-तरकारी जैसी कृपा के बदले ठाकुर के दो और मुंशी के तीन लड़कों की निगरानी करनी पड़ती थी।</p><p>(ङ) दूसरे विभाग में नौकरी पाने के लिए उन्होंने प्रार्थना-पत्र लिखे और अफसरों की खुशामद की। सफलता न मिली तो अपने काम में लगे रहे।</p><p>(च) वे ठीक समय पर आते, देर तक रुकते और मन लगाकर पढ़ाते। स्कूल में विद्यार्थी बढ़े और अधिकारी उनके काम से प्रसन्न थे।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩</a></small></article>
+<article id="exercise-4"><h2>1 (छ–ञ). मुसाफिरों, चोखेलाल और पण्डितजी की रात के प्रश्नों के उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯାତ୍ରୀଙ୍କ ପ୍ରତିକ୍ରିୟା ଓ ଚୋଖେଲାଲଙ୍କ ବ୍ୟବହାରର ପୂର୍ବପ୍ରସଙ୍ଗ ଅଛି। ଶେଷରେ ଶିକ୍ଷକଙ୍କ ପୂର୍ବ ଛାତ୍ର ସ୍ୱଇଚ୍ଛାରେ ସେବା କରିବା ଏହି ଘଟଣାଗୁଡ଼ିକର ଫଳକୁ ଉଲଟାଇଦିଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(छ) पहले मुसाफिर पर ठाकुर ने खुफिया फरोसी का आरोप लगाया और उसके द्वार से पच्चीस रुपये लिये थे। अब वह इस अन्याय को याद करके उन्हें बैठने की जगह नहीं देता।</p><p>(ज) दूसरे मुसाफिर को मेले में तमाशा देखते समय ठाकुर ने अकारण डंडे लगाये थे। वह मार का अपमान नहीं भूला था।</p><p>(झ) लगान जमा करते समय बैजनाथ चोखेलाल से अपना ‘हक’ वसूलते थे। न देने पर शाम तक प्रतीक्षा करनी पड़ती और जमा की प्रविष्टि नहीं होती।</p><p>(ञ) पण्डितजी यात्रा के झगड़े, अस्पताल की वसूली और कृपाशंकर की विनम्र सेवा को याद कर रहे थे। उन्हें शिक्षक के पद का गौरव अनुभव हुआ और विचारों में नींद न आयी।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=56">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୬–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩</a></small></article>
+<article id="exercise-5"><h2>2 (क–ठ). घटनाओं के एक-दो वाक्यों में उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକେ ମଣିଷର ଆଚରଣ ଦେଖାଇବାକୁ ଦୁଇ ସମୟ ମିଳାଅ। ଯାତ୍ରା ଆଗରୁ ପଦବୀ ଦେଖି ଯେଉଁମାନଙ୍କୁ ପଣ୍ଡିତଜୀ ବଡ଼ ମନେ କରିଥିଲେ, ବାଟରେ ସେମାନେ ନିଜ ଆଗ ଆଚରଣର ପରିଣାମ ଭୋଗିଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) पण्डित चन्द्रधर ने एक अपर प्राइमरी में मुदर्रिसी की थी।</p><p>(ख) ठाकुर अतिबल सिंह और मुंशी बैजनाथ उनके पड़ोसी थे।</p><p>(ग) कचहरी से लौटकर मुंशीजी बच्चों को पैसे और मिठाइयाँ देते। अपने कमरे में पीने के बाद हारमोनियम भी बजाते।</p><p>(घ) ठाकुर आरामकुरसी पर लेटकर खुशबूदार खमीरा पीते।</p><p>(ङ) बनिये उठकर सलाम करते थे।</p><p>(च) बराबर की कमाई वाले पड़ोसियों का ठाट और अपना अभाव देखकर वे भाग्य को कोसते।</p><p>(छ) मुंशी ने अपने तीन लड़कों पर निगाह रखने को कहा क्योंकि वे आवारा होते जा रहे थे।</p><p>(ज) शिक्षा विभाग की वेतन-वृद्धि को ऊसर की खेती कहा गया है।</p><p>(झ) आरोप खुफिया फरोसी का था और ठाकुर ने पच्चीस रुपये लिये थे।</p><p>(ञ) दूसरे मुसाफिर ने कहा कि नीचे बैठने से क्या हेठी होगी, यह थाना तो नहीं कि रोब घट जाये।</p><p>(ट) कृपाशंकर ने इन्ट्रेंस परीक्षा पास की और अयोध्या की म्युनिसिपिल्टी में नौकरी की। खास पदनाम नहीं दिया गया है।</p><p>(ठ) पण्डितजी को शिक्षक के पद की महानता का बोध हुआ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩–୬୪</a></small></article>
+<article id="exercise-6"><h2>3 (क–त). कहानी के एक शब्द या छोटे पद में उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘मुदर्रिसी’ ଚାକିରିର କାମ, ‘पण्डित चन्द्रधर’ ସେହି କାମ କରୁଥିବା ଚରିତ୍ର ଓ ‘पंद्रह रुपये’ ତାହାର ବେତନ। ଏକ ଶବ୍ଦର ଉତ୍ତରରେ କାମ, କର୍ତ୍ତା ଓ ରାଶିକୁ ଏଭଳି ଚିହ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) प्रेमचन्द।</p><p>(ख) मुदर्रिसी।</p><p>(ग) पण्डित चन्द्रधर।</p><p>(घ) पंद्रह रुपये।</p><p>(ङ) मुंशी बैजनाथ।</p><p>(च) खुशबूदार खमीरा।</p><p>(छ) शराब-कबाब।</p><p>(ज) चन्द्रधर पर।</p><p>(झ) ऊसर की।</p><p>(ञ) सावन।</p><p>(ट) एक-एक सप्ताह।</p><p>(ठ) रात एक बजे।</p><p>(ड) बिल्हौर।</p><p>(ढ) कृपाशंकर की।</p><p>(ण) पण्डित चन्द्रधर ने।</p><p>(त) तीन दिन।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪–୬୫</a></small></article>
+<article id="exercise-7"><h2>4 (क–घ). चार कथनों के प्रसंग और अर्थ बताइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉକ୍ତିର କଥକ କିଏ, ସେ ଆଗର କେଉଁ ବ୍ୟବହାରକୁ ସ୍ମରଣ କରୁଛି, ତାହା ପ୍ରଥମେ ଧର। ପୁରୁଣା ଅଭିଜ୍ଞତା ନ ଦେଲେ ଯାତ୍ରାବେଳର କଥା କଟୁ ଲାଗିବାର କାରଣ ବୁଝାଯିବ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) कम वेतन और घर की तंगी से निराश शिक्षक को लगता था कि मजूरों का जीवन भी उनसे अच्छा है।</p><p>(ख) ऊसर जमीन में खेती फलना कठिन है। वैसे ही शिक्षा विभाग में वेतन बढ़ना विरल था।</p><p>(ग) समय के साथ परिस्थिति उलटती है। तहसील में मुंशी का प्रभाव था, अस्पताल में उन्हीं को चोखेलाल की जरूरत पड़ी।</p><p>(घ) शिष्य ने कठिन समय में अपने गुरु और उनके साथियों की आदर से सेवा की। चन्द्रधर समझ गये कि शिक्षक के काम का फल विद्यार्थियों का स्नेह और सम्मान भी है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=65" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୫</a></small></article>
+<article id="exercise-8"><h2>5–6. रिक्त स्थान भरिए और सही विकल्प चुनिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବେତନ କେତେ ବୋଲି ପ୍ରଶ୍ନ ଥିଲେ କମ୍ ଦରମା ପାଉଥିବା ପଣ୍ଡିତଜୀଙ୍କ ପ୍ରସଙ୍ଗ ମନେ ପକାଅ। ‘डाक-मुंशी’ କର୍ମର ପରିଚୟ, ପରିମାଣ ପଚାରିଥିବା ପ୍ରଶ୍ନର ଉତ୍ତର ହୋଇପାରେନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>५.</p><p>(क) चार,</p><p>(ख) प्रभुता,</p><p>(ग) कचूमर,</p><p>(घ) दौड़-धूप,</p><p>(ङ) डाक-मुंशी। ६.</p><p>(क) पन्द्रह रुपये (iii),</p><p>(ख) तीन (iii),</p><p>(ग) दूसरे मुसाफिर ने (iii),</p><p>(घ) वध करना चाहता हूँ (iii),</p><p>(ङ) शिक्षकता का महत्त्व अधिक है (i)।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=65" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୫–୬୬</a></small></article>
+<article id="exercise-9"><h2>भाषा-ज्ञान 1–2. भाषा-ज्ञान में दिए कारक, विभक्ति और परसर्ग के उदाहरण समझिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘पण्डित चन्द्रधर ने’ର ने କାମ କରିଥିବା କର୍ତ୍ତାକୁ ଓ ‘अपर प्राइमरी में’ର में ସେହି କାମର ସ୍ଥାନକୁ ଜଣାଉଛି। ଏକେ ବାକ୍ୟରେ ଭିନ୍ନ ସମ୍ପର୍କ ଥିବାରୁ କାରକ ଅଲଗା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>१. ‘पण्डित चन्द्रधर ने’ कर्ता है, ‘अपर प्राइमरी में’ स्थान है। ‘पण्डितजी के’ में संबंध और ‘पड़ोस में’ में अधिकरण है।</p><p>२. संज्ञा से परसर्ग अलग लिखते हैं – ठाकुर साहब ने, बाल-बच्चों को। सर्वनाम से पहला विभक्ति-चिह्न मिल जाता है – मैंने, आपका।</p><p>साधन के साथ ‘से’ (साइकिल से) और बैठने के स्थान के साथ ‘पर’ (पेड़ पर) लगता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୭୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=66" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୬–୭୦</a></small></article>
+<article id="exercise-10"><h2>अभ्यास-कार्य 1 (क–घ). रेखांकित पदों का कारक पहचानिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘खुले मैदान में’ ଓ ‘रेत पर’ ବିଷୟରେ ‘କେଉଁଠି?’ ପଚାର। ଦୁଇ ଭିନ୍ନ ପରସର୍ଗ ଥାଇ ଉଭୟ ସ୍ଥାନ ବୁଝାଉଥିବାରୁ अधिकरण ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) ‘खुले मैदान में’ और ‘रेत पर’ – अधिकरण।</p><p>(ख) ‘मुझे’ – अनुभवकर्ता (सम्प्रदान रूप में ‘मुझको’), ‘तुमसे’ – मिलने का संबंध, करण।</p><p>(ग) ‘मेरा’ और ‘आपकी’ – संबंध।</p><p>(घ) ‘रेलगाड़ी की’, ‘चिकित्सालय की’, ‘कृपाशंकर की’ – संबंध कारक।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୭୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=70" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୦–୭୧</a></small></article>
+<article id="exercise-11"><h2>अभ्यास-कार्य 2–3. परसर्ग भरिए और आठ भाववाचक संज्ञाएँ बनाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘हाथ में’ରେ में ସ୍ଥାନ ଦେଖାଏ। ‘आराम से’ରେ से କିପରି କାମ ହେଲା ଦେଖାଏ। ‘रियायत की थी’ରେ की ମୂଳ କ୍ରିୟା करनाର ରୂପ ବୋଲି ପୂରା ବାକ୍ୟରୁ ବୁଝ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>२.</p><p>(क) हाथ में, आराम से।</p><p>(ख) मैंने तुम्हारे साथ रियायत की थी। ‘की’ क्रिया का अंश है।</p><p>(ग) आपने मेरी सूरत न देखी होगी, पर आपके डंडे ने देखी है। ‘मेरी’ संबंधसूचक सर्वनाम है।</p><p>(घ) खुले मैदान में, रेत पर। ३. पण्डित–पाण्डित्य, बुरा–बुराई, मौजूद–मौजूदगी, अच्छा–अच्छाई, प्रभु–प्रभुता, विनम्र–विनम्रता, शालीन–शालीनता, महान्–महानता।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୭୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=71" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୧</a></small></article>
+<article id="exercise-12"><h2>अभ्यास-कार्य 4 (क–च). रेखांकित संज्ञाओं के भेद बताइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘दुष्ट’ କାହାର ଗୁଣ କହିପାରେ। ‘दुष्टों’ ଯେଉଁଠି ଦୁଷ୍ଟ ଲୋକମାନଙ୍କୁ ସାମୂହିକ ଭାବେ ସୂଚାଏ, ସେଠି ସେହି ବିଶେଷଣ ସଂଜ୍ଞା ପରି କାମ କରିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) जबान – जातिवाचक।</p><p>(ख) दुष्टों – विशेषण का जातिवाचक संज्ञा की तरह प्रयोग।</p><p>(ग) कोयला-पानी – दोनों द्रव्यवाचक।</p><p>(घ) लोगों – जातिवाचक का बहुवचन।</p><p>(ङ) कृपाशंकर – व्यक्तिवाचक।</p><p>(च) आदमी – जातिवाचक।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୭୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=71" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୧</a></small></article>
+<article id="exercise-13"><h2>अभ्यास-कार्य 5–6. रेखांकित पदों के कारक और अगले चार वाक्यों के कारक पहचानिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘नेत्रों से’ରେ ଆଖି ଦେଖିବାର ସାଧନ, ତେଣୁ करण। ‘रेत पर’ରେ ବାଲି କାମ ହୋଇଥିବା ସ୍ଥାନ, ତେଣୁ अधिकरण। ପଦ କେଉଁ ସମ୍ପର୍କ ବୁଝାଉଛି ସେଥିରୁ ଭେଦ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>५.</p><p>(क) नेत्रों से – करण,</p><p>(ख) मित्र की – संबंध,</p><p>(ग) रेत पर – अधिकरण,</p><p>(घ) कृपाशंकर ने – कर्ता,</p><p>(ङ) मुंशीजी को – कर्म। ६. (i) मुंशीजी को – व्यसन का अनुभवकर्ता, ‘को’ का सम्प्रदान रूप।</p><p>शराब-कबाब का – संबंध। (ii) माता ने – कर्ता, बच्चे को – कर्म।</p><p>(iii) ठाकुर साहब – कर्ता, गाड़ी से – अपादान (उतरने का आरम्भ-स्थान)। (iv) लोग – कर्ता, आदर से – करण, रीति का बोध।</p><p>‘डाक्टर’ कहने की संज्ञा है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=66">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୬–୭୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+
+</main></body></html>

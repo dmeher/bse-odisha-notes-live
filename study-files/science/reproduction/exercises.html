@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଜନନ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଜନନ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1i2sfgzzzSo4mF_0pFQ7hMNKvyAAU1l2h/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପାଠ ଶେଷର ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୧୬ ଓ ସେଗୁଡ଼ିକର ଉପପ୍ରଶ୍ନର ଉତ୍ତର ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF ୯୯–୧୦୦</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୪୮)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦ (କ)</a> <a href="#exercise-11">୧୦ (ଖ)</a> <a href="#exercise-12">୧୦ (ଗ)</a> <a href="#exercise-13">୧୦ (ଘ)</a> <a href="#exercise-14">୧୦ (ଙ)</a> <a href="#exercise-15">୧୧ (କ)</a> <a href="#exercise-16">୧୧ (ଖ)</a> <a href="#exercise-17">୧୧ (ଗ)</a> <a href="#exercise-18">୧୧ (ଘ)</a> <a href="#exercise-19">୧୧ (ଙ)</a> <a href="#exercise-20">୧୨ (କ)</a> <a href="#exercise-21">୧୨ (ଖ)</a> <a href="#exercise-22">୧୨ (ଗ)</a> <a href="#exercise-23">୧୨ (ଘ)</a> <a href="#exercise-24">୧୨ (ଙ)</a> <a href="#exercise-25">୧୨ (ଚ)</a> <a href="#exercise-26">୧୨ (ଛ)</a> <a href="#exercise-27">୧୩ (କ)</a> <a href="#exercise-28">୧୩ (ଖ)</a> <a href="#exercise-29">୧୩ (ଗ)</a> <a href="#exercise-30">୧୩ (ଘ)</a> <a href="#exercise-31">୧୩ (ଙ)</a> <a href="#exercise-32">୧୪ (କ)</a> <a href="#exercise-33">୧୪ (ଖ)</a> <a href="#exercise-34">୧୪ (ଗ)</a> <a href="#exercise-35">୧୪ (ଘ)</a> <a href="#exercise-36">୧୪ (ଙ)</a> <a href="#exercise-37">୧୪ (ଚ)</a> <a href="#exercise-38">୧୪ (ଛ)</a> <a href="#exercise-39">୧୫ (କ)</a> <a href="#exercise-40">୧୫ (ଖ)</a> <a href="#exercise-41">୧୫ (ଗ)</a> <a href="#exercise-42">୧୫ (ଘ)</a> <a href="#exercise-43">୧୫ (ଙ)</a> <a href="#exercise-44">୧୬ (କ)</a> <a href="#exercise-45">୧୬ (ଖ)</a> <a href="#exercise-46">୧୬ (ଗ)</a> <a href="#exercise-47">୧୬ (ଘ)</a> <a href="#exercise-48">୧୬ (ଙ)</a></nav></details>
+<article id="exercise-1"><h2>୧. ଉଦ୍ଭିଦର ଅଲିଙ୍ଗୀଜନନ ଉଦାହରଣ ସହ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଥିରେ ଗୋଟିଏ ଜନକଠାରୁ ଯୁଗ୍ମକ ମିଳନ ବିନା ଅପତ୍ୟ ଜାତ ହୁଏ। ପୁସ୍ତକର ଉଦାହରଣ ଅନୁସାରେ ଏକକୋଷୀ ଜୀବରେ ବିଭାଜନ, ଇଷ୍ଟ୍‌ରେ କଳିକନ, ସୂତ୍ରାକାର ଶୈବାଳରେ ଖଣ୍ଡୀଭବନ ଏବଂ କବକରେ ରେଣୁଭବନ ଦେଖାଯାଏ।</li><li>ଅଲିଙ୍ଗୀ ଜନନରେ ଯୁଗ୍ମକର ସମାୟନ ହୁଏନାହିଁ। ରେଣୁରୁ ନୂଆ ଜୀବ, କଳିକାରୁ ଅପତ୍ୟ କିମ୍ବା ଉଦ୍ଭିଦର କାଣ୍ଡ ଆଦି ଅଙ୍ଗରୁ ନୂଆ ଗଛ ବିକଶିତ ହୋଇପାରେ। ଚଳରେଣୁ ଓ ଅଚଳରେଣୁକୁ ଗତି କରିବାର କ୍ଷମତାରୁ ଚିହ୍ନଟ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଙ୍ଗୀୟ ଜନନରେ ମୂଳ, କାଣ୍ଡ ବା ପତ୍ରରୁ ନୂଆ ଗଛ ହୁଏ। ଆଳୁର କନ୍ଦର ଆଖି ବା ପଥରକୁଚି ପତ୍ରର ଧାରରେ ଥିବା କଳି ଏହାର ଉଦାହରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୮୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-2"><h2>୨. ସପୁଷ୍ପକ ଉଦ୍ଭିଦର ସମାୟନ କ୍ରମ ଓ ଏହାର ବିଶେଷତ୍ୱ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗର୍ଭଶୀର୍ଷରେ ପରାଗରେଣୁ ଅଙ୍କୁରିତ ହୁଏ। ପରାଗନଳୀ ଗର୍ଭଦଣ୍ଡ ଦେଇ ଡିମ୍ବକର ଭ୍ରୂଣଥଳୀରେ ପହଞ୍ଚି ଦୁଇ ପୁଂଯୁଗ୍ମକ ଛାଡ଼େ।</li><li>ଗୋଟିଏ ପୁଂଯୁଗ୍ମକ (n) ଡିମ୍ବାଣୁ (n) ସହ ମିଳି ଯୁଗ୍ମଜ (2n) ଗଢ଼େ। ଅନ୍ୟ ପୁଂଯୁଗ୍ମକ (n) ଦୁଇ ମେରୁ ନ୍ୟଷ୍ଟି (n+n) ସହ ମିଳି ତ୍ରିଗୁଣିତ ଭ୍ରୂଣପୋଷ ନ୍ୟଷ୍ଟି (3n) ଗଢ଼େ।</li><li>ପରାଗନଳୀର ଦୁଇ ପୁଂଯୁଗ୍ମକର ଗନ୍ତବ୍ୟ ଅଲଗା ଲେଖ। ଗୋଟିଏ ଡିମ୍ବାଣୁ ସହ ମିଶି 2n ଯୁଗ୍ମଜ ଓ ଅନ୍ୟଟି ଦୁଇ ମେରୁ ନ୍ୟଷ୍ଟି ସହ ମିଶି 3n ଭ୍ରୂଣପୋଷ ନ୍ୟଷ୍ଟି ଗଢ଼େ। ସେହି ଭ୍ରୂଣପୋଷ ବଢ଼ୁଥିବା ଭ୍ରୂଣକୁ ପୋଷଣ ଦିଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏକ ଭ୍ରୂଣଥଳୀରେ ଏହି ଦୁଇ ମିଳନ ଘଟିବା ଦ୍ୱିସମାୟନ। ଯୁଗ୍ମଜରୁ ଭ୍ରୂଣ ଓ ଭ୍ରୂଣପୋଷ ନ୍ୟଷ୍ଟିରୁ ଭ୍ରୂଣକୁ ଖାଦ୍ୟ ଯୋଗାଉଥିବା ଭ୍ରୂଣପୋଷ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=82">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୨–୮୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-3"><h2>୩. ଏମିବାର ବହୁ ବିଭାଜନ ବୁଝାଅ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (ଘ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନୁକୂଳ ଅବସ୍ଥାରେ ଗୋଟିଏ ଏମିବା ଦୁଇଟି ଅପତ୍ୟ ହୁଏ। ପ୍ରତିକୂଳ ଅବସ୍ଥାରେ ଆବରଣ ଭିତରେ ନ୍ୟଷ୍ଟି ବାରମ୍ବାର ବିଭାଜିତ ହୁଏ। ପ୍ରତି ନ୍ୟଷ୍ଟି ପାଖରେ କୋଷଜୀବକ ବଣ୍ଟାହେବାରୁ ଅନେକ କ୍ଷୁଦ୍ର ଅପତ୍ୟ ହୁଅନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପରିବେଶ ପ୍ରତିକୂଳ ହେଲେ ଏମିବା ଗୋଲାକାର ହୋଇ ଆବରଣ ତିଆରି କରେ। ଏହା ଭିତରେ ନ୍ୟଷ୍ଟି ବାରମ୍ବାର ବିଭାଜିତ ହୁଏ।</p><p>ପ୍ରତ୍ୟେକ ନ୍ୟଷ୍ଟି ଚାରିପାଖରେ କୋଷଜୀବକ ରହି ଅନେକ ଛୋଟ ଏମିବା ସୃଷ୍ଟି ହୁଅନ୍ତି। ଅନୁକୂଳ ପରିବେଶ ଫେରିଲେ ଆବରଣ ଫାଟେ ଓ ଅପତ୍ୟଗୁଡ଼ିକ ବାହାରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=84">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୪–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-4"><h2>୪. ହାଇଡ୍ରାର ଅଲିଙ୍ଗୀଜନନ ବର୍ଣ୍ଣନ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ହାଇଡ୍ରା ଦେହପ୍ରାଚୀରରେ କୋଷ ବିଭାଜନରୁ ଏକ ଉଚ୍ଚ ଅଂଶ ହୁଏ। ସେଠାରେ ମୁଖ ଓ କର୍ଷିକା ବଢ଼ିବା ପରେ ଅପତ୍ୟ ଜନକ ଦେହରୁ ଅଲଗା ହୋଇ ସ୍ୱାଧୀନ ଜୀବନ କାଟେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନୁକୂଳ ପରିବେଶରେ ହାଇଡ୍ରା ଦେହଭିତ୍ତିର ଗୋଟିଏ ଅଂଶର କୋଷ ବାରମ୍ବାର ବିଭାଜିତ ହୁଏ। ଫଳରେ ବାହାରକୁ କୋରକ ବା କଳିକା ଦେଖାଯାଏ।</p><p>ଏହା ବଢ଼ି ମୁଖ ଓ ସ୍ପର୍ଶକ ଗଢ଼େ। ତଳ ଭାଗ ସରୁ ହୋଇ ନୂଆ ହାଇଡ୍ରା ମାତୃଦେହରୁ ଅଲଗା ହୁଏ।</p><p>ଏହାକୁ କୋରକୋଦ୍ଗମ କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=85">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୫–୮୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-5"><h2>୫. ମାନବ ପୁରୁଷ ଜନନ ତନ୍ତ୍ରର ଅଂଶ ଓ କାର୍ଯ୍ୟ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୁକ୍ରମୁଣିରେ ଥିବା ଦୁଇ ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ତିଆରି ହୁଏ। ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣି ଦେହର ସାଧାରଣ ତାପ ଅପେକ୍ଷା କମ୍ ତାପ ରଖେ।</li><li>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ଗଠିତ ହୁଏ। ନଳିକା ମଝିର ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣିର ଅବସ୍ଥାନ ଶୁକ୍ରାଣୁ ଗଠନ ପାଇଁ ଆବଶ୍ୟକ ଅପେକ୍ଷାକୃତ କମ୍ ତାପମାତ୍ରା ବଜାୟ ରଖେ।</li><li>ଶୁକ୍ରାଣୁ ଶୁକ୍ରାଶୟରୁ ଅଧିଶୁକ୍ରାଶୟ ଓ ଶୁକ୍ରବାହୀ ନଳୀ ଦେଇ ଯାଏ। ସହଯୋଗୀ ଗ୍ରନ୍ଥିର କ୍ଷରଣ ମିଶି ଶୁକ୍ରାଣୁ ପରିବହନରେ ସାହାଯ୍ୟ କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶୁକ୍ରାଣୁ ଅଧିବୃଷଣରେ ପରିପକ୍ୱ ହୋଇ ଶୁକ୍ରବାହୀ ନଳୀରେ ଯାଏ। ସହାୟକ ଗ୍ରନ୍ଥିର ସ୍ରାବ ମିଶି ବୀର୍ଯ୍ୟ ହୁଏ।</p><p>ମୂତ୍ରଜନନ ମାର୍ଗ ଓ ଶିଶ୍ନ ଏହାର ନିର୍ଗମନ ପଥ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-6"><h2>୬. ପରିବାର ନିୟୋଜନର ପଦ୍ଧତିଗୁଡ଼ିକର କାର୍ଯ୍ୟ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସାମୟିକ ପଦ୍ଧତିରେ ଗର୍ଭନିରୋଧକ ଆବରଣ ଶୁକ୍ରାଣୁ ଓ ଡିମ୍ବାଣୁର ମିଳନ ବାଧା ଦିଏ। ଗର୍ଭନିରୋଧକ ବଟିକା ଓ ଗର୍ଭାଶୟ ମଧ୍ୟସ୍ଥ ସାଧନ ମଧ୍ୟ ପୁସ୍ତକର ଉଦାହରଣ।</li><li>ସ୍ଥାୟୀ ପଦ୍ଧତିରେ ପୁରୁଷଙ୍କ ଶୁକ୍ରବାହୀ ବା ସ୍ତ୍ରୀଙ୍କ ଡିମ୍ବବାହୀ ନଳୀରେ ଯୁଗ୍ମକର ଗମନ ବନ୍ଦ କରାଯାଏ। ଅସ୍ଥାୟୀ ପଦ୍ଧତିରେ ବାଧକ ଆଦି ଦ୍ୱାରା ଯୁଗ୍ମକର ମିଳନ ରୋକାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସ୍ଥାୟୀ ପଦ୍ଧତିରେ ପୁରୁଷର ଶୁକ୍ରବାହୀ ନଳୀର ପଥ ବନ୍ଦ କରିବାକୁ ଭାସେକ୍ଟୋମୀ ଓ ସ୍ତ୍ରୀର ଡିମ୍ବବାହୀ ନଳୀର ପଥ ବନ୍ଦ କରିବାକୁ ଟ୍ୟୁବେକ୍ଟୋମୀ କୁହାଯାଏ। ଏହାଦ୍ୱାରା ଯୁଗ୍ମକ ମିଳନ ହୁଏ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=92">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୨–୯୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-7"><h2>୭. ସମବିଭାଜନ ବା ସୂତ୍ରାୟନର ଅବସ୍ଥାଗୁଡ଼ିକ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୂର୍ବାବସ୍ଥାରେ ପ୍ରତିଲିପିତ ଗୁଣସୂତ୍ରଗୁଡ଼ିକ ସୁସ୍ପଷ୍ଟ ହୁଏ, ତର୍କୁତନ୍ତୁ ଗଠିତ ହୁଏ ଓ ନ୍ୟଷ୍ଟି ଆବରଣ ଲୋପ ପାଏ। ମଧ୍ୟାବସ୍ଥାରେ ଗୁଣସୂତ୍ରଗୁଡ଼ିକ କୋଷର ବିଷୁବ ଅଞ୍ଚଳରେ ସଜ୍ଜିତ ହୁଏ।</li><li>ମଧ୍ୟାବସ୍ଥାରେ ଗୁଣସୂତ୍ର କୋଷ ମଝିରେ ସଜାଯାଏ। ଉତ୍ତରାବସ୍ଥାରେ ଏକଳ ସୂତ୍ର ବିଚ୍ଛିନ୍ନ ହୋଇ ବିପରୀତ ମେରୁକୁ ଯାଏ। ଅନ୍ତିମାବସ୍ଥା ପରେ ଅପତ୍ୟ କୋଷ ଦୁଇଟିର ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ଜନକ କୋଷ ସହ ସମାନ ରହେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉତ୍ତରାବସ୍ଥାରେ ସେଣ୍ଟ୍ରୋମିୟର୍ ବିଭାଜିତ ହୋଇ ପ୍ରତି ଗୁଣସୂତ୍ରର ଦୁଇ ଅର୍ଦ୍ଧକ ବିପରୀତ ମେରୁକୁ ଯାଏ। ଅନ୍ତିମାବସ୍ଥାରେ ଦୁଇ ନ୍ୟଷ୍ଟି ଗଠିତ ହୁଏ।</p><p>କୋଷଜୀବକ ବିଭାଜନରେ ମାତୃକୋଷ ସମାନ ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ଥିବା ଦୁଇ ଅପତ୍ୟକୋଷ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-8"><h2>୮. ଅର୍ଦ୍ଧାୟନର ପ୍ରଥମ ବିଭାଜନ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ପୂର୍ବାବସ୍ଥାର ଉପାବସ୍ଥାଗୁଡ଼ିକ ଲେପ୍ଟୋଟିନ୍, ଜାଇଗୋଟିନ୍, ପାକିଟିନ୍, ଡିପ୍ଲୋଟିନ୍ ଓ ଡାଇଆକାଇନେସିସ୍। ସଦୃଶ ଗୁଣସୂତ୍ର ଯୋଡ଼ି ହୁଅନ୍ତି। ଭିନ୍ନ ସଦୃଶ ଗୁଣସୂତ୍ରର ଅର୍ଦ୍ଧକ ମଧ୍ୟରେ ଖଣ୍ଡ ବିନିମୟ ହୋଇପାରେ।</li><li>ପ୍ରଥମ ଅର୍ଦ୍ଧବିଭାଜନରେ ସମଜାତ ଗୁଣସୂତ୍ର ଯୋଡ଼ି ହୋଇ ମଝିରେ ସଜ୍ଜିତ ହୁଏ। ଯୋଡ଼ାର ଗୋଟିଏ ଲେଖାଏଁ ଗୁଣସୂତ୍ର ବିପରୀତ ମେରୁକୁ ଯାଏ। ତେଣୁ ସଂଖ୍ୟା ଅର୍ଦ୍ଧ ହୁଏ। ଦ୍ୱିତୀୟ ବିଭାଜନରେ ଏକଳ ସୂତ୍ର ପୃଥକ୍ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରଥମ ମଧ୍ୟାବସ୍ଥାରେ ଯୁଗଳ ଗୁଣସୂତ୍ର କୋଷର ବିଷୁବରେ ସଜ୍ଜିତ। ପ୍ରଥମ ଉତ୍ତରାବସ୍ଥାରେ ସେଣ୍ଟ୍ରୋମିୟର୍ ଅବିଭାଜିତ ରହେ, ଯୁଗଳର ଗୋଟିଏ ଲେଖାଏଁ ଗୁଣସୂତ୍ର ପ୍ରତି ମେରୁକୁ ଯାଏ।</p><p>ଶେଷରେ ପ୍ରତି ଅପତ୍ୟ କୋଷର ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ମାତୃକୋଷର ଅର୍ଦ୍ଧେକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=75">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୫–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-9"><h2>୯. ସମବିଭାଜନ ଓ ଅର୍ଦ୍ଧବିଭାଜନର ତୁଳନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମବିଭାଜନରେ ଗୋଟିଏ ବିଭାଜନରୁ ଦୁଇ ଅପତ୍ୟକୋଷ ହୁଏ। ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ସମାନ ରହେ। ବୃଦ୍ଧି ଓ ମରାମତିରେ ଏହାର ଭୂମିକା ଅଛି।</li><li>ମଧ୍ୟାବସ୍ଥାରେ ଗୁଣସୂତ୍ର କୋଷ ମଝିରେ ସଜାଯାଏ। ଉତ୍ତରାବସ୍ଥାରେ ଏକଳ ସୂତ୍ର ବିଚ୍ଛିନ୍ନ ହୋଇ ବିପରୀତ ମେରୁକୁ ଯାଏ। ଅନ୍ତିମାବସ୍ଥା ପରେ ଅପତ୍ୟ କୋଷ ଦୁଇଟିର ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ଜନକ କୋଷ ସହ ସମାନ ରହେ।</li><li>ପ୍ରଥମ ଅର୍ଦ୍ଧବିଭାଜନରେ ସମଜାତ ଗୁଣସୂତ୍ର ଯୋଡ଼ି ହୋଇ ମଝିରେ ସଜ୍ଜିତ ହୁଏ। ଯୋଡ଼ାର ଗୋଟିଏ ଲେଖାଏଁ ଗୁଣସୂତ୍ର ବିପରୀତ ମେରୁକୁ ଯାଏ। ତେଣୁ ସଂଖ୍ୟା ଅର୍ଦ୍ଧ ହୁଏ। ଦ୍ୱିତୀୟ ବିଭାଜନରେ ଏକଳ ସୂତ୍ର ପୃଥକ୍ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅର୍ଦ୍ଧବିଭାଜନରେ ଗୁଣସୂତ୍ରର ଥରେ ପ୍ରତିଲିପି ପରେ ଦୁଇ ବିଭାଜନରୁ ଚାରି ଅର୍ଦ୍ଧଗୁଣିତ ଅପତ୍ୟକୋଷ ହୁଏ। ପ୍ରଥମ ବିଭାଜନରେ ସଦୃଶ ଗୁଣସୂତ୍ର ଯୋଡ଼ି ହୋଇ ପୃଥକ୍ ହୁଅନ୍ତି।</p><p>ଏହା ଲିଙ୍ଗୀୟ ଜନନ ଓ ସନ୍ତାନ ମଧ୍ୟରେ ବିଭିନ୍ନତାରେ ସହାୟକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=73">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୩–୭୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-10"><h2>୧୦ (କ). ଏଚ.ଆଇ.ଭି.ର ପୂରା ନାମ ଓ ବିଶେଷତ୍ୱ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>HIVର ବଂଶଗତ ପଦାର୍ଥ RNA। ଏହା ସହାୟକ T-ଲିମ୍ଫୋସାଇଟ୍‌କୁ ପ୍ରଭାବିତ କରି ଦେହର ପ୍ରତିରୋଧକ୍ଷମତା ଦୁର୍ବଳ କରେ। ପାଠରେ ସଂକ୍ରମଣ, ତାହାର ପରୀକ୍ଷଣ ଓ ଏଡ୍‌ସ୍ ଅବସ୍ଥାକୁ ଅଲଗା ଘଟଣା ଭାବେ ପଢ଼ାଯାଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>Human Immunodeficiency Virus ମଣିଷର ରୋଗପ୍ରତିରୋଧକ ବ୍ୟବସ୍ଥାକୁ ଦୁର୍ବଳ କରୁଥିବା RNA ରେଟ୍ରୋଭାଇରସ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=93">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୩–୯୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-11"><h2>୧୦ (ଖ). ଅସମାୟିତ ଜନନ କ&#39;ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅସମାୟିତ ଜନନରେ ଡିମ୍ବାଣୁ ଅପତ୍ୟ ହୁଏ। ସମାୟନ ବିନା ଗର୍ଭାଶୟ ଫଳ ହେବା ଅଯୁଗ୍ମିତ ଫଳନ। ପ୍ରଥମଟିର ଫଳ ନୂତନ ଜୀବ ଓ ଦ୍ୱିତୀୟଟିର ଫଳ ଗର୍ଭାଶୟର ବିକାଶ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମାୟନ ବିନା ଡିମ୍ବାଣୁରୁ ଅପତ୍ୟର ବିକାଶ ଅସମାୟିତ ଜନନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=81">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୧–୮୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-12"><h2>୧୦ (ଗ). ଯୁଗ୍ମକଜନନର ପ୍ରାବସ୍ଥାଗୁଡ଼ିକର ନାମ କ&#39;ଣ? ଏଥିରେ କି କି ମୁଖ୍ୟ ଘଟଣା ଘଟିଥାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଗୁଣନ ପ୍ରାବସ୍ଥାରେ ଜନନକୋଷର ବିଭାଜନରୁ କୋଷ ସଂଖ୍ୟା ବଢ଼େ। ବୃଦ୍ଧି ପ୍ରାବସ୍ଥାରେ ପ୍ରାଥମିକ କୋଷର ଆକାର ବଢ଼େ। ପରିପକ୍ୱନ ସମୟରେ ଅର୍ଦ୍ଧବିଭାଜନରୁ ଏକଗୁଣିତ କୋଷ ସୃଷ୍ଟି ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରଗୁଣନରେ ଜାୟକ କୋଷ ସଂଖ୍ୟା ବଢ଼େ, ବୃଦ୍ଧିରେ ଆକାର ବଢ଼େ, ପରିପକ୍ୱନରେ ଅର୍ଦ୍ଧାୟନ ଦ୍ୱାରା ଅର୍ଦ୍ଧଗୁଣିତ କୋଷ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-13"><h2>୧୦ (ଘ). ସ୍ପଞ୍ଜର ଅନ୍ତଃକୋରକୋଦ୍ଗମ ବର୍ଣ୍ଣନ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ହାଇଡ୍ରାର କଳିକା ବାହାରେ ଦିଶେ, କିନ୍ତୁ ସ୍ପଞ୍ଜର ଅନ୍ତଃକୋରକ ଦେହ ଭିତରେ ତିଆରି ହୁଏ। ଅନୁକୂଳ ଅବସ୍ଥା ଫେରିଲେ ଆବରଣ ଭିତର କୋଷଗୁଡ଼ିକ ନୂଆ ସ୍ପଞ୍ଜ ଗଠନ କରନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସ୍ପଞ୍ଜ ଦେହଭିତରେ କୋଷସମୂହ ଚାରିପଟେ ସୁରକ୍ଷା ଆବରଣ ହୋଇ ଅନ୍ତଃକୋରକ ଗଢ଼େ। ଅନୁକୂଳ ସମୟରେ ଏଥିରୁ ନୂଆ ସ୍ପଞ୍ଜ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=85">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୫–୮୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-14"><h2>୧୦ (ଙ). ଏମିବାର ବହୁବିଭାଜନ କିପରି ହୋଇଥାଏ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନୁକୂଳ ଅବସ୍ଥାରେ ଗୋଟିଏ ଏମିବା ଦୁଇଟି ଅପତ୍ୟ ହୁଏ। ପ୍ରତିକୂଳ ଅବସ୍ଥାରେ ଆବରଣ ଭିତରେ ନ୍ୟଷ୍ଟି ବାରମ୍ବାର ବିଭାଜିତ ହୁଏ। ପ୍ରତି ନ୍ୟଷ୍ଟି ପାଖରେ କୋଷଜୀବକ ବଣ୍ଟାହେବାରୁ ଅନେକ କ୍ଷୁଦ୍ର ଅପତ୍ୟ ହୁଅନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏମିବାର ଆବରଣ ଭିତରେ ନ୍ୟଷ୍ଟି ଅନେକଥର ବିଭାଜିତ ହୁଏ, କୋଷଜୀବକ ଭାଗ ହୋଇ ଅନେକ ଅପତ୍ୟ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=84">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୪–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-15"><h2>୧୧ (କ). ସମାୟନ ବିଷୟରେ ଟିପ୍ପଣୀ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ଯୁଗ୍ମକ ଏକଗୁଣିତ। ମଣିଷରେ ଡିମ୍ବବାହୀ ନଳୀରେ ଶୁକ୍ରାଣୁ ଓ ଡିମ୍ବାଣୁର ନ୍ୟଷ୍ଟି ମିଶିଲେ ଯୁଗ୍ମଜ ଦ୍ୱିଗୁଣିତ ହୁଏ। ଏହା ବିଭାଜିତ ହେବା ସହ ଗର୍ଭାଶୟ ଆଡ଼କୁ ଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ଅର୍ଦ୍ଧଗୁଣିତ ଯୁଗ୍ମକର ମିଳନରେ ଦ୍ୱିଗୁଣିତ ଯୁଗ୍ମଜ ସୃଷ୍ଟି ସମାୟନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=88">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୮–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-16"><h2>୧୧ (ଖ). ପରିବାର ନିୟୋଜନର ସ୍ଥାୟୀ ପଦ୍ଧତି ବିଷୟରେ ଟିପ୍ପଣୀ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ଥାୟୀ ପଦ୍ଧତିରେ ପୁରୁଷଙ୍କ ଶୁକ୍ରବାହୀ ବା ସ୍ତ୍ରୀଙ୍କ ଡିମ୍ବବାହୀ ନଳୀରେ ଯୁଗ୍ମକର ଗମନ ବନ୍ଦ କରାଯାଏ। ଅସ୍ଥାୟୀ ପଦ୍ଧତିରେ ବାଧକ ଆଦି ଦ୍ୱାରା ଯୁଗ୍ମକର ମିଳନ ରୋକାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭାସେକ୍ଟୋମୀରେ ଶୁକ୍ରବାହୀ, ଟ୍ୟୁବେକ୍ଟୋମୀରେ ଡିମ୍ବବାହୀ ନଳୀର ପଥ ବନ୍ଦ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=92">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୨–୯୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-17"><h2>୧୧ (ଗ). ଗର୍ଭାଶୟ ବିଷୟରେ ଟିପ୍ପଣୀ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଡିମ୍ବାଶୟରୁ ଡିମ୍ବାଣୁ ମୁକ୍ତ ହୁଏ। ନିଷିକ୍ତ ଡିମ୍ବରୁ ସୃଷ୍ଟ ଭ୍ରୂଣ ଗର୍ଭାଶୟ ଭିତ୍ତିରେ ସ୍ଥାପିତ ହେଲେ ଭ୍ରୂଣବନ୍ଧ ମାଧ୍ୟମରେ ମାଆଙ୍କଠାରୁ ଅମ୍ଳଜାନ ଓ ପୋଷକ ମିଳେ। ଭ୍ରୂଣର ବର୍ଜ୍ୟ ବିପରୀତ ଦିଗକୁ ଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗର୍ଭାଶୟ ପେଶୀମୟ ଫମ୍ପା ଅଙ୍ଗ। ଏହାର ଭିତ୍ତିରେ ଭ୍ରୂଣର ରୋପଣ ଓ ବିକାଶ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=89">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୯–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-18"><h2>୧୧ (ଘ). ଅଙ୍ଗବିକାଶ ବିଷୟରେ ଟିପ୍ପଣୀ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯୁଗ୍ମଜ ବିଭାଜନରୁ ବହୁକୋଷୀ ଭ୍ରୂଣ ହୁଏ। ଗାଷ୍ଟ୍ରୁଲେସନ୍‌ରେ ତିନି ଜାୟକ ସ୍ତର ଅଲଗା ହୁଏ। ପରବର୍ତ୍ତୀ ବିଭେଦନରେ ଏହି ସ୍ତରଗୁଡ଼ିକରୁ ଭିନ୍ନ ତନ୍ତୁ ଓ ଅଙ୍ଗ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭ୍ରୂଣର ତିନି ଜାୟକ ସ୍ତରରୁ ଭିନ୍ନ ଟିସୁ ଓ ଅଙ୍ଗ ସୃଷ୍ଟି ଅଙ୍ଗବିକାଶ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=91">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୧–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-19"><h2>୧୧ (ଙ). ଶୁକ୍ରମୁଣି ବିଷୟରେ ଟିପ୍ପଣୀ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ଗଠିତ ହୁଏ। ନଳିକା ମଝିର ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣିର ଅବସ୍ଥାନ ଶୁକ୍ରାଣୁ ଗଠନ ପାଇଁ ଆବଶ୍ୟକ ଅପେକ୍ଷାକୃତ କମ୍ ତାପମାତ୍ରା ବଜାୟ ରଖେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଦର ଗହ୍ୱର ବାହାରେ ଶୁକ୍ରମୁଣି ଶୁକ୍ରାଶୟକୁ ଧାରଣ କରି ଶୁକ୍ରାଣୁ ଗଠନ ଉପଯୋଗୀ କମ୍ ତାପ ରଖେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-20"><h2>୧୨ (କ). କାଲସ୍ କାହାକୁ କୁହାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କାଲସ୍‌ର କୋଷ ଅବିଭେଦିତ। ଉପଯୁକ୍ତ ଅବସ୍ଥାରେ ଏହାର କୋଷରୁ ଚେର, କାଣ୍ଡ ଓ ପୂର୍ଣ୍ଣ ଗଛ ଗଠନର ସମ୍ଭାବନା ଥାଏ। ଏହି କ୍ଷମତାକୁ ପୂର୍ଣ୍ଣବିଭବତା କୁହାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଦ୍ଭିଦ ଟିସୁର ଅବିଭେଦିତ କୋଷସମୂହ କାଲସ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=81">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୧–୮୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-21"><h2>୧୨ (ଖ). ଡିମ୍ବାଶୟରୁ କେଉଁ ହରମୋନ୍ କ୍ଷରିତ ହୁଏ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଡିମ୍ବାଶୟରୁ ଡିମ୍ବାଣୁ ମୁକ୍ତ ହୁଏ। ନିଷିକ୍ତ ଡିମ୍ବରୁ ସୃଷ୍ଟ ଭ୍ରୂଣ ଗର୍ଭାଶୟ ଭିତ୍ତିରେ ସ୍ଥାପିତ ହେଲେ ଭ୍ରୂଣବନ୍ଧ ମାଧ୍ୟମରେ ମାଆଙ୍କଠାରୁ ଅମ୍ଳଜାନ ଓ ପୋଷକ ମିଳେ। ଭ୍ରୂଣର ବର୍ଜ୍ୟ ବିପରୀତ ଦିଗକୁ ଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଡିମ୍ବାଶୟ ଇଷ୍ଟ୍ରୋଜେନ୍ ଓ ପ୍ରୋଜେଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=89">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୯–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-22"><h2>୧୨ (ଗ). ଅନୁକୂଳ ପରିବେଶରେ ଏମିବା କେଉଁ ପ୍ରକ୍ରିୟା ଦ୍ୱାରା ଜନନ କରିଥାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅନୁକୂଳ ଅବସ୍ଥାରେ ଗୋଟିଏ ଏମିବା ଦୁଇଟି ଅପତ୍ୟ ହୁଏ। ପ୍ରତିକୂଳ ଅବସ୍ଥାରେ ଆବରଣ ଭିତରେ ନ୍ୟଷ୍ଟି ବାରମ୍ବାର ବିଭାଜିତ ହୁଏ। ପ୍ରତି ନ୍ୟଷ୍ଟି ପାଖରେ କୋଷଜୀବକ ବଣ୍ଟାହେବାରୁ ଅନେକ କ୍ଷୁଦ୍ର ଅପତ୍ୟ ହୁଅନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନୁକୂଳ ପରିବେଶରେ ଏମିବା ଦ୍ୱିବିଭାଜନ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=84">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୪–୮୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-23"><h2>୧୨ (ଘ). କେଉଁ ପରିବେଶରେ ହାଇଡ୍ରା କୋରକୋଦ୍ଗମ ଦ୍ୱାରା ଅଲିଙ୍ଗୀ ଜନନ କରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ହାଇଡ୍ରା ଦେହପ୍ରାଚୀରରେ କୋଷ ବିଭାଜନରୁ ଏକ ଉଚ୍ଚ ଅଂଶ ହୁଏ। ସେଠାରେ ମୁଖ ଓ କର୍ଷିକା ବଢ଼ିବା ପରେ ଅପତ୍ୟ ଜନକ ଦେହରୁ ଅଲଗା ହୋଇ ସ୍ୱାଧୀନ ଜୀବନ କାଟେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନୁକୂଳ ପରିବେଶରେ ହାଇଡ୍ରା କୋରକୋଦ୍ଗମ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=85">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୫–୮୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-24"><h2>୧୨ (ଙ). ଶୁକ୍ରାଶୟର କେଉଁ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ଗଠିତ ହୁଏ। ନଳିକା ମଝିର ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣିର ଅବସ୍ଥାନ ଶୁକ୍ରାଣୁ ଗଠନ ପାଇଁ ଆବଶ୍ୟକ ଅପେକ୍ଷାକୃତ କମ୍ ତାପମାତ୍ରା ବଜାୟ ରଖେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-25"><h2>୧୨ (ଚ). ଏଡସ୍ ରୋଗ ଚିହ୍ନଟର ୨ଟି ଉପାୟ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠରେ ଏଚ୍‌ଆଇଭି ଚିହ୍ନଟର ଆଲୋଚନାକୁ ରାପିଡ୍ ପରୀକ୍ଷଣ ଓ ପରମ୍ପରାଗତ ପରୀକ୍ଷାଗାର ପରୀକ୍ଷଣ ଭାବରେ ଭାଗ କରାଯାଇଛି। ଏଲାଇଜା ଦ୍ୱିତୀୟ ଗୋଷ୍ଠୀର ଉଦାହରଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୁସ୍ତକରେ ରାପିଡ୍ HIV ପରୀକ୍ଷଣ ଓ ପରୀକ୍ଷାଗାରର ଏଲାଇଜା ଉଲ୍ଲେଖ ଅଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-26"><h2>୧୨ (ଛ). ଭ୍ରୂଣବନ୍ଧର କାର୍ଯ୍ୟ କ&#39;ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଡିମ୍ବାଶୟରୁ ଡିମ୍ବାଣୁ ମୁକ୍ତ ହୁଏ। ନିଷିକ୍ତ ଡିମ୍ବରୁ ସୃଷ୍ଟ ଭ୍ରୂଣ ଗର୍ଭାଶୟ ଭିତ୍ତିରେ ସ୍ଥାପିତ ହେଲେ ଭ୍ରୂଣବନ୍ଧ ମାଧ୍ୟମରେ ମାଆଙ୍କଠାରୁ ଅମ୍ଳଜାନ ଓ ପୋଷକ ମିଳେ। ଭ୍ରୂଣର ବର୍ଜ୍ୟ ବିପରୀତ ଦିଗକୁ ଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭ୍ରୂଣବନ୍ଧ ମାଧ୍ୟମରେ ମାଆ ଓ ଭ୍ରୂଣ ମଧ୍ୟରେ ପୋଷକ, ଶ୍ୱସନ ଗ୍ୟାସ ଓ ବର୍ଜ୍ୟର ବିନିମୟ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=89">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୯–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=99" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୯</a></small></article>
+<article id="exercise-27"><h2>୧୩ (କ). ଲେଡିଗ୍ କୋଷରୁ କେଉଁ ହର୍ମୋନ୍ କ୍ଷରିତ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ଗଠିତ ହୁଏ। ନଳିକା ମଝିର ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣିର ଅବସ୍ଥାନ ଶୁକ୍ରାଣୁ ଗଠନ ପାଇଁ ଆବଶ୍ୟକ ଅପେକ୍ଷାକୃତ କମ୍ ତାପମାତ୍ରା ବଜାୟ ରଖେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଟେଷ୍ଟୋଷ୍ଟିରନ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-28"><h2>୧୩ (ଖ). କେଉଁ ମସିହାରୁ ଭାରତରେ ପରିବାର ନିୟୋଜନ ଯୋଜନା କାର୍ଯ୍ୟକାରୀ ହୋଇଛି ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରିବାର ନିୟୋଜନ କାର୍ଯ୍ୟକ୍ରମରେ ସନ୍ତାନ ଜନ୍ମ ମଧ୍ୟରେ ବ୍ୟବଧାନ, ମାଆଙ୍କ ସ୍ୱାସ୍ଥ୍ୟ ଓ ଶିଶୁର ଯତ୍ନ ପରସ୍ପର ସମ୍ପୃକ୍ତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୫୨।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=92">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୨–୯୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-29"><h2>୧୩ (ଗ). ସାଧାରଣତଃ ସ୍ତ୍ରୀ ଜନନ ତନ୍ତ୍ରର କେଉଁ ସ୍ଥାନରେ ସମାୟନ ଘଟେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ଯୁଗ୍ମକ ଏକଗୁଣିତ। ମଣିଷରେ ଡିମ୍ବବାହୀ ନଳୀରେ ଶୁକ୍ରାଣୁ ଓ ଡିମ୍ବାଣୁର ନ୍ୟଷ୍ଟି ମିଶିଲେ ଯୁଗ୍ମଜ ଦ୍ୱିଗୁଣିତ ହୁଏ। ଏହା ବିଭାଜିତ ହେବା ସହ ଗର୍ଭାଶୟ ଆଡ଼କୁ ଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଡିମ୍ବବାହୀ ନଳୀ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=88">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୮–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-30"><h2>୧୩ (ଘ). ଶୁକ୍ରାଣୁ କେଉଁଠାରେ ତିଆରି ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ଗଠିତ ହୁଏ। ନଳିକା ମଝିର ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣିର ଅବସ୍ଥାନ ଶୁକ୍ରାଣୁ ଗଠନ ପାଇଁ ଆବଶ୍ୟକ ଅପେକ୍ଷାକୃତ କମ୍ ତାପମାତ୍ରା ବଜାୟ ରଖେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-31"><h2>୧୩ (ଙ). ଇଷ୍ଟ୍ରେ କେଉଁ ପ୍ରକାରର ଜନନ ଦେଖାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଇଷ୍ଟ୍‌ର ମାତୃକୋଷ ପୃଷ୍ଠରେ ଏକ କଳିକା ବା କୋରକ ଦେଖାଦିଏ। କଳିକା ବଢ଼ି ପୃଥକ୍ ହେଲେ ତାହା ନୂଆ ଇଷ୍ଟ୍‌କୋଷ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କଳିକନ ବା କୋରକୋଦ୍ଗମ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=79">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-32"><h2>୧୪ (କ). ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର। ଭ୍ରୂଣପୋଷର ଗୁଣସୂତ୍ର ସଂଖ୍ୟା ____ ଅଟେ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରାଗନଳୀର ଦୁଇ ପୁଂଯୁଗ୍ମକର ଗନ୍ତବ୍ୟ ଅଲଗା ଲେଖ। ଗୋଟିଏ ଡିମ୍ବାଣୁ ସହ ମିଶି 2n ଯୁଗ୍ମଜ ଓ ଅନ୍ୟଟି ଦୁଇ ମେରୁ ନ୍ୟଷ୍ଟି ସହ ମିଶି 3n ଭ୍ରୂଣପୋଷ ନ୍ୟଷ୍ଟି ଗଢ଼େ। ସେହି ଭ୍ରୂଣପୋଷ ବଢ଼ୁଥିବା ଭ୍ରୂଣକୁ ପୋଷଣ ଦିଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3n ବା ତ୍ରିଗୁଣିତ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=82">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୨–୮୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-33"><h2>୧୪ (ଖ). ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର। ସମସ୍ତ ପ୍ରକାର କୋଷ ସୃଷ୍ଟି କରିପାରୁଥିବା କୋଷକୁ ____ କୁହାଯାଏ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କାଲସ୍‌ର କୋଷ ଅବିଭେଦିତ। ଉପଯୁକ୍ତ ଅବସ୍ଥାରେ ଏହାର କୋଷରୁ ଚେର, କାଣ୍ଡ ଓ ପୂର୍ଣ୍ଣ ଗଛ ଗଠନର ସମ୍ଭାବନା ଥାଏ। ଏହି କ୍ଷମତାକୁ ପୂର୍ଣ୍ଣବିଭବତା କୁହାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୂର୍ଣ୍ଣବିଭବୀ ବା ସର୍ବକ୍ଷମ କୋଷ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=81">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୧–୮୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-34"><h2>୧୪ (ଗ). ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର। ଶୁକ୍ରମୁଣିର ତାପମାତ୍ରା ମାନବ ଶରୀରର ତାପମାତ୍ରା ଠାରୁ ପ୍ରାୟ ____ ଡିଗ୍ରୀ କମ୍।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ଗଠିତ ହୁଏ। ନଳିକା ମଝିର ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣିର ଅବସ୍ଥାନ ଶୁକ୍ରାଣୁ ଗଠନ ପାଇଁ ଆବଶ୍ୟକ ଅପେକ୍ଷାକୃତ କମ୍ ତାପମାତ୍ରା ବଜାୟ ରଖେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାୟ ୨ °C।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-35"><h2>୧୪ (ଘ). ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର। ଇଷ୍ଟ ____ ଦ୍ୱାରା ବଂଶବିସ୍ତାର କରିଥାଏ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଇଷ୍ଟ୍‌ରେ ଅପତ୍ୟ କୋଷ ପ୍ରଥମେ ଛୋଟ କଳିକା ରୂପେ ମାତୃକୋଷ ସହ ଲାଗି ରହେ। ଏହି ବିଶେଷତ୍ୱରୁ ପ୍ରକ୍ରିୟାକୁ କୋରକୋଦ୍ଗମ କୁହାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କୋରକୋଦ୍ଗମ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=79">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-36"><h2>୧୪ (ଙ). ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର। ଏଚଆଇଭିର ଆନୁବଂଶିକ ପଦାର୍ଥ ____ ଅଟେ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଶ୍ନରେ ଭୂତାଣୁଟି ହେଉଛି HIV। ଏହାର ବଂଶଗତ ପଦାର୍ଥ ଭାବେ ପାଠରେ RNA ଉଲ୍ଲେଖ ଅଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>RNA।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=93">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୩–୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-37"><h2>୧୪ (ଚ). ଅଧ୍ୟାୟରେ ଉଦାହରଣ ଦିଆଯାଇଥିବା RNA ଭୂତାଣୁ HIV କେଉଁ ବର୍ଗର?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠରେ HIVକୁ RNA ବହନ କରୁଥିବା ରେଟ୍ରୋଭାଇରସ୍‌ର ଉଦାହରଣ ଭାବେ ଦିଆଯାଇଛି। ରେଟ୍ରୋଭାଇରସ୍ ହେଉଛି ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଗୋଷ୍ଠୀର ନାମ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏଠାରେ ଉଦାହରଣ HIV ପାଇଁ ‘ରେଟ୍ରୋଭାଇରସ୍’। କେବଳ RNA ଥିବାରୁ ସମସ୍ତ ଭୂତାଣୁ ଏହି ବର୍ଗରେ ପଡ଼ନ୍ତି ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=93">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୩–୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-38"><h2>୧୪ (ଛ). ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର। ଏଡ୍ସ୍ରେ ଆକ୍ରାନ୍ତ ବ୍ୟକ୍ତିଙ୍କ ଶରୀରରେ ____ ନାମକ ଶ୍ୱେତରକ୍ତକଣିକାର ସଂଖ୍ୟା ହ୍ରାସ ପାଏ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସହାୟକ T-ଲିମ୍ଫୋସାଇଟ୍ ଶରୀରର ପ୍ରତିରକ୍ଷାରେ ସହଯୋଗ କରେ। HIV ସଂକ୍ରମଣରେ ଏହି କୋଷ ପ୍ରଭାବିତ ହେବାରୁ ଅନ୍ୟ ସଂକ୍ରମଣ ପ୍ରତି ଶରୀରର ପ୍ରତିରୋଧ କମିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସହାୟକ T-ଲିମ୍ଫୋସାଇଟ୍ (CD4 କୋଷ)।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=93">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୩–୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-39"><h2>୧୫ (କ). ବାକ୍ୟଟି ଶୁଦ୍ଧ କର। ପୁଂଯୁଗ୍ମକ ଓ ସ୍ତ୍ରୀଯୁଗ୍ମକର ମିଳନକୁ ଯୁଗ୍ମକଜନନ କୁହାଯାଏ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ଯୁଗ୍ମକ ଏକଗୁଣିତ। ମଣିଷରେ ଡିମ୍ବବାହୀ ନଳୀରେ ଶୁକ୍ରାଣୁ ଓ ଡିମ୍ବାଣୁର ନ୍ୟଷ୍ଟି ମିଶିଲେ ଯୁଗ୍ମଜ ଦ୍ୱିଗୁଣିତ ହୁଏ। ଏହା ବିଭାଜିତ ହେବା ସହ ଗର୍ଭାଶୟ ଆଡ଼କୁ ଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ଯୁଗ୍ମକର ମିଳନ ସମାୟନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=88">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୮–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-40"><h2>୧୫ (ଖ). ବାକ୍ୟଟି ଶୁଦ୍ଧ କର। ସମାୟନ ନ ହୋଇ ଡିମ୍ବାଣୁର ବୃଦ୍ଧି ଘଟି ଫଳ ସୃଷ୍ଟି ହେଲେ ତାହାକୁ ଅଲିଙ୍ଗୀଜନନ କୁହାଯାଏ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅସମାୟିତ ଜନନରେ ଡିମ୍ବାଣୁ ଅପତ୍ୟ ହୁଏ। ସମାୟନ ବିନା ଗର୍ଭାଶୟ ଫଳ ହେବା ଅଯୁଗ୍ମିତ ଫଳନ। ପ୍ରଥମଟିର ଫଳ ନୂତନ ଜୀବ ଓ ଦ୍ୱିତୀୟଟିର ଫଳ ଗର୍ଭାଶୟର ବିକାଶ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମାୟନ ବିନା ଡିମ୍ବାଣୁର ବିକାଶ ହେଲେ ଅସମାୟିତ ଜନନ। ସମାୟନ ବିନା ଫଳ ଗଠନ ହେଲେ ତାହା ଅସମାୟିତ ଫଳନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=81">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୧–୮୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-41"><h2>୧୫ (ଗ). ବାକ୍ୟଟି ଶୁଦ୍ଧ କର। ଏଲାଇଜା କୌଶଳ ଏଡ଼ସ ଚିହ୍ନଟ ପାଇଁ ସବୁଠାରୁ ବିଶ୍ୱାସନୀୟ ଉପାୟ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ତୁଳନାଟି ପାଠରେ ଉଲ୍ଲେଖିତ ପରୀକ୍ଷା ନାମ ଉପରେ ଆଧାରିତ। ଏଲାଇଜା ଓ ୱେଷ୍ଟର୍ଣ୍ଣ ବ୍ଲଟିଙ୍ଗ୍ ଦୁଇଟି ଭିନ୍ନ ନାମ। ବାକ୍ୟଟିକୁ ପୁସ୍ତକ ଅନୁସାରେ ଶୁଦ୍ଧ କଲେ ‘ଏଲାଇଜା’ ସ୍ଥାନରେ ‘ୱେଷ୍ଟର୍ଣ୍ଣ ବ୍ଲଟିଙ୍ଗ୍’ ହେବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୁସ୍ତକର ତୁଳନାରେ ଉଲ୍ଲେଖିତ ଉତ୍ତର ୱେଷ୍ଟର୍ଣ୍ଣ ବ୍ଲଟିଙ୍ଗ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=94">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-42"><h2>୧୫ (ଘ). ବାକ୍ୟଟି ଶୁଦ୍ଧ କର। ଗର୍ଭବତୀ ମହିଳା ଓ ଶିଶୁମାନଙ୍କର ଯତ୍ନ ଓ ସୁରକ୍ଷା ପାଇଁ ଆମ ଦେଶରେ ରାଷ୍ଟ୍ରୀୟ କିଶୋର ସୁରକ୍ଷା ଯୋଜନା କାର୍ଯ୍ୟକାରୀ ହେଉଛି।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯୋଜନାର ନାମ ଚିହ୍ନିବାକୁ ହିତାଧିକାରୀଙ୍କ ଅବସ୍ଥାକୁ ଦେଖ। ପାଠରେ ଗର୍ଭବତୀ ମହିଳାଙ୍କ ପ୍ରସବ ପୂର୍ବରୁ ଆରମ୍ଭ କରି ପ୍ରସବ ସମୟ ଓ ପରବର୍ତ୍ତୀ ଯତ୍ନ ପାଇଁ ଜନନୀ ସୁରକ୍ଷା ଯୋଜନା ଆଲୋଚିତ ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଆ ଓ ଶିଶୁର ଯତ୍ନ ସହିତ ଜନନୀ ସୁରକ୍ଷା ଯୋଜନା ସମ୍ପୃକ୍ତ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=95">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-43"><h2>୧୫ (ଙ). ବାକ୍ୟଟି ଶୁଦ୍ଧ କର। ଭ୍ରୂଣରେ ତିନୋଟି ଜାୟକ ସ୍ତର ତିଆରି ପ୍ରକ୍ରିୟାକୁ ପ୍ରସବ କୁହାଯାଏ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯୁଗ୍ମଜ ବିଭାଜନରୁ ବହୁକୋଷୀ ଭ୍ରୂଣ ହୁଏ। ଗାଷ୍ଟ୍ରୁଲେସନ୍‌ରେ ତିନି ଜାୟକ ସ୍ତର ଅଲଗା ହୁଏ। ପରବର୍ତ୍ତୀ ବିଭେଦନରେ ଏହି ସ୍ତରଗୁଡ଼ିକରୁ ଭିନ୍ନ ତନ୍ତୁ ଓ ଅଙ୍ଗ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତିନି ଜାୟକ ସ୍ତର ଗଠନ ପ୍ରକ୍ରିୟା ଗାଷ୍ଟ୍ରୁଲେସନ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=91">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୧–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-44"><h2>୧୬ (କ). ଶବ୍ଦଯୁଗଳ ପୂରଣ କର। ଯୁଗ୍ମକ : (n) : : ଯୁଗ୍ମଜ : ____।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ଯୁଗ୍ମକ ଏକଗୁଣିତ। ମଣିଷରେ ଡିମ୍ବବାହୀ ନଳୀରେ ଶୁକ୍ରାଣୁ ଓ ଡିମ୍ବାଣୁର ନ୍ୟଷ୍ଟି ମିଶିଲେ ଯୁଗ୍ମଜ ଦ୍ୱିଗୁଣିତ ହୁଏ। ଏହା ବିଭାଜିତ ହେବା ସହ ଗର୍ଭାଶୟ ଆଡ଼କୁ ଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ଯୁଗ୍ମଜ → 2n।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=88">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୮–୯୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-45"><h2>୧୬ (ଖ). ଶବ୍ଦଯୁଗଳ ପୂରଣ କର। ଭାସେକ୍ଟୋମୀ : ଶୁକ୍ରବାହୀ ନଳୀ : : ଟ୍ୟୁବେକ୍ଟୋମୀ : ____।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ଥାୟୀ ପଦ୍ଧତିରେ ପୁରୁଷଙ୍କ ଶୁକ୍ରବାହୀ ବା ସ୍ତ୍ରୀଙ୍କ ଡିମ୍ବବାହୀ ନଳୀରେ ଯୁଗ୍ମକର ଗମନ ବନ୍ଦ କରାଯାଏ। ଅସ୍ଥାୟୀ ପଦ୍ଧତିରେ ବାଧକ ଆଦି ଦ୍ୱାରା ଯୁଗ୍ମକର ମିଳନ ରୋକାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଟ୍ୟୁବେକ୍ଟୋମୀ → ଡିମ୍ବବାହୀ ନଳୀ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=92">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯୨–୯୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-46"><h2>୧୬ (ଗ). ଶବ୍ଦଯୁଗଳ ପୂରଣ କର। ଡିମ୍ବାଶୟ : ଇଷ୍ଟ୍ରୋଜେନ୍ : : ଶୁକ୍ରାଶୟ : ____।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୁକ୍ରାଶୟର ଶୁକ୍ରଜନ ନଳିକାରେ ଶୁକ୍ରାଣୁ ଗଠିତ ହୁଏ। ନଳିକା ମଝିର ଲେଡିଗ୍ କୋଷ ଟେଷ୍ଟୋଷ୍ଟିରନ୍ କ୍ଷରଣ କରେ। ଶୁକ୍ରମୁଣିର ଅବସ୍ଥାନ ଶୁକ୍ରାଣୁ ଗଠନ ପାଇଁ ଆବଶ୍ୟକ ଅପେକ୍ଷାକୃତ କମ୍ ତାପମାତ୍ରା ବଜାୟ ରଖେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶୁକ୍ରାଶୟ → ଟେଷ୍ଟୋଷ୍ଟିରନ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=87">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୭–୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-47"><h2>୧୬ (ଘ). ଶବ୍ଦଯୁଗଳ ପୂରଣ କର। ନଳୀନ୍ୟଷ୍ଟି : ପୁଂଯୁଗ୍ମକ : : ମେରୁ ନ୍ୟଷ୍ଟି : ____।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରାଗନଳୀର ଦୁଇ ପୁଂଯୁଗ୍ମକର ଗନ୍ତବ୍ୟ ଅଲଗା ଲେଖ। ଗୋଟିଏ ଡିମ୍ବାଣୁ ସହ ମିଶି 2n ଯୁଗ୍ମଜ ଓ ଅନ୍ୟଟି ଦୁଇ ମେରୁ ନ୍ୟଷ୍ଟି ସହ ମିଶି 3n ଭ୍ରୂଣପୋଷ ନ୍ୟଷ୍ଟି ଗଢ଼େ। ସେହି ଭ୍ରୂଣପୋଷ ବଢ଼ୁଥିବା ଭ୍ରୂଣକୁ ପୋଷଣ ଦିଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ମେରୁ ନ୍ୟଷ୍ଟି ସହ ପୁଂଯୁଗ୍ମକ ମିଶି ଭ୍ରୂଣପୋଷ ନ୍ୟଷ୍ଟି ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=82">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮୨–୮୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-48"><h2>୧୬ (ଙ). ଶବ୍ଦଯୁଗଳ ପୂରଣ କର। ଚଳରେଣୁ : ୟୁଲୋଥ୍ରିକ୍ସ : : ଅଚଳରେଣୁ : ____।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଲିଙ୍ଗୀ ଜନନରେ ଯୁଗ୍ମକର ସମାୟନ ହୁଏନାହିଁ। ରେଣୁରୁ ନୂଆ ଜୀବ, କଳିକାରୁ ଅପତ୍ୟ କିମ୍ବା ଉଦ୍ଭିଦର କାଣ୍ଡ ଆଦି ଅଙ୍ଗରୁ ନୂଆ ଗଛ ବିକଶିତ ହୋଇପାରେ। ଚଳରେଣୁ ଓ ଅଚଳରେଣୁକୁ ଗତି କରିବାର କ୍ଷମତାରୁ ଚିହ୍ନଟ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଚଳରେଣୁ → ପେନିସିଲିୟମ୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=77">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭୭–୮୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/102%20-%20OD_ODIA_LIFESCIENCE_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+
+</main></body></html>

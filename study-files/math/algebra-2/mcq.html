@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଦ୍ୱିଘାତ ସମୀକରଣ · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଦ୍ୱିଘାତ ସମୀକରଣ</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1mjA4UnHgEwGSuG-ls-72jye1GWRBdS6J/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ପ୍ରଭେଦକ ଶୂନ ହେଲେ ମୂଳଦ୍ୱୟର ପ୍ରକୃତି କ’ଣ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>ବାସ୍ତବ ଓ ଭିନ୍ନ</li><li>ବାସ୍ତବ ଓ ସମାନ</li><li>କୌଣସି ବାସ୍ତବ ମୂଳ ନାହିଁ</li><li>ଉଭୟ ନିଶ୍ଚିତ ଭାବେ ଶୂନ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ବାସ୍ତବ ଓ ସମାନ</b></p>
+<div class="lesson-body"><p>√D = 0 ହେବାରୁ ସୂତ୍ରର ଦୁଇ ମାନ ସମାନ।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୨. x² − 5x + 6 = 0 ର ପ୍ରଭେଦକ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>−1</li><li>49</li><li>1</li><li>5</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 1</b></p>
+<div class="lesson-body"><p class="lesson-equation">(−5)² − 4 × 1 × 6 = 1।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୮</small></article>
+<article><h2>୩. 1 ଓ −1 ମୂଳ ଥିବା ସମୀକରଣ କେଉଁଟି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>x² + x = 0</li><li>x² + 1 = 0</li><li>x² − 1 = 0</li><li>x² − x = 0</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. x² − 1 = 0</b></p>
+<div class="lesson-body"><p class="lesson-equation">(x − 1)(x + 1) = x² − 1।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୮</small></article>
+<article><h2>୪. x² + 5x + 3 = 0 ର ମୂଳଦ୍ୱୟର ସମଷ୍ଟି କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>−5</li><li>−3</li><li>3</li><li>5</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. −5</b></p>
+<div class="lesson-body"><p class="lesson-equation">ସମଷ୍ଟି −b/a = −5।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୮</small></article>
+<article><h2>୫. 2x² + x − 6 = 0 ର ମୂଳଦ୍ୱୟର ଗୁଣଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>6</li><li>-1/2</li><li>3</li><li>-3</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. -3</b></p>
+<div class="lesson-body"><p class="lesson-equation">c/a = −6/2 = −3।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୬. x² − 7x + 10 = 0 ରେ ଗୋଟିଏ ମୂଳ 2। ଅନ୍ୟଟି କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>-5</li><li>10</li><li>7</li><li>5</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 5</b></p>
+<div class="lesson-body"><p>ମୂଳଦ୍ୱୟର ଗୁଣଫଳ 10। ଅନ୍ୟ ମୂଳ 10/2 = 5।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୭. x² − 4x + c = 0 ର ଦୁଇ ମୂଳ ସମାନ ହେଲେ c କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>2</li><li>4</li><li>5</li><li>16</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 4</b></p>
+<div class="lesson-body"><p>D = (4)² − 4c = 0। c = 4।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୬</small></article>
+<article><h2>୮. x² + 6x + 2 = 0 ର ପ୍ରଭେଦକ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>44</li><li>28</li><li>8</li><li>36</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 28</b></p>
+<div class="lesson-body"><p class="lesson-equation">D = b² − 4ac = 36 − 8 = 28।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୯. x² − 6x + c = 0 ର ଦୁଇ ମୂଳ ସମାନ ହେଲେ c କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>7</li><li>3</li><li>36</li><li>9</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 9</b></p>
+<div class="lesson-body"><p>D = (6)² − 4c = 0। c = 9।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୬</small></article>
+<article><h2>୧୦. x² + 7x + 3 = 0 ର ପ୍ରଭେଦକ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>37</li><li>49</li><li>12</li><li>61</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 37</b></p>
+<div class="lesson-body"><p class="lesson-equation">D = b² − 4ac = 49 − 12 = 37।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୧୧. 3x² − 12x + 1 = 0 ର ମୂଳଦ୍ୱୟର ସମଷ୍ଟି କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>1/3</li><li>4</li><li>-4</li><li>12</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 4</b></p>
+<div class="lesson-body"><p class="lesson-equation">−b/a = 12/3 = 4।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୧୨. x² − 9x + 18 = 0 ରେ ଗୋଟିଏ ମୂଳ 3। ଅନ୍ୟଟି କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>9</li><li>6</li><li>18</li><li>-6</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 6</b></p>
+<div class="lesson-body"><p>ମୂଳଦ୍ୱୟର ଗୁଣଫଳ 18। ଅନ୍ୟ ମୂଳ 18/3 = 6।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୧୩. x² − 8x + c = 0 ର ଦୁଇ ମୂଳ ସମାନ ହେଲେ c କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>4</li><li>9</li><li>16</li><li>64</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 16</b></p>
+<div class="lesson-body"><p>D = (8)² − 4c = 0। c = 16।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୬</small></article>
+<article><h2>୧୪. 4x² + x − 20 = 0 ର ମୂଳଦ୍ୱୟର ଗୁଣଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>-5</li><li>5</li><li>20</li><li>-1/4</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. -5</b></p>
+<div class="lesson-body"><p class="lesson-equation">c/a = −20/4 = −5।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୧୫. x² − 11x + 28 = 0 ରେ ଗୋଟିଏ ମୂଳ 4। ଅନ୍ୟଟି କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>7</li><li>11</li><li>28</li><li>-7</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 7</b></p>
+<div class="lesson-body"><p>ମୂଳଦ୍ୱୟର ଗୁଣଫଳ 28। ଅନ୍ୟ ମୂଳ 28/4 = 7।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୧୬. x² + 8x + 4 = 0 ର ପ୍ରଭେଦକ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>16</li><li>64</li><li>80</li><li>48</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 48</b></p>
+<div class="lesson-body"><p class="lesson-equation">D = b² − 4ac = 64 − 16 = 48।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୧୭. ଏକ ଆୟତଚିତ୍ରର ଦୈର୍ଘ୍ୟ ପ୍ରସ୍ଥଠାରୁ 6 ସେ.ମି. ଅଧିକ। କ୍ଷେତ୍ରଫଳ 112 ବର୍ଗ ସେ.ମି.। x ପ୍ରସ୍ଥ ହେଲେ କେଉଁ ସମୀକରଣ ଠିକ୍?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>x² + 36 = 112</li><li>x² + 6x − 112 = 0</li><li>2x + 6 = 112</li><li>x² − 6x − 112 = 0</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. x² + 6x − 112 = 0</b></p>
+<div class="lesson-body"><p>ଦୈର୍ଘ୍ୟ = x + 6। ପ୍ରସ୍ଥ ସହ ଗୁଣିଲେ x(x + 6) = 112।</p><p>ବିସ୍ତାର କରି ସବୁ ପଦ ଗୋଟିଏ ପାର୍ଶ୍ୱରେ ରଖ।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୧୦</small></article>
+<article><h2>୧୮. x² − 13x + 40 = 0 ରେ ଗୋଟିଏ ମୂଳ 5। ଅନ୍ୟଟି କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>40</li><li>8</li><li>13</li><li>-8</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 8</b></p>
+<div class="lesson-body"><p>ମୂଳଦ୍ୱୟର ଗୁଣଫଳ 40। ଅନ୍ୟ ମୂଳ 40/5 = 8।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୧୯. x² + 9x + 5 = 0 ର ପ୍ରଭେଦକ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>101</li><li>81</li><li>61</li><li>20</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 61</b></p>
+<div class="lesson-body"><p class="lesson-equation">D = b² − 4ac = 81 − 20 = 61।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୨୦. 5x² − 30x + 1 = 0 ର ମୂଳଦ୍ୱୟର ସମଷ୍ଟି କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>-6</li><li>30</li><li>6</li><li>1/5</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 6</b></p>
+<div class="lesson-body"><p class="lesson-equation">−b/a = 30/5 = 6।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୫–୮</small></article>
+<article><h2>୨୧. x² − 10x + c = 0 ର ଦୁଇ ମୂଳ ସମାନ ହେଲେ c କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>5</li><li>25</li><li>11</li><li>100</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 25</b></p>
+<div class="lesson-body"><p>D = (10)² − 4c = 0। c = 25।</p></div>
+</details>
+<small class="lesson-source">math/algebra/chapter 2/chapter.pdf · ପୃଷ୍ଠା ୩–୬</small></article>
+
+</main></body></html>

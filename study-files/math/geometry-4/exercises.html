@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ତ୍ରିକୋଣମିତି · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ତ୍ରିକୋଣମିତି</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/15Bf8NQP29BHLqI2KXWZdXjamh3q27s6L/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>4(a) · 1–17। 4(b) · 1–12। 4(c) · 1–16। ତିନି ଅନୁଶୀଳନୀର ପ୍ରତି ଉପପ୍ରଶ୍ନ ପ୍ରକାଶିତ। ଯୌଗିକ କୋଣର ପ୍ରମାଣ, ସମୀକରଣ ଓ ଉଚ୍ଚତା–ଦୂରତାର ସମସ୍ତ 16 ପ୍ରଶ୍ନର ଚିତ୍ର ଓ ଗଣନା ମିଳିବ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 9–12, 17–19, 23–24।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୩୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">4(a) · 1(a)</a> <a href="#exercise-2">4(a) · 1(b)</a> <a href="#exercise-3">4(a) · 1(c)</a> <a href="#exercise-4">4(a) · 1(d)</a> <a href="#exercise-5">4(a) · 1(e)</a> <a href="#exercise-6">4(a) · 1(f)</a> <a href="#exercise-7">4(a) · 1(g)</a> <a href="#exercise-8">4(a) · 1(h)</a> <a href="#exercise-9">4(a) · 1(i)</a> <a href="#exercise-10">4(a) · 1(j)</a> <a href="#exercise-11">4(a) · 2(i)</a> <a href="#exercise-12">4(a) · 2(ii)</a> <a href="#exercise-13">4(a) · 2(iii)</a> <a href="#exercise-14">4(a) · 2(iv)</a> <a href="#exercise-15">4(a) · 2(v)</a> <a href="#exercise-16">4(a) · 2(vi)</a> <a href="#exercise-17">4(a) · 2(vii)</a> <a href="#exercise-18">4(a) · 2(viii)</a> <a href="#exercise-19">4(a) · 2(ix)</a> <a href="#exercise-20">4(a) · 3(i)</a> <a href="#exercise-21">4(a) · 3(ii)</a> <a href="#exercise-22">4(a) · 3(iii)</a> <a href="#exercise-23">4(a) · 4(i)</a> <a href="#exercise-24">4(a) · 4(ii)</a> <a href="#exercise-25">4(a) · 4(iii)</a> <a href="#exercise-26">4(a) · 4(iv)</a> <a href="#exercise-27">4(a) · 4(v)</a> <a href="#exercise-28">4(a) · 5(i)</a> <a href="#exercise-29">4(a) · 5(ii)</a> <a href="#exercise-30">4(a) · 5(iii)</a> <a href="#exercise-31">4(a) · 5(iv)</a> <a href="#exercise-32">4(a) · 5(v)</a> <a href="#exercise-33">4(a) · 5(vi)</a> <a href="#exercise-34">4(a) · 5(vii)</a> <a href="#exercise-35">4(a) · 5(viii)</a> <a href="#exercise-36">4(a) · 5(ix)</a> <a href="#exercise-37">4(a) · 5(x)</a> <a href="#exercise-38">4(a) · 6(i)</a> <a href="#exercise-39">4(a) · 6(ii)</a> <a href="#exercise-40">4(a) · 6(iii)</a> <a href="#exercise-41">4(a) · 6(iv)</a> <a href="#exercise-42">4(a) · 6(v)</a> <a href="#exercise-43">4(a) · 6(vi)</a> <a href="#exercise-44">4(a) · 6(vii)</a> <a href="#exercise-45">4(a) · 7(i)</a> <a href="#exercise-46">4(a) · 7(ii)</a> <a href="#exercise-47">4(a) · 7(iii)</a> <a href="#exercise-48">4(a) · 7(iv)</a> <a href="#exercise-49">4(a) · 7(v)</a> <a href="#exercise-50">4(a) · 7(vi)</a> <a href="#exercise-51">4(a) · 8(i)</a> <a href="#exercise-52">4(a) · 8(ii)</a> <a href="#exercise-53">4(a) · 8(iii)</a> <a href="#exercise-54">4(a) · 8(iv)</a> <a href="#exercise-55">4(a) · 9(i)</a> <a href="#exercise-56">4(a) · 9(ii)</a> <a href="#exercise-57">4(a) · 9(iii)</a> <a href="#exercise-58">4(a) · 10(i)</a> <a href="#exercise-59">4(a) · 10(ii)</a> <a href="#exercise-60">4(a) · 10(iii)</a> <a href="#exercise-61">4(a) · 11(i)</a> <a href="#exercise-62">4(a) · 11(ii)</a> <a href="#exercise-63">4(a) · 12</a> <a href="#exercise-64">4(a) · 13</a> <a href="#exercise-65">4(a) · 14</a> <a href="#exercise-66">4(a) · 15</a> <a href="#exercise-67">4(a) · 16</a> <a href="#exercise-68">4(a) · 17</a> <a href="#exercise-69">4(b) · 1(i)</a> <a href="#exercise-70">4(b) · 1(ii)</a> <a href="#exercise-71">4(b) · 1(iii)</a> <a href="#exercise-72">4(b) · 1(iv)</a> <a href="#exercise-73">4(b) · 1(v)</a> <a href="#exercise-74">4(b) · 1(vi)</a> <a href="#exercise-75">4(b) · 2(i)</a> <a href="#exercise-76">4(b) · 2(ii)</a> <a href="#exercise-77">4(b) · 2(iii)</a> <a href="#exercise-78">4(b) · 2(iv)</a> <a href="#exercise-79">4(b) · 2(v)</a> <a href="#exercise-80">4(b) · 3(i)</a> <a href="#exercise-81">4(b) · 3(ii)</a> <a href="#exercise-82">4(b) · 3(iii)</a> <a href="#exercise-83">4(b) · 3(iv)</a> <a href="#exercise-84">4(b) · 4(i)</a> <a href="#exercise-85">4(b) · 4(ii)</a> <a href="#exercise-86">4(b) · 4(iii)</a> <a href="#exercise-87">4(b) · 4(iv)</a> <a href="#exercise-88">4(b) · 4(v)</a> <a href="#exercise-89">4(b) · 5(i)</a> <a href="#exercise-90">4(b) · 5(ii)</a> <a href="#exercise-91">4(b) · 5(iii)</a> <a href="#exercise-92">4(b) · 5(iv)</a> <a href="#exercise-93">4(b) · 5(v)</a> <a href="#exercise-94">4(b) · 5(vi)</a> <a href="#exercise-95">4(b) · 5(vii)</a> <a href="#exercise-96">4(b) · 5(viii)</a> <a href="#exercise-97">4(b) · 6</a> <a href="#exercise-98">4(b) · 7(i)</a> <a href="#exercise-99">4(b) · 7(ii)</a> <a href="#exercise-100">4(b) · 7(iii)</a> <a href="#exercise-101">4(b) · 8(i)</a> <a href="#exercise-102">4(b) · 8(ii)</a> <a href="#exercise-103">4(b) · 9(i)</a> <a href="#exercise-104">4(b) · 9(ii)</a> <a href="#exercise-105">4(b) · 9(iii)</a> <a href="#exercise-106">4(b) · 10(i)</a> <a href="#exercise-107">4(b) · 10(ii)</a> <a href="#exercise-108">4(b) · 11(i)</a> <a href="#exercise-109">4(b) · 11(ii)</a> <a href="#exercise-110">4(b) · 11(iii)</a> <a href="#exercise-111">4(b) · 12(i)</a> <a href="#exercise-112">4(b) · 12(ii)</a> <a href="#exercise-113">4(b) · 12(iii)</a> <a href="#exercise-114">4(b) · 12(iv)</a> <a href="#exercise-115">4(c) · 1</a> <a href="#exercise-116">4(c) · 2</a> <a href="#exercise-117">4(c) · 3</a> <a href="#exercise-118">4(c) · 4</a> <a href="#exercise-119">4(c) · 5</a> <a href="#exercise-120">4(c) · 6</a> <a href="#exercise-121">4(c) · 7</a> <a href="#exercise-122">4(c) · 8</a> <a href="#exercise-123">4(c) · 9</a> <a href="#exercise-124">4(c) · 10</a> <a href="#exercise-125">4(c) · 11</a> <a href="#exercise-126">4(c) · 12</a> <a href="#exercise-127">4(c) · 13</a> <a href="#exercise-128">4(c) · 14</a> <a href="#exercise-129">4(c) · 15</a> <a href="#exercise-130">4(c) · 16</a></nav></details>
+<article id="exercise-1"><h2>4(a) · 1(a). sin 80° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରସ୍ପର ଅନୁପୂରକ କୋଣଦ୍ୱୟ 80° ଓ 90° − 80° = 10°। ସମକୋଣୀ ତ୍ରିଭୁଜରେ ଏକ ସୂକ୍ଷ୍ମକୋଣର ସମ୍ମୁଖସ୍ଥ ବାହୁ ଅନ୍ୟଟିର ସଂଲଗ୍ନ ବାହୁ, ତେଣୁ sin ଓ cos ମଧ୍ୟରେ ଏହି ସମ୍ପର୍କ ମିଳେ।</li><li>sin θ = cos(90° − θ)।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ sin 80° = cos 10°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos 10°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=109" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୯</a></small></article>
+<article id="exercise-2"><h2>4(a) · 1(b). cos 65° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରସ୍ପର ଅନୁପୂରକ କୋଣଦ୍ୱୟ 65° ଓ 90° − 65° = 25°। ସମକୋଣୀ ତ୍ରିଭୁଜରେ ଏକ ସୂକ୍ଷ୍ମକୋଣର ସମ୍ମୁଖସ୍ଥ ବାହୁ ଅନ୍ୟଟିର ସଂଲଗ୍ନ ବାହୁ, ତେଣୁ cos ଓ sin ମଧ୍ୟରେ ଏହି ସମ୍ପର୍କ ମିଳେ।</li><li>cos θ = sin(90° − θ)।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ cos 65° = sin 25°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin 25°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=109" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୯</a></small></article>
+<article id="exercise-3"><h2>4(a) · 1(c). sin 180° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>180°ରେ x-ଅକ୍ଷ ଉପରେ y-ସ୍ଥାନାଙ୍କ 0, ତେଣୁ sin 180° = 0।</li><li>sin(180° − 0°) = sin 0°।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ sin 180° = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=109" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୯</a></small></article>
+<article id="exercise-4"><h2>4(a) · 1(d). cos 90° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>90°ରେ ଧନାତ୍ମକ y-ଅକ୍ଷ ଉପରେ x-ସ୍ଥାନାଙ୍କ 0, ତେଣୁ cos 90° = 0।</li><li>cos 90° = sin 0°।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ cos 90° = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=109" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୯</a></small></article>
+<article id="exercise-5"><h2>4(a) · 1(e). cos 110° + sin 20° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>110° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 20° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>cos(90° + 20°) = −sin 20°।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ cos 110° + sin 20° = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=109" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୯</a></small></article>
+<article id="exercise-6"><h2>4(a) · 1(f). sin 75° − cos 15° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରସ୍ପର ଅନୁପୂରକ କୋଣଦ୍ୱୟ 75° ଓ 90° − 75° = 15°। ସମକୋଣୀ ତ୍ରିଭୁଜରେ ଏକ ସୂକ୍ଷ୍ମକୋଣର ସମ୍ମୁଖସ୍ଥ ବାହୁ ଅନ୍ୟଟିର ସଂଲଗ୍ନ ବାହୁ, ତେଣୁ sin ଓ cos ମଧ୍ୟରେ ଏହି ସମ୍ପର୍କ ମିଳେ।</li><li>sin(90° − 15°) = cos 15°।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ sin 75° − cos 15° = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=109" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୯</a></small></article>
+<article id="exercise-7"><h2>4(a) · 1(g). sin 0° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>0°ରେ x-ଅକ୍ଷ ଉପରେ y-ସ୍ଥାନାଙ୍କ 0, ତେଣୁ sin 0° = 0।</li><li>ଉଭୟ କୋଣର sine ଶୂନ।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ sin 0° = sin 180°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin 180°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-8"><h2>4(a) · 1(h). sin 15° + cos 105° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପରସ୍ପର ଅନୁପୂରକ କୋଣଦ୍ୱୟ 15° ଓ 90° − 15° = 75°। ସମକୋଣୀ ତ୍ରିଭୁଜରେ ଏକ ସୂକ୍ଷ୍ମକୋଣର ସମ୍ମୁଖସ୍ଥ ବାହୁ ଅନ୍ୟଟିର ସଂଲଗ୍ନ ବାହୁ, ତେଣୁ sin ଓ cos ମଧ୍ୟରେ ଏହି ସମ୍ପର୍କ ମିଳେ।</li><li>cos(90° + 15°) = −sin 15°।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ sin 15° + cos 105° = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-9"><h2>4(a) · 1(i). cos 121° + sin 149° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>121° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 31° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>cos(90° + 31°) = −sin 31° ଓ sin(180° − 31°) = sin 31°।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ cos 121° + sin 149° = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-10"><h2>4(a) · 1(j). tan 102° − cot 168° ସହ ସମାନ ମୁଦ୍ରିତ ବିକଳ୍ପ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>102° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 12° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>tan(90° + 12°) = −cot 12° ଓ cot(180° − 12°) = −cot 12°।</li><li>ଏହି ସମ୍ପର୍କ ଲାଗୁ କଲେ tan 102° − cot 168° = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-11"><h2>4(a) · 2(i). sin 111°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>111° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 21° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ sin(90° + 21°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ sin(90° + 21°) = cos 21°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos 21°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-12"><h2>4(a) · 2(ii). cos 122°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>122° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 32° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ cos(180° − 58°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ cos(180° − 58°) = −cos 58°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−cos 58°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-13"><h2>4(a) · 2(iii). tan 99°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>99° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 9° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ tan(90° + 9°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ tan(90° + 9°) = −cot 9°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−cot 9°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-14"><h2>4(a) · 2(iv). cot 101°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>101° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 11° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ cot(90° + 11°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ cot(90° + 11°) = −tan 11°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−tan 11°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-15"><h2>4(a) · 2(v). sin 91°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>91° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 1° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ sin(90° + 1°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ sin(90° + 1°) = cos 1°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos 1°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-16"><h2>4(a) · 2(vi). cosec 93°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>93° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 3° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ cosec(90° + 3°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ cosec(90° + 3°) = sec 3°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sec 3°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-17"><h2>4(a) · 2(vii). cos 128°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>128° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 38° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ cos(90° + 38°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ cos(90° + 38°) = −sin 38°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−sin 38°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-18"><h2>4(a) · 2(viii). cosec 132°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>132° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 42° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ cosec(180° − 48°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ cosec(180° − 48°) = cosec 48°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cosec 48°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-19"><h2>4(a) · 2(ix). cot 131°କୁ ସୂକ୍ଷ୍ମକୋଣର ତ୍ରିକୋଣମିତିକ ଅନୁପାତରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>131° ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶରେ। ସେଠାରେ sin ଧନାତ୍ମକ, cos ଋଣାତ୍ମକ ଓ tan ଋଣାତ୍ମକ। 90°ଠାରୁ ଅଧିକ ଅଂଶ 41° ନେଇ ସୂତ୍ର ଲଗାଇଲେ ଚିହ୍ନ ଯାଞ୍ଚ କରିହେବ।</li><li>କୋଣଟିକୁ ଭାଙ୍ଗି ଲେଖିଲେ cot(90° + 41°)।</li><li>ଦ୍ୱିତୀୟ ଚତୁର୍ଥାଂଶର ଚିହ୍ନ ଓ ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ର ଲାଗୁ କଲେ cot(90° + 41°) = −tan 41°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−tan 41°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-20"><h2>4(a) · 3(i). cos 85° + cot 85°। 0° ଓ 45° ମଧ୍ୟର କୋଣରେ ପ୍ରକାଶ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>85° = 90° − 5°, ତେଣୁ cos 85° = sin 5° | 85° = 90° − 5°, ତେଣୁ cot 85° = tan 5°।</li><li>85° = 90° − 5°।</li><li>cos(90° − 5°) = sin 5°, cot(90° − 5°) = tan 5°। ମୁଦ୍ରିତ ପ୍ରଶ୍ନରେ ଯୋଗଚିହ୍ନ ଅଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin 5° + tan 5°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-21"><h2>4(a) · 3(ii). sin 75° + tan 75°। 0° ଓ 45° ମଧ୍ୟର କୋଣରେ ପ୍ରକାଶ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>75° = 90° − 15°, ତେଣୁ sin 75° = cos 15° | 75° = 90° − 15°, ତେଣୁ tan 75° = cot 15°।</li><li>75° = 90° − 15°।</li><li>sin 75° = cos 15° ଓ tan 75° = cot 15°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos 15° + cot 15°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-22"><h2>4(a) · 3(iii). cot 65° + tan 49°। 0° ଓ 45° ମଧ୍ୟର କୋଣରେ ପ୍ରକାଶ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>65° = 90° − 25°, ତେଣୁ cot 65° = tan 25° | 49° = 90° − 41°, ତେଣୁ tan 49° = cot 41°।</li><li>65° = 90° − 25°, 49° = 90° − 41°।</li><li>cot 65° = tan 25° ଓ tan 49° = cot 41°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>tan 25° + cot 41°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-23"><h2>4(a) · 4(i). sin 18°/cos 72°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>72° = 90° − 18°, ତେଣୁ cos 72° = sin 18°।</li><li>cos 72° = sin 18°।</li><li>ସମାନ ଅଶୂନ୍ୟ ଲବ ଓ ହରର ଭାଗଫଳ 1।</li><li>72° + 18° = 90°। ହରରେ cos 72°କୁ sin 18°ରେ ବଦଳାଇଲେ ଅଶୂନ୍ୟ ମାନ ନିଜ ଦ୍ୱାରା ଭାଗ ହୁଏ, ତେଣୁ ଫଳ 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-24"><h2>4(a) · 4(ii). tan 26°/cot 64°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>64° = 90° − 26°, ତେଣୁ cot 64° = tan 26°।</li><li>cot 64° = tan 26°।</li><li>ଲବ ଓ ହର ସମାନ।</li><li>64° + 26° = 90°। ହର cot 64° = tan 26° ହେଉଛି ଲବର ଅଶୂନ୍ୟ ମାନ ସହ ସମାନ, ତେଣୁ ଭାଗଫଳ 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-25"><h2>4(a) · 4(iii). sin 116°/cos 26°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>116° = 180° − 64°, ତେଣୁ sin 116° = sin 64°।</li><li>sin(90° + 26°) = cos 26°।</li><li>ଅଶୂନ୍ୟ cos 26° କଟିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-26"><h2>4(a) · 4(iv). cosec 74°/cosec 106°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>74° = 90° − 16°, ତେଣୁ cosec 74° = sec 16° | 106° = 180° − 74°, ତେଣୁ cosec 106° = cosec 74°।</li><li>106° = 180° − 74°।</li><li>cosec 106° = cosec 74°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-27"><h2>4(a) · 4(v). sin 28°/cos 118°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>118° = 180° − 62°, ତେଣୁ cos 118° = −cos 62°।</li><li>cos(90° + 28°) = −sin 28°।</li><li>sin 28°/(−sin 28°) = −1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-28"><h2>4(a) · 5(i). cosec 31° − sec 59° ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>59° = 90° − 31°, ତେଣୁ sec 59° = cosec 31°।</li><li>31° + 59° = 90° ହେତୁ cos 59° = sin 31°।</li><li>ବ୍ୟସ୍ତ ଅନୁପାତ ନେଲେ sec 59° = 1/cos 59° = 1/sin 31° = cosec 31°। ତେଣୁ ଅନ୍ତର 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-29"><h2>4(a) · 5(ii). sin(50° + θ) − cos(40° − θ) ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(50° + θ) + (40° − θ) = 90°।</li><li>cos(40° − θ) = sin[90° − (40° − θ)] = sin(50° + θ)।</li><li>ଦୁଇ ପଦ ସମାନ ହେତୁ ବିୟୋଗଫଳ 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-30"><h2>4(a) · 5(iii). (cos²20° + cos²70°)/(sin²59° + sin²31°) ର ମାନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>70° = 90° − 20°, ତେଣୁ cos 70° = sin 20° | 59° = 90° − 31°, ତେଣୁ sin 59° = cos 31°।</li><li>cos 70° = sin 20°। ତେଣୁ ଲବ = cos²20° + sin²20° = 1।</li><li>sin 59° = cos 31°। ତେଣୁ ହର = cos²31° + sin²31° = 1।</li><li>ଲବକୁ ହର ଦ୍ୱାରା ଭାଗ କଲେ 1/1 = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-31"><h2>4(a) · 5(iv). tan(55° − θ) − cot(35° + θ) ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>55° − θ = 90° − (35° + θ)।</li><li>tan[90° − (35° + θ)] = cot(35° + θ)। ତେଣୁ ଦୁଇ ପଦର ଅନ୍ତର 0।</li><li>(55° − θ) + (35° + θ) = 90°। ତେଣୁ ଦୁଇ ଅନୁପାତ ଯେଉଁ କୋଣରେ ସଂଜ୍ଞାୟିତ, ସେଠାରେ ଏକେ ରାଶିରୁ ସେହି ରାଶି ବିୟୋଗ ହେଉଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0, ଯେଉଁଠି ଅନୁପାତଦ୍ୱୟ ସଂଜ୍ଞାୟିତ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-32"><h2>4(a) · 5(v). cos 1° × cos 2° × … × cos 180° ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>1° ଠାରୁ 180° ମଧ୍ୟରେ 90° ଥିବାରୁ ଗୁଣଫଳର ଏକ ଗୁଣନୀୟକ cos 90°।</li><li>cos 90° = 0। ତେଣୁ ଅନ୍ୟ ସମସ୍ତ ଗୁଣନୀୟକର ପୃଥକ୍ ମାନ ନ କାଢ଼ି ସମଗ୍ର ଗୁଣଫଳ 0 ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-33"><h2>4(a) · 5(vi). (sin 27°/cos 63°)² + (cos 63°/sin 27°)² ର ମାନ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>63° = 90° − 27°, ତେଣୁ cos 63° = sin 27°।</li><li>90° − 63° = 27° ହେତୁ cos 63° = sin 27°। ଏହି ମାନ ଶୂନ ନୁହେଁ।</li><li>ପ୍ରତି ଭାଗଫଳର ଲବ ଓ ହର ସମାନ ହେତୁ ଉଭୟ ଭାଗଫଳ 1।</li><li>1² + 1² = 2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-34"><h2>4(a) · 5(vii). cot 112° × cot 158° ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>112° = 180° − 68°, ତେଣୁ cot 112° = −cot 68° | 158° = 180° − 22°, ତେଣୁ cot 158° = −cot 22°।</li><li>112° = 90° + 22°, ତେଣୁ cot 112° = −tan 22°।</li><li>158° = 180° − 22°, ତେଣୁ cot 158° = −cot 22°।</li><li>ଗୁଣଫଳ = tan 22° × cot 22° = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-35"><h2>4(a) · 5(viii). cos²(90° + α) + cos²(180° − α) ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>cos(90° + α) = −sin α ଓ cos(180° − α) = −cos α।</li><li>ଉଭୟକୁ ବର୍ଗ କଲେ ଯୋଗଫଳ = sin²α + cos²α = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-36"><h2>4(a) · 5(ix). sec²(105° + α) − tan²(75° − α) ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(105° + α) = 180° − (75° − α)। ତେଣୁ sec(105° + α) = −sec(75° − α)।</li><li>ବର୍ଗ ନେଲେ ଋଣଚିହ୍ନ ରହେ ନାହିଁ। ଦତ୍ତ ରାଶି = sec²(75° − α) − tan²(75° − α)।</li><li>sec²A − tan²A = 1 ରୁ ମାନ 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1, ଯେଉଁଠି ଅନୁପାତଦ୍ୱୟ ସଂଜ୍ଞାୟିତ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-37"><h2>4(a) · 5(x). sin²(110° + α) + cos²(70° − α) ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>110° + α = 180° − (70° − α)। ତେଣୁ sin(110° + α) = sin(70° − α)।</li><li>ଉଭୟ ପଦର କୋଣ ସମାନ କଲେ sin²(70° − α) + cos²(70° − α) = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-38"><h2>4(a) · 6(i). cosec²67° − tan²23° ର ମାନ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>67° = 90° − 23°, ତେଣୁ cosec 67° = sec 23°।</li><li>sin 67° = cos 23° ହେତୁ cosec 67° = sec 23°।</li><li>ଦତ୍ତ ରାଶି = sec²23° − tan²23° = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-39"><h2>4(a) · 6(ii). (sin 51° + sin 156°)/(cos 39° + cos 66°) ର ମାନ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>51° = 90° − 39°, ତେଣୁ sin 51° = cos 39° | 156° = 180° − 24°, ତେଣୁ sin 156° = sin 24° | 66° = 90° − 24°, ତେଣୁ cos 66° = sin 24°।</li><li>sin 51° = cos 39°। ଆଉ sin 156° = sin(180° − 24°) = sin 24° = cos 66°।</li><li>ତେଣୁ ଲବ ଓ ହର ସମାନ। ହରର ଉଭୟ ପଦ ଧନାତ୍ମକ ହେତୁ ଭାଗଫଳ 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-40"><h2>4(a) · 6(iii). (cos 68° + sin 131°)/(sin 22° + cos 41°)ର ମାନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>68° = 90° − 22°, ତେଣୁ cos 68° = sin 22° | 131° = 180° − 49°, ତେଣୁ sin 131° = sin 49°।</li><li>cos 68° = sin 22° ଓ sin 131° = sin 49° = cos 41°।</li><li>ଲବ ଓ ହର ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-41"><h2>4(a) · 6(iv). (sin 162° + cos 153°)/(cos 72° − cos 27°)ର ମାନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>162° = 180° − 18°, ତେଣୁ sin 162° = sin 18° | 153° = 180° − 27°, ତେଣୁ cos 153° = −cos 27° | 72° = 90° − 18°, ତେଣୁ cos 72° = sin 18°।</li><li>sin 162° = sin 18° = cos 72°, cos 153° = −cos 27°।</li><li>ଲବ ଓ ହର ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-42"><h2>4(a) · 6(v). (cos 38° + sin 120°)/(2sin 52° + √3)ର ମାନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>120° = 180° − 60°, ତେଣୁ sin 120° = sin 60°।</li><li>cos 38° = sin 52°, sin 120° = √3/2।</li><li>ଲବ ହରର ଅର୍ଦ୍ଧେକ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-43"><h2>4(a) · 6(vi). 2cos 67°/sin 23° − tan 40°/cot 50° − sin 90°ର ମାନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>50° = 90° − 40°, ତେଣୁ cot 50° = tan 40°।</li><li>cos 67° = sin 23°, cot 50° = tan 40°।</li><li>2 − 1 − 1 = 0।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-44"><h2>4(a) · 6(vii). (sec 61° + cosec 120°)/(√3·cosec 29° + 2)ର ମାନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>61° = 90° − 29°, ତେଣୁ sec 61° = cosec 29° | 120° = 180° − 60°, ତେଣୁ cosec 120° = cosec 60°।</li><li>sec 61° = cosec 29°, cosec 120° = 2/√3।</li><li>ଲବକୁ √3ରେ ଗୁଣିଲେ ହର ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/√3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-45"><h2>4(a) · 7(i). cos(90° − θ)·cosec(180° − θ)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos(90° − θ) = sin θ ଓ cosec(180° − θ) = 1/sin θ।</li><li>ଗୁଣଫଳ sin θ/sin θ = 1, ଯେଉଁଠି ରାଶି ସଂଜ୍ଞାୟିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-46"><h2>4(a) · 7(ii). (cos 29° + sin 159°)/(sin 61° + cos 69°)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>159° = 180° − 21°, ତେଣୁ sin 159° = sin 21° | 61° = 90° − 29°, ତେଣୁ sin 61° = cos 29° | 69° = 90° − 21°, ତେଣୁ cos 69° = sin 21°।</li><li>cos 29° = sin 61° ଓ sin 159° = sin 21° = cos 69°।</li><li>ଲବ ହର ସହ ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-47"><h2>4(a) · 7(iii). sin²70° + cos²110°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>70° = 90° − 20°, ତେଣୁ sin 70° = cos 20° | 110° = 180° − 70°, ତେଣୁ cos 110° = −cos 70°।</li><li>cos 110° = −cos 70° ହେତୁ cos²110° = cos²70°।</li><li>sin²70° + cos²70° = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-48"><h2>4(a) · 7(iv). sin²110° + sin²20°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>110° = 180° − 70°, ତେଣୁ sin 110° = sin 70°।</li><li>sin 110° = cos 20°।</li><li>cos²20° + sin²20° = 1।</li><li>110° = 90° + 20° ହେତୁ sin 110° = cos 20°। ବର୍ଗ ନେଇ ଯୋଗ କଲେ cos²20° + sin²20° = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-49"><h2>4(a) · 7(v). sec²θ + cosec²(180° − θ)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>cosec(180° − θ) = cosec θ।</li><li>ସାଧାରଣ ହରରେ ଲବ sin²θ + cos²θ = 1 ଓ ହର sin²θ·cos²θ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sec²θ·cosec²θ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-50"><h2>4(a) · 7(vi). 2sin θ·sec(90° + θ)·sin 30°·tan 135°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>135° = 180° − 45°, ତେଣୁ tan 135° = −tan 45°।</li><li>ନିର୍ଦ୍ଦିଷ୍ଟ କୋଣର ମାନ ହେଉଛି sin 30° = 1/2 | tan 135° = −1।</li><li>sec(90° + θ) = −1/sin θ, sin 30° = 1/2, tan 135° = −1।</li><li>ଗୁଣ କଲେ 2 × (−1) × 1/2 × (−1) = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-51"><h2>4(a) · 8(i). cos²135° − 2sin²180° + 3cot²150° − 4tan²120°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ ବସାଇବା ପୂର୍ବରୁ କୋଣ ଓ ଅନୁପାତକୁ ଏକାଠି ପଢ଼। cos 135° = −1/√2 | cot 150° = −√3 | tan 120° = −√3। ବର୍ଗ ଚିହ୍ନ ଥିଲେ ପ୍ରଥମେ ଅନୁପାତଟି ବସାଇ ତାହାର ବର୍ଗ କର।</li><li>cos²135° = 1/2, sin 180° = 0, cot²150° = 3 ଓ tan²120° = 3।</li><li>1/2 − 0 + 9 − 12 = −5/2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−5/2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-52"><h2>4(a) · 8(ii). tan 30°·tan 135°·tan 150°·tan 45°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନିର୍ଦ୍ଦିଷ୍ଟ କୋଣର ମାନ ହେଉଛି tan 30° = 1/√3 | tan 135° = −1 | tan 150° = −1/√3 | tan 45° = 1।</li><li>କ୍ରମେ ମାନ 1/√3, −1, −1/√3, 1।</li><li>ଦୁଇ ଋଣ ଚିହ୍ନ କଟିଯାଏ ଓ √3 × √3 = 3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-53"><h2>4(a) · 8(iii). (sec²180° + tan 150°)/(cosec²90° + cot 120°)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ ବସାଇବା ପୂର୍ବରୁ କୋଣ ଓ ଅନୁପାତକୁ ଏକାଠି ପଢ଼। tan 150° = −1/√3 | cot 120° = −1/√3। ବର୍ଗ ଚିହ୍ନ ଥିଲେ ପ୍ରଥମେ ଅନୁପାତଟି ବସାଇ ତାହାର ବର୍ଗ କର।</li><li>sec²180° = cosec²90° = 1, tan 150° = cot 120° = −1/√3।</li><li>ଲବ ଓ ହର ଉଭୟ 1 − 1/√3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-54"><h2>4(a) · 8(iv). sin²135° + cos²120° − sin²120° + tan²150°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ ବସାଇବା ପୂର୍ବରୁ କୋଣ ଓ ଅନୁପାତକୁ ଏକାଠି ପଢ଼। sin 135° = 1/√2 | cos 120° = −1/2 | sin 120° = √3/2 | tan 150° = −1/√3। ବର୍ଗ ଚିହ୍ନ ଥିଲେ ପ୍ରଥମେ ଅନୁପାତଟି ବସାଇ ତାହାର ବର୍ଗ କର।</li><li>ମାନ କ୍ରମେ 1/2, 1/4, 3/4 ଓ 1/3।</li><li>1/2 + 1/4 − 3/4 + 1/3 = 1/3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-55"><h2>4(a) · 9(i). tan 10°·tan 20°·tan 30°·…·tan 80°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>80° = 90° − 10°, ତେଣୁ tan 80° = cot 10°।</li><li>tan θ·tan(90° − θ) = tan θ·cot θ = 1।</li><li>10° ଓ 80°, 20° ଓ 70°, 30° ଓ 60°, 40° ଓ 50° ଯୋଡ଼ି କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-56"><h2>4(a) · 9(ii). cot 12°·cot 38°·cot 52°·cot 60°·cot 78°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>52° = 90° − 38°, ତେଣୁ cot 52° = tan 38° | 60° = 90° − 30°, ତେଣୁ cot 60° = tan 30° | 78° = 90° − 12°, ତେଣୁ cot 78° = tan 12°।</li><li>cot 12°·cot 78° = 1 ଓ cot 38°·cot 52° = 1।</li><li>ଅବଶିଷ୍ଟ cot 60° = 1/√3।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1/√3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-57"><h2>4(a) · 9(iii). tan 5°·tan 15°·tan 45°·tan 75°·tan 85°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>75° = 90° − 15°, ତେଣୁ tan 75° = cot 15° | 85° = 90° − 5°, ତେଣୁ tan 85° = cot 5°।</li><li>5° ଓ 85° ଏବଂ 15° ଓ 75° ଯୋଡ଼ିର tangent ଗୁଣଫଳ 1।</li><li>ଅବଶିଷ୍ଟ tan 45° = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-58"><h2>4(a) · 10(i). sin 120° + tan 150°·cos 135°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନିର୍ଦ୍ଦିଷ୍ଟ କୋଣର ମାନ ହେଉଛି sin 120° = √3/2 | tan 150° = −1/√3 | cos 135° = −1/√2।</li><li>sin 120° = √3/2, tan 150° = −1/√3 ଓ cos 135° = −√2/2।</li><li>√3/2 + √2/(2√3) = (3 + √2)/(2√3)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(3 + √2)/(2√3)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-59"><h2>4(a) · 10(ii). (sec²180° + tan 150°)/(cosec²90° − cot 120°)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ ବସାଇବା ପୂର୍ବରୁ କୋଣ ଓ ଅନୁପାତକୁ ଏକାଠି ପଢ଼। tan 150° = −1/√3 | cot 120° = −1/√3। ବର୍ଗ ଚିହ୍ନ ଥିଲେ ପ୍ରଥମେ ଅନୁପାତଟି ବସାଇ ତାହାର ବର୍ଗ କର।</li><li>ମାନ ବସାଇଲେ (1 − 1/√3)/(1 + 1/√3) = (√3 − 1)/(√3 + 1)।</li><li>ଲବ ଓ ହରକୁ √3 − 1ରେ ଗୁଣ କଲେ (4 − 2√3)/2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2 − √3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-60"><h2>4(a) · 10(iii). (sec²180° + tan 45°)/(cosec²90° − cot 120°)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ ବସାଇବା ପୂର୍ବରୁ କୋଣ ଓ ଅନୁପାତକୁ ଏକାଠି ପଢ଼। tan 45° = 1 | cot 120° = −1/√3। ବର୍ଗ ଚିହ୍ନ ଥିଲେ ପ୍ରଥମେ ଅନୁପାତଟି ବସାଇ ତାହାର ବର୍ଗ କର।</li><li>ମାନ ବସାଇଲେ 2/(1 + 1/√3) = 2√3/(√3 + 1)।</li><li>√3 − 1ରେ ଲବ ଓ ହରକୁ ଗୁଣ କଲେ ଫଳ √3(√3 − 1)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3 − √3।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-61"><h2>4(a) · 11(i). sin(180° − θ) cos(90° + θ) + sin(90° + θ) cos(180° − θ)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>ସଂଶ୍ଳିଷ୍ଟ କୋଣର ସୂତ୍ରରେ ଗୁଣନ ଫଳ କ୍ରମେ −sin²θ ଓ −cos²θ।</li><li>−(sin²θ + cos²θ) = −1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-62"><h2>4(a) · 11(ii). cos(90° − A) sec(180° − A) sin(180° − A) / [sin(90° + A) tan(90° + A) cosec(90° + A)]। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>ଲବ = sin A·(−sec A)·sin A = −sin²A/cos A।</li><li>ହର = cos A·(−cot A)·sec A = −cot A। ଭାଗ କଲେ ଫଳ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin³A/cos²A।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-63"><h2>4(a) · 12. ABCର ∠B = 90° ହେଲେ sin²A + sin²C = 1 ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>A + C = 90° ଯୋଗୁଁ sin C = cos A।</li><li>ତେଣୁ sin²A + sin²C = sin²A + cos²A = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-64"><h2>4(a) · 13. ABCରେ cos(A + B) + sin C = sin(A + B) − cos C ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>A + B = 180° − C ହେତୁ cos(A + B) = −cos C ଓ sin(A + B) = sin C।</li><li>ବାମପକ୍ଷରେ ପ୍ରଥମ ମାନ ଓ ଡାହାଣରେ ଦ୍ୱିତୀୟ ମାନ ବସାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଭୟ ପକ୍ଷ sin C − cos C।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-65"><h2>4(a) · 14. A ଓ B ପରସ୍ପର ଅନୁପୂରକ ହେଲେ sin A cos B + cos A sin B ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>A + B = 90° ହେତୁ cos B = sin A ଓ sin B = cos A।</li><li>ତେଣୁ ରାଶି sin²A + cos²A = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-66"><h2>4(a) · 15. ABCD ବୃତ୍ତଲିଖିତ ଚତୁର୍ଭୁଜ ହେଲେ tan A + tan C ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିପରୀତ କୋଣ A + C = 180°।</li><li>tan C = tan(180° − A) = −tan A |</li><li>ତେଣୁ ସମଷ୍ଟି ଶୂନ।</li><li>ଉଭୟ କୋଣ 90° ହେଲେ ଦତ୍ତ ରାଶି ଅସଂଜ୍ଞାୟିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0, ଯେଉଁଠି tangent ସଂଜ୍ଞାୟିତ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+<article id="exercise-67"><h2>4(a) · 16. [sin²135° + cos²120° − sin²150° + tan²150°] / [sin²120° − cos²150° + tan²120° + tan²135° + cos 180°] ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ ବସାଇବା ପୂର୍ବରୁ କୋଣ ଓ ଅନୁପାତକୁ ଏକାଠି ପଢ଼। sin 135° = 1/√2 | cos 120° = −1/2 | sin 150° = 1/2 | tan 150° = −1/√3 | sin 120° = √3/2 | cos 150° = −√3/2 | tan 120° = −√3 | tan 135° = −1। ବର୍ଗ ଚିହ୍ନ ଥିଲେ ପ୍ରଥମେ ଅନୁପାତଟି ବସାଇ ତାହାର ବର୍ଗ କର।</li><li>ଲବ = 1/2 + 1/4 − 1/4 + 1/3 = 5/6।</li><li>ହର = 3/4 − 3/4 + 3 + 1 − 1 = 3। ତେଣୁ ଭାଗଫଳ (5/6)/3 = 5/18।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>5/18।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=112" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୨</a></small></article>
+<article id="exercise-68"><h2>4(a) · 17. [5sin²150° + cos²45° + 4tan²120°] / [2sin 30° cos 60° − tan 135°] ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାନ ବସାଇବା ପୂର୍ବରୁ କୋଣ ଓ ଅନୁପାତକୁ ଏକାଠି ପଢ଼। sin 150° = 1/2 | cos 45° = 1/√2 | tan 120° = −√3 | sin 30° = 1/2 | cos 60° = 1/2 | tan 135° = −1। ବର୍ଗ ଚିହ୍ନ ଥିଲେ ପ୍ରଥମେ ଅନୁପାତଟି ବସାଇ ତାହାର ବର୍ଗ କର।</li><li>ଲବ = 5/4 + 1/2 + 12 = 55/4।</li><li>ହର = 2 × (1/2) × (1/2) − (−1) = 3/2। ତେଣୁ (55/4) ÷ (3/2) = 55/6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>55/6।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=112" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୨</a></small></article>
+<article id="exercise-69"><h2>4(b) · 1(i). sin(A − B) = sin A/□ − cos A/□। ଶୂନ୍ୟସ୍ଥାନ ପାଇଁ ରାଶି ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>sin(A − B) = sin A cos B − cos A sin B।</li><li>cos B = 1/sec B ଓ sin B = 1/cosec B।</li><li>sin(A − B) = sin A cos B − cos A sin B। ଏଠାରେ cos B = 1/sec B ଓ sin B = 1/cosec B ବସାଇଲେ ଚାହିଁଥିବା ହରଦ୍ୱୟ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sec B, cosec B।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=117" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୭</a></small></article>
+<article id="exercise-70"><h2>4(b) · 1(ii). cos(θ + α) + cos(α − θ)। ଶୂନ୍ୟସ୍ଥାନ ପାଇଁ ରାଶି ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ପଦ cos θ cos α − sin θ sin α।</li><li>ଦ୍ୱିତୀୟ ପଦ cos α cos θ + sin α sin θ। ଯୋଗ କଲେ sineର ଗୁଣଫଳ କଟିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2cos θ cos α।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=117" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୭</a></small></article>
+<article id="exercise-71"><h2>4(b) · 1(iii). cos(60° − A) + □ = cos A। ଶୂନ୍ୟସ୍ଥାନ ପାଇଁ ରାଶି ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos(60° − A) + cos(60° + A) = 2cos 60° cos A।</li><li>2cos 60° = 1।</li><li>cos(60° − A) + cos(60° + A) = 2cos 60° cos A। ଯୋଗରେ sin 60° sin Aର ବିପରୀତ ଚିହ୍ନବିଶିଷ୍ଟ ପଦ କଟେ। 2cos 60° = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos(60° + A)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=117" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୭</a></small></article>
+<article id="exercise-72"><h2>4(b) · 1(iv). sin(30° + A) + sin(30° − A)। ଶୂନ୍ୟସ୍ଥାନ ପାଇଁ ରାଶି ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯୌଗିକ କୋଣର ସୂତ୍ରରେ cos 30° sin A ଥିବା ପଦ ଦୁଇଟି କଟିଯାଏ।</li><li>ଅବଶିଷ୍ଟ 2sin 30° cos A = cos A।</li><li>sin(30° ± A)କୁ ବିସ୍ତାର କଲେ sin 30° cos A ଦୁଇଥର ରହେ। ବିପରୀତ ଚିହ୍ନର cos 30° sin A କଟେ। 2 × (1/2) × cos A = cos A।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos A।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=117" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୭</a></small></article>
+<article id="exercise-73"><h2>4(b) · 1(v). 2sin A sin B = □ − cos(A + B)। ଶୂନ୍ୟସ୍ଥାନ ପାଇଁ ରାଶି ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos(A − B) = cos A cos B + sin A sin B।</li><li>cos(A + B) = cos A cos B − sin A sin B। ବିୟୋଗ କଲେ ଫଳ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos(A − B)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=117" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୭</a></small></article>
+<article id="exercise-74"><h2>4(b) · 1(vi). tan(45° + θ)·tan(45° − θ)। ଶୂନ୍ୟସ୍ଥାନ ପାଇଁ ରାଶି ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cot θ = 1/tan θ ଯେଉଁଠି ଉଭୟ ଅନୁପାତ ସଂଜ୍ଞାୟିତ। ସେହିପରି tan ଓ cotର ଗୁଣଫଳ ସମାନ କୋଣ ପାଇଁ 1 ହୁଏ।</li><li>(45° + θ) + (45° − θ) = 90°।</li><li>ଦୁଇ କୋଣ ଅନୁପୂରକ ହେତୁ ଗୋଟିଏର tangent ଅନ୍ୟଟିର cotangent।</li><li>ଉଭୟ ସଂଜ୍ଞାୟିତ ଥିଲେ ଗୁଣଫଳ 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=117" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୭</a></small></article>
+<article id="exercise-75"><h2>4(b) · 2(i). sin(A − B)/(cos A × cos B) = tan A − tan B ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିୟୋଗ ସୂତ୍ର ଅନୁସାରେ sin(A − B) = sin A cos B − cos A sin B।</li><li>ହର cos A cos B ଦ୍ୱାରା ପ୍ରତ୍ୟେକ ପଦକୁ ଭାଗ କଲେ ପ୍ରଥମ ପଦ sin A/cos A ଓ ଦ୍ୱିତୀୟ ପଦ sin B/cos B ମିଳେ।</li><li>ଏଣୁ ବାମପକ୍ଷ = tan A − tan B = ଦକ୍ଷିଣପକ୍ଷ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ହର ଅଶୂନ୍ୟ ହେଲେ ଉଭୟ ପକ୍ଷ ସମାନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-76"><h2>4(b) · 2(ii). cos(A + B)/(cos A × cos B) = 1 − tan A tan B ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos(A + B) କୁ cos A cos B − sin A sin B ରୂପେ ଲେଖ।</li><li>ଭଗ୍ନାଂଶକୁ ଦୁଇ ପଦରେ ଲେଖିଲେ ପ୍ରଥମ ଭାଗଫଳ 1 ହୁଏ।</li><li>ଦ୍ୱିତୀୟ ଭାଗଫଳ = (sin A/cos A)(sin B/cos B) = tan A tan B।</li><li>ଏଣୁ ଅନ୍ତର 1 − tan A tan B।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos A cos B ≠ 0 ହେଲେ ସମତା ସିଦ୍ଧ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-77"><h2>4(b) · 2(iii). cos(A − B)/(cos A × sin B) = cot B + tan A ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos(A − B) = cos A cos B + sin A sin B।</li><li>ପ୍ରଥମ ପଦକୁ ଦତ୍ତ ହରରେ ଭାଗ କଲେ cos B/sin B = cot B।</li><li>ଦ୍ୱିତୀୟ ପଦକୁ ଭାଗ କଲେ sin A/cos A = tan A। ଦୁଇ ଫଳ ଯୋଗ କଲେ ଦକ୍ଷିଣପକ୍ଷ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos A sin B ≠ 0 ହେଲେ ଉଭୟ ପକ୍ଷ ସମାନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-78"><h2>4(b) · 2(iv). sin α/sin β − cos α/cos β = sin(α − β)/(sin β cos β) ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାମପକ୍ଷର ଭଗ୍ନାଂଶଦ୍ୱୟର ସାଧାରଣ ହର sin β cos β ନିଅ।</li><li>ଲବ ହେବ sin α cos β − cos α sin β।</li><li>sin ର ବିୟୋଗ ସୂତ୍ରରୁ ଏହି ଲବ sin(α − β) ସହ ସମାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin β cos β ≠ 0 ସ୍ଥଳେ ସମତା ସିଦ୍ଧ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-79"><h2>4(b) · 2(v). cos α/sin β − sin α/cos β = cos(α + β)/(sin β cos β) ପ୍ରମାଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାମପକ୍ଷର ଦୁଇ ପଦକୁ ସାଧାରଣ ହର sin β cos β ଉପରେ ଲେଖ।</li><li>ଲବ = cos α cos β − sin α sin β। cos ର ଯୋଗ ସୂତ୍ରରୁ ଏହା cos(α + β)।</li><li>ସେହି ଲବକୁ ସାଧାରଣ ହର ଉପରେ ବସାଇଲେ ଦକ୍ଷିଣପକ୍ଷ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin β cos β ≠ 0 ସ୍ଥଳେ ସମତା ସିଦ୍ଧ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-80"><h2>4(b) · 3(i). cos(A + 45°)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos(A + 45°) = cos A cos 45° − sin A sin 45°।</li><li>sin 45° = cos 45° = 1/√2 ବସାଅ।</li><li>cos A × (1/√2) − sin A × (1/√2)ରୁ ସାଧାରଣ ଗୁଣନୀୟକ 1/√2 ବାହାର କଲେ (cos A − sin A)/√2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(cos A − sin A)/√2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-81"><h2>4(b) · 3(ii). sin(45° − θ)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>sin(45° − θ) = sin 45° cos θ − cos 45° sin θ।</li><li>ଉଭୟ 45° ଅନୁପାତ 1/√2 ହେତୁ (cos θ − sin θ)/√2।</li><li>sin 45° cos θ − cos 45° sin θ = (cos θ)/√2 − (sin θ)/√2। ଏକା ହର ଥିବାରୁ ଲବ ଦୁଇଟିକୁ ବିୟୋଗ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>−(sin θ − cos θ)/√2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-82"><h2>4(b) · 3(iii). tan(45° + θ)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣର ସୂତ୍ରରେ tan(A + B) = (tan A + tan B)/(1 − tan A tan B)। ଯେଉଁ ମାନରେ ହର ଶୂନ ହୁଏ ସେଠାରେ ଏହି ଭାଗଫଳ ସଂଜ୍ଞାୟିତ ନୁହେଁ।</li><li>tan(A + B) = (tan A + tan B)/(1 − tan A tan B)।</li><li>A = 45° ହେଲେ tan A = 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(1 + tan θ)/(1 − tan θ)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-83"><h2>4(b) · 3(iv). cot(45° − θ)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>tan(45° − θ) = (1 − tan θ)/(1 + tan θ)।</li><li>ବ୍ୟୁତ୍କ୍ରମ ନେଇ ଲବ ଓ ହରକୁ cot θରେ ଗୁଣ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(cot θ + 1)/(cot θ − 1)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-84"><h2>4(b) · 4(i). cos(45° − A)cos(45° − B) − sin(45° − A)sin(45° − B)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos u cos v − sin u sin v = cos(u + v)।</li><li>u + v = 90° − (A + B) ହେତୁ cos(u + v) = sin(A + B)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin(A + B)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-85"><h2>4(b) · 4(ii). sin(40° + A)cos(20° − A) + cos(40° + A)sin(20° − A)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>sin u cos v + cos u sin v = sin(u + v)।</li><li>u + v = 60° ଓ sin 60° = √3/2।</li><li>x = 40° + A, y = 20° − A ରଖିଲେ ରାଶି sin x cos y + cos x sin y = sin(x + y) | x + y = 60°ରେ A କଟିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√3/2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-86"><h2>4(b) · 4(iii). cos(65° + θ)cos(35° + θ) + sin(65° + θ)sin(35° + θ)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos u cos v + sin u sin v = cos(u − v)।</li><li>u − v = 30° ଓ cos 30° = √3/2।</li><li>x = 65° + θ, y = 35° + θ ରଖିଲେ ରାଶି cos x cos y + sin x sin y = cos(x − y) | x − y = 30°ରେ θ କଟିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√3/2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-87"><h2>4(b) · 4(iv). cos(nθ)cos θ + sin(nθ)sin θ। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>cos(u − v) ସୂତ୍ରରେ u = nθ, v = θ ନିଅ।</li><li>u − v = (n − 1)θ।</li><li>x = nθ, y = θ ନେଇ cos(x − y) ବିସ୍ତାର କର। ବିୟୋଗକୋଣର cosineରେ sin x sin y ଆଗରେ ଯୋଗଚିହ୍ନ ଆସେ। ଏଠାରେ x − y = (n − 1)θ |</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos((n − 1)θ)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-88"><h2>4(b) · 4(v). tan(60° − A)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>sine ଓ cosineର ବିୟୋଗ ସୂତ୍ରରୁ sin(60° − A) = (√3 cos A − sin A)/2।</li><li>cos(60° − A) = (cos A + √3 sin A)/2। ପ୍ରଥମକୁ ଦ୍ୱିତୀୟରେ ଭାଗ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(√3 cos A − sin A)/(cos A + √3 sin A)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-89"><h2>4(b) · 5(i). tan 62°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>62° = 90° − 28°, ତେଣୁ tan 62° = cot 28°।</li><li>62° = 45° + 17°। tan 62° = (1 + tan 17°)/(1 − tan 17°)।</li><li>ଲବ ଓ ହରକୁ cos 17° ଦ୍ୱାରା ଗୁଣ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(cos 17° + sin 17°)/(cos 17° − sin 17°)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-90"><h2>4(b) · 5(ii). tan 70°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>70° = 90° − 20°, ତେଣୁ tan 70° = cot 20°।</li><li>70° = 45° + 25°। tan 70° = (1 + tan 25°)/(1 − tan 25°)।</li><li>ଲବ ଓ ହରକୁ cos 25° ଦ୍ୱାରା ଗୁଣ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(cos 25° + sin 25°)/(cos 25° − sin 25°)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-91"><h2>4(b) · 5(iii). tan 7A·tan 4A·tan 3A। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>7A = 4A + 3A ହେତୁ tan 7A(1 − tan 4A tan 3A) = tan 4A + tan 3A।</li><li>ଗୁଣଫଳ ଥିବା ପଦକୁ ଅଲଗା କର।</li><li>tan 7Aକୁ ହର ସହ ଗୁଣିଲେ tan 7A − tan 7A·tan 4A·tan 3A = tan 4A + tan 3A। ତେଣୁ ଚାହିଁଥିବା ଗୁଣଫଳ = tan 7A − tan 4A − tan 3A, ଯେଉଁଠି ଅନୁପାତଗୁଡ଼ିକ ସଂଜ୍ଞାୟିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>tan 7A − tan 4A − tan 3A।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-92"><h2>4(b) · 5(iv). tan(x + y) − tan x − tan y। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>ଯୋଗ ସୂତ୍ରରୁ tan(x + y)(1 − tan x tan y) = tan x + tan y।</li><li>ଗୁଣ କରି ପଦ ସ୍ଥାନାନ୍ତର କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>tan(x + y)·tan x·tan y।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-93"><h2>4(b) · 5(v). (1 + tan 15°)(1 + tan 30°)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>15° + 30° = 45° ଓ tan 45° = 1। ତେଣୁ tan 15° + tan 30° = 1 − tan 15°tan 30°।</li><li>ବନ୍ଧନୀ ଗୁଣି ଏହି ସମ୍ପର୍କ ବସାଇଲେ 1 + 1 = 2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-94"><h2>4(b) · 5(vi). (cot 10° − 1)(cot 35° − 1)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>10° + 35° = 45° ହେତୁ cot 45° = (cot 10° cot 35° − 1)/(cot 10° + cot 35°) = 1।</li><li>ତେଣୁ cot 10° cot 35° − cot 10° − cot 35° = 1। ବନ୍ଧନୀ ଗୁଣିଲେ ଏଥିରେ 1 ଯୋଗ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-95"><h2>4(b) · 5(vii). 1/(cot A + tan B) − 1/(tan A + cot B)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>ପ୍ରଥମ ଭଗ୍ନାଂଶ tan A/(1 + tan A tan B), ଦ୍ୱିତୀୟ tan B/(1 + tan A tan B)।</li><li>ବିୟୋଗ କଲେ (tan A − tan B)/(1 + tan A tan B) = tan(A − B)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>tan(A − B)।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-96"><h2>4(b) · 5(viii). √3 + cot 50° + tan 80°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>√3 = tan 60°, cot 50° = tan 40°। 60° + 40° + 80° = 180°।</li><li>tan(60° + 40°) = −tan 80°କୁ ଯୋଗ ସୂତ୍ରରେ ଲେଖି ସଜାଇଲେ tan 60° + tan 40° + tan 80° = tan 60°tan 40°tan 80°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√3·cot 50°·tan 80°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-97"><h2>4(b) · 6. cos 75° ଓ sin 15° ର ଠିକ୍ ମାନ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>75° = 45° + 30° ହେତୁ cos 75° = cos 45° cos 30° − sin 45° sin 30°।</li><li>ମାନ ବସାଇଲେ (√2/2)(√3/2) − (√2/2)(1/2) = (√6 − √2)/4।</li><li>15° = 90° − 75° ହେତୁ sin 15° = cos 75°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଭୟର ମାନ (√6 − √2)/4।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="exercise-98"><h2>4(b) · 7(i). cos α = 8/17, sin β = 5/13। ସୂକ୍ଷ୍ମକୋଣ α, β ପାଇଁ sin(α − β)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>sin α = √(1 − 64/289) = 15/17 ଓ cos β = √(1 − 25/169) = 12/13।</li><li>sin(α − β) = (15 × 12 − 8 × 5)/(17 × 13) = 140/221।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>140/221।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-99"><h2>4(b) · 7(ii). tan A = 1/2 ଓ cot B = 3। ସୂକ୍ଷ୍ମକୋଣ A, B ପାଇଁ A + B। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>tan B = 1/3। tan(A + B) = (1/2 + 1/3)/(1 − 1/6) = 1।</li><li>ଏଠାରେ A ଓ B ଉଭୟ 45°ଠାରୁ କ୍ଷୁଦ୍ର, ତେଣୁ 0° &lt; A + B &lt; 90°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>45°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-100"><h2>4(b) · 7(iii). tan β = (1 − tan α)/(1 + tan α) ହେଲେ tan(α + β)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>t = tan α ନିଅ। tan α + tan β = (1 + t²)/(1 + t)।</li><li>1 − tan α tan β ମଧ୍ୟ (1 + t²)/(1 + t)। ତେଣୁ ଭାଗଫଳ 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-101"><h2>4(b) · 8(i). A + B + C = 90°। cot A + cot B + cot C। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>tan(A + B) = cot C। ଯୋଗ ସୂତ୍ରରୁ tan A + tan B = cot C(1 − tan A tan B)।</li><li>ଉଭୟ ପକ୍ଷକୁ cot A cot Bରେ ଗୁଣ କରି ପଦ ସଜାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cot A cot B cot C।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-102"><h2>4(b) · 8(ii). A + B + C = 90°। tan A tan B + tan B tan C + tan C tan A। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମିଶ୍ରକୋଣ ପାଇଁ ଲବରେ tangent ଦୁଇଟିର ଯୋଗ ବା ବିୟୋଗ, ହରରେ 1ରୁ କିମ୍ବା 1 ସହ ତାଙ୍କ ଗୁଣଫଳ। ଯୋଗକୋଣରେ ହର 1 − tan A tan B, ବିୟୋଗକୋଣରେ 1 + tan A tan B।</li><li>tan(A + B) = 1/tan C।</li><li>ତେଣୁ (tan A + tan B)tan C = 1 − tan A tan B। ପଦ ସ୍ଥାନାନ୍ତର କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-103"><h2>4(b) · 9(i). A + B + C = 180°, sin C = 1। tan A tan B। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତ୍ରିଭୁଜରେ sin C = 1ରୁ C = 90° ଏବଂ B = 90° − A।</li><li>tan B = cot A ହେତୁ ଗୁଣଫଳ 1।</li><li>ତ୍ରିଭୁଜରେ sin C = 1 ହେଲେ C = 90° | A + B = 90° ହେତୁ tan B = cot A = 1/tan A। ତେଣୁ ଦୁଇ tangentର ଗୁଣଫଳ 1।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-104"><h2>4(b) · 9(ii). A + B + C = 180°। cot A cot B + cot B cot C + cot C cot A। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>sin(A + B) = sin C ଓ cos(A + B) = −cos C। ତେଣୁ cot(A + B) = −cot C।</li><li>(cot A cot B − 1)/(cot A + cot B) = −cot C। ହର ଗୁଣି ସଜାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>1।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-105"><h2>4(b) · 9(iii). A + B + C = 180°, cos A = cos B cos C। tan A ଓ tan B tan C। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>sin A = sin(B + C) = sin B cos C + cos B sin C |</li><li>cos A = cos B cos Cରେ ଭାଗ କଲେ (a)।</li><li>cos A = −cos(B + C) = sin B sin C − cos B cos C |</li><li>ଦତ୍ତ ମାନ ମିଳାଇଲେ sin B sin C = 2cos B cos C।</li><li>ଭାଗ କଲେ (b)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">(a) tan A = tan B + tan C, (b) tan B tan C = 2।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-106"><h2>4(b) · 10(i). sin(A + B)sin(A − B)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(sin A cos B + cos A sin B)(sin A cos B − cos A sin B) = sin²A cos²B − cos²A sin²B।</li><li>cos²B = 1 − sin²B ଓ cos²A = 1 − sin²A ବସାଇଲେ ସାଧାରଣ ଗୁଣଫଳ କଟିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>sin²A − sin²B।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-107"><h2>4(b) · 10(ii). cos(A + B)cos(A − B)। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସମାନ କୋଣ θ ପାଇଁ sin²θ + cos²θ = 1। ଅନୁପାତଗୁଡ଼ିକୁ ଏକା କୋଣରେ ଲେଖିବା ପରେ ଏହି ଅଭେଦରୁ sin²θ = 1 − cos²θ ଓ cos²θ = 1 − sin²θ ନେଇହୁଏ।</li><li>(cos A cos B − sin A sin B)(cos A cos B + sin A sin B) = cos²A cos²B − sin²A sin²B।</li><li>cos²B = 1 − sin²B ଓ sin²A = 1 − cos²A ବସାଇଲେ ଆବଶ୍ୟକ ଫଳ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>cos²A − sin²B।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-108"><h2>4(b) · 11(i). sin 50° + sin 40°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>50° = 90° − 40°, ତେଣୁ sin 50° = cos 40°।</li><li>50° = 45° + 5°, 40° = 45° − 5°। ଦୁଇ sine ବିସ୍ତାର ଯୋଗ କରି 2sin 45° cos 5° ମିଳେ।</li><li>2sin 45° = √2 ଓ cos 5° = sin 85°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√2 sin 85°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-109"><h2>4(b) · 11(ii). cos 50° + cos 40°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>50° = 90° − 40°, ତେଣୁ cos 50° = sin 40°।</li><li>45° ± 5° ପାଇଁ cosine ସୂତ୍ର ଲେଖି ଯୋଗ କଲେ sine ଗୁଣଫଳ କଟିଯାଏ।</li><li>ଅବଶିଷ୍ଟ 2cos 45° cos 5° = √2 cos 5°।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>√2 cos 5°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-110"><h2>4(b) · 11(iii). sin 50° − sin 70° + sin 10°। ସରଳ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>50° = 90° − 40°, ତେଣୁ sin 50° = cos 40° | 70° = 90° − 20°, ତେଣୁ sin 70° = cos 20°।</li><li>sin(60° + 10°) − sin(60° − 10°) = 2cos 60° sin 10° = sin 10°।</li><li>ଅର୍ଥାତ୍ sin 70° − sin 50° = sin 10°। ପଦ ସଜାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>0।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-111"><h2>4(b) · 12(i). sin(A + B) = 1/√2, cos(A − B) = 1/√2। A ଓ B ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>U = A + B ଓ V = A − B ନିଅ। ମାନକ କୋଣର ଅନୁପାତ ଦେଖି U = 135°, V = 45° ବାଛ।</li><li>A = (U + V)/2 = 90°, B = (U − V)/2 = 45°।</li><li>କୋଣର ସୀମା ନଦେଲେ ସାଧାରଣ ସମାଧାନ ପାଇଁ U = 45° ବା 135° (360°ର ଗୁଣିତକ ଯୋଗ ସହ), V = ±45° + 360°n ନେଇ ସେହି ସୂତ୍ର ବ୍ୟବହାର କର।</li><li>m, n ପୂର୍ଣ୍ଣସଂଖ୍ୟା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ପାଠ୍ୟ ଉତ୍ତରର ଯୁଗଳ A = 90°, B = 45°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-112"><h2>4(b) · 12(ii). cos(A + B) = −1/2, sin(A − B) = 1/2। A ଓ B ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>U = A + B ଓ V = A − B ନିଅ। ମାନକ କୋଣର ଅନୁପାତ ଦେଖି U = 120°, V = 30° ବାଛ।</li><li>A = (U + V)/2 = 75°, B = (U − V)/2 = 45°।</li><li>କୋଣର ସୀମା ନଦେଲେ ସାଧାରଣ ସମାଧାନ ପାଇଁ U = ±120° + 360°m, V = 30° ବା 150° (360°ର ଗୁଣିତକ ଯୋଗ ସହ) ନେଇ ସେହି ସୂତ୍ର ବ୍ୟବହାର କର।</li><li>m, n ପୂର୍ଣ୍ଣସଂଖ୍ୟା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ପାଠ୍ୟ ଉତ୍ତରର ଯୁଗଳ A = 75°, B = 45°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-113"><h2>4(b) · 12(iii). tan(A − B) = 1/√3 = cot(A + B)। A ଓ B ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>U = A + B ଓ V = A − B ନିଅ। ମାନକ କୋଣର ଅନୁପାତ ଦେଖି U = 60°, V = 30° ବାଛ।</li><li>A = (U + V)/2 = 45°, B = (U − V)/2 = 15°।</li><li>କୋଣର ସୀମା ନଦେଲେ ସାଧାରଣ ସମାଧାନ ପାଇଁ U = 60° + 180°m, V = 30° + 180°n ନେଇ ସେହି ସୂତ୍ର ବ୍ୟବହାର କର।</li><li>m, n ପୂର୍ଣ୍ଣସଂଖ୍ୟା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ପାଠ୍ୟ ଉତ୍ତରର ଯୁଗଳ A = 45°, B = 15°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-114"><h2>4(b) · 12(iv). tan(A + B) = −1, cosec(A − B) = √2। A ଓ B ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>U = A + B ଓ V = A − B ନିଅ। ମାନକ କୋଣର ଅନୁପାତ ଦେଖି U = 135°, V = 45° ବାଛ।</li><li>A = (U + V)/2 = 90°, B = (U − V)/2 = 45°।</li><li>କୋଣର ସୀମା ନଦେଲେ ସାଧାରଣ ସମାଧାନ ପାଇଁ U = 135° + 180°m, V = 45° ବା 135° (360°ର ଗୁଣିତକ ଯୋଗ ସହ) ନେଇ ସେହି ସୂତ୍ର ବ୍ୟବହାର କର।</li><li>m, n ପୂର୍ଣ୍ଣସଂଖ୍ୟା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">ପାଠ୍ୟ ଉତ୍ତରର ଯୁଗଳ A = 90°, B = 45°।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯</a></small></article>
+<article id="exercise-115"><h2>4(c) · 1. ବୃକ୍ଷର ପାଦଦେଶରୁ 120 ମିଟର ଦୂରରେ ସମତଳର ଏକ ବିନ୍ଦୁରୁ ଅଗ୍ରଭାଗର କୌଣିକ ଉନ୍ନତି 30°। ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>AB ବୃକ୍ଷର ଉଚ୍ଚତା, B ପାଦଦେଶ ଓ C ଦର୍ଶନବିନ୍ଦୁ ଧର। BC = 120 ଓ ∠ACB = 30°।</li><li>tan 30° = AB/BC ⇒ AB = 120/√3।</li><li>ହାରକୁ ପରିମେୟ କଲେ AB = 40√3। √3 = 1.732 ନେଲେ ଉଚ୍ଚତା 69.28।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>40√3 ମିଟର ବା ପ୍ରାୟ 69.28 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 1ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik03Ny4yNyAyNDkuNTAgTDQ0Mi43MyAyNDkuNTAiIHN0cm9rZT0iIzI0NDI1NyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNNzcuMjcgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik00NDIuNzMgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjY5LjMiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmg8L3RleHQ+PHRleHQgeD0iNDA4LjAiIHk9IjI0NC4yIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjMwwrA8L3RleHQ+PHRleHQgeD0iMjYwLjAiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjEyMCBtPC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-116"><h2>4(c) · 2. 27 ମିଟର ଉଚ୍ଚ ବତୀଘରର ଶୀର୍ଷରୁ ଜାହାଜର କୌଣିକ ଅବନତି 30°। ପାଦଦେଶରୁ ଜାହାଜର ଦୂରତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶୀର୍ଷଗାମୀ ଭୂସମାନ୍ତର ରେଖା ଓ ଜଳପୃଷ୍ଠ ସମାନ୍ତର। ତେଣୁ ଜାହାଜ ପଟରୁ କୌଣିକ ଉନ୍ନତି 30°।</li><li>ଦୂରତା d ହେଲେ tan 30° = 27/d = 1/√3।</li><li>d = 27√3। √3 = 1.732 ନେଲେ d = 46.764।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>27√3 ≈ 46.76 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 2ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik03Ny4yNyAyNDkuNTAgTDQ0Mi43MyAyNDkuNTAiIHN0cm9rZT0iIzI0NDI1NyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNNzcuMjcgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik03Ny4yNyAzOC41MCBMNDQyLjczIDI0OS41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik03Ny4yNyAzOC41MCBMNDQyLjczIDM4LjUwIiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48dGV4dCB4PSI2OS4zIiB5PSIxNDQuMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj4yNyBtPC90ZXh0Pjx0ZXh0IHg9IjExMi4wIiB5PSI1MS44IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjMwwrA8L3RleHQ+PHRleHQgeD0iMjYwLjAiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPng8L3RleHQ+PC9zdmc+"></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-117"><h2>4(c) · 3. 2 ମିଟର ଉଚ୍ଚ ଦର୍ଶକଠାରୁ 24 ମିଟର ଦୂର ସ୍ତମ୍ଭର କୌଣିକ ଉନ୍ନତି 30°। ସ୍ତମ୍ଭର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ତମ୍ଭର ଉଚ୍ଚତା h ହେଲେ ଦର୍ଶକର ସ୍ତରଠାରୁ ଉପର ଖଣ୍ଡ h − 2।</li><li>tan 30° = (h − 2)/24 ⇒ h − 2 = 24/√3 = 8√3।</li><li>ଦର୍ଶକର ଉଚ୍ଚତା 2 ମିଟର ଯୋଗ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2 + 8√3 ≈ 15.86 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 3ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xMDAuMzIgMjQ5LjUwIEw0MTkuNjggMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTEwMC4zMiAyNDkuNTAgTDEwMC4zMiAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik00MTkuNjggMjQ5LjUwIEw0MTkuNjggMjIyLjg5IiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTQxOS42OCAyMjIuODkgTDEwMC4zMiAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik00MTkuNjggMjIyLjg5IEwxMDAuMzIgMjIyLjg5IiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48dGV4dCB4PSI5Mi4zIiB5PSIxNDQuMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj5oPC90ZXh0Pjx0ZXh0IHg9IjQyNy43IiB5PSIyMzYuMiIgdGV4dC1hbmNob3I9InN0YXJ0IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjIgbTwvdGV4dD48dGV4dCB4PSIzODQuOSIgeT0iMjE3LjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MzDCsDwvdGV4dD48dGV4dCB4PSIyNjAuMCIgeT0iMjY5LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MjQgbTwvdGV4dD48L3N2Zz4="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-118"><h2>4(c) · 4. ସିଡ଼ିର ପାଦ କାନ୍ଥରୁ 3 ମିଟର ଦୂରରେ। ଭୂମି ସହ ସିଡ଼ିର କୋଣ 60°। ସିଡ଼ିର ଦୈର୍ଘ୍ୟ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସିଡ଼ି କର୍ଣ୍ଣ ଓ 3 ମିଟର ହେଉଛି 60° କୋଣର ସଂଲଗ୍ନ ବାହୁ।</li><li>ଦୈର୍ଘ୍ୟ ℓ ହେଲେ cos 60° = 3/ℓ।</li><li>1/2 = 3/ℓ ⇒ ℓ = 6।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>6 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 4ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xOTkuMDkgMjQ5LjUwIEwzMjAuOTEgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5OS4wOSAyNDkuNTAgTDE5OS4wOSAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0zMjAuOTEgMjQ5LjUwIEwxOTkuMDkgMzguNTAiIHN0cm9rZT0iI2E0NDkyZCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48dGV4dCB4PSIxOTEuMSIgeT0iMTQ0LjAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+aDwvdGV4dD48dGV4dCB4PSIyODkuNyIgeT0iMjM1LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+NjDCsDwvdGV4dD48dGV4dCB4PSIyNjAuMCIgeT0iMjY5LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MyBtPC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<article id="exercise-119"><h2>4(c) · 5. 1.5 ମିଟର ଉଚ୍ଚ ଦର୍ଶକ କୋଠାଘରଠାରୁ 12 ମିଟର ଦୂରରେ ଅଛନ୍ତି। ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 60° ହେଲେ ଘରର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦର୍ଶକଙ୍କ ଚକ୍ଷୁ ଦେଇ କୋଠା ଆଡ଼କୁ ଭୂମି ସହ ସମାନ୍ତର ରେଖା ଟାଣ। ଏହାର ଦୈର୍ଘ୍ୟ 12 ମିଟର।</li><li>ଘରର ଉଚ୍ଚତା H ହେଲେ ଚକ୍ଷୁ ସ୍ତର ଉପରେ ଥିବା ଅଂଶ H − 1.5। tan 60° = (H − 1.5)/12।</li><li>√3 ବସାଇ ପୁନଃ ସଜାଡ଼ିଲେ H = 12√3 + 1.5 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(12√3 + 1.5) ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 5ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0yMDMuMTkgMjQ5LjUwIEwzMTYuODEgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTIwMy4xOSAyNDkuNTAgTDIwMy4xOSAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0zMTYuODEgMjQ5LjUwIEwzMTYuODEgMjM1LjMwIiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTMxNi44MSAyMzUuMzAgTDIwMy4xOSAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0zMTYuODEgMjM1LjMwIEwyMDMuMTkgMjM1LjMwIiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48dGV4dCB4PSIxOTUuMiIgeT0iMTQ0LjAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+aDwvdGV4dD48dGV4dCB4PSIzMjQuOCIgeT0iMjQyLjQiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj4xLjUgbTwvdGV4dD48dGV4dCB4PSIyODUuNiIgeT0iMjIxLjMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+NjDCsDwvdGV4dD48dGV4dCB4PSIyNjAuMCIgeT0iMjY5LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MTIgbTwvdGV4dD48L3N2Zz4="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-120"><h2>4(c) · 6. ସୂର୍ଯ୍ୟର କୌଣିକ ଉନ୍ନତି 60° ବେଳେ ଗଛର ଛାଇ 15 ମିଟର। ଗଛର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଛର ପାଦ, ଶୀର୍ଷ ଓ ଛାଇର ଅଗ୍ର ଏକ ସମକୋଣୀ ତ୍ରିଭୁଜ ଗଠନ କରନ୍ତି।</li><li>ଛାଇର ଅଗ୍ରରେ ଥିବା କୋଣ 60°।</li><li>ଗଛର ଉଚ୍ଚତା h ହେଲେ tan 60° = h/15।</li><li>tan 60° = √3 ହେତୁ h = 15√3 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>15√3 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 6ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xOTkuMDkgMjQ5LjUwIEwzMjAuOTEgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5OS4wOSAyNDkuNTAgTDE5OS4wOSAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0zMjAuOTEgMjQ5LjUwIEwxOTkuMDkgMzguNTAiIHN0cm9rZT0iI2E0NDkyZCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48dGV4dCB4PSIxOTEuMSIgeT0iMTQ0LjAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+aDwvdGV4dD48dGV4dCB4PSIyODkuNyIgeT0iMjM1LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+NjDCsDwvdGV4dD48dGV4dCB4PSIyNjAuMCIgeT0iMjY5LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MTUgbTwvdGV4dD48L3N2Zz4="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-121"><h2>4(c) · 7. 300 ମିଟର ଉଚ୍ଚ ପାହାଡ଼ର ଶୀର୍ଷରୁ ସମତଳ ଉପରେ ଥିବା ସ୍ତମ୍ଭର ଶୀର୍ଷ ଓ ପାଦଦେଶର କୌଣିକ ଅବନତି ଯଥାକ୍ରମେ 30° ଓ 60°। ସ୍ତମ୍ଭର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାହାଡ଼ର ପାଦ ସହ ସ୍ତମ୍ଭର ପାଦର ଭୂସମାନ୍ତର ଦୂରତା x ଧର।</li><li>ପାଦଦେଶ ପାଇଁ tan 60° = 300/x।</li><li>ତେଣୁ x = 100√3।</li><li>ସ୍ତମ୍ଭର ଉଚ୍ଚତା h ହେଲେ ପାହାଡ଼ଶୀର୍ଷ ସହ ଏହାର ଶୀର୍ଷର ଉଚ୍ଚତା ଅନ୍ତର 300 − h।</li><li>ଶୀର୍ଷ ପାଇଁ tan 30° = (300 − h)/x।</li><li>ତେଣୁ 300 − h = 100√3/√3 = 100, ଅର୍ଥାତ୍ h = 200।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>200 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 7ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xOTkuMDkgMjQ5LjUwIEwzMjAuOTEgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5OS4wOSAyNDkuNTAgTDE5OS4wOSAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0zMjAuOTEgMjQ5LjUwIEwzMjAuOTEgMTA4LjgzIiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5OS4wOSAzOC41MCBMMzIwLjkxIDEwOC44MyIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0xOTkuMDkgMzguNTAgTDMyMC45MSAzOC41MCIgc3Ryb2tlPSIjODI5MjliIiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWRhc2hhcnJheT0iNSA0Ii8+PHBhdGggZD0iTTE5OS4wOSAzOC41MCBMMzIwLjkxIDI0OS41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0xOTkuMDkgMzguNTAgTDMyMC45MSAzOC41MCIgc3Ryb2tlPSIjODI5MjliIiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWRhc2hhcnJheT0iNSA0Ii8+PHRleHQgeD0iMTkxLjEiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjMwMCBtPC90ZXh0Pjx0ZXh0IHg9IjMyOC45IiB5PSIxNzkuMiIgdGV4dC1hbmNob3I9InN0YXJ0IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmg8L3RleHQ+PHRleHQgeD0iMjMzLjkiIHk9IjUxLjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MzDCsDwvdGV4dD48dGV4dCB4PSIyMzAuMyIgeT0iNjAuNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj42MMKwPC90ZXh0Pjx0ZXh0IHg9IjI2MC4wIiB5PSIyNjkuNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj54PC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-122"><h2>4(c) · 8. ସୂର୍ଯ୍ୟର କୌଣିକ ଉନ୍ନତି 60° ରୁ 45° କୁ କମିଲେ ସ୍ତମ୍ଭର ଛାଇ 24 ମିଟର ବଢ଼େ। ସ୍ତମ୍ଭର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉଚ୍ଚତା h ଓ ପ୍ରଥମ ଛାଇ x ଧର। tan 60° = h/x ରୁ x = h/√3।</li><li>ଦ୍ୱିତୀୟ ଛାଇ x + 24। tan 45° = h/(x + 24) = 1 ହେତୁ h = x + 24।</li><li>x ବସାଇଲେ h − h/√3 = 24। ତେଣୁ h = 24√3/(√3 − 1)।</li><li>ହାରକୁ ପରିମେୟ କଲେ h = 24√3(√3 + 1)/(3 − 1) = 12(3 + √3)।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>12(3 + √3) ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 8ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xNTQuNTAgMjQ5LjUwIEwzNjUuNTAgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE1NC41MCAyNDkuNTAgTDE1NC41MCAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0yNzYuMzIgMjQ5LjUwIEwxNTQuNTAgMzguNTAiIHN0cm9rZT0iI2E0NDkyZCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzY1LjUwIDI0OS41MCBMMTU0LjUwIDM4LjUwIiBzdHJva2U9IiNhNDQ5MmQiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iMTQ2LjUiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmg8L3RleHQ+PHRleHQgeD0iMjQ1LjEiIHk9IjIzNS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjYwwrA8L3RleHQ+PHRleHQgeD0iMzMyLjIiIHk9IjIzOS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjQ1wrA8L3RleHQ+PHRleHQgeD0iMjE1LjQiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPng8L3RleHQ+PHRleHQgeD0iMzIwLjkiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjI0IG08L3RleHQ+PC9zdmc+"></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-123"><h2>4(c) · 9. 40 ମିଟର ବ୍ୟବଧାନରେ ଥିବା ଦୁଇ ଖୁଣ୍ଟର ଉଚ୍ଚତାର ଅନୁପାତ 1 ∶ 2। ପାଦଦ୍ୱୟର ମଧ୍ୟବିନ୍ଦୁରୁ ଶୀର୍ଷଦ୍ୱୟର କୌଣିକ ଉନ୍ନତି ପରସ୍ପର ଅନୁପୂରକ। ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଧ୍ୟବିନ୍ଦୁରୁ ପ୍ରତି ଖୁଣ୍ଟର ଦୂରତା 20 ମିଟର। ଉଚ୍ଚତା h ଓ 2h ଧର।</li><li>ଗୋଟିଏ କୋଣ θ ହେଲେ ଅନ୍ୟଟି 90° − θ। ତେଣୁ tan θ = h/20 ଓ tan(90° − θ) = 2h/20।</li><li>ଦୁଇ tan ର ଗୁଣଫଳ 1। ତେଣୁ 2h²/400 = 1 ⇒ h² = 200।</li><li>ଉଚ୍ଚତା ଧନାତ୍ମକ ହେତୁ h = 10√2 ଓ 2h = 20√2।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>10√2 ମିଟର ଓ 20√2 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 9ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xMTAuODAgMjQ5LjUwIEw0MDkuMjAgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTExMC44MCAyNDkuNTAgTDExMC44MCAxNDQuMDAiIHN0cm9rZT0iIzE0Nzg3OCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNNDA5LjIwIDI0OS41MCBMNDA5LjIwIDM4LjUwIiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTI2MC4wMCAyNDkuNTAgTDExMC44MCAxNDQuMDAiIHN0cm9rZT0iI2E0NDkyZCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMjYwLjAwIDI0OS41MCBMNDA5LjIwIDM4LjUwIiBzdHJva2U9IiNhNDQ5MmQiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iMTAyLjgiIHk9IjE5Ni44IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmg8L3RleHQ+PHRleHQgeD0iNDE3LjIiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+Mmg8L3RleHQ+PHRleHQgeD0iMjI1LjciIHk9IjI0Mi42IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPs64PC90ZXh0Pjx0ZXh0IHg9IjI5Mi4wIiB5PSIyMzcuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj45MMKw4oiSzrg8L3RleHQ+PHRleHQgeD0iMTg1LjQiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjIwIG08L3RleHQ+PHRleHQgeD0iMzM0LjYiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjIwIG08L3RleHQ+PC9zdmc+"></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-124"><h2>4(c) · 10. ଗଛର ଶୀର୍ଷରୁ ଭୂମିର ଏକ ବସ୍ତୁର କୌଣିକ ଅବନତି 60°। 1.5 ମିଟର ତଳକୁ ଆସିଲେ ଏହା 30° ହୁଏ। ଗଛର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଛର ଉଚ୍ଚତା h ଓ ପାଦରୁ ବସ୍ତୁର ଦୂରତା x ଧର। tan 60° = h/x ରୁ h = √3 x।</li><li>ଦ୍ୱିତୀୟ ସ୍ଥାନରେ tan 30° = (h − 1.5)/x ରୁ h − 1.5 = x/√3।</li><li>x = h/√3 ବସାଇଲେ h − 1.5 = h/3। ତେଣୁ 2h/3 = 1.5 ଓ h = 2.25।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>2.25 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 10ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xOTkuMDkgMjQ5LjUwIEwzMjAuOTEgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5OS4wOSAyNDkuNTAgTDE5OS4wOSAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0xOTkuMDkgMzguNTAgTDMyMC45MSAyNDkuNTAiIHN0cm9rZT0iI2E0NDkyZCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMTk5LjA5IDM4LjUwIEwzMjAuOTEgMzguNTAiIHN0cm9rZT0iIzgyOTI5YiIgc3Ryb2tlLXdpZHRoPSIxLjYiIHN0cm9rZS1kYXNoYXJyYXk9IjUgNCIvPjxwYXRoIGQ9Ik0xOTkuMDkgMTc5LjE3IEwzMjAuOTEgMjQ5LjUwIiBzdHJva2U9IiNhNDQ5MmQiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5OS4wOSAxNzkuMTcgTDMyMC45MSAxNzkuMTciIHN0cm9rZT0iIzgyOTI5YiIgc3Ryb2tlLXdpZHRoPSIxLjYiIHN0cm9rZS1kYXNoYXJyYXk9IjUgNCIvPjx0ZXh0IHg9IjE5MS4xIiB5PSIxNDQuMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj5oPC90ZXh0Pjx0ZXh0IHg9IjIzMC4zIiB5PSI2MC41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjYwwrA8L3RleHQ+PHRleHQgeD0iMjMzLjkiIHk9IjE5Mi41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjMwwrA8L3RleHQ+PHRleHQgeD0iMjYwLjAiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPng8L3RleHQ+PHRleHQgeD0iMTkxLjEiIHk9IjEwOC44IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjEuNSBtPC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-125"><h2>4(c) · 11. 10 ମିଟର ଉଚ୍ଚ ସ୍ତମ୍ଭରୁ ମନ୍ଦିରର ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 45° ଓ ପାଦଦେଶର କୌଣିକ ଅବନତି 30°। ଉଭୟ ଏକ ସମତଳରେ ଥିଲେ ମନ୍ଦିରର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଦଦ୍ୱୟର ଦୂରତା x। ତଳ ଆଡ଼ର ତ୍ରିଭୁଜରେ tan 30° = 10/x। ତେଣୁ x = 10√3।</li><li>ମନ୍ଦିରର ଉଚ୍ଚତା h ହେଲେ ସ୍ତମ୍ଭ ଶୀର୍ଷ ଉପରେ ମନ୍ଦିରର ଅଂଶ h − 10।</li><li>tan 45° = (h − 10)/x = 1। ତେଣୁ h − 10 = x = 10√3 ବା h = 10 + 10√3 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>10(1 + √3) ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 11ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xOTMuMTIgMjQ5LjUwIEwzMjYuODggMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5My4xMiAyNDkuNTAgTDE5My4xMiAxNzIuMjciIHN0cm9rZT0iIzE0Nzg3OCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzI2Ljg4IDI0OS41MCBMMzI2Ljg4IDM4LjUwIiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE5My4xMiAxNzIuMjcgTDMyNi44OCAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0xOTMuMTIgMTcyLjI3IEwzMjYuODggMTcyLjI3IiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48cGF0aCBkPSJNMTkzLjEyIDE3Mi4yNyBMMzI2Ljg4IDI0OS41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0xOTMuMTIgMTcyLjI3IEwzMjYuODggMTcyLjI3IiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48dGV4dCB4PSIxODUuMSIgeT0iMjEwLjkiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MTAgbTwvdGV4dD48dGV4dCB4PSIzMzQuOSIgeT0iMTQ0LjAiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj5oPC90ZXh0Pjx0ZXh0IHg9IjIyNi40IiB5PSIxNjIuNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj40NcKwPC90ZXh0Pjx0ZXh0IHg9IjIyNy45IiB5PSIxODUuNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj4zMMKwPC90ZXh0Pjx0ZXh0IHg9IjI2MC4wIiB5PSIyNjkuNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj54PC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-126"><h2>4(c) · 12. 12 ମିଟର ପ୍ରସ୍ଥର ରାସ୍ତାର ଏକ ପାର୍ଶ୍ୱର କୋଠା, ଅନ୍ୟ ପାର୍ଶ୍ୱର ଝରକାରେ ସମକୋଣ ସୃଷ୍ଟି କରେ। କୋଠାର ପାଦଦେଶରୁ ଝରକାର କୌଣିକ ଉନ୍ନତି 30°। କୋଠାର ଉଚ୍ଚତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଝରକାର ଭୂମିଠାରୁ ଉଚ୍ଚତା 12tan 30° = 4√3 ମିଟର।</li><li>ଝରକାରୁ କୋଠାର ପାଦଦେଶକୁ କୌଣିକ ଅବନତି ମଧ୍ୟ 30°।</li><li>ପାଦ ଓ ଶୀର୍ଷ ପ୍ରତି ଦୃଷ୍ଟିରେଖା ମଧ୍ୟରେ 90° ହେତୁ ଝରକାରୁ ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 60°।</li><li>ଝରକାଠାରୁ ଶୀର୍ଷର ଉଚ୍ଚତା 12tan 60° = 12√3। ମୋଟ ଉଚ୍ଚତା 4√3 + 12√3 = 16√3 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>16√3 ମିଟର, ପ୍ରାୟ 27.71 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 12ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0yMTQuMzIgMjQ5LjUwIEwzMDUuNjggMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTIxNC4zMiAyNDkuNTAgTDIxNC4zMiAxOTYuNzUiIHN0cm9rZT0iIzE0Nzg3OCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzA1LjY4IDI0OS41MCBMMzA1LjY4IDM4LjUwIiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTIxNC4zMiAxOTYuNzUgTDMwNS42OCAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0yMTQuMzIgMTk2Ljc1IEwzMDUuNjggMTk2Ljc1IiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48cGF0aCBkPSJNMjE0LjMyIDE5Ni43NSBMMzA1LjY4IDI0OS41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0yMTQuMzIgMTk2Ljc1IEwzMDUuNjggMTk2Ljc1IiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48dGV4dCB4PSIyMDYuMyIgeT0iMjIzLjEiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+aOKCgTwvdGV4dD48dGV4dCB4PSIzMTMuNyIgeT0iMTQ0LjAiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj5oPC90ZXh0Pjx0ZXh0IHg9IjI0NS41IiB5PSIxODIuOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj42MMKwPC90ZXh0Pjx0ZXh0IHg9IjI0OS4xIiB5PSIyMTAuMSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj4zMMKwPC90ZXh0Pjx0ZXh0IHg9IjI2MC4wIiB5PSIyNjkuNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj4xMiBtPC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-127"><h2>4(c) · 13. ନଦୀ କୂଳରୁ ଅପର ପାର୍ଶ୍ୱରେ ଥିବା ଦୁର୍ଗର କୌଣିକ ଉନ୍ନତି 60°। ଦୁର୍ଗ ସହ ଏକ ସରଳରେଖାରେ 60 ମିଟର ପଛକୁ ଗଲେ ଏହା 45° ହୁଏ। ନଦୀର ପ୍ରସ୍ଥ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନଦୀର ପ୍ରସ୍ଥ x ଓ ଦୁର୍ଗର ଉଚ୍ଚତା h ଧର। ନିକଟ ବିନ୍ଦୁରୁ tan 60° = h/x ⇒ h = √3 x।</li><li>ଦୂର ବିନ୍ଦୁରୁ ଭୂସମାନ୍ତର ଦୂରତା x + 60। tan 45° = h/(x + 60) ⇒ h = x + 60।</li><li>ତେଣୁ (√3 − 1)x = 60। ହାରକୁ ପରିମେୟ କଲେ x = 60(√3 + 1)/2 = 30(√3 + 1) ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>30(√3 + 1) ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 13ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xNTQuNTAgMjQ5LjUwIEwzNjUuNTAgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTE1NC41MCAyNDkuNTAgTDE1NC41MCAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0yNzYuMzIgMjQ5LjUwIEwxNTQuNTAgMzguNTAiIHN0cm9rZT0iI2E0NDkyZCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzY1LjUwIDI0OS41MCBMMTU0LjUwIDM4LjUwIiBzdHJva2U9IiNhNDQ5MmQiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iMTQ2LjUiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmg8L3RleHQ+PHRleHQgeD0iMjQ1LjEiIHk9IjIzNS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjYwwrA8L3RleHQ+PHRleHQgeD0iMzMyLjIiIHk9IjIzOS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjQ1wrA8L3RleHQ+PHRleHQgeD0iMjE1LjQiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPng8L3RleHQ+PHRleHQgeD0iMzIwLjkiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjYwIG08L3RleHQ+PC9zdmc+"></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-128"><h2>4(c) · 14. 12 ମିଟର ଦୂରରେ ଥିବା ଦୁଇ ସ୍ତମ୍ଭର ଗୋଟିଏ ଅନ୍ୟଟିର ଦୁଇଗୁଣ ଉଚ୍ଚ। ପାଦଦ୍ୱୟର ମଧ୍ୟବିନ୍ଦୁରୁ କୌଣିକ ଉନ୍ନତିଦ୍ୱୟ ପରସ୍ପର ଅନୁପୂରକ। ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରତି ସ୍ତମ୍ଭର ପାଦ ଦର୍ଶନବିନ୍ଦୁଠାରୁ 12/2 = 6 ମିଟର ଦୂର। ଉଚ୍ଚତା h ଓ 2h ଧର।</li><li>ଅନୁପୂରକ କୋଣ ଅନୁସାରେ tan θ = h/6 ଓ cot θ = 2h/6।</li><li>tan θ × cot θ = 1 ହେତୁ 2h²/36 = 1 ⇒ h² = 18। ତେଣୁ h = 3√2 ଓ 2h = 6√2 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>3√2 ମିଟର ଓ 6√2 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 14ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xMTAuODAgMjQ5LjUwIEw0MDkuMjAgMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTExMC44MCAyNDkuNTAgTDExMC44MCAxNDQuMDAiIHN0cm9rZT0iIzE0Nzg3OCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNNDA5LjIwIDI0OS41MCBMNDA5LjIwIDM4LjUwIiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTI2MC4wMCAyNDkuNTAgTDExMC44MCAxNDQuMDAiIHN0cm9rZT0iI2E0NDkyZCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMjYwLjAwIDI0OS41MCBMNDA5LjIwIDM4LjUwIiBzdHJva2U9IiNhNDQ5MmQiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iMTAyLjgiIHk9IjE5Ni44IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmg8L3RleHQ+PHRleHQgeD0iNDE3LjIiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+Mmg8L3RleHQ+PHRleHQgeD0iMjI1LjciIHk9IjI0Mi42IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPs64PC90ZXh0Pjx0ZXh0IHg9IjI5Mi4wIiB5PSIyMzcuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj45MMKw4oiSzrg8L3RleHQ+PHRleHQgeD0iMTg1LjQiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjYgbTwvdGV4dD48dGV4dCB4PSIzMzQuNiIgeT0iMjY5LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+NiBtPC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-129"><h2>4(c) · 15. 30 ମିଟର ଉଚ୍ଚ ଦୁର୍ଗର ପାଦଦେଶ ସହ ଏକ ସରଳରେଖାରେ ଥିବା ଦୁଇ ବିନ୍ଦୁରୁ ଶୀର୍ଷର କୌଣିକ ଉନ୍ନତି 30° ଓ 45°। ବିନ୍ଦୁଦ୍ୱୟର ବ୍ୟବଧାନ କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଦଦେଶରୁ ଦୂରତା x, y ନିଅ। tan 30° = 30/xରୁ x = 30√3 ମିଟର।</li><li>tan 45° = 30/yରୁ y = 30 ମିଟର। ଏକେ ପାର୍ଶ୍ୱରେ ବ୍ୟବଧାନ x − y।</li><li>ଯଦି ବିନ୍ଦୁଦ୍ୱୟ ପାଦଦେଶର ବିପରୀତ ପାର୍ଶ୍ୱରେ ହୁଏ, ବ୍ୟବଧାନ x + y = 30(√3 + 1) ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଦଦେଶର ଏକେ ପାର୍ଶ୍ୱରେ ହେଲେ 30(√3 − 1) ≈ 21.96 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 15ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik03Ny4yNyAyNDkuNTAgTDQ0Mi43MyAyNDkuNTAiIHN0cm9rZT0iIzI0NDI1NyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNNzcuMjcgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0yODguMjcgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik00NDIuNzMgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjY5LjMiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjMwIG08L3RleHQ+PHRleHQgeD0iMjU1LjAiIHk9IjIzOS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjQ1wrA8L3RleHQ+PHRleHQgeD0iNDA4LjAiIHk9IjI0NC4yIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjMwwrA8L3RleHQ+PHRleHQgeD0iMTgyLjgiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPng8L3RleHQ+PHRleHQgeD0iMzY1LjUiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmQ8L3RleHQ+PC9zdmc+"></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-130"><h2>4(c) · 16. 12 ମିଟର ଉଚ୍ଚ କୋଠା ଶୀର୍ଷରୁ ଏକ ସମତଳରେ ଥିବା ସ୍ତମ୍ଭର ଶୀର୍ଷ ଓ ପାଦଦେଶର କୌଣିକ ଉନ୍ନତି ଓ ଅବନତି ଯଥାକ୍ରମେ 60° ଓ 30°। ସ୍ତମ୍ଭର ଉଚ୍ଚତା ଓ କୋଠାଠାରୁ ଦୂରତା କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭୂସମାନ୍ତର ଦୂରତା x ହେଲେ ତଳ ଆଡ଼ର ତ୍ରିଭୁଜରୁ tan 30° = 12/x। ତେଣୁ x = 12√3।</li><li>ଉପର ଆଡ଼ର ତ୍ରିଭୁଜରେ tan 60° = (h − 12)/x। ତେଣୁ h − 12 = √3 × 12√3 = 36।</li><li>ଭୂମି ସ୍ତରରୁ ସମଗ୍ର ଉଚ୍ଚତା h = 36 + 12 = 48 ମିଟର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସ୍ତମ୍ଭ 48 ମିଟର ଉଚ୍ଚ। ଦୂରତା 12√3 ମିଟର।</p></div><figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 16ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0yMTQuMzIgMjQ5LjUwIEwzMDUuNjggMjQ5LjUwIiBzdHJva2U9IiMyNDQyNTciIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTIxNC4zMiAyNDkuNTAgTDIxNC4zMiAxOTYuNzUiIHN0cm9rZT0iIzE0Nzg3OCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzA1LjY4IDI0OS41MCBMMzA1LjY4IDM4LjUwIiBzdHJva2U9IiMxNDc4NzgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTIxNC4zMiAxOTYuNzUgTDMwNS42OCAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0yMTQuMzIgMTk2Ljc1IEwzMDUuNjggMTk2Ljc1IiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48cGF0aCBkPSJNMjE0LjMyIDE5Ni43NSBMMzA1LjY4IDI0OS41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik0yMTQuMzIgMTk2Ljc1IEwzMDUuNjggMTk2Ljc1IiBzdHJva2U9IiM4MjkyOWIiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz48dGV4dCB4PSIyMDYuMyIgeT0iMjIzLjEiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjUiIGZpbGw9IiMxYzJjM2MiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyI+MTIgbTwvdGV4dD48dGV4dCB4PSIzMTMuNyIgeT0iMTQ0LjAiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj5oPC90ZXh0Pjx0ZXh0IHg9IjI0NS41IiB5PSIxODIuOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj42MMKwPC90ZXh0Pjx0ZXh0IHg9IjI0OS4xIiB5PSIyMTAuMSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj4zMMKwPC90ZXh0Pjx0ZXh0IHg9IjI2MC4wIiB5PSIyNjkuNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuNSIgZmlsbD0iIzFjMmMzYyIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIj54PC90ZXh0Pjwvc3ZnPg=="></div></figure>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+
+</main></body></html>

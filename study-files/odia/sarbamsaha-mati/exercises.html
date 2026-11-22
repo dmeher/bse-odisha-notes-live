@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସର୍ବଂସହା ମାଟି · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସର୍ବଂସହା ମାଟି</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1eA1bYbXBPpzPG6MqHkGmI9656L5umbP3/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୨୪। ଯାଞ୍ଚ କରାଯାଇଥିବା ଉତ୍ତର ପ୍ରଶ୍ନକ୍ରମରେ ଦିଆଯାଇଛି।</p><p>୨୨ର ଅତିରିକ୍ତ କବିତାଗୁଡ଼ିକ ଏହି PDFରେ ନାହିଁ। ୨୪ ପାଇଁ ଦିଆଯାଇଥିବା ଅନ୍ୟ ବହିର ଏକ ଦୃଷ୍ଟାନ୍ତ ଚିହ୍ନାଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୪–୫</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୨୪)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a> <a href="#exercise-18">୧୮</a> <a href="#exercise-19">୧୯</a> <a href="#exercise-20">୨୦</a> <a href="#exercise-21">୨୧</a> <a href="#exercise-22">୨୨</a> <a href="#exercise-23">୨୩</a> <a href="#exercise-24">୨୪</a></nav></details>
+<article id="exercise-1"><h2>୧. ଚାରିଟି ପାଦର ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର।</h2>
+<div class="question-parts"><p>(କ) ଦିହ ସିନା ତୋର ପାହାଡ଼ପଥର ____ ପତର ପ୍ରାଣ। (ସବୁଜ, କଅଁଳ, ବହଳ)</p><p>(ଖ) ତୋହରି ଅନ୍ତର ଆଦେଶେ ଚଳେ ମୁଁ ଘୋଷି ତୋର ____ | (ଜୟଗାନ, ମହାକୀର୍ତ୍ତି, ମହାଯଶ)</p><p>(ଗ) କେଉଁଠି ହଜିଛି ଖୋଜି ଦେଏ ମୋର ____ର ଚାବିକାଠି। (ପ୍ରେରଣା, ଭାବନା, ଚେତନା)</p><p>(ଘ) ଅମାପ ଧରିଯ ଦେଏ ଟିକେ ମତେ ____ ହେଉ ମୋର ଛାତି। (ଟାଣ, ଦୃଢ଼, ନିଦା)</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ପାଦରେ ମାଟିର ପଥର ଦେହ ସହ କୋମଳ ପ୍ରାଣର ତୁଳନା ଅଛି, ତେଣୁ ପତର ପୂର୍ବରୁ ‘କଅଁଳ’ ବସେ। ଯାହା ଘୋଷଣା କରାଯାଏ ତାହା ‘ମହାଯଶ’ ଓ ଯାହାର ଚାବିକାଠି ଖୋଜାଯାଏ ତାହା ‘ଚେତନା’। ଦୁଃଖ ସହିବା ପାଇଁ ଛାତି ‘ନିଦା’ ହେଉ ବୋଲି କବି ମାଗିଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ — କଅଁଳ। ଖ — ମହାଯଶ।</p><p>ଗ — ଚେତନା। ଘ — ନିଦା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=36">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୬–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-2"><h2>୨. ଆଠଟି ଶବ୍ଦର ବିପରୀତାର୍ଥ ଲେଖ।</h2>
+<div class="question-parts"><p>ଜନ୍ମ, ଦୁଃଖ, ଦୋଷ, ନିଦା, ଧୀର, ଅମାପ, କଅଁଳ, ସ୍ନେହ।</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଦର ପ୍ରସଙ୍ଗରେ ବିପରୀତ ଅର୍ଥ ବାଛ। ‘ଧୀର ପବନ’ରେ ଗତିର କଥା ରହିଛି, ତେଣୁ ତାହାର ବିପରୀତ ଦ୍ରୁତ। ‘କଅଁଳ ପତର’ର କୋମଳତା ସହ ପାଠର ‘ଟାଣ’ର ଫରକ ଅଛି। ‘ଅମାପ’ ଯାହାର ମାପ ନାହିଁ, ତାହାର ବିପରୀତ ପରିମିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜନ୍ମ — ମୃତ୍ୟୁ। ଦୁଃଖ — ସୁଖ।</p><p>ଦୋଷ — ଗୁଣ। ନିଦା — ପୋଲା।</p><p>ଧୀର — ଦ୍ରୁତ। ଅମାପ — ପରିମିତ।</p><p>କଅଁଳ — ଟାଣ। ସ୍ନେହ — ଘୃଣା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=36">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୬–୩୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-3"><h2>୩. ମା, ଦେହ, ଜଳ, ପବନ, ବୁକୁ ଓ ପାଦର ଦୁଇ ପ୍ରତିଶବ୍ଦ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କବି ମାଟିକୁ ‘ମା’ ଡାକନ୍ତି ଓ ତାହାର ପାଣି ଓ ପବନ ନିଜ ଦେହକୁ ବଳ ଦେଇଥିବା କହନ୍ତି। ସେହି ବାକ୍ୟରେ ମା ପାଇଁ ଜନନୀ, ପାଣି ପାଇଁ ଜଳ, ପବନ ପାଇଁ ବାୟୁ ବସାଇ ଅର୍ଥ ମିଳୁଛି କି ଦେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମା — ଜନନୀ, ମାତା। ଦେହ — ଶରୀର, ତନୁ।</p><p>ଜଳ — ନୀର, ପାଣି। ପବନ — ବାୟୁ, ସମୀର।</p><p>ବୁକୁ — ବକ୍ଷ, ଛାତି। ପାଦ — ପଦ, ଚରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=35">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୫–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-4"><h2>୪. କବିତାର ଛଅ ଶବ୍ଦର ଗଦ୍ୟରୂପ ଦିଅ।</h2>
+<div class="question-parts"><p>ସେନେହ, ମୁକତି, ଶକତି, ତୃପତି, ସରଗ, ସପନ।</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଦର ‘ଶକତି ଦେଇଛି ତୃପତି ଦେଇଛି’କୁ ଗଦ୍ୟରେ ଲେଖିଲେ ‘ଶକ୍ତି ଦେଇଛି, ତୃପ୍ତି ଦେଇଛି’ ହୁଏ। ଗଦ୍ୟରୂପରେ ବନାନ ବଦଳେ, ଫଳରୁ ମିଳୁଥିବା ବଳ ଓ ସନ୍ତୋଷର ଭାବ ଏକା ରହେ। ସେହିପରି ସରଗ ଓ ସ୍ୱର୍ଗ ଏକା କଥା ବୁଝାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେନେହ — ସ୍ନେହ। ମୁକତି — ମୁକ୍ତି।</p><p>ଶକତି — ଶକ୍ତି। ତୃପତି — ତୃପ୍ତି।</p><p>ସରଗ — ସ୍ୱର୍ଗ। ସପନ — ସ୍ୱପ୍ନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=35">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୫–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-5"><h2>୫. ଅମାପ, ଅଳି, ଜୟଗାନ, ଚେତନା ଓ ଆଘାତକୁ ବାକ୍ୟରେ ବସାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଦଟି କାହାର କାମ ବା ଗୁଣ ବୁଝାଉଛି ଦେଖ। ‘ଅମାପ’ ମାଟିର ଧୈର୍ଯ୍ୟର ପରିମାଣ ଓ ‘ଅଳି’ ସନ୍ତାନର ଆଚରଣ ବୁଝାଏ। ଶେଷ ପଦଗୁଡ଼ିକରେ କବିଙ୍କ ଜୟଗାନ ଓ ଚେତନା ପାଇଁ ପ୍ରାର୍ଥନାକୁ ନିଜ ନିଜ ବାକ୍ୟର ଆଧାର କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟିର ଧୈର୍ଯ୍ୟ ଅମାପ। ମାଆ ସନ୍ତାନର ଅଳି ସହେ।</p><p>କବି ମାଟିର ଜୟଗାନ କରନ୍ତି। ସେବା କରିବାର ଚେତନା ମୋ ମନରେ ଜାଗିଲା।</p><p>ଶିଶୁର ପାଦର ଆଘାତ ମଧ୍ୟ ମାଆ ସହେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=36">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୬–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-6"><h2>୬. କବି କାହାକୁ ସରବ ସହଣୀ କହିଛନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ସରବ’ରେ ସମସ୍ତ ଓ ‘ସହଣୀ’ରେ ସହିବାର ଭାବ। ସନ୍ତାନର ଆଘାତ ପରେ ମଧ୍ୟ ପାଳନ କରୁଥିବା ମାଟି ପାଇଁ ଏହା ଯଥାର୍ଥ ସମ୍ବୋଧନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମସ୍ତ ସନ୍ତାନର ଅଳି ଓ ଆଘାତ ସହୁଥିବା ମାଟିକୁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-7"><h2>୭. ଶକ୍ତି ଓ ତୃପ୍ତି କେଉଁ ଦାନରୁ ମିଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ସରବ ସହଣୀ’ ମାଟି ସମସ୍ତଙ୍କୁ ସମାନ ସ୍ନେହ ବାଣ୍ଟେ। ମିଠା ପାଣି ଓ ଧୀର ପବନ ଶରୀରକୁ ବଳ ଦିଏ, ଗଛଲତାର ଫଳ ଶକ୍ତି ଓ ତୃପ୍ତି ଦିଏ। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟିର ଗଛଲତାର ଫଳରୁ ଶକ୍ତି ଓ ତୃପ୍ତି ମିଳେ। ମିଠାପାଣି ଓ ଧୀର ପବନ ମଧ୍ୟ ଦେହକୁ ବଳ ଦିଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-8"><h2>୮. ମନସୁଖ ପାଇଁ ହସକଥା କେଉଁଠି ଭରି ରହିଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନଈ ଓ ସମୁଦ୍ରର ଧ୍ୱନିକୁ କବି ମାଆର ହସକଥା ଭାବିଛନ୍ତି। ପ୍ରକୃତିର ସେହି ରୂପ ମଣିଷର ମନକୁ ଆନନ୍ଦ ଦିଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟିମାଆ ନଈ ଓ ସମୁଦ୍ରରେ ହସକଥା ଭରି ରଖିଛନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-9"><h2>୯. ଏହି କବିତାର ‘ମା’ କିଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ କବି ମାଟିର ପାଣି, ପବନ ଓ ଗଛଲତାର ଫଳ କଥା କହିଛନ୍ତି। ସେଗୁଡ଼ିକରେ ମାଆର ପୋଷଣ ଦେଖିବା ପରେ ଶେଷ ଭାଗରେ ‘ତୁହି ମୋ ଭାରତ ମାଆ’ କହିଛନ୍ତି। ଏହି ସମ୍ବୋଧନରୁ ଜନ୍ମଭୂମି ହିଁ ଏଠାରେ ମାଆ ବୋଲି ଜଣାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସନ୍ତାନକୁ ପୋଷୁଥିବା ଜନ୍ମମାଟି। କବି ତାକୁ ଶେଷରେ ଭାରତ ମାଆ ଭାବେ ବନ୍ଦନା କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=35">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୫–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-10"><h2>୧୦. ମାଟି ଚେରମୂଳି କାହିଁକି ସାଇତିଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଔଷଧୀୟ ଚେରମୂଳି ସାଇତିବାକୁ ଅସୁସ୍ଥ ସନ୍ତାନ ପାଇଁ ମାଟିମାଆର ପୂର୍ବ ଯତ୍ନ ଭାବେ କବି ଦେଖାଇଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସନ୍ତାନର ଦେହ ଅସୁସ୍ଥ ହେଲେ ସେଥିରେ ଉପଶମ ମିଳିବା ପାଇଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-11"><h2>୧୧. ସ୍ୱର୍ଗଠାରୁ ମାଟିର କୋଳ ଅଧିକ ପ୍ରିୟ ବୋଲି କେଉଁ ପଦରୁ ବୁଝିବା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସନ୍ତାନର ଅଳି ଓ ଆଘାତ ପରେ ମଧ୍ୟ ମାଟି ତାକୁ ନିଜ ଛୁଆ ଭାବି କ୍ଷମା କରେ। ଏହି ଆଶ୍ରୟ ଏପରି ପ୍ରିୟ ଯେ ସ୍ୱର୍ଗର ଡାକ ଶୁଣିଲେ ମଧ୍ୟ ମାଆର କୋଳ ଛାଡ଼ିବାକୁ ମନ ହୁଏନାହିଁ। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>“ସରଗ ଡାକିଲେ ମନ ବଳେ ନାହିଁ / ଛାଡ଼ିବାକୁ ତୋର କାଖ।” ସ୍ୱର୍ଗର ଆହ୍ୱାନ ମଧ୍ୟ ଏହି ମମତାକୁ ହରାଇପାରେନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=38" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୮</a></small></article>
+<article id="exercise-12"><h2>୧୨. କେଉଁ କର୍ମ ଫଳରେ କବି ଏ ଦେଶକୁ ଆସିଥିବା କହନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମାଟି ସନ୍ତାନର ରାଗ ଓ ଦୋଷ ଭୁଲିଯାଏ। ଏତେ ସ୍ନେହ ପାଇ କବିଙ୍କ ମନରେ କୃତଜ୍ଞତା ଆସେ। ଏପରି ମାଆର ଦେଶରେ ଜନ୍ମ ହେବାକୁ ସେ ନିଜର ତପର ଫଳ ବୋଲି ମଣିଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବହୁ ତପସ୍ୟାର ଫଳରେ ଏହି ଜନ୍ମରେ ମାଟିମାଆଙ୍କ ଦେଶରେ ବୁଲିବାର ସୁଯୋଗ ପାଇଛନ୍ତି ବୋଲି କବି ଭାବନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=36">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-13"><h2>୧୩. କାହାର ଆଦେଶରେ କବି ମାଟିର ଯଶ ଘୋଷଣା କରନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କବି ପ୍ରଥମେ ନିଜର ମୁକ୍ତି ଓ ହସକୁ ମାଆଙ୍କ ସହ ମିଳାଇଛନ୍ତି। ତା’ପରେ ମାଆଙ୍କ ‘ଅନ୍ତର ଆଦେଶେ’ ଚାଲିବା କଥା କହିଛନ୍ତି। ମାଟି ପ୍ରତି ଏହି ଅନ୍ତରର ଟାଣ ତାଙ୍କ ଜୟଗାନର ପ୍ରେରଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟିମାଆଙ୍କ ଅନ୍ତରର ଆଦେଶ ହିଁ ତାଙ୍କୁ ଚଳାଏ। ସେହି ପ୍ରେରଣାରେ ସେ ମାଆର ମହାଯଶ ଘୋଷଣା କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=37">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-14"><h2>୧୪. ମାଟି ଆମ ଦୋଷ କାହିଁକି କ୍ଷମା କରିଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସ୍ନେହ ଏଠାରେ କ୍ଷମାର କାରଣ। ଆଘାତ ସହି ମଧ୍ୟ ମାଟି ଖାଦ୍ୟ ଓ ଆଶ୍ରୟ ଦାନ ଜାରି ରଖେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆମକୁ ନିଜ ସନ୍ତାନ ଭାବେ ସ୍ନେହ କରୁଥିବାରୁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-15"><h2>୧୫. ବଣପକ୍ଷୀର ଡାକରେ କବିଙ୍କର କି ଅନୁଭୂତି ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କବି ବଣପକ୍ଷୀର ଡାକ ଶୁଣିବାର ପ୍ରଭାବକୁ ବୁକୁ ଓ ଆଖିର ଅନୁଭବରେ ଦେଖାଇଛନ୍ତି। ଏହା ପରେ ସ୍ୱର୍ଗ ଡାକିଲେ ମଧ୍ୟ ମାଟିର କୋଳ ଛାଡ଼ିବାକୁ ମନ ନ ବଳିବା କଥା ଆସେ। ଏପରି ଆନନ୍ଦ ହିଁ ମାଟି ସହ ତାଙ୍କ ବନ୍ଧନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେହି ଡାକରେ କବିଙ୍କ ବୁକୁ ଆନନ୍ଦରେ ଫୁଲିଉଠେ ଓ ସେ ମୁଗ୍ଧ ହୋଇଯାଆନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=36">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-16"><h2>୧୬. ସନ୍ତାନର ଆଘାତକୁ ମାଟି କ୍ଷମା କରିବାର ଅର୍ଥ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଜନମ କାଳୁ’ ଆଘାତ ଦେବାରେ ସନ୍ତାନ ନିଜ ଦୋଷ ମାନିଛି। ମାଟି କାହିଁକି ତାହା କ୍ଷମା କରେ ତାହାର ଉତ୍ତର ପର ପାଦର ‘ନିଜ ଛୁଆ ବୋଲି’ରେ ରହିଛି। ଏହି ଦୁଇ ପାଦ ମିଶାଇଲେ ମାଟିର କ୍ଷମା ପଛର ମମତା ବୁଝିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜନ୍ମରୁ ମଣିଷ ମାଟି ଉପରେ ଚାଲେ ଓ ତାହାକୁ ବହୁ ଆଘାତ ଦିଏ। ସନ୍ତାନକୁ ନିଜର ବୋଲି ମାଆ ଯେପରି ଦୋଷ କ୍ଷମା କରେ, ଜନ୍ମମାଟି ମଧ୍ୟ ତାହାର ସ୍ନେହ ଫେରାଇ ନିଏନାହିଁ।</p><p>ଏଥିରେ ମାଟିର ସହଣଶୀଳତା ଓ କବିଙ୍କ କୃତଜ୍ଞତା ପ୍ରକାଶ ପାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=36">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-17"><h2>୧୭. ମାଟିଠାରୁ ଧୈର୍ଯ୍ୟ ମାଗିବାର ଉଦ୍ଦେଶ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବାହାରେ ଦୃଢ଼ ପାହାଡ଼ପଥର ଓ ଭିତରେ କୋମଳ ପତ୍ର ପରି ପ୍ରାଣକୁ ଏକାଠି ରଖି କବି ମାଟିର ଚରିତ୍ର ବୁଝାନ୍ତି। ସେହି ଅମାପ ଧୈର୍ଯ୍ୟର ଟିକିଏ ପାଇଲେ ନିଜେ ଦୁଃଖ ସହି ଦିନରାତି ଜଗତର ସେବା କରିପାରିବେ। ମାଟିଠାରୁ ପାଇଥିବା ସ୍ନେହକୁ ଅନ୍ୟର ଉପକାରରେ ଫେରାଇବା ହିଁ ପ୍ରାର୍ଥନାର ଅର୍ଥ। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟି ଯେପରି ଦୁଃଖ ସହି ସମସ୍ତଙ୍କୁ ପୋଷେ, କବି ମଧ୍ୟ ସେପରି ବଳ ମାଗନ୍ତି। ନିଜର କଷ୍ଟ ସହିବାକୁ ଛାତି ଦୃଢ଼ ହେଲେ ଜଗତର କଲ୍ୟାଣ କାମରେ ଦିନରାତି ଲାଗିପାରିବେ।</p><p>ନିଜ ସୁବିଧା ପାଇଁ ଏହି ପ୍ରାର୍ଥନା କରାଯାଇ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-18"><h2>୧୮. ମାଟିର ମୁକ୍ତି ଓ ହସ ସହ ନିଜ ମୁକ୍ତି ଓ ହସକୁ ମିଳାଇବାର ଭାବ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନିଜ ଆନନ୍ଦ ଓ ମୁକ୍ତିକୁ ଦେଶର ଆନନ୍ଦ ଓ ମୁକ୍ତି ସହ ଯୋଡ଼ି କବି ନିଜ ଜୀବନର ଲକ୍ଷ୍ୟ ବୁଝାଇଛନ୍ତି। ପାହାନ୍ତି ଅନ୍ଧାର ପରେ ରାତି ପାହିବାର ଚିତ୍ର ସେହି ମୁକ୍ତିର ଆଶାକୁ ଦେଖାଏ। ତେଣୁ କବିଙ୍କ ହସ ପଛରେ ଦେଶର ଦୁଃଖ ଶେଷ ହେବାର ସ୍ୱପ୍ନ ରହିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସର୍ବଂସହା ମାଟି କବିତାରେ ବିଦ୍ୟୁତ୍‌ପ୍ରଭା ଦେବୀ ମାଟିକୁ ନିଜ ମାଆ ଭାବେ ସମ୍ବୋଧନ କରିଛନ୍ତି। ତାହାର ଜଳ, ପବନ ଓ ଫଳ ତାଙ୍କୁ ବଢ଼ାଇଛି।</p><p>ତାହାର ଅସୀମ ଧୈର୍ଯ୍ୟ ତାଙ୍କୁ ଅନ୍ୟମାନଙ୍କ ଦୁଃଖ ସହିବା ଶିଖାଇଛି। ତେଣୁ ନିଜ ପାଇଁ ଅଲଗା ସୁଖ ବା ମୁକ୍ତି ସେ କଳ୍ପନା କରନ୍ତି ନାହିଁ।</p><p>ଜନ୍ମମାଟି କଲ୍ୟାଣ ଲାଭ କଲେ ସନ୍ତାନ ତାହାକୁ ନିଜର ଆନନ୍ଦ ଭାବେ ଅନୁଭବ କରେ। ଏହି ନିବିଡ଼ ଏକାତ୍ମବୋଧ ହିଁ ମାଆର ଯଶ ଘୋଷିବା ଓ ସେବାରେ ଲାଗିବାର ପ୍ରେରଣା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=37">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-19"><h2>୧୯. ମାଟି ପ୍ରତି କବିଙ୍କ ମନୋଭାବ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମନୋଭାବର ବିକାଶକୁ ଲକ୍ଷ୍ୟ କର। ମାଟିର ଦାନ ପାଇ ପ୍ରଥମେ କୃତଜ୍ଞତା ଆସେ। ତା’ର କ୍ଷମା ଦେଖି କବି ସେହି ଧୈର୍ଯ୍ୟ ମାଗନ୍ତି। ଶେଷରେ ମାଆର ମୁକ୍ତିରେ ନିଜ ମୁକ୍ତି ଦେଖି ଦେଶର ସେବା ଓ ଯଶ ରକ୍ଷା କରିବାକୁ ଚାହାନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟିର ଦାନରେ ସନ୍ତାନ ଜୀବନ ପାଏ। ଜଳ, ପବନ, ଫଳ ଓ କଅଁଳ ଘାସର ବିଛଣାରେ କବି ସେହି ମାଆର ପୋଷଣ ଦେଖନ୍ତି।</p><p>ସନ୍ତାନର ଦୋଷ ସେ କ୍ଷମା କରେ ଓ ଜଞ୍ଜାଳ ସହେ। ତେଣୁ ସ୍ୱର୍ଗର ଆହ୍ୱାନ ମଧ୍ୟ କବିଙ୍କୁ ତା’ କୋଳରୁ ଦୂର କରିପାରେନାହିଁ।</p><p>ମାଆର ହସରେ ନିଜ ହସ ଓ ତା’ର ମୁକ୍ତିରେ ନିଜ ମୁକ୍ତି ଦେଖି ସେ ମାଆର ଯଶ ଘୋଷିବାକୁ ସଂକଳ୍ପ କରନ୍ତି। ଭାରତ ମାଆର ପାଦଧୂଳି ମୁଣ୍ଡରେ ନେଇ ତାହାର ନାମ ରଖିବା ହିଁ ଏହି କୃତଜ୍ଞତାର କ୍ରିୟାଶୀଳ ରୂପ।</p><p>ମାଟିର ଦାନ କେବଳ ଖାଦ୍ୟ ବା ଶରୀରର ବଳରେ ସୀମିତ ନୁହେଁ। ନଈ, ସମୁଦ୍ର, ବଣପକ୍ଷୀର ସ୍ୱର ମନକୁ ବି ସୁଖ ଦିଏ।</p><p>କବି ଏ ଦାନର ଉତ୍ତର କେବଳ ପ୍ରଶଂସାରେ ଦେବାକୁ ଚାହାନ୍ତି ନାହିଁ। ମାଟିର ଧୈର୍ଯ୍ୟ ଲାଭ କରି ନିଜ କଷ୍ଟ ସହିବେ ଓ ଅନ୍ୟ ପାଇଁ ଉପକାରୀ ହେବେ।</p><p>ଏଭଳି କୃତଜ୍ଞତା ଦାୟିତ୍ୱରେ ବଦଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=35">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୫–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-20"><h2>୨୦. ମାଟିକୁ ସର୍ବଂସହା କହିବାର ଯଥାର୍ଥତା ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ସର୍ବଂସହା’ର ଅର୍ଥକୁ ଦୁଇଟି ଘଟଣାରେ ଦେଖାଅ। ସନ୍ତାନ ମାଟିକୁ ଆଘାତ ଦିଏ, ତା’ ପାଖରେ ରାଗରୋଷ ମଧ୍ୟ କରେ। ମାଟି ତାହା ସହି ସେହି ସନ୍ତାନକୁ ଫଳ, ଜଳ, ଆଶ୍ରୟ ଦେଇଚାଲେ। ସହିବା ଓ ସ୍ନେହ ଦେବା ଏଠାରେ ଏକାଠି ଦିଶେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜନ୍ମରୁ ସନ୍ତାନ ମାଟି ଉପରେ କେତେ ଆଘାତ କରେ। ମାଟି ପ୍ରତିଶୋଧ ନେଇ ତାକୁ ବଞ୍ଚିତ କରେ ନାହିଁ; ଫଳ, ଜଳ ଓ ପବନରେ ପାଳନ କରେ।</p><p>ଏହି ଅସୀମ ସହିବା ଶକ୍ତି ତାକୁ ସର୍ବଂସହା କରିଛି।</p><p>ପାହାଡ଼ପଥର ପରି ଦେହ ଆଘାତ ସହେ, କଅଁଳ ପତର ପରି ପ୍ରାଣ ସନ୍ତାନର କଷ୍ଟରେ କୋମଳ ରହେ। ମାଟିର ସହିବା ନିଷ୍କ୍ରିୟ ନୁହେଁ, କାରଣ କଷ୍ଟ ପାଇବା ପରେ ମଧ୍ୟ ସେ ଚେରମୂଳି ସାଇତେ ଓ ଆଶ୍ରୟ ଦିଏ।</p><p>କ୍ଷମା ଓ ଦାନ ଏକାଠି ରହିଥିବାରୁ ‘ସର୍ବଂସହା’ରେ ତାହାର ମାତୃରୂପ ପୂରା ଦିଶେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=35">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୫–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-21"><h2>୨୧. ମାଟିମାଆଙ୍କ ଜୟଗାନରେ କବି କିପରି ଶତମୁଖ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଦଧୂଳି ମୁଣ୍ଡରେ ବୋଳି ମାଆର ନାମ ରଖିବାର ପଣ ପରେ କବି ନିଜ ଚେତନାର ହଜିଥିବା ଚାବିକାଠି ଖୋଜନ୍ତି। ଯେପରି ଚାବିରେ ବନ୍ଦ ଦ୍ୱାର ଖୋଲେ, ସେପରି ମାଟିର ପ୍ରେରଣାରେ ନିଜର ନିଦ୍ରିତ ବୋଧ ଜାଗିବ। (ପାଠର ପୃ. ୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟିର ଫଳ, ଜଳ, ପବନ, ସବୁଜ ଘାସ ଓ ଚେରମୂଳିରେ ମାଆଙ୍କ ସ୍ନେହ ଦେଖନ୍ତି। ତା’ର କ୍ଷମା ଓ ଧୈର୍ଯ୍ୟ ନିଜ ଜୀବନରେ ପାଇବାକୁ ଚାହାନ୍ତି।</p><p>ମାଟିର ମୁକ୍ତିକୁ ନିଜ ମୁକ୍ତି ଭାବି ସେ ମହାଯଶ ଘୋଷଣା କରନ୍ତି। ଦେବଭୂମି ଓ ବୀରଭୂମି ଭାରତ ମାଆର ପାଦଧୂଳି ମୁଣ୍ଡରେ ବୋଳି ତାହାର ନାମ ରଖିବାକୁ ସଂକଳ୍ପ କରନ୍ତି।</p><p>ଜୟଗାନର ଆଧାର ହେଉଛି ଦିନ ପ୍ରତିଦିନ ମିଳୁଥିବା ମାଟିର ଆଶୀର୍ବାଦ। ପାଣିରେ ତୃଷ୍ଣା ମେଣ୍ଟେ, ଫଳ ଓ ଲତା ଦେହକୁ ଶକ୍ତି ଦିଅନ୍ତି ଓ ପ୍ରକୃତିର ଧ୍ୱନି ମନକୁ ଶାନ୍ତି ଦିଏ।</p><p>ଏତେ ଭିନ୍ନ ଉପକାର ସ୍ମରଣ କରିବାରେ କବିଙ୍କ ଏକ ମୁଖ ମନେହୁଏ ଶତମୁଖ ହୋଇଉଠିଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-22"><h2>୨୨. ବିଦ୍ୟୁତ୍‌ପ୍ରଭା ଦେବୀଙ୍କ ଅନ୍ୟ କବିତା ପଢ଼ିବାର ନୋଟ ତିଆରି କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି କବିତାର ନମୁନା ପାଠନ ନୋଟରେ ‘କାହାକୁ ଡାକିଛନ୍ତି’ ସ୍ଥାନରେ ମାଟିମାଆ ଓ ‘କ’ଣ ମାଗିଛନ୍ତି’ ସ୍ଥାନରେ ଧୈର୍ଯ୍ୟ ଲେଖିହେବ। ଆଉ ଏକ କବିତା ନିଜେ ପଢ଼ି ସେଠାରେ କାହାକୁ ଡାକିଛନ୍ତି ଓ କେଉଁ ଭାବ ପ୍ରକାଶ ପାଇଛି ତାହା ସେହି ଢଙ୍ଗରେ ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କବିତା ସଂଗ୍ରହରୁ ଗୋଟିଏ ରଚନା ବାଛି ନାମ, ମୁଖ୍ୟ ଭାବ ଓ ଏକ ସମ୍ବୋଧନ ଲେଖିବି। ଏହି ପାଠରେ ସମ୍ବୋଧିତ ମାଟି ଓ ସେବାର ଭାବ ସହ ତୁଳନା କରିବି।</p><p>ଅନ୍ୟ ରଚନାର ପୂରା ପାଠ ଏହି PDFରେ ମିଳୁନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=35">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୫–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-23"><h2>୨୩. କବିତାର ଆବୃତ୍ତି ପାଇଁ ସ୍ୱର ଓ ବିରାମ କିପରି ରଖିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ନିଦା ହେଉ ମୋର ଛାତି’ କହିବାବେଳେ ଧୈର୍ଯ୍ୟ ମାଗିବାର ସ୍ୱର ଆଣ। ମାଆଙ୍କ ହସ ସହ ନିଜ ହସ ମିଶିବା ପାଦରେ ଅଳ୍ପ ବିରାମ ଦେଇ ଦୁଇ ଭାବର ସମ୍ପର୍କ ଶୁଣାଅ। ଶେଷରେ ‘ଭାରତ ମାଆ’ ସମ୍ବୋଧନକୁ ସ୍ପଷ୍ଟ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାଟିକୁ ସମ୍ବୋଧନ ବେଳେ କୋମଳ ସ୍ୱର ଓ ପାଦ ଶେଷରେ ବିରାମ ଦେବି। ଧୈର୍ଯ୍ୟ ମାଗିବା ଅଂଶରେ ପ୍ରାର୍ଥନାର ସ୍ୱର ରଖିବି।</p><p>ଭାରତ ମାଆଙ୍କ ଯଶ ଗାଇବାରେ ସ୍ୱର ଦୃଢ଼ ହେବ। ଶେଷର ଚେତନାର ଚାବିକାଠି ପାଇଁ ନିବେଦନରେ ପୁଣି ନମ୍ର ସ୍ୱର ରଖିବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=36">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୬–୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+<article id="exercise-24"><h2>୨୪. ମାଟିମାଆଙ୍କ ଉଦ୍ଦେଶ୍ୟରେ ଅନ୍ୟ କବିଙ୍କ ରଚନା ସଂଗ୍ରହ ପାଇଁ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତୁଳନା କରିବାବେଳେ ପ୍ରତ୍ୟେକ ଉଦ୍ଧୃତି ସହ କବି ଓ ରଚନାର ନାମ ରଖ। ଏଠାରେ ମାଟିର ପାଦଧୁଳି ମୁଣ୍ଡରେ ବୋଳିବା ଓ ମାଆର ନାମ ରଖିବାରେ ଦେଶପ୍ରେମ ପ୍ରକାଶ ପାଇଛି। ସଂଗୃହୀତ ରଚନାରେ ସେହି ଭାବ କେଉଁ ପଦରେ ଆସିଛି ତାହା ଅଲଗା ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦିଆଯାଇଥିବା ବ୍ୟାକରଣ ବହିର ‘ଛନ୍ଦ ଓ ଅଳଙ୍କାର’ PDF ପୃ. ୩ରେ ମଧୁସୂଦନ ରାଓଙ୍କ ‘ଜନ୍ମଭୂମି’ର ଉଦାହରଣ ଅଛି। ସେଠାରେ ସନ୍ତାନମାନେ ଭାରତଭୂମିର ସେବାରେ ମନପ୍ରାଣ ଦେବା କଥା କହନ୍ତି।</p><p>ତାହା ସହ ଏହି କବିତାର ମାଟିମାଆଙ୍କ ଯଶ ଘୋଷଣାର ଅଂଶଟି ଯୋଡ଼ି ସଂଗ୍ରହ ଖାତା ଆରମ୍ଭ କରିପାରିବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=37">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯</a></small></article>
+
+</main></body></html>

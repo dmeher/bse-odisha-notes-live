@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapil Dev · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>Kapil Dev</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>E (a) ୧–୧୨, (b) i–v, (c) i–vi, F ୧–୮, G ୧–୭, Hର ଆଠଟି ଯୋଡ଼ା ବାକ୍ୟ ଓ ପାଞ୍ଚଟି used to ରୂପ, I i–v। Jର ଏଗାର ବ୍ୟାଟର, ପାଞ୍ଚ ସ୍କୋର ପ୍ରଶ୍ନ ଓ ୬୫–୭୦ ଶବ୍ଦର ସାରାଂଶ ଅଛି। E (b)(v)ର ସ୍ଥାନନାମ ଓ ମୂଳ ପାଠର ଅମେଳ ଚିହ୍ନିତ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୪୨, ୪୮–୫୭।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୬)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">A · Lead-in</a> <a href="#exercise-2">E (a) 1–3</a> <a href="#exercise-3">E (a) 4–6</a> <a href="#exercise-4">E (a). 7–12</a> <a href="#exercise-5">E (b). i–v</a> <a href="#exercise-6">E (c). i–vi</a> <a href="#exercise-7">F. 1–4</a> <a href="#exercise-8">F. 5–8</a> <a href="#exercise-9">G. 1–7</a> <a href="#exercise-10">H (a). 1–8</a> <a href="#exercise-11">H · Used to. 1–5</a> <a href="#exercise-12">I. i–v</a> <a href="#exercise-13">J (i)(a). 1–5</a> <a href="#exercise-14">J (i)(a). 6–11</a> <a href="#exercise-15">J (i)(b). 1–5</a> <a href="#exercise-16">J (ii). Summary</a></nav></details>
+<article id="exercise-1"><h2>A · Lead-in. Why do admirers value Kapil’s conduct as well as his cricket?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>The 1983 World Cup victory made his captaincy famous. In Gavaskar’s recollection he also listened to others, learnt quickly and treated senior players with courtesy. ଖେଳର ସଫଳତା ଓ ବ୍ୟକ୍ତିଗତ ଗୁଣ ଦୁହିଁ ପାଇଁ ପାଠରେ ଉଦାହରଣ ଅଛି।</p><p>Leadershipକୁ ଗୋଟିଏ ମ୍ୟାଚର ଫଳ ସହ, ନମ୍ରତାକୁ ଅନ୍ୟଙ୍କଠୁ ଶିଖିବା ସହ ଯୋଡ଼। ଏହି ଦୁଇ ପ୍ରମାଣ ଥିଲେ ଖେଳାଳି ଓ ବ୍ୟକ୍ତି ଉଭୟର ପ୍ରଶଂସା ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨</a></small></article>
+<article id="exercise-2"><h2>E (a) 1–3. Describe selection and performance on the East African tour.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Kapil Dev and Suru Nayak were the youngsters selected. 2. Gavaskar believed that unfamiliar conditions and opponents helped players improve. 3. Kapil took important wickets and struck towering sixes.</p><p>ଦୁଇ ଯୁବକ ଚୟନ ହେଲେ ବୋଲି କହିଲେ କେବଳ ଘଟଣା ମିଳେ। ନୂଆ ପରିବେଶରେ ନିଜ କୌଶଳ ଖାପ ଖୁଆଇବାର ସୁଯୋଗକୁ ଯୋଡ଼ିଲେ ଏପରି tour କାହିଁକି ପ୍ରଶିକ୍ଷଣ ହୁଏ ଜଣାପଡ଼େ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-3"><h2>E (a) 4–6. Identify the trial, the selectors’ intention and the later batting achievement.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>4. The Irani Trophy match at Bangalore served as a trial. 5. The selectors wanted Kapil to gain experience. 6. He scored 300 runs in three Tests in England in 1982.</p><p>Trial ହେଉଛି ଚୟନ ପୂର୍ବର ପରୀକ୍ଷା। ସେଥିରେ ଖେଳିବାକୁ ଦେବା ଓ ଅନ୍ତର୍ଜାତୀୟ ସ୍ତରରେ ପରେ ତିନି ଶହ ରନ୍ ସଂଗ୍ରହ କରିବା ଭିନ୍ନ ସମୟର ଘଟଣା।</p><p>ଏକ ମ୍ୟାଚରେ ୩୦୦ ଭାବେ ଅର୍ଥ କରନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=48" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୮</a></small></article>
+<article id="exercise-4"><h2>E (a). 7–12. Name the all-rounders and explain Kapil’s difficulties, triumph and family tribute.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>7. The text names Imran Khan (printed “Irman Khan”), Ian Botham, Kapil Dev and Richard Hadlee. 8. Each attacked, performed under pressure and could challenge strong opponents. 9. Without a comparable strike bowler alongside him, Kapil faced cautious batters who could wait him out. 10. His greatest triumph as captain was the 1983 World Cup. 11. His leadership and performance on the way to victory made him known wherever cricket was played. 12. His brothers named their hotel after him. ଗଳ୍ପର ତତ୍କାଳୀନ ଖେଳାଳିଙ୍କୁ ନେଇ ଏହି ତୁଳନା।</p><p>All-rounder ଭାବେ ଦୁଇ ପ୍ରକାର କୌଶଳ ଦରକାର। ଅନ୍ୟ ତିନିଜଣଙ୍କ ସହ Kapilଙ୍କ ମେଳ ବୁଝାଅ, ପରେ ତାଙ୍କ ନିଜ ସଫଳତା ଓ ମାତାପିତାଙ୍କୁ ଦେଇଥିବା ଶ୍ରେୟ ଅଲଗା ରଖ।</p><p>ଏହା ଦଳୀୟ ଜୟରୁ ବ୍ୟକ୍ତିଗତ ଗୁଣକୁ ନେଉଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=49" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୯</a></small></article>
+<article id="exercise-5"><h2>E (b). i–v. Choose the five alternatives using the account in the main text.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i c, Sunil M. Gavaskar. ii b, good bowlers. iii b, against one another. iv c, an all-rounder. v b, the bat. Item v says Pakistan, but the main text on p. 44 identifies England as the 1979 tour in question. ଭୁଲ ସ୍ଥାନନାମ ମୁଖ୍ୟ ପାଠ ସହ ମେଳାଇ ଦିଆଗଲା।</p><p>ପ୍ରଥମ ଉତ୍ତରରେ ଯିଏ ଲେଖିଛନ୍ତି ସେ Gavaskar, ଯାହାଙ୍କ କଥା ସେ Kapil। Bowlers ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀଙ୍କୁ ପରୀକ୍ଷା କରନ୍ତି; all-rounder ବୋଲିଲେ batting ମଧ୍ୟ ଲାଗେ।</p><p>ଏହି ଦୁଇ ଭୂମିକାରୁ ଚୟନଗୁଡ଼ିକୁ ପରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=49" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୯–୫୦</a></small></article>
+<article id="exercise-6"><h2>E (c). i–vi. Put the Zimbabwe innings episodes in the order of the author’s account.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i → iii → vi → v → iv → ii. Numbers to place in the six printed brackets are 1, 6, 2, 5, 4, 3. The author states the overall triumph first, then goes back to the collapse, the start of Kapil’s innings, his confident hitting, the anxious moment near 160 and his unbeaten 175. ଏହା ଲେଖକଙ୍କ ବର୍ଣ୍ଣନାର କ୍ରମ।</p><p>Answer sequence ଓ ଛାପା bracketରେ ଲେଖିବା rank ଭିନ୍ନ। ଦୃଷ୍ଟାନ୍ତତଃ iii ଦ୍ୱିତୀୟ ଘଟଣା, ତେଣୁ iii ପାଖରେ 2 ଲେଖାଯିବ।</p><p>ସ୍କୋରର ସାରକଥା ଲେଖକ କେଉଁଠି ରଖିଛନ୍ତି ମୂଳ ବର୍ଣ୍ଣନା ଦେଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=50" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୦</a></small></article>
+<article id="exercise-7"><h2>F. 1–4. Explain gamesmanship, Gavaskar’s intention and the two signs of Kapil’s ability.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. His opponents suspected a ploy to make the bowler lose his line. 2. Gavaskar actually wanted a promising fast bowler to make better use of his outswinger. 3. Already in the next over Kapil tried bowling closer to the stumps and improved. 4. A later bouncer struck the helmet Sadiq had put on, showing the value of his precaution. କାର୍ଯ୍ୟଟି ବିପକ୍ଷ ଖେଳାଳିମାନଙ୍କୁ କିପରି ଲାଗିଲା ଓ ମୂଳ ଉଦ୍ଦେଶ୍ୟ କଣ ଥିଲା, ଅଲଗା କର।</p><p>ପ୍ରତିପକ୍ଷ gamesmanship ସନ୍ଦେହ କଲେ, କିନ୍ତୁ Gavaskar ନିଜ ପରାମର୍ଶର ପ୍ରକୃତ ଉଦ୍ଦେଶ୍ୟ କହନ୍ତି। ଦୁଇ ଦୃଷ୍ଟିକୁ ଏକ କରିଦେଲେ ତାଙ୍କ ସହଯୋଗ ଭୁଲ୍ ଅର୍ଥ ପାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=50" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୦–୫୧</a></small></article>
+<article id="exercise-8"><h2>F. 5–8. Explain the night-watchman, turning points, the jet-age comparison and the final judgement.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>5. A night-watchman bats late in a day’s play to protect a specialist batter until the next day. 6. India recovered from 17 for five through Kapil’s unbeaten 175; his tight bowling then kept Zimbabwe under pressure. This match gave the side momentum. 7. Jet age points to speed and the importance of fast bowling. 8. From Gavaskar’s point of view the old label no longer fits: Kapil’s attacking play draws spectators and encourages young fast bowlers. ୮ରେ ଭାଷ୍ୟଟି ଲେଖକ ଦେଖିଥିବା ପରିବର୍ତ୍ତନ ଆଧାରରେ।</p><p>Night-watchman ଅଲଗା ଖେଳର ପାହାରାଦାର ନୁହେଁ। ଦିନର ଶେଷରେ ପ୍ରମୁଖ batsmanଙ୍କ wicket ବଞ୍ଚାଇବା ତାଙ୍କ କାମ।</p><p>Jet-age ଗତିର ଉପମା; ଶେଷ ମତରେ ସେ ଗତିର ଦଳ ପାଇଁ ଫଳ ଯୋଡ଼।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=51" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୧</a></small></article>
+<article id="exercise-9"><h2>G. 1–7. Mark the sports statements and correct each false statement.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1 F — basketball scores points. 2 F — rugby uses a rugby ball. 3 T. 4 F — football is played on a ground. 5 F — hockey scores goals. 6 T. 7 F — cricket uses a bat to hit the ball. ଛପା ତାଲିକାରୁ game, place, equipment ଓ scoreକୁ ଅଲଗା କର।</p><p>True/False କହିବା ପରେ ଭୁଲ୍ ବାକ୍ୟରେ sport, equipment ବା scoring term ଯେଉଁଟି ଭୁଲ୍ ସେହିଟି ବଦଳାଅ। Basketballର points ଓ hockeyର goals ଦୁଇଟି ସଠିକ୍ ଯୋଡ଼ା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=51" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୧–୫୨</a></small></article>
+<article id="exercise-10"><h2>H (a). 1–8. Join each pair using not only … but also, with parallel elements.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. He can speak not only English but also French. 2. Mr Das is not only a brilliant writer but also an excellent speaker. 3. The teacher is not only sincere but also honest. 4. My friend is not only a good sportsman but also a good student. 5. We not only study but also play at school. 6. Meera can not only stitch dresses but also knit sweaters. 7. I can not only drive a car but also repair it. 8. She speaks not only fluently but also distinctly. ଦୁଇ ପଟରେ ସମାନ ପ୍ରକାରର ଶବ୍ଦ ବା phrase ରଖ।</p><p>Not only ପରେ noun phrase ଥିଲେ but also ପରେ ସେହି ପ୍ରକାର phrase ରଖ। “Not only a brilliant writer but also an excellent speaker”ରେ ‘a/an’ ଦୁଇ ଭୂମିକା ସହ ଅଲଗା ଲାଗୁଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=52" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୨–୫୩</a></small></article>
+<article id="exercise-11"><h2>H · Used to. 1–5. Rewrite the five earlier habits or states.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. At home I used to get up early. 2. I used to study at a co-educational school. 3. My father used to go to school at 10 a.m. every day. 4. My headmaster used to have a Bajaj scooter. 5. When he was on holiday, he used to sit for hours watching television. Used to ପରେ base form ରହେ; ଏଠି ପ୍ରତିଟି ବାକ୍ୟ ପୂର୍ବ ଅଭ୍ୟାସ ବା ଅବସ୍ଥା ଦର୍ଶାଏ।</p><p>Used to ପରେ ମୂଳ verb ରହେ। “I used to get up early” ମାନେ ଏହା ପୂର୍ବର ଅଭ୍ୟାସ; ଗୋଟିଏ ଦିନ ସକାଳେ ଉଠିଥିଲି ବୋଲି simple past କହିବାଠାରୁ ଅର୍ଥ ଭିନ୍ନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=54" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୪</a></small></article>
+<article id="exercise-12"><h2>I. i–v. Respond to each speaker in the paired conversation.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i. Don’t worry. Another bus will come. ii. I know you feel bad. Shall we revise the difficult parts together? iii. That’s all right. I’m glad you told me. iv. I’m sorry I hurt you. Are you all right?</p><p>v. I’m sorry I kept you waiting. I’ll try to arrive on time. ଯେଉଁଠି ନିଜର ତ୍ରୁଟି, ସେଠି ଦୁଃଖପ୍ରକାଶ; ଅନ୍ୟର ଅସୁବିଧାରେ ସାନ୍ତ୍ୱନା।</p><p>Bus ଛାଡ଼ିଯାଇଥିଲେ ପରର bus ବିଷୟରେ ଆଶ୍ୱାସନ ଯୁକ୍ତିସଙ୍ଗତ। ପରୀକ୍ଷାରେ ଅସୁବିଧା ହେଲେ ମିଶି ପଢ଼ିବାର ପ୍ରସ୍ତାବ ଉପଯୁକ୍ତ।</p><p>ପ୍ରତି ଉତ୍ତରରେ ସାଙ୍ଗର ନିର୍ଦ୍ଦିଷ୍ଟ ଅସୁବିଧାକୁ ଧର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=54" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୪–୫୫</a></small></article>
+<article id="exercise-13"><h2>J (i)(a). 1–5. Describe the first five innings from the imaginary scorecard.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Wade caught Gambhir off Lee for 5 from 5 balls, including one four and no six. 2. Doherty caught Tendulkar off Hilfenhaus for 35 from 32, with four fours and one six. 3. D. Hussey caught Kohli off Hilfenhaus for 12 from 25, without a boundary. 4. Wade caught Rohit off Lee for 10 from 10, without a four or six. 5. Wade caught Raina off Christian for 28 from 41, with one four and one six. C. ପରେ କ୍ୟାଚ୍ ନେଇଥିବା ଖେଳାଳି, b. ପରେ ବୋଲରଙ୍କ ନାମ।</p><p>Scorecardର “c Wade b Lee”ରେ Wade catch ନେଲେ ଓ Lee ବୋଲିଂ କଲେ। Runs ଓ balls faced ପରସ୍ପର ବଦଳାଇଲେ ବିବରଣୀ ବଦଳିଯାଏ।</p><p>ପ୍ରଥମ ପାଞ୍ଚ ଧାଡ଼ିକୁ ଏହି କ୍ରମରେ ପଢ଼।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫–୫୬</a></small></article>
+<article id="exercise-14"><h2>J (i)(a). 6–11. Describe the last six listed batters, including the player not dismissed.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>6. Christian caught Dhoni off Hilfenhaus for 56 from 84 balls, with two fours and one six. 7. Forrest caught Jadeja off Stanc (as printed) for 28 from 35, with one four and no six. 8. Wade caught Irfan Pathan off Hilfenhaus for 29 from 27, with one four and one six. 9. Lee bowled Vinay Kumar for 16 from 26, with one four and no six. 10. Wade caught Zaheer off Hilfenhaus for 9 from 11, with two fours and no six. 11. Umesh remained not out on 2 from 4, with no boundary. Not out ଥିବାରୁ ଶେଷ ବ୍ୟାଟରଙ୍କ dismissal ନାହିଁ।</p><p>Not out ଥିଲେ କାହା ହାତରେ ବା କାହା ବଲ୍‌ରେ ଆଉଟ୍ ଲେଖିବାର ଅବକାଶ ନାହିଁ। Dhoniଙ୍କ 56 ରନ୍ ଓ 84 ଖେଳିଥିବା ବଲ୍‌ର ଦୁଇଟି ସ୍ୱତନ୍ତ୍ର ସଂଖ୍ୟା।</p><p>ପ୍ରତି ଧାଡ଼ିର ସ୍ତମ୍ଭ ଶୀର୍ଷକ ମିଳାଅ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫–୫୬</a></small></article>
+<article id="exercise-15"><h2>J (i)(b). 1–5. Read the wickets, boundaries, leading bowler and leading scorer from the chart.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. 16 runs. 2. 13 fours: 1 + 4 + 0 + 0 + 1 + 2 + 1 + 1 + 1 + 2 + 0. 3. Hilfenhaus took five wickets; the table’s spelling varies. 4. Umesh scored two runs. 5. Dhoni, with 56. ଖେଳାଳିଙ୍କ ବ୍ୟକ୍ତିଗତ ରନ୍, ଦଳୀୟ ରନ୍ ଓ wicket ପଡ଼ିବାବେଳର ସ୍କୋର ଅଲଗା କର।</p><p>Boundary ପ୍ରଶ୍ନରେ fours ସ୍ତମ୍ଭର ପ୍ରତି batterଙ୍କ ମୂଲ୍ୟ ଯୋଗ କରିବାକୁ ପଡ଼େ। Leading scorer ପାଇଁ ଯୋଗ ବଦଳରେ ସର୍ବାଧିକ ଏକକ runs ଦେଖ।</p><p>Leading bowler ପାଇଁ wickets ଗଣନା ଦରକାର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-16"><h2>J (ii). Summary. Summarise the passage on the slow over-rate in about 65–70 words.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>India took almost twenty-eight extra minutes to complete the innings. Vinay Kumar’s cramp, the time spent attending to him and Australia’s late hitting contributed to the delay. Under the ICC policy accepted in 2011, two minor over-rate offences in the same format within twelve months could mean a one-match suspension for the captain. Dhoni acknowledged receiving regular updates during the match and accepted the charge and penalties. ମୁଖ୍ୟ ତଥ୍ୟ ଚାରିଟି: ବିଳମ୍ବ, ତାହାର କାରଣ, ନିୟମ ଓ ଅଧିନାୟକଙ୍କ ଉତ୍ତର।</p><p>ସାରାଂଶରେ extra minutesକୁ ମୁଖ୍ୟ ତଥ୍ୟ କର। Cramp ଓ ଖେଳାଳିଙ୍କୁ ସହାୟତା ଯେପରି ଖେଳ ବିଳମ୍ବିତ କଲା ତାହାକୁ ଏକାଠି କହ।</p><p>Scorecardର ପ୍ରତି batterଙ୍କ runs ଏହି ପ୍ରଶ୍ନର ବିଷୟ ନୁହେଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭</a></small></article>
+
+</main></body></html>

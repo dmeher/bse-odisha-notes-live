@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 225">
+  <title>Graph of x + y = 7 and x − y = 3</title>
+  <rect width="320" height="225" rx="8" fill="white"/>
+  <g fill="none" stroke="#254b55" stroke-width="2">
+<path stroke="#dae4e7" stroke-width="0.8" d="M54 210V30M54 210H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M72 210V30M54 192H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M90 210V30M54 174H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M108 210V30M54 156H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M126 210V30M54 138H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M144 210V30M54 120H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M162 210V30M54 102H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M180 210V30M54 84H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M198 210V30M54 66H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M216 210V30M54 48H234"/>
+<path stroke="#dae4e7" stroke-width="0.8" d="M234 210V30M54 30H234"/>
+<path stroke="#62717a" d="M54 174H234M90 210V30"/>
+<path stroke="#087b72" d="M234.0 192.0L72.0 30.0"/>
+<path stroke="#a74d23" d="M234.0 84.0L108.0 210.0"/>
+<circle cx="180.0" cy="138.0" r="3" fill="#183b38"/>
+  </g>
+  <g fill="#173940" font-family="sans-serif" font-size="15">
+    <text x="244" y="178">x</text>
+    <text x="87" y="22">y</text>
+    <text x="75" y="189">O</text>
+    <text x="105" y="189">1</text>
+    <text x="73" y="161">1</text>
+    <text x="123" y="189">2</text>
+    <text x="73" y="143">2</text>
+    <text x="141" y="189">3</text>
+    <text x="73" y="125">3</text>
+    <text x="159" y="189">4</text>
+    <text x="73" y="107">4</text>
+    <text x="177" y="189">5</text>
+    <text x="73" y="89">5</text>
+    <text x="195" y="189">6</text>
+    <text x="73" y="71">6</text>
+    <text x="213" y="189">7</text>
+    <text x="73" y="53">7</text>
+    <text x="231" y="189">8</text>
+    <text x="73" y="35">8</text>
+    <text x="186.0" y="130.0">P</text>
+  </g>
+</svg>

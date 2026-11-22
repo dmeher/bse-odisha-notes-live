@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">△ABCରେ D ଓ Q, AB ଉପରେ, R, AC ଉପରେ | QR ∥ BC ଓ DR ∥ QC |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="171.00,34.92 52.50,285.08 447.50,285.08 171.00,34.92" stroke="#244355" stroke-width="2.35"/>
+<polyline points="103.46,177.51 447.50,285.08" stroke="#244355" stroke-width="2.35"/>
+<polyline points="103.46,177.51 328.61,177.51" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="132.50,116.20 328.61,177.51" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="171.00" cy="34.92" r="2.7" fill="#244355"/>
+<text x="163.52" y="22.23" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="52.50" cy="285.08" r="2.7" fill="#244355"/>
+<text x="40.67" y="293.11" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="447.50" cy="285.08" r="2.7" fill="#244355"/>
+<text x="459.33" y="293.11" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="132.50" cy="116.20" r="2.7" fill="#244355"/>
+<text x="119.50" y="110.20" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="103.46" cy="177.51" r="2.7" fill="#244355"/>
+<text x="90.46" y="173.51" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">Q</text>
+<circle cx="328.61" cy="177.51" r="2.7" fill="#244355"/>
+<text x="341.61" y="173.51" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">R</text>
+</svg>

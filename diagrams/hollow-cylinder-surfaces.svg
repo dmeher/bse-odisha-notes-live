@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 238" role="img" aria-labelledby="title desc">
+  <title id="title">ଫମ୍ପା ସିଲିଣ୍ଡରର ପୃଷ୍ଠତଳ</title>
+  <desc id="desc">ପ୍ରତି ପ୍ରାନ୍ତରେ ଦୁଇ ସମକେନ୍ଦ୍ରିକ ବୃତ୍ତ ମଧ୍ୟରେ ବଳୟ ଥାଏ। ନଳର ବାହାର ଓ ଭିତର ବକ୍ର ପୃଷ୍ଠ ଖୋଲିଲେ ସମାନ ଉଚ୍ଚତାର ଦୁଇଟି ଆୟତଚିତ୍ର ମିଳେ।</desc>
+  <rect width="640" height="238" rx="12" fill="#fff"/>
+  <g stroke="#244c55" stroke-width="2">
+    <circle cx="99" cy="100" r="68" fill="#c4e3e3"/>
+    <circle cx="99" cy="100" r="42" fill="#fff"/>
+    <path d="M99 100h68M99 100l-29.7-29.7" fill="none"/>
+    <circle cx="99" cy="100" r="2.5" fill="#244c55"/>
+    <rect x="228" y="56" width="204" height="91" fill="#deedf0"/>
+    <rect x="469" y="56" width="126" height="91" fill="#faf0d2"/>
+  </g>
+  <g font-family="system-ui,sans-serif" font-size="20" fill="#143c46" text-anchor="middle">
+    <text x="142" y="94">R</text><text x="78" y="94">r</text>
+    <text x="330" y="46">2πR</text><text x="532" y="46">2πr</text>
+    <text x="216" y="107">h</text><text x="458" y="107">h</text>
+    <text x="101" y="203">π(R² − r²)</text><text x="330" y="203">2πRh</text><text x="533" y="203">2πrh</text>
+  </g>
+</svg>

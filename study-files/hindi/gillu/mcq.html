@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>गिल्लू · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>गिल्लू</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1b2gS5_ZKHsF_R_89n7aaD9SCjSoFMEse/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ଗିଲ୍ଲୁର ଘର କେଉଁଠି ଥିଲା?</h2>
+<ol type="A"><li>ଫୁଲକୁଣ୍ଡ ଭିତରେ</li><li>ଲେଖାଟେବୁଲ ଉପରେ</li><li>ଝରକାରେ ଝୁଲୁଥିବା ଝୁଡ଼ିରେ</li><li>ପରଦା ତଳେ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. ଝରକାରେ ଝୁଲୁଥିବା ଝୁଡ଼ିରେ</b></p>
+<div class="lesson-body"><p>ଫୁଲ ରଖିବା ଝୁଡ଼ିରେ ତୁଳା ପକାଇ ଲେଖିକା ତାକୁ ଝରକାରେ ଝୁଲାଇଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୩–୮</small></article>
+<article><h2>୨. लेखिका को गिल्लू किस दृश्य से याद आया?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सोनजुही की पीली कली</li><li>घोंसले का तिनका</li><li>ऊन का झिंगोला</li><li>बादलों की गर्जना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. सोनजुही की पीली कली</b></p>
+<div class="lesson-body"><p>ସେହି ଲତାରେ ଗିଲ୍ଲୁ ଲୁଚି ରହୁଥିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୩</small></article>
+<article><h2>୩. गिल्लू को रहने के लिए क्या दिया गया?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>खाली गमला</li><li>पत्थर का घर</li><li>रुई वाली डलिया</li><li>लकड़ी का संदूक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. रुई वाली डलिया</b></p>
+<div class="lesson-body"><p>ଝୁଡ଼ିକୁ ଝରକାରେ ଝୁଲାଇ ନିରାପଦ ଘର ତିଆରି କରାଗଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୪. लेखिका ने जाली का एक कोना क्यों खोला?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कमरे में धूल आए</li><li>गिल्लू बाहर जा सके</li><li>डलिया नीचे गिरे</li><li>कौवे अंदर आएँ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. गिल्लू बाहर जा सके</b></p>
+<div class="lesson-body"><p>ବାହାର ଗୁଣ୍ଡୁଚିଙ୍କ ପ୍ରତି ଆକର୍ଷଣ ଦେଖି ସେ ଗିଲ୍ଲୁକୁ ଯିବାର ସ୍ୱାଧୀନତା ଦେଲେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୫</small></article>
+<article><h2>୫. गिल्लू का प्रिय खाद्य कौन-सा था?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>चना</li><li>केला</li><li>काजू</li><li>गेहूँ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. काजू</b></p>
+<div class="lesson-body"><p>ଖାଦ୍ୟ ଅଭ୍ୟାସର ବର୍ଣ୍ଣନାରେ କାଜୁକୁ ପ୍ରିୟ ଖାଦ୍ୟ କୁହାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୬</small></article>
+<article><h2>୬. गिलहरी के बच्चे को किसने घायल किया था?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कुत्तों ने</li><li>घोड़ों ने</li><li>कौवों ने</li><li>बिल्ली ने</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. कौवों ने</b></p>
+<div class="lesson-body"><p>ଫୁଲକୁଣ୍ଡ ପାଖରେ ଦୁଇ କାଉ ଆକ୍ରମଣ କରୁଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୩–୪</small></article>
+<article><h2>୭. घायल बच्चे के रक्त को किससे साफ किया गया?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>कागज से</li><li>रेत से</li><li>पत्ते से</li><li>रुई से</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. रुई से</b></p>
+<div class="lesson-body"><p>ଲେଖିକା ତୁଳାରେ ରକ୍ତ ପୋଛିଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୩–୪</small></article>
+<article><h2>୮. बच्चे के घाव पर कौन-सा लेप लगाया गया?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पेंसिलिन का मरहम</li><li>मक्खन</li><li>काजू का दूध</li><li>चंदन का लेप</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. पेंसिलिन का मरहम</b></p>
+<div class="lesson-body"><p>ମୂଳ କଥାରେ ଘା’ର ଯତ୍ନର ଏହି ବିବରଣୀ ଅଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୩–୪</small></article>
+<article><h2>୯. गिलहरी को गिल्लू कहने से कैसी संज्ञा बनी?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>व्यक्तिवाचक</li><li>द्रव्यवाचक</li><li>समूहवाचक</li><li>भाववाचक</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. व्यक्तिवाचक</b></p>
+<div class="lesson-body"><p>ଜାତିର ଗୋଟିଏ ଜୀବକୁ ସ୍ୱତନ୍ତ୍ର ନାମ ଦିଆଗଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୩–୪</small></article>
+<article><h2>୧୦. भूख लगने की सूचना गिल्लू किस तरह देता था?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>पूँछ छिपाकर</li><li>सोकर</li><li>पत्थर गिराकर</li><li>चिक-चिक करके</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. चिक-चिक करके</b></p>
+<div class="lesson-body"><p>ସ୍ୱର ସାହାଯ୍ୟରେ ସେ ନିଜର ଆବଶ୍ୟକତା ପ୍ରକାଶ କରୁଥିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୪–୬</small></article>
+<article><h2>୧୧. लेखिका ने भोजन के समय गिल्लू को कहाँ बैठना सिखाया?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>थाली के बीच</li><li>थाली के पास</li><li>अलमारी में</li><li>परदे की गाँठ पर</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. थाली के पास</b></p>
+<div class="lesson-body"><p>ପାଖରେ ବସି ସେ ଗୋଟିଏ ଗୋଟିଏ ଚାଉଳ ନେଉଥିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୪–୬</small></article>
+<article><h2>୧୨. गरमी में लेखिका के पास ठंडक पाने का गिल्लू का उपाय क्या था?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>खिड़की बंद करना</li><li>सिरहाने रुई भरना</li><li>डलिया फेंकना</li><li>सुराही पर लेटना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. सुराही पर लेटना</b></p>
+<div class="lesson-body"><p>ସୁରାହି ନିକଟରେ ଥିଲା ଓ ଥଣ୍ଡା ଥିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୪–୬</small></article>
+<article><h2>୧୩. लेखिका को अस्पताल क्यों जाना पड़ा?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>गिलहरी के काटने के कारण</li><li>जाली टूटने के कारण</li><li>मोटर दुर्घटना के कारण</li><li>कौवे के हमले के कारण</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. मोटर दुर्घटना के कारण</b></p>
+<div class="lesson-body"><p>ଲେଖିକା ଗାଡ଼ି ଦୁର୍ଘଟଣାରେ ଆହତ ହୋଇଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୪–୬</small></article>
+<article><h2>୧୪. अस्पताल से लौटने पर झूले में काजू जमा मिलना क्या बताता है?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>सब लोग काजू देना भूल गए</li><li>गिल्लू बाहर ही रहा</li><li>गिल्लू ने प्रिय भोजन भी कम खाया</li><li>गिल्लू ने नया भोजन चुना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. गिल्लू ने प्रिय भोजन भी कम खाया</b></p>
+<div class="lesson-body"><p>ଲେଖିକାଙ୍କ ଅଭାବ ତାହାର ଆଚରଣ ବଦଳାଇଥିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୬–୭</small></article>
+<article><h2>୧୫. अस्वस्थ लेखिका के पास गिल्लू क्या करता था?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>बालों को धीरे से सहलाता</li><li>जाली काटता</li><li>डलिया उछालता</li><li>सुराही गिराता</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. बालों को धीरे से सहलाता</b></p>
+<div class="lesson-body"><p>ସୂକ୍ଷ୍ମ ଆଚରଣରୁ ଯତ୍ନ ପ୍ରକାଶ ପାଇଛି।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୬–୭</small></article>
+<article><h2>୧୬. अंतिम रात गिल्लू के व्यवहार में बचपन की कौन-सी घटना लौट आई?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>काजू छिपाना</li><li>उँगली पकड़ना</li><li>परदा बुनना</li><li>जाली खोलना</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. उँगली पकड़ना</b></p>
+<div class="lesson-body"><p>ପ୍ରଥମେ ଭରସା ଫେରିଲେ ଓ ଶେଷରେ ବିଦାୟବେଳେ ସେ ଆଙ୍ଗୁଠି ଧରିଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୬–୭</small></article>
+<article><h2>୧୭. गिल्लू को सोनजुही के नीचे स्थान देने का कारण क्या था?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>वहाँ अस्पताल था</li><li>वह लता उसे प्रिय थी</li><li>वहाँ काजू उगते थे</li><li>वहाँ सुराही थी</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. वह लता उसे प्रिय थी</b></p>
+<div class="lesson-body"><p>ପ୍ରିୟ ଲତା ତାହାର ସ୍ମୃତି ସହ ଯୋଡ଼ି ହେଲା।</p></div>
+</details>
+<small class="lesson-source">hindi-saurav/chapter 13/chapter.pdf · ପୃଷ୍ଠା ୬–୭</small></article>
+
+</main></body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ନରେନ୍‌ରୁ ବିବେକାନନ୍ଦ · ବର୍ଣ୍ଣନାମୂଳକ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ନରେନ୍‌ରୁ ବିବେକାନନ୍ଦ</p><h1>ବର୍ଣ୍ଣନାମୂଳକ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1lFEuWD9XS6qA1fIEaUjLTOfK7gSdjjYL/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ତୀର୍ଥଦର୍ଶନ ଅପେକ୍ଷା ବିବେକାନନ୍ଦଙ୍କ ପାଇଁ ଦେଶଭ୍ରମଣର ଆଉ କେଉଁ ଉଦ୍ଦେଶ୍ୟ ଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସେ ଦେଶର ପ୍ରକୃତ ଅବସ୍ଥା ଓ ଦରିଦ୍ର ଜନତାଙ୍କ ଜୀବନକୁ ଜାଣିବାକୁ ଚାହୁଁଥିଲେ। ଗ୍ରନ୍ଥରେ ପଢ଼ିବା ବଦଳରେ ସେହି କଷ୍ଟ ଅଙ୍ଗେ ନିଭାଇବା ତାଙ୍କ ସେବାକୁ ବାସ୍ତବ ଭିତ୍ତି ଦେଲା।</p></div>
+</details>
+<small class="lesson-source">odia/sahitya-sindhu/chapter 10/chapter.pdf · ପୃଷ୍ଠା ୪</small></article>
+<article><h2>୨. ପାଠରେ ଭୋକିଲା ଲୋକଙ୍କୁ ଦେଖି ବିବେକାନନ୍ଦଙ୍କ “ହୃଦୟ ବିଗଳିତ ହେଲା” କହିବାର ତାତ୍ପର୍ଯ୍ୟ ବୁଝାଅ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୨, ପ୍ରଶ୍ନ ୨ (କ) · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର) / ସେଟ୍ ୫, ଭାଗ ୨, ପ୍ରଶ୍ନ ୨ (କ) (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦେଶର ଅବସ୍ଥା ଜାଣିବାକୁ ବିବେକାନନ୍ଦ ପାଦରେ ଅନେକ ସ୍ଥାନ ବୁଲିଥିଲେ। ଲୋକଙ୍କ ଭୋକ ଦେଖି ତାଙ୍କ ହୃଦୟରେ ଗଭୀର କରୁଣା ଜାଗିଲା।</p><p>ବିଗଳିତ ହେବା କଥାରେ ଅନ୍ୟ ମଣିଷର କଷ୍ଟକୁ ନିଜ ମନରେ ଅନୁଭବ କରିବା ବୁଝାଯାଏ। ନିଜ ମୁକ୍ତିର ସାଧନାରେ ସନ୍ତୁଷ୍ଟ ରହିବା ତାଙ୍କ ପକ୍ଷରେ ଆଉ ସମ୍ଭବ ହେଲା ନାହିଁ।</p><p>ଲୋକଙ୍କ ଦୁଃଖର କାରଣ ବୁଝି ସେମାନଙ୍କ ସେବାରେ ନିଜର ଶକ୍ତି ଲଗାଇବାର ସଂକଳ୍ପ ଏହି ପ୍ରତ୍ୟକ୍ଷ ଅନୁଭୂତିରୁ ଦୃଢ଼ ହେଲା।</p></div>
+</details>
+<small class="lesson-source">odia/sahitya-sindhu/chapter 10/chapter.pdf · ପୃଷ୍ଠା ୪–୧୧</small></article>
+<article><h2>୩. ଗୁରୁଙ୍କ ଶିକ୍ଷା ଓ ଦେଶଭ୍ରମଣ ନରେନ୍‌ଙ୍କ ସାଧନାକୁ କେଉଁ ଦିଗ ଦେଇଥିଲା?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୨, ପ୍ରଶ୍ନ ୧ (କ) · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନରେନ୍ ନିଜ ସାଧନାର ସିଦ୍ଧି ଚାହୁଁଥିଲେ। ଶ୍ରୀରାମକୃଷ୍ଣ ତାଙ୍କ ଦୃଷ୍ଟିକୁ ଅନ୍ୟ ମଣିଷର ଦୁଃଖ ଆଡ଼କୁ ଫେରାଇଲେ।</p><p>ମନୁଷ୍ୟ ସେବା ମଧ୍ୟ ଈଶ୍ୱର ସେବା ବୋଲି ବୁଝିଲେ ଧର୍ମ କେବଳ ନିଜ ମୁକ୍ତିରେ ସୀମିତ ରହେନାହିଁ। ଦେଶଭ୍ରମଣବେଳେ ନରେନ୍ ତୀର୍ଥ ଦେଖିବା ସହ ଦେଶର ଲୋକଙ୍କୁ ଜାଣିଲେ।</p><p>ଗରିବ ଲୋକଙ୍କ କଷ୍ଟ ନିଜ ଜୀବନରେ ଅନୁଭବ କଲେ। ଫଳରେ ଗୁରୁଙ୍କ ଶିକ୍ଷା ତାଙ୍କ ପାଇଁ କେବଳ ଏକ କଥା ହୋଇ ରହିଲା ନାହିଁ।</p><p>ଦେଶବାସୀଙ୍କ ଦୁଃଖମୋଚନ ପାଇଁ କାମ କରିବା ତାଙ୍କ ସନ୍ନ୍ୟାସର କର୍ତ୍ତବ୍ୟ ହେଲା।</p></div>
+</details>
+<small class="lesson-source">odia/sahitya-sindhu/chapter 10/chapter.pdf · ପୃଷ୍ଠା ୨–୬</small></article>
+<article><h2>୪. ପରିବ୍ରାଜକ ଜୀବନ ବିବେକାନନ୍ଦଙ୍କ ସେବାଚିନ୍ତାକୁ କିପରି ବଦଳାଇଲା?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୨, ପ୍ରଶ୍ନ ୧ (କ) · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର) / ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୧ (କ) (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦେଶ ଭ୍ରମଣ ସମୟରେ ବିବେକାନନ୍ଦ ସାଧାରଣ ମଣିଷଙ୍କ ଘର, ଅଭାବ ଓ ଦୈନନ୍ଦିନ ଜୀବନ ଦେଖିଲେ। ଭୋକରେ କଷ୍ଟ ପାଉଥିବା ମଣିଷ ସମ୍ମୁଖରେ କେବଳ ଧର୍ମକଥା କହିଲେ ସେମାନଙ୍କ କଷ୍ଟ ଦୂର ହୁଏନାହିଁ ବୋଲି ହୃଦୟଙ୍ଗମ କଲେ।</p><p>ଦରିଦ୍ର ମଣିଷ ତାଙ୍କ ଦୃଷ୍ଟିରେ ସାହାଯ୍ୟ ନେଉଥିବା ଏକ ପାତ୍ର ମାତ୍ର ନୁହେଁ, ସେ ନାରାୟଣଙ୍କ ରୂପ। ଏଣୁ ସନ୍ନ୍ୟାସୀର ଜୀବନକୁ ଲୋକଙ୍କ ଦୁଃଖ ମୋଚନରେ ଲଗାଇବାର ସଂକଳ୍ପ ଦୃଢ଼ ହେଲା।</p><p>କନ୍ୟାକୁମାରୀରେ ଦେଶର ଅବସ୍ଥା ଓ ତାହାର ଭବିଷ୍ୟତ ତାଙ୍କ ଚିନ୍ତାରେ ମିଶିଲା।</p></div>
+</details>
+<small class="lesson-source">odia/sahitya-sindhu/chapter 10/chapter.pdf · ପୃଷ୍ଠା ୪–୯</small></article>
+<article><h2>୫. “ଦରିଦ୍ର ନାରାୟଣଙ୍କ ସେବା ହିଁ ସନ୍ନ୍ୟାସୀର ଯଥାର୍ଥ ବ୍ରତ।” ପ୍ରସଙ୍ଗ ସହ ବୁଝାଅ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୨, ପ୍ରଶ୍ନ ୨ (କ) (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପରିବ୍ରାଜକ ବିବେକାନନ୍ଦ ଭାରତର ସାଧାରଣ ମଣିଷଙ୍କ ଅଭାବକୁ ଅତି ପାଖରୁ ଦେଖିଥିଲେ। ଭୋକିଲା ଲୋକଙ୍କ ପାଖରେ ଧର୍ମ ଆଲୋଚନା କଲେ ସେମାନଙ୍କ ଭୋକ ମେଣ୍ଟେ ନାହିଁ।</p><p>ସେମାନଙ୍କ ଭିତରେ ନାରାୟଣଙ୍କୁ ଅନୁଭବ କଲେ ସେମାନଙ୍କ ସେବାରେ ହିଁ ଈଶ୍ୱରଙ୍କ ସେବା ହୁଏ। ତେଣୁ ତ୍ୟାଗର ଅର୍ଥ ଲୋକଙ୍କଠାରୁ ଦୂରରେ ରହିବା ନୁହେଁ।</p><p>ନିଜ ସୁବିଧା ଛାଡ଼ି ଅନ୍ୟର ଦୁଃଖ ଲାଘବ କରିବାରେ ଜୀବନ ଦେବା ହିଁ ସନ୍ନ୍ୟାସର ପ୍ରକୃତ ସାଧନା।</p></div>
+</details>
+<small class="lesson-source">odia/sahitya-sindhu/chapter 10/chapter.pdf · ପୃଷ୍ଠା ୫–୧୧</small></article>
+
+</main></body></html>

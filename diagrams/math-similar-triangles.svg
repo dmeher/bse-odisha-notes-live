@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 225">
+  <title>Similar triangles ABC and PQR</title>
+  <rect width="320" height="225" rx="8" fill="white"/>
+  <g fill="none" stroke="#254b55" stroke-width="2">
+<path d="M65 74L28 163H119ZM183 42L131 167H259Z"/>
+  </g>
+  <g fill="#173940" font-family="sans-serif" font-size="15">
+    <text x="60" y="67">A</text>
+    <text x="12" y="178">B</text>
+    <text x="117" y="178">C</text>
+    <text x="180" y="34">P</text>
+    <text x="121" y="182">Q</text>
+    <text x="260" y="182">R</text>
+  </g>
+</svg>

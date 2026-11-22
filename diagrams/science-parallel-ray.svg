@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 215" width="480" height="215" role="img" aria-labelledby="title desc">
+  <title id="title">Parallel light ray incident on a convex lens</title>
+  <desc id="desc">A ray approaches a convex lens from the left parallel to the principal axis. After refraction it crosses the principal axis at the point marked F2 on the right. F1 lies on the left and O is the optical centre.</desc>
+  <rect x="1" y="1" width="478" height="213" rx="10" fill="#fff" stroke="#cedbd5"/>
+  <style>text {font-family: sans-serif; font-size: 16px; fill: #152c24} .wire {stroke:#254d3f;stroke-width:2.5;fill:none}</style>
+<line x1="35" y1="112" x2="455" y2="112" stroke="#526359" stroke-width="1.7" /><path d="M225 24Q201 112 225 195Q249 112 225 24Z" class="wire" /><text x="238" y="136" text-anchor="middle">O</text><text x="133" y="136" text-anchor="middle">F₁</text><text x="319" y="136" text-anchor="middle">F₂</text><circle cx="133" cy="112" r="4" fill="#254d3f"/><circle cx="317" cy="112" r="4" fill="#254d3f"/><line x1="45" y1="55" x2="225" y2="55" stroke="#246856" stroke-width="2.6" /><line x1="225" y1="55" x2="415" y2="173" stroke="#246856" stroke-width="2.6" /><path d="M115 50l8 5-8 5 M347 125l7 10-12 -1" class="wire" />
+</svg>

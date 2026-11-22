@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଅର୍ଥନୈତିକ ବ୍ୟବସ୍ଥା</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1_pzkwjNskyY_wuMRgUsmWimUeDlRCpd6/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଚାରି ପାଠର ପ୍ରତି ମୁଦ୍ରିତ ଉପପ୍ରଶ୍ନ ମିଳାଯାଇଛି। ତୃତୀୟ ପାଠର ୧(i)ରେ ମାତ୍ର ଉତ୍ସରୁ ଚାହିଁଥିବା ବର୍ଷ ନିଶ୍ଚିତ ହେଲାନାହିଁ।</p><p>ତୃତୀୟ ପାଠ ୧(i): ଗ୍ରାମୀଣ ମହିଳା ଓ ଶିଶୁ ଉନ୍ନୟନ ଯୋଜନା ଆରମ୍ଭର ବର୍ଷ ଦିଆଯାଇଥିବା ପାଠରେ ଉଲ୍ଲେଖ ନାହିଁ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୩, ୭, ୧୫, ୧୮</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୬୭)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">ପ୍ରଥମ ପାଠ · 1 (i)</a> <a href="#exercise-2">ପ୍ରଥମ ପାଠ · 1 (ii)</a> <a href="#exercise-3">ପ୍ରଥମ ପାଠ · 1 (iii)</a> <a href="#exercise-4">ପ୍ରଥମ ପାଠ · 1 (iv)</a> <a href="#exercise-5">ପ୍ରଥମ ପାଠ · 1 (v)</a> <a href="#exercise-6">ପ୍ରଥମ ପାଠ · 1 (vi)</a> <a href="#exercise-7">ପ୍ରଥମ ପାଠ · 1 (vii)</a> <a href="#exercise-8">ପ୍ରଥମ ପାଠ · 1 (viii)</a> <a href="#exercise-9">ପ୍ରଥମ ପାଠ · 2 (i)</a> <a href="#exercise-10">ପ୍ରଥମ ପାଠ · 2 (ii)</a> <a href="#exercise-11">ପ୍ରଥମ ପାଠ · 2 (iii)</a> <a href="#exercise-12">ପ୍ରଥମ ପାଠ · 2 (iv)</a> <a href="#exercise-13">ପ୍ରଥମ ପାଠ · 2 (v)</a> <a href="#exercise-14">ଦ୍ୱିତୀୟ ପାଠ · 1 (a)</a> <a href="#exercise-15">ଦ୍ୱିତୀୟ ପାଠ · 1 (b)</a> <a href="#exercise-16">ଦ୍ୱିତୀୟ ପାଠ · 1 (c)</a> <a href="#exercise-17">ଦ୍ୱିତୀୟ ପାଠ · 1 (d)</a> <a href="#exercise-18">ଦ୍ୱିତୀୟ ପାଠ · 1 (e)</a> <a href="#exercise-19">ଦ୍ୱିତୀୟ ପାଠ · 1 (f)</a> <a href="#exercise-20">ଦ୍ୱିତୀୟ ପାଠ · 1 (g)</a> <a href="#exercise-21">ଦ୍ୱିତୀୟ ପାଠ · 1 (h)</a> <a href="#exercise-22">ଦ୍ୱିତୀୟ ପାଠ · 1 (i)</a> <a href="#exercise-23">ଦ୍ୱିତୀୟ ପାଠ · 1 (j)</a> <a href="#exercise-24">ଦ୍ୱିତୀୟ ପାଠ · 1 (k)</a> <a href="#exercise-25">ଦ୍ୱିତୀୟ ପାଠ · 2 (a)</a> <a href="#exercise-26">ଦ୍ୱିତୀୟ ପାଠ · 2 (b)</a> <a href="#exercise-27">ଦ୍ୱିତୀୟ ପାଠ · 2 (c)</a> <a href="#exercise-28">ଦ୍ୱିତୀୟ ପାଠ · 2 (d)</a> <a href="#exercise-29">ଦ୍ୱିତୀୟ ପାଠ · 2 (e)</a> <a href="#exercise-30">ଦ୍ୱିତୀୟ ପାଠ · 2 (f)</a> <a href="#exercise-31">ଦ୍ୱିତୀୟ ପାଠ · 2 (g)</a> <a href="#exercise-32">ତୃତୀୟ ପାଠ · 1 (a)</a> <a href="#exercise-33">ତୃତୀୟ ପାଠ · 1 (b)</a> <a href="#exercise-34">ତୃତୀୟ ପାଠ · 1 (c)</a> <a href="#exercise-35">ତୃତୀୟ ପାଠ · 1 (d)</a> <a href="#exercise-36">ତୃତୀୟ ପାଠ · 1 (e)</a> <a href="#exercise-37">ତୃତୀୟ ପାଠ · 1 (f)</a> <a href="#exercise-38">ତୃତୀୟ ପାଠ · 1 (g)</a> <a href="#exercise-39">ତୃତୀୟ ପାଠ · 1 (h)</a> <a href="#exercise-40">ତୃତୀୟ ପାଠ · 1 (i)</a> <a href="#exercise-41">ତୃତୀୟ ପାଠ · 1 (j)</a> <a href="#exercise-42">ତୃତୀୟ ପାଠ · 1 (k)</a> <a href="#exercise-43">ତୃତୀୟ ପାଠ · 2 (a)</a> <a href="#exercise-44">ତୃତୀୟ ପାଠ · 2 (b)</a> <a href="#exercise-45">ତୃତୀୟ ପାଠ · 2 (c)</a> <a href="#exercise-46">ତୃତୀୟ ପାଠ · 3 (a)</a> <a href="#exercise-47">ତୃତୀୟ ପାଠ · 3 (b)</a> <a href="#exercise-48">ତୃତୀୟ ପାଠ · 3 (c)</a> <a href="#exercise-49">ତୃତୀୟ ପାଠ · 3 (d)</a> <a href="#exercise-50">ତୃତୀୟ ପାଠ · 3 (e)</a> <a href="#exercise-51">ଚତୁର୍ଥ ପାଠ · 1 (a)</a> <a href="#exercise-52">ଚତୁର୍ଥ ପାଠ · 1 (b)</a> <a href="#exercise-53">ଚତୁର୍ଥ ପାଠ · 1 (c)</a> <a href="#exercise-54">ଚତୁର୍ଥ ପାଠ · 1 (d)</a> <a href="#exercise-55">ଚତୁର୍ଥ ପାଠ · 1 (e)</a> <a href="#exercise-56">ଚତୁର୍ଥ ପାଠ · 1 (f)</a> <a href="#exercise-57">ଚତୁର୍ଥ ପାଠ · 2 (a)</a> <a href="#exercise-58">ଚତୁର୍ଥ ପାଠ · 2 (b)</a> <a href="#exercise-59">ଚତୁର୍ଥ ପାଠ · 2 (c)</a> <a href="#exercise-60">ଚତୁର୍ଥ ପାଠ · 3 (a)</a> <a href="#exercise-61">ଚତୁର୍ଥ ପାଠ · 3 (b)</a> <a href="#exercise-62">ଚତୁର୍ଥ ପାଠ · 3 (c)</a> <a href="#exercise-63">ଚତୁର୍ଥ ପାଠ · 3 (d)</a> <a href="#exercise-64">ଚତୁର୍ଥ ପାଠ · 3 (e)</a> <a href="#exercise-65">ଚତୁର୍ଥ ପାଠ · 4 (a)</a> <a href="#exercise-66">ଚତୁର୍ଥ ପାଠ · 4 (b)</a> <a href="#exercise-67">ଚତୁର୍ଥ ପାଠ · 4 (c)</a></nav></details>
+<article id="exercise-1"><h2>ପ୍ରଥମ ପାଠ · 1 (i). ଦରବୃଦ୍ଧି କିପରି ନିରୂପଣ କରାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତୁଳନା ପାଇଁ ମୂଳବର୍ଷକୁ ଧରାଯାଏ। କେବଳ ଗୋଟିଏ ବଜାରର ଗୋଟିଏ ଜିନିଷର ଦର ଦେଖି ସାଧାରଣ ଦରସ୍ତରର ପରିବର୍ତ୍ତନ ବୁଝିହେବ ନାହିଁ।</li><li>ଗଣନାର ଦୃଷ୍ଟାନ୍ତ: ପୂର୍ବ ଦରସୂଚକ ୧୦୦ ଓ ପରର ଦରସୂଚକ ୧୧୦ ଧରିଲେ ବୃଦ୍ଧି ୧୦। ଶତକଡ଼ା ହାର = (୧୧୦ − ୧୦୦) ÷ ୧୦୦ × ୧୦୦ = ୧୦ ପ୍ରତିଶତ। ଏହା କେବଳ ହିସାବ ବୁଝିବାର ଉଦାହରଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ଭିନ୍ନ ସମୟର ଦରସୂଚକ ତୁଳନା କରାଯାଏ। ପୂର୍ବ ଦରସୂଚକ ତୁଳନାରେ ବୃଦ୍ଧିର ଶତକଡ଼ା ହାରରୁ ଦରବୃଦ୍ଧି ଜଣାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-2"><h2>ପ୍ରଥମ ପାଠ · 1 (ii). ଆମ ଦେଶରେ କେତେଗୋଟି ଦ୍ରବ୍ୟକୁ ପାଇକାରୀ ଦରସୂଚକ ପ୍ରସ୍ତୁତ କରିବାରେ ବ୍ୟବହାର କରାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୪୬୦ ପାଖାପାଖି ହେଉଛି ସୂଚକରେ ଅନ୍ତର୍ଭୁକ୍ତ ଦ୍ରବ୍ୟର ସଂଖ୍ୟା। ତାହା କୌଣସି ଗୋଟିଏ ଦ୍ରବ୍ୟର ଦର କିମ୍ବା ସୂଚକର ମୂଲ୍ୟ ନୁହେଁ। ଏହାକୁ ପାଠର ତତ୍କାଳୀନ ଆକଳନ ଭାବେ ପଢ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠରେ ଦିଆଯାଇଥିବା ସମୟରେ ପାଖାପାଖି ୪୬୦ଟି ଦ୍ରବ୍ୟ ବ୍ୟବହାର ହେଉଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-3"><h2>ପ୍ରଥମ ପାଠ · 1 (iii). ଖାଉଟି ଦରବୃଦ୍ଧି ହେଲେ କେଉଁମାନେ ଅସୁବିଧା ଭୋଗ କରନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଟିଏ ପରିବାରର ମାସିକ ଆୟ ସ୍ଥିର ରହି ଚାଉଳ ଓ ତେଲର ଦର ବଢ଼ିଲେ ପୁରୁଣା ପରିମାଣ କିଣିବାକୁ ବେଶି ଖର୍ଚ୍ଚ ଲାଗେ। ପ୍ରକୃତ କ୍ରୟଶକ୍ତି କମିବା ହେଉଛି ଏହି ଅସୁବିଧା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସ୍ଥିର ଆୟର ବେତନଭୋଗୀ, ଶ୍ରମିକ ଓ ସ୍ୱଳ୍ପ ଆୟର ପରିବାର ସମାନ ଆୟରେ ପୂର୍ବ ଅପେକ୍ଷା କମ୍ ଜିନିଷ କିଣିପାରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-4"><h2>ପ୍ରଥମ ପାଠ · 1 (iv). ବଜାରରେ କୌଣସି ସାମଗ୍ରୀର ଯୋଗାଣଠାରୁ ଚାହିଦା ଅଧିକା ହେଲେ କି ପ୍ରକାରର ପରିସ୍ଥିତି ସୃଷ୍ଟି ହେବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କମ୍ ଦ୍ରବ୍ୟ ପାଇଁ ବେଶି ଲୋକ କିଣିବାକୁ ଆସିଲେ ଦର ଉପରେ ଚାପ ପଡ଼େ। ଯୋଗାଣ ବଢ଼ିଲେ ଏହି ଚାପ କମିପାରେ।</li><li>ଚାହିଦା ବଢ଼ିଲା ବୋଲି ପ୍ରତିଥର ଦର ବଢ଼ିବା ଅବଶ୍ୟମ୍ଭାବୀ ନୁହେଁ। ‘ଯୋଗାଣଠାରୁ ଅଧିକ’ ହିଁ ଏଠି ନିର୍ଣ୍ଣାୟକ ସର୍ତ୍ତ। ପୂର୍ବ ଦରରେ ସବୁ କ୍ରେତା ଦ୍ରବ୍ୟ ପାଇପାରନ୍ତି ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ରବ୍ୟର ଅଭାବ ହୁଏ। ଯୋଗାଣ ବୃଦ୍ଧି ନହେଲେ କ୍ରେତାଙ୍କ ମଧ୍ୟରେ ଅଧିକ ଚାହିଦା ଯୋଗୁଁ ଦର ବଢ଼େ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-5"><h2>ପ୍ରଥମ ପାଠ · 1 (v). ଭାରତର ସର୍ବୋଚ୍ଚ ବ୍ୟାଙ୍କର ନାମ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହା ଦେଶର ମୁଦ୍ରା ଓ ଋଣ ନିୟନ୍ତ୍ରଣ ସହ ସମ୍ପୃକ୍ତ ସର୍ବୋଚ୍ଚ ବ୍ୟାଙ୍କ। ଦରବୃଦ୍ଧି ନିୟନ୍ତ୍ରଣରେ ଋଣର ପରିମାଣ କିପରି ବଦଳିପାରେ ଆଲୋଚନାରେ ଏହାର ନାମ ଆସିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭାରତୀୟ ରିଜର୍ଭ ବ୍ୟାଙ୍କ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-6"><h2>ପ୍ରଥମ ପାଠ · 1 (vi). ମହଜୁଦକାରୀ କାହାକୁ କହନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଦାମରେ ମାଲ ଥାଇ ଯଦି ବଜାରକୁ ଛଡ଼ା ନଯାଏ, ଖାଉଟିଙ୍କ ନିକଟରେ ଯୋଗାଣ କମିଯାଏ। ଫଳରେ କୃତ୍ରିମ ଅଭାବ ଦେଖାଦିଏ।</li><li>ସାଧାରଣ ଭଣ୍ଡାରଣରୁ ଏହାକୁ ପୃଥକ କରେ ଲକ୍ଷ୍ୟ: ସାମଗ୍ରୀ ଥାଇ ବଜାରକୁ ନ ଛାଡ଼ିବା ଯେପରି ପରେ ବଢ଼ିଥିବା ଦରରେ ବିକ୍ରି କରିହେବ। ଏଥିରେ ଉତ୍ପାଦନ ହ୍ରାସ ନ ହେଲେ ମଧ୍ୟ ବଜାରରେ ଅଭାବ ଲାଗେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ରବ୍ୟକୁ ବଜାରକୁ ନଛାଡ଼ି ବେଆଇନ ଭାବେ ଗୋଦାମରେ ଗଚ୍ଛିତ ରଖି କୃତ୍ରିମ ଅଭାବ ସୃଷ୍ଟି କରୁଥିବା ବ୍ୟବସାୟୀ ମହଜୁଦକାରୀ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=108">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-7"><h2>ପ୍ରଥମ ପାଠ · 1 (vii). ଖାଉଟି କିଣୁଥିବା ଜିନିଷ କେତେବେଳେ ମହଙ୍ଗା ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ପଥରେ ଏକ ଫଳ ହୋଇପାରେ। ପ୍ରକୃତ ଉତ୍ପାଦନ କମିଲେ ବଜାରକୁ ମାଲ୍ କମ୍ ଆସେ। ଉତ୍ପାଦନ ଠିକ୍ ଥାଇ ମହଜୁଦ କଲେ ମଧ୍ୟ ଖାଉଟି କିଣିପାରୁଥିବା ପରିମାଣ କମିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚାହିଦା ଅନୁପାତରେ ଯୋଗାଣ କମିଲେ ବା ମହଜୁଦ କରି ଦ୍ରବ୍ୟର କୃତ୍ରିମ ଅଭାବ ସୃଷ୍ଟି କଲେ ତାହା ମହଙ୍ଗା ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-8"><h2>ପ୍ରଥମ ପାଠ · 1 (viii). ସାଧାରଣ ବଣ୍ଟନ ବ୍ୟବସ୍ଥା କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ବ୍ୟବସ୍ଥାରେ ଦେଖିବାର କଥା ‘କିଏ, କେଉଁଠୁ ଓ କେଉଁ ଦରରେ’। ଯୋଗ୍ୟ ପରିବାର ନିର୍ଦ୍ଦିଷ୍ଟ ବଣ୍ଟନ କେନ୍ଦ୍ରରୁ ସୁଲଭ ମୂଲ୍ୟରେ ଆବଶ୍ୟକ ଦ୍ରବ୍ୟ ପାଇଲେ ବଜାର ଦରବୃଦ୍ଧିର ଚାପ କମେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସରକାର ନିର୍ଦ୍ଧାରିତ ଦୋକାନ ଜରିଆରେ ଯୋଗ୍ୟ ପରିବାରକୁ ବଜାର ଦରଠାରୁ କମ୍ ମୂଲ୍ୟରେ ନିତ୍ୟ ବ୍ୟବହାର୍ଯ୍ୟ ଦ୍ରବ୍ୟ ଯୋଗାଇଥାନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-9"><h2>ପ୍ରଥମ ପାଠ · 2 (i). ନିତ୍ୟ ବ୍ୟବହାର୍ଯ୍ୟ ଦ୍ରବ୍ୟ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚାଉଳ ଓ ତେଲ ଭଳି ଜିନିଷ ପରିବାରକୁ ବାରମ୍ବାର କିଣିବାକୁ ହୁଏ। ସେଗୁଡ଼ିକର ମୂଲ୍ୟ ବଢ଼ିଲେ ଇଚ୍ଛାମତେ କ୍ରୟ ପଛକୁ ଘୁଞ୍ଚାଇବା କଷ୍ଟ; ଏଣୁ ଦରବୃଦ୍ଧି ଆଲୋଚନାରେ ଏହାର ବିଶେଷ ସ୍ଥାନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜୀବନଧାରଣ ପାଇଁ ନିୟମିତ ଆବଶ୍ୟକ ହେଉଥିବା ଚାଉଳ, ଗହମ, ତେଲ ଓ ଚିନି ଆଦି ନିତ୍ୟ ବ୍ୟବହାର୍ଯ୍ୟ ଦ୍ରବ୍ୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-10"><h2>ପ୍ରଥମ ପାଠ · 2 (ii). ଦରବୃଦ୍ଧି ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଟିଏ ଦିନ ଗୋଟିଏ ପରିବା ମହଙ୍ଗା ହେବା ମାତ୍ରେ ସମଗ୍ର ବଜାରର ଧାରା ଜଣାଯାଏନାହିଁ। ବିଭିନ୍ନ ଦ୍ରବ୍ୟର ଦରସୂଚକକୁ ଅନ୍ୟ ସମୟର ସୂଚକ ସହ ତୁଳନା କଲେ ସାଧାରଣ ପରିବର୍ତ୍ତନ ଧରାପଡ଼େ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗୋଟିଏ ଜିନିଷର ଅସ୍ଥାୟୀ ମୂଲ୍ୟ ପରିବର୍ତ୍ତନ ଅପେକ୍ଷା ବଜାରର ସାଧାରଣ ଦରସ୍ତର କ୍ରମାଗତ ଉଠିବାକୁ ଦରବୃଦ୍ଧି କୁହାଯାଏ। ଏଥିରେ ମୁଦ୍ରାର କ୍ରୟଶକ୍ତି କମେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-11"><h2>ପ୍ରଥମ ପାଠ · 2 (iii). ପାଇକାରୀ ଦରସୂଚକ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଇକାରୀ ସ୍ତରରେ ବଡ଼ ପରିମାଣରେ କାରବାର ହୁଏ। ତେଣୁ ଏହି ସୂଚକ ବଦଳିବା ଓ ଗୋଟିଏ ପରିବାର ଖୁଚୁରା ଦୋକାନରେ ଦେଉଥିବା ଦର ବଦଳିବା ଏକେ ମାପ ହେବା ଆବଶ୍ୟକ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦେଶର ପ୍ରମୁଖ ଦ୍ରବ୍ୟର ପାଇକାରୀ ବଜାର ମୂଲ୍ୟ ନେଇ ଏହି ସୂଚକ ପ୍ରସ୍ତୁତ ହୁଏ। ସମୟକ୍ରମେ ପାଇକାରୀ ଦରର ପରିବର୍ତ୍ତନ ଏଥିରୁ ଜଣାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-12"><h2>ପ୍ରଥମ ପାଠ · 2 (iv). ଖାଉଟି ଦରସୂଚକ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ସମୟରେ ସମାନ ଧରଣର ଆବଶ୍ୟକ ଦ୍ରବ୍ୟ କିଣିବାର ଖର୍ଚ୍ଚ ଦେଖ। ଦ୍ୱିତୀୟ ଥର ଅଧିକ ଟଙ୍କା ଦେବାକୁ ହେଲେ ଖାଉଟିଙ୍କ ଜୀବନଧାରଣ ଖର୍ଚ୍ଚ ବଢ଼ିଛି। ଏଥିରେ ଖୁଚୁରା କ୍ରେତାଙ୍କ ଅଭିଜ୍ଞତା ମୁଖ୍ୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖାଉଟି ବା ଶ୍ରମିକ ପରିବାର ବ୍ୟବହାର କରୁଥିବା ଦ୍ରବ୍ୟର କ୍ରୟମୂଲ୍ୟ ଆଧାରରେ ଏହି ସୂଚକ ତିଆରି ହୁଏ। ଏହା ପରିବାରର ଜୀବନଧାରଣ ଖର୍ଚ୍ଚରେ ପରିବର୍ତ୍ତନ ସୂଚାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-13"><h2>ପ୍ରଥମ ପାଠ · 2 (v). ଦରବୃଦ୍ଧି ରୋକିବାର ରାଜସ୍ୱ ପ୍ରତିକାର ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଟିକସରେ ବଳକା ଖର୍ଚ୍ଚଯୋଗ୍ୟ ଆୟ କମିଲେ ସେହି ଦରରେ ଅଧିକ ମାଲ କିଣିବା ପାଇଁ ଚାହିଦା କମିପାରେ। ଏହା ସରକାରଙ୍କ ରାଜସ୍ୱ ଉପାୟ; ରିଜର୍ଭ ବ୍ୟାଙ୍କର ଋଣ ନିୟନ୍ତ୍ରଣଠାରୁ ଏହାର କାମ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସରକାର ଉଚ୍ଚ ଆୟ ଓ କେତେକ ଖାଉଟି ଦ୍ରବ୍ୟ ଉପରେ ଟିକସ ଲଗାଇ ବଳକା କ୍ରୟଶକ୍ତି କମାନ୍ତି। ଚାହିଦା ଉପରେ ଚାପ କମିଲେ ଦରବୃଦ୍ଧି ନିୟନ୍ତ୍ରଣରେ ଆସେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=107" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୭–୧୦୯</a></small></article>
+<article id="exercise-14"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (a). ଖାଉଟି ସଚେତନତାର ଆବଶ୍ୟକତା କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୋକାନରେ ପ୍ୟାକେଟ୍‌ର ମାନ ଓ ପରିମାଣ ଦେଖିଲେ ଠକେଇ ଆଗରୁ ଧରାପଡ଼ିପାରେ। ଦେୟ ଦେବା ପରେ ରସିଦ ରଖିଲେ ତ୍ରୁଟି ଦେଖାଯିବାବେଳେ ଅଭିଯୋଗକୁ ଆଧାର ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖାଉଟି ଓଜନ, ମାନ, ମୂଲ୍ୟ ଓ ଅଧିକାର ବିଷୟରେ ସତର୍କ ରହିଲେ ଅପମିଶ୍ରଣ, ଠକେଇ ଓ ତ୍ରୁଟିପୂର୍ଣ୍ଣ ଦ୍ରବ୍ୟରୁ ନିଜକୁ ରକ୍ଷା କରିପାରିବେ। କ୍ଷତି ହେଲେ କେଉଁଠି ଅଭିଯୋଗ କରିବେ ତାହା ମଧ୍ୟ ଜାଣିବା ଦରକାର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-15"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (b). ନକଲି ବା ଦୋହରା ସାମଗ୍ରୀ କହିଲେ କ’ଣ ବୁଝାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନକଲି ଦ୍ରବ୍ୟର ମୁଖ୍ୟ ଚିହ୍ନ ହେଉଛି ଭ୍ରାନ୍ତ ପରିଚୟ। ଖାଉଟି ଚିହ୍ନ ବା ପ୍ୟାକେଟ୍ ଦେଖି ପରିଚିତ କମ୍ପାନୀର ଦ୍ରବ୍ୟ କିଣିଲେ ବୋଲି ଭାବନ୍ତି; ପ୍ରକୃତ ଉତ୍ପାଦକ ଭିନ୍ନ ହୋଇପାରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅସଲ କମ୍ପାନୀର ନାମ, ଚିହ୍ନ ବା ପ୍ୟାକେଟକୁ ଅନୁକରଣ କରି ଅସଲ ବୋଲି ବିକ୍ରି ହେଉଥିବା ଜିନିଷ ନକଲି ବା ଦୋହରା ସାମଗ୍ରୀ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-16"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (c). ଉତ୍ପାଦନରେ ଏକଚାଟିଆ ବ୍ୟବସ୍ଥା କେତେବେଳେ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିକଳ୍ପ ଉତ୍ପାଦକ ନ ଥିଲେ ଗ୍ରାହକ ଅନ୍ୟଠାରୁ ନେବାକୁ ସହଜରେ ଯାଇପାରନ୍ତି ନାହିଁ। ସେଥିପାଇଁ ଉତ୍ପାଦକ ଦର ଓ ଯୋଗାଣ ଉପରେ ଅଧିକ ନିୟନ୍ତ୍ରଣ ପାଆନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉତ୍ପାଦକଙ୍କ ମଧ୍ୟରେ ପ୍ରତିଯୋଗିତା ସୀମିତ ହୋଇ ଦ୍ରବ୍ୟର ଦର ଓ ଯୋଗାଣ ଅଳ୍ପ କେତେକଙ୍କ ନିୟନ୍ତ୍ରଣରେ ରହିଲେ ଏକଚାଟିଆ ବ୍ୟବସ୍ଥା ଦେଖାଯାଏ। ବିକଳ୍ପ ବିକ୍ରେତା ବା ଉତ୍ପାଦକ ନଥିଲେ ଖାଉଟି ଅନ୍ୟ ସ୍ଥାନର ମୂଲ୍ୟ ଓ ଗୁଣ ସହ ତୁଳନା କରି କିଣିବାର ସୁଯୋଗ ହରାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧–୧୧୩</a></small></article>
+<article id="exercise-17"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (d). ଇଂଲଣ୍ଡରେ ଖାଉଟି ଆନ୍ଦୋଳନ କେବେ ହୋଇଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠ ଏଠି ଇଂଲଣ୍ଡ ପାଇଁ ଏକ ଐତିହାସିକ ଘଟଣା ସହ ସମୟକୁ ଚିହ୍ନାଏ। ୧୯୬୨ ପରେ ଆସୁଥିବା ଆମେରିକୀୟ ଇସ୍ତାହାରର ବର୍ଷ; ତାକୁ ଏହି ଆନ୍ଦୋଳନର ବର୍ଷ ଭାବେ ଲେଖନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠ ଅନୁସାରେ ଦ୍ୱିତୀୟ ବିଶ୍ୱଯୁଦ୍ଧ ପରେ ଇଂଲଣ୍ଡରେ ଆଧୁନିକ ଖାଉଟି ଆନ୍ଦୋଳନ ଆରମ୍ଭ ହେଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-18"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (e). ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକାରେ ଖାଉଟି ଅଧିକାର ଆଇନର ପ୍ରଥମ ଇସ୍ତାହାର କେବେ ପ୍ରକାଶିତ ହୋଇଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୬୨ ସହ ‘ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା’ ଓ ‘ଅଧିକାରର ଇସ୍ତାହାର’ ଏକାଠି ମନେ ରଖ। ଭାରତର ୧୯୮୬ର ଆଇନ ଅନ୍ୟ ଦେଶର ଅନ୍ୟ ଘଟଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୬୨ ମସିହାରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-19"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (f). ବିଶ୍ୱ ଖାଉଟି ଅଧିକାର ଦିବସ କେବେ ପାଳନ କରାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଶ୍ନଟି ଏକ ପ୍ରତିବର୍ଷ ପାଳିତ ଦିବସର, ତେଣୁ ଉତ୍ତରର ଏକକ ତାରିଖ ଓ ମାସ। ଇସ୍ତାହାରର ବର୍ଷ ବା ସୁରକ୍ଷା ଆଇନର ବର୍ଷ ଦେଲେ ଏହି ପ୍ରଶ୍ନର ଉତ୍ତର ହେବନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରତିବର୍ଷ ମାର୍ଚ୍ଚ ୧୫ ତାରିଖରେ ବିଶ୍ୱ ଖାଉଟି ଅଧିକାର ଦିବସ ପାଳନ କରାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=112" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୨–୧୧୩</a></small></article>
+<article id="exercise-20"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (g). ଜିଲ୍ଲାସ୍ତରୀୟ ଖାଉଟି ଅଦାଲତକୁ କ’ଣ କହନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠରେ ତିନି ସ୍ତର ଅଛି। ଜିଲ୍ଲା ସ୍ତରର ପୁସ୍ତକର ନାମ District Forum, ଉପର ସ୍ତରର ରାଜ୍ୟ ଓ ଜାତୀୟ ସଂସ୍ଥାଙ୍କ ନାମ ଅଲଗା। ଏହାକୁ ଏଠି ବର୍ଣ୍ଣିତ ଆଇନ ଅନୁସାରେ ପଢ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠରେ ବର୍ଣ୍ଣିତ ବ୍ୟବସ୍ଥାରେ ଏହାକୁ ଜିଲ୍ଲା ବିଚାର ମଞ୍ଚ (District Forum) କୁହାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-21"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (h). ଆମ ଦେଶରେ ଖାଉଟିମାନଙ୍କ ସୁରକ୍ଷା ନିମନ୍ତେ ପାର୍ଲାମେଣ୍ଟ କି କି କାର୍ଯ୍ୟ କରିଥା’ନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆଇନ ତିଆରି କରିବା ଓ ବ୍ୟକ୍ତିଗତ ଅଭିଯୋଗ ବିଚାର କରିବା ଦୁଇଟି ଭିନ୍ନ କାମ। ପାର୍ଲାମେଣ୍ଟ ସୁରକ୍ଷାର ଆଧାର ଦିଏ; ସେହି ଆଧାରରେ ପ୍ରତିକାର ସଂସ୍ଥା ନିର୍ଦ୍ଦିଷ୍ଟ ଅଭିଯୋଗ ଶୁଣେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାର୍ଲାମେଣ୍ଟ ଖାଉଟିଙ୍କ ଅଧିକାର ସୁରକ୍ଷା ପାଇଁ ଆଇନ ପ୍ରଣୟନ କରେ। ପାଠର ୧୯୮୬ ଆଇନ ଅନୁଯାୟୀ ଅଭିଯୋଗ ଶୁଣାଣି ଓ ପ୍ରତିକାର ପାଇଁ ତିନି ସ୍ତରର ବ୍ୟବସ୍ଥା ରହିଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-22"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (i). ଖାଉଟି ବିବାଦୀୟ ପ୍ରତିବିଧାନ ସଂସ୍ଥାର କାର୍ଯ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗୋଟିଏ କ୍ରୟରେ ତ୍ରୁଟି ଅଛି ବୋଲି ଖାଉଟି କହିଲେ ନଥି ଓ ଉଭୟ ପକ୍ଷର କଥା ଦେଖି ଅଭିଯୋଗର ନିଷ୍ପତ୍ତି ହୁଏ। ଉଲ୍ଲେଖିତ ସମୟସୀମା ଏହି ପାଠର ଆଇନ ବର୍ଣ୍ଣନାର ଅଂଶ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖାଉଟିଙ୍କ ଅଭିଯୋଗ ଗ୍ରହଣ, ଶୁଣାଣି ଓ ନ୍ୟାୟସଙ୍ଗତ ପ୍ରତିକାର ପ୍ରଦାନ କରେ। ପାଠରେ ତିନି ମାସ ମଧ୍ୟରେ ଶୁଣାଣି ବ୍ୟବସ୍ଥାର ଉଲ୍ଲେଖ ଅଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-23"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (j). ଖାଉଟିର ଅଧିକାର କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତଥ୍ୟ ଜାଣିବା ଅଧିକାର କ୍ରୟ ପୂର୍ବରୁ ପସନ୍ଦ କରିବାରେ ଲାଗେ। ଶୁଣାଣି ଓ ପ୍ରତିକାର ପାଇବା ଅଧିକାର ତ୍ରୁଟି ଜଣାପଡ଼ିବା ପରେ ଲାଗେ। ଏପରି କ୍ରୟର ଦୁଇ ପର୍ଯ୍ୟାୟ ସହ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ରବ୍ୟ ବିଷୟରେ ତଥ୍ୟ ଜାଣିବା, ନିରାପଦ ଦ୍ରବ୍ୟ ବାଛିବା, ଅଭିଯୋଗ ଶୁଣାଇବା ଓ ପ୍ରତିକାର ପାଇବା ଖାଉଟିଙ୍କ ଅଧିକାର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-24"><h2>ଦ୍ୱିତୀୟ ପାଠ · 1 (k). ଖାଉଟିର କର୍ତ୍ତବ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକ ଭଲ ପସନ୍ଦ କରିବାକୁ ଦର, ଓଜନ ଓ ତାରିଖ ଦେଖିବା ଦରକାର। ପରେ ଅଧିକାର ପ୍ରୟୋଗ କରିବାକୁ ବିକ୍ରେତା ଓ କ୍ରୟର ପ୍ରମାଣ ଥିବା ରସିଦ ରଖିବା ଦରକାର। ଏଦୁଇ କାମ ଖାଉଟି ନିଜେ କରନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କିଣିବା ପୂର୍ବରୁ ଦର, ଓଜନ, ଗୁଣ, ମାନଚିହ୍ନ ଓ ତାରିଖ ଦେଖିବା, ରସିଦ ରଖିବା ଓ ଠକେଇ ହେଲେ ଅଭିଯୋଗ କରିବା ଖାଉଟିଙ୍କ କର୍ତ୍ତବ୍ୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-25"><h2>ଦ୍ୱିତୀୟ ପାଠ · 2 (a). ଅପମିଶ୍ରିତ ଦ୍ରବ୍ୟ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅପମିଶ୍ରଣ ଜିନିଷର ଭିତର ସାମଗ୍ରୀ ବଦଳାଏ। ପ୍ୟାକେଟ୍ ଅସଲ ପରି ଦିଶିବା ମାତ୍ରେ ଅପମିଶ୍ରଣ ସିଦ୍ଧ ହୁଏନାହିଁ। ଏଠି ଚିହ୍ନଟ କରିବାର କଥା ନିମ୍ନ ମାନର ପଦାର୍ଥ ମିଶାଇ ଗୁଣ କମାଇବା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭଲ ଦ୍ରବ୍ୟରେ ଅନ୍ୟ ନିମ୍ନମାନର ପଦାର୍ଥ ମିଶାଇ ତାହାର ଗୁଣ ହ୍ରାସ କରାଯାଇଥିଲେ ତାହା ଅପମିଶ୍ରିତ ଦ୍ରବ୍ୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-26"><h2>ଦ୍ୱିତୀୟ ପାଠ · 2 (b). ଖାଉଟି ସଚେତନତା ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୋକାନୀଙ୍କ କଥା ଶୁଣି କିଣିବା ସହିତ ମୂଲ୍ୟ ଓ ମାନର ପ୍ରମାଣ ନିଜେ ଯାଞ୍ଚ କରିବା ଏହି ସଚେତନତାର ଉଦାହରଣ। ତ୍ରୁଟି ଦେଖି ଚୁପ୍ ନ ରହି ଅଭିଯୋଗର ମାର୍ଗ ଜାଣିବା ତାହାର ପରବର୍ତ୍ତୀ ଅଂଶ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖାଉଟି ନିଜ ଅଧିକାର ଓ କର୍ତ୍ତବ୍ୟ ଜାଣି ଦର, ମାନ ଓ ପରିମାଣ ଯାଞ୍ଚ କରି କିଣିବା ଏବଂ ଶୋଷଣର ପ୍ରତିକାର ମାଗିବା ହେଉଛି ଖାଉଟି ସଚେତନତା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-27"><h2>ଦ୍ୱିତୀୟ ପାଠ · 2 (c). ନିମ୍ନ ମାନର ଦ୍ରବ୍ୟ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକ ବସ୍ତୁର ନାମ ବା ମୂଲ୍ୟ ଠିକ୍ ଥିଲେ ମଧ୍ୟ ତାହା ଯେଉଁ କାମ ଯଥାଯଥ କରିବା କଥା ତାହା ନ କଲେ ଗୁଣରେ ତ୍ରୁଟି ଅଛି। ତାହାକୁ ଖାଲି କମ୍ ଓଜନର ଦ୍ରବ୍ୟ ସହ ମିଶାଅନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନିର୍ଦ୍ଧାରିତ ଗୁଣ, ଉପଯୋଗିତା ବା ସ୍ଥାୟିତ୍ୱ ନଥିବା ସାମଗ୍ରୀ ନିମ୍ନମାନର ଦ୍ରବ୍ୟ। ଖାଉଟି ପୂରା ଦର ଦେଇ ମଧ୍ୟ ଆଶାକୃତ ସେବା ପାଆନ୍ତି ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-28"><h2>ଦ୍ୱିତୀୟ ପାଠ · 2 (d). ସୀମିତ ପ୍ରତିଯୋଗିତା ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଧିକ ସଂଖ୍ୟାରେ ବିକ୍ରେତା ଥିଲେ ଖାଉଟି ଅନ୍ୟ ଦର ଓ ମାନ ବାଛିପାରନ୍ତି। କେତେକ ବିକ୍ରେତାଙ୍କ ମଧ୍ୟରେ ବଜାର ସୀମିତ ହେଲେ ସେହି ଚାପ କମେ ଓ ଖାଉଟିଙ୍କ ଚୟନ ସଂକୁଚିତ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଳ୍ପସଂଖ୍ୟକ ଉତ୍ପାଦକ ବା ବିକ୍ରେତା ବଜାର ନିୟନ୍ତ୍ରଣ କଲେ ଖାଉଟିଙ୍କ ଚୟନ ସୁଯୋଗ କମେ ଓ ଅଧିକ ଦର ଦେବାକୁ ପଡ଼ିପାରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-29"><h2>ଦ୍ୱିତୀୟ ପାଠ · 2 (e). ଖାଉଟି ଅଦାଲତ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠି ପୁସ୍ତକ ୧୯୮୬ର ଆଇନ ଅଧୀନ ବ୍ୟବସ୍ଥା ବୁଝାଉଛି। କିଣିଥିବା ଜିନିଷର ତ୍ରୁଟିର ଶୁଣାଣି ଓ ପ୍ରତିକାର ଦେବା ଅଦାଲତର କାମ। ଖାଉଟି ସଂଗଠନ ସଚେତନତା ଓ ସହାୟତା ଦିଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖାଉଟିଙ୍କ ଅଭିଯୋଗର ବିଚାର ପାଇଁ ଜିଲ୍ଲା, ରାଜ୍ୟ ଓ ଜାତୀୟ ସ୍ତରରେ ଗଠିତ ପ୍ରତିକାର ସଂସ୍ଥା। ପଣ୍ୟର ତ୍ରୁଟି ବା ଅସାଧୁ ବ୍ୟବସାୟର ଅଭିଯୋଗ କଲାବେଳେ କ୍ରୟର ରସିଦ ପ୍ରମାଣ ଭାବେ ଉପଯୋଗୀ।</p><p>ପ୍ରତିକାର ପାଇବାର ଅଧିକାର ସହ କିଣିବାବେଳେ ରସିଦ ରଖିବା କର୍ତ୍ତବ୍ୟ ଯୋଡ଼ିତ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=112">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧୨–୧୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-30"><h2>ଦ୍ୱିତୀୟ ପାଠ · 2 (f). ଖାଉଟି ସୁରକ୍ଷା ଆଇନ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଐତିହାସିକ ଆଇନର ଗୁରୁତ୍ୱ କେବଳ ‘ଅଧିକାର ଅଛି’ କହିବାରେ ସୀମିତ ନୁହେଁ। ଅଧିକାର ଭଙ୍ଗ ହେଲେ କେଉଁ ସଂସ୍ଥାରେ କଥା ଶୁଣାଇପାରିବେ ତାହାର ପଥ ମଧ୍ୟ ଦିଆଗଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠରେ ବର୍ଣ୍ଣିତ ୧୯୮୬ ଖାଉଟି ସୁରକ୍ଷା ଆଇନ ଅସାଧୁ ବ୍ୟବସାୟ ବିରୋଧରେ ଅଧିକାର ଓ ପ୍ରତିକାର ପାଇଁ ସଂସ୍ଥାଗତ ମାର୍ଗ ଦେଇଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-31"><h2>ଦ୍ୱିତୀୟ ପାଠ · 2 (g). ଖାଉଟି ସଂଗଠନ ସମ୍ପର୍କରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜଣେ ଖାଉଟି ନିଜେ ଅଭିଯୋଗର ପଦ୍ଧତି ଜାଣିନଥାଇପାରନ୍ତି। ସଂଗଠନ ତାଙ୍କୁ ଅଧିକାର, ରସିଦର ମୂଲ୍ୟ ଓ ପ୍ରତିକାରର ମାର୍ଗ ବୁଝାଇ ସାମୂହିକ ସୁରକ୍ଷାରେ ସାହାଯ୍ୟ କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଖାଉଟିମାନେ ସଂଗଠିତ ହୋଇ ଅଧିକାର ସମ୍ପର୍କରେ ଜଣାନ୍ତି, ଶୋଷଣ ଚିହ୍ନଟ କରନ୍ତି ଏବଂ ଅଭିଯୋଗ କରିବାରେ ସହଯୋଗ ଦିଅନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୩</a></small></article>
+<article id="exercise-32"><h2>ତୃତୀୟ ପାଠ · 1 (a). ସର୍ବନିମ୍ନ ଖାଦ୍ୟ ଆବଶ୍ୟକତାକୁ କିପରି ପ୍ରକାଶ କରାଯାଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କ୍ୟାଲୋରୀ ହେଉଛି ଖାଦ୍ୟରୁ ମିଳୁଥିବା ଶକ୍ତିର ଏକକ। ପ୍ରଶ୍ନ ‘କିପରି ପ୍ରକାଶ’ ବୋଲି ପଚାରିଛି; ତେଣୁ ଏଠି ଗୋଟିଏ ଅଞ୍ଚଳର ସଂଖ୍ୟାଠାରୁ ଏକକ, ପ୍ରତି ବ୍ୟକ୍ତି ଓ ପ୍ରତିଦିନ ଅଧିକ ଜରୁରୀ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠରେ ବ୍ୟକ୍ତିପିଛା ଦୈନିକ ଆବଶ୍ୟକ ଖାଦ୍ୟଶକ୍ତିକୁ କ୍ୟାଲୋରୀ ଆକାରରେ ପ୍ରକାଶ କରାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-33"><h2>ତୃତୀୟ ପାଠ · 1 (b). ଗଣ-ଦାରିଦ୍ର୍ୟ କହିଲେ କ’ଣ ବୁଝ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଗଣ’ ଶବ୍ଦଟି ସମସ୍ୟାର ପରିମାଣ ଦେଖାଏ। ଏକ ପରିବାରର ଅଭାବ ବୁଝାଇବା ସହ ସମାଜର ବହୁ ଲୋକ ଏହି ସର୍ବନିମ୍ନ ମାନ ତଳେ ଅଛନ୍ତି ବୋଲି କହିଲେ ସଂଜ୍ଞା ପୂରା ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମାଜର ବିଶାଳ ଅଂଶ ଜୀବନର ସର୍ବନିମ୍ନ ଆବଶ୍ୟକତା ପୂରଣ କରିନପାରି ଦାରିଦ୍ର୍ୟରେ ବାସ କରିବା ଅବସ୍ଥାକୁ ଗଣ-ଦାରିଦ୍ର୍ୟ କୁହାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-34"><h2>ତୃତୀୟ ପାଠ · 1 (c). ପାଠର ଦାରିଦ୍ର୍ୟ କଳନାରେ ଗ୍ରାମାଞ୍ଚଳ ପାଇଁ ଦୈନିକ ମୁଣ୍ଡପିଛା କେତେ କ୍ୟାଲୋରୀ ଧରାଯାଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକକ ସହ ଲେଖ ‘ପ୍ରତି ବ୍ୟକ୍ତି ପ୍ରତିଦିନ’। ୨୪୦୦ ଏଠି ପୁରୁଣା ଦାରିଦ୍ର୍ୟ ଆକଳନ ପାଇଁ ଗ୍ରାମୀଣ ମାନ, ପ୍ରତ୍ୟେକ ଶିଶୁ ବା ବୟସ୍କଙ୍କ ନିଜସ୍ୱ ଖାଦ୍ୟ ନିର୍ଦ୍ଦେଶ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମାଞ୍ଚଳ ପାଇଁ ଦୈନିକ ମୁଣ୍ଡପିଛା ୨୪୦୦ କ୍ୟାଲୋରୀ। ଏହା ପାଠରେ ବର୍ଣ୍ଣିତ ଦାରିଦ୍ର୍ୟ ସୀମାରେଖା କଳନାର ମାନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-35"><h2>ତୃତୀୟ ପାଠ · 1 (d). ସେହି ଦାରିଦ୍ର୍ୟ କଳନାରେ ସହରାଞ୍ଚଳ ପାଇଁ ଦୈନିକ ମୁଣ୍ଡପିଛା କେତେ କ୍ୟାଲୋରୀ ଧରାଯାଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠର ଦୁଇ ଆକଳନ ମେଳାଇଲେ ଗ୍ରାମ ପାଇଁ ୨୪୦୦ ଓ ସହର ପାଇଁ ୨୧୦୦, ଅନ୍ତର ୩୦୦ କ୍ୟାଲୋରୀ। ଏହି ହିସାବରେ ପରିବାରପିଛା ନୁହେଁ, ବ୍ୟକ୍ତିପିଛା ଦିନର ମାନ ବ୍ୟବହାର ହୋଇଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସହରାଞ୍ଚଳ ପାଇଁ ଦୈନିକ ମୁଣ୍ଡପିଛା ୨୧୦୦ କ୍ୟାଲୋରୀ ଧରାଯାଇଛି। ପାଠରେ ଏହି ମାନକୁ ଗ୍ରାମାଞ୍ଚଳର ମାନ ସହ ତୁଳନା କରାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-36"><h2>ତୃତୀୟ ପାଠ · 1 (e). 1999-2000 ମସିହା ଅନୁଯାୟୀ ଓଡ଼ିଶାରେ ଦାରିଦ୍ର୍ୟର ସୀମାରେଖା ତଳେ କେତେ ଲୋକ ଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସାରଣୀର ଧାଡ଼ି ଓ ସ୍ତମ୍ଭ ଉଭୟ ମିଳାଅ: ସ୍ଥାନ ଓଡ଼ିଶା, ବର୍ଷ ୧୯୯୯–୨୦୦୦। ୪୭.୨ ଶତାଂଶ ହେଉଛି ସେ ସମୟର ରାଜ୍ୟ ଲୋକସଂଖ୍ୟାର ଅଂଶ, ଲକ୍ଷ ଲୋକର ସଂଖ୍ୟା ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠର ସାରଣୀରେ ଓଡ଼ିଶାର ଲୋକସଂଖ୍ୟାର ୪୭.୨ ପ୍ରତିଶତ ଦାରିଦ୍ର୍ୟ ସୀମାରେଖା ତଳେ ଥିଲେ। ଏହା ୧୯୯୯–୨୦୦୦ର ତଥ୍ୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-37"><h2>ତୃତୀୟ ପାଠ · 1 (f). ସମନ୍ୱିତ ଗ୍ରାମ୍ୟ ଉନ୍ନୟନ ଯୋଜନାର ଲକ୍ଷ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉତ୍ପାଦନଶୀଳ ସମ୍ପଦ ପାଇଲେ ପରିବାର ତାକୁ କାମରେ ଲଗାଇ ପୁଣିପୁଣି ଆୟ କରିପାରେ। ତେଣୁ ପାଠର ଏହି ଯୋଜନା ଏକ ଦିନର ମଜୁରିଠାରୁ ଦୀର୍ଘକାଳୀନ ଆତ୍ମନିଯୁକ୍ତିକୁ ଲକ୍ଷ୍ୟ କରିଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମୀଣ ଦରିଦ୍ର ପରିବାରକୁ ଉତ୍ପାଦନଶୀଳ ସମ୍ପଦ, ଋଣ ଓ ଆର୍ଥିକ ସହାୟତା ଦେଇ ଆତ୍ମନିଯୁକ୍ତି ଓ ସ୍ଥାୟୀ ଆୟ ସୃଷ୍ଟି କରିବା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-38"><h2>ତୃତୀୟ ପାଠ · 1 (g). ଦୁଇଟି ଆତ୍ମ ନିଯୁକ୍ତିଭିତ୍ତିକ ଦାରିଦ୍ର୍ୟ ଦୂରୀକରଣ ଯୋଜନା ବିଷୟରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଯୋଜନା ‘କାମ ଆରମ୍ଭ ପାଇଁ କ’ଣ ଦରକାର’ ପ୍ରଶ୍ନରେ ପୁଞ୍ଜି ଓ ସମ୍ପଦ ଦିଏ। ଦ୍ୱିତୀୟଟି ‘କାମଟି କିପରି କରିବେ’ ପ୍ରଶ୍ନରେ ତାଲିମ ଦିଏ। ଦୁଇଟି ଭିନ୍ନ ଅଭାବ ପୂରଣ କରୁଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମନ୍ୱିତ ଗ୍ରାମ୍ୟ ଉନ୍ନୟନ ଯୋଜନା ଦରିଦ୍ର ପରିବାରକୁ ଆୟକାରୀ କାର୍ଯ୍ୟ ପାଇଁ ସହାୟତା ଦିଏ। ଗ୍ରାମ୍ୟ ଯୁବକ ତାଲିମ ଯୋଜନା ଆତ୍ମନିଯୁକ୍ତି ପାଇଁ ଦକ୍ଷତା ଶିଖାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-39"><h2>ତୃତୀୟ ପାଠ · 1 (h). ଭାରତରେ ଦାରିଦ୍ର୍ୟର କାରଣ ସମ୍ପର୍କରେ ସୂଚନା ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଳ୍ପ ଜମି ଓ କମ୍ କାମରୁ ଆୟ କମେ। ଆୟ କମ୍ ରହିଲେ ସଞ୍ଚୟ ବା ନୂଆ କାମରେ ପୁଞ୍ଜି ଲଗାଇବା କଷ୍ଟ। ଏପରି କାରଣଗୁଡ଼ିକ ପରସ୍ପରକୁ କିପରି ଦୀର୍ଘ କରନ୍ତି ଦେଖାଇଲେ ତାଲିକାର ଅର୍ଥ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ରୁତ ଜନସଂଖ୍ୟା ବୃଦ୍ଧି, ବେକାରୀ, କମ୍ ଉତ୍ପାଦନ, ଜମି ଓ ଆୟର ଅସମ ବଣ୍ଟନ ଏବଂ ସୁଯୋଗର ଅଭାବ ଦାରିଦ୍ର୍ୟକୁ ବଜାୟ ରଖେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-40"><h2>ତୃତୀୟ ପାଠ · 1 (i). ଗ୍ରାମୀଣ ମହିଳା ଓ ଶିଶୁ ଉନ୍ନୟନ ଯୋଜନା କେବେଠାରୁ କାର୍ଯ୍ୟକାରୀ ହେଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଖ ଅନୁଚ୍ଛେଦର ୧୯୮୩ ଭୂମିହୀନଙ୍କ ଅନ୍ୟ ନିଯୁକ୍ତି ଯୋଜନା ସହ ଯୋଡ଼ା। ୧୯୯୯ ପୂର୍ବ ଯୋଜନାଗୁଡ଼ିକୁ ଏକତ୍ର କରିବାର ବର୍ଷ। ଏହି ଦୁଇ ବର୍ଷରୁ କୌଣସିଟିକୁ DWCRAର ଆରମ୍ଭ ବର୍ଷ ଭାବେ ଧରିହେବ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୃଷ୍ଠା ୧୩–୧୪ରେ ଗ୍ରାମୀଣ ମହିଳା ଓ ଶିଶୁ ଉନ୍ନୟନ ଯୋଜନାର ଲକ୍ଷ୍ୟ ଓ ଦଳଗତ ଆୟ ପାଇଁ ସହାୟତା ବର୍ଣ୍ଣିତ। ଦିଆଯାଇଥିବା ପାଠର ଏହି ବିବରଣୀରେ ଆରମ୍ଭ ବର୍ଷ ଉଲ୍ଲେଖ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-41"><h2>ତୃତୀୟ ପାଠ · 1 (j). ପ୍ରଧାନମନ୍ତ୍ରୀ ରୋଜଗାର ଯୋଜନାରେ କି କି କାର୍ଯ୍ୟକ୍ରମ ହାତକୁ ନିଆଯାଇଥାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୫ ପ୍ରତିଶତ ହେଉଛି ଅନୁଦାନ ହିସାବର ହାର, ୭,୫୦୦ ଟଙ୍କା ଏହାର ସର୍ବୋଚ୍ଚ ସୀମା। ଉଭୟ ପାର୍ଶ୍ୱ ମନେ ରଖ। ପାଠର ୧୯୯୩ର ଯୋଜନାରେ ଏହି ସହାୟତା ନିଜ ଲଘୁଶିଳ୍ପ ଠିଆ କରିବା ପାଇଁ ଥିଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୯୩ର ଏହି ଯୋଜନାରେ ୧୮–୩୫ ବର୍ଷର ବେକାର ଯୁବକଯୁବତୀଙ୍କୁ ଲଘୁଶିଳ୍ପ ପ୍ରତିଷ୍ଠା ପାଇଁ ୧୫ ପ୍ରତିଶତ, ସର୍ବାଧିକ ୭,୫୦୦ ଟଙ୍କା ଅନୁଦାନର ବ୍ୟବସ୍ଥା ଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-42"><h2>ତୃତୀୟ ପାଠ · 1 (k). ଜବାହାରର ଗ୍ରାମ୍ୟ ସମୃଦ୍ଧି ଯୋଜନାର ଲକ୍ଷ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇଟି ଫଳ ଅଛି। ନିର୍ମାଣ ସମୟରେ କାମ କରୁଥିବା ବ୍ୟକ୍ତି ମଜୁରି ପାଆନ୍ତି; ନିର୍ମାଣ ପରେ ଗାଁରେ ସାମୂହିକ ଉପଯୋଗ ପାଇଁ ଭିତ୍ତିଭୂମି ରହିଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମରେ ସ୍ଥାୟୀ ସାମୂହିକ ସମ୍ପଦ ଓ ଭିତ୍ତିଭୂମି ଗଢ଼ିବା ଏବଂ ସେହି କାମରେ ଦରିଦ୍ର ଗ୍ରାମବାସୀଙ୍କୁ ମଜୁରିଭିତ୍ତିକ ନିଯୁକ୍ତି ଦେବା ଥିଲା ଲକ୍ଷ୍ୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-43"><h2>ତୃତୀୟ ପାଠ · 2 (a). ସମନ୍ୱିତ ଗ୍ରାମ୍ୟ ଉନ୍ନୟନ ଯୋଜନା ଓ ଜାତୀୟ ଗ୍ରାମୀଣ ନିୟୋଜନ ଯୋଜନା।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମରେ ଲାଭାର୍ଥୀ ନିଜର ଉତ୍ପାଦନମୂଳକ କାମ କରିବାକୁ ସାଧନ ପାଆନ୍ତି। ଦ୍ୱିତୀୟରେ ଗ୍ରାମର ସାଧାରଣ କାମରେ ଶ୍ରମ ଦେଇ ମଜୁରି ପାଆନ୍ତି। ଲକ୍ଷ୍ୟ ଉଭୟରେ ଆୟ ବଢ଼ାଇବା, ଆୟ ପାଇବାର ପଥ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସମନ୍ୱିତ ଗ୍ରାମ୍ୟ ଉନ୍ନୟନ ଯୋଜନା ଆତ୍ମନିଯୁକ୍ତି ପାଇଁ ସମ୍ପଦ ଓ ଆର୍ଥିକ ସହାୟତା ଦିଏ। ଜାତୀୟ ଗ୍ରାମୀଣ ନିୟୋଜନ ଯୋଜନା ଗ୍ରାମୀଣ ନିର୍ମାଣକାର୍ଯ୍ୟରେ ମଜୁରି ନିଯୁକ୍ତି ସୃଷ୍ଟି କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-44"><h2>ତୃତୀୟ ପାଠ · 2 (b). ଚରମ ଦାରିଦ୍ର୍ୟ ଓ ଆପେକ୍ଷିକ ଦାରିଦ୍ର୍ୟ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଚରମ ଦାରିଦ୍ର୍ୟ ପାଇଁ ମାନ ହେଉଛି ନିଜର ମୌଳିକ ଆବଶ୍ୟକତା। ଆପେକ୍ଷିକ ଦାରିଦ୍ର୍ୟ ପାଇଁ ମାନ ସମାଜର ଅନ୍ୟ ଶ୍ରେଣୀର ଆୟ ବା ଜୀବନଯାପନ। ତେଣୁ ଦ୍ୱିତୀୟ ଉତ୍ତରରେ କାହା ସହ ତୁଳନା ତାହା ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚରମ ଦାରିଦ୍ର୍ୟରେ ବ୍ୟକ୍ତି ଜୀବନଧାରଣର ସର୍ବନିମ୍ନ ଆବଶ୍ୟକତା ପୂରଣ କରିପାରେନାହିଁ। ଆପେକ୍ଷିକ ଦାରିଦ୍ର୍ୟରେ ସମାଜର ଅନ୍ୟ ବର୍ଗ ତୁଳନାରେ ତାଙ୍କ ଆୟ ବା ଜୀବନଧାରଣ ମାନ କମ୍ ଥାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-45"><h2>ତୃତୀୟ ପାଠ · 2 (c). ଆତ୍ମନିଯୁକ୍ତି ପାଇଁ ଗ୍ରାମ୍ୟ ଯୁବକ ତାଲିମ ଯୋଜନା ଓ ସ୍ୱର୍ଣ୍ଣ ଜୟନ୍ତୀ ସହରୀ ରୋଜଗାର ଯୋଜନା।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମଟିରେ ଲକ୍ଷିତ ଲୋକ ଗ୍ରାମ୍ୟ ଯୁବକଯୁବତୀ ଓ ପଦ୍ଧତି ତାଲିମ। ଦ୍ୱିତୀୟଟି ସହରୀ ଦରିଦ୍ରଙ୍କ ରୋଜଗାର ସହ ସମ୍ପୃକ୍ତ। ଯୋଜନାର ନାମ ସହ ଅଞ୍ଚଳ ଓ ସହାୟତାର ରୂପ ଉଭୟ ତୁଳନା କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମ୍ୟ ଯୁବକ ତାଲିମ ଯୋଜନା ଗାଁର ଯୁବକଯୁବତୀଙ୍କୁ ରୋଜଗାର ପାଇଁ ଦକ୍ଷ କରେ। ସ୍ୱର୍ଣ୍ଣ ଜୟନ୍ତୀ ସହରୀ ରୋଜଗାର ଯୋଜନା ସହରାଞ୍ଚଳର ଦରିଦ୍ରଙ୍କୁ ଆତ୍ମନିଯୁକ୍ତି ଓ ମଜୁରିଭିତ୍ତିକ କାମ ଦିଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-46"><h2>ତୃତୀୟ ପାଠ · 3 (a). ଗ୍ରାମାଞ୍ଚଳରେ କାହିଁକି ଦରିଦ୍ରଙ୍କ ସଂଖ୍ୟା ଅଧିକ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘କୃଷି କାମ ଅଛି’ କହିଲେ ବର୍ଷସାରା ଆୟ ଅଛି ବୋଲି ହୁଏନାହିଁ। ଅମଳ ମଝିରେ ବିକଳ୍ପ କାମ ନ ଥିଲେ ସେହି ମାସଗୁଡ଼ିକର ପରିବାର ଖର୍ଚ୍ଚ ଗୋଟିଏ ଋତୁର ରୋଜଗାରରୁ ଚଳାଇବାକୁ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମାଞ୍ଚଳରେ ଅନେକ ପରିବାର ଅଳ୍ପ ଜମି ବା ମୌସୁମୀ କୃଷିମଜୁରି ଉପରେ ନିର୍ଭର କରନ୍ତି। ବିକଳ୍ପ କାମ, ତାଲିମ ଓ ପୁଞ୍ଜି କମ୍ ଥିବାରୁ ବର୍ଷସାରା ଆୟ ମିଳେନାହିଁ।</p><p>କୃଷିରେ ଋତୁ ଅନୁସାରେ କାମ ମିଳୁଥିବାରୁ ଆୟ ସ୍ଥିର ରହେ ନାହିଁ। ଅଭାବ ସମୟରେ ଋଣ ନେଲେ ପରର ଆୟରୁ ଋଣ ଶୁଝିବାକୁ ପଡ଼େ।</p><p>ଏହି ସମ୍ପର୍କ ଦାରିଦ୍ର୍ୟକୁ ଦୀର୍ଘ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=117">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧୭–୧୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-47"><h2>ତୃତୀୟ ପାଠ · 3 (b). ସମନ୍ୱିତ ଗ୍ରାମ୍ୟ ଉନ୍ନୟନ ଯୋଜନାର ଲକ୍ଷ୍ୟ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଲକ୍ଷ୍ୟ ଓ ଉପାୟ ଅଲଗା କର। ଋଣ, ଅନୁଦାନ ଓ ଉତ୍ପାଦନଶୀଳ ସମ୍ପତ୍ତି ଯୋଗାଇବା ଥିଲା ଉପାୟ। ସେହି ସହାୟତାରେ ସ୍ଥାୟୀ ଆୟ ବଢ଼ି ପରିବାର ଦାରିଦ୍ର୍ୟ ସୀମା ଉପରକୁ ଯିବା ଥିଲା ଲକ୍ଷ୍ୟ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦାରିଦ୍ର୍ୟ ସୀମା ତଳେ ଥିବା ପରିବାରକୁ ଋଣ, ଅନୁଦାନ ଓ ଉତ୍ପାଦନଶୀଳ ସମ୍ପତ୍ତି ଦେଇ ସେମାନଙ୍କ ଆୟ ବଢ଼ାଇବା ଓ ଦାରିଦ୍ର୍ୟରୁ ବାହାର କରିବା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-48"><h2>ତୃତୀୟ ପାଠ · 3 (c). ଦାରିଦ୍ର୍ୟର କଳନା କିପରି କରାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ସର୍ବନିମ୍ନ ଆବଶ୍ୟକତା ପୂରଣର ଖର୍ଚ୍ଚ ଧର। ପରେ ପରିବାରର ଖର୍ଚ୍ଚକୁ ସେ ସୀମା ସହ ତୁଳନା କର। ସୀମା ତଳେ କେତେ ଅଛନ୍ତି ଗଣି ମୋଟ ଲୋକଙ୍କ ମଧ୍ୟରେ ସେମାନଙ୍କ ଅଂଶ ନିରୂପଣ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସର୍ବନିମ୍ନ ଖାଦ୍ୟ ଓ ଅନ୍ୟ ଆବଶ୍ୟକତା ପାଇଁ ଖର୍ଚ୍ଚର ମାନ ଧରି ଦାରିଦ୍ର୍ୟ ସୀମା ନିର୍ଣ୍ଣୟ ହୁଏ। ଏହା ତଳେ ଥିବା ଲୋକଙ୍କ ସଂଖ୍ୟାକୁ ମୋଟ ଲୋକସଂଖ୍ୟା ସହ ତୁଳନା କରି ଦାରିଦ୍ର୍ୟ ହାର ମିଳେ।</p><p>ଦୁଇ ସ୍ଥାନର ଦରିଦ୍ରଙ୍କ ସଂଖ୍ୟା ସମାନ ଥାଇପାରେ। ମୋଟ ଲୋକସଂଖ୍ୟା ଭିନ୍ନ ଥିଲେ ସେଠାରେ ଦାରିଦ୍ର୍ୟର ଶତକଡ଼ା ହାର ଭିନ୍ନ ହେବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧୪–୧୧୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-49"><h2>ତୃତୀୟ ପାଠ · 3 (d). ଜାତୀୟ ଗ୍ରାମୀଣ ନିଯୁକ୍ତି ପ୍ରତିଶ୍ରୁତି ଆଇନ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠରେ ୧୦୦ ଦିନ ଗୋଟିଏ ବର୍ଷ ସହ ଯୋଡ଼ା। କାମର ପ୍ରକାର ଅଣକୁଶଳୀ ଶ୍ରମଭିତ୍ତିକ ମଜୁରି କାମ। ଏହାକୁ ସମସ୍ତ ବ୍ୟକ୍ତି ପାଇଁ ବର୍ଷସାରା ଦରମାର ଚାକିରି ବୋଲି ଅର୍ଥ କରିବା ଭୁଲ୍।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମୀଣ ପରିବାରର କାମ ଚାହୁଁଥିବା ସାବାଳକ ସଦସ୍ୟଙ୍କ ପାଇଁ ବର୍ଷରେ ଏକ ଶହ ଦିନ ଅଣକୁଶଳୀ ଶ୍ରମଭିତ୍ତିକ ମଜୁରି କାମର ପ୍ରତିଶ୍ରୁତି ଏହି ଆଇନର ମୂଳ ବ୍ୟବସ୍ଥା। ‘ପରିବାର’ ଓ ‘ବର୍ଷ’ ଏଠାରେ ମୁଖ୍ୟ।</p><p>ଶହେ ଦିନର ହିସାବ ପ୍ରତ୍ୟେକ ସଦସ୍ୟଙ୍କ ପାଇଁ ଅଲଗା ଶହେ ଦିନ ବୋଲି ବୁଝାଏ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=120">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-50"><h2>ତୃତୀୟ ପାଠ · 3 (e). ସ୍ୱର୍ଣ୍ଣ ଜୟନ୍ତୀ ଗ୍ରାମ୍ୟ ସ୍ୱ ରୋଜଗାର ଯୋଜନା।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠି ୧୯୯୯ ପୂର୍ବ କାର୍ଯ୍ୟକ୍ରମଗୁଡ଼ିକର ସମନ୍ୱୟ ସହ ସମ୍ପୃକ୍ତ। ଏକେ ପରିବାରକୁ ତାଲିମ, ଅର୍ଥ ଓ ଆୟମୂଳକ କାମର ସୁଯୋଗ ଏକାଠି ମିଳିଲେ ନିଜ ରୋଜଗାର ଗଢ଼ିବା ସହଜ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୂର୍ବର ଗ୍ରାମୀଣ ଆତ୍ମନିଯୁକ୍ତି ଯୋଜନାଗୁଡ଼ିକୁ ଏକତ୍ର କରି ୧୯୯୯ରେ ଏହି ଯୋଜନା ଆରମ୍ଭ ହେଲା। ତାଲିମ, ଋଣ ଓ ସହାୟତାରେ ଗ୍ରାମୀଣ ପରିବାରର ସ୍ଥାୟୀ ଆୟ ସୃଷ୍ଟି ଏହାର ଲକ୍ଷ୍ୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୨୧</a></small></article>
+<article id="exercise-51"><h2>ଚତୁର୍ଥ ପାଠ · 1 (a). ଆମ ଦେଶରେ ବେକାରୀ ସମସ୍ୟାର ମୂଳ କାରଣ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନିଯୁକ୍ତି ଚାହୁଁଥିବା ଲୋକ ଓ ଉପଲବ୍ଧ କାମକୁ ଦୁଇ ତାଲିକାରେ ରଖ। ନୂଆ କାମ ସୃଷ୍ଟି ହେଲେ ମଧ୍ୟ କାମ ଚାହୁଁଥିବା ଲୋକ ତା’ଠାରୁ ଶୀଘ୍ର ବଢ଼ିଲେ ବ୍ୟବଧାନ ରହିବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶ୍ରମଶକ୍ତି ବା ନିଯୁକ୍ତି ଚାହୁଁଥିବା ଲୋକଙ୍କ ସଂଖ୍ୟା ଯେଉଁ ଗତିରେ ବଢ଼େ, ନୂତନ କର୍ମସୁଯୋଗ ସେହି ଗତିରେ ବଢ଼େନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-52"><h2>ଚତୁର୍ଥ ପାଠ · 1 (b). ଭାରତର ପ୍ରଥମ ପଞ୍ଚବାର୍ଷିକ ଯୋଜନା କେବେ ଆରମ୍ଭ ହେଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>୧୯୫୧ ହେଉଛି ପ୍ରଥମ ପଞ୍ଚବାର୍ଷିକ ଯୋଜନାର ଆରମ୍ଭ। ଏହାକୁ ଗ୍ରାମ୍ୟ ଆତ୍ମନିଯୁକ୍ତି ବା ମଜୁରି ଯୋଜନାଗୁଡ଼ିକର ପରବର୍ତ୍ତୀ ଆରମ୍ଭ ବର୍ଷ ସହ ମିଶାଅନାହିଁ। ଏଠି ‘ପ୍ରଥମ’ ଶବ୍ଦ ଘଟଣାଟି ଚିହ୍ନାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>୧୯୫୧ରେ ପ୍ରଥମ ପଞ୍ଚବାର୍ଷିକ ଯୋଜନା ଆରମ୍ଭ ହେଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-53"><h2>ଚତୁର୍ଥ ପାଠ · 1 (c). ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀ କହିଲେ କ’ଣ ବୁଝ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (ଗ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଛୋଟ ଜମିରୁ କିଛି ଲୋକ ଅନ୍ୟ କାମକୁ ଗଲେ ମଧ୍ୟ ଅମଳ ସେତିକି ରହିଲା ବୋଲି ଧର। ବାହାରୁ ସମସ୍ତେ କାମରେ ଲାଗିଥିବା ଦେଖାଯାଉଥିବାରୁ ଏହି ବେକାରୀ ‘ପ୍ରଚ୍ଛନ୍ନ’।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କୌଣସି କାର୍ଯ୍ୟରେ ଦରକାରଠାରୁ ଅଧିକ ଲୋକ ନିୟୋଜିତ ଥାଇ କେତେକ ବ୍ୟକ୍ତିଙ୍କୁ କାଢ଼ିଲେ ମଧ୍ୟ ମୋଟ ଉତ୍ପାଦନ ଅପରିବର୍ତ୍ତିତ ରହିବା ଅବସ୍ଥା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-54"><h2>ଚତୁର୍ଥ ପାଠ · 1 (d). ଅର୍ଦ୍ଧ ବେକାରୀ କାହାକୁ କହନ୍ତି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କେହି ଦିନର କିଛି ସମୟ କାମ ପାଆନ୍ତି, ଅଥବା ତାଲିମ ଥାଇ ନିଜ ଯୋଗ୍ୟତାକୁ ଲଗାଇବା ଭଳି କାମ ପାଆନ୍ତି ନାହିଁ। ଏଠି କାମ ଥିଲେ ମଧ୍ୟ ଶ୍ରମକ୍ଷମତା ପୂରା ବ୍ୟବହୃତ ହେଉନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କାର୍ଯ୍ୟକ୍ଷମ ବ୍ୟକ୍ତି ନିଜ ସମୟ ବା କ୍ଷମତା ଅନୁସାରେ ପୂର୍ଣ୍ଣ କାମ ନପାଇ ଅଳ୍ପ ସମୟ କାମ କଲେ ସେ ଅର୍ଦ୍ଧ ବେକାର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-55"><h2>ଚତୁର୍ଥ ପାଠ · 1 (e). ଗ୍ରାମାଞ୍ଚଳରେ ବେକାରୀ ଅଧିକ ହେବାର କାରଣ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ କାରଣକୁ ଦୁଇ ପ୍ରକାର ବେକାରୀ ସହ ମେଳାଅ। ଋତୁ ବଦଳିଲେ କାମ ନଥିବା ଋତୁକାଳୀନ; ଏକେ ଜମିରେ ଦରକାରଠାରୁ ବେଶି ଲୋକ ଲାଗିଥିବା ପ୍ରଚ୍ଛନ୍ନ। ଅଣକୃଷି କାମ କମ୍ ଥିଲେ ଉଭୟ ସମସ୍ୟା ରହେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କୃଷି ଉପରେ ଅଧିକ ଲୋକ ନିର୍ଭର କରନ୍ତି, କିନ୍ତୁ ସବୁ ଋତୁରେ କାମ ମିଳେନାହିଁ। ଛୋଟ ଜମିରେ ଆବଶ୍ୟକତାଠାରୁ ଅଧିକ ଲୋକ ଲାଗିଲେ ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀ ହୁଏ।</p><p>ଅନ୍ୟ ନିଯୁକ୍ତି ସୁଯୋଗ କମ୍ ଥିବାରୁ ସମସ୍ୟା ବଢ଼େ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-56"><h2>ଚତୁର୍ଥ ପାଠ · 1 (f). ବେକାରୀ ସମସ୍ୟାର ସମାଧାନ ପାଇଁ କି ପଦକ୍ଷେପ ନିଆଯାଇଛି?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (ଗ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ମଜୁରିଭିତ୍ତିକ ନିର୍ମାଣ ତୁରନ୍ତ କାମ ଦିଏ। ତାଲିମ ଶ୍ରମିକଙ୍କ ଦକ୍ଷତା ବଢ଼ାଏ ଓ ବ୍ୟାଙ୍କ ଋଣ ନିଜ ଉଦ୍ୟୋଗ ଆରମ୍ଭ ପାଇଁ ପୁଞ୍ଜି ଦିଏ। ତିନି ପଦକ୍ଷେପ ଏକେ ଅଭାବ ପୂରଣ କରୁନାହାନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମୀଣ ଭିତ୍ତିଭୂମି କାମରେ ନିଯୁକ୍ତି ସୃଷ୍ଟି, ଧନ୍ଦାମୂଳକ ଓ ବୈଷୟିକ ଶିକ୍ଷା, ଶିଳ୍ପ ତାଲିମ ଏବଂ ଉଦ୍ୟୋଗ ପାଇଁ ବ୍ୟାଙ୍କ ଋଣ ଏହାର ଉଦାହରଣ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=124" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୪</a></small></article>
+<article id="exercise-57"><h2>ଚତୁର୍ଥ ପାଠ · 2 (a). ବେକାରୀ ଓ ଅର୍ଦ୍ଧ ବେକାରୀ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଲୋକଙ୍କ ପ୍ରଶ୍ନ ‘ମୁଁ ଆଦୌ କାମ ପାଉଛି କି?’ ଦ୍ୱିତୀୟ ଲୋକଙ୍କ ପ୍ରଶ୍ନ ‘ଯେତେ ସମୟ ଓ ଯୋଗ୍ୟତା ଅଛି ସେତିକି ଅନୁସାରେ କାମ ମିଳୁଛି କି?’ ଏହି ଦୁଇ ମାନଦଣ୍ଡରୁ ପାର୍ଥକ୍ୟ ବୁଝାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବେକାରୀରେ ଇଚ୍ଛା ଓ ସାମର୍ଥ୍ୟ ଥାଇ ମଧ୍ୟ କାମ ମିଳେନାହିଁ। ଅର୍ଦ୍ଧ ବେକାରୀରେ କିଛି କାମ ମିଳେ, କିନ୍ତୁ ପୂର୍ଣ୍ଣ ସମୟ ବା ଦକ୍ଷତାର ସଦୁପଯୋଗ ହୁଏନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-58"><h2>ଚତୁର୍ଥ ପାଠ · 2 (b). ଋତୁକାଳୀନ ବେକାରୀ ଓ ସଂସ୍ଥାନୀୟ ବେକାରୀ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଋତୁକାଳୀନ ବେକାରୀରେ ପର ରୁଆ ବା ଅମଳ ଋତୁରେ କାମ ଫେରିପାରେ। ସଂସ୍ଥାନୀୟ ବେକାରୀରେ ଋତୁ ବଦଳିଲା ମାତ୍ରେ ପୁଞ୍ଜି ବା ଉତ୍ପାଦନ ଉପକରଣର ଅଭାବ ଦୂର ହୁଏନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଋତୁକାଳୀନ ବେକାରୀ କାମର ଋତୁ ଶେଷ ହେବାରୁ ହୁଏ। ସଂସ୍ଥାନୀୟ ବେକାରୀର କାରଣ ଅର୍ଥବ୍ୟବସ୍ଥାରେ ପୁଞ୍ଜି ଓ ଉତ୍ପାଦନ ସମ୍ବଳର ଅଭାବ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-59"><h2>ଚତୁର୍ଥ ପାଠ · 2 (c). ସଂଘାତଜନିତ ବେକାରୀ ଓ ପ୍ରାବିଧିକ ବେକାରୀ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକ ବୃତ୍ତିର ଚାହିଦା ବଦଳି ଶ୍ରମିକ ପର କାମ ଖୋଜୁଥିବା ମଝିର ଅବଧିକୁ ପ୍ରଥମ ପ୍ରକାର ସହ ଯୋଡ଼। ପ୍ରଯୁକ୍ତି ବଦଳି ଯନ୍ତ୍ର ଦ୍ୱାରା ଆଗର କାମ ହେଉଥିଲେ ଦ୍ୱିତୀୟରେ ବେକାରୀର କାରଣ ପ୍ରାବିଧିକ ପରିବର୍ତ୍ତନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ରବ୍ୟ ଚାହିଦା ବା ଉତ୍ପାଦନ ପଦ୍ଧତି ବଦଳିଲେ ପୁରୁଣା କାମରୁ ଛଟେଇ ଓ ନୂଆ କାମ ମିଳିବା ମଧ୍ୟର ଅବସ୍ଥା ସଂଘାତଜନିତ ବେକାରୀ। ଯନ୍ତ୍ର ଲୋକଙ୍କ କାମ ନେବାରୁ ପ୍ରାବିଧିକ ବେକାରୀ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-60"><h2>ଚତୁର୍ଥ ପାଠ · 3 (a). ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହାକୁ ଦେଖିବାର ପରୀକ୍ଷା ହେଉଛି ଉତ୍ପାଦନ ତୁଳନା। କାମକ୍ଷେତ୍ରରେ କେତେ ମୁଣ୍ଡ ଅଛନ୍ତି ଗଣିଲେ ମାତ୍ର ଚିହ୍ନିହେବନାହିଁ। ଅତିରିକ୍ତ ଶ୍ରମିକ ଅନ୍ୟ କାମରେ ଲାଗିଲେ ଯେଉଁ ଉତ୍ପାଦନ ଯୋଡ଼ାଯାଇପାରେ ତାହା ଭାବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କାର୍ଯ୍ୟରତ ଲୋକଙ୍କ ମଧ୍ୟରୁ କେତେକଙ୍କୁ କାଢ଼ିଲେ ମଧ୍ୟ ଉତ୍ପାଦନ ଯଦି କମେନାହିଁ, ସେହି ଅତିରିକ୍ତ ଶ୍ରମିକ ପ୍ରଚ୍ଛନ୍ନ ବେକାର। ଛୋଟ ଜୋତରେ ଏହା ଦେଖାଯାଏ।</p><p>ଗୋଟିଏ ଜମିରୁ ଜଣେ କର୍ମୀ ଅନ୍ୟ କାମକୁ ଗଲେ ମଧ୍ୟ ପୂର୍ବପରି ଶସ୍ୟ ଉତ୍ପାଦନ ହେଲେ ସେଠାରେ ଆବଶ୍ୟକତାଠାରୁ ଅଧିକ ଶ୍ରମ ଲାଗୁଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=123">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-61"><h2>ଚତୁର୍ଥ ପାଠ · 3 (b). ଋତୁକାଳୀନ ବେକାରୀ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଋତୁକାଳୀନର ଚିହ୍ନ ହେଲା କାମ ବର୍ଷର ନିର୍ଦ୍ଦିଷ୍ଟ ସମୟରେ ଫେରେ। ତେଣୁ ଫାଙ୍କା ମାସ ପାଇଁ ଅଣକୃଷି କାମର ସୁଯୋଗ ମିଳିଲେ ସମସ୍ୟାର ସମୟ ହ୍ରାସ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବର୍ଷର କେତେକ ମାସରେ ମାତ୍ର କାମ ମିଳି ଅନ୍ୟ ସମୟରେ କର୍ମହୀନ ରହିବା ଋତୁକାଳୀନ ବେକାରୀ। କୃଷିରେ ରୁଆ ଓ ଅମଳ ପରେ ଏଭଳି ସମସ୍ୟା ହୁଏ।</p><p>ରୋପଣ ଓ ଅମଳ ସମୟରେ କାମ ଥିବା ଶ୍ରମିକ ମଝି ଋତୁରେ ଅନ୍ୟ କାମ ନପାଇଲେ ଏହି ପ୍ରକାର ବେକାରୀ ଦେଖାଦିଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=123">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-62"><h2>ଚତୁର୍ଥ ପାଠ · 3 (c). ସଂସ୍ଥାନୀୟ ବେକାରୀ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯଦି ଅଧିକ କାର୍ଯ୍ୟକ୍ଷମ ଲୋକ ଅଛନ୍ତି କିନ୍ତୁ କମ୍ ଉତ୍ପାଦନ ସାଧନ ଅଛି, କେବଳ ‘କାମ କରିବାକୁ ଇଚ୍ଛା କର’ କହିଲେ ପଦ ସୃଷ୍ଟି ହୁଏନାହିଁ। ଏହି ସ୍ଥାୟୀ ଅସମତାକୁ ପାଠ ‘ସଂସ୍ଥାନୀୟ’ ଶ୍ରେଣୀରେ ବୁଝାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶ୍ରମିକ ପ୍ରସ୍ତୁତ ଥିଲେ ମଧ୍ୟ ଉପକରଣ, ପୁଞ୍ଜି ବା ଉତ୍ପାଦନ ସମ୍ବଳ କମ୍ ଥିବାରୁ ସମସ୍ତଙ୍କୁ କାମ ମିଳିପାରୁନଥିବା ଅବସ୍ଥା ସଂସ୍ଥାନୀୟ ବେକାରୀ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-63"><h2>ଚତୁର୍ଥ ପାଠ · 3 (d). ବେକାରୀ ଦୂରୀକରଣ କାର୍ଯ୍ୟକ୍ରମ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯୋଜନା ଚିହ୍ନଟରେ ଲକ୍ଷ୍ୟ ଓ ଲାଭର ରୂପ ଦେଖ। ଗ୍ରାମ ନିର୍ମାଣରେ ଶ୍ରମ ପାଇଁ ମଜୁରି; ନିଜ ଉଦ୍ୟୋଗ ପାଇଁ ପୁଞ୍ଜି ଓ ତାଲିମ। ପାଠର ଐତିହାସିକ କାର୍ଯ୍ୟକ୍ରମଗୁଡ଼ିକୁ ଏହି ଦୁଇ ଭାଗରେ ସଜାଇହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯୋଜନା ଜରିଆରେ ଗ୍ରାମରେ ମଜୁରି କାର୍ଯ୍ୟ, ଗ୍ରାମ୍ୟ ଯୁବକଙ୍କ ତାଲିମ ଓ ଆତ୍ମନିଯୁକ୍ତି ପାଇଁ ଋଣ ବା ଅନୁଦାନ ଦିଆଯାଏ। ସହର ପାଇଁ ମଧ୍ୟ ରୋଜଗାର ଯୋଜନା ଅଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-64"><h2>ଚତୁର୍ଥ ପାଠ · 3 (e). ବେକାରୀ ସମସ୍ୟାର ସମାଧାନ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଋତୁଭିତ୍ତିକ କୃଷି ଉପରେ ନିର୍ଭର ଗାଁରେ କୁଟୀର ଶିଳ୍ପ ଫାଙ୍କା ସମୟରେ କାମ ଦେଇପାରେ। ତାଲିମ କାମ ଶିଖାଏ, ଋଣ ଉପକରଣ ମିଳିବାରେ ସାହାଯ୍ୟ କରେ। ଉଭୟ ମିଳିଲେ ଆତ୍ମନିଯୁକ୍ତିର ପଥ ଖୋଲେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କୃଷି ବାହାରେ କୁଟୀର ଓ କ୍ଷୁଦ୍ର ଶିଳ୍ପ ବଢ଼ାଇବା, କୌଶଳ ପ୍ରଶିକ୍ଷଣ, ଆତ୍ମନିଯୁକ୍ତିକୁ ସହାୟତା ଓ ଶ୍ରମଭିତ୍ତିକ କାମ ସୃଷ୍ଟି କଲେ ବେକାରୀ କମେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-65"><h2>ଚତୁର୍ଥ ପାଠ · 4 (a). ଭାରତରେ ବେକାରୀ ସମସ୍ୟାର ବିଭିନ୍ନ କାରଣ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉତ୍ତରକୁ ତିନି କାରଣ ଓ ସେମାନଙ୍କ ଫଳରେ ସଜାଅ। ଶ୍ରମଶକ୍ତି ବଢ଼ିଲେ ଅଧିକ କାମ ଲାଗେ; କୃଷିରେ କାମ ନିର୍ଦ୍ଦିଷ୍ଟ ଋତୁରେ ମିଳେ; ପୁଞ୍ଜି ଓ କୌଶଳ ଅଭାବରେ ନୂଆ ଉଦ୍ୟୋଗ ସମସ୍ତଙ୍କୁ ନେଇପାରେନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜନସଂଖ୍ୟା ଓ ଶ୍ରମଶକ୍ତିର ବୃଦ୍ଧି ଅନୁସାରେ କର୍ମସୁଯୋଗ ବଢ଼ିପାରେନାହିଁ। କୃଷିରେ ବର୍ଷସାରା କାମ ନଥାଏ ଓ ଏକେ ଜମିରେ ଆବଶ୍ୟକତାଠାରୁ ଅଧିକ ଲୋକ ନିର୍ଭର କରନ୍ତି।</p><p>ଶିଳ୍ପ ଓ ବିକଳ୍ପ ଜୀବିକା ପାଇଁ ପୁଞ୍ଜି ଅଭାବ ରହେ। ଯନ୍ତ୍ର ବ୍ୟବହାର ଓ ବଜାରର ପରିବର୍ତ୍ତନରେ ପୁରୁଣା କାମ କମେ।</p><p>ଅନ୍ୟ କାମ ପାଇଁ ଉପଯୁକ୍ତ ତାଲିମ ନଥିଲେ ନିଯୁକ୍ତି ବିଳମ୍ବିତ ହୁଏ। ତେଣୁ ଏକ ପ୍ରକାର ପ୍ରତିକାର ସବୁ କାରଣ ପାଇଁ ଯଥେଷ୍ଟ ନୁହେଁ।</p><p>ଋତୁକାଳୀନ ଅଭାବରେ ବିକଳ୍ପ କାମ ଓ ଯନ୍ତ୍ର ଯୋଗୁଁ କାମ ବଦଳିଲେ ନୂଆ କାମର ତାଲିମ ଆବଶ୍ୟକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-66"><h2>ଚତୁର୍ଥ ପାଠ · 4 (b). ବିଭିନ୍ନ ପ୍ରକାରର ବେକାରୀ ସମ୍ପର୍କରେ ଆଲୋକପାତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଞ୍ଚ ନାମରୁ ପ୍ରତ୍ୟେକ ସହ ଗୋଟିଏ ନିର୍ଣ୍ଣାୟକ ସୂତ୍ର ରଖ: ଋତୁ, ଅତିରିକ୍ତ ଶ୍ରମ, ପୁଞ୍ଜିର ଅଭାବ, ଏକ କାମରୁ ଅନ୍ୟକୁ ଯିବାର ଅବଧି, ଯନ୍ତ୍ରର ପରିବର୍ତ୍ତନ। ଏହି ଭେଦରୁ ଠିକ୍ ଉଦାହରଣ ବାଛିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଠରେ ପାଞ୍ଚ ପ୍ରକାର ବେକାରୀ ରହିଛି। ଋତୁକାଳୀନ ବେକାରୀ କେତେକ ଋତୁରେ କାମ ନଥିବା ହେତୁ ହୁଏ।</p><p>ପ୍ରଚ୍ଛନ୍ନ ବେକାରୀରେ ଅତିରିକ୍ତ ଶ୍ରମ ଉତ୍ପାଦନ ବଢ଼ାଏନାହିଁ। ସଂଘାତଜନିତ ବେକାରୀରେ ପୁରୁଣା କାମ ନଷ୍ଟ ହେବା ଓ ନୂଆ କାମ ମିଳିବା ମଧ୍ୟରେ ବିରତି ରହେ।</p><p>ସଂସ୍ଥାନୀୟ ବେକାରୀରେ ସମ୍ବଳ ଓ ପୁଞ୍ଜିର ଅଭାବ, ପ୍ରାବିଧିକ ବେକାରୀରେ ଶ୍ରମର ସ୍ଥାନ ଯନ୍ତ୍ର ନେବା ମୁଖ୍ୟ କାରଣ। ଚାଷର ଦୁଇଟି ଉଦାହରଣ ଏହି ଭେଦକୁ ସ୍ପଷ୍ଟ କରେ।</p><p>ଅମଳ ପରେ କାମ ନମିଳିବାରେ ସମୟ ମୁଖ୍ୟ। ସମସ୍ତେ କ୍ଷେତରେ କାମ କଲେ ମଧ୍ୟ ଜଣକୁ ହଟାଇଲେ ମୋଟ ଅମଳ ନକମିବାରେ ଅତିରିକ୍ତ ଶ୍ରମ ମୁଖ୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+<article id="exercise-67"><h2>ଚତୁର୍ଥ ପାଠ · 4 (c). ବେକାରୀ ଦୂରୀକରଣ ପାଇଁ ବିଭିନ୍ନ କାର୍ଯ୍ୟକ୍ରମ ବିଷୟରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉତ୍ତରରେ ଯୋଜନାର ନାମ ସହ ଆୟ ପାଇବାର ରାସ୍ତାଟି କୁହ। ରାସ୍ତା ନିର୍ମାଣରେ ମଜୁରି, ନିଜ ଉଦ୍ୟୋଗ ପାଇଁ ଋଣ ଓ କୁଶଳ କାମ ପାଇଁ ତାଲିମ ତିନିଟି ଭିନ୍ନ ପଦ୍ଧତି। ବର୍ଷ ଓ ସହାୟତା ରାଶିକୁ ଦିଆଯାଇଥିବା ଯୋଜନା ସହ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗ୍ରାମୀଣ ନିଯୁକ୍ତି ଯୋଜନାରେ ନିର୍ମାଣକାର୍ଯ୍ୟ ଜରିଆରେ ମଜୁରି ମିଳେ। ସମନ୍ୱିତ ଗ୍ରାମ୍ୟ ଉନ୍ନୟନ ଓ ସ୍ୱରୋଜଗାର ଯୋଜନା ଆତ୍ମନିଯୁକ୍ତି ପାଇଁ ସମ୍ପଦ ଯୋଗାଏ।</p><p>ଗ୍ରାମ୍ୟ ଯୁବକ ତାଲିମ ଯୋଜନା ଦକ୍ଷତା ବଢ଼ାଏ। ପ୍ରଧାନମନ୍ତ୍ରୀ ରୋଜଗାର ଯୋଜନା ଲଘୁଶିଳ୍ପ ଖୋଲିବାରେ ଯୁବକଯୁବତୀଙ୍କୁ ସହାୟତା ଦିଏ।</p><p>ଏହି କାର୍ଯ୍ୟକ୍ରମରେ ତତ୍କାଳ ଆୟ ସହ ସ୍ଥାୟୀ ଜୀବିକାର ସୁଯୋଗ ସୃଷ୍ଟି ହୁଏ। ଗୋଟିଏ ପଦକ୍ଷେପ ତତ୍କାଳ ମଜୁରି ଯୋଗାଏ, ଅନ୍ୟଟି ତାଲିମ ଓ ଉତ୍ପାଦନ ସାଧନ ଦେଇ ନିଜସ୍ୱ ଜୀବିକାର ବାଟ ଖୋଲେ।</p><p>କାମ ଚାହୁଁଥିବା ଲୋକଙ୍କ ପରିସ୍ଥିତି ସହ ଏହି ଯୋଜନାଗୁଡ଼ିକୁ ମେଳାଇବାକୁ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=119">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧୯–୧୨୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=122" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୨–୧୨୪</a></small></article>
+
+</main></body></html>

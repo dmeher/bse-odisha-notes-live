@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଭାରତର ବୈଦେଶିକ ନୀତି · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଭାରତର ବୈଦେଶିକ ନୀତି</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1C8ZBbS-Alt3d64_BKL_WisTcux_ttEnf/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପ୍ରଶ୍ନ ୧ର ୧୧, ପ୍ରଶ୍ନ ୨ର ୯, ପ୍ରଶ୍ନ ୩ର ୯ ଓ ପ୍ରଶ୍ନ ୪ର ୧୩ଟି ଉପପ୍ରଶ୍ନ ମିଳାଯାଇଛି। ବ୍ୟକ୍ତି, ତାରିଖ ଓ ଚୁକ୍ତି ପାଇଁ ପାଠର ପୃଷ୍ଠା ରହିଛି। ପୃ. ୧୯ର ତିନିଟି ତଥ୍ୟ ଓ ଚିତ୍ର ସଂଗ୍ରହ କାମ ମଧ୍ୟ ମିଳାଯାଇଛି।</p><p>ଅନେକ ଦେଶର ରାଷ୍ଟ୍ରମୁଖ୍ୟଙ୍କ ବାସଭବନ ଓ ବ୍ୟବସ୍ଥାପିକାର ଚିତ୍ର ଏବଂ ସମ୍ପୂର୍ଣ୍ଣ ଭାଷା–ମୁଦ୍ରା ତାଲିକା ଛାତ୍ରଙ୍କ ସଂଗ୍ରହ ଅଂଶ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୧୯–୨୨</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୩୫)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧ (କ)</a> <a href="#exercise-2">୧ (ଖ)</a> <a href="#exercise-3">୧ (ଗ)</a> <a href="#exercise-4">୧ (ଘ)</a> <a href="#exercise-5">୧ (ଙ)</a> <a href="#exercise-6">୧ (ଚ)</a> <a href="#exercise-7">୧ (ଛ)</a> <a href="#exercise-8">୧ (ଜ)</a> <a href="#exercise-9">୧ (ଝ)</a> <a href="#exercise-10">୧ (ଞ)</a> <a href="#exercise-11">୧ (ଟ)</a> <a href="#exercise-12">୨ (କ)</a> <a href="#exercise-13">୨ (ଖ)</a> <a href="#exercise-14">୨ (ଗ)</a> <a href="#exercise-15">୨ (ଘ)</a> <a href="#exercise-16">୨ (ଙ)</a> <a href="#exercise-17">୨ (ଚ)</a> <a href="#exercise-18">୨ (ଛ)</a> <a href="#exercise-19">୨ (ଜ)</a> <a href="#exercise-20">୨ (ଝ)</a> <a href="#exercise-21">୩ (କ)</a> <a href="#exercise-22">୩ (ଖ)</a> <a href="#exercise-23">୩ (ଗ)</a> <a href="#exercise-24">୩ (ଘ)</a> <a href="#exercise-25">୩ (ଙ)</a> <a href="#exercise-26">୩ (ଚ)</a> <a href="#exercise-27">୩ (ଛ)</a> <a href="#exercise-28">୩ (ଜ)</a> <a href="#exercise-29">୩ (ଝ)</a> <a href="#exercise-30">୪ (କ–ଙ)</a> <a href="#exercise-31">୪ (ଚ–ଞ)</a> <a href="#exercise-32">୪ (ଟ–ଡ)</a> <a href="#exercise-33">ତୁମ ପାଇଁ କାମ ୧</a> <a href="#exercise-34">ତୁମ ପାଇଁ କାମ ୨</a> <a href="#exercise-35">ତୁମ ପାଇଁ କାମ ୩</a></nav></details>
+<article id="exercise-1"><h2>୧ (କ). ପଞ୍ଚଶୀଳ ନୀତିଗୁଡ଼ିକ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟେକ ଦେଶ ଅନ୍ୟର ଭୌଗୋଳିକ ଅଖଣ୍ଡତା ଓ ସାର୍ବଭୌମତ୍ୱକୁ ସମ୍ମାନ କରିବ। ପରସ୍ପରକୁ ଆକ୍ରମଣ କରିବ ନାହିଁ ବା ଅନ୍ୟର ଆଭ୍ୟନ୍ତରୀଣ କାର୍ଯ୍ୟରେ ହସ୍ତକ୍ଷେପ କରିବ ନାହିଁ।</p><p>ସମାନତା ଓ ପାରସ୍ପରିକ ଉପକାର ଭିତ୍ତିରେ ଶାନ୍ତିପୂର୍ଣ୍ଣ ସହାବସ୍ଥାନ କରିବ। ଏହି ନୀତିରେ ଦୁଇ ଦେଶର ସମ୍ପର୍କ କିପରି ଚାଲିବ ତାହା ବୁଝାଯାଏ।</p><p>ପରସ୍ପରର ସୀମା ଓ ସାର୍ବଭୌମତ୍ୱକୁ ମାନିଲେ ପର ରାଷ୍ଟ୍ରର ଆଭ୍ୟନ୍ତରୀଣ କାମରେ ହସ୍ତକ୍ଷେପ ହୁଏ ନାହିଁ। ସମାନତା ଓ ପାରସ୍ପରିକ ଲାଭ ଆଧାରରେ ଶାନ୍ତିପୂର୍ଣ୍ଣ ସହାବସ୍ଥାନ ସମ୍ଭବ।</p><p>ଭାରତ–ଚୀନ ଆଲୋଚନାରେ ପଞ୍ଚଶୀଳର ପ୍ରୟୋଗ ହୋଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=188">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮୮–୧୮୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=188" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୮୮–୨୦୬</a></small></article>
+<article id="exercise-2"><h2>୧ (ଖ). ଗୋଷ୍ଠୀନିରପେକ୍ଷତାର ଅର୍ଥ ବୁଝାଅ।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (ଘ) (୨ ନମ୍ବର) / ସେଟ୍ ୫, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (ଘ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କୌଣସି ଶକ୍ତିଗୋଷ୍ଠୀରେ ଯୋଗ ନ ଦେଇ ପ୍ରତ୍ୟେକ ଆନ୍ତର୍ଜାତିକ ସମସ୍ୟା ସମ୍ପର୍କରେ ନିଜସ୍ୱ ବିଚାର ଓ ଦେଶର ସ୍ୱାର୍ଥ ଅନୁସାରେ ନୀତି ନିର୍ଦ୍ଧାରଣ କରିବା ହେଉଛି ଗୋଷ୍ଠୀନିରପେକ୍ଷତା। ଶୀତଳ ଯୁଦ୍ଧରେ ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା ଓ ସୋଭିଏତ୍ ରୁଷିଆ ନେତୃତ୍ୱରେ ଦୁଇ ଗୋଷ୍ଠୀ ଥିଲେ।</p><p>ଭାରତ ନିଜ ନିଷ୍ପତ୍ତି ନିଜେ ନେବାର ସୁଯୋଗ ରଖିଲା। ଫଳରେ କୌଣସି ପ୍ରଶ୍ନରେ ଏକ ଗୋଷ୍ଠୀ ସହ ମତଭେଦ ଥିଲେ ମଧ୍ୟ ଅନ୍ୟ ବିଷୟରେ ସେହି ଦେଶ ସହ ସହଯୋଗ ସମ୍ଭବ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=187">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮୭–୧୮୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=187" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୮୭–୨୦୬</a></small></article>
+<article id="exercise-3"><h2>୧ (ଗ). କାଶ୍ମୀର ବିବାଦ ବିଷୟରେ ସଂକ୍ଷେପରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦେଶ ବିଭାଜନ ପରେ ଜମ୍ମୁ ଓ କାଶ୍ମୀରର ମିଶ୍ରଣକୁ ନେଇ ଭାରତ ଓ ପାକିସ୍ତାନ ମଧ୍ୟରେ ବିବାଦ ଦେଖାଦେଲା। ୧୯୪୭ରେ ଆକ୍ରମଣ ପରେ ରାଜା ହରି ସିଂହ ଭାରତ ସହ ମିଶ୍ରଣ ପତ୍ରରେ ସ୍ୱାକ୍ଷର କରିଥିଲେ।</p><p>ଉଭୟ ଦେଶ ମଧ୍ୟରେ ଯୁଦ୍ଧ, ଯୁଦ୍ଧବିରତି ଓ ଆଲୋଚନା ହେଲା। ତାସକେଣ୍ଟ ଓ ସିମ୍ଳା ଚୁକ୍ତି ପରେ ମଧ୍ୟ ପାଠର ବିବରଣୀରେ ବିବାଦ ଅମୀମାଂସିତ ରହିଲା।</p><p>ପରେ ତାସକେଣ୍ଟ ଓ ସିମ୍ଳା ଆଲୋଚନା ଭାରତ–ପାକିସ୍ତାନ ସମ୍ପର୍କର ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ପଦକ୍ଷେପ ହେଲା। କାଶ୍ମୀରର ମିଶ୍ରଣ ଏବଂ ଦୁଇ ରାଷ୍ଟ୍ରର ପରବର୍ତ୍ତୀ ବିବାଦର ସମାଧାନ ଦୁଇଟି ପୃଥକ୍ ପ୍ରଶ୍ନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=194">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୯୪–୧୯୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=194" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୪–୨୦୬</a></small></article>
+<article id="exercise-4"><h2>୧ (ଘ). ତିବ୍ବତ ସମସ୍ୟା ଭାରତ ଓ ଚୀନ ସମ୍ପର୍କକୁ କିପରି ପ୍ରଭାବିତ କରିଛି, ତାହା ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ତିବ୍ବତ ଭାରତ ଓ ଚୀନ ମଧ୍ୟରେ ଅବସ୍ଥିତ। ତାହାର ସ୍ଥିତି ଓ ସୀମା ନେଇ ପୂର୍ବରୁ ମତଭେଦ ଥିଲା।</p><p>ଭାରତ ଶାନ୍ତିପୂର୍ଣ୍ଣ ସହାବସ୍ଥାନ ଓ ପଞ୍ଚଶୀଳକୁ ଗୁରୁତ୍ୱ ଦେଲା। କିନ୍ତୁ ତିବ୍ବତର ଘଟଣା, ଦଲାଇଲାମାଙ୍କ ଭାରତରେ ଆଶ୍ରୟ ଓ ସୀମାରେ ଉଭୟ ଦେଶର ଭିନ୍ନ ଦାବି ଯୋଗୁଁ ଦୁଇ ଦେଶ ମଧ୍ୟରେ ଅବିଶ୍ୱାସ ବଢ଼ିଲା।</p><p>ଏଠାରେ ତିବ୍ବତ ସମ୍ପର୍କିତ ମତଭେଦ ସହ ସୀମା ନେଇ ଦୁଇ ପକ୍ଷର ଭିନ୍ନ ଦାବି ଯୋଡ଼ି ହୋଇଥିଲା। ତେଣୁ ପଞ୍ଚଶୀଳ ନୀତି ସ୍ୱୀକାର ହୋଇଥିଲେ ମଧ୍ୟ ପାରସ୍ପରିକ ବିଶ୍ୱାସ ରକ୍ଷାରେ ବାଧା ଆସିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=196">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୯୬–୧୯୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=196" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୬–୨୦୬</a></small></article>
+<article id="exercise-5"><h2>୧ (ଙ). ଶ୍ରୀଲଙ୍କାର ତାମିଲ ସମସ୍ୟା ବିଷୟ ବୁଝାଇ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଶ୍ରୀଲଙ୍କାରେ ସିଂହଳୀ ଓ ତାମିଲଙ୍କ ମଧ୍ୟରେ ଭାଷା, ନାଗରିକତା ଓ ପ୍ରତିନିଧିତ୍ୱ ନେଇ ମତଭେଦ ଥିଲା। ତାମିଲମାନେ ନିଜ ଅଧିକାର ଦାବି କଲେ ଓ ତାମିଲ ବ୍ୟାଘ୍ର ସଙ୍ଗଠନ ସ୍ୱତନ୍ତ୍ର ତାମିଲ ଅଞ୍ଚଳ ପାଇଁ ଆନ୍ଦୋଳନ କଲା।</p><p>ହିଂସା ଓ ଶରଣାର୍ଥୀ ସମସ୍ୟା ଭାରତକୁ ମଧ୍ୟ ପ୍ରଭାବିତ କଲା। ଶାନ୍ତି ଓ ସମାଧାନ ପାଇଁ ଦୁଇ ଦେଶ ଆଲୋଚନା କଲେ।</p><p>ତାମିଲ ଭାଷୀ ଲୋକଙ୍କ ଅଧିକାର ପ୍ରଶ୍ନ ଶ୍ରୀଲଙ୍କାର ଆଭ୍ୟନ୍ତରୀଣ ରାଜନୀତିରୁ ଉଠିଥିଲା। ଭାରତ ସହ ସମ୍ପର୍କରେ ଏହା ନାଗରିକତା ସମ୍ପର୍କିତ ଆଲୋଚନା ଓ ପରେ ଶାନ୍ତି ଫେରାଇବାର ଉଦ୍ୟମ ସହ ଯୋଡ଼ିହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=197">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୯୭–୧୯୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=198" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୮–୨୦୬</a></small></article>
+<article id="exercise-6"><h2>୧ (ଚ). ଭାରତ ଭୁଟାନକୁ କିପରି ସହାୟତା ଯୋଗାଇଥିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୯୬୧ରେ ଆରମ୍ଭ ଭୁଟାନର ପ୍ରଥମ ପଞ୍ଚବାର୍ଷିକ ଯୋଜନାକୁ ଭାରତ ଆର୍ଥିକ ସହାୟତା ଦେଲା। ପରବର୍ତ୍ତୀ ଯୋଜନା ଓ ଶିକ୍ଷା ଆଦି କ୍ଷେତ୍ରରେ ମଧ୍ୟ ସହଯୋଗ ରହିଲା।</p><p>ଭୁଟାନର ଭୌଗୋଳିକ ସ୍ଥିତି ଯୋଗୁଁ ସଡ଼କ ଯୋଗାଯୋଗ ବିକାଶରେ ବିଶେଷ ଗୁରୁତ୍ୱ ଥିଲା। ଯୋଜନା ଅନୁସାରେ ନିବେଶ, ପ୍ରାୟୋଗିକ ସହାୟତା ଓ ଶିକ୍ଷାର ସୁଯୋଗ ଦ୍ୱାରା ଭିତ୍ତିଭୂମି ଓ ପ୍ରଶିକ୍ଷିତ ମଣିଷ ଉଭୟର ବିକାଶ ସମ୍ଭବ ହେଲା।</p><p>ଏହା ଭାରତ–ଭୁଟାନ ବନ୍ଧୁତାର ଆର୍ଥିକ ଦିଗ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=201">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୦୧–୨୦୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=202" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୨–୨୦୬</a></small></article>
+<article id="exercise-7"><h2>୧ (ଛ). ଭାରତ-ମିଆଁମାର ମଧ୍ୟରେ କେଉଁ କେଉଁ ଚୁକ୍ତି ସ୍ୱାକ୍ଷରିତ ହୋଇଥିଲା, ତାହା ସୂଚିତ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଭାରତ ଓ ମିଆଁମାର ସୀମା ବାଣିଜ୍ୟ, ନିରାପତ୍ତା ଓ ଯୋଗାଯୋଗ ଉପରେ ଦ୍ୱିପାକ୍ଷିକ ସହଯୋଗ କଲେ। ୧୯୯୪ର ଚୁକ୍ତିରେ ସୀମାରେ ଚୋରା ଅସ୍ତ୍ର କାରବାର ଓ ଅନ୍ୟ ବେଆଇନ କାରବାର ରୋକିବାର ଆଶା ଥିଲା।</p><p>ବାଣିଜ୍ୟର ଉନ୍ନତି ଓ ତୈଳ ଓ ପ୍ରାକୃତିକ ବାଷ୍ପ ସମ୍ପର୍କିତ ସ୍ୱାର୍ଥ ମଧ୍ୟ ସହଯୋଗର ବିଷୟ ଥିଲା। ବନ୍ଧୁତା ସଡ଼କ ଯୋଗାଯୋଗକୁ ଆଗେଇ ନେଲା।</p><p>ସୀମାନ୍ତରେ ସଡ଼କ ଏବଂ ବାଣିଜ୍ୟ ସୁବିଧା ଏହି ବୁଝାମଣାକୁ ସ୍ଥାନୀୟ ଲୋକଙ୍କ ଜୀବିକା ସହ ଯୋଡ଼ିଥାଏ। ପଡ଼ୋଶୀ ରାଷ୍ଟ୍ର ମଧ୍ୟରେ ନିୟମିତ ଯାତାୟାତ ଓ ବ୍ୟାପାର ସମ୍ପର୍କକୁ ଦୃଢ଼ କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=204">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୦୪–୨୦୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=204" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୪–୨୦୬</a></small></article>
+<article id="exercise-8"><h2>୧ (ଜ). ଭାରତ-ଚୀନ ସୀମା ବିବାଦ ବିଷୟରେ ଏକ ଟିପ୍ପଣୀ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପୂର୍ବ ସୀମାରେ ମ୍ୟାକ୍‌ମୋହନ୍ ଲାଇନର ସ୍ୱୀକୃତି ଓ ପଶ୍ଚିମରେ ଲଦାଖ ଅଞ୍ଚଳର ସୀମାକୁ ନେଇ ଭାରତ ଓ ଚୀନର ମତଭେଦ ରହିଥିଲା। ଚୀନର ଭୂଖଣ୍ଡ ଦାବି ଓ ଅକ୍‌ସାଇ ଚୀନ ଅଞ୍ଚଳରେ ରାସ୍ତା ନିର୍ମାଣ ତିକ୍ତତା ବଢ଼ାଇଲା।</p><p>୧୯୬୨ରେ ଦୁଇ ଦେଶ ମଧ୍ୟରେ ଯୁଦ୍ଧ ହେଲା। ପରବର୍ତ୍ତୀ ଗସ୍ତ ଓ ଆଲୋଚନାରେ ଶାନ୍ତି ରକ୍ଷାର ଚେଷ୍ଟା ଚାଲିଲା।</p><p>ସୀମା ପ୍ରଶ୍ନର ପରିଣାମ ୧୯୬୨ର ସଂଘର୍ଷରେ ଦେଖାଦେଲା। ପୂର୍ବର ମୈତ୍ରୀ ଘୋଷଣା ସତ୍ତ୍ୱେ ସୀମାରେଖାର ଗ୍ରହଣଯୋଗ୍ୟତା ନେଇ ମତଭେଦ ଦୁଇ ଦେଶର ସମ୍ପର୍କକୁ ଦୀର୍ଘକାଳ ପ୍ରଭାବିତ କଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=196">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୯୬–୧୯୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=196" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୬–୨୦୬</a></small></article>
+<article id="exercise-9"><h2>୧ (ଝ). ୧୯୪୯-୫୩ ମସିହାର କୋରିଆ ଯୁଦ୍ଧ ଭାରତ ଓ ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା ମଧ୍ୟରେ କାହିଁକି ତିକ୍ତତାର କାରଣ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଠର ବିବରଣୀରେ ଉତ୍ତର କୋରିଆ ସୋଭିଏତ ଋଷିଆ ଓ ଦକ୍ଷିଣ କୋରିଆ ଆମେରିକାର ସମର୍ଥନ ପାଇଥିଲା। ଆମେରିକା ଉତ୍ତର କୋରିଆ ବିରୋଧରେ ଦକ୍ଷିଣ କୋରିଆକୁ ସମର୍ଥନ କଲା।</p><p>ଭାରତ ନିଜ ଗୋଷ୍ଠୀନିରପେକ୍ଷ ଆଭିମୁଖ୍ୟରୁ ଏହି ପଦକ୍ଷେପକୁ ସମାଲୋଚନା କଲା। ଏହି ମତଭେଦ ଓ ପାକିସ୍ତାନ ପ୍ରତି ଆମେରିକାର ସମର୍ଥନ ଦୁଇ ଦେଶର ସମ୍ପର୍କରେ ତିକ୍ତତା ଆଣିଲା।</p><p>ଏହି ଘଟଣା ଗୋଷ୍ଠୀନିରପେକ୍ଷ ନିଷ୍ପତ୍ତିର ଏକ ଦୃଷ୍ଟାନ୍ତ। ଭାରତ ପ୍ରତ୍ୟେକ ପଦକ୍ଷେପକୁ ପୃଥକ୍ ଭାବେ ବିଚାର କରିଥିବାରୁ ଯୁକ୍ତରାଷ୍ଟ୍ର ଆଶା କରୁଥିବା ସମର୍ଥନ ସବୁ ପର୍ଯ୍ୟାୟରେ ପାଇ ନଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=189">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮୯–୧୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=190" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୦–୨୦୬</a></small></article>
+<article id="exercise-10"><h2>୧ (ଞ). ସ୍ୱାଧୀନ ‘ବଙ୍ଗଳା ଦେଶ’ ଗଠନରେ ଭାରତର ଭୂମିକା ସଂକ୍ଷେପରେ ବର୍ଣ୍ଣନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପୂର୍ବ ପାକିସ୍ତାନର ଜନସାଧାରଣଙ୍କ ସ୍ୱାଧୀନତା ଦାବିକୁ ଭାରତ ସମର୍ଥନ କଲା। ଶରଣାର୍ଥୀମାନେ ଭାରତରେ ଆଶ୍ରୟ ପାଇଲେ।</p><p>୧୯୭୧ ଡିସେମ୍ବରର ଚୁକ୍ତିରେ ଭାରତୀୟ ସେନାଧ୍ୟକ୍ଷଙ୍କ ତତ୍ତ୍ୱାବଧାନରେ ମୁକ୍ତି ବାହିନୀ ଗଠନର ବ୍ୟବସ୍ଥା ଥିଲା। ପାକିସ୍ତାନୀ ସାମରିକ ଶାସନର ଅନ୍ତ ପରେ ସ୍ୱାଧୀନ ବଙ୍ଗଳାଦେଶ ଗଠିତ ହେଲା।</p><p>ଭାରତ ତାହାର ଆଭ୍ୟନ୍ତରୀଣ ବ୍ୟାପାରରେ ହସ୍ତକ୍ଷେପ ନକରିବାକୁ କହିଥିଲା। ଶରଣାର୍ଥୀଙ୍କ ସମସ୍ୟା ଭାରତକୁ ପ୍ରତ୍ୟକ୍ଷ ଭାବେ ପ୍ରଭାବିତ କରିଥିଲା।</p><p>ଏଥିପାଇଁ ଭାରତର ଭୂମିକାରେ ମାନବିକ ସହାୟତା, ମୁକ୍ତି ଆନ୍ଦୋଳନକୁ ସମର୍ଥନ ଓ ପରେ ଦୁଇ ଦେଶ ମଧ୍ୟରେ ସହଯୋଗ ଅନ୍ତର୍ଭୁକ୍ତ ଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=202">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୦୨–୨୦୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=203" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୩–୨୦୬</a></small></article>
+<article id="exercise-11"><h2>୧ (ଟ). ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା ସହିତ ଭାରତର ସମ୍ପର୍କ ସଂକ୍ଷେପରେ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଶୀତଳ ଯୁଦ୍ଧ ବେଳେ ଭାରତର ଗୋଷ୍ଠୀନିରପେକ୍ଷତା, କୋରିଆ ଓ ପାକିସ୍ତାନ ପ୍ରସଙ୍ଗରେ ମତଭେଦ ଆମେରିକା ସହ ତିକ୍ତତା ଆଣିଥିଲା। ତଥାପି ଶିକ୍ଷା, ବାଣିଜ୍ୟ ଓ ବୈଷୟିକ କ୍ଷେତ୍ରରେ ସହଯୋଗ ଚାଲିଲା।</p><p>ପରବର୍ତ୍ତୀ ସମୟରେ ଶକ୍ତି, ଶିଳ୍ପ, ପରିବହନ, ସ୍ୱାସ୍ଥ୍ୟ ଓ ପରିବେଶ ବିଷୟରେ ଦ୍ୱିପାକ୍ଷିକ ଚୁକ୍ତି ହେଲା। ଏହା ଦୁଇ ଦେଶର ପାରସ୍ପରିକ ସମ୍ପର୍କକୁ ବିସ୍ତୃତ କଲା।</p><p>କୋରିଆ ଯୁଦ୍ଧରେ ଭାରତର ସ୍ୱାଧୀନ ମତ ତିକ୍ତତାର ଗୋଟିଏ ଦୃଷ୍ଟାନ୍ତ। ତେଣୁ ଦୁଇ ଦେଶର ସମ୍ପର୍କ ବ୍ୟାଖ୍ୟାରେ କେବଳ ବନ୍ଧୁତା ବା ମତଭେଦ ଲେଖିଲେ ଚଳିବ ନାହିଁ।</p><p>ଆନ୍ତର୍ଜାତିକ ପ୍ରଶ୍ନ ଅନୁସାରେ ଦୁଇଟି ଦିଗ ଦେଖାଯାଇଥିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=189">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮୯–୧୯୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=189" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୮୯–୨୦୬</a></small></article>
+<article id="exercise-12"><h2>୨ (କ). ଶୀତଳ ଯୁଦ୍ଧ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦ୍ୱିତୀୟ ବିଶ୍ୱଯୁଦ୍ଧ ପରେ ଆମେରିକା ଓ ସୋଭିଏତ୍ ରୁଷିଆ ନେତୃତ୍ୱାଧୀନ ଗୋଷ୍ଠୀ ମଧ୍ୟରେ ପ୍ରତ୍ୟକ୍ଷ ଯୁଦ୍ଧ ବିନା ଚାଲିଥିବା ଉତ୍ତେଜନା ଓ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱିତା।</p><p>ବୁଝିବା ପାଇଁ — ମହାଶକ୍ତି ଦୁଇଟି ନିଜ ନିଜ ଗୋଷ୍ଠୀର ପ୍ରଭାବ ବଢ଼ାଇବାକୁ ଚେଷ୍ଟା କଲେ। ଏହି ପରିସ୍ଥିତିରେ ଭାରତ ନିଜ ନିଷ୍ପତ୍ତି ନିଜେ ନେବା ପାଇଁ ଗୋଷ୍ଠୀନିରପେକ୍ଷତା ଗ୍ରହଣ କଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=187" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୮୭–୨୦୬</a></small></article>
+<article id="exercise-13"><h2>୨ (ଖ). ‘ଭିଟୋ’ କହିଲେ ତୁମେ କ’ଣ ବୁଝ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସଂଯୁକ୍ତ ରାଷ୍ଟ୍ରସଂଘର ନିରାପତ୍ତା ପରିଷଦର ସ୍ଥାୟୀ ସଦସ୍ୟ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ପ୍ରସ୍ତାବ ବିପକ୍ଷରେ ମତ ଦେଇ ତାହା ଗୃହୀତ ହେବା ରୋକିବାର ବିଶେଷ କ୍ଷମତା ଭିଟୋ।</p><p>ବୁଝିବା ପାଇଁ — କେବଳ ଅଧିକାଂଶ ସଦସ୍ୟଙ୍କ ସମର୍ଥନ ଥିଲେ ମଧ୍ୟ ସ୍ଥାୟୀ ସଦସ୍ୟଙ୍କ ଏହି ନାସ୍ତିସୂଚକ ମତ ଥିଲେ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ପ୍ରସ୍ତାବ ଗୃହୀତ ହୁଏ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=191" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୧–୨୦୬</a></small></article>
+<article id="exercise-14"><h2>୨ (ଗ). ଭାରତ ଓ ସୋଭିଏତ ଋଷିଆ ମଧ୍ୟରେ ସମ୍ପର୍କ ବୃଦ୍ଧିରେ ଗୋର୍ବାଚୋଭ୍ଙ୍କ ଅବଦାନ ବିଷୟରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗୋର୍ବାଚୋଭ୍ ଓ ରାଜୀବ ଗାନ୍ଧୀ ଅର୍ଥନୈତିକ ଓ ବୈଷୟିକ ସହଯୋଗ ବଢ଼ାଇଲେ ଏବଂ ଦଶ ଦଫା ଦିଲ୍ଲୀ ଘୋଷଣାନାମା ସ୍ୱାକ୍ଷର କଲେ।</p><p>ବୁଝିବା ପାଇଁ — ଏସିଆର ସାମୂହିକ ନିରାପତ୍ତା ପାଇଁ ଦୁଇ ନେତାଙ୍କ ମଧ୍ୟରେ ଆଲୋଚନା ହେଲା। ଘୋଷଣାନାମା ସେହି ମୈତ୍ରୀକୁ ଲିଖିତ ରୂପ ଦେଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=193" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୩–୨୦୬</a></small></article>
+<article id="exercise-15"><h2>୨ (ଘ). ସିଆଟୋ (SEATO) କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦକ୍ଷିଣ-ପୂର୍ବ ଏସିଆ ଚୁକ୍ତି ସଂଗଠନ (South East Asia Treaty Organization) ଆମେରିକା ସମର୍ଥିତ ସାମରିକ ଗୋଷ୍ଠୀ ଥିଲା।</p><p>ବୁଝିବା ପାଇଁ — ଶୀତଳ ଯୁଦ୍ଧ ସମୟରେ ଏଭଳି ଚୁକ୍ତି ମାଧ୍ୟମରେ ରାଷ୍ଟ୍ରମାନେ ସାମରିକ ଗୋଷ୍ଠୀ ଗଢ଼ିଲେ। ଭାରତର ନୀତି ଥିଲା ଏହି ଗୋଷ୍ଠୀଠାରୁ ଦୂରରେ ରହିବା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=190" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୦–୨୦୬</a></small></article>
+<article id="exercise-16"><h2>୨ (ଙ). ଭାରତ ଓ ବଙ୍ଗଳାଦେଶ ୧୯୭୧ ମସିହା ଡିସେମ୍ବର ୧୦ ତାରିଖରେ ସ୍ୱାକ୍ଷର କରିଥିବା ଚୁକ୍ତି ପତ୍ରରେ କ’ଣ କ’ଣ ବ୍ୟବସ୍ଥା ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମୁକ୍ତି ବାହିନୀ ଗଠନ, ପାକିସ୍ତାନୀ ସାମରିକ ଶାସନରୁ ବଙ୍ଗଳାଦେଶକୁ ମୁକ୍ତ କରିବା ଓ ତାହାର ଆଭ୍ୟନ୍ତରୀଣ ବ୍ୟାପାରରେ ଭାରତ ହସ୍ତକ୍ଷେପ ନକରିବା ମୁଖ୍ୟ ବ୍ୟବସ୍ଥା।</p><p>ବୁଝିବା ପାଇଁ — ପାଠ ଅନୁସାରେ ଭାରତୀୟ ସେନାଧ୍ୟକ୍ଷଙ୍କ ତତ୍ତ୍ୱାବଧାନରେ ମୁକ୍ତି ବାହିନୀ ଗଠନର ବ୍ୟବସ୍ଥା ଥିଲା। ସ୍ୱାଧୀନତା ସଂଗ୍ରାମରେ ସହାୟତା ସହ ଭାରତ ନୂଆ ଦେଶର ନିଜସ୍ୱ ଶାସନକୁ ସମ୍ମାନ ଦେବାକୁ ପ୍ରତିଶ୍ରୁତି ଦେଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=203" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୩–୨୦୬</a></small></article>
+<article id="exercise-17"><h2>୨ (ଚ). ସାର୍କ (SAARC) କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସାର୍କ ହେଉଛି ଦକ୍ଷିଣ ଏସିଆ ଆଞ୍ଚଳିକ ସହଯୋଗ ସଂଗଠନ। ଏହା ସଦସ୍ୟ ରାଷ୍ଟ୍ରଙ୍କ ମଧ୍ୟରେ ସାମାଜିକ ଓ ଅର୍ଥନୈତିକ ସହଯୋଗ ବଢ଼ାଏ।</p><p>ବୁଝିବା ପାଇଁ — ଭୁଟାନରେ ଅନୁଷ୍ଠିତ ଷୋଡ଼ଶ ଶିଖର ସମ୍ମିଳନୀରେ ଭାରତ ଭାଗ ନେବା ଏହି ସହଯୋଗର ଉଦାହରଣ। ସଦସ୍ୟ ରାଷ୍ଟ୍ରମାନେ ସାଧାରଣ ସମସ୍ୟା ଉପରେ ଆଲୋଚନା କରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=201" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୧–୨୦୬</a></small></article>
+<article id="exercise-18"><h2>୨ (ଛ). ଏଲ୍.ଟି.ଟି.ଇ. (LTTE) କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>LTTE ବା ଲିବରେସନ୍ ଟାଇଗର୍ସ ଅଫ୍ ତାମିଲ ଇଲମ୍ ଶ୍ରୀଲଙ୍କାରେ ସ୍ୱତନ୍ତ୍ର ତାମିଲ ରାଷ୍ଟ୍ର ଦାବି କରୁଥିବା ସଙ୍ଗଠନ ଥିଲା।</p><p>ବୁଝିବା ପାଇଁ — ଶ୍ରୀଲଙ୍କାରେ ତାମିଲ ଜନସମୁଦାୟର ଭାଷା ଓ ଅଧିକାର ସମ୍ପର୍କୀୟ ଅସନ୍ତୋଷ ଏହି ଦାବିର ପୃଷ୍ଠଭୂମି ଥିଲା। ପାଠରେ ସଙ୍ଗଠନର ସଦସ୍ୟମାନଙ୍କୁ ‘ତାମିଲ ବ୍ୟାଘ୍ର’ କୁହାଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=198" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୮–୨୦୬</a></small></article>
+<article id="exercise-19"><h2>୨ (ଜ). ୧୯୭୭ ମସିହାରେ ଭାରତର ମୋରାରଜୀ ଦେଶାଇ ସରକାରଙ୍କ ସମୟରେ ନେପାଳ ସହିତ ଭାରତର ସମ୍ପର୍କ କିପରି ଥିଲା, ତାହା ସଂକ୍ଷେପରେ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦେଶାଇ ସରକାର ନେପାଳ ସହ ସମ୍ପର୍କ ବଢ଼ାଇଲେ। ବୈଦେଶିକମନ୍ତ୍ରୀ ବାଜପାୟୀଙ୍କ ପ୍ରଚେଷ୍ଟାରେ ଦୁଇଟି ବାଣିଜ୍ୟିକ ଚୁକ୍ତି ସ୍ୱାକ୍ଷରିତ ହେଲା।</p><p>ବୁଝିବା ପାଇଁ — ବାଣିଜ୍ୟ ଚୁକ୍ତି ହେବା ଫଳରେ ଦୁଇ ପଡ଼ୋଶୀଙ୍କ ମଧ୍ୟରେ ଜିନିଷପତ୍ରର ଆଦାନପ୍ରଦାନ ପାଇଁ ନିର୍ଦ୍ଦିଷ୍ଟ ବ୍ୟବସ୍ଥା ହେଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=200" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୦–୨୦୬</a></small></article>
+<article id="exercise-20"><h2>୨ (ଝ). ସୁଏଜ୍ କେନାଲ ସଂକଟ (୧୯୫୬) କହିଲେ ତୁମେ କ’ଣ ବୁଝ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>୧୯୫୬ରେ ମିଶର ସୁଏଜ୍ କେନାଲ ଜାତୀୟକରଣ କଲାପରେ ସୃଷ୍ଟି ହୋଇଥିବା ଆନ୍ତର୍ଜାତିକ ସଂଘର୍ଷ ସୁଏଜ୍ ସଂକଟ। ଭାରତ ମିଶରକୁ ସମର୍ଥନ କଲା।</p><p>ବୁଝିବା ପାଇଁ — ମିଶର ନିଜ ଅଞ୍ଚଳର କେନାଲ ଉପରେ କର୍ତ୍ତୃତ୍ୱ ଦାବି କଲା। ଏହାର ଅଧିକାରକୁ ସମର୍ଥନ ଦେବା ଭାରତର ଉପନିବେଶବାଦ ବିରୋଧୀ ନୀତି ସହ ମେଳ ଖାଉଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=191" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୧–୨୦୬</a></small></article>
+<article id="exercise-21"><h2>୩ (କ). ବର୍ଣ୍ଣ ବୈଷମ୍ୟ ନୀତି କ’ଣ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଚର୍ମର ରଙ୍ଗ ବା ବର୍ଣ୍ଣ ଆଧାରରେ ଲୋକଙ୍କ ଅଧିକାର ଓ ସୁଯୋଗରେ ଭେଦଭାବ କରିବା ବର୍ଣ୍ଣ ବୈଷମ୍ୟ ନୀତି।</p><p>ବୁଝିବା ପାଇଁ — ଦକ୍ଷିଣ ଆଫ୍ରିକାରେ ବର୍ଣ୍ଣ ଆଧାରରେ ଅଲଗା ବ୍ୟବହାରକୁ ଭାରତ ବିରୋଧ କଲା। ଏହା ସମାନ ମାନବିକ ମର୍ଯ୍ୟାଦା ପ୍ରତି ଭାରତର ସମର୍ଥନ ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=187" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୮୭–୨୦୬</a></small></article>
+<article id="exercise-22"><h2>୩ (ଖ). କେଉଁ ମସିହାରେ ନେପାଳ ସଂଯୁକ୍ତ ରାଷ୍ଟ୍ରସଂଘର ସଦସ୍ୟ ହେଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଏହି ପାଠର PDF ପୃ. ୧୪ (ମୁଦ୍ରିତ ପୃ. ୧୯୪)ରେ ନେପାଳର ସଦସ୍ୟତା ବର୍ଷ ୧୯୫୪ ଲେଖାଯାଇଛି। ସମ୍ପାଦକୀୟ ସ୍ପଷ୍ଟୀକରଣ — ନେପାଳସ୍ଥ ସଂଯୁକ୍ତ ରାଷ୍ଟ୍ରସଂଘ କାର୍ଯ୍ୟାଳୟର ୧୭ ଡିସେମ୍ବର ୨୦୨୫ର ପ୍ରେସ୍ ବିଜ୍ଞପ୍ତି ଅନୁସାରେ ପ୍ରକୃତ ସଦସ୍ୟତା ତାରିଖ ୧୪ ଡିସେମ୍ବର ୧୯୫୫।</p><p>ବୁଝିବା ପାଇଁ — ଆନ୍ତର୍ଜାତିକ ମଞ୍ଚରେ ନେପାଳକୁ ସଦସ୍ୟତା ମିଳିବା ପାଇଁ ଭାରତ ସମର୍ଥନ ଦେଇଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=200" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୦–୨୦୬</a></small></article>
+<article id="exercise-23"><h2>୩ (ଗ). ତାସକେଣ୍ଟ୍ ଚୁକ୍ତି ସ୍ୱାକ୍ଷରିତ ହେବାବେଳେ କିଏ ଭାରତର ପ୍ରଧାନମନ୍ତ୍ରୀ ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଲାଲବାହାଦୁର ଶାସ୍ତ୍ରୀ ଭାରତର ପ୍ରଧାନମନ୍ତ୍ରୀ ଥିଲେ।</p><p>ବୁଝିବା ପାଇଁ — ୧୯୬୫ର ଯୁଦ୍ଧ ପରେ ୧୯୬୬ରେ ଭାରତ ଓ ପାକିସ୍ତାନ ଶାନ୍ତି ଫେରାଇବା ପାଇଁ ତାସକେଣ୍ଟରେ ରାଜି ହେଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=195" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୫–୨୦୭</a></small></article>
+<article id="exercise-24"><h2>୩ (ଘ). କେଉଁ ରାଜା ରାଜଗାଦିରେ ଅଭିଷିକ୍ତ ହେଲାପରେ ନେପାଳକୁ ଏକ ‘ଶାନ୍ତି ଅଞ୍ଚଳ’ (Zone of Peace) ରୂପେ ଘୋଷଣା କରିଥିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନେପାଳର ରାଜା ବୀରେନ୍ଦ୍ର ଏହି ଘୋଷଣା କରିଥିଲେ।</p><p>ବୁଝିବା ପାଇଁ — ‘ଶାନ୍ତି ଅଞ୍ଚଳ’ ବୀରେନ୍ଦ୍ରଙ୍କ ଘୋଷଣା। ଏହାକୁ ନେପାଳର ରାଷ୍ଟ୍ରସଂଘ ସଦସ୍ୟତାର ବର୍ଷ ସହ ମିଶାଇବା ଉଚିତ ନୁହେଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=200" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୦–୨୦୭</a></small></article>
+<article id="exercise-25"><h2>୩ (ଙ). କେଉଁମାନେ ଏଲ୍.ଟି.ଟି.ଇ.ର ନେତା ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଠରେ ତାମିଲ ବ୍ୟାଘ୍ର ନେତା ଭାବରେ ଉମା ମହେଶ୍ୱରନ୍ ଓ ପ୍ରଭାକରନ୍‌ଙ୍କ ନାମ ଉଲ୍ଲେଖ ଅଛି।</p><p>ବୁଝିବା ପାଇଁ — ଏହି ଦୁଇ ନାମ ଶ୍ରୀଲଙ୍କାରେ ସ୍ୱତନ୍ତ୍ର ତାମିଲ ରାଷ୍ଟ୍ର ଦାବି ସହ ସମ୍ପୃକ୍ତ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=198" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୮–୨୦୭</a></small></article>
+<article id="exercise-26"><h2>୩ (ଚ). ୨୦୦୮ ମସିହା ଜୁଲାଇ ମାସରେ ଭାରତ ଗସ୍ତ କରିଥିବା ଭୁଟାନର ପ୍ରଧାନମନ୍ତ୍ରୀଙ୍କ ନାମ କ’ଣ ଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଲିୟୋଁଚେନ୍ ଜିଗ୍ମୀ ୱାଇ ଥିନ୍‌ଲେ ୨୦୦୮ ଜୁଲାଇରେ ଭାରତ ଗସ୍ତ କରିଥିଲେ।</p><p>ବୁଝିବା ପାଇଁ — ଏଠାରେ ଭୁଟାନର ପ୍ରଧାନମନ୍ତ୍ରୀ ଭାରତକୁ ଆସିଥିଲେ। ୨୦୧୦ର ସାର୍କ ସମ୍ମିଳନୀରେ ଭାରତର ପ୍ରଧାନମନ୍ତ୍ରୀ ଭୁଟାନ ଯାଇଥିଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=202" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୨–୨୦୭</a></small></article>
+<article id="exercise-27"><h2>୩ (ଛ). ଭୁଟାନର ପ୍ରଥମ ପଞ୍ଚ-ବାର୍ଷିକ ଯୋଜନା କେବେ ଆରମ୍ଭ ହୋଇଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଭୁଟାନର ପ୍ରଥମ ପଞ୍ଚବାର୍ଷିକ ଯୋଜନା ୧୯୬୧ରେ ଆରମ୍ଭ ହେଲା।</p><p>ବୁଝିବା ପାଇଁ — ଏହି ଯୋଜନାରେ ଭୁଟାନର ବିକାଶ ପାଇଁ ଭାରତ ଆର୍ଥିକ ସହାୟତା ଦେଲା। ରାସ୍ତା ନିର୍ମାଣ ଭଳି କାମ ଦୁଇ ଦେଶର ସହଯୋଗକୁ ପ୍ରକାଶ କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=202" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୨–୨୦୭</a></small></article>
+<article id="exercise-28"><h2>୩ (ଜ). ଶେଖ୍ ମୁଜିବୁର୍ ରହମନ୍ କେଉଁ ରାଜନୈତିକ ସଙ୍ଗଠନର ନେତା ଥିଲେ ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଶେଖ୍ ମୁଜିବୁର୍ ରହମନ୍ ଆୱାମି ଲିଗ୍‌ର ନେତା ଥିଲେ।</p><p>ବୁଝିବା ପାଇଁ — ତାଙ୍କ ନେତୃତ୍ୱରେ ପୂର୍ବ ପାକିସ୍ତାନରେ ପଶ୍ଚିମ ପାକିସ୍ତାନର ଶାସନ ବିରୋଧରେ ଆନ୍ଦୋଳନ ତେଜିଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=203" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୩–୨୦୭</a></small></article>
+<article id="exercise-29"><h2>୩ (ଝ). ‘ତିନ୍-ବିଘା’ କେଉଁ ଦେଶ ମଧ୍ୟରେ ସମ୍ପର୍କକୁ ତିକ୍ତ କରିଥିଲା ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ତିନ୍-ବିଘା ପ୍ରସଙ୍ଗ ଭାରତ ଓ ବଙ୍ଗଳାଦେଶ ମଧ୍ୟରେ ତିକ୍ତତାର କାରଣ ହେଲା।</p><p>ବୁଝିବା ପାଇଁ — ଏହା ପଡ଼ୋଶୀ ଦୁଇ ରାଷ୍ଟ୍ର ମଧ୍ୟରେ ଏକ ଭୂଖଣ୍ଡ ସମ୍ପର୍କୀୟ ପ୍ରସଙ୍ଗ। ପାଠରେ ନୂତନ ମୁରେ ଦ୍ୱୀପ ବିବାଦ ସହ ଏହାର ଆଲୋଚନା ରହିଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=203" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୩–୨୦୭</a></small></article>
+<article id="exercise-30"><h2>୪ (କ–ଙ). ସୀମାରେଖା, ବଙ୍ଗଳାଦେଶ, ଭୁଟାନ, ମିଆଁମାର ଓ ଶ୍ରୀଲଙ୍କା ସମ୍ବନ୍ଧୀୟ ଠିକ୍ ବିକଳ୍ପ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(କ) ବିକଳ୍ପ ଖ, ମ୍ୟାକ୍ ମୋହନ୍ ଲାଇନ୍। (ଖ) ପାଠର ଚାରି ବିକଳ୍ପ ମଧ୍ୟରୁ ଖ, ଶେଖ୍ ମୁଜିବୁର୍ ରହମନ୍।</p><p>(ଗ) କ, ଷୋଡ଼ଶ ସାର୍କ ଶିଖର ସମ୍ମିଳନୀ। (ଘ) ଘ, ନ୍ୟାନ୍ ୱିନ୍।</p><p>(ଙ) ଖ, ଡି. ଏସ୍. ସେନାନାୟକେ।</p><p>ବୁଝିବା ପାଇଁ — (କ) ପୂର୍ବ କ୍ଷେତ୍ରର ଭାରତ–ଚୀନ ସୀମା ଆଲୋଚନାରେ ମ୍ୟାକ୍ ମୋହନ୍ ରେଖାର ଉଲ୍ଲେଖ ଅଛି। (ଖ) ମୁଦ୍ରିତ ବିକଳ୍ପର ମୁଜିବୁର୍ ରହମନ୍‌ଙ୍କୁ ପାଠ ୧୯୭୨ ମାର୍ଚ୍ଚର ଚୁକ୍ତିରେ ବଙ୍ଗଳାଦେଶର ପ୍ରଧାନମନ୍ତ୍ରୀ ଭାବେ ଚିହ୍ନାଇଛି।</p><p>(ଗ) ମନମୋହନ ସିଂହଙ୍କ ୨୦୧୦ ଭୁଟାନ ଗସ୍ତ ସାର୍କ ପାଇଁ ଥିଲା। (ଘ) ୨୦୦୮ ଜାନୁଆରୀର ଗସ୍ତ ମିଆଁମାରର ବୈଦେଶିକ ମନ୍ତ୍ରୀଙ୍କର।</p><p>(ଙ) ସେନାନାୟକେଙ୍କୁ ପାଠ ଶ୍ରୀଲଙ୍କାର ସ୍ୱାଧୀନତା ପରର ପ୍ରଥମ ପ୍ରଧାନମନ୍ତ୍ରୀ ଭାବେ ଚିହ୍ନାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=207" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୭</a></small></article>
+<article id="exercise-31"><h2>୪ (ଚ–ଞ). ସୋଭିଏତ୍ ଋଷିଆର ବିଲୟ, ସିମ୍ଳା ଓ ତାସକେଣ୍ଟ ରାଜିନାମା, ଭାରତୀୟ ନୀତି ଓ ସୁଏଜ୍ ସଂକଟର ଉତ୍ତର ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(ଚ) ଖ, ୧୯୯୧। (ଛ) ଗ, ସିମ୍ଳା ରାଜିନାମା।</p><p>(ଜ) କ, ଗୋଷ୍ଠୀ ନିରପେକ୍ଷତା। (ଝ) କ, ଭାରତ ଓ ପାକିସ୍ତାନ।</p><p>(ଞ) ଗ, ମିଶର।</p><p>ବୁଝିବା ପାଇଁ — (ଚ) ୧୯୯୧ ଡିସେମ୍ବରରେ ସୋଭିଏତ୍ ରାଷ୍ଟ୍ରସମୂହର ବିଲୟ ଘଟିଲା। (ଛ) ସିମ୍ଳା ରାଜିନାମା ୧୯୭୧ ଯୁଦ୍ଧ ପରେ ୧୯୭୨ରେ ହେଲା।</p><p>(ଜ) ମହାଶକ୍ତିର ସାମରିକ ଗୋଷ୍ଠୀରେ ଯୋଗ ନଦେଇ ଭାରତ ସ୍ୱାଧୀନ ନିଷ୍ପତ୍ତି ନେଲା। (ଝ) ତାସକେଣ୍ଟରେ ସୋଭିଏତ୍ ମଧ୍ୟସ୍ଥତା ଥିଲେ ମଧ୍ୟ ଚୁକ୍ତିର ପକ୍ଷ ଥିଲେ ଭାରତ ଓ ପାକିସ୍ତାନ।</p><p>(ଞ) କେନାଲକୁ ଜାତୀୟକରଣ କରିଥିବା ରାଷ୍ଟ୍ର ମିଶର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=207" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୭–୨୦୮</a></small></article>
+<article id="exercise-32"><h2>୪ (ଟ–ଡ). କାଶ୍ମୀରର ମିଶ୍ରଣ, ପୋଖରାନ୍ ପରୀକ୍ଷା ଓ ଭାରତ–ପାକିସ୍ତାନ ବସ୍ ଚଳାଚଳ ପାଇଁ ଉଚିତ ବର୍ଷ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(ଟ) କ, ୧୯୪୭। (ଠ) ଖ, ୧୯୯୮।</p><p>(ଡ) ଗ, ୧୯୯୯।</p><p>ବୁଝିବା ପାଇଁ — (ଟ) କାଶ୍ମୀରର ମହାରାଜା ଭାରତ ସହ ମିଶ୍ରଣ ଦଲିଲରେ ସ୍ୱାକ୍ଷର କଲେ। (ଠ) ବାଜପାୟୀ ସରକାରଙ୍କ ସମୟର ପରୀକ୍ଷା ୧୯୯୮ର।</p><p>(ଡ) ପରବର୍ତ୍ତୀ ବର୍ଷ ଲାହୋର ବସ୍‌ଯାତ୍ରା ଦୁଇ ଦେଶ ମଧ୍ୟରେ ସମ୍ପର୍କ ବଢ଼ାଇବାର ଉଦ୍ୟମ ଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=208" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୮</a></small></article>
+<article id="exercise-33"><h2>ତୁମ ପାଇଁ କାମ ୧. ପ୍ରମୁଖ ରାଷ୍ଟ୍ରର ରାଷ୍ଟ୍ରମୁଖ୍ୟଙ୍କ ସରକାରୀ ବାସଭବନର ନାମ ଓ ଫଟୋ ସଂଗ୍ରହ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରତି ଧାଡ଼ିରେ ଦେଶ, ରାଷ୍ଟ୍ରମୁଖ୍ୟଙ୍କ ପଦନାମ, ବାସଭବନ ଓ ଚିତ୍ର ସଂଗ୍ରହର ସୂତ୍ର ଲେଖ। ପାଠର ମାନଚିତ୍ର ବା ନେତାଙ୍କ ଛବିକୁ ବାସଭବନର ଫଟୋ ବୋଲି ଲେଖିହେବ ନାହିଁ।</p><p>ଚାହିଁଥିବା ବାସଭବନମାନଙ୍କର ଫଟୋ ଓ ସମ୍ପୂର୍ଣ୍ଣ ନାମାବଳୀ ଏହି ପାଠରେ ନାହିଁ। ଚିତ୍ର ତଳେ ରାଷ୍ଟ୍ରମୁଖ୍ୟଙ୍କ ପଦ ଓ ଭବନ ନାମ ଲେଖ।</p><p>ସରକାରୀ ବାସଭବନ, ସଂସଦ ଭବନ ଓ ମନ୍ତ୍ରଣାଳୟର ଫଟୋ ଅଲଗା ଅଲଗା ପରିଚୟ ଦିଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=205" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୫</a></small></article>
+<article id="exercise-34"><h2>ତୁମ ପାଇଁ କାମ ୨. କେତେକ ରାଷ୍ଟ୍ରର ରାଜଧାନୀ, ରାଷ୍ଟ୍ରଭାଷା ଓ ପ୍ରଚଳିତ ମୁଦ୍ରାର ତାଲିକା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦେଶ, ରାଜଧାନୀ, ଭାଷା ଓ ମୁଦ୍ରା ନାମରେ ଚାରିଟି ସ୍ତମ୍ଭ କର। ପାଠର ନେପାଳ ବିବରଣୀ ଅନୁସାରେ ନେପାଳର ରାଜଧାନୀ କାଠମାଣ୍ଡୁ।</p><p>ଭୁଟାନ ପାଇଁ ଥିମ୍ପୁ ଲେଖ। ଶ୍ରୀଲଙ୍କାରେ ସିଂହଳୀ ଓ ତାମିଲ ଭାଷା କୁହାଯିବା କଥା ଥିଲେ ମଧ୍ୟ ସେହି ବର୍ଣ୍ଣନା ପ୍ରତି ଭାଷାର ସାମ୍ବିଧାନିକ ସ୍ଥିତି ସୂଚାଏ ନାହିଁ।</p><p>ଭାଷା ଓ ମୁଦ୍ରା ସହ ପ୍ରତ୍ୟେକ ଦେଶର ସମ୍ପୂର୍ଣ୍ଣ ଯୋଡ଼ି ଏହି ପାଠରେ ନଥିବାରୁ ଶିକ୍ଷକଙ୍କ ସହ ସେହି ଘରଗୁଡ଼ିକ ପୂରଣ କର। ଗୋଟିଏ ପୂରଣଯୋଗ୍ୟ ଧାଡ଼ି ହେବ ‘ଭୁଟାନ — ଥିମ୍ପୁ — [ରାଷ୍ଟ୍ରଭାଷା] — [ମୁଦ୍ରା]’।</p><p>ପାଠରେ ନଥିବା ଦୁଇ ଘର ପାଇଁ ସଂଗୃହୀତ ପ୍ରମାଣ ମିଳିଲେ ତାହାର ନାମ ମଧ୍ୟ ଲେଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=197" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯୭–୨୦୫</a></small></article>
+<article id="exercise-35"><h2>ତୁମ ପାଇଁ କାମ ୩. ପ୍ରମୁଖ ରାଷ୍ଟ୍ରର ବ୍ୟବସ୍ଥାପିକାର ନାମ ଲେଖି ଫଟୋ ବା ଚିତ୍ର ସଂଗ୍ରହ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଭାରତର ବ୍ୟବସ୍ଥାପିକା ସଂସଦ। ପାଠରେ ଭାରତର ସଂସଦ ଭବନ ଓ ନେପାଳର ନିର୍ବାଚିତ ସଂସଦର ଉଲ୍ଲେଖ ଅଛି।</p><p>ବ୍ୟବସ୍ଥାପିକାର ନାମ, ସଭା ବସୁଥିବା ଭବନର ନାମ ଓ ଚିତ୍ରର ଉତ୍ସ ପୃଥକ୍ ଲେଖ। ଅନ୍ୟ ଦେଶର ମୂଳ ଫଟୋ ଛାତ୍ରଙ୍କ ସଂଗ୍ରହ ଅଂଶ।</p><p>ଚିତ୍ରରେ ସଭା ବସୁଥିବା ଭବନକୁ ଚିହ୍ନାଅ। ତଳେ ‘ଦେଶ — ଭାରତ, ବ୍ୟବସ୍ଥାପିକା — ସଂସଦ’ ଭଳି ପରିଚୟ ଦେଲେ ଭବନ ଓ ସଂସ୍ଥାର ସମ୍ପର୍କ ସ୍ପଷ୍ଟ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/103%20-%20OD_ODIA_HISTORYCIVICS_CLASS10_TERM1.pdf#page=200" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦୦–୨୦୫</a></small></article>
+
+</main></body></html>

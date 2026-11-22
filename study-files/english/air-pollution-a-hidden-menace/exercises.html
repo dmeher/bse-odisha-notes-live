@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Air Pollution – A Hidden Menace · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>Air Pollution – A Hidden Menace</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>D ୧–୨୫, Eର ପାଞ୍ଚ ପ୍ରଶ୍ନ ଓ ସାରଣୀ, F ୧–୪, G (i–iv), H (a–b), I ପ୍ରକଳ୍ପ। ପ୍ରକଳ୍ପର ନମୁନା ତଥ୍ୟ କଳ୍ପିତ ବୋଲି ଚିହ୍ନିତ; ଶିକ୍ଷାର୍ଥୀ ନିଜ ଅଞ୍ଚଳର ନିରୀକ୍ଷଣ ଭରିବେ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୬୬, ୭୨–୭୭।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୨୧)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">A · Lead-in</a> <a href="#exercise-2">D. 1–5</a> <a href="#exercise-3">D. 6–7</a> <a href="#exercise-4">D. 8–13</a> <a href="#exercise-5">D. 14–16</a> <a href="#exercise-6">D. 17–18</a> <a href="#exercise-7">D. 19–22</a> <a href="#exercise-8">D. 23–25</a> <a href="#exercise-9">E (i). 1–3</a> <a href="#exercise-10">E (i). 4–5</a> <a href="#exercise-11">E (ii)</a> <a href="#exercise-12">F. 1–2</a> <a href="#exercise-13">F. 3</a> <a href="#exercise-14">F. 4</a> <a href="#exercise-15">G (i)</a> <a href="#exercise-16">G (ii)(a)</a> <a href="#exercise-17">G (ii)(b)</a> <a href="#exercise-18">G (iii–iv)</a> <a href="#exercise-19">H (a). Participles and 1–8</a> <a href="#exercise-20">H (b)</a> <a href="#exercise-21">I. Local project</a></nav></details>
+<article id="exercise-1"><h2>A · Lead-in. Discuss the opening questions about air and use the examples to predict the topic.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>A pupil might say, “Smoke on a busy road makes me cough.” Another may never have had that experience. The questions prepare us to connect what we breathe with health and to ask what makes rainfall acidic. ନିଜ ଅନୁଭବ ଥିଲେ ଲେଖ; ପାଠର ପ୍ରଶ୍ନ କୌଣସି ପଦାର୍ଥ ଚାଖି ଦେଖିବାକୁ କହୁନାହିଁ।</p><p>ଧୂଆଁ ଦେଖିବା observation, ତାହା ପରେ କାଶ ଲାଗିବା ଅନୁଭବ। କ’ଣ ପଦାର୍ଥ ଥିଲା ତାହା ନ ଜାଣିଲେ ତାହାର ନାମ ଅନୁମାନରେ ଦିଅନାହିଁ।</p><p>ପାଠ ଏହି ଦୈନନ୍ଦିନ ପ୍ରଶ୍ନରୁ ଉତ୍ସ ଖୋଜେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=66" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୬</a></small></article>
+<article id="exercise-2"><h2>D. 1–5. Explain the opening example and the importance of inhaled air.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Gas escaped from a chemical plant at Bhopal in 1984. 2. The escape occurred at an industrial plant. 3. Many people died and others were injured or lost their eyesight. 4. Breathing is essential for life. 5. Polluted air is an important route by which contaminants enter the body.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ନିଃଶ୍ୱାସ ପାଇଁ ଦରକାରୀ ବାୟୁ ଦିନଭରି ଶରୀରକୁ ପ୍ରବେଶ କରେ। ପାଠର ଭୋପାଳ ଘଟଣା ଏହି ମାଧ୍ୟମରେ ବିଷାକ୍ତ ଗ୍ୟାସର ବିପଦ ଦର୍ଶାଏ।</p><p>Bhopal ଥିଲା ହଠାତ୍ ବିଷାକ୍ତ ଗ୍ୟାସ୍ ନିଷ୍କାସନର ଉଦାହରଣ। ଆମେ ନିରନ୍ତର ଶ୍ୱାସ ନେଉଥିବାରୁ ଜଳ ବା ଖାଦ୍ୟ ପରି ସହଜରେ ବାୟୁକୁ ଏଡ଼ିପାରୁନାହୁଁ।</p><p>ଏହା ଆଗର ଘଟଣାକୁ ସମସ୍ତଙ୍କ ସମସ୍ୟା କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+<article id="exercise-3"><h2>D. 6–7. Give the composition of dry air stated in the lesson and explain when air is polluted.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>6. The text gives 78% nitrogen, 21% oxygen, a little under 1% argon and 0.03% carbon dioxide. 7. A change such as a lower oxygen level or the entry of irritating gases makes air polluted. ଶତକଡ଼ା ସଂଖ୍ୟା ଏହି ପାଠରେ ଦିଆଯାଇଥିବା ମୂଲ୍ୟ।</p><p>ଶତକଡ଼ା ତାଲିକାଟି ପାଠର dry air ପାଇଁ। ଦ୍ୱିତୀୟ ଉତ୍ତରରେ ସ୍ୱାଭାବିକ ମିଶ୍ରଣ ସହ ବିଷାକ୍ତ ଗ୍ୟାସ୍ କିମ୍ବା କଣିକା ଯୋଡ଼ାଯିବାର ପ୍ରଭାବ ଦେଖାଅ।</p><p>ଏକେ ସୂଚୀକୁ ଦୁଇଥର ଦେଲେ ତାହା ବୁଝାଯାଏନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+<article id="exercise-4"><h2>D. 8–13. Connect industry and traffic with emissions.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>8. Coal, coke and furnace oil are named. 9. Dust, ash and gases are inhaled. 10. Thermal stations release large quantities of smoke and ash. 11. Cement, steel, ore-processing and chemical industries also contribute. 12. A growing population needs transport. 13. Vehicle exhaust adds harmful gases, including carbon monoxide.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ଶିଳ୍ପରେ ଇନ୍ଧନ ଦହନରୁ ଧୂଆଁ, ଯାନବାହନରୁ ନିର୍ଗତ ଗ୍ୟାସ; ଏ ଦୁଇ ଉତ୍ସର ଫରକ ମନେ ରଖ।</p><p>Coal ଓ oil ଜାଳେଣି, ash ଓ exhaust ନିଷ୍କାସିତ ପଦାର୍ଥ। ତାପବିଦ୍ୟୁତ କେନ୍ଦ୍ର ଏକ ସ୍ଥିର ଉତ୍ସ; ମୋଟରଗାଡ଼ି ସହର ଭିତରେ ଚଳନ୍ତା ଉତ୍ସ।</p><p>କେଉଁ ପ୍ରଶ୍ନରେ ଜାଳେଣି, କେଉଁଥିରେ କ୍ଷତି ମାଗୁଛି ଅଲଗା କର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+<article id="exercise-5"><h2>D. 14–16. Describe the effects on plants, buildings and people.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>14. Vehicle exhaust harms flower and vegetable crops, and pollution from power plants has killed trees. 15. Soot blackens walls and polluted air damages building surfaces. 16. People may suffer irritated eyes, scratchy throats and respiratory illness. ପ୍ରଶ୍ନକୁ ମେଳାଇ କ୍ଷତିଗ୍ରସ୍ତ ବସ୍ତୁ ବା ବ୍ୟକ୍ତି ଅନୁସାରେ ଉଦାହରଣ ଦିଅ।</p><p>ଗଛ ବା ଫସଲ ମରିଯିବା ଜୀବନ୍ତ ବସ୍ତୁର କ୍ଷତି। Sootରେ କାନ୍ଥ କଳା ପଡ଼ିବା ବସ୍ତୁର ପୃଷ୍ଠର ପରିବର୍ତ୍ତନ।</p><p>ଆଖି ବା ଗଳାରେ ଜ୍ୱଳନ ମଣିଷର ଅନୁଭବ। ତିନି ପ୍ରକାର ପ୍ରଭାବକୁ ଅଲଗା ଉଦାହରଣ ଦିଅ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+<article id="exercise-6"><h2>D. 17–18. Distinguish the warming effect from the harm due to refrigerants.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>17. More carbon dioxide, methane and nitrous oxide can trap radiation and warm the atmosphere. 18. The lesson describes chlorofluorocarbons used in refrigeration as a threat to the layer that protects us from harmful solar energy. ତାପମାତ୍ରା ବଢ଼ିବା ଓ ସୁରକ୍ଷାଦାୟୀ ସ୍ତର ନଷ୍ଟ ହେବା ଦୁଇଟି ଭିନ୍ନ ପ୍ରଭାବ।</p><p>ଉଷ୍ମତା ବଢ଼ିବାରେ ତାପ ଧରି ରଖୁଥିବା gasesର କଥା। Ozone ହ୍ରାସରେ କ୍ଷତିକାରକ କିରଣ ଅଧିକ ତଳକୁ ପହଞ୍ଚିବାର କଥା।</p><p>ଦୁହିଁଟି ପାଇଁ ଏକେ ଫଳ ଲେଖିଲେ କାରଣକ୍ରମ ହଜେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+<article id="exercise-7"><h2>D. 19–22. Explain acid rain, its effects and the three controls.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>19. The passage links acidic precipitation to sulphur and nitrogen compounds. 20. Rivers and lakes become acidic, harming aquatic life. 21. Useful soil nutrients are washed away. 22. Use preventive, dispersal and collection measures.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ବର୍ଷା ପାଣିର ପ୍ରଭାବ ଓ ମାଟିର ପୋଷକ ଦ୍ରବ୍ୟ ହ୍ରାସ ଅଲଗା ଭାବେ ଲେଖ। ତିନି ନିୟନ୍ତ୍ରଣ ଉପାୟରୁ ଗୋଟିଏ ଲେଖାଏଁ ଉଦାହରଣ ବାଛ।</p><p>Acid rainରେ ପ୍ରଥମେ ବାୟୁର ଦୂଷକ, ପରେ ଅମ୍ଳୀୟ ବର୍ଷା, ଶେଷରେ ଜଳ ଓ ମାଟିର କ୍ଷତି। ନିୟନ୍ତ୍ରଣରେ ଏହି କ୍ରମକୁ ଓଲଟାଇ ଉତ୍ସରେ କମାଇବା ବା ବାହାରିବା ପଥରେ ଧରିବା ଭାବ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+<article id="exercise-8"><h2>D. 23–25. Why do standards, technology and research all matter?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>23. Countries pass laws and set air-quality standards. 24. Low-sulphur fuels and redesigned engines have reduced pollution. 25. Pollutants cross boundaries and effective control remains costly, so better ways are needed.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ବିଧି ପ୍ରଣୟନ ଲକ୍ଷ୍ୟ ସ୍ଥିର କରେ। ଇନ୍ଧନ ଓ ଇଞ୍ଜିନର ପରିବର୍ତ୍ତନ ବାସ୍ତବରେ ନିର୍ଗମନ ହ୍ରାସ କରେ।</p><p>Standard ବାୟୁର ଗୁଣ ମାପିବା ପାଇଁ ମାନ ଦିଏ। ପରିବର୍ତ୍ତିତ engine ଓ fuel ସେହି ମାନକୁ ପହଞ୍ଚିବାର ଉପାୟ।</p><p>Research ପରର ଉପାୟ ଖୋଜେ। ଆଇନ କଲାମାତ୍ରେ ଦୂଷକ ଆପେଆପେ କମେନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୨</a></small></article>
+<article id="exercise-9"><h2>E (i). 1–3. Explain changes to the atmosphere, the risk from a chemical plant and the formation of acid rain.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Burning fuels uses oxygen and releases other substances. The lesson warns that altered air can lead to respiratory disorders. 2. Chemical plants may release toxic fumes. A gas escape can kill or injure many people, as at Bhopal. 3. Sulphur and nitrogen compounds enter the air; rain or other precipitation containing these pollutants falls as acid rain. ପ୍ରତି ଉତ୍ତରରେ ପ୍ରଥମେ କାରଣ ଓ ପରେ ପରିଣାମକୁ ରଖ।</p><p>ପ୍ରତ୍ୟେକ ଉତ୍ତର ପାଇଁ cause → change → harm ରଖ। ଗ୍ୟାସ୍ ନିଷ୍କାସନ ପ୍ରଶ୍ନରେ ତୁରନ୍ତ exposure, ବର୍ଷା ପ୍ରଶ୍ନରେ ବାୟୁରୁ ଜଳ ଓ ମାଟିକୁ ଦୂଷଣ ଯିବା ଦେଖାଅ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩</a></small></article>
+<article id="exercise-10"><h2>E (i). 4–5. How do pollutants cross borders and how can pollution from vehicles be reduced?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>4. Winds can carry pollutants over very long distances. The lesson links damage to lakes in eastern Canada with pollution originating in the United States. 5. Engines can be redesigned and fitted with catalytic converters. Pollution affects places far from the source, making it an international problem. ବାୟୁ ପ୍ରବାହର କୌଣସି ରାଜନୈତିକ ସୀମା ନାହିଁ।</p><p>Winds ଯେଉଁ ଦିଗରେ ବହେ ସେହି ଦିଗକୁ ଦୂଷକ ଯାଇପାରେ। ତେଣୁ ସୀମା ପାରର ଲୋକ ମଧ୍ୟ କ୍ଷତି ପାଆନ୍ତି।</p><p>ଗାଡ଼ିରେ engine ବଦଳାଇବା ଓ exhaustକୁ ଶୋଧନ କରିବା ଦୁଇଟି ଭିନ୍ନ ସ୍ଥାନର ପଦକ୍ଷେପ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩</a></small></article>
+<article id="exercise-11"><h2>E (ii). Fill the cause, affected area and damage table with examples from the lesson.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Industry → air → smoke and ash; cars → crops → exhaust damage; acid rain → soil → loss of calcium, potassium and magnesium; refrigerants containing chlorofluorocarbons → atmosphere → damage to its protective layer. ପ୍ରତି ଧାଡ଼ିରେ ଉତ୍ସ, କେଉଁଠାରେ ପ୍ରଭାବ ପଡ଼େ ଓ କି ପରିବର୍ତ୍ତନ ହୁଏ ଦେଖାଅ।</p><p>ସାରଣୀର ଗୋଟିଏ ଧାଡ଼ିକୁ ବାକ୍ୟ କର: “Acid rain removes nutrients from the soil.” ଏଠି acid rain କାରଣ, soil ପ୍ରଭାବିତ ବସ୍ତୁ, loss of nutrients କ୍ଷତି। ପ୍ରତି ଧାଡ଼ିରେ ଏହି ତିନି ଭୂମିକା ଦେଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩</a></small></article>
+<article id="exercise-12"><h2>F. 1–2. Prepare and present ideas for the group discussion.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Sample presentation: Our group suggests using low-sulphur fuel, collecting pollutants at factory outlets and fitting suitable devices to vehicle exhausts. Which of these would prevent pollution at its source? ବାକି ଦଳ ପ୍ରତିକ୍ରିୟା ଜଣାଇବେ।</p><p>ଶ୍ରେଣୀର ସହମତି ଆଲୋଚନା ପରେ ଲେଖିବେ।</p><p>ଉପସ୍ଥାପନାର ପ୍ରତି ମତ ସହ ତାହା କିପରି କାମ କରେ କୁହ। “Use cleaner fuel because less sulphur enters the air” କହିଲେ କେବଳ ବ୍ୟବସ୍ଥାର ନାମ କହିବା ଅପେକ୍ଷା ଦଳକୁ ଯୁକ୍ତି ମିଳେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=73" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୩–୭୪</a></small></article>
+<article id="exercise-13"><h2>F. 3. Write a letter to an editor about keeping air clean.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>[Your address], [Date]. To the Editor, [Newspaper]. Subject — Clean air for our community. Sir/Madam, People breathe the same air throughout the day. Factory smoke and vehicle exhaust can harm our lungs and damage crops. Please draw attention to the use of low-sulphur fuels and equipment that captures pollutants. Local authorities can also check that vehicle emission devices work. These measures deserve public support because clean air affects everyone. Yours faithfully, [Name]. ଚିଠିରେ ସମସ୍ୟା, ପ୍ରଭାବ ଓ କାର୍ଯ୍ୟକାରୀ ପ୍ରସ୍ତାବ କ୍ରମରେ ଲେଖ।</p><p>ସମ୍ପାଦକଙ୍କ ଶ୍ରୋତା ସାଧାରଣ ପାଠକ। ତେଣୁ ଏକ ସ୍ଥାନୀୟ ଚିନ୍ତା, ତାହାର ପ୍ରଭାବ ଓ ନିର୍ଦ୍ଦିଷ୍ଟ ଅନୁରୋଧ ରଖ: “Please draw attention to smoky vehicles near the school.” ନିଜ ଠିକଣା ଓ ତାରିଖ ଦେଲେ ଚିଠି ବ୍ୟବହାରଯୋଗ୍ୟ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-14"><h2>F. 4. Give arguments on the two debate motions.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i. For a ban: fewer private vehicles would release less exhaust. Against: redesigned engines and catalytic converters can reduce emissions while vehicles remain available. ii. For closing polluting industries: smoke, ash and toxic fumes harm people and crops. Against: cleaner fuel and collection equipment can reduce pollution within existing plants. ଶ୍ରେଣୀର ବକ୍ତା ନିଜ ପକ୍ଷ ପାଇଁ ପାଠରୁ ଉଦାହରଣ ବାଛିବେ।</p><p>ମତର ବିପକ୍ଷେ କହିବା ଅର୍ଥ ଦୂଷଣକୁ ସମର୍ଥନ ନୁହେଁ। ପୂର୍ଣ୍ଣ ନିଷେଧରେ ଆପତ୍ତି ଥିଲେ ନୂଆ engine ବା ନିୟନ୍ତ୍ରିତ fuel ପରି ଅନ୍ୟ ଉପାୟ କେମିତି କ୍ଷତି କମାଇବ କୁହ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-15"><h2>G (i). Collect words and phrases in the reading that convey harmful effects.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Examples include crippling, toxic fumes, obnoxious gases, respiratory disorders, eye irritations, scratchy throats and skin lesions. ପ୍ରଥମ ଶବ୍ଦଗୁଡ଼ିକ ବିପଦର ସ୍ୱଭାବକୁ, ଶେଷ ଶବ୍ଦଗୁଡ଼ିକ ଶରୀରରେ ହେଉଥିବା ପ୍ରଭାବକୁ ଦର୍ଶାଏ।</p><p>Toxic ବିଷାକ୍ତତା କହେ, respiratory disorders ଶ୍ୱାସରୋଗ ଚିହ୍ନାଏ, scratchy throats ରୋଗୀଙ୍କ ଅନୁଭୂତି କହେ। ତେଣୁ ପ୍ରତି phraseକୁ ତା’ର noun ସହ ରଖିଲେ କ୍ଷତିର ଅର୍ଥ ସ୍ପଷ୍ଟ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪</a></small></article>
+<article id="exercise-16"><h2>G (ii)(a). Supply the missing verbs and nouns in the table.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Resident–reside; pollution–pollute; composition–compose; inhalation–inhale; emission–emit; comparison–compare; knowledge–know; recovery–recover; destruction–destroy; contamination–contaminate; precipitation–precipitate; deterioration–deteriorate. Consume–consumption; alter–alteration; believe–belief; reduce–reduction; produce–production; operate–operation; expect–expectation; represent–representation; radiate–radiation; illustrate–illustration; justify–justification; prevent–prevention. ଯୋଡ଼ିରେ କାମ ବା ଅବସ୍ଥାର ନାମ ଓ ତାହାର କ୍ରିୟାରୂପ ଦେଖ।</p><p>Nounଟିକୁ “the …” ଓ verbକୁ “can …” ପରେ ବସାଇ ଯାଞ୍ଚ କର। The emission ଏକ ନାମ; can emit ଏକ କାମ।</p><p>Knowର noun knowledge ତିଆରି କରିବାକୁ କେବଳ -tion ଯୋଡ଼ିଲେ ଚଳେନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=74" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୪–୭୫</a></small></article>
+<article id="exercise-17"><h2>G (ii)(b). Put the given words from each printed column in dictionary order.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Noun column: comparison, composition, contamination, destruction, deterioration, emission, inhalation, knowledge, pollution, precipitation, recovery, resident. Verb column: alter, believe, consume, expect, illustrate, justify, operate, prevent, produce, radiate, reduce, represent. ପ୍ରଥମ ଅକ୍ଷର ଏକା ହେଲେ ପର ଅକ୍ଷର ଦେଖ, ଯେପରି comparison → composition।</p><p>Comparison, composition, contamination ତିନିଟିର c ପରେ o ସମାନ। ପ୍ରଥମ ଭିନ୍ନ ଅକ୍ଷର ଯାଏ ଯାଅ: compa… ଆଗେ, compo… ପରେ, con… ତା’ପରେ।</p><p>Verb columnକୁ ସ୍ୱାଧୀନ ଭାବରେ ସଜାଅ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=75" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୫</a></small></article>
+<article id="exercise-18"><h2>G (iii–iv). Complete the blends and give the single-word answers.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>iii. forex bank; export + import → exim policy; slim + tender → slender; television + broadcast → telecast. iv. menace; deteriorating; ingredients; legislation; meteorologist. Deterioration ଅବସ୍ଥାର ନାମ; getting worse ପାଇଁ deteriorating ଉପଯୁକ୍ତ।</p><p>Blendରେ ଦୁଇ ଶବ୍ଦର ଅଂଶ ରହେ: tele- ସହ -cast। Single-word ଅଂଶରେ ସଂଜ୍ଞା ପରଖ; menace ମାନେ ବିପଦ, ତେଣୁ ଏହା ଏକ noun।</p><p>ଦୁଇ ପ୍ରକାର ଶବ୍ଦକାମ ଅଲଗା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=75" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୫</a></small></article>
+<article id="exercise-19"><h2>H (a). Participles and 1–8. Identify examples and supply participial forms.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Examples: irritating gases, expanding society, damaging effects, growing list; polluted air, contaminated food, increased number, redesigned engines. 1 torn; 2 swimming; 3 cleaning (an instrument for cleaning) or cleaned (one already cleaned); 4 boiled; 5 breathing; 6 polluted; 7 damaging; 8 developing (or developed if referring to industrialised countries). ପରିପ୍ରେକ୍ଷ୍ୟ ଅନୁସାରେ କାମର ଉଦ୍ଦେଶ୍ୟ, ଚାଲିଥିବା କାମ ବା ସମାପ୍ତ କାମ ବୁଝାଯାଏ।</p><p>Expanding societyରେ society ନିଜେ ବଢ଼େ। Polluted airରେ air ଉପରେ ପ୍ରଦୂଷଣର ପ୍ରଭାବ ପଡ଼ିଛି।</p><p>Active ବା affected ଭୂମିକାରୁ -ing ବା past participle ବାଛ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=76" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୬</a></small></article>
+<article id="exercise-20"><h2>H (b). Restore the capitals and punctuation in the passage about United States law.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>In the United States, control of air pollution is chiefly the responsibility of the state and local governments. All the states have air quality management programmes which are patterned after federal laws. The basic federal law dealing with air pollution is the Clean Air Act of 1970, amended in 1990. Under this law, the federal Environment Protection Agency sets standards for air quality. What are the standards?</p><p>ପୁସ୍ତକର ଶବ୍ଦ ରଖି ବାକ୍ୟ ସୀମା, ଆଇନର ନାମ, comma ଓ ଶେଷ ପ୍ରଶ୍ନଚିହ୍ନ ଦିଆଯାଇଛି।</p><p>United States ଏକ ନିଜସ୍ୱ ନାମ। ଆରମ୍ଭର ସ୍ଥାନସୂଚକ phrase ପରେ comma, ସଂପୂର୍ଣ୍ଣ statement ପରେ full stop ବସେ।</p><p>State ଓ local ଏଠି ସାଧାରଣ ବର୍ଣ୍ଣନା ହେତୁ ପ୍ରତ୍ୟେକକୁ capital କରାଯାଏନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=77" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୭</a></small></article>
+<article id="exercise-21"><h2>I. Local project. Plan your survey and write the conclusion after collecting evidence.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Worked illustration using fictional observations. Title: Air near our school gate. Question: When is smoke most noticeable? Observation sheet: Monday morning, gate, two buses leaving, exhaust visible; Monday midday, gate, no vehicles passing, no exhaust visible. Interpretation: smoke was observed at the busier visit, but two observations are insufficient to establish the usual pattern. Proposed control: check vehicle emissions and compare several days at the same times. ଏହି ତଥ୍ୟ କଳ୍ପିତ।</p><p>ନିଜ ପ୍ରକଳ୍ପରେ ସ୍ଥାନ, ସମୟ, ଉତ୍ସ, ପ୍ରଭାବ, ନିୟନ୍ତ୍ରଣ ଉପାୟ ଓ ନିଜର ନିରୀକ୍ଷଣ ଲେଖ।</p><p>ନମୁନା ପ୍ରକଳ୍ପରେ ଧୂଆଁ ଦେଖାଗଲା କି ଓ କେତେ ଗାଡ଼ି ଗଲା ଦୁଇଟି ପର୍ଯ୍ୟବେକ୍ଷଣ। ନିଜ ସର୍ବେରେ ତାରିଖ ଓ ସମୟ ଲେଖ।</p><p>ଦେଖା ଧୂଆଁକୁ ସିଧା ରାସାୟନିକ ମାପ ବୋଲି ଦାବି କରନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=77" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୭</a></small></article>
+
+</main></body></html>

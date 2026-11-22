@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">ତିନି ସମାନ୍ତର ରେଖା ଓ ଦୁଇ ଛେଦକରେ A, B, C ଏବଂ D, E, F ବିନ୍ଦୁ | BG = AD ଓ CH = BE |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="67.39,74.39 432.61,74.39" stroke="#557181" stroke-width="2.35"/>
+<polyline points="67.39,171.06 432.61,171.06" stroke="#557181" stroke-width="2.35"/>
+<polyline points="67.39,262.37 432.61,262.37" stroke="#557181" stroke-width="2.35"/>
+<polyline points="136.84,287.50 195.12,32.50" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="379.95,287.34 314.49,32.77" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<text x="52.39" y="74.39" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">L₁</text>
+<text x="52.39" y="171.06" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">L₂</text>
+<text x="52.39" y="262.37" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">L₃</text>
+<text x="195.12" y="20.50" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">T₁</text>
+<text x="314.49" y="20.77" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">T₂</text>
+<circle cx="303.10" cy="171.06" r="2.7" fill="#244355"/>
+<text x="300.10" y="157.06" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">G</text>
+<circle cx="329.18" cy="262.37" r="2.7" fill="#244355"/>
+<text x="329.18" y="248.37" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">H</text>
+<circle cx="185.55" cy="74.39" r="2.7" fill="#244355"/>
+<text x="177.55" y="63.39" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="163.45" cy="171.06" r="2.7" fill="#244355"/>
+<text x="155.45" y="160.06" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="142.58" cy="262.37" r="2.7" fill="#244355"/>
+<text x="134.58" y="251.37" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="325.19" cy="74.39" r="2.7" fill="#244355"/>
+<text x="335.19" y="63.39" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="350.05" cy="171.06" r="2.7" fill="#244355"/>
+<text x="360.05" y="160.06" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">E</text>
+<circle cx="373.53" cy="262.37" r="2.7" fill="#244355"/>
+<text x="383.53" y="251.37" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">F</text>
+</svg>

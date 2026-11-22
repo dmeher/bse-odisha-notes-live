@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ତ୍ରିକୋଣମିତି · ବିସ୍ତୃତ ଟିପ୍ପଣୀ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ତ୍ରିକୋଣମିତି</p><h1>ବିସ୍ତୃତ ଟିପ୍ପଣୀ</h1>
+<a href="https://drive.google.com/file/d/15Bf8NQP29BHLqI2KXWZdXjamh3q27s6L/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+<aside class="lesson-opening"><h2>କେଉଁ କୋଣ ପାଇଁ କେଉଁ ଅନୁପାତ ବାଛିଲେ ଅଜଣା ବାହୁ ମିଳିବ?</h2><div class="lesson-body"><p>ସୂକ୍ଷ୍ମକୋଣର ସମ୍ମୁଖସ୍ଥ, ସଂଲଗ୍ନ ବାହୁ ଓ କର୍ଣ୍ଣ ଚିହ୍ନି ଛଅ ତ୍ରିକୋଣମିତିକ ଅନୁପାତ ଲେଖ। ଅନୁପୂରକ କୋଣର ସମ୍ବନ୍ଧ ଓ ଅଭେଦରୁ ସରଳୀକରଣ କର।</p><p>କୋଣ ବଢ଼ିଲେ ଚିହ୍ନ କିପରି ବଦଳେ ଓ ମିଶ୍ରକୋଣର ସୂତ୍ର କିପରି ଲାଗେ ଦେଖ। ଉଚ୍ଚତା ଓ ଦୂରତାରେ ପ୍ରଥମେ ଦୃଷ୍ଟିରେଖା ସହ ସମକୋଣୀ ତ୍ରିଭୁଜ ଅଙ୍କନ କର।</p></div></aside>
+<details class="note-index"><summary>ଏହି ଅଧ୍ୟାୟର ବିଷୟସୂଚୀ</summary>
+    <nav aria-label="ବିସ୍ତୃତ ଟିପ୍ପଣୀ ସୂଚୀ"><a href="#note-1">୪.୧ · ସୂକ୍ଷ୍ମକୋଣର ଛଅ ତ୍ରିକୋଣମିତିକ ଅନୁପାତ</a> <a href="#note-2">୪.୨ · ଅନୁପୂରକ କୋଣ</a> <a href="#note-3">୪.୩–୪.୫ · ସ୍ଥୂଳକୋଣ ଓ ଅକ୍ଷ ଉପରିସ୍ଥ ବିନ୍ଦୁ</a> <a href="#note-4">୪.୬–୪.୮ · ପରିପୂରକ ଓ 90°+θ ପାଇଁ ମାନ</a> <a href="#note-5">ଅନୁଶୀଳନୀ ୪(a) · ୫(iii) · ଅନୁପୂରକ କୋଣ ବାଛି ସରଳୀକରଣ</a> <a href="#note-6">୪.୯ · ମିଶ୍ରକୋଣର sine ଓ cosine</a> <a href="#note-7">tangentର ସୂତ୍ର ଓ ନିର୍ଦ୍ଦିଷ୍ଟ ମିଶ୍ରକୋଣ</a> <a href="#note-8">ଅନୁଶୀଳନୀ ୪(b) · ୬ · ମିଶ୍ରକୋଣର ଠିକ୍ ମାନ</a> <a href="#note-9">୪.୧୦ · ଉଚ୍ଚତା ଓ ଦୂରତା</a> <a href="#note-10">ଅନୁଶୀଳନୀ ୪(c) · ୧ · ବୃକ୍ଷର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ</a></nav></details>
+<article id="note-1" class="lesson-topic"><h2>୪.୧ · ସୂକ୍ଷ୍ମକୋଣର ଛଅ ତ୍ରିକୋଣମିତିକ ଅନୁପାତ</h2>
+<div class="lesson-body"><p>ସମକୋଣୀ ତ୍ରିଭୁଜରେ ନିର୍ଦ୍ଦିଷ୍ଟ ସୂକ୍ଷ୍ମକୋଣ θର ବିପରୀତ ବାହୁ p, ସଂଲଗ୍ନ ବାହୁ b ଓ କର୍ଣ୍ଣ h ଧର।</p><div class="lesson-table"><table><thead><tr><th scope="col">ଅନୁପାତ</th><th scope="col">ତାହାର ବ୍ୟସ୍ତ ଅନୁପାତ</th></tr></thead><tbody><tr><td>sin θ = p/h</td><td>cosec θ = h/p</td></tr><tr><td>cos θ = b/h</td><td>sec θ = h/b</td></tr><tr><td>tan θ = p/b</td><td>cot θ = b/p</td></tr></tbody></table></div><p>କୋଣ ବଦଳାଇଲେ p ଓ b ପରସ୍ପର ବଦଳନ୍ତି, କର୍ଣ୍ଣ ଏକା ରହେ। p²+b²=h²କୁ h²ରେ ଭାଗ କଲେ sin²θ+cos²θ=1। ଏଥିରୁ ହର ଅଶୂନ ଥିବାବେଳେ 1+tan²θ=sec²θ ଓ 1+cot²θ=cosec²θ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=101" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୧–୧୦୨</a></small></article>
+<article id="note-2" class="lesson-topic"><h2>୪.୨ · ଅନୁପୂରକ କୋଣ</h2>
+<div class="lesson-body"><p>ଅନ୍ୟ ସୂକ୍ଷ୍ମକୋଣର ମାପ 90°−θ। θର ବିପରୀତ ବାହୁ 90°−θର ସଂଲଗ୍ନ ବାହୁ ହେତୁ sin(90°−θ)=cosθ ଏବଂ cos(90°−θ)=sinθ।</p><p>ସେହିପରି tan(90°−θ)=cotθ, cot(90°−θ)=tanθ, sec(90°−θ)=cosecθ, cosec(90°−θ)=secθ। ଯୋଡ଼ାଯାଇଥିବା ପ୍ରତି କୋଣର ଯୋଗ 90° ହେଉଛି କି ଦେଖ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=102" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୨</a></small></article>
+<article id="note-3" class="lesson-topic"><h2>୪.୩–୪.୫ · ସ୍ଥୂଳକୋଣ ଓ ଅକ୍ଷ ଉପରିସ୍ଥ ବିନ୍ଦୁ</h2>
+<div class="lesson-body"><p>ମୂଳବିନ୍ଦୁ Oରୁ ଏକ ରଶ୍ମି ଉପରେ P(x,y) ଓ OP=r&gt;0 ନିଅ। θ ଧନାତ୍ମକ x-ଅକ୍ଷଠାରୁ ମାପିଲେ sinθ=y/r, cosθ=x/r ଓ x≠0 ପାଇଁ tanθ=y/x।</p><p>ଦ୍ୱିତୀୟ ପାଦରେ x&lt;0, y&gt;0 ହେତୁ sin ଓ cosec ଧନାତ୍ମକ, cos, sec, tan ଓ cot ଋଣାତ୍ମକ। 0°, 90°, 180°ରେ (x,y) ଯଥାକ୍ରମେ (r,0), (0,r), (−r,0)।</p><p>ଏଥିରୁ sinର ମାନ 0,1,0 ଓ cosର ମାନ 1,0,−1। tan90°, sec90°, cot0°, cosec0°, cot180°, cosec180°ରେ ହର ଶୂନ, ତେଣୁ ମାନ ଅସଂଜ୍ଞାତ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=102" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୨–୧୦୪</a></small></article>
+<article id="note-4" class="lesson-topic"><h2>୪.୬–୪.୮ · ପରିପୂରକ ଓ 90°+θ ପାଇଁ ମାନ</h2>
+<div class="lesson-body"><p>θ ସୂକ୍ଷ୍ମକୋଣ ହେଲେ sin(180°−θ)=sinθ, cos(180°−θ)=−cosθ ଓ tan(180°−θ)=−tanθ। 90°+θ ପାଇଁ sin=cosθ, cos=−sinθ, tan=−cotθ।</p><p>ବ୍ୟୁତ୍କ୍ରମ ନେଇ ଅନ୍ୟ ତିନିଟି ମିଳେ। 30°,45°,60°ର sin ଯଥାକ୍ରମେ 1/2, √2/2, √3/2 ଏବଂ cos ଓଲଟା କ୍ରମରେ।</p><p>ତେଣୁ 120°=180°−60° ବସାଇ sin120°=√3/2, cos120°=−1/2 ଓ tan120°=−√3। 135° ଓ 150°ରେ ମଧ୍ୟ ପ୍ରଥମେ ସଂଲଗ୍ନ ସୂକ୍ଷ୍ମକୋଣ ଚିହ୍ନଟ କର।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=104" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୪–୧୦୭</a></small></article>
+<article id="note-5" class="lesson-topic"><h2>ଅନୁଶୀଳନୀ ୪(a) · ୫(iii) · ଅନୁପୂରକ କୋଣ ବାଛି ସରଳୀକରଣ</h2>
+<div class="lesson-body"><p>(cos²20° + cos²70°)/(sin²59° + sin²31°) ର ମାନ ନିର୍ଣ୍ଣୟ କର।</p><ol><li>cos 70° = sin 20°। ତେଣୁ ଲବ = cos²20° + sin²20° = 1।</li><li>sin 59° = cos 31°। ତେଣୁ ହର = cos²31° + sin²31° = 1।</li><li>ଲବକୁ ହର ଦ୍ୱାରା ଭାଗ କଲେ 1/1 = 1।</li></ol><p>ଫଳ — 1।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="note-6" class="lesson-topic"><h2>୪.୯ · ମିଶ୍ରକୋଣର sine ଓ cosine</h2>
+<div class="lesson-body"><p>କୋଣ A ଓ B ଯୋଡ଼ିଲେ sin(A+B)=sinA cosB+cosA sinB, cos(A+B)=cosA cosB−sinA sinB। ବିୟୋଗରେ sin(A−B)=sinA cosB−cosA sinB, cos(A−B)=cosA cosB+sinA sinB।</p><p>ସୂତ୍ର ପ୍ରମାଣରେ ରଶ୍ମି ଉପରେ ଏକ ବିନ୍ଦୁ ନେଇ ଆବଶ୍ୟକ ଲମ୍ବ ପକାଅ। ଦୁଇ ଛୋଟ ସମକୋଣୀ ତ୍ରିଭୁଜରୁ ମିଳିଥିବା ଲମ୍ବ ଅଂଶମାନଙ୍କ ଯୋଗ ବା ଅନ୍ତରକୁ ମୂଳ କର୍ଣ୍ଣରେ ଭାଗ କଲେ ଦୁଇ ଅନୁପାତର ଗୁଣଫଳ ଥିବା ପଦ ମିଳେ।</p><p>sin(A+B)କୁ sinA+sinB ଲେଖିଲେ ଏହି ଗୁଣକଗୁଡ଼ିକ ହଜିଯିବ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=112" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୨–୧୧୫</a></small></article>
+<article id="note-7" class="lesson-topic"><h2>tangentର ସୂତ୍ର ଓ ନିର୍ଦ୍ଦିଷ୍ଟ ମିଶ୍ରକୋଣ</h2>
+<div class="lesson-body"><p>tan(A+B) ପାଇଁ sin(A+B)କୁ cos(A+B) ଦ୍ୱାରା ଭାଗ କର। ଲବ ଓ ହରକୁ cosA cosBରେ ଭାଗ କଲେ (tanA+tanB)/(1−tanA tanB)।</p><p>ଅନୁରୂପ ଭାବେ tan(A−B)=(tanA−tanB)/(1+tanA tanB)। ବ୍ୟବହୃତ ହର ଶୂନ ହେବ ନାହିଁ।</p><p>ଯଥା 75°=45°+30° ଧରି sin75°=(√2/2)(√3/2)+(√2/2)(1/2)=(√6+√2)/4। 15° ନେଲେ ସେହି ଦୁଇ ଗୁଣଫଳର ଅନ୍ତର ଲାଗିବ।</p><p>ସମାନ କୋଣ ନେଇ sin2A=2sinA cosA ଓ cos2A=cos²A−sin²A ମିଳେ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=114" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୪–୧୧୭</a></small></article>
+<article id="note-8" class="lesson-topic"><h2>ଅନୁଶୀଳନୀ ୪(b) · ୬ · ମିଶ୍ରକୋଣର ଠିକ୍ ମାନ</h2>
+<div class="lesson-body"><p>cos 75° ଓ sin 15° ର ଠିକ୍ ମାନ ନିର୍ଣ୍ଣୟ କର।</p><ol><li>75° = 45° + 30° ହେତୁ cos 75° = cos 45° cos 30° − sin 45° sin 30°।</li><li>ମାନ ବସାଇଲେ (√2/2)(√3/2) − (√2/2)(1/2) = (√6 − √2)/4।</li><li>15° = 90° − 75° ହେତୁ sin 15° = cos 75°।</li></ol><p>ଫଳ — ଉଭୟର ମାନ (√6 − √2)/4।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=118" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୮</a></small></article>
+<article id="note-9" class="lesson-topic"><h2>୪.୧୦ · ଉଚ୍ଚତା ଓ ଦୂରତା</h2>
+<div class="lesson-body"><p>ପର୍ଯ୍ୟବେକ୍ଷକଙ୍କ ଆଖି ଦେଇ ଭୂସମାନ୍ତର ଓ ଲକ୍ଷ୍ୟବସ୍ତୁକୁ ଦୃଷ୍ଟିରେଖା ଆଙ୍କ। ଉପରେ ଥିବା ଲକ୍ଷ୍ୟ ପାଇଁ କୌଣିକ ଉନ୍ନତି, ତଳେ ଥିଲେ କୌଣିକ ଅବନତି।</p><p>ସମାନ୍ତର ଦୁଇ ରେଖାର ଏକାନ୍ତର କୋଣ ସମାନ ହେତୁ କୌଣିକ ଅବନତିକୁ ଅନ୍ୟ ପ୍ରାନ୍ତର କୌଣିକ ଉନ୍ନତି ସହ ମେଳାଇହୁଏ। ଆଖିଠାରୁ ଲକ୍ଷ୍ୟର ଉର୍ଦ୍ଧ୍ୱ ପାର୍ଥକ୍ୟ h ଓ ଭୂସମାନ୍ତର ଦୂରତା d ହେଲେ tanθ=h/d।</p><p>ସମୁଦାୟ ଉଚ୍ଚତା ପାଇଁ ଆଖିର ଭୂମିଠାରୁ ଉଚ୍ଚତା ଯୋଗ କର। ଦୁଇ ସ୍ଥାନରୁ ନିରୀକ୍ଷଣ କଲେ କେଉଁ ଦୂରତା ଯୋଗ ବା ବିୟୋଗ ହୁଏ ଚିତ୍ରରେ ଚିହ୍ନଟ କର।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=119" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୯–୧୨୩</a></small></article>
+<article id="note-10" class="lesson-topic"><h2>ଅନୁଶୀଳନୀ ୪(c) · ୧ · ବୃକ୍ଷର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ</h2>
+<div class="lesson-body"><p>ବୃକ୍ଷର ପାଦଦେଶରୁ 120 ମିଟର ଦୂରରେ ସମତଳର ଏକ ବିନ୍ଦୁରୁ ଅଗ୍ରଭାଗର କୌଣିକ ଉନ୍ନତି 30°। ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</p><ol><li>AB ବୃକ୍ଷର ଉଚ୍ଚତା, B ପାଦଦେଶ ଓ C ଦର୍ଶନବିନ୍ଦୁ ଧର। BC = 120 ଓ ∠ACB = 30°।</li><li>tan 30° = AB/BC ⇒ AB = 120/√3।</li><li>ହାରକୁ ପରିମେୟ କଲେ AB = 40√3। √3 = 1.732 ନେଲେ ଉଚ୍ଚତା 69.28।</li></ol><p>ଫଳ — 40√3 ମିଟର ବା ପ୍ରାୟ 69.28 ମିଟର।</p></div>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ପ୍ରଶ୍ନ 1ରେ ଉଲ୍ଲେଖ ଥିବା ଉଚ୍ଚତା, ଭୂମି, ଦୃଷ୍ଟିରେଖା ଓ କୋଣ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjk1IiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMjk1IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik03Ny4yNyAyNDkuNTAgTDQ0Mi43MyAyNDkuNTAiIHN0cm9rZT0iIzI0NDI1NyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNNzcuMjcgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjMTQ3ODc4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxwYXRoIGQ9Ik00NDIuNzMgMjQ5LjUwIEw3Ny4yNyAzOC41MCIgc3Ryb2tlPSIjYTQ0OTJkIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjY5LjMiIHk9IjE0NC4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPmg8L3RleHQ+PHRleHQgeD0iNDA4LjAiIHk9IjI0NC4yIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjMwwrA8L3RleHQ+PHRleHQgeD0iMjYwLjAiIHk9IjI2OS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMy41IiBmaWxsPSIjMWMyYzNjIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiPjEyMCBtPC90ZXh0Pjwvc3ZnPg=="></div></figure>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=123" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨୩</a></small></article>
+<aside class="lesson-check"><h2>ନିଜେ ଉତ୍ତର ଦିଅ</h2><p>cos²20° + cos²70° କାହିଁକି 1?</p><details><summary>ଉତ୍ତର ମିଳାଅ</summary><div class="lesson-body"><p>20° + 70° = 90° ହେତୁ cos 70° = sin 20°। ତେଣୁ ରାଶିଟି cos²20° + sin²20° = 1।</p></div></details><a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=110">ମୂଳ ପୁସ୍ତକ · PDF ପୃଷ୍ଠା ୧୧୦</a></aside>
+</main></body></html>

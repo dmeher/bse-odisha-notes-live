@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ବାକ୍ୟ ବିଚାର · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ବାକ୍ୟ ବିଚାର</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/106Uxkzvo1m-kY3sPdjE2BAwFGS3IZ24O/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ଚାରୋଟି ପ୍ରଶ୍ନାବଳୀର ୯, ୮, ୧୦ ଓ ୮ଟି ପ୍ରଶ୍ନର ଉତ୍ତର। ଶ୍ରେଣୀ ନିର୍ଣ୍ଣୟର ସବୁ ବାକ୍ୟ, ଚଉଦଟି ରୂପାନ୍ତର ଓ ନିଜେ ଗଢ଼ିବା ପାଇଁ ନମୁନା ଅନ୍ତର୍ଭୁକ୍ତ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୩, ୬, ୧୦, ୧୪–୧୫</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୩୫)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧.୧ · ୧</a> <a href="#exercise-2">୧.୧ · ୨</a> <a href="#exercise-3">୧.୧ · ୩</a> <a href="#exercise-4">୧.୧ · ୪</a> <a href="#exercise-5">୧.୧ · ୫</a> <a href="#exercise-6">୧.୧ · ୬</a> <a href="#exercise-7">୧.୧ · ୭</a> <a href="#exercise-8">୧.୧ · ୮</a> <a href="#exercise-9">୧.୧ · ୯</a> <a href="#exercise-10">୧.୨ · ୧</a> <a href="#exercise-11">୧.୨ · ୨</a> <a href="#exercise-12">୧.୨ · ୩</a> <a href="#exercise-13">୧.୨ · ୪</a> <a href="#exercise-14">୧.୨ · ୫</a> <a href="#exercise-15">୧.୨ · ୬</a> <a href="#exercise-16">୧.୨ · ୭</a> <a href="#exercise-17">୧.୨ · ୮</a> <a href="#exercise-18">୧.୩ · ୧</a> <a href="#exercise-19">୧.୩ · ୨</a> <a href="#exercise-20">୧.୩ · ୩</a> <a href="#exercise-21">୧.୩ · ୪</a> <a href="#exercise-22">୧.୩ · ୫</a> <a href="#exercise-23">୧.୩ · ୬</a> <a href="#exercise-24">୧.୩ · ୭</a> <a href="#exercise-25">୧.୩ · ୮</a> <a href="#exercise-26">୧.୩ · ୯</a> <a href="#exercise-27">୧.୩ · ୧୦</a> <a href="#exercise-28">୧.୪ · ୧</a> <a href="#exercise-29">୧.୪ · ୨</a> <a href="#exercise-30">୧.୪ · ୩</a> <a href="#exercise-31">୧.୪ · ୪</a> <a href="#exercise-32">୧.୪ · ୫</a> <a href="#exercise-33">୧.୪ · ୬</a> <a href="#exercise-34">୧.୪ · ୭</a> <a href="#exercise-35">୧.୪ · ୮</a></nav></details>
+<article id="exercise-1"><h2>୧.୧ · ୧. ଉଦାହରଣ ଦେଇ ବାକ୍ୟର ସଂଜ୍ଞା ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠର ‘ଅରୁଣ କାଲି’ ପଢ଼ିଲେ ଅରୁଣ କ’ଣ କଲା ବା କରିବ ସେ କଥା ଜଣାପଡ଼େନି। ଦୁଇଟି ଅର୍ଥବୋଧକ ପଦ ଥିଲେ ସୁଦ୍ଧା ବକ୍ତବ୍ୟ ଅସମ୍ପୂର୍ଣ୍ଣ।</li><li>ଉତ୍ତରର ‘ପିଲାମାନେ ପାଠ ପଢ଼ନ୍ତି’ରେ କର୍ତ୍ତା, କର୍ମ ଓ କ୍ରିୟା ପରସ୍ପର ସହ ମେଳ ରଖି ପୂରା ଭାବ ଜଣାଉଛନ୍ତି। ଏହି ପୂର୍ଣ୍ଣତା ଦେଖି ବାକ୍ୟ ଚିହ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପରସ୍ପର ସମ୍ବନ୍ଧ ଥିବା ପଦଗୁଡ଼ିକର ଉପଯୁକ୍ତ ସଂଯୋଗରେ ମନର ଭାବ ପୂର୍ଣ୍ଣ ଭାବେ ପ୍ରକାଶ ପାଇଲେ ତାହାକୁ ବାକ୍ୟ କହନ୍ତି। ‘ପିଲାମାନେ ପାଠ ପଢ଼ନ୍ତି’ରେ କିଏ କ&#39;ଣ କରେ ସ୍ପଷ୍ଟ ହୋଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-2"><h2>୧.୧ · ୨. ସାର୍ଥକ ବାକ୍ୟର ଲକ୍ଷଣଗୁଡ଼ିକ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଦଗୁଡ଼ିକ ମଧ୍ୟରେ ଅର୍ଥସଙ୍ଗତି ରହିବା ହେଉଛି ଯୋଗ୍ୟତା। ଏକ ପଦର ଅର୍ଥ ପୂରଣ ପାଇଁ ଅନ୍ୟ ପଦର ଅପେକ୍ଷା ହେଉଛି ଆକାଂକ୍ଷା। (ପାଠର ପୃ. ୧–୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯୋଗ୍ୟତା, ଆକାଂକ୍ଷା ଓ ଆସତ୍ତି। ପଦଗୁଡ଼ିକର ଅର୍ଥ ମେଳ ଖାଇବ, ଅନ୍ୟ ପଦର ଅପେକ୍ଷା ପୂରଣ ହେବ ଏବଂ ସମ୍ବନ୍ଧିତ ପଦଗୁଡ଼ିକ ନିକଟରେ ରହିବେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-3"><h2>୧.୧ · ୩. ବାକ୍ୟର ଯୋଗ୍ୟତା ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୁସ୍ତକରେ ‘ବାଳକଟି ଉଡ଼ୁଅଛି’କୁ ସାଧାରଣ ଅର୍ଥରେ ନେଇ ବାଳକର କାମ ସହ ‘ଉଡ଼ିବା’ କ୍ରିୟାର ଅମେଳ ଦେଖାଯାଇଛି। କର୍ତ୍ତା ଓ କ୍ରିୟା ଲେଖିଦେବା ମାତ୍ରେ ଯୋଗ୍ୟତା ଆସେନି।</li><li>‘ବାଳକଟି ଦୌଡ଼ୁଅଛି’ କଲେ ସେହି କର୍ତ୍ତା ପାଇଁ ସମ୍ଭବ କ୍ରିୟା ମିଳିଲା। ଉଦାହରଣରେ ପଦଦ୍ୱୟ ମଧ୍ୟରେ ଏହି ଅର୍ଥସଙ୍ଗତିକୁ ଦର୍ଶାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପଦମାନଙ୍କ ଅର୍ଥ ମଧ୍ୟରେ ସଙ୍ଗତି ରହିବା ହେଉଛି ଯୋଗ୍ୟତା। ‘ସେ ପାଣି ପିଏ’ରେ ପିଇବା କ୍ରିୟା ସହିତ ପାଣିର ଅର୍ଥ ଖାପ ଖାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-4"><h2>୧.୧ · ୪. ଆସତ୍ତି କ&#39;ଣ? ଦୃଷ୍ଟାନ୍ତ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଦଗୁଡ଼ିକ ଚିହ୍ନିଲେ ମଧ୍ୟ ସେମାନଙ୍କ କ୍ରମ ଅସଜଡ଼ା ଥିଲେ କିଏ କ’ଣ କଲା ଧରିହୁଏନି। ପାଠରେ ଚନ୍ଦନା ଓ ବନ୍ଦନାଙ୍କ ଛବି ଆଙ୍କିବାର ଉଦାହରଣ ଏହା ଦେଖାଏ।</li><li>ପ୍ରଥମେ ଛବି ଆଙ୍କିଥିବା ଦୁଇ ଜଣଙ୍କ ନାମକୁ ଏକାଠି କର। ତା’ ପରେ ‘ଉଭୟ ମିଶି ଏ ଛବି ଆଙ୍କିଛନ୍ତି’ ଯୋଡ଼। ଶବ୍ଦମାନଙ୍କ ସ୍ଥାନ ଠିକ୍ ହେବାରୁ ଭାବ ସ୍ପଷ୍ଟ ହେଲା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅର୍ଥରେ ପରସ୍ପର ସମ୍ବନ୍ଧିତ ପଦଗୁଡ଼ିକ ଯଥାସ୍ଥାନରେ ପାଖାପାଖି ରହିବାକୁ ଆସତ୍ତି କହନ୍ତି। ‘ଚତୁର ଲୋକ ସବୁଠି ଜିତନ୍ତି’ରେ ‘ଚତୁର’ ଯାହାର ଗୁଣ ଜଣାଏ, ସେହି ‘ଲୋକ’ ପାଖରେ ବସିଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-5"><h2>୧.୧ · ୫. ଆକାଂକ୍ଷାର ଅର୍ଥ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ମାଆ ମୋତେ’ ଶୁଣିଲେ ‘କ’ଣ କଲେ?’ ବୋଲି ପ୍ରଶ୍ନ ରହିଯାଏ। ‘ଡାକିଲେ’ ଯୋଡ଼ିଲେ ସେହି ଅପେକ୍ଷା ପୂରଣ ହେଉଛି। ଶୁଣିବାରେ ରହିଥିବା ଏହି ଅପେକ୍ଷା ହିଁ ଆକାଂକ୍ଷା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗୋଟିଏ ପଦ ବା ପଦଗୋଷ୍ଠୀ ଶୁଣି ଭାବ ପୂର୍ଣ୍ଣ କରିବାକୁ ଅନ୍ୟ ପଦ ଶୁଣିବାର ଯେଉଁ ଅପେକ୍ଷା ରହେ, ତାହା ଆକାଂକ୍ଷା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-6"><h2>୧.୧ · ୬. ଦୃଷ୍ଟାନ୍ତରେ ବାକ୍ୟାଂଶ ଦେଖାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ହରିହରଙ୍କ କଥା ଶୁଣି’ରେ ଗୋଟିଏ ଅର୍ଥସୂତ୍ର ଅଛି, ହେଲେ ମୂଳ ବକ୍ତବ୍ୟ ଶେଷ ହୋଇନାହିଁ। ବାକ୍ୟାଂଶ ଏପରି ପଦସମୂହ। (ପାଠର ପୃ. ୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୂର୍ଣ୍ଣ ବାକ୍ୟର ଏକ ଅଂଶ, ଯାହା ନିଜେ ସମ୍ପୂର୍ଣ୍ଣ ଭାବ ପ୍ରକାଶ କରେ ନାହିଁ, ବାକ୍ୟାଂଶ। ‘ହରିହରଙ୍କ କଥା ଶୁଣି ମାଆ ଆଶ୍ଚର୍ଯ୍ୟ ହେଲେ’ରେ ‘ହରିହରଙ୍କ କଥା ଶୁଣି’ ଏକ ବାକ୍ୟାଂଶ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-7"><h2>୧.୧ · ୭. ଖଣ୍ଡବାକ୍ୟର ଲକ୍ଷଣ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଯେଉଁମାନେ ବୃଥାରେ ସମୟ କାଟନ୍ତି’ ଅଂଶରେ ‘କାଟନ୍ତି’ ସମାପିକା କ୍ରିୟା। ତେଣୁ ଏହା କେବଳ କେତୋଟି ପଦର ବାକ୍ୟାଂଶ ନୁହେଁ।</li><li>‘ଯେଉଁମାନେ’ ଶୁଣିଲେ ସେମାନଙ୍କ ସମ୍ପର୍କରେ ମୁଖ୍ୟ କଥା ଜାଣିବାକୁ ହୁଏ। ପୂରା ବାକ୍ୟରେ ଏହି କ୍ରିୟାଯୁକ୍ତ ଅଂଶର କାମକୁ ଦେଖି ଖଣ୍ଡବାକ୍ୟ ଚିହ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କର୍ତ୍ତା ଓ କ୍ରିୟା ଥାଇ ମଧ୍ୟ ଯେଉଁ ଅଂଶଟି ପୂର୍ଣ୍ଣ ମନୋଭାବ ପ୍ରକାଶ ପାଇଁ ଅନ୍ୟ ଅଂଶକୁ ଅପେକ୍ଷା କରେ, ତାହା ଖଣ୍ଡବାକ୍ୟ। ଯଥା ‘ଯେଉଁମାନେ ବୃଥାରେ ସମୟ କାଟନ୍ତି’।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-8"><h2>୧.୧ · ୮. ବାକ୍ୟ ଓ ଖଣ୍ଡବାକ୍ୟର ପାର୍ଥକ୍ୟ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ପିଲାଟି ଘରକୁ ଆସିଲା’ ଅଲଗା କହିଲେ ଗୋଟିଏ ଘଟଣାର ସମ୍ବାଦ ମିଳିଯାଏ। ‘ଯେତେବେଳେ’ ଯୋଡ଼ିବାରୁ ଏକେ ଘଟଣା ଏବେ ଅନ୍ୟ ଘଟଣାର ସମୟ ଜଣାଇବାକୁ ଆସିଛି।</li><li>ତେଣୁ ପାର୍ଥକ୍ୟ କେବଳ କ୍ରିୟା ଅଛି କି ନାହିଁ ସେଥିରେ ନାହିଁ। ପଦସମୂହଟି ସ୍ୱାଧୀନ ଭାବେ ସମ୍ପୂର୍ଣ୍ଣ ବକ୍ତବ୍ୟ ଦେଉଛି କି ବଡ଼ ବାକ୍ୟର ଅଂଶ ହୋଇ କାମ କରୁଛି ଦେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>‘ପିଲାଟି ଘରକୁ ଆସିଲା’ରେ ବକ୍ତାଙ୍କ କଥା ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଛି। ଏହା ବାକ୍ୟ।</p><p>‘ଯେତେବେଳେ ପିଲାଟି ଘରକୁ ଆସିଲା’ରେ କର୍ତ୍ତା ଓ କ୍ରିୟା ଥିଲେ ମଧ୍ୟ ଏହା ପରେ କ&#39;ଣ ଘଟିଲା ଜାଣିବାର ଆକାଂକ୍ଷା ରହିଛି। ଏହା ଖଣ୍ଡବାକ୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-9"><h2>୧.୧ · ୯. ଆକାଂକ୍ଷା ପୂରଣର ଆବଶ୍ୟକତା ଉଦାହରଣରେ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠର ‘ମଦନ ସହିତ’ ଶୁଣିଲେ କିଏ ମଦନ ସହିତ ଓ କ’ଣ କରିବେ ତାହା ଅପେକ୍ଷିତ ରହେ। ଏହି ଅପେକ୍ଷା ହେଉଛି ଆକାଂକ୍ଷା।</li><li>‘ତାଙ୍କ ବାପା ଆସିବେ’ ଯୋଡ଼ିଲେ ସେହି ଦୁଇ ପ୍ରଶ୍ନର ଉତ୍ତର ମିଳେ। ଏଠି କେତୋଟି ପଦ ଯୋଡ଼ାଗଲା ଅପେକ୍ଷା କେଉଁ ଅର୍ଥ ଅପୂର୍ଣ୍ଣ ଥିଲା ତାହା ଚିହ୍ନିବା ଜରୁରୀ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>‘ମାଆ ମୋତେ’ ଶୁଣିଲେ ମାଆ କ&#39;ଣ କଲେ ଜାଣିବାକୁ ଇଚ୍ଛା ହୁଏ। ‘ମାଆ ମୋତେ ଡାକିଲେ’ କହିଲେ ଉତ୍ତର ମିଳିଯାଏ।</p><p>ଆକାଂକ୍ଷା ପୂରଣ ହେବାରୁ ବାକ୍ୟଟି ସମ୍ପୂର୍ଣ୍ଣ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯</a></small></article>
+<article id="exercise-10"><h2>୧.୨ · ୧. ସଂବୋଧନ ପଦର ଦୁଇଟି ସ୍ଥାନ ଦେଖାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ବାକ୍ୟରେ ‘ବାବୁ’ ଶ୍ରୋତାଙ୍କୁ ଡାକୁଛି। ଏହାକୁ କାଢ଼ି ‘ମୋ କଥା ଶୁଣ’ ପଢ଼ିଲେ ଅନୁରୋଧଟି ତଥାପି ରହେ।</li><li>ସଂବୋଧନକୁ ଆରମ୍ଭରୁ ଶେଷକୁ ନେଲେ ଶ୍ରୋତା ବା ଅନୁରୋଧ ବଦଳେନି। ଏହା ପରେ ବା ଆଗରେ ବିରାମ ଦେଇ ମୂଳ କଥାଠାରୁ ଅଲଗା ପଢ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବାକ୍ୟର ଆରମ୍ଭରେ ବା ଶେଷରେ ସଂବୋଧନ ପଦ ବସେ। ‘ବାବୁ, ମୋ କଥା ଶୁଣ’ ଓ ‘ମୋ କଥା ଶୁଣ, ବାବୁ’ରେ ସମାନ ବ୍ୟକ୍ତିଙ୍କୁ ଡକାଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=10">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-11"><h2>୧.୨ · ୨. ‘ନାହିଁ’ ଓ ‘ନ’ କ୍ରିୟାର କେଉଁ ପଟେ ବସେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପାଠରେ ‘ଚନ୍ଦ୍ରମୋହନ କଟକ ଗଲା ନାହିଁ’ରେ ପ୍ରଥମେ ‘ଗଲା’ କ୍ରିୟାକୁ ଚିହ୍ନ। ତାହାର ଡାହାଣ ପଟେ ‘ନାହିଁ’ ବସିଛି।</li><li>‘କାଲି ତମେ ଘରେ ନ ଥିଲ’ରେ ଏକେ ପ୍ରକାରରେ ‘ଥିଲ’କୁ ଚିହ୍ନ। ତାହାର ବାମ ପଟେ ‘ନ’। ଉଭୟରେ ନିଷେଧ ଭାବ ଥିଲେ ମଧ୍ୟ ପଦର ସ୍ଥାନ ଭିନ୍ନ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>&#39;ନାହିଁ&#39; କ୍ରିୟାପଦ ପରେ ବସେ, ଯଥା ‘ସେ ଗଲା ନାହିଁ’। ‘ନ’ କ୍ରିୟା ପୂର୍ବରୁ ବସେ, ଯଥା ‘ସେ ଘରେ ନ ଥିଲା’।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=11">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-12"><h2>୧.୨ · ୩. ସମାପିକା କ୍ରିୟାର ସ୍ଥାନ ଉଦାହରଣରେ ଦେଖାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ବାକ୍ୟରେ ‘ଅକ୍ଷୟ’ ପରେ କାହାର କଥା ହେବାକୁ ଯାଉଛି ଜଣା ପଡ଼େ, ‘ଗୀତ’ ପରେ କ’ଣର କଥା ଜଣାପଡ଼େ। ‘ଗାଇଲେ’ ଆସିଲା ପରେ ହିଁ ସମଗ୍ର କାମର ଅର୍ଥ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାଧାରଣ ପଦବିନ୍ୟାସରେ ସମାପିକା କ୍ରିୟା ଶେଷରେ ବସେ। ‘ଅକ୍ଷୟ ଗୀତ ଗାଇଲେ’ରେ ‘ଗାଇଲେ’ କହିଲେ ଭାବ ପୂର୍ଣ୍ଣ ହେଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-13"><h2>୧.୨ · ୪. ବାକ୍ୟରେ ସମ୍ବନ୍ଧ ପଦ କେଉଁଠି ରହେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘କାହାର ପୁଅ?’ କହିଲେ ‘ଜମିଦାରଙ୍କ’ ଉତ୍ତର ମିଳେ। ସେହି ପ୍ରଶ୍ନରୁ ପଦଟି ସମ୍ବନ୍ଧ ସୂଚାଉଛି ବୋଲି ପରୀକ୍ଷା କରିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>&#39;ଜମିଦାରଙ୍କ ପୁଅ&#39;ରେ ‘ଜମିଦାରଙ୍କ’ ସମ୍ବନ୍ଧ ପଦ। ଏହା ସମ୍ବନ୍ଧିତ ପଦ ‘ପୁଅ’ ପୂର୍ବରେ ରହିଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-14"><h2>୧.୨ · ୫. ଗୁରୁତ୍ୱ ଦେବା ପାଇଁ ପଦ ଓ ବାକ୍ୟାଂଶର ସ୍ଥାନ ଦେଖାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘କଠିନ ଶ୍ରମ ଦ୍ୱାରା’ ଅଂଶଟି କିପରି କାମ ସମ୍ଭବ ହେବ ତାହାର ଉତ୍ତର। ଶେଷରେ ରଖିବାରୁ ଉପାୟଟି ପ୍ରତି ଶ୍ରୋତାଙ୍କ ଧ୍ୟାନ ଯାଏ।</li><li>ଦ୍ୱିତୀୟ ବାକ୍ୟରେ ‘ତୁମର କାମ ହେଉଛି’କୁ ଆରମ୍ଭରେ ରଖି କାହାର ଦାୟିତ୍ୱ ସେଥିରେ ଜୋର୍ ଦିଆଯାଇଛି। ପରେ ‘ଘର ଜଗିବା’ରୁ ଦାୟିତ୍ୱଟି କ’ଣ ଜଣାପଡ଼େ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପଦ ଉପରେ ଜୋର୍ ଦେବାକୁ ତାହାକୁ ଶେଷରେ ରଖିପାରିବା, ଯଥା ‘ଏହା ସମ୍ଭବ ହେବ କଠିନ ଶ୍ରମ ଦ୍ୱାରା’। ବାକ୍ୟାଂଶକୁ ଆରମ୍ଭରେ ରଖି ମଧ୍ୟ ଜୋର୍ ଦିଆଯାଏ, ଯଥା ‘ତୁମର କାମ ହେଉଛି, ଘର ଜଗିବା’।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=11">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-15"><h2>୧.୨ · ୬. ବିଶେଷଣର ସ୍ଥାନ ସଦୃଷ୍ଟାନ୍ତ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଗୀତ’ ଶୁଣି ବସ୍ତୁ ଚିହ୍ନିହୁଏ ଓ ‘ଭଲ’ରେ ତାହାର ଗୁଣ ଜଣାଯାଏ। କ୍ରମ ଲେଖିବାରେ ପ୍ରଥମେ ଗୁଣ ଓ ପରେ ସେହି ଗୁଣ ଥିବା ବିଶେଷ୍ୟ ରହେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଶେଷ୍ୟକୁ ବିଶେଷିତ କରୁଥିବା ପଦ ତାହା ପୂର୍ବରେ ବସେ। ‘ଭଲ ଗୀତ’ରେ କିପରି ଗୀତ ତାହା ‘ଭଲ’ ଜଣାଉଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-16"><h2>୧.୨ · ୭. ପଦାନ୍ୱୟୀ ଅବ୍ୟୟ କେଉଁଠି ବସେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଉଦାହରଣରେ ‘କାହା ବିନା?’ ବୋଲି ପଚାରିଲେ ‘ରମେଶଙ୍କ’ ଉତ୍ତର ମିଳେ। ତେଣୁ ‘ବିନା’ କେଉଁ ପଦ ସହ ସମ୍ବନ୍ଧିତ ଜଣାପଡ଼ିଲା।</li><li>ଏବେ ଦୁଇଟିକୁ କ୍ରମରେ ପଢ଼—‘ରମେଶଙ୍କ ବିନା’। ସମ୍ବନ୍ଧିତ ପଦ ପ୍ରଥମେ ଏବଂ ପଦାନ୍ୱୟୀ ଅବ୍ୟୟ ତାହା ପରେ ରହିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>&#39;ରମେଶଙ୍କ ବିନା ଏ କାମ ହୋଇପାରିବ ନାହିଁ&#39;ରେ ‘ବିନା’ ରମେଶଙ୍କ ସହିତ ସମ୍ବନ୍ଧିତ। ଏହା ସମ୍ବନ୍ଧିତ ପଦ ପରେ ବସେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=11">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-17"><h2>୧.୨ · ୮. କେଉଁ ସ୍ଥଳରେ ପ୍ରତ୍ୟେକ ସମ୍ବନ୍ଧ ପଦ ବିଭକ୍ତିଯୁକ୍ତ ହୁଏ? </h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପୂର୍ଣ୍ଣ ଉକ୍ତିକୁ ଦୁଇ ଭାଗ କର। ବାପା ଜେଜେଙ୍କର ଯତ୍ନ ନିଅନ୍ତି। ବାପା ଜେଜେମାଆଙ୍କର ଯତ୍ନ ନିଅନ୍ତି। ପ୍ରତ୍ୟେକ ବାକ୍ୟରେ ‘କାହାର ଯତ୍ନ?’ର ଉତ୍ତର ପୃଥକ୍।</li><li>‘ଓ’ ଦ୍ୱାରା ଦୁଇ ନାମ ଯୋଡ଼ାଗଲେ ମଧ୍ୟ ଏହି ଦୁଇ ସମ୍ବନ୍ଧ ରହେ। ସେଥିପାଇଁ ଦୁଇ ନାମରେ ବିଭକ୍ତି ରହିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଭିନ୍ନ ବ୍ୟକ୍ତିଙ୍କ ପୃଥକ୍ ସମ୍ବନ୍ଧ ବୁଝାଇଲେ ପ୍ରତ୍ୟେକ ନାମରେ ବିଭକ୍ତି ଲାଗେ। ଯଥା ‘ବାପା ଜେଜେଙ୍କର ଓ ଜେଜେମାଆଙ୍କର ଯତ୍ନ ନିଅନ୍ତି’।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=11">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-18"><h2>୧.୩ · ୧. ବାକ୍ୟର ମୁଖ୍ୟ ରୂପ କେତୋଟି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘କେତେ ଅଂଶ ମିଶିଛି’ ବିଚାର କଲେ ଗଠନ ଓ ‘ବକ୍ତା କ’ଣ ଜଣାଉଛନ୍ତି’ ବିଚାର କଲେ ପ୍ରକାର୍ଯ୍ୟ। ଏକେ ବାକ୍ୟର ଦୁଇଟି ଦିଗ ଦେଖାଯାଇପାରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇଟି। ଗଠନକଳା ଦୃଷ୍ଟିରୁ ଗଠନାତ୍ମକ ରୂପ ଓ ଭାବ ପ୍ରକାଶର କାର୍ଯ୍ୟ ଦୃଷ୍ଟିରୁ ପ୍ରକାର୍ଯ୍ୟାତ୍ମକ ରୂପ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-19"><h2>୧.୩ · ୨. ଗଠନାତ୍ମକ ରୂପର ଭେଦ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ବାକ୍ୟର କ୍ରିୟା ଓ ଖଣ୍ଡବାକ୍ୟ ଚିହ୍ନ। ସେଗୁଡ଼ିକ ସ୍ୱାଧୀନ କି ଗୋଟିଏ ଅନ୍ୟ ଉପରେ ଆଶ୍ରିତ, ଦେଖି ଗଠନଗତ ନାମ ବାଛ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଚାରିଟି। ସରଳ ବାକ୍ୟ, ଯୌଗିକ ବାକ୍ୟ, ଜଟିଳ ବାକ୍ୟ ଓ ମିଶ୍ର ବାକ୍ୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-20"><h2>୧.୩ · ୩. ଭାବ ପ୍ରକାଶ ଦୃଷ୍ଟିରୁ ବାକ୍ୟର ଭାଗ କେତୋଟି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠାରେ ବାକ୍ୟଭେଦ ବକ୍ତାଙ୍କ ଉଦ୍ଦେଶ୍ୟ ଉପରେ ନିର୍ଭର କରେ। କଥାଟି ଜଣାଉଛି ନା ପଚାରୁଛି ଦେଖିଲେ ବିବୃତି ଓ ପ୍ରଶ୍ନକୁ ଅଲଗା କରିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଞ୍ଚଟି। ବିବୃତିସୂଚକ, ଆଦେଶ ବା ଅନୁରୋଧସୂଚକ, ପ୍ରଶ୍ନସୂଚକ, ବିସ୍ମୟସୂଚକ ଓ ନାସ୍ତିସୂଚକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-21"><h2>୧.୩ · ୪. ସରଳ ବାକ୍ୟର କ୍ରିୟା ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ନମିତା ପଢ଼େ’ରେ କିଏ ପଢ଼େ ବୋଲି ପଚାରିଲେ କର୍ତ୍ତା ମିଳେ। କର୍ତ୍ତାଙ୍କ କାର୍ଯ୍ୟକୁ ସମ୍ପୂର୍ଣ୍ଣ କରୁଥିବା ଏକମାତ୍ର କ୍ରିୟା ‘ପଢ଼େ’।</li><li>‘ପ୍ରଣବ ଜଣେ ଶିଳ୍ପୀ’ରେ କର୍ତ୍ତାଙ୍କ ପରିଚୟ ସମ୍ପୂର୍ଣ୍ଣ। ‘ଅଟନ୍ତି’ ମନେ ମନେ ବସାଇଲେ ସେହି ଭାବ ରହେ। ତେଣୁ ଉହ୍ୟ କ୍ରିୟାକୁ ମଧ୍ୟ ଗଣିବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯେଉଁ ବାକ୍ୟରେ ଗୋଟିଏ ସମାପିକା କ୍ରିୟା ପ୍ରକାଶିତ ବା ଉହ୍ୟ ଥାଏ ତାହା ସରଳ। ‘ନମିତା ପଢ଼େ’ରେ ‘ପଢ଼େ’ ପ୍ରକାଶିତ।</p><p>‘ପ୍ରଣବ ଜଣେ ଶିଳ୍ପୀ’ରେ ‘ଅଟନ୍ତି’ ଉହ୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-22"><h2>୧.୩ · ୫. ଜଟିଳ ବାକ୍ୟ ସଦୃଷ୍ଟାନ୍ତ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଆମେ ପଢ଼ିବା’ ମୂଳ କଥା। ‘ଯଦି ତୁମେ ଆସ’ କହିଲେ ସେହି କାମ କେଉଁ ସର୍ତ୍ତରେ ହେବ ଜଣାପଡ଼େ।</li><li>‘ଯଦି’ ଓ ‘ତେବେ’ ମେଳାଇ ଦେଖିଲେ ଦୁଇ ଅଂଶର ନିର୍ଭରତା ବୁଝାଯାଏ। କେବଳ ଦୁଇଟି କ୍ରିୟା ଗଣି ତାକୁ ଯୌଗିକ କହିହେବ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରଧାନ ବାକ୍ୟ ସହିତ ଅପ୍ରଧାନ ବାକ୍ୟ ମିଶି ଜଟିଳ ବାକ୍ୟ ହୁଏ। ‘ଯଦି ତୁମେ ଆସ, ତେବେ ଆମେ ପଢ଼ିବା’ରେ ପ୍ରଥମ ଅଂଶଟି ଦ୍ୱିତୀୟ ଅଂଶର ସର୍ତ୍ତ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=14">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୪–୧୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-23"><h2>୧.୩ · ୬. ଦୁଇଟି ଦୃଷ୍ଟାନ୍ତରେ ଯୌଗିକ ବାକ୍ୟ ଦେଖାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମ ଉଦାହରଣରେ ‘ଶିକ୍ଷକ ଡାକିଲେ’ ଓ ‘ପିଲାମାନେ ଆସିଲେ’ ଉଭୟ ସ୍ୱାଧୀନ ଉକ୍ତି। ‘ଓ’ ସେମାନଙ୍କ ଘଟଣାକୁ ଯୋଡ଼ିଛି।</li><li>ଦ୍ୱିତୀୟଟିରେ ମଧ୍ୟ ‘ମୁଁ ପଢ଼ିଲି’ ଓ ‘ସେ ଖେଳିଲା’ ପୃଥକ୍ ବାକ୍ୟ ହୋଇପାରେ। ଏଠି ‘କିନ୍ତୁ’ ଦୁଇ କାମର ପାର୍ଥକ୍ୟ ଦେଖାଇ ଯୋଡ଼ିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ବା ଅଧିକ ସରଳ ବାକ୍ୟ ସଂଯୋଜକ ଅବ୍ୟୟ ଆଦିରେ ଯୋଡ଼ି ହେଲେ ଯୌଗିକ ବାକ୍ୟ ହୁଏ। ‘ଶିକ୍ଷକ ଡାକିଲେ ଓ ପିଲାମାନେ ଆସିଲେ।’ ‘ମୁଁ ପଢ଼ିଲି, କିନ୍ତୁ ସେ ଖେଳିଲା।’</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=14">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-24"><h2>୧.୩ · ୭. ମିଶ୍ର ବାକ୍ୟ ଗଢ଼ି ତାହାର ଅଂଶଗୁଡ଼ିକ ଦେଖାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ‘ଯେଉଁ’ ଓ ‘ସେମାନଙ୍କୁ’ ମେଳାଅ। କାହାକୁ ବସାଇଲେ ପ୍ରଶ୍ନର ପରିଚୟ ଯେଉଁ ଖଣ୍ଡରୁ ମିଳୁଛି ସେହିଟି ଅପ୍ରଧାନ।</li><li>ପରେ ‘ଓ’କୁ ଦେଖ। ଏହାର ଦୁଇ ପଟେ ବସାଇବା ଓ ଗୀତ ଶିଖାଇବା ଦୁଇ କାମ ଅଛି ଓ ଉଭୟର କର୍ତ୍ତା ଶିକ୍ଷକ। ଏକା ବାକ୍ୟରେ ଦୁଇ ପ୍ରକାର ଯୋଗ ଥିବାରୁ ଏହା ମିଶ୍ର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>‘ଯେଉଁ ପିଲାମାନେ ଆସିଲେ, ଶିକ୍ଷକ ସେମାନଙ୍କୁ ବସାଇଲେ ଓ ଗୀତ ଶିଖାଇଲେ।’ ‘ଯେଉଁ ପିଲାମାନେ ଆସିଲେ’ ଅପ୍ରଧାନ ଅଂଶ। ବସାଇବା ଓ ଗୀତ ଶିଖାଇବାର ଦୁଇଟି ପ୍ରଧାନ ଅଂଶ ‘ଓ’ ଦ୍ୱାରା ଯୁକ୍ତ।</p><p>ଜଟିଳ ଓ ଯୌଗିକ ଗଠନ ଏକତ୍ର ରହିଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=14">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୪–୧୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-25"><h2>୧.୩ · ୮. ପ୍ରଧାନ ବାକ୍ୟର ପରିଚୟ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ରତନ ଘରେ ନ ଥିଲା’ ଅଲଗା ପଢ଼ିଲେ ଗୋଟିଏ ପୂରା ସମ୍ବାଦ ମିଳେ। ସେହି ସମ୍ବାଦ ବାକ୍ୟର ପ୍ରଧାନ ଭାବ।</li><li>‘ଅଜା ଆସିଲେ’ ଅଂଶ ଯୋଡ଼ିଲେ ରତନ କେବେ ଘରେ ନଥିଲା ଜଣାପଡ଼େ। ତେଣୁ କେବଳ ଆଗ ପଛ ସ୍ଥାନ ଦେଖି ପ୍ରଧାନ ଅଂଶ ବାଛିବା ଠିକ୍ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜଟିଳ ବାକ୍ୟର ଯେଉଁ ଅଂଶ ମୁଖ୍ୟ ଭାବ ବହନ କରେ, ତାହା ପ୍ରଧାନ ବାକ୍ୟ। ‘ଯେତେବେଳେ ଅଜା ଆସିଲେ, ସେତେବେଳେ ରତନ ଘରେ ନ ଥିଲା’ରେ ରତନ ଘରେ ନ ଥିବା ମୁଖ୍ୟ କଥା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=14">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୪–୧୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-26"><h2>୧.୩ · ୯. ଅପ୍ରଧାନ ବାକ୍ୟ କିପରି ଚିହ୍ନିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଯେତେବେଳେ’ ଥିବା ଅଂଶଟି ଶୁଣି ରହିଗଲେ ଶ୍ରୋତା ପଚାରେ, ସେତେବେଳେ କ’ଣ ହେଲା? ଏହି ଅପେକ୍ଷା ତାହାର ନିର୍ଭରତା ଜଣାଏ।</li><li>ପ୍ରଧାନ ଅଂଶ ଯୋଡ଼ି ପୁଣି ପଢ଼। ରତନ ଘରେ ନଥିବା ଘଟଣାଟି ମୁଖ୍ୟ, ଅଜା ଆସିବା ତାହାର ସମୟ ନିର୍ଦ୍ଧାରଣ କରୁଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯେଉଁ ଅଂଶ ପ୍ରଧାନ ବାକ୍ୟ ଉପରେ ନିର୍ଭର କରି ସମୟ, ସର୍ତ୍ତ ଆଦି ଜଣାଏ ତାହା ଅପ୍ରଧାନ ବାକ୍ୟ। ‘ଯେତେବେଳେ ଅଜା ଆସିଲେ’ ଶୁଣିଲେ ସେତେବେଳେ କ&#39;ଣ ହେଲା ଜାଣିବାକୁ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=14">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୪–୧୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-27"><h2>୧.୩ · ୧୦. କାମକୁ ପାରିବାଠାରୁ ଟାଣ ଖରା ପର୍ଯ୍ୟନ୍ତ ଛଅଟି ବାକ୍ୟର ଭାବ ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କ. କାମକୁ ପାରିବା କଥା ପଚରାଯାଇଛି — ପ୍ରଶ୍ନସୂଚକ।</p><p>ଖ. ମଦନର ଗାଇବା ସମ୍ଭବ ନୁହେଁ — ନାସ୍ତିସୂଚକ।</p><p>ଗ. ଭୁବନେଶ୍ୱର ସମ୍ବନ୍ଧରେ ତଥ୍ୟ — ବିବୃତିସୂଚକ।</p><p>ଘ. ଚିଠି ପକାଇବାକୁ କୁହାଯାଇଛି — ଆଦେଶସୂଚକ।</p><p>ଙ. ଟଙ୍କାଟିଏ ମାଗିବା — ଅନୁରୋଧସୂଚକ।</p><p>ଚ. ଖରାର ତୀବ୍ରତାରେ ବିସ୍ମୟ — ବିସ୍ମୟସୂଚକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-28"><h2>୧.୪ · ୧. ବାକ୍ୟ କହିଲେ କ&#39;ଣ ବୁଝ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କେବଳ ଶବ୍ଦ ଗଣି ବାକ୍ୟର ନିଷ୍ପତ୍ତି ହୁଏନାହିଁ। ‘ଅରୁଣ କାଲି’ରେ ଦୁଇଟି ସାର୍ଥକ ପଦ ଥିଲେ ମଧ୍ୟ ଘଟଣାଟି ଅପୂର୍ଣ୍ଣ ରହୁଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉପଯୁକ୍ତ ଅର୍ଥବୋଧକ ପଦଗୁଡ଼ିକ ଯଥାଯଥ ଭାବରେ ମିଶି ଗୋଟିଏ ସମ୍ପୂର୍ଣ୍ଣ ମନୋଭାବ ଜଣାଇଲେ ବାକ୍ୟ ହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-29"><h2>୧.୪ · ୨. ଚାରି ପ୍ରକାର ଗଠନର ଗୋଟିଏ କରି ବାକ୍ୟ ଗଢ଼।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କ. ସରଳ — ପିଲାମାନେ ପଢ଼ୁଛନ୍ତି।</p><p>ଖ. ଯୌଗିକ — ଘଣ୍ଟା ବାଜିଲା ଓ ପିଲାମାନେ ଉଠିଲେ।</p><p>ଗ. ଜଟିଳ — ଯେଉଁମାନେ ପଢ଼ନ୍ତି, ସେମାନେ ଶିଖନ୍ତି।</p><p>ଘ. ମିଶ୍ର — ଯେଉଁମାନେ ଆସିଲେ, ସେମାନେ ବସିଲେ ଓ ଶିକ୍ଷକ ପଢ଼ାଇଲେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-30"><h2>୧.୪ · ୩. ପୂର୍ଣ୍ଣ ବାକ୍ୟର ଅଂଶ ଚିହ୍ନାଇ ବାକ୍ୟାଂଶ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ପହଞ୍ଚି’ ଏକ ଅସମାପିକା କ୍ରିୟା। ‘ଘରେ ପହଞ୍ଚି’ କହି ଅଟକିଗଲେ ପହଞ୍ଚିବା ପରେ ବକ୍ତା କ’ଣ କଲେ ତାହା ଅଜଣା ରହେ।</li><li>‘ମୁଁ ବସିଲି’ର ‘ବସିଲି’ ସମାପିକା କ୍ରିୟା। ଏହା ଯୋଡ଼ିବାରୁ ବକ୍ତବ୍ୟ ପୂର୍ଣ୍ଣ ହେଲା। ଦୁଇଟିକୁ ପୃଥକ୍ ପଢ଼ି ବାକ୍ୟାଂଶର ସୀମା ଚିହ୍ନିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>‘ଘରେ ପହଞ୍ଚି ମୁଁ ବସିଲି’ରେ ‘ଘରେ ପହଞ୍ଚି’ ଏକ ବାକ୍ୟାଂଶ। ଏହି ଅଂଶ ଏକାକୀ ପୂର୍ଣ୍ଣ ଭାବ ଜଣାଏ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-31"><h2>୧.୪ · ୪. ଗଠନକଳା ଦୃଷ୍ଟିରୁ ପ୍ରକାରଗୁଡ଼ିକର ନାମ କହ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗଠନକଳା ପ୍ରଶ୍ନରେ ‘ପ୍ରଶ୍ନସୂଚକ’ ଦେବା ଠିକ୍ ହେବନାହିଁ। ଏକ ବା ଏକାଧିକ କ୍ରିୟା ଏବଂ ବାକ୍ୟାଂଶମାନଙ୍କ ସମ୍ପର୍କକୁ ଏଠାରେ ବିଚାର କରାଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗଠନକଳା ଦୃଷ୍ଟିରୁ ବାକ୍ୟ ଚାରି ପ୍ରକାରର — ସରଳ, ଯୌଗିକ, ଜଟିଳ ଓ ମିଶ୍ର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-32"><h2>୧.୪ · ୫. ଅର୍ଥ ଦୃଷ୍ଟିରୁ ପ୍ରକାରଗୁଡ଼ିକର ନାମ କହ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିସ୍ମୟରେ ଆକସ୍ମିକ ଅନୁଭବ, ନାସ୍ତିରେ କାମ ଘଟି ନ ଥିବାର ଭାବ ଥାଏ। ଏହି ଦୁଇଟିକୁ ଅନ୍ୟ ତିନି କଥନର ଉଦ୍ଦେଶ୍ୟ ସହ ତୁଳନା କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିବୃତିସୂଚକ, ଆଦେଶ ବା ଅନୁରୋଧସୂଚକ, ପ୍ରଶ୍ନସୂଚକ, ବିସ୍ମୟସୂଚକ ଓ ନାସ୍ତିସୂଚକ — ମୋଟ ପାଞ୍ଚ ପ୍ରକାର।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-33"><h2>୧.୪ · ୬. ବିବୃତି, ନାସ୍ତି, ବିସ୍ମୟ ଓ ପ୍ରଶ୍ନ ପାଇଁ ଦୁଇଟି କରି ବାକ୍ୟ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କ. ଆଜି ଖରା ହୋଇଛି। ରତନ ଘରେ ଅଛି।</p><p>ଖ. ମୁଁ ଆଜି ଯିବି ନାହିଁ। ରତନ ଘରେ ନ ଥିଲା।</p><p>ଗ. ଆଃ, କି ସୁନ୍ଦର ଗୀତ! ଓଃ, କି ଶୀତ!</p><p>ଘ. ତୁମେ କେବେ ଆସିଲ? ଏ ଚିଠି କିଏ ଲେଖିଲା?</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-34"><h2>୧.୪ · ୭. ଦାମ ଓ ସୁଦାମଙ୍କ କଥାଠାରୁ ଦଶଟଙ୍କା ସାହାଯ୍ୟ ଯାଏଁ ପ୍ରକାର ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>କ. ଖେଳନ୍ତି, ପଢ଼ନ୍ତି ଓ ରହନ୍ତି — ଯୌଗିକ, ଭାବରେ ବିବୃତି।</p><p>ଖ. ‘ଓଃ କି ଶୀତ!’ — ବିସ୍ମୟସୂଚକ।</p><p>ଗ. ସମସ୍ତେ ଓଲୁ କି — ପ୍ରଶ୍ନସୂଚକ।</p><p>ଘ. ଆମ୍ବର ଦର — ପ୍ରଶ୍ନସୂଚକ।</p><p>ଙ. ‘ମାତ୍ର’ ଦୁଇ ଅଂଶକୁ ଯୋଡ଼ିଛି — ଯୌଗିକ।</p><p>ଚ. ପ୍ରାଣକୃଷ୍ଣ ପରିଜାଙ୍କ ପରିଚୟ — ସରଳ, ବିବୃତିସୂଚକ।</p><p>ଛ. ପିଲାର ଦୁଷ୍ଟତାରେ ବିସ୍ମୟ — ବିସ୍ମୟସୂଚକ।</p><p>ଜ. ଚପଳାଙ୍କ ନିଜ କଥା ଅବିକଳ ଉଦ୍ଧୃତ — ପ୍ରତ୍ୟକ୍ଷ ଉକ୍ତି, ବିବୃତିସୂଚକ। ଶେଷଟି ଦଶଟଙ୍କା ସାହାଯ୍ୟ ପାଇଁ ପ୍ରାର୍ଥନା — ଅନୁରୋଧସୂଚକ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦–୨୧</a></small></article>
+<article id="exercise-35"><h2>୧.୪ · ୮. ଦିଆଯାଇଥିବା ଚଉଦଟି ବାକ୍ୟକୁ ଅର୍ଥ ରଖି ନିର୍ଦ୍ଦେଶମତେ ବଦଳାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କ ଓ ଚରେ ‘ରହିଲେ’ ଓ ‘ଉଇଁଲେ’କୁ ସମାପିକା କ୍ରିୟା କରି ଦୁଇ ଭାବ ଯୋଡ଼। ଛରେ ରମେଶ ଯିବା ଆଗର ଘଟଣା, ସଂଗ୍ରାମ ଯିବା ପରର ଘଟଣା। ‘ତା’ପରେ’ ଏହି କ୍ରମ ରକ୍ଷା କରେ। ଡରେ ‘ତେବେ’ ଭଲ ପଢ଼ିବାର ଫଳ ସୂଚାଏ।</li><li>ଖରେ ଦୀର୍ଘ ପରିଚୟକୁ ‘କାଠ ବେପାରୀ’ ଓ ‘ଅନ୍ୟ ଦେଶ’କୁ ‘ପରଦେଶ’ କର। ଗରେ ‘ଯେଉଁମାନଙ୍କ ବାପା ମାଆ ନାହାନ୍ତି’ର ସ୍ଥାନ ଗୋଟିଏ ପଦ ‘ଅନାଥ’ ନେଉଛି। ଠରେ ‘ସଦା’ କହି ମୂଳ ବାକ୍ୟର ‘ସବୁବେଳେ’ ଅର୍ଥ ରଖ।</li><li>ଘରେ ଖରାର ତୀବ୍ରତା ରଖି ‘କି’ ଓ ବିସ୍ମୟଚିହ୍ନ ଯୋଡ଼। ଙରେ ‘ଅଜଣା ନୁହେଁ’ = ‘ଜଣା’। ଝରେ ‘କାହାକୁ ଅଜଣା?’ର ଅର୍ଥ ସମସ୍ତେ ଜାଣନ୍ତି, ତେଣୁ ବିବୃତିସୂଚକ ରୂପରେ ପ୍ରଶ୍ନଚିହ୍ନ ହଟେ।</li><li>ଜ ଓ ଢ଼ରେ କାରଣକୁ ‘ଯେହେତୁ’ ଓ ଫଳକୁ ‘ସେଥିପାଇଁ’ ଥିବା ଖଣ୍ଡରେ ରଖ। ଞରେ ‘ବଟବାବୁଙ୍କ ଦ୍ୱାରା’ରୁ ବଟବାବୁଙ୍କୁ କର୍ତ୍ତା କରି ‘ଆଦାୟ କରୁଥିଲେ’ ଲେଖ। ଟରେ ସ୍ମିତାଙ୍କ ନିଜ ଉକ୍ତି ‘ମୁଁ ... ହେବି’ ଅନ୍ୟର ବର୍ଣ୍ଣନାରେ ‘ସେ ... ହେବ’ ହେଉଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ. ତୁମେ ଘରେ ରୁହ ଓ ସେତେବେଳେ ପାଠ ପଢ଼ିପାର ନାହିଁ।</p><p>ଖ. କାଠ ବେପାରୀ ପରଦେଶକୁ ପଳାଇଲା।</p><p>ଗ. ଅନାଥମାନଙ୍କର ବାରମ୍ବାର ବାପାମାଆଙ୍କ କଥା ମନେ ପଡ଼େ।</p><p>ଘ. ଆଜି କି ଟାଣ ଖରା!</p><p>ଙ. ତମ କଥା ରବିକୁ ଅଜଣା ନୁହେଁ।</p><p>ଚ. ସୂର୍ଯ୍ୟ ଉଏଁ ଓ ପଦ୍ମ ଫୁଟେ।</p><p>ଛ. ରମେଶ ଯିବ ଓ ତା&#39;ପରେ ସଂଗ୍ରାମ ପଳେଇବ।</p><p>ଜ. ଯେହେତୁ ନାନୀ ଆସିଲା, ସେଥିପାଇଁ ଘରସାରା ସମସ୍ତେ ଖୁସି।</p><p>ଝ. ଗାନ୍ଧୀଙ୍କ କଥା ଦେଶର ସମସ୍ତଙ୍କୁ ଜଣା।</p><p>ଞ. ବଟବାବୁ ଟଙ୍କା ଆଦାୟ କରୁଥିଲେ।</p><p>ଟ. ସ୍ମିତା କହିଲା ଯେ ସେ ନିଶ୍ଚୟ ପରୀକ୍ଷାରେ ପ୍ରଥମ ହେବ।</p><p>ଠ. ପାଠରେ ସଦା ଆଗ୍ରହୀ ରହିବା ଭଲ।</p><p>ଡ. ତମେ ଭଲ ପଢ଼, ତେବେ ଭଲ ଫଳ ପାଇବ।</p><p>ଢ଼. ଯେହେତୁ ପରିବାରରେ ଅଶାନ୍ତି ଥିଲା, ସେଥିପାଇଁ ମୋହନ କଟକ ଗଲା ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=16">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬–୨୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/92%20-%20OD_ODIA_ODIAGRAMMAR_CLASS10_TERM1.pdf#page=21" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୧</a></small></article>
+
+</main></body></html>

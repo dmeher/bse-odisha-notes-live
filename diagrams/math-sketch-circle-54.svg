@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">OA, OB, OC ବ୍ୟାସାର୍ଦ୍ଧ | ବୃତ୍ତରେ A–X–B–Y–C–Z କ୍ରମ, ଚାପ AXB = 80°, BYC = 140° |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="250.00" cy="160.00" r="127.50" stroke="#244355" stroke-width="2.5"/>
+<polyline points="250.00,160.00 206.39,40.19" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="250.00,160.00 360.42,96.25" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="250.00,160.00 206.39,279.81" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="206.39" cy="40.19" r="2.7" fill="#244355"/>
+<text x="201.60" y="26.09" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="293.61" cy="40.19" r="2.7" fill="#244355"/>
+<text x="298.40" y="26.09" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">X</text>
+<circle cx="360.42" cy="96.25" r="2.7" fill="#244355"/>
+<text x="372.54" y="88.75" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="347.67" cy="241.96" r="2.7" fill="#244355"/>
+<text x="358.40" y="251.60" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">Y</text>
+<circle cx="206.39" cy="279.81" r="2.7" fill="#244355"/>
+<text x="201.60" y="293.91" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="122.50" cy="160.00" r="2.7" fill="#244355"/>
+<text x="108.50" y="160.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">Z</text>
+<circle cx="250.00" cy="160.00" r="2.7" fill="#244355"/>
+<text x="238.00" y="165.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">O</text>
+</svg>

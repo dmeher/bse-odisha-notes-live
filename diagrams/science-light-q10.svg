@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 560 265"><title id="title">science-light-q10</title><desc id="desc">Object, focal points, lens and rays to the real or virtual image.</desc><rect width="100%" height="100%" fill="white"/>
+<path d="M18 133L542 133" fill="none" stroke="#596965" stroke-width="1.3"/>
+<path d="M322 34 Q284 133 322 230 Q360 133 322 34 Z" fill="#e3f1fa" stroke="#446983" stroke-width="1.8"/>
+<path d="M162 130L162 136" fill="none" stroke="#263c37" stroke-width="2"/>
+<text x="162" y="150" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">2F₁</text>
+<path d="M242 130L242 136" fill="none" stroke="#263c37" stroke-width="2"/>
+<text x="242" y="150" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">F₁</text>
+<path d="M402 130L402 136" fill="none" stroke="#263c37" stroke-width="2"/>
+<text x="402" y="150" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">F₂</text>
+<path d="M482 130L482 136" fill="none" stroke="#263c37" stroke-width="2"/>
+<text x="482" y="150" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">2F₂</text>
+<text x="326" y="151" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">O</text>
+<path d="M122 133L122 93" fill="none" stroke="#202c2a" stroke-width="2"/><path d="M125.50 101.00 L122.00 93.00 L118.50 101.00" fill="none" stroke="#202c2a" stroke-width="2"/>
+<text x="112" y="86" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">A</text>
+<text x="122" y="150" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">B</text>
+<path d="M122 93L322 93" fill="none" stroke="#2772a1" stroke-width="2"/><path d="M230.00 96.50 L238.00 93.00 L230.00 89.50" fill="none" stroke="#2772a1" stroke-width="2"/>
+<path d="M122 93L322 133" fill="none" stroke="#9d512b" stroke-width="2"/><path d="M229.47 118.06 L238.00 116.20 L230.84 111.20" fill="none" stroke="#9d512b" stroke-width="2"/>
+<path d="M322 93L514 189" fill="none" stroke="#2772a1" stroke-width="2"/><path d="M457.28 164.55 L466.00 165.00 L460.41 158.29" fill="none" stroke="#2772a1" stroke-width="2"/>
+<path d="M322 133L514 171.4" fill="none" stroke="#9d512b" stroke-width="2"/><path d="M453.63 162.90 L462.16 161.03 L455.00 156.03" fill="none" stroke="#9d512b" stroke-width="2"/>
+<path d="M455.33 133L455.33 159.67" fill="none" stroke="#286c43" stroke-width="2"/><path d="M451.83 151.67 L455.33 159.67 L458.83 151.67" fill="none" stroke="#286c43" stroke-width="2"/>
+<text x="468.33" y="177.67" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">A′</text>
+<text x="450.33" y="127" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#162c28">B′</text>
+<text x="18" y="250" text-anchor="start" font-size="14" font-family="sans-serif" fill="#162c28">u = −25 cm     f = +10 cm     v = +16.67 cm     h′ = −3.33 cm</text></svg>

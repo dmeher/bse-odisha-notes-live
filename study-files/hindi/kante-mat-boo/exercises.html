@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>काँटे कम-से-कम मत बोओ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>काँटे कम-से-कम मत बोओ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1WodaVIYZJgzUUPtIYPLgCAeXgZFhIkEz/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପ୍ରଶ୍ନ ୧–୬, ତୁକ, ବିଶେଷଣ, ଉପସର୍ଗ ଓ ଅଧ୍ୟାୟ ଶେଷ ଭାଷା ଅଭ୍ୟାସ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF 3–6</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (क)</a> <a href="#exercise-2">1 (ख)</a> <a href="#exercise-3">1 (ग–घ)</a> <a href="#exercise-4">2 (क–घ)</a> <a href="#exercise-5">2 (ङ–ञ)</a> <a href="#exercise-6">4 (क–ङ)</a> <a href="#exercise-7">5 (क–ङ)</a> <a href="#exercise-8">6 (क–ङ)</a> <a href="#exercise-9">3 (क–ञ)</a> <a href="#exercise-10">भाषा-ज्ञान 1–3</a></nav></details>
+<article id="exercise-1"><h2>1 (क). मानव का जीवन शांत कैसे हो सकता है?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପଦ୍ୟର ଦୃଷ୍ଟାନ୍ତମାନେ ମନର ଆଚରଣ ସହ ସମ୍ପୃକ୍ତ। ବାହାରେ ଅନ୍ୟକୁ ଆଘାତ ନ ଦେବା ଓ ଭିତରେ କଟୁତା ନ ରଖିବା ଉଭୟରୁ ଶାନ୍ତି ଆସେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ममता, स्नेह और निर्मल व्यवहार से कटुता घटती है। मन की अशांति मिटने पर जीवन प्रशांत हो सकता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯–୪୧</a></small></article>
+<article id="exercise-2"><h2>1 (ख). कवि के अनुसार दुनिया की रीति क्या है?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶରୀରର କଷ୍ଟ ଓ ମନର ଆଗକୁ ଚାଲିବା ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଅଛି। ଜଗତର ରୀତି ବୁଝାଇବାବେଳେ ଏହି ଚଳମାନ ଜୀବନର କଥା ଆସିବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>शरीर कठिनाइयाँ सहता रहता है और मन आगे बढ़ता है। सुख-दुख के बीच जीवन का प्रवाह चलता रहता है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୯–୪୧</a></small></article>
+<article id="exercise-3"><h2>1 (ग–घ). कवि अतीत के दुःख और “साँसों के मुरदे” के बारे में क्या सलाह देता है?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘साँसों के मुरदे’ ବିତିଯାଇଥିବା ଜୀବନର କଷ୍ଟକୁ ଧରିରଖିବାର ଚିତ୍ର। ବିତା କାଳକୁ ବୋହି ଚାଲିଲେ ଆଜିର କର୍ତ୍ତବ୍ୟ ପାଇଁ ଶକ୍ତି କମେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ग) जीवन की ज्वाला में कैसे दिन बीते, इसी बात में उलझे नहीं रहना चाहिए। मनुष्य को अपने सपनों पर विश्वास करके आगे बढ़ना चाहिए।</p><p>(घ) केवल साँस लेते रहना जाग्रत जीवन नहीं है। कवि चाहता है कि मनुष्य विश्वास, साहस और संकल्प से जिए।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୧</a></small></article>
+<article id="exercise-4"><h2>2 (क–घ). फूल, चेतना की घाटी, मन और संकट के चार लघु उत्तर दीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଫୁଲ ମଙ୍ଗଳ ଓ କଣ୍ଟା ପରକୁ ଦୁଃଖ ଦେବା ବୁଝାଉଛି। କେବେ ସାହାଯ୍ୟ କରିପାରୁନଥିଲେ ବି ଅନ୍ୟର କ୍ଷତିକୁ ଏଡ଼ାଇବା ନିଜ ହାତର କାମ ବୋଲି କବି ବୁଝାନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) फूल न बो सकें तो दूसरों के लिए काँटे भी न बोएँ।</p><p>(ख) चेतना की घाटी अगम है।</p><p>(ग) मानव के मन को कमजोर कहा गया है।</p><p>(घ) यदि संकट में मुस्कुरा नहीं सकते तो भय से व्याकुल होकर न रोएँ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୧</a></small></article>
+<article id="exercise-5"><h2>2 (ङ–ञ). सजगता, संकट, संशय, पवन और विश्वास संबंधी संक्षिप्त उत्तर लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସୁଖ ସମୟରେ ସଜାଗ ରହିବାକୁ କହିବାର କାରଣ ଅଭିମାନ ମଣିଷକୁ ନିଜର ଓ ପରର ଅବସ୍ଥା ଭୁଲାଇପାରେ। ଆଗାମୀ ସଙ୍କଟ ପାଇଁ ବିଶ୍ୱାସ ଓ ସଚେତନତା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(ङ) सुख के अभिमान में भी जो सजग रहता है, वही चेतन है।</p><p>(च) जाग न सकें तो सेज बिछाकर सो न जाएँ।</p><p>(छ) संकट को अनसुना या अनदेखा करने से उसका वेग कम नहीं होता।</p><p>(ज) संशय में विश्वास क्षण भर नहीं टिकता।</p><p>(झ) बादलों के घेरों में भी पवन का जयघोष नहीं थमता।</p><p>(ञ) विश्वास से बढ़ न सकें तो साँसों के मुरदे न ढोएँ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୨</a></small></article>
+<article id="exercise-6"><h2>4 (क–ङ). पाँच उद्धरणों में फूल-काँटे, ज्वाला, घाटी, मदिरा और साँसों के चित्रों का आशय समझाइए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ପ୍ରତ୍ୟେକ ଉଦ୍ଧୃତିରେ ଦିଶୁଥିବା ବସ୍ତୁକୁ ଧର, ତା’ପରେ ମନର ସ୍ଥିତି କହ। ଫୁଲକଣ୍ଟାରେ ଆଚରଣ, ସୁଖର ନିଶାରେ ଅସତର୍କତା ଓ ବିତା ଶ୍ୱାସରେ ଅତୀତର ଭାର ରହିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) भलाई न कर सकें तो किसी के लिए कठिनाई न पैदा करें।</p><p>(ख) मन की कटुता शान्त होने पर समझ जागती है।</p><p>(ग) मानव-चेतना की गहराई को समझना कठिन है।</p><p>(घ) सुख का अभिमान मनुष्य को असावधान कर सकता है। जो उसमें भी जागा हुआ है, वही सचेत है।</p><p>(ङ) विश्वास खोकर निष्क्रिय जीवन बिताने से सार्थक कर्म नहीं होता।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୩</a></small></article>
+<article id="exercise-7"><h2>5 (क–ङ). कविता से शब्द लेकर रिक्त स्थानों की पूर्ति कीजिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘प्रशान्त’ରେ ଶାନ୍ତି ଓ ‘क्षुब्ध’ରେ ଅଶାନ୍ତି ପ୍ରକାଶ ପାଏ। ଫାଙ୍କା ସ୍ଥାନର ଆଗପଛରେ କେଉଁ ଭାବ ଆସୁଛି ଧରିଲେ ଏହି ଦୁଇ ପଦର କ୍ରମକୁ ଚିହ୍ନିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) चेतना, मन। (ख) प्रशान्त, क्षुब्ध।</p><p>(ग) सपने, चन्दन। (घ) सुख, जाग।</p><p>(ङ) कुहासे, विश्वास।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୩</a></small></article>
+<article id="exercise-8"><h2>6 (क–ङ). बादलों, बीते जीवन, मन, सुख के अभिमान और कटुता पर सही विकल्प चुनिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘कमजोर’ ମନର ଦୁର୍ବଳତାକୁ ସୂଚାଏ। ଅନ୍ୟର ମନ ଭାଙ୍ଗିଦେବା ସହଜ ଥିବାରୁ ବ୍ୟବହାରର କଟୁତା ଦୂର କରିବାକୁ କବିଙ୍କ ଅନୁରୋଧ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) बादलों के। (ख) ज्वालाओं में।</p><p>(ग) कमजोर। (घ) कविता का आशय है कि सुख की अभिमानी मदिरा में भी जो जागता है, वह चेतन है।</p><p>(ङ) ममता की।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୪</a></small></article>
+<article id="exercise-9"><h2>3 (क–ञ). एक शब्द या छोटे पद में दस उत्तर लिखिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘अगम’ ଏଠି चेतना की घाटीର ଗୁଣ ଓ ‘कमजोर’ ମନର ଗୁଣ। ଆଖପାଖ ପଦ ସହ ଯୋଡ଼ିଲେ ଏହି ଦୁଇ ବିଶେଷଣର ଉତ୍ତର ଭ୍ରମ ହୁଏନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(क) रामेश्वर शुक्ल ‘अंचल’। (ख) काँटे।</p><p>(ग) अगम। (घ) कमजोर।</p><p>(ङ) ममता। (च) ज्वालाओं।</p><p>(छ) हर सपने पर। (ज) अभिमानी।</p><p>(झ) सूक्ष्म। (ञ) साँसों के।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=41" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୧–୪୨</a></small></article>
+<article id="exercise-10"><h2>भाषा-ज्ञान 1–3. तुक, विशेषण और उपसर्गवाले शब्द छाँटिए।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘बोओ–रोओ’ରେ ଶେଷ ଧ୍ୱନି ମିଳିବାରୁ ତୁକ ହେଲା। ‘अगम’ରେ अ ଆଗରେ ବସି ପହଞ୍ଚି ପାରିବାର ଭାବକୁ ବଦଳାଏ। ଦୁଇ ପ୍ରଶ୍ନରେ ଶବ୍ଦର ଭିନ୍ନ ଅଂଶକୁ ଦେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>१. मन–शमन, नयन–पवन, चन्दन–जीवन, जमता–थमता, बोओ–रोओ। २. अगम, कमजोर, शीतल, मुँदे, प्रशान्त, क्षुब्ध, कातर, अभिमानी, सूक्ष्म।</p><p>३. प्रशान्त में ‘प्र’, विश्वास में ‘वि’, संकल्प और संशय में ‘सम्’, अनसुना में ‘अन’ जुड़ा है।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୦–୪୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/97%20-%20OD_HINDI_HINDI_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୪</a></small></article>
+
+</main></body></html>

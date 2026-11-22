@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ମାନଗୋବିନ୍ଦଙ୍କ ମହାନତା · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ମାନଗୋବିନ୍ଦଙ୍କ ମହାନତା</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1TZXtje5x8wnnm7ASAU-DdHV9_sY5P60T/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୨୩। ଯାଞ୍ଚ କରାଯାଇଥିବା ଉତ୍ତର ପ୍ରଶ୍ନକ୍ରମରେ ଦିଆଯାଇଛି।</p><p>୨୨ରେ ଚାହିଁଥିବା ଅଠର ପର୍ବ ମଧ୍ୟରୁ ଆଦିପର୍ବ ଓ କାଇଁଶିକା ପର୍ବକୁ ଚିହ୍ନାଯାଇଛି। ପ୍ରଦତ୍ତ ସମ୍ପୂର୍ଣ୍ଣ ସାହିତ୍ୟ ଓ ବ୍ୟାକରଣ ପୁସ୍ତକ ଯାଞ୍ଚ ପରେ ଅବଶିଷ୍ଟ ଷୋହଳଟି ପାଇଁ ମୂଳ ଗ୍ରନ୍ଥର ସୂଚୀ ଦରକାର।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୪–୫</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୨୩)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a> <a href="#exercise-18">୧୮</a> <a href="#exercise-19">୧୯</a> <a href="#exercise-20">୨୦</a> <a href="#exercise-21">୨୧</a> <a href="#exercise-22">୨୨</a> <a href="#exercise-23">୨୩</a></nav></details>
+<article id="exercise-1"><h2>୧. ସମ୍ପର୍କଗୁଡ଼ିକୁ ଏକପଦରେ ପ୍ରକାଶ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଦଶରଥଙ୍କ ପୁତ୍ର’ର ତିନି ପଦର ସମ୍ପର୍କ ‘ଦାଶରଥି’ରେ ଏକ ପଦରେ ପ୍ରକାଶ ପାଇଛି। ପ୍ରଥମେ ମୂଳ ନାମ ଓ ତା’ସହ କେଉଁ ସମ୍ପର୍କ ଚାହିଁଛନ୍ତି ଦେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରାବଣଙ୍କ ପୁତ୍ର — ରାବଣି। ପବନର ପୁତ୍ର — ପବନପୁତ୍ର।</p><p>ବିନତାଙ୍କ ପୁତ୍ର — ବୈନତେୟ। ଦଶରଥଙ୍କ ପୁତ୍ର — ଦାଶରଥି।</p><p>ସୁମିତ୍ରାଙ୍କ ପୁତ୍ର — ସୌମିତ୍ରି। କୁନ୍ତୀଙ୍କ ପୁତ୍ର — କୌନ୍ତେୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-2"><h2>୨. ଶିର, ରଜନୀ, ପ୍ରଭାତ, ଶତ୍ରୁ ଓ ସମରର ଦୁଇଟି ଲେଖାଏଁ ପ୍ରତିଶବ୍ଦ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯୁଦ୍ଧର ପ୍ରସଙ୍ଗରେ ସମର ସ୍ଥାନରେ ରଣ ଓ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀ ପାଇଁ ଶତ୍ରୁ ସ୍ଥାନରେ ରିପୁ ଲେଖିଲେ ସେହି ଅର୍ଥ ରହେ। ପ୍ରତିଟି ପଦ ପାଇଁ ଦୁଇଟି ଅଲଗା ରୂପ ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶିର — ମସ୍ତକ, ମୁଣ୍ଡ। ରଜନୀ — ରାତ୍ରି, ନିଶା।</p><p>ପ୍ରଭାତ — ପ୍ରତ୍ୟୁଷ, ସକାଳ। ଶତ୍ରୁ — ରିପୁ, ଅରି।</p><p>ସମର — ଯୁଦ୍ଧ, ରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-3"><h2>୩. ନିର୍ଲଜ୍ଜ, ଦଣ୍ଡଧାରୀ ଓ ସାନନ୍ଦର ବ୍ୟାସବାକ୍ୟ ଓ ସମାସ ନିର୍ଣ୍ଣୟ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ନିର୍ଲଜ୍ଜ’ରେ ‘ନାହିଁ ଲଜ୍ଜା ଯାହାର’ କହିଲେ ଜଣେ ବ୍ୟକ୍ତିର ପରିଚୟ ମିଳୁଛି। ‘ଦଣ୍ଡଧାରୀ’ରେ ଦଣ୍ଡ ହେଉଛି ଧାରଣ କାମର କର୍ମ। ବ୍ୟାସବାକ୍ୟ ପଢ଼ିଲେ ସମାସର ଭେଦର କାରଣ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନିର୍ଲଜ୍ଜ — ନାହିଁ ଲଜ୍ଜା ଯାହାର, ନଞ୍ ବହୁବ୍ରୀହି। ଦଣ୍ଡଧାରୀ — ଦଣ୍ଡକୁ ଧାରଣ କରେ ଯେ, ଉପପଦ ତତ୍ପୁରୁଷ।</p><p>ସାନନ୍ଦ — ଆନନ୍ଦର ସହିତ, ସହାର୍ଥକ ଅବ୍ୟୟୀଭାବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-4"><h2>୪. କବିତାର ଚାରିଟି ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ପାଞ୍ଚବତ୍ସ’ରେ ବଂଶର ଶିଶୁ ଓ ‘ପ୍ରାଣ’ରେ ଶେଷ ମୁହୂର୍ତ୍ତର ଭାବ ଅଛି। ଖାଲି ସ୍ଥାନ ପାଇଁ ଅର୍ଥ ଓ କବିତାର ନିଜ ଶବ୍ଦ ଉଭୟକୁ ମେଳାଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ — ସଂପ୍ରଧି। ଖ — ପାଞ୍ଚବତ୍ସ।</p><p>ଗ — ଘଟଉତ୍କଚ। ଘ — ପ୍ରାଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-5"><h2>୫. ମାନଗୋବିନ୍ଦ କିଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ଦୁଇଟି ନାମରେ କବି ଏକ ଚରିତ୍ରକୁ ବୁଝାଇଛନ୍ତି। ଅଶସ୍ତମାଙ୍କ ସମ୍ବାଦ ଶୁଣୁଥିବା ରାଜା ହିଁ ମାନଗୋବିନ୍ଦ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାନଗୋବିନ୍ଦ କୌରବରାଜ ଦୁର୍ଯ୍ୟୋଧନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-6"><h2>୬. ଦୃଦକ୍ଷ କେଉଁ ସମ୍ବାଦ ଦେଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୃଦକ୍ଷ ଆସି ପ୍ରଥମେ ଯାହା ଜଣାଇଲେ ତାହା ଓ ଶେଷରେ ପ୍ରକୃତରେ କାହାର ମୁଣ୍ଡ ବୋଲି ଜଣାପଡ଼ିଲା ଏହି ଦୁଇ ମୁହୂର୍ତ୍ତ ଅଲଗା। ସମ୍ବାଦ ପଚାରିଲେ ପ୍ରଥମ ମୁହୂର୍ତ୍ତର କଥା ରଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଶସ୍ତମା ପାଣ୍ଡବଙ୍କ ମୁଣ୍ଡ ଛେଦି ଭାର କରି ଆଣୁଛନ୍ତି ବୋଲି ସେ ମାନଗୋବିନ୍ଦଙ୍କୁ ଜଣାଇଲେ। ପରେ ମୁଣ୍ଡଗୁଡ଼ିକର ପ୍ରକୃତ ପରିଚୟ ଜଣାପଡ଼ିଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-7"><h2>୭. ଦୁର୍ଯ୍ୟୋଧନଙ୍କ ପ୍ରଥମ ଆନନ୍ଦର କାରଣ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ଶତ୍ରୁଙ୍କ ମୃତ୍ୟୁ ହୋଇଛି ବୋଲି ସେ ଆନନ୍ଦ କରିଥିଲେ। ପରେ ପାଞ୍ଚ ଶିଶୁଙ୍କୁ ଚିହ୍ନି ସେହି ମନରେ ଶୋକ ଜନ୍ମିଲା। ଦୁଇ ପ୍ରତିକ୍ରିୟାର କାରଣ ମୁଣ୍ଡଗୁଡ଼ିକର ପରିଚୟ ବିଷୟରେ ତାଙ୍କ ଧାରଣା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପାଞ୍ଚ ପାଣ୍ଡବ ନିହତ ହୋଇଛନ୍ତି ବୋଲି ସେ ପ୍ରଥମେ ଭାବିଲେ। ତେଣୁ ଶତ୍ରୁ ପରାସ୍ତ ହେବାର ଆନନ୍ଦରେ ସେ ଅଶସ୍ତମାଙ୍କ ପ୍ରଶଂସା କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-8"><h2>୮. ଅଶସ୍ତମାଙ୍କୁ ପ୍ରଶଂସା କରାଯାଇଥିବା ଦୁଇ ପାଦ ଚିହ୍ନାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏ କଥା କହିବାବେଳେ ଦୁର୍ଯ୍ୟୋଧନ ଶିଶୁମାନଙ୍କୁ ଚିହ୍ନି ନଥିଲେ। ‘ସାଧୁ ସାଧୁ’ ତାଙ୍କର ସେ ସମୟର ଭୁଲ ଧାରଣାଜନିତ ପ୍ରଶଂସା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>“ସାଧୁ ସାଧୁ ଅଶସ୍ତମା ବୋଲି ମାନ ଗୋବିନ୍ଦ ପ୍ରଶଂସି / ତୋତେ ସେନାପତି ନ କରି ଅଗାଦ ସମୋଦ୍ରେ ଗଲି ଭାସି।”</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-9"><h2>୯. ଧୃଷ୍ଟଦ୍ୟୁମ୍ନଙ୍କ ପିତା ଓ ତାଙ୍କ ଶତ୍ରୁଙ୍କ ପରିଚୟ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଶ୍ୱତ୍ଥାମା ନିଜ ପିତାଙ୍କ ଶତ୍ରୁ ଧୃଷ୍ଟଦ୍ୟୁମ୍ନଙ୍କ କଥା କହନ୍ତି। ପ୍ରସନ୍ନ ରାଜା ତାଙ୍କୁ ଶାସନଭାର ଗ୍ରହଣ କରିବାକୁ କହନ୍ତି। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଧୃଷ୍ଟଦ୍ୟୁମ୍ନ ଦ୍ରୁପଦଙ୍କ ପୁତ୍ର। ସେ ଅଶସ୍ତମାଙ୍କ ପିତା ଦ୍ରୋଣଙ୍କ ଶତ୍ରୁ ଥିଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-10"><h2>୧୦. ଭାର ଦେଖି ଦୃଦକ୍ଷ କ’ଣ ଚିହ୍ନିଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୃଦକ୍ଷ କଟା ମୁଣ୍ଡଗୁଡ଼ିକୁ ଦ୍ରୌପଦୀଙ୍କ ପୁତ୍ରମାନଙ୍କର ବୋଲି ଚିହ୍ନନ୍ତି। ପ୍ରଭାତ ଆଲୋକରେ ସତ୍ୟ ଦେଖି ରାଜା ମୂର୍ଚ୍ଛିତ ହୁଅନ୍ତି। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସେ ଚିହ୍ନିଲେ ଯେ ମୁଣ୍ଡଗୁଡ଼ିକ ପାଣ୍ଡବଙ୍କର ନୁହେଁ। ସେଗୁଡ଼ିକ ଦ୍ରୋପତୀଙ୍କ ପାଞ୍ଚ ପୁତ୍ରଙ୍କର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-11"><h2>୧୧. ଘଟୋତ୍କଚଙ୍କ ପିତା କିଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ପିତା’ ପଦଟି ଘଟୋତ୍କଚଙ୍କ ସହ କାହାର ପାରିବାରିକ ସମ୍ପର୍କ ଅଛି ପଚାରୁଛି। ପାଣ୍ଡବଙ୍କ ମଧ୍ୟରୁ ସେ ଭୀମଙ୍କ ପୁତ୍ର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭୀମ ହେଉଛନ୍ତି ଘଟୋତ୍କଚଙ୍କ ପିତା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=10" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦</a></small></article>
+<article id="exercise-12"><h2>୧୨. ପଞ୍ଚଭୂତ ନାମଗୁଡ଼ିକ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ପଞ୍ଚ’ କହି ପାଞ୍ଚଟି ମୂଳ ଉପାଦାନକୁ ଏକାଠି ଗଣାଯାଇଛି। ଉତ୍ତରରେ ପାଞ୍ଚଟିର ନାମ ରହିଲେ ଭାବ ପୂରା ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପୃଥିବୀ, ଆକାଶ, ବାୟୁ, ଜଳ ଓ ଅଗ୍ନିକୁ ପଞ୍ଚଭୂତ କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-13"><h2>୧୩. ମାନଗୋବିନ୍ଦ କାହିଁକି ଅଧୈର୍ଯ୍ୟ ହେଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଶସ୍ତମାର କାମରେ ଯୁଦ୍ଧକ୍ଷେତ୍ରର ଶତ୍ରୁଙ୍କ ପରିବର୍ତ୍ତେ ନିରପରାଧ ଶିଶୁଙ୍କ ଜୀବନ ଯାଇଛି। ପାଣ୍ଡବଙ୍କ ପୁତ୍ର ହେଲେ ମଧ୍ୟ ମାନଗୋବିନ୍ଦ ସେମାନଙ୍କୁ ନିଜ ବଂଶର ଶିଶୁ ବୋଲି ଦେଖିଛନ୍ତି। ଏହି ସମ୍ପର୍କ ତାଙ୍କ ଶୋକର ଗଭୀରତା ବୁଝାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦ୍ରୌପଦୀଙ୍କ ନିରପରାଧ ପାଞ୍ଚ ପୁତ୍ର ନିହତ ହୋଇଥିବା ଦେଖି ସେ ବଂଶର ଭବିଷ୍ୟତ କଥା ଭାବି ଶୋକରେ ଅଧୈର୍ଯ୍ୟ ହେଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-14"><h2>୧୪. ମାନଗୋବିନ୍ଦଙ୍କ ମୃତ୍ୟୁପୂର୍ବର ଘଟଣା କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଶ୍ୱତ୍ଥାମାଙ୍କ ମୁହଁ ଦେଖିବାକୁ ମନା କରି ରାଜା ପାଞ୍ଚ ଶିଶୁଙ୍କ ମୁଣ୍ଡ ନିଜ କୋଳରେ ଦେବାକୁ କହନ୍ତି। ଦୃଦକ୍ଷ ତାହା କଲାପରେ ସେ ପ୍ରାଣ ଛାଡ଼ନ୍ତି। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତାଙ୍କ ଅନୁରୋଧରେ ଦୃଦକ୍ଷ ପାଞ୍ଚ ବାଳକଙ୍କ ମୁଣ୍ଡ ତାଙ୍କ କୋଳରେ ରଖିଲେ। ସେଗୁଡ଼ିକୁ ଦେଖି ଅସହ୍ୟ ଶୋକରେ ମାନଗୋବିନ୍ଦଙ୍କ ମୁଣ୍ଡ ଫାଟିଗଲା ଓ ସେ ପ୍ରାଣ ବିସର୍ଜନ କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-15"><h2>୧୫. ପାଠଟି କେଉଁ ପର୍ବରୁ ଗୃହୀତ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଗ୍ରନ୍ଥ ଓ ପର୍ବ ଦୁଇଟି ଅଲଗା ପରିଚୟ। ସାରଳା ଦାସଙ୍କ ‘ମହାଭାରତ’ ଗ୍ରନ୍ଥ ଓ ତାହା ଭିତରେ ‘କାଇଁଶିକା’ ପର୍ବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସାରଳା ମହାଭାରତର କାଇଁଶିକା ପର୍ବରୁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-16"><h2>୧୬. ହରାଇବା ପରେ ବୁଦ୍ଧି ଶିଖିବାର ପ୍ରସଙ୍ଗ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୃଦକ୍ଷଙ୍କ କଥା ଶୁଣି ମାନଗୋବିନ୍ଦ ଆଖି ଖୋଲନ୍ତି। ଆଗରୁ ଅଶ୍ୱତ୍ଥାମାଙ୍କୁ ସେନାପତି କରିଥିଲେ ଏତେ କ୍ଷତି ହୋଇ ନ ଥାନ୍ତା ବୋଲି ତାଙ୍କର ଧାରଣା। (ପାଠର ପୃ. ୧–୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୁଣ୍ଡଗୁଡ଼ିକ ପାଣ୍ଡବଙ୍କର ବୋଲି ଭାବି ଦୁର୍ଯ୍ୟୋଧନ ଅଶସ୍ତମାଙ୍କ କୌଶଳରେ ଆନନ୍ଦିତ। ଆଗରୁ ତାଙ୍କୁ ସେନାପତି କରିଥିଲେ ନିଜର ଏତେ କ୍ଷତି ହୋଇ ନଥାନ୍ତା ବୋଲି ସେ ଭାବୁଛନ୍ତି।</p><p>ପ୍ରକୃତ କଥା ଜାଣିବା ଆଗରୁ ସେ ଏହି ଅନୁତାପ ପ୍ରକାଶ କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-17"><h2>୧୭. ବଂଶରକ୍ଷା ପାଇଁ ରଖିଥିବା ପିଲାଙ୍କ ପ୍ରସଙ୍ଗ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଭିମନ୍ୟୁ, ଘଟୋତ୍କଚ ଓ ନିଜ ପୁତ୍ର ଲକ୍ଷ୍ମଣକୁମାରଙ୍କ ମୃତ୍ୟୁକୁ ରାଜା ଏକାଠି ସ୍ମରଣ କରନ୍ତି। ଜୀବିତ ଶିଶୁମାନଙ୍କ ମଧ୍ୟରେ ଉଭୟ କୁଳର ଭବିଷ୍ୟତ ଦେଖୁଥିଲେ। (ପାଠର ପୃ. ୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅଭିମନ୍ୟୁ, ଘଟୋତ୍କଚ ଓ ଲକ୍ଷ୍ମଣକୁମାର ଯୁଦ୍ଧରେ ପଡ଼ିଛନ୍ତି। ଦ୍ରୋପତୀଙ୍କ ପାଞ୍ଚ ପୁତ୍ରଙ୍କଠାରେ ଦୁର୍ଯ୍ୟୋଧନ ବଂଶର ଶେଷ ଆଶା ଦେଖିଥିଲେ।</p><p>ତାଙ୍କ ବଧରେ ଅତୀତର ବଂଶଧାରା ଓ ଆଗାମୀ ବଂଶର ଆଶା ଉଭୟ ବୁଡ଼ିଲା ବୋଲି ସେ ଅଶସ୍ତମାଙ୍କୁ ଭର୍ତ୍ସନା କଲେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-18"><h2>୧୮. କୋଳରେ ପାଞ୍ଚ ମୁଣ୍ଡ ଦେଖି ପ୍ରାଣ ବିସର୍ଜନର ତାତ୍ପର୍ଯ୍ୟ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କୋଳ ଏଠି ବାତ୍ସଲ୍ୟର ସ୍ଥାନ। ଅନ୍ତିମ ମୁହୂର୍ତ୍ତରେ ଶତ୍ରୁପକ୍ଷର ପିଲାଙ୍କୁ ମଧ୍ୟ ସେହି ସ୍ଥାନ ଦେବାରୁ ପରିବାର ଓ ମାନବିକତାର ବନ୍ଧନ ପ୍ରକାଶ ପାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶବମୁଣ୍ଡଗୁଡ଼ିକ ସହ ଦୁର୍ଯ୍ୟୋଧନ ଶତ୍ରୁଙ୍କ ବିଜୟଚିହ୍ନ ବଦଳରେ ନିରୀହ ସନ୍ତାନଙ୍କୁ ଦେଖୁଛନ୍ତି। ସେମାନଙ୍କୁ କୋଳରେ ନେଇ ଶେଷଥର ଆଦର କରିବାକୁ ଚାହାନ୍ତି।</p><p>ସେହି ଶୋକରେ ତାଙ୍କର ମୃତ୍ୟୁ ଘଟେ। ଏହି ଶେଷ ଦୃଶ୍ୟରେ ପିତୃସୁଲଭ ମମତା ପ୍ରକାଶ ପାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-19"><h2>୧୯. ମାନଗୋବିନ୍ଦଙ୍କ ମହାନତା ଘଟଣା ଦେଇ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶିଶୁମାନଙ୍କୁ ବଂଶର ଭବିଷ୍ୟତ ଭାବି ସେ ବିଳାପ କରନ୍ତି। ଶତ୍ରୁପକ୍ଷର ଦୁଃଖକୁ ନିଜ ଦୁଃଖ କରିବାରେ ତାଙ୍କର ମହାନତା ପ୍ରକାଶ ପାଏ। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରଣରେ ପ୍ରତିପକ୍ଷର ପରାଜୟ ଭାବି ଆନନ୍ଦିତ ହେବା ଓ ଶିଶୁବଧକୁ ସମର୍ଥନ କରିବା ଭିନ୍ନ କଥା। ପ୍ରଥମେ ପାଣ୍ଡବ ମରିଛନ୍ତି ବୋଲି ଭାବି ଦୁର୍ଯ୍ୟୋଧନ ପ୍ରଶଂସା କରନ୍ତି।</p><p>ପାଞ୍ଚ ବାଳକଙ୍କ ମୁଣ୍ଡ ଚିହ୍ନିବାମାତ୍ରେ ସେ ଭୁଲ ସ୍ୱୀକାର କରି ଗୁରୁପୁତ୍ରଙ୍କ ନିନ୍ଦା କରନ୍ତି। ଶତ୍ରୁପକ୍ଷର ସନ୍ତାନଙ୍କ ଭିତରେ ସେ ନିଜ କୁଳର ରକ୍ଷକ ଦେଖନ୍ତି।</p><p>ତାଙ୍କ ପାଇଁ କାନ୍ଦିବା ଓ କୋଳେଇ ନେବା ତାଙ୍କ ଉଦାରତାର ପରିଚୟ।</p><p>ଏଠାରେ ମହାନତାର ପ୍ରମାଣ ତାଙ୍କ ଶେଷ କାମ। ଜୀବନସାରା ଯେଉଁ ପାଣ୍ଡବମାନଙ୍କୁ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀ ମନେ କରିଥିଲେ, ମୃତ୍ୟୁ ନିକଟରେ ସେମାନଙ୍କ ପିଲାଙ୍କୁ କୋଳରେ ନେବାକୁ ସେ ଦୃଦକ୍ଷଙ୍କୁ କହିଲେ।</p><p>ନିଜ ଦଳର ଯୋଦ୍ଧାକୁ ଧିକ୍କାର ଓ ପରଦଳର ସନ୍ତାନ ପାଇଁ ଅଶ୍ରୁ ଦୁଇଟି ଏକ ମନରୁ ଆସିଛି। ତାଙ୍କ ମନରେ ସମ୍ପର୍କର ବିଚାର ଯୁଦ୍ଧର ଦଳବିଚାରକୁ ଅତିକ୍ରମ କରିଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-20"><h2>୨୦. ଦୁର୍ଯ୍ୟୋଧନ କାହିଁକି ଗୁରୁପୁତ୍ରଙ୍କୁ ତିରସ୍କାର କଲେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାଣ୍ଡବଙ୍କ ସହ ଯୁଦ୍ଧରେ ପାଞ୍ଚ ନିଷ୍ପାପ ବାଳକଙ୍କର ଦୋଷ ନଥିଲା। ଅଶସ୍ତମା ସେମାନଙ୍କୁ ହତ୍ୟା କରି ଶତ୍ରୁବଧର ଗୌରବ ଆଣିଛନ୍ତି ବୋଲି ଭାବୁଥିଲେ।</p><p>ଦୁର୍ଯ୍ୟୋଧନ ଏହାକୁ ବାଳୁତ ବଧର ଅପରାଧ ବୋଲି କହିଲେ। ନିଜର ଓ ପାଣ୍ଡବଙ୍କ ବଂଶକୁ ମିଳାଇ ଦେଖୁଥିବାରୁ ଏ କାମ ତାଙ୍କର ଶେଷ ଆଶା ନଷ୍ଟ କରିଛି ବୋଲି ସେ ବିଳାପ କରନ୍ତି।</p><p>ପ୍ରଥମର ‘ସାଧୁ ସାଧୁ’ ଉକ୍ତି ସହ ଶେଷର ତିରସ୍କାରକୁ ମିଳାଇଲେ ତାଙ୍କ ମନର ପରିବର୍ତ୍ତନ ବୁଝାଯାଏ। ପାଣ୍ଡବଙ୍କୁ ପରାସ୍ତ କରିବା ଯୁଦ୍ଧର ଏକ ଉଦ୍ଦେଶ୍ୟ ହୋଇପାରେ।</p><p>କିନ୍ତୁ ଶିଶୁମାନେ ସେହି ଯୁଦ୍ଧର ଯୋଦ୍ଧା ନଥିଲେ। ସେମାନଙ୍କ ମଧ୍ୟରେ ଦୁର୍ଯ୍ୟୋଧନ ବଂଶର ଆଗାମୀ ଦିନକୁ ଦେଖୁଥିଲେ।</p><p>ଅଶସ୍ତମାଙ୍କ କାମ ସେହି ଆଶାକୁ ନଷ୍ଟ କରିଥିବାରୁ ବିଜୟର ସମ୍ବାଦ ତାଙ୍କ ପାଇଁ ପରାଜୟ ହେଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=8">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୮–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-21"><h2>୨୧. କବି ପରିଚୟରୁ ସାରଳା ଦାସଙ୍କ କୃତି ସଂଗ୍ରହ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଉତ୍କଳବ୍ୟାସ’ କବିଙ୍କ ସମ୍ବୋଧନ। କୃତିର ନାମ ପଚାରିଲେ ତାହାଠାରୁ ଅଲଗା କରି ‘ମହାଭାରତ’, ‘ଚଣ୍ଡୀପୁରାଣ’ ଓ ‘ବିଚିତ୍ର ରାମାୟଣ’ ଲେଖିବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୋ ତାଲିକା — ମହାଭାରତ, ଚଣ୍ଡୀପୁରାଣ, ବିଚିତ୍ର ରାମାୟଣ। ଓଡ଼ିଆ ଭାଷାରେ ମହାଭାରତ ରଚନା ପାଇଁ ସାରଳା ଦାସଙ୍କୁ ଉତ୍କଳବ୍ୟାସ ବୋଲି ମଧ୍ୟ ସମ୍ବୋଧନ କରାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-22"><h2>୨୨. ଅଠର ପର୍ବର ନାମ ସଂଗ୍ରହ କରିବା ପାଇଁ ପାଠରୁ ତାଲିକା ଆରମ୍ଭ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସଂଗ୍ରହରେ ‘ଆଦିପର୍ବ’ ଶବ୍ଦସୂଚନାର ଦୃଷ୍ଟାନ୍ତରେ ଓ ‘କାଇଁଶିକା ପର୍ବ’ ପଠିତ ଅଂଶର ଉତ୍ସ ଭାବେ ମିଳୁଛି। ଏଗୁଡ଼ିକ ନାମର ପ୍ରମାଣ। ଅଠର ପର୍ବର କ୍ରମ ନିର୍ଣ୍ଣୟ କରିବାକୁ ମୂଳ ଗ୍ରନ୍ଥର ସୂଚୀରୁ ପ୍ରତି ନାମର ସ୍ଥାନ ଯାଞ୍ଚ କରିବାକୁ ହେବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଉଭୟ ପ୍ରଦତ୍ତ ଓଡ଼ିଆ ପୁସ୍ତକରେ ସାରଳା ମହାଭାରତର ଦୁଇଟି ପର୍ବ ପାଇଁ ସିଧାସଳଖ ପାଠପ୍ରମାଣ ମିଳେ। (୧) ଆଦିପର୍ବ — ଏହି ଅଧ୍ୟାୟର PDF ପୃଷ୍ଠା ୩ରେ ଶବ୍ଦସୂଚନାର ଉଦ୍ଧୃତି।</p><p>(୨) କାଇଁଶିକା ପର୍ବ — PDF ପୃଷ୍ଠା ୧ରେ କବିତାର ଉତ୍ସ। ଏହା ପ୍ରମାଣ ମିଳିଥିବା ନାମର ସଂଗ୍ରହ, ମହାଭାରତର ପର୍ବକ୍ରମ ନୁହେଁ।</p><p>ବାକି ନାମ ସଂଗ୍ରହ ପାଇଁ ସାରଳା ମହାଭାରତର ସୂଚୀ ଆବଶ୍ୟକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+<article id="exercise-23"><h2>୨୩. କବିତା ପଢ଼ି ଦୁର୍ଯ୍ୟୋଧନଙ୍କ ବିଷୟରେ ତୁମ ଧାରଣା କିପରି ବଦଳିଲା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନିଜ ମତର ପରିବର୍ତ୍ତନ ପାଇଁ ଦୁଇ ପ୍ରମାଣ ମିଳାଅ। ଶତ୍ରୁ ନିହତ ଭାବି ସେ ଆନନ୍ଦ କରିଥିଲେ, ଅଥଚ ଶିଶୁବଧ ଜାଣି ନିଜ ପକ୍ଷର ଯୋଦ୍ଧାଙ୍କୁ ଭର୍ତ୍ସନା କଲେ। ଏହି ଦ୍ୱିତୀୟ କାମ ହିଁ ପ୍ରାରମ୍ଭର ଧାରଣାକୁ ବଦଳାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମୋ ପ୍ରଥମ ଧାରଣା ଥିଲା ଦୁର୍ଯ୍ୟୋଧନ କେବଳ ଶତ୍ରୁ ପରାଜୟ ଚାହାନ୍ତି। କିନ୍ତୁ ଯାହାଙ୍କୁ ସେ ପ୍ରଥମେ ପ୍ରଶଂସା କଲେ, ଶିଶୁବଧର ଅପରାଧ ଜାଣି ତାଙ୍କୁ ହିଁ ଭର୍ତ୍ସନା କଲେ।</p><p>ସେହି ପିଲାଙ୍କୁ ନିଜ ପରିବାର ପରି କୋଳେଇବାରୁ ତାଙ୍କର ସ୍ନେହଶୀଳ ଦିଗଟି ମୋ ପାଖରେ ପ୍ରକାଶ ପାଇଲା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=11" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧</a></small></article>
+
+</main></body></html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">△ABCରେ BD, ∠ABCର ସମଦ୍ୱିଖଣ୍ଡକ | AB = 4, BC = 6, AC = 5 ଓ D, AC ଉପରେ |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="200.62,51.14 52.50,268.86 447.50,268.86 200.62,51.14" stroke="#244355" stroke-width="2.35"/>
+<polyline points="52.50,268.86 299.38,138.23" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="74.72,236.20 75.38,236.66 76.02,237.13 76.66,237.61 77.29,238.11 77.91,238.62 78.52,239.14 79.12,239.68 79.70,240.22 80.28,240.78 80.84,241.35 81.39,241.93 81.93,242.52 82.46,243.12 82.98,243.73 83.48,244.36 83.97,244.99 84.45,245.63 84.91,246.29 85.36,246.95 85.80,247.62 86.23,248.30 86.64,248.99 87.03,249.68 87.41,250.39" stroke="#a9571e" stroke-width="2.35"/>
+<polyline points="87.41,250.39 87.78,251.10 88.13,251.82 88.47,252.54 88.80,253.28 89.10,254.02 89.40,254.76 89.68,255.51 89.94,256.27 90.19,257.03 90.42,257.80 90.64,258.57 90.84,259.34 91.02,260.12 91.19,260.91 91.34,261.69 91.48,262.48 91.60,263.27 91.71,264.07 91.80,264.86 91.87,265.66 91.93,266.46 91.97,267.26 91.99,268.06 92.00,268.86" stroke="#a9571e" stroke-width="2.35"/>
+</g>
+<circle cx="200.62" cy="51.14" r="2.7" fill="#244355"/>
+<text x="194.84" y="37.48" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="52.50" cy="268.86" r="2.7" fill="#244355"/>
+<text x="40.24" y="276.10" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="447.50" cy="268.86" r="2.7" fill="#244355"/>
+<text x="459.76" y="276.10" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="299.38" cy="138.23" r="2.7" fill="#244355"/>
+<text x="308.38" y="126.23" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+</svg>

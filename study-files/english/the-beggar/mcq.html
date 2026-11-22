@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Beggar · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>The Beggar</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. Which detail helps Sergei recognise the beggar?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>His unequal overshoes</li><li>A school certificate</li><li>A ticket</li><li>His axe</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. His unequal overshoes</b></p>
+<div class="lesson-body"><p>ଏକ ଉଚ୍ଚ ଓ ଏକ ନିମ୍ନ ଜୋତା ପୂର୍ବ ଦେଖାର ସ୍ମୃତି ଫେରାଇଲା।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୯୯–୧୦୫</small></article>
+<article><h2>୨. What job does Lushkoff hold at the end?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Schoolteacher</li><li>Notary</li><li>Advocate</li><li>Cook</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Notary</b></p>
+<div class="lesson-body"><p>ଶେଷରେ ତାଙ୍କ ମାସିକ ଦରମା ପଞ୍ଚତିରିଶ roubles।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୯୯–୧୦୫</small></article>
+<article><h2>୩. Which profession did Lushkoff actually lose?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Advocate</li><li>Student teacher</li><li>Singer in a choir</li><li>Village schoolteacher</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Singer in a choir</b></p>
+<div class="lesson-body"><p>ଦୁଇଟି ମିଥ୍ୟା ପରିଚୟ ଦେବା ପରେ ସେ ଗାୟକ ଥିବା ସ୍ୱୀକାର କରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୦</small></article>
+<article><h2>୪. Which skill made a new type of employment possible?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Repairing shoes</li><li>Writing</li><li>Acting</li><li>Driving</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Writing</b></p>
+<div class="lesson-body"><p>Sergei ଲେଖିପାରନ୍ତି କି ପଚାରି ନକଲ ଲେଖିବା କାମ ପାଇଁ ସୁପାରିଶ କରନ୍ତି।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୩</small></article>
+<article><h2>୫. Why did Lushkoff agree to an unpleasant task?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Expertise with an axe</li><li>An order from the police</li><li>A love of cold weather</li><li>Pride and shame</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. Pride and shame</b></p>
+<div class="lesson-body"><p>ତାଙ୍କ କଥାରେ ସେ ନିଜେ ବାନ୍ଧି ହୋଇଯାଇଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୧</small></article>
+<article><h2>୬. What had Sergei failed to see at the shed?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>The wood was sold</li><li>Lushkoff had no coat</li><li>Olga did the chopping</li><li>The snow had melted</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. Olga did the chopping</b></p>
+<div class="lesson-body"><p>ଶେଷରେ Lushkoff ଏହି ପ୍ରକୃତ ଘଟଣା କହେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୪–୧୦୫</small></article>
+<article><h2>୭. What payment was promised for returning to cut wood monthly?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Half a rouble</li><li>Thirty-five roubles</li><li>Five copecks</li><li>A full salary</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. Half a rouble</b></p>
+<div class="lesson-body"><p>ପ୍ରଥମ ମାସିକ କାମ ଓ ପର ଚାକିରିର ଦରମାକୁ ଅଲଗା ରଖନ୍ତୁ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୨</small></article>
+<article><h2>୮. Where did Sergei learn about Lushkoff’s new life?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>In the woodshed</li><li>At the old school</li><li>Inside a post office</li><li>At a theatre ticket window</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. At a theatre ticket window</b></p>
+<div class="lesson-body"><p>ଦୁଇ ବର୍ଷ ପରେ ଥିଏଟରରେ ସାକ୍ଷାତ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୪</small></article>
+<article><h2>୯. What did Sergei begin to feel on seeing the feeble man struggle with the wood?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Pride in a completed job</li><li>Regret at setting him hard work in the cold</li><li>Doubt about the weather</li><li>Fear that he would steal the axe</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Regret at setting him hard work in the cold</b></p>
+<div class="lesson-body"><p>ଲୋକଟିର ଦୁର୍ବଳତା ଦେଖି କଠିନ କାମ ଦେଇଥିବାରୁ ତାଙ୍କର ଲଜ୍ଜା ଓ ଅନୁତାପ ଜନ୍ମିଲା।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୨</small></article>
+<article><h2>୧୦. Who initially believed his own words had put Lushkoff on the right path?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>A schoolteacher</li><li>Sergei</li><li>The ticket seller</li><li>The choir leader</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. Sergei</b></p>
+<div class="lesson-body"><p>Sergei ନିଜ ପରାମର୍ଶର ପ୍ରଭାବ ବୋଲି ଭାବୁଥିଲେ।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୪</small></article>
+<article><h2>୧୧. Which contrast best describes Olga?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>Stern words and generous action</li><li>Fine clothes and greed</li><li>Gentle words and secret theft</li><li>Pride and total indifference</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. Stern words and generous action</b></p>
+<div class="lesson-body"><p>ତାଙ୍କ କଠୋର କଥା ପଛରେ ସହାନୁଭୂତି ଥିଲା।</p></div>
+</details>
+<small class="lesson-source">english/skills-of-communicative-english/source.pdf · ପୃଷ୍ଠା ୧୦୫</small></article>
+
+</main></body></html>

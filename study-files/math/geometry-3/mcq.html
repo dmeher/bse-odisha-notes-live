@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ବୃତ୍ତର ସ୍ପର୍ଶକ · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ବୃତ୍ତର ସ୍ପର୍ଶକ</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1wvRwXSutkYc2QFp6oEnwvuC6zWGROWv8/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ସ୍ପର୍ଶବିନ୍ଦୁ T ରେ ବ୍ୟାସାର୍ଦ୍ଧ OT ଓ ସ୍ପର୍ଶକ PT ମଧ୍ୟରେ କୋଣ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>30°</li><li>45°</li><li>60°</li><li>90°</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 90°</b></p>
+<div class="lesson-body"><p>ସ୍ପର୍ଶବିନ୍ଦୁଗାମୀ ବ୍ୟାସାର୍ଦ୍ଧ ସ୍ପର୍ଶକ ପ୍ରତି ଲମ୍ବ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୨–୩</small></article>
+<article><h2>୨. P–A–B, PA = 8 ଓ PB = 18 ସେ.ମି.। P ରୁ ସ୍ପର୍ଶକଖଣ୍ଡ କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ବହିଃସ୍ଥ P, ଛେଦକ PAB ଓ ସ୍ପର୍ଶକଖଣ୍ଡ PT।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2VjYW50IFBBQiBhbmQgdGFuZ2VudCBQVDwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTEwIiByPSI2OCIvPjxwYXRoIGQ9Ik0yNjkgMTEwSDUwTTI2OSAxMTBMMTUxIDQ5LjUiLz4KICA8L2c+CiAgPGcgZmlsbD0iIzE3Mzk0MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiPgogICAgPHRleHQgeD0iMjc0IiB5PSIxMTUiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxODEiIHk9IjEzMSI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM5IiB5PSIxMTciPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxNDgiIHk9IjQwIj5UPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>12 ସେ.ମି.</li><li>13 ସେ.ମି.</li><li>10 ସେ.ମି.</li><li>26 ସେ.ମି.</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 12 ସେ.ମି.</b></p>
+<div class="lesson-body"><p class="lesson-equation">PT² = 8 × 18 = 144।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୧୭</small></article>
+<article><h2>୩. ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ 8, ବହିଃସ୍ଥ ବିନ୍ଦୁର କେନ୍ଦ୍ରଠାରୁ ଦୂରତା 17। ସ୍ପର୍ଶକଖଣ୍ଡର ଦୈର୍ଘ୍ୟ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>15</li><li>25</li><li>√353</li><li>9</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 15</b></p>
+<div class="lesson-body"><p class="lesson-equation">PT² = 17² − 8² = 225।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୧୬</small></article>
+<article><h2>୪. ବୃତ୍ତର ବହିଃସ୍ଥ ବିନ୍ଦୁ P ରୁ ଅଙ୍କିତ PQ ଓ PR ସ୍ପର୍ଶକଖଣ୍ଡ ହେଲେ କେଉଁ ସମ୍ପର୍କ ସତ୍ୟ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ବହିଃସ୍ଥ P ବିନ୍ଦୁରୁ Q ଓ R ବିନ୍ଦୁ ପର୍ଯ୍ୟନ୍ତ ଦୁଇଟି ସ୍ପର୍ଶକଖଣ୍ଡ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VGFuZ2VudCBzZWdtZW50cyBQUSBhbmQgUFI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxjaXJjbGUgY3g9IjEyMCIgY3k9IjExMCIgcj0iNjgiLz48cGF0aCBkPSJNMjY4IDExMEwxNTEuMiA0OS42TTI2OCAxMTBMMTUxLjIgMTcwLjRNMTUxLjIgNDkuNkwxNTEuMiAxNzAuNCIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIyNzQiIHk9IjExNSI+UDwvdGV4dD4KICAgIDx0ZXh0IHg9IjE1MiIgeT0iNDAiPlE8L3RleHQ+CiAgICA8dGV4dCB4PSIxNTMiIHk9IjE5MiI+UjwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>PQ ଓ PR ଉଭୟ ବ୍ୟାସ</li><li>PQ = PR</li><li>PQ + PR = 0</li><li>PQ = 2PR</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. PQ = PR</b></p>
+<div class="lesson-body"><p>ଏକ ବହିଃସ୍ଥ ବିନ୍ଦୁରୁ ଅଙ୍କିତ ସ୍ପର୍ଶକଖଣ୍ଡଦ୍ୱୟ ସମାନ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୫. ସ୍ପର୍ଶକ ଓ ସ୍ପର୍ଶବିନ୍ଦୁଗାମୀ ଜ୍ୟା ମଧ୍ୟର କୋଣ 42°। ସଂପୃକ୍ତ ଏକାନ୍ତର ଚାପର ବୃତ୍ତସ୍ଥ କୋଣର ଡିଗ୍ରୀ ପରିମାପ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୩ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>42</li><li>138</li><li>84</li><li>48</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 42</b></p>
+<div class="lesson-body"><p>ସ୍ପର୍ଶକ–ଜ୍ୟା କୋଣ ଏକାନ୍ତର ଚାପର ସଂପୃକ୍ତ ବୃତ୍ତସ୍ଥ କୋଣ ସହ ସମାନ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୫–୭</small></article>
+<article><h2>୬. ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ 6 ଓ ବହିଃସ୍ଥ ବିନ୍ଦୁରୁ ସ୍ପର୍ଶକଖଣ୍ଡ 8। ବିନ୍ଦୁଟି କେନ୍ଦ୍ରରୁ କେତେ ଦୂରରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>14</li><li>10</li><li>2</li><li>50</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 10</b></p>
+<div class="lesson-body"><p>ବ୍ୟାସାର୍ଦ୍ଧ ଓ ସ୍ପର୍ଶକଖଣ୍ଡ ପରସ୍ପର ପ୍ରତି ଲମ୍ବ। ଦୂରତା = √(6² + 8²)।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୭. ବହିଃସ୍ଥ P ରୁ ଛେଦକ P–A–B ରେ PA = 2 ଓ AB = 6। ସ୍ପର୍ଶକଖଣ୍ଡ PT କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>6</li><li>4</li><li>2</li><li>8</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 4</b></p>
+<div class="lesson-body"><p>PB = 8। PT² = PA × PB = 16।</p><p>PT = 4।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୭–୧୭</small></article>
+<article><h2>୮. P ଠାରୁ ଏକ ବୃତ୍ତକୁ ଅଙ୍କିତ PQ = 5 ସେ.ମି. ଓ PR ଦୁଇଟି ସ୍ପର୍ଶକଖଣ୍ଡ। PQ + PR କେତେ ସେ.ମି.?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>10</li><li>8</li><li>5</li><li>4</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 10</b></p>
+<div class="lesson-body"><p class="lesson-equation">PR = PQ ହେତୁ ସମଷ୍ଟି 2 × 5।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୯. P ଠାରୁ ଏକ ବୃତ୍ତକୁ ଅଙ୍କିତ PQ = 7 ସେ.ମି. ଓ PR ଦୁଇଟି ସ୍ପର୍ଶକଖଣ୍ଡ। PQ + PR କେତେ ସେ.ମି.?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଏକ ବହିଃସ୍ଥ ବିନ୍ଦୁ P ରୁ ବୃତ୍ତର Q ଓ R ପର୍ଯ୍ୟନ୍ତ ସ୍ପର୍ଶକଖଣ୍ଡ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VGFuZ2VudCBzZWdtZW50cyBQUSBhbmQgUFI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxjaXJjbGUgY3g9IjEyMCIgY3k9IjExMCIgcj0iNjgiLz48cGF0aCBkPSJNMjY4IDExMEwxNTEuMiA0OS42TTI2OCAxMTBMMTUxLjIgMTcwLjRNMTUxLjIgNDkuNkwxNTEuMiAxNzAuNCIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIyNzQiIHk9IjExNSI+UDwvdGV4dD4KICAgIDx0ZXh0IHg9IjE1MiIgeT0iNDAiPlE8L3RleHQ+CiAgICA8dGV4dCB4PSIxNTMiIHk9IjE5MiI+UjwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>7</li><li>14</li><li>12</li><li>6</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 14</b></p>
+<div class="lesson-body"><p class="lesson-equation">PR = PQ ହେତୁ ସମଷ୍ଟି 2 × 7।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୧୦. ବହିଃସ୍ଥ P ରୁ ଛେଦକ P–A–B ରେ PA = 3 ଓ AB = 9। ସ୍ପର୍ଶକଖଣ୍ଡ PT କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ବହିଃସ୍ଥ P ଠାରୁ A ଓ B ଦେଇ ଛେଦକ ଏବଂ ସ୍ପର୍ଶବିନ୍ଦୁ T ଦେଇ ସ୍ପର୍ଶକ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2VjYW50IFBBQiBhbmQgdGFuZ2VudCBQVDwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTEwIiByPSI2OCIvPjxwYXRoIGQ9Ik0yNjkgMTEwSDUwTTI2OSAxMTBMMTUxIDQ5LjUiLz4KICA8L2c+CiAgPGcgZmlsbD0iIzE3Mzk0MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiPgogICAgPHRleHQgeD0iMjc0IiB5PSIxMTUiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxODEiIHk9IjEzMSI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM5IiB5PSIxMTciPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxNDgiIHk9IjQwIj5UPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>3</li><li>9</li><li>12</li><li>6</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 6</b></p>
+<div class="lesson-body"><p>PB = 12। PT² = PA × PB = 36।</p><p>PT = 6।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୭–୧୭</small></article>
+<article><h2>୧୧. ସ୍ପର୍ଶକ ଓ ସ୍ପର୍ଶବିନ୍ଦୁଗାମୀ ଜ୍ୟା ମଧ୍ୟର କୋଣ 43°। ସଂପୃକ୍ତ ଏକାନ୍ତର ଚାପର ବୃତ୍ତସ୍ଥ କୋଣର ଡିଗ୍ରୀ ପରିମାପ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>43</li><li>47</li><li>137</li><li>86</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 43</b></p>
+<div class="lesson-body"><p>ସ୍ପର୍ଶକ–ଜ୍ୟା କୋଣ ଏକାନ୍ତର ଚାପର ସଂପୃକ୍ତ ବୃତ୍ତସ୍ଥ କୋଣ ସହ ସମାନ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୫–୭</small></article>
+<article><h2>୧୨. P ଠାରୁ ଏକ ବୃତ୍ତକୁ ଅଙ୍କିତ PQ = 9 ସେ.ମି. ଓ PR ଦୁଇଟି ସ୍ପର୍ଶକଖଣ୍ଡ। PQ + PR କେତେ ସେ.ମି.?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଏକ ବହିଃସ୍ଥ ବିନ୍ଦୁ P ରୁ ବୃତ୍ତର Q ଓ R ପର୍ଯ୍ୟନ୍ତ ସ୍ପର୍ଶକଖଣ୍ଡ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VGFuZ2VudCBzZWdtZW50cyBQUSBhbmQgUFI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxjaXJjbGUgY3g9IjEyMCIgY3k9IjExMCIgcj0iNjgiLz48cGF0aCBkPSJNMjY4IDExMEwxNTEuMiA0OS42TTI2OCAxMTBMMTUxLjIgMTcwLjRNMTUxLjIgNDkuNkwxNTEuMiAxNzAuNCIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIyNzQiIHk9IjExNSI+UDwvdGV4dD4KICAgIDx0ZXh0IHg9IjE1MiIgeT0iNDAiPlE8L3RleHQ+CiAgICA8dGV4dCB4PSIxNTMiIHk9IjE5MiI+UjwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>8</li><li>18</li><li>16</li><li>9</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 18</b></p>
+<div class="lesson-body"><p class="lesson-equation">PR = PQ ହେତୁ ସମଷ୍ଟି 2 × 9।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୧୩. ବହିଃସ୍ଥ P ରୁ ଛେଦକ P–A–B ରେ PA = 4 ଓ AB = 12। ସ୍ପର୍ଶକଖଣ୍ଡ PT କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ବହିଃସ୍ଥ P ଠାରୁ A ଓ B ଦେଇ ଛେଦକ ଏବଂ ସ୍ପର୍ଶବିନ୍ଦୁ T ଦେଇ ସ୍ପର୍ଶକ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2VjYW50IFBBQiBhbmQgdGFuZ2VudCBQVDwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTEwIiByPSI2OCIvPjxwYXRoIGQ9Ik0yNjkgMTEwSDUwTTI2OSAxMTBMMTUxIDQ5LjUiLz4KICA8L2c+CiAgPGcgZmlsbD0iIzE3Mzk0MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiPgogICAgPHRleHQgeD0iMjc0IiB5PSIxMTUiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxODEiIHk9IjEzMSI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM5IiB5PSIxMTciPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxNDgiIHk9IjQwIj5UPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>4</li><li>16</li><li>12</li><li>8</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 8</b></p>
+<div class="lesson-body"><p>PB = 16। PT² = PA × PB = 64।</p><p>PT = 8।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୭–୧୭</small></article>
+<article><h2>୧୪. ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ 12 ଓ ବହିଃସ୍ଥ ବିନ୍ଦୁରୁ ସ୍ପର୍ଶକଖଣ୍ଡ 16। ବିନ୍ଦୁଟି କେନ୍ଦ୍ରରୁ କେତେ ଦୂରରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>100</li><li>4</li><li>28</li><li>20</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 20</b></p>
+<div class="lesson-body"><p>ବ୍ୟାସାର୍ଦ୍ଧ ଓ ସ୍ପର୍ଶକଖଣ୍ଡ ପରସ୍ପର ପ୍ରତି ଲମ୍ବ। ଦୂରତା = √(12² + 16²)।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୧୫. ସ୍ପର୍ଶକ ଓ ସ୍ପର୍ଶବିନ୍ଦୁଗାମୀ ଜ୍ୟା ମଧ୍ୟର କୋଣ 44°। ସଂପୃକ୍ତ ଏକାନ୍ତର ଚାପର ବୃତ୍ତସ୍ଥ କୋଣର ଡିଗ୍ରୀ ପରିମାପ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>88</li><li>44</li><li>46</li><li>136</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 44</b></p>
+<div class="lesson-body"><p>ସ୍ପର୍ଶକ–ଜ୍ୟା କୋଣ ଏକାନ୍ତର ଚାପର ସଂପୃକ୍ତ ବୃତ୍ତସ୍ଥ କୋଣ ସହ ସମାନ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୫–୭</small></article>
+<article><h2>୧୬. ବୃତ୍ତର ବ୍ୟାସାର୍ଦ୍ଧ 15 ଓ ବହିଃସ୍ଥ ବିନ୍ଦୁରୁ ସ୍ପର୍ଶକଖଣ୍ଡ 20। ବିନ୍ଦୁଟି କେନ୍ଦ୍ରରୁ କେତେ ଦୂରରେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>5</li><li>25</li><li>125</li><li>35</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 25</b></p>
+<div class="lesson-body"><p>ବ୍ୟାସାର୍ଦ୍ଧ ଓ ସ୍ପର୍ଶକଖଣ୍ଡ ପରସ୍ପର ପ୍ରତି ଲମ୍ବ। ଦୂରତା = √(15² + 20²)।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୨–୪</small></article>
+<article><h2>୧୭. P ଠାରୁ ଏକ ବୃତ୍ତକୁ ଅଙ୍କିତ PQ = 11 ସେ.ମି. ଓ PR ଦୁଇଟି ସ୍ପର୍ଶକଖଣ୍ଡ। PQ + PR କେତେ ସେ.ମି.?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଏକ ବହିଃସ୍ଥ ବିନ୍ଦୁ P ରୁ ବୃତ୍ତର Q ଓ R ପର୍ଯ୍ୟନ୍ତ ସ୍ପର୍ଶକଖଣ୍ଡ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VGFuZ2VudCBzZWdtZW50cyBQUSBhbmQgUFI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxjaXJjbGUgY3g9IjEyMCIgY3k9IjExMCIgcj0iNjgiLz48cGF0aCBkPSJNMjY4IDExMEwxNTEuMiA0OS42TTI2OCAxMTBMMTUxLjIgMTcwLjRNMTUxLjIgNDkuNkwxNTEuMiAxNzAuNCIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIyNzQiIHk9IjExNSI+UDwvdGV4dD4KICAgIDx0ZXh0IHg9IjE1MiIgeT0iNDAiPlE8L3RleHQ+CiAgICA8dGV4dCB4PSIxNTMiIHk9IjE5MiI+UjwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>20</li><li>10</li><li>11</li><li>22</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 22</b></p>
+<div class="lesson-body"><p class="lesson-equation">PR = PQ ହେତୁ ସମଷ୍ଟି 2 × 11।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୩–୫</small></article>
+<article><h2>୧୮. ବହିଃସ୍ଥ P ରୁ ଛେଦକ P–A–B ରେ PA = 5 ଓ AB = 15। ସ୍ପର୍ଶକଖଣ୍ଡ PT କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ବହିଃସ୍ଥ P ଠାରୁ A ଓ B ଦେଇ ଛେଦକ ଏବଂ ସ୍ପର୍ଶବିନ୍ଦୁ T ଦେଇ ସ୍ପର୍ଶକ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2VjYW50IFBBQiBhbmQgdGFuZ2VudCBQVDwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTEwIiByPSI2OCIvPjxwYXRoIGQ9Ik0yNjkgMTEwSDUwTTI2OSAxMTBMMTUxIDQ5LjUiLz4KICA8L2c+CiAgPGcgZmlsbD0iIzE3Mzk0MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiPgogICAgPHRleHQgeD0iMjc0IiB5PSIxMTUiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxODEiIHk9IjEzMSI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM5IiB5PSIxMTciPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxNDgiIHk9IjQwIj5UPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>20</li><li>10</li><li>15</li><li>5</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 10</b></p>
+<div class="lesson-body"><p>PB = 20। PT² = PA × PB = 100।</p><p>PT = 10।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୭–୧୭</small></article>
+<article><h2>୧୯. ସ୍ପର୍ଶକ ଓ ସ୍ପର୍ଶବିନ୍ଦୁଗାମୀ ଜ୍ୟା ମଧ୍ୟର କୋଣ 45°। ସଂପୃକ୍ତ ଏକାନ୍ତର ଚାପର ବୃତ୍ତସ୍ଥ କୋଣର ଡିଗ୍ରୀ ପରିମାପ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>135</li><li>46</li><li>90</li><li>45</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 45</b></p>
+<div class="lesson-body"><p>ସ୍ପର୍ଶକ–ଜ୍ୟା କୋଣ ଏକାନ୍ତର ଚାପର ସଂପୃକ୍ତ ବୃତ୍ତସ୍ଥ କୋଣ ସହ ସମାନ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 3/chapter.pdf · ପୃଷ୍ଠା ୫–୭</small></article>
+
+</main></body></html>

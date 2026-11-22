@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Noun Clauses and Relative Clauses · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>Noun Clauses and Relative Clauses</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପ୍ରାରମ୍ଭିକ Activity ୧–୨, Noun clausesର ୧–୨, Relative clausesର ୧–୮, ସହିତ ଦୁଇଟି ବାକ୍ୟ ଭାଙ୍ଗିବାର ଅଭ୍ୟାସ। ଦଶଟି ମିଳିତ ଶବ୍ଦର ସୂତ୍ର ଓ crossword ସଂଯୋଗ ଦର୍ଶାଯାଇଛି। ଆରମ୍ଭର ୧–୩ରେ ଘଟଣାକ୍ରମ, finite/non-finite after-clause ଓ ପରର କମା ସମ୍ପର୍କିତ ପ୍ରଶ୍ନର ଉତ୍ତର ଅଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୭୭–୭୯, ୮୧–୮୭।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୯)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">Opening comparison · 1a–c, 2a–b</a> <a href="#exercise-2">Opening comparison · 3a–c</a> <a href="#exercise-3">Opening Activity 1</a> <a href="#exercise-4">Opening Activity 2 · first nine</a> <a href="#exercise-5">Opening Activity 2 · remaining nine</a> <a href="#exercise-6">Activity 1 · first four examples</a> <a href="#exercise-7">Activity 1 · final two examples</a> <a href="#exercise-8">Noun clauses · Activity 1 · 7–12</a> <a href="#exercise-9">Noun clauses · Activity 2</a> <a href="#exercise-10">Relative clauses · Before Activity 1</a> <a href="#exercise-11">Relative clauses · Activity 1</a> <a href="#exercise-12">Relative clauses · Activity 2</a> <a href="#exercise-13">Relative clauses · Activity 3</a> <a href="#exercise-14">Relative clauses · Activity 4</a> <a href="#exercise-15">After Activity 4 · Commas in 1c and 2</a> <a href="#exercise-16">Relative clauses · Activity 5 (i–x)</a> <a href="#exercise-17">Relative clauses · Activity 6 (i–x)</a> <a href="#exercise-18">Relative clauses · Activity 7. 1–8</a> <a href="#exercise-19">Relative clauses · Activity 8</a></nav></details>
+<article id="exercise-1"><h2>Opening comparison · 1a–c, 2a–b. Compare the two cinema statements and the two actions involving the letter. Which clauses can stand alone? Does exchanging the actions preserve sense?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1a and 1b link two self-contained statements with but: the family went to the cinema and Mohan stayed home. In 1c, Mohan stayed at home is the main clause. The when-clause tells when and depends on it. In 2a, the same subject seals and then posts the letter. In 2b, reversing the verbs puts posting first, which makes no practical sense for this letter. ସଂଯୋଜକ ବଦଳିଲେ clauseର ସମ୍ପର୍କ ବଦଳେ।</p><p>ଗଠନ ଠିକ୍ ଥିଲେ ମଧ୍ୟ ଘଟଣାକ୍ରମ ଭୁଲ୍ ହୋଇପାରେ।</p><p>But ଦୁଇଟି ପୂରା କଥା ଯୋଡ଼େ, ତେଣୁ ପ୍ରତ୍ୟେକର ନିଜ subject ଓ finite verb ମିଳେ। Letterକୁ seal ଓ post କରିବା କ୍ରିୟାରେ ସମୟକ୍ରମ ଅଛି; ବ୍ୟାକରଣରେ ଦୁଇଟି statement possible ହୋଇଥିଲେ ମଧ୍ୟ ଅଦଳବଦଳରେ ଅର୍ଥ ବଦଳେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=77" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୭–୭୮</a></small></article>
+<article id="exercise-2"><h2>Opening comparison · 3a–c. In the three after-constructions, what is the main clause and what is the other clause? How do 2a and 3a differ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>In 3a–c the main action is he posted the letter. The after-clause makes the sealing earlier, regardless of word order. In 3a and 3b, sealing is non-finite and its understood subject is he. In 3c, had in he had sealed is finite and the subject he is explicit. The book treats the actions in 2a as coordinated. In 3a, the sealing is subordinate to the posting. after ଥିବା ଅଂଶଟି ସମୟ ଜଣାଏ, ସ୍ୱତନ୍ତ୍ର ମୁଖ୍ୟ ବାକ୍ୟ ହୋଇ ରହେ ନାହିଁ।</p><p>After ଯେଉଁ କାମ ସହ ଯୋଡ଼ା ସେହି କାମ ପ୍ରଥମେ। Clauseଟି ପରେ ଲେଖା ହୋଇଥିଲେ ମଧ୍ୟ sealing ଆଗରୁ ହୁଏ।</p><p>Coordinating and କେବଳ ଦୁଇ କାମ ଯୋଡ଼େ, after ସମୟର ସମ୍ପର୍କକୁ ସ୍ପଷ୍ଟ କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=78" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୮</a></small></article>
+<article id="exercise-3"><h2>Opening Activity 1. Classify each printed expression by its opening words.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>S: Where have you been?; Humpty Dumpty sat on a wall; The clock struck one; Who pulled her out?; Jack fell down. P: Under the queen’s chair; A stitch in time; All the king’s horses; Like a diamond in the sky; up the hill; Pussy in the well; a nice fairy story. C: After sealing the letter; to fetch a pail of water; And Jill came tumbling after (a coordinate clause in the rhyme). ଶେଷ ଉଦାହରଣଟି and ସହ ପୂର୍ବ କଥାକୁ ଯୋଡ଼େ।</p><p>ଦୁଇଟି non-finite clause ଏକା ପୂରା ବାକ୍ୟ ହୋଇପାରନ୍ତି ନାହିଁ।</p><p>ସ୍ୱାଧୀନ ପ୍ରଶ୍ନ “Who pulled her out?” ଏକ sentence, କାରଣ ତା’ର ଅର୍ଥ ଓ finite verb ଦୁହେଁ ଅଛି। “Under the …” ପରି phraseରେ finite verb ନାହିଁ।</p><p>Dependent clauseରେ verb ଥାଏ, ତଥାପି ମୁଖ୍ୟ କଥା ଲାଗେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=79" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୯</a></small></article>
+<article id="exercise-4"><h2>Opening Activity 2 · first nine. Use the slash to distinguish the main-clause frame from its subordinate clause.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>I cannot express / how sorry I am. Do you know / when the next train arrives? Jack fell down / no subordinate clause. All … is not gold / that glitters. All depends on … / how the work is done. He says / that his mother is ill. It is feared / that he will not help us. He told me / that he was ready. It is clear / that he is honest. ଚତୁର୍ଥରେ relative clause ମୁଖ୍ୟ ବାକ୍ୟର ମଝିରେ ଆସେ।</p><p>ତୃତୀୟର and ପରର ଅଂଶ coordinate, ଏହି ପ୍ରଶ୍ନରେ ତାହାକୁ ଚିହ୍ନଟ କରିବା ମାଗି ନାହିଁ।</p><p>“Do you know when the next train arrives?”ରେ ମୂଳ ପ୍ରଶ୍ନ Do you know …? ଭିତର ପ୍ରଶ୍ନରେ subject train ଆଗେ ଓ arrives ପରେ।</p><p>Jack fell downରେ ଦ୍ୱିତୀୟ clause ଖୋଜିବାର କାରଣ ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=79" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୯</a></small></article>
+<article id="exercise-5"><h2>Opening Activity 2 · remaining nine. Identify the main and subordinate portions in the rest of the activity.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>[Something] may be true / What he says. I asked the boy / how old he was. He waved his hand / no subordinate clause. The point is … / that he was absolutely honest. [Something] is uncertain / When his father will return. His great fear is … / that he may not succeed. Humpty Dumpty sat on a wall / no subordinate clause. A proverb is one man’s wit / no subordinate clause. There is many a slip / before the cup is taken to the lip. ବନ୍ଧନୀ ଓ ଖାଲି ସ୍ଥାନ clauseଟିର ସ୍ଥାନ ଦେଖାଉଛି।</p><p>ମୂଳ ବାକ୍ୟର ନୂଆ ଶବ୍ଦ ନୁହେଁ।</p><p>“What he says may be true”ରେ ମୂଳ ଗଠନ Something may be true। ସମଗ୍ର what-clause ହିଁ subject।</p><p>“I asked the boy how old he was”ରେ ପର ଅଂଶଟି ପଚରାଯାଇଥିବା ସୂଚନା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=79" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭୯</a></small></article>
+<article id="exercise-6"><h2>Activity 1 · first four examples. Identify each noun clause and give its function.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. “who has done it” explains the anticipatory it. 2. “how hard she works” is the object of know. 3. “That he is honest” is the subject. 4. “how it ends” is the object of on.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ତଥ୍ୟଟି କେଉଁଠାରେ ଆସିଛି ଦେଖ। Subject ବା verb/prepositionର object ଭାବେ noun clause କାମ କରିପାରେ।</p><p>ଆଗର it ଅର୍ଥରେ ଖାଲି ସ୍ଥାନ ଧରି ରଖିଲେ ପରର clause ପ୍ରକୃତ ବିଷୟ ଭରେ। “How hard she works”କୁ something ସହ ବଦଳାଇ knowର object ଦେଖ।</p><p>“That he is honest” ବାକ୍ୟ ଆରମ୍ଭ କଲେ ସମଗ୍ର କଥାଟି subject।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-7"><h2>Activity 1 · final two examples. Explain the quoted speech and decision examples.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>In the speech example “I’m glad to hear it” gives the words spoken. In the last example “that he must help you” completes “My decision is” and is the complement.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ସିଧା ଉଦ୍ଧୃତ କଥା ଓ that ଦେଇ ଆରମ୍ଭ ହୋଇଥିବା ପରିପୂରକ clause ଅଲଗା କର।</p><p>ମୂଳ କଥାଟି ସିଧା quote ହେଲେ ତା’ର ପ୍ରଥମ ପୁରୁଷ ରହିଥାଏ। “My decision is …”ରେ ପରର clause ସିଦ୍ଧାନ୍ତ କ’ଣ ତାହାର ପରିଚୟ ଦିଏ, ତେଣୁ complement।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=81" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୧</a></small></article>
+<article id="exercise-8"><h2>Noun clauses · Activity 1 · 7–12. Identify the function of the six noun clauses continued on the next page.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>7 What is in our fate — subject; 8 that they have cheated us — complement of is; 9 that her uncle had come — object of know; 10 who wrote The Ramayan — object of tell; 11 how the war will come to an end — object of say; 12 that he would put some flowers on her brother’s grave — object of promised. ପ୍ରଥମ ବାକ୍ୟରେ କଣ ଏଡ଼ାଇହେବ ନାହିଁ ପଚାର।</p><p>ଶେଷ ଚାରିଟିରେ କଣ ଜାଣିବା, କହିବା ବା ପ୍ରତିଶ୍ରୁତି ଦେବା ବିଷୟ ଦେଖ।</p><p>Subject ପରେ main predicate ଖୋଜ। “The fact is …”ରେ is ପରେ complement, “know …”ରେ object।</p><p>ଏହି ସ୍ଥାନ-ପରୀକ୍ଷାରୁ ସମାନ thatରେ ଆରମ୍ଭ ହୋଇଥିବା clauseର ଭିନ୍ନ କାମ ବୁଝାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-9"><h2>Noun clauses · Activity 2. Complete each main-clause frame with a noun clause.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Model completions: 1 where he lives; 2 he had made a mistake; 3 that he is tired; 4 when the train would arrive; 5 the road was closed; 6 what you suggest; 7 he will finish the work tomorrow; 8 the earth moves round the sun; 9 That he is honest; 10 that the school will reopen tomorrow. ପ୍ରଥମ ଓ ଚତୁର୍ଥଟିରେ wh-word ପରେ subject + verb ରହେ।</p><p>୯ରେ clause କର୍ତ୍ତା, ୧୦ରେ rumourର ବିଷୟବସ୍ତୁ।</p><p>Where he lives ଓ when the train would arrive ପ୍ରତ୍ୟେକରେ subject ଓ verb ଅଛି। ଏଗୁଡ଼ିକ main verbର ଅଜଣା ଖବରକୁ ପୂରଣ କରନ୍ତି; ନିଜେ ପ୍ରତ୍ୟକ୍ଷ ପ୍ରଶ୍ନ ନୁହନ୍ତି, ତେଣୁ does he live କ୍ରମ ହୁଏନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨</a></small></article>
+<article id="exercise-10"><h2>Relative clauses · Before Activity 1. Separate examples 1b and 1c to recover the two ideas joined by the relative pronoun.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1b. The book is lying on the table. The book belongs to my friend. 1c. The boy always gives me books. The boy is my friend. Which replaces the repeated book in a clause and who replaces the repeated boy. ପୁନରାବୃତ୍ତ ନାମପଦକୁ ଖୋଜିଲେ ଦୁଇ ଅଲଗା ବାକ୍ୟ ମିଳେ।</p><p>ଅଲଗା ବାକ୍ୟରେ book ବା boy ଦ୍ୱିତୀୟଥର ଆସେ। ଦୁହିଁକୁ ଯୋଡ଼ିଲେ ସେହି ପୁନରାବୃତ୍ତ noun ସ୍ଥାନରେ which/that ବା who ଆସି ନିକଟର antecedentକୁ ଫେରି ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=82" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୨–୮୩</a></small></article>
+<article id="exercise-11"><h2>Relative clauses · Activity 1. Combine the seven printed pairs with a relative clause.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. The birds that live in the neighbourhood are chirping. 2. I write with the pen my father bought for me. 3. The sick whom Florence Nightingale nursed were delighted. 4. I like the man who has a smiling face. 5. The thief who had robbed me escaped in the dark. 6. The boy whose book I have borrowed is our monitor. 7. The chair he is sitting in has a cracked leg. Whose ଅଧିକାର ସୂଚାଏ ଓ ପରେ book ଆସେ।</p><p>୨ ଓ ୭ରେ object relative ଉହ୍ୟ ଅଛି।</p><p>Birds ନିଜେ live କରୁଥିବାରୁ that ହେଉଛି subject। Father bought the penରେ father subject ଓ pen object; ଯୋଡ଼ିଲେ pen ପରେ object pronoun ଛାଡ଼ିହୁଏ।</p><p>ମଣିଷ ଥିଲେ who/whomର ଏହି ଭେଦ ମଧ୍ୟ ଦେଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=83" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୩</a></small></article>
+<article id="exercise-12"><h2>Relative clauses · Activity 2. Identify exactly where the pronoun may be dropped without other changes.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Drop the pronoun in 2 (the story book my father bought), 3 (the shopkeeper I was working for), 4 (the best possible explanation we can give), 10 (the man Mohan was talking to), 11 (the music we were listening to) and 12 (the pen my father bought). Keep it in 1 and 5–9. ଉହ୍ୟ ରହୁଥିବା ଶବ୍ଦଗୁଡ଼ିକ defining relative clauseର object।</p><p>Comma ଦିଆ extra-information clauseରେ ବା relative ନିଜେ subject ହେଲେ ରଖିବାକୁ ହେବ।</p><p>“I was working for …”ରେ I ପୂର୍ବରୁ subject, ତେଣୁ shopkeeper object ସ୍ଥାନରୁ pronoun ବାଦ୍ ଦେଇହୁଏ। “Birds that live …”ରେ that ବାଦ୍ ଦେଲେ liveର subject ହଜେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=83" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୩–୮୪</a></small></article>
+<article id="exercise-13"><h2>Relative clauses · Activity 3. Define the twelve terms with a relative clause.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>A driver is a person who drives a vehicle; a conductor, one who collects fares; an actor, one who plays a part; a teacher, one who helps learners; a journalist, one who reports news; a plumber, one who repairs pipes; a farmer, one who grows crops; a doctor, one who treats illness; a patient, one who receives treatment. A hospital is a place where sick people receive care. A newspaper is a document in which news is published. A transitive verb is a verb which takes an object. ସଂକ୍ଷିପ୍ତ ଯୋଡ଼ିଗୁଡ଼ିକୁ ଖାତାରେ A … is a person who … ରୂପରେ ଲେଖ।</p><p>Driver ପାଇଁ person + who + drives, ଗୋଟିଏ ଜିନିଷ ପାଇଁ thing + which/that + its use। ପରିଭାଷାରେ କେଉଁ କାମ ତାକୁ ଅନ୍ୟ ସମସ୍ତ ବ୍ୟକ୍ତି ବା ବସ୍ତୁଠାରୁ ଅଲଗା କରେ ତାହା ଥାଉ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=84" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୪</a></small></article>
+<article id="exercise-14"><h2>Relative clauses · Activity 4. Match the relative clauses to make the nine proverbs in printed row order.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1 that glitters; 2 who live in glass houses; 3 that ends; 4 who pays the piper; 5 who laughs last; 6 that has no turning; 7 that blows nobody; 8 who do not want; 9 that prays together. Take the beginning and end from the same printed row. Row 8 begins “There are no one” in the supplied page; “There is no one so deaf as those who do not want to hear” gives agreement with no one. ଏଠି who ବ୍ୟକ୍ତିକୁ ଓ that ବସ୍ତୁ ବା ସମୂହକୁ ଚିହ୍ନାଏ।</p><p>“All that glitters …”ରେ that allକୁ ସୀମିତ କରେ। “People who live …”ରେ persons ସହ who ମେଳେ।</p><p>ଲୋକୋକ୍ତି ମିଳାଇବାବେଳେ relative pronoun ସହ ପୂରା ଲୋକୋକ୍ତିର ଅର୍ଥ ମଧ୍ୟ ପରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=84" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୪–୮୫</a></small></article>
+<article id="exercise-15"><h2>After Activity 4 · Commas in 1c and 2. What do the commas tell us in the two examples about the boy and Amit?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>In 1c the clause beginning who identifies which boy is the speaker’s friend. No comma separates it from the boy. In 2, Amit already identifies the person. The same description, placed between two commas, adds information about him. କେଉଁ ବାଳକ ତାହା ଚିହ୍ନଟ କରାଇବା ଓ ଚିହ୍ନା ବ୍ୟକ୍ତିଙ୍କ ବିଷୟରେ ଆଉ ଗୋଟିଏ କଥା ଯୋଡ଼ିବା ମଧ୍ୟରେ ଏହି ପାର୍ଥକ୍ୟ।</p><p>ଯଦି କେଉଁ boy ବୋଲି ଖୋଜିବାକୁ clause ଦରକାର, ତାହା defining। Amit ନାମରେ ପରିଚୟ ମିଳିସାରିଥିଲେ ମଝିର clause ଅତିରିକ୍ତ ଖବର; କାଟିଦେଲେ ମୂଳ ପରିଚୟ ଅକ୍ଷୁଣ୍ଣ ରହେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=85" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୫</a></small></article>
+<article id="exercise-16"><h2>Relative clauses · Activity 5 (i–x). Identify the relative clause and distinguish defining (D) from non-defining (N).</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i who sells fruits and vegetables D; ii who is a green grocer N; iii who often comes to our house D; iv who often comes to our house N; v who is a judge D; vi who is a judge N; vii who is a teacher N; viii that wears a crown D; ix who thinks of our welfare D; x who thinks of our welfare N. (v) କେଉଁ କକା ବୋଲି ଚିହ୍ନାଏ, (vi) କକାଙ୍କ ବିଷୟରେ ଅଧିକ ଖବର ଦେଏ।</p><p>ଏକେ “who often comes to our house” ଦୁଇଥର ଥିଲେ ମଧ୍ୟ antecedent ନିଜେ ନିର୍ଦ୍ଦିଷ୍ଟ କି ଚିହ୍ନ। ସାଧାରଣ nounକୁ ଚିହ୍ନାଇଲେ D; ପୂର୍ବରୁ ଚିହ୍ନା ବ୍ୟକ୍ତି ବିଷୟରେ ଯୋଡ଼ିଲେ N।</p><p>Comma ଏହି ପଠନକୁ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=86" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୬</a></small></article>
+<article id="exercise-17"><h2>Relative clauses · Activity 6 (i–x). Place commas where extra information is intended.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i none; ii put commas around which lasted ten days if the strike is already identified; iii around who is working at Koraput; iv none; v around who is sick if the grandmother is already identified; vi around who discovered the theory of relativity; vii around who got this bridge built; viii around who faithfully served the poor; ix a comma before which is unfortunate; x around who is impartial if the chairman is already identified. (ix)ର which ଆଗର ପୂରା ଘଟଣାକୁ ସୂଚାଏ।</p><p>ଜଣେ ବା ଗୋଟିଏକୁ ଅନେକଙ୍କ ମଧ୍ୟରୁ ଚିହ୍ନାଇବାକୁ ହେଲେ comma ବିନା ଭିନ୍ନ ଅର୍ଥ ହୁଏ।</p><p>ମଝିର extra informationର ଆରମ୍ଭ ଓ ଶେଷରେ ଦୁଇ comma ଥାଏ। ଶେଷରେ ଥିଲେ ପ୍ରଥମ comma ପରେ full stop ଅନ୍ୟ ସୀମା କରେ।</p><p>Strike ଆଗରୁ ଚିହ୍ନା କି ତାହା ଉପରେ ‘which lasted ten days’ର ପଠନ ନିର୍ଭର କରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=86" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୬–୮୭</a></small></article>
+<article id="exercise-18"><h2>Relative clauses · Activity 7. 1–8. Choose a relative pronoun for each gap.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1 which; 2 who; 3 who (or that); 4 which/that; 5 whose; 6 that/which (or omit it); 7 whose; 8 which/that. In whichରେ preposition ଆଗରୁ ଅଛି। ୫ ଓ ୭ରେ ପର ନାମପଦ ସହ ମାଲିକାନାର ସମ୍ପର୍କ ଥିବାରୁ whose।</p><p>Whose ପରେ ଅଧିକାରୀଙ୍କ ବସ୍ତୁର noun ଲାଗେ। Preposition + whichରେ which ବାଦ୍ ହୁଏନାହିଁ।</p><p>Defining object gapରେ pronoun ବାଦ୍ ଦେଲେ ମଧ୍ୟ clauseର ନିଜ subject ରହିଛି କି ପରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=87" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୭</a></small></article>
+<article id="exercise-19"><h2>Relative clauses · Activity 8. Prepare ten crossing words and make relative-clause clues in pairs.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>A pair can build this ten-word chain on squared paper. PENGUIN: a bird that swims but cannot fly. IGLOO: a house that is made of snow. LOG: a piece of a tree that has been cut. GOAT: an animal that may give milk. TEACHER: a person who helps pupils learn. READER: someone who reads. ROAD: a way on which vehicles travel. DOCTOR: a person who treats illness. REPORT: an account that gives information. TRAIN: a vehicle that runs on rails. Consecutive words share I, L, G, T, R, D, D, R, T. ସାଥୀ ନିଜ ପୃଷ୍ଠାରେ ଅକ୍ଷର ମିଳାଇ ଛକ ବସାଇବେ ଓ ଯେକୌଣସି ସଠିକ୍ ନୂଆ clue ଦେଇପାରିବେ।</p><p>Crossword clueରେ କେବଳ nounର ନାମ ପୁଣି ନ କହି ତାହାର distinguishing feature ଦିଅ। A bird that swims but cannot flyରେ bird ଶ୍ରେଣୀ, relative clauseଟି ଅଧିକ ସଂକୀର୍ଣ୍ଣ ସୂତ୍ର।</p><p>ଯୋଡ଼ା ଶବ୍ଦର shared letter ଗୋଟିଏ ଘରେ ବସେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=87" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮୭</a></small></article>
+
+</main></body></html>

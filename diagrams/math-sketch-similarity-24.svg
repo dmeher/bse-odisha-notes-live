@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">ତିନି ସମାନ୍ତର ରେଖା ଓ ଦୁଇ ଛେଦକରେ A, B, C ଏବଂ D, E, F ବିନ୍ଦୁ |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="71.22,73.56 428.78,73.56" stroke="#557181" stroke-width="2.35"/>
+<polyline points="71.22,168.21 428.78,168.21" stroke="#557181" stroke-width="2.35"/>
+<polyline points="71.22,262.86 428.78,262.86" stroke="#557181" stroke-width="2.35"/>
+<polyline points="139.36,287.50 196.03,32.50" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="377.06,287.35 313.41,32.75" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<text x="56.22" y="73.56" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">L₁</text>
+<text x="56.22" y="168.21" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">L₂</text>
+<text x="56.22" y="262.86" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">L₃</text>
+<text x="196.03" y="20.50" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">T₁</text>
+<text x="313.41" y="20.75" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">T₂</text>
+<circle cx="186.90" cy="73.56" r="2.7" fill="#244355"/>
+<text x="178.90" y="62.56" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="165.87" cy="168.21" r="2.7" fill="#244355"/>
+<text x="157.87" y="157.21" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="144.83" cy="262.86" r="2.7" fill="#244355"/>
+<text x="136.83" y="251.86" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="323.62" cy="73.56" r="2.7" fill="#244355"/>
+<text x="333.62" y="62.56" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="347.28" cy="168.21" r="2.7" fill="#244355"/>
+<text x="357.28" y="157.21" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">E</text>
+<circle cx="370.94" cy="262.86" r="2.7" fill="#244355"/>
+<text x="380.94" y="251.86" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">F</text>
+</svg>

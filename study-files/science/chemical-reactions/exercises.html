@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ରାସାୟନିକ ପ୍ରତିକ୍ରିୟା ଓ ରାସାୟନିକ ସମୀକରଣ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ରାସାୟନିକ ପ୍ରତିକ୍ରିୟା ଓ ରାସାୟନିକ ସମୀକରଣ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପାଠ ଶେଷର ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୨୦ ଓ ସେଗୁଡ଼ିକର ଉପପ୍ରଶ୍ନର ଉତ୍ତର ଦିଆଯାଇଛି। ପାଠମଧ୍ୟରେ ମୁଦ୍ରିତ ୮ଟି ପ୍ରଶ୍ନ ଓ ସେଗୁଡ଼ିକର ଉପପ୍ରଶ୍ନର ସମାଧାନ ମଧ୍ୟ ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF ୨୧–୨୩ · ପାଠମଧ୍ୟ ୧୨, ୧୬, ୨୦</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୨୮)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a> <a href="#exercise-18">୧୮</a> <a href="#exercise-19">୧୯</a> <a href="#exercise-20">୨୦</a> <a href="#exercise-21">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୨ · ୧</a> <a href="#exercise-22">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୨ · ୨</a> <a href="#exercise-23">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୨ · ୩</a> <a href="#exercise-24">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୬ · ୧</a> <a href="#exercise-25">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୬ · ୨</a> <a href="#exercise-26">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୦ · ୧</a> <a href="#exercise-27">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୦ · ୨</a> <a href="#exercise-28">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୦ · ୩</a></nav></details>
+<article id="exercise-1"><h2>୧. 2PbO(s) + C(s) → 2Pb(s) + CO₂(g) ପାଇଁ କେଉଁ ଉକ୍ତି ଭୁଲ? (a) Pb ବିଜାରିତ ହେଉଛି। (b) CO₂ ଜାରିତ ହେଉଛି। (c) C ଜାରିତ ହେଉଛି। (d) PbO ବିଜାରିତ ହେଉଛି।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(a) ଓ (b) ଭୁଲ। PbO ଅକ୍ସିଜେନ୍ ହରାଇ ବିଜାରିତ ହୁଏ, C ଅକ୍ସିଜେନ୍ ପାଇ ଜାରିତ ହୁଏ।</p><p>Pb ଓ CO₂ ଉତ୍ପାଦ।</p><p>2PbOରେ Pb ସହ ଦୁଇଟି O ପରମାଣୁ ଥିଲା। ଉତ୍ପାଦ ପଟେ Pb ମୁକ୍ତ ଅଛି ଓ ସେହି ଦୁଇଟି O କାର୍ବନ ସହ CO₂ ଗଠନ କରିଛି।</p><p>ଏହି ଅକ୍ସିଜେନ୍ ସ୍ଥାନାନ୍ତରକୁ ଅନୁସରଣ କଲେ କିଏ ଜାରିତ ଓ କିଏ ବିଜାରିତ ହୋଇଛି ବାଛିହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=18">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮–୧୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=21" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୧</a></small></article>
+<article id="exercise-2"><h2>୨. Fe₂O₃ + 2Al → Al₂O₃ + 2Fe କେଉଁ ଶ୍ରେଣୀର ପ୍ରତିକ୍ରିୟା?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିସ୍ଥାପନ। ଆଲୁମିନିୟମ୍ ଆଇରନ୍‌କୁ ତାହାର ଅକ୍ସାଇଡ୍‌ରୁ ଅପସାରିତ କରେ।</p><p>ପ୍ରତିକାରକ ପଟେ Fe ଏକ ଯୌଗିକରେ ଓ Al ମୁକ୍ତ ଅବସ୍ଥାରେ ଅଛି। ଉତ୍ପାଦ ପଟେ Al ଅକ୍ସିଜେନ୍ ସହ ଯୁକ୍ତ ଏବଂ Fe ମୁକ୍ତ।</p><p>ଗୋଟିଏ ମୌଳ ଯୌଗିକରେ ଥିବା ଅନ୍ୟ ମୌଳର ସ୍ଥାନ ନେଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=16">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬–୧୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=21" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୧</a></small></article>
+<article id="exercise-3"><h2>୩. ଲୁହାଗୁଣ୍ଡ ଓ ଲଘୁ HClର ପ୍ରତିକ୍ରିୟାରେ କ’ଣ ମିଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Fe + 2HCl → FeCl₂ + H₂। ଆଇରନ୍ (II) କ୍ଲୋରାଇଡ୍ ଓ ହାଇଡ୍ରୋଜେନ୍ ହୁଏ।</p><p>FeCl₂ରେ ଦୁଇଟି Cl ଦରକାର ହେତୁ ଗୋଟିଏ Fe ପାଇଁ ଦୁଇଟି HCl ନିଆଯାଇଛି। ଅମ୍ଳର ଦୁଇଟି H ପରମାଣୁ ମିଶି ଗୋଟିଏ H₂ ଅଣୁ ହୁଅନ୍ତି।</p><p>ଏହା ଧାତୁ ଦ୍ୱାରା ହାଇଡ୍ରୋଜେନ୍‌ର ବିସ୍ଥାପନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=26">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୬–୨୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨</a></small></article>
+<article id="exercise-4"><h2>୪. ସମତୁଲ ସମୀକରଣ କ’ଣ ଓ କାହିଁକି ଏହା ଆବଶ୍ୟକ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (ଖ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରତିକାରକ ଓ ଉତ୍ପାଦ ପଟେ ପ୍ରତ୍ୟେକ ମୌଳିକର ପରମାଣୁ ସଂଖ୍ୟା ସମାନ ଥିବା ସମୀକରଣ ସମତୁଲ। ପ୍ରତିକ୍ରିୟାରେ ପରମାଣୁମାନଙ୍କର ପୁନର୍ବିନ୍ୟାସ ହୁଏ, ସେମାନେ ସୃଷ୍ଟି ବା ନଷ୍ଟ ହୁଅନ୍ତି ନାହିଁ।</p><p>ସମତୁଲ ସମୀକରଣ ବସ୍ତୁତ୍ୱ ସଂରକ୍ଷଣ ସହ ମେଳ ଖାଏ।</p><p>H₂ + O₂ → H₂O ଲେଖିଲେ ବାମରେ O ଦୁଇଟି ଓ ଡାହାଣରେ ଗୋଟିଏ। ପ୍ରଥମେ H₂O ଆଗରେ 2 ରଖି O ସମାନ କର।</p><p>ଏବେ ଡାହାଣରେ H ଚାରିଟି ହେବାରୁ H₂ ଆଗରେ ମଧ୍ୟ 2 ଦିଅ। 2H₂ + O₂ → 2H₂O ରେ ଦୁଇ ପଟେ H ଚାରିଟି ଓ O ଦୁଇଟି।</p><p>ପଦାର୍ଥର ସଙ୍କେତ ଅପରିବର୍ତ୍ତିତ ରହେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯–୨୨</a></small></article>
+<article id="exercise-5"><h2>୫. ପ୍ରତ୍ୟେକ ଉକ୍ତିର ସମତୁଲ ରାସାୟନିକ ସମୀକରଣ ଲେଖ।</h2>
+<div class="question-parts"><p>(a) ହାଇଡ୍ରୋଜେନ୍ ଓ ନାଇଟ୍ରୋଜେନ୍‌ରୁ ଏମୋନିଆ।</p><p>(b) ହାଇଡ୍ରୋଜେନ୍ ସଲ୍‌ଫାଇଡ୍ ବାୟୁରେ ଜଳି ଜଳ ଓ ସଲ୍‌ଫର୍ ଡାଇଅକ୍ସାଇଡ୍ ଦିଏ।</p><p>(c) ବେରିୟମ୍ କ୍ଲୋରାଇଡ୍ ଓ ଏଲୁମିନିୟମ୍ ସଲ୍‌ଫେଟ୍ ଦ୍ରବଣରୁ ବେରିୟମ୍ ସଲ୍‌ଫେଟ୍ ଅବକ୍ଷେପ ଓ ଏଲୁମିନିୟମ୍ କ୍ଲୋରାଇଡ୍ ମିଳେ।</p><p>(d) ପୋଟାସିୟମ୍ ଓ ଜଳରୁ ପୋଟାସିୟମ୍ ହାଇଡ୍ରକ୍‌ସାଇଡ୍ ଓ ହାଇଡ୍ରୋଜେନ୍।</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) N₂ + 3H₂ → 2NH₃।</li><li>(b) 2H₂S + 3O₂ → 2H₂O + 2SO₂।</li><li>(c) 3BaCl₂ + Al₂(SO₄)₃ → 3BaSO₄↓ + 2AlCl₃।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(d) 2K + 2H₂O → 2KOH + H₂। ପ୍ରତି ସମୀକରଣର ଦୁଇ ପଟେ ପ୍ରତ୍ୟେକ ମୌଳର ପରମାଣୁ ସଂଖ୍ୟା ସମାନ।</p><p>(a) N₂ର ଦୁଇ N ପାଇଁ 2NH₃, ତାହାର ଛଅ H ପାଇଁ 3H₂ ଦରକାର। (b) ଦୁଇ H₂Sରୁ 2SO₂ ଓ 2H₂O ହେବାକୁ ମୋଟ ଛଅ O, ଅର୍ଥାତ୍ 3O₂ ଲାଗେ।</p><p>(c) ତିନୋଟି SO₄ ଗୋଷ୍ଠୀ ପାଇଁ 3BaSO₄ ଓ ଦୁଇଟି Al ପାଇଁ 2AlCl₃ ଲେଖ। (d) ଦୁଇଟି KOH ଓ ଗୋଟିଏ H₂ ମିଶି H ଚାରିଟି ଥିବାରୁ ବାମରେ 2H₂O ବସେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨</a></small></article>
+<article id="exercise-6"><h2>୬. ସମୀକରଣଗୁଡ଼ିକୁ ସମତୁଲ କର।</h2>
+<div class="question-parts"><p>(a) HNO₃ + Ca(OH)₂ → Ca(NO₃)₂ + H₂O</p><p>(b) NaOH + H₂SO₄ → Na₂SO₄ + H₂O</p><p>(c) NaCl + AgNO₃ → AgCl + NaNO₃</p><p>(d) BaCl₂ + H₂SO₄ → BaSO₄ + HCl</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) 2HNO₃ + Ca(OH)₂ → Ca(NO₃)₂ + 2H₂O।</li><li>(b) 2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O।</li><li>(c) NaCl + AgNO₃ → AgCl↓ + NaNO₃।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">(d) BaCl₂ + H₂SO₄ → BaSO₄↓ + 2HCl।</p><p>(a) Ca(OH)₂ର ଦୁଇ OH ପାଇଁ ଦୁଇ HNO₃ ଦରକାର। (b) H₂SO₄ର ଦୁଇ H ପାଇଁ ଦୁଇ NaOH ଦରକାର।</p><p>ଉଭୟରେ ଦୁଇ H₂O ହୁଏ। (c) AgClରେ Ag ଓ Clର ଅନୁପାତ 1 : 1।</p><p>ଏଠାରେ ପ୍ରତ୍ୟେକ ସହଗ 1 | (d) ଗୋଟିଏ Ba ସହ ଗୋଟିଏ SO₄ ଯୋଡ଼ା ହୁଏ।</p><p>ବଳିଥିବା ଦୁଇ H ଓ ଦୁଇ Cl ପାଇଁ 2HCl ଲେଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨</a></small></article>
+<article id="exercise-7"><h2>୭. ଏହି ପ୍ରତିକ୍ରିୟାଗୁଡ଼ିକର ସମତୁଲ ସମୀକରଣ ଲେଖ।</h2>
+<div class="question-parts"><p>(a) କ୍ୟାଲ୍‌ସିୟମ୍ ହାଇଡ୍ରକ୍‌ସାଇଡ୍ + କାର୍ବନ ଡାଇଅକ୍ସାଇଡ୍ → କ୍ୟାଲ୍‌ସିୟମ୍ କାର୍ବୋନେଟ୍ + ଜଳ</p><p>(b) ଜିଙ୍କ୍ + ସିଲ୍‌ଭର୍ ନାଇଟ୍ରେଟ୍ → ଜିଙ୍କ୍ ନାଇଟ୍ରେଟ୍ + ସିଲ୍‌ଭର୍</p><p>(c) ଏଲୁମିନିୟମ୍ + କପର୍ କ୍ଲୋରାଇଡ୍ → ଏଲୁମିନିୟମ୍ କ୍ଲୋରାଇଡ୍ + କପର୍</p><p>(d) ବେରିୟମ୍ କ୍ଲୋରାଇଡ୍ + ପୋଟାସିୟମ୍ ସଲ୍‌ଫେଟ୍ → ବେରିୟମ୍ ସଲ୍‌ଫେଟ୍ + ପୋଟାସିୟମ୍ କ୍ଲୋରାଇଡ୍</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) Ca(OH)₂ + CO₂ → CaCO₃ + H₂O।</li><li>(b) Zn + 2AgNO₃ → Zn(NO₃)₂ + 2Ag।</li><li>(c) 2Al + 3CuCl₂ → 2AlCl₃ + 3Cu।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p class="lesson-equation">(d) BaCl₂ + K₂SO₄ → BaSO₄↓ + 2KCl।</p><p>(a) କ୍ୟାଲ୍‌ସିୟମ୍ କାର୍ବୋନେଟ୍ ସହ ଜଳ ଲେଖିଲେ ଦୁଇ H ଓ ଚାରି O ଉଭୟ ପଟେ ମିଳେ। (b) Zn(NO₃)₂ରେ ଦୁଇଟି NO₃ ଥିବାରୁ 2AgNO₃ ନିଅ।</p><p>ଦୁଇ Ag ବାହାରେ। (c) 3CuCl₂ର ଛଅ Cl ପାଇଁ 2AlCl₃ ବସେ।</p><p>(d) K₂SO₄ର ଦୁଇ K ଓ BaCl₂ର ଦୁଇ Cl ପାଇଁ 2KCl ବସେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨</a></small></article>
+<article id="exercise-8"><h2>୮. ଅବସ୍ଥା ପ୍ରତୀକ ସହ ସମତୁଲ ସମୀକରଣ ଲେଖ ଓ ପ୍ରତିକ୍ରିୟାର ପ୍ରକାର ଦର୍ଶାଅ।</h2>
+<div class="question-parts"><p>(a) FeS(s) ଓ H₂SO₄(aq)ରୁ FeSO₄(aq) ଓ H₂S(g)।</p><p>(b) ZnCO₃(s)ରୁ ZnO(s) ଓ CO₂(g)।</p><p>(c) H₂(g) ଓ Cl₂(g)ରୁ HCl(g)।</p><p>(d) Mg(s) ଓ HCl(aq)ରୁ MgCl₂(aq) ଓ H₂(g)।</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) FeS(s) + H₂SO₄(aq) → FeSO₄(aq) + H₂S(g)। ଦ୍ୱୈତ ବିସ୍ଥାପନ।</li><li>(b) ZnCO₃(s) → ZnO(s) + CO₂(g)। ବିଘଟନ।</li><li>(c) H₂(g) + Cl₂(g) → 2HCl(g)। ସଂଶ୍ଳେଷଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(d) Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g)। ବିସ୍ଥାପନ।</p><p>(a) Fe ଓ Hର ସାଥୀ ବଦଳେ, H₂S ଗ୍ୟାସ୍ ବାହାରେ। (b) ଗୋଟିଏ କାର୍ବୋନେଟ୍ ଭାଙ୍ଗି କଠିନ ଅକ୍ସାଇଡ୍ ଓ ଗ୍ୟାସ୍ ଦିଏ।</p><p>(c) ଦୁଇ ମୌଳରୁ ଗୋଟିଏ ପ୍ରକାର ଯୌଗିକ ହୁଏ। (d) ଅମ୍ଳରୁ Hକୁ Mg ବିସ୍ଥାପିତ କରେ।</p><p>(s), (g) ଓ (aq) କ୍ରମେ କଠିନ, ଗ୍ୟାସୀୟ ଓ ଜଳୀୟ ଅବସ୍ଥା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=22" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୨</a></small></article>
+<article id="exercise-9"><h2>୯. ତାପଉତ୍ପାଦୀ ଓ ତାପଶୋଷୀ ପ୍ରତିକ୍ରିୟାର ସଂଜ୍ଞା ଓ ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ତାପଉତ୍ପାଦୀ ପ୍ରତିକ୍ରିୟାରେ ପରିବେଶକୁ ତାପ ମିଳେ। ଯଥା CaO + H₂O → Ca(OH)₂ + ତାପ।</p><p>ତାପଶୋଷୀ ପ୍ରତିକ୍ରିୟା ପରିବେଶରୁ ତାପ ନିଏ। ଯଥା CaCO₃ + ତାପ → CaO + CO₂।</p><p>ପ୍ରଥମ ଉଦାହରଣରେ କଲିଚୂନ ସହ ଜଳ ମିଶିଲେ ପାତ୍ର ଗରମ ହୁଏ। ତାପ ଉତ୍ପାଦ ପଟେ ଲେଖାଯାଏ।</p><p>ଦ୍ୱିତୀୟରେ କ୍ୟାଲ୍‌ସିୟମ୍ କାର୍ବୋନେଟ୍‌କୁ ବିଘଟିତ କରିବା ପାଇଁ ତାପ ଯୋଗାଯାଏ। ଏଠାରେ ତାପ ପ୍ରତିକ୍ରିୟା ପାଇଁ ଆବଶ୍ୟକ ଶକ୍ତି।</p><p>ଶ୍ରେଣୀ ବାଛିବାବେଳେ ତାପ କେଉଁ ଦିଗରେ ଯାଉଛି ଦେଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-10"><h2>୧୦. ଶ୍ୱସନକୁ ତାପଉତ୍ପାଦୀ କାହିଁକି କୁହାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗ୍ଲୁକୋଜ୍‌ର ଜାରଣରୁ ଅଙ୍ଗାରକାମ୍ଳ ଓ ଜଳ ସହ ଶକ୍ତି ମୁକ୍ତ ହୁଏ। C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ଶକ୍ତି।</p><p>ମୁକ୍ତ ଶକ୍ତିର କିଛି ଅଂଶ ତାପ ଭାବେ ବାହାରେ।</p><p>ଖାଦ୍ୟ ପାଚନରୁ ମିଳୁଥିବା ଗ୍ଲୁକୋଜ୍ କୋଷରେ ଅକ୍ସିଜେନ୍ ସହ ପ୍ରତିକ୍ରିୟା କରେ। ସମୀକରଣରେ ଶକ୍ତି ଉତ୍ପାଦ ପଟେ ଅଛି।</p><p>ଶରୀର ଜୀବନକ୍ରିୟା ପାଇଁ ଏହି ଶକ୍ତି ବ୍ୟବହାର କରେ। ଏଠାରେ ଶ୍ୱସନ କହିଲେ କୋଷରେ ଘଟୁଥିବା ରାସାୟନିକ ପରିବର୍ତ୍ତନକୁ ବୁଝାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-11"><h2>୧୧. ବିଘଟନ ଓ ସଂଶ୍ଳେଷଣର ବିପରୀତ ସ୍ୱଭାବ ସମୀକରଣ ସହ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ସଂଶ୍ଳେଷଣରେ ଏକାଧିକ ପ୍ରତିକାରକରୁ ଗୋଟିଏ ଉତ୍ପାଦ। CaO + CO₂ → CaCO₃।</p><p>ବିଘଟନରେ ଏକ ଯୌଗିକରୁ ଏକାଧିକ ଉତ୍ପାଦ। CaCO₃ → CaO + CO₂।</p><p>ଦୁଇ ସମୀକରଣରେ CaCO₃ କେଉଁ ପଟେ ଅଛି ଦେଖ। ପ୍ରଥମରେ ଏହା ଦୁଇ ପଦାର୍ଥର ମିଳନରୁ ମିଳୁଛି।</p><p>ଦ୍ୱିତୀୟରେ ତାପ ଦେଲେ ସେହି CaCO₃ରୁ ପୁଣି CaO ଓ CO₂ ମିଳୁଛି। ତେଣୁ ଉତ୍ପାଦ ଓ ପ୍ରତିକାରକ ସଂଖ୍ୟାର ପରିବର୍ତ୍ତନ ଦୁଇ ପ୍ରକାରରେ ଓଲଟା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-12"><h2>୧୨. ତାପ, ଆଲୋକ ଓ ବିଦ୍ୟୁତ୍ ପ୍ରଭାବରେ ବିଘଟନର ଗୋଟିଏ ଲେଖାଏଁ ସମୀକରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତାପରେ CaCO₃ → CaO + CO₂।</li><li>ଆଲୋକରେ 2AgCl → 2Ag + Cl₂।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିଦ୍ୟୁତ୍‌ରେ 2H₂O → 2H₂ + O₂। ପ୍ରତ୍ୟେକରେ ଗୋଟିଏ ଯୌଗିକରୁ ଦୁଇ ପଦାର୍ଥ ମିଳେ।</p><p>ଚୂନପଥର ଉଦାହରଣରେ ତାପ ଯୋଗାଇଲେ CO₂ ବାହାରେ। AgClରେ ଆଲୋକ ପଡ଼ିଲେ ଧାତବ ସିଲ୍‌ଭର୍ ଗଠନରୁ ଧଳା ପଦାର୍ଥ ଧୂସର ଦିଶେ।</p><p>ଜଳରେ ବିଦ୍ୟୁତ୍ ପ୍ରବାହରେ H₂ ଓ O₂ ଅଲଗା ମିଳେ। ପ୍ରତି ଘଟଣାରେ ଯୌଗିକକୁ ଭାଙ୍ଗିବାର ଶକ୍ତିର ଉତ୍ସ ଚିହ୍ନଟ କରିହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=13">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୩–୧୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-13"><h2>୧୩. ବିସ୍ଥାପନ ଓ ଦ୍ୱୈତ ବିସ୍ଥାପନର ପାର୍ଥକ୍ୟ ଉଦାହରଣ ସହ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିସ୍ଥାପନରେ ଅଧିକ ସକ୍ରିୟ ମୌଳ ଅନ୍ୟ ମୌଳକୁ ତାହାର ଯୌଗିକରୁ ଅପସାରିତ କରେ। Fe + CuSO₄ → FeSO₄ + Cu।</p><p>ଦ୍ୱୈତ ବିସ୍ଥାପନରେ ଦୁଇ ଯୌଗିକର ଆୟନ ବିନିମୟ ହୁଏ। BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2NaCl।</p><p>ପ୍ରଥମ ସମୀକରଣରେ Fe ଦ୍ରବଣକୁ ଯାଏ ଓ କପର୍ ଲୁହାକଣ୍ଟା ଉପରେ ଜମେ। ଦ୍ୱିତୀୟରେ Ba²⁺ ସହ SO₄²⁻ ମିଶି ଅଦ୍ରବଣୀୟ BaSO₄ ଦିଏ ଏବଂ Na⁺ ଓ Cl⁻ ଦ୍ରବଣରେ ରହେ।</p><p>ଏକ ମୁକ୍ତ ମୌଳ ଥିବା ଓ ଦୁଇଟି ଲବଣର ଆୟନ ବିନିମୟ ହେବା ଏହି ପାର୍ଥକ୍ୟକୁ ଚିହ୍ନାଇଦିଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=16">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬–୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-14"><h2>୧୪. ସିଲ୍‌ଭର୍ ନାଇଟ୍ରେଟ୍‌ରୁ କପର୍ ଦ୍ୱାରା ସିଲ୍‌ଭର୍ ମୁକ୍ତ ହେବାର ସମୀକରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag। ଅଧିକ ସକ୍ରିୟ କପର୍ ଦ୍ରବଣର ସିଲ୍‌ଭର୍‌କୁ ବିସ୍ଥାପିତ କରେ।</p><p>କପର୍ (II) ନାଇଟ୍ରେଟ୍‌ରେ ପ୍ରତି Cu ପାଇଁ ଦୁଇଟି NO₃ ଗୋଷ୍ଠୀ ଦରକାର। ତେଣୁ ପ୍ରତିକାରକ ପଟେ 2AgNO₃ ଓ ଉତ୍ପାଦ ପଟେ 2Ag ରହେ।</p><p>ଏଠାରେ ଲବଣ ଦ୍ରବଣରୁ ମୁକ୍ତ ଧାତୁ ଭାବେ ମିଳୁଥିବା ପଦାର୍ଥ ସିଲ୍‌ଭର୍।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=16">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬–୧୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-15"><h2>୧୫. ଅବକ୍ଷେପଣ ପ୍ରତିକ୍ରିୟାର ଅର୍ଥ ଓ ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦୁଇ ଜଳୀୟ ଦ୍ରବଣର ପ୍ରତିକ୍ରିୟାରେ ଅଦ୍ରବଣୀୟ କଠିନ ପଦାର୍ଥ ଅଲଗା ହୋଇଥାଏ। AgNO₃(aq) + NaCl(aq) → AgCl(s)↓ + NaNO₃(aq)।</p><p>AgCl ଧଳା ଅବକ୍ଷେପ।</p><p>ମିଶାଇବା ଆଗରୁ ଉଭୟ ଲବଣ ଜଳରେ ଦ୍ରବୀଭୂତ ଥାଆନ୍ତି। ମିଶ୍ରଣରେ Ag⁺ ଓ Cl⁻ ଏକାଠି ହୋଇ ଜଳରେ ଦ୍ରବୀଭୂତ ହୋଇପାରୁ ନଥିବା AgCl ଗଠନ କରନ୍ତି।</p><p>କଠିନ ପଦାର୍ଥଟିକୁ ଚିହ୍ନାଇବା ପାଇଁ (s) ବା ↓ ବ୍ୟବହାର କରାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=18">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-16"><h2>୧୬. ଅକ୍ସିଜେନ୍ ଗ୍ରହଣ ବା ପରିହାର ଦୃଷ୍ଟିରୁ ଜାରଣ ଓ ବିଜାରଣର ଦୁଇଟି ଲେଖାଏଁ ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) ଅକ୍ସିଜେନ୍ ଗ୍ରହଣ ଜାରଣ। 2Mg + O₂ → 2MgO ଓ 2Cu + O₂ → 2CuOରେ Mg ଓ Cu ଜାରିତ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(b) ଅକ୍ସିଜେନ୍ ପରିହାର ବିଜାରଣ। CuO + H₂ → Cu + H₂O ଓ 2PbO + C → 2Pb + CO₂ରେ CuO ଓ PbO ବିଜାରିତ।</p><p>ପ୍ରଥମ ଦୁଇ ଉଦାହରଣରେ ଧାତୁ ଅକ୍ସାଇଡ୍ ହେଉଛି। ଅନ୍ୟ ଦୁଇ ଉଦାହରଣରେ ଧାତୁ ଅକ୍ସାଇଡ୍‌ରୁ ମୁକ୍ତ ଧାତୁ ମିଳୁଛି।</p><p>ଦ୍ୱିତୀୟ ଯୋଡ଼ିରେ ଅକ୍ସିଜେନ୍ ଯଥାକ୍ରମେ H₂କୁ ଯାଇ ଜଳ ଓ କାର୍ବନକୁ ଯାଇ CO₂ ଗଠନ କରେ। ତେଣୁ ବିଜାରଣ ସହିତ ଜାରଣ ମଧ୍ୟ ଘଟେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=18">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮–୧୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-17"><h2>୧୭. ଉଜ୍ଜ୍ୱଳ ବାଦାମୀ ମୌଳ ଗରମ ହୋଇ କଳା ହେଲା। ମୌଳ ଓ ଉତ୍ପାଦ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମୌଳ କପର୍, କଳା ଉତ୍ପାଦ କପର୍ (II) ଅକ୍ସାଇଡ୍। 2Cu + O₂ → 2CuO।</p><p>ଆରମ୍ଭରେ ଥିବା ବାଦାମୀ ପୃଷ୍ଠ କପର୍‌ର। ବାୟୁରେ ଗରମ ହେଲେ ତାହା ଅକ୍ସିଜେନ୍ ଗ୍ରହଣ କରେ ଓ କଳା ପଦାର୍ଥ ପୃଷ୍ଠରେ ଜମେ।</p><p>ସମୀକରଣରେ ବାମ ପଟର ଧାତୁ ଓ ଡାହାଣ ପଟର ଅକ୍ସାଇଡ୍‌କୁ ଏହି ଦୁଇ ବର୍ଣ୍ଣ ସହ ମେଳାଅ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=18">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮–୧୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-18"><h2>୧୮. ଲୌହ ନିର୍ମିତ ପଦାର୍ଥରେ ରଙ୍ଗ କାହିଁକି ଲଗାଯାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (ଘ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ରଙ୍ଗର ଆବରଣ ଲୁହାର ପୃଷ୍ଠ ସହ ବାୟୁ ଓ ଆର୍ଦ୍ରତାର ସିଧା ସଂସ୍ପର୍ଶ ଅଟକାଏ। ତେଣୁ ସଂକ୍ଷାରଣ କମେ।</p><p>ଆର୍ଦ୍ର ବାୟୁରେ ଖୋଲା ଲୁହା ପୃଷ୍ଠରେ ଲୋହିତ-ବାଦାମୀ କଳଙ୍କି ସୃଷ୍ଟି ହୁଏ। ରଙ୍ଗର ଅବିଚ୍ଛିନ୍ନ ସ୍ତର ଥିବା ଅଂଶରେ ସେହି ସଂସ୍ପର୍ଶ ହୁଏନାହିଁ।</p><p>ଯେଉଁଠାରୁ ରଙ୍ଗ ଛାଡ଼ିଯାଏ, ସେଠାରେ ଲୁହା ପୁଣି ଖୋଲା ପଡ଼େ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=19">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୯–୨୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=19" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୯–୨୩</a></small></article>
+<article id="exercise-19"><h2>୧୯. ତେଲ ଓ ଚର୍ବିଯୁକ୍ତ ଖାଦ୍ୟର ପ୍ୟାକେଟ୍‌ରେ ନାଇଟ୍ରୋଜେନ୍ କାହିଁକି ରଖାଯାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (ଗ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନାଇଟ୍ରୋଜେନ୍ ଭରିଲେ ଭିତରେ ଅକ୍ସିଜେନ୍ ସହ ସଂସ୍ପର୍ଶ କମେ। ତେଲ ଓ ଚର୍ବି ଧୀରେ ଜାରିତ ହୁଏ ଓ ଗନ୍ଧ ଏବଂ ସ୍ୱାଦ ଅଧିକ ସମୟ ରହେ।</p><p>ତେଲ ଓ ଚର୍ବି ଅକ୍ସିଜେନ୍ ସହ ପ୍ରତିକ୍ରିୟା କଲେ ଖାଦ୍ୟ ରହଣିଆ ହୁଏ। ପ୍ୟାକେଟ୍‌ର ବାୟୁ ବଦଳରେ ନାଇଟ୍ରୋଜେନ୍ ରଖିଲେ ଏହି ଜାରଣ ବିଳମ୍ବିତ ହୁଏ।</p><p>ଏହି ପ୍ରଶ୍ନରେ ସୁରକ୍ଷା ପାଉଥିବା ଅଂଶ ହେଉଛି ଖାଦ୍ୟର ତେଲ ଓ ଚର୍ବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=19">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୯–୨୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦–୨୩</a></small></article>
+<article id="exercise-20"><h2>୨୦. ସଂକ୍ଷାରଣ ଓ ରହଣିଆ ଅବସ୍ଥା ଉଦାହରଣ ସହ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) ପରିବେଶ ସହ ପ୍ରତିକ୍ରିୟାରେ ଧାତୁର ପୃଷ୍ଠ କ୍ରମେ ନଷ୍ଟ ହେବା ସଂକ୍ଷାରଣ। ଆର୍ଦ୍ର ବାୟୁରେ ଲୁହାରେ କଳଙ୍କି ଏହାର ଉଦାହରଣ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(b) ଖାଦ୍ୟର ତେଲ ବା ଚର୍ବି ଜାରିତ ହେଲେ ସ୍ୱାଦ ଓ ଗନ୍ଧ ଖରାପ ହୁଏ। ଦୀର୍ଘ ସମୟ ବାୟୁରେ ରହିଥିବା ତେଲିଆ ଖାଦ୍ୟରେ ଏହି ରହଣିଆ ଅବସ୍ଥା ହୁଏ।</p><p>ଉଭୟ ଘଟଣାରେ ଜାରଣ ଦେଖାଯାଏ। ଲୁହାରେ ଏହାର ପ୍ରମାଣ ପୃଷ୍ଠର ରଙ୍ଗ ଓ ଧାତୁର କ୍ଷୟ।</p><p>ଖାଦ୍ୟରେ ପ୍ରମାଣ ହେଉଛି ଗନ୍ଧ ଓ ସ୍ୱାଦର ପରିବର୍ତ୍ତନ। ତେଣୁ ଧାତୁକୁ ରଙ୍ଗରେ ଘୋଡ଼ାଇବା ଓ ତେଲିଆ ଖାଦ୍ୟକୁ ବାୟୁରୋଧୀ ପାତ୍ରରେ ରଖିବା ଭିନ୍ନ ପଦାର୍ଥ ପାଇଁ ଏକେ ନୀତିର ପ୍ରୟୋଗ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=19">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୯–୨୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=23" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୩</a></small></article>
+<article id="exercise-21"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୨ · ୧. ବାୟୁରେ ଜଳାଇବା ଆଗରୁ ମ୍ୟାଗ୍ନେସିୟମ୍ ପାତକୁ କାହିଁକି ସଫା କରାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବାୟୁର ଅକ୍ସିଜେନ୍ ସହିତ ପ୍ରତିକ୍ରିୟା କରି ପାତ ଉପରେ ମ୍ୟାଗ୍ନେସିୟମ୍ ଅକ୍ସାଇଡ୍‌ର ଆବରଣ ହୁଏ। ତାହା ହଟିଗଲେ ଭିତରର ମ୍ୟାଗ୍ନେସିୟମ୍ ଅକ୍ସିଜେନ୍ ସଂସ୍ପର୍ଶରେ ଆସି ସହଜରେ ଜଳେ।</p><p>ସଫା କରିବା ଦ୍ୱାରା ପୂର୍ବରୁ ଗଠିତ ସ୍ତର ଅଲଗା ହୁଏ। ସଫା ପାତ ଜଳି ନୂଆ ଧଳା MgO ସୃଷ୍ଟି କରିବା ହେଉଛି ଏହି ପରୀକ୍ଷାର ପର୍ଯ୍ୟବେକ୍ଷଣ।</p><p>ତେଣୁ ପାତ ସଫା କରିବା ଓ ଜାରଣ ଘଟିବା ଦୁଇଟି ଅଲଗା ଘଟଣା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-22"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୨ · ୨. ହାଇଡ୍ରୋଜେନ୍ ଓ କ୍ଲୋରିନ୍, ବେରିୟମ୍ କ୍ଲୋରାଇଡ୍ ଓ ଏଲୁମିନିୟମ୍ ସଲ୍ଫେଟ୍, ସୋଡିୟମ୍ ଓ ଜଳର ପ୍ରତିକ୍ରିୟାଗୁଡ଼ିକୁ ସମତୁଲ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p class="lesson-equation">(i) H₂ + Cl₂ → 2HCl।</p><p>(ii) 3BaCl₂ + Al₂(SO₄)₃ → 3BaSO₄ + 2AlCl₃। ଉଭୟ ପଟେ ତିନୋଟି ସଲ୍ଫେଟ୍ ଗୋଷ୍ଠୀ ରହିଛି।</p><p>(iii) 2Na + 2H₂O → 2NaOH + H₂। ଉଭୟ ପଟେ ଦୁଇଟି Na, ଦୁଇଟି O ଓ ଚାରୋଟି H ପରମାଣୁ ଅଛି।</p><p>ପ୍ରଥମରେ H₂ ଓ Cl₂ ଉଭୟ ଦ୍ୱିପରମାଣୁକ, ତେଣୁ ଡାହାଣରେ 2HCl ଲେଖ। ଦ୍ୱିତୀୟରେ SO₄କୁ ଏକ ଗୋଷ୍ଠୀ ଧରି ମେଳାଅ, ତା’ପରେ Al ଓ Cl ଗଣ।</p><p>ତୃତୀୟରେ ଦୁଇ NaOH ଲେଖିବା ପରେ H₂ ପାଇଁ ବଳିଥିବା H ଦୁଇଟିକୁ ମେଳାଅ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=9">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୯–୧୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-23"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୨ · ୩. ବେରିୟମ୍ ସଲ୍ଫେଟ୍‌ର ଅବକ୍ଷେପ ସୃଷ୍ଟି ଓ ସୋଡିୟମ୍ ହାଇଡ୍ରକ୍ସାଇଡ୍‌ର ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟାକୁ ଅବସ୍ଥା ପ୍ରତୀକ ସହ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) BaCl₂(aq) + Na₂SO₄(aq) → BaSO₄(s)↓ + 2NaCl(aq)। ଅଦ୍ରବଣୀୟ BaSO₄ କଠିନ ଅବକ୍ଷେପ।</p><p>(ii) NaOH(aq) + HCl(aq) → NaCl(aq) + H₂O(l)। ଏଠାରେ (aq) ଜଳୀୟ ଦ୍ରବଣ, (s) କଠିନ ଓ (l) ତରଳ ଅବସ୍ଥାକୁ ବୁଝାଏ।</p><p>ପ୍ରଥମରେ ଦୁଇ ଦ୍ରବଣ ମିଶିଲେ କଠିନ ଲବଣ ପୃଥକ୍ ହୁଏ। ଦ୍ୱିତୀୟରେ ଅମ୍ଳ ଓ କ୍ଷାରକ ମିଶି ଦ୍ରବଣରେ ଲବଣ ଓ ତରଳ ଜଳ ଦିଅନ୍ତି।</p><p>ତେଣୁ ପ୍ରଥମରେ ଅବକ୍ଷେପ ଚିହ୍ନ ରହେ, ଦ୍ୱିତୀୟରେ ଜଳ ପାଇଁ (l) ରହେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=11">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୧–୧୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨</a></small></article>
+<article id="exercise-24"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୬ · ୧. କାନ୍ଥ ଧଉଳାଇବାର ଦ୍ରବଣ ତିଆରି ପାଇଁ ଜଳ ସହ ମିଶୁଥିବା ପଦାର୍ଥ Xର ନାମ, ସଙ୍କେତ ଓ ପ୍ରତିକ୍ରିୟା ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(କ) X ହେଉଛି କଲିଚୂନ ବା କ୍ୟାଲ୍ସିୟମ୍ ଅକ୍ସାଇଡ୍ (CaO)।</p><p>(ଖ) CaO(s) + H₂O(l) → Ca(OH)₂ + ତାପ। ଉତ୍ପନ୍ନ ଶମିତ ଚୂନର ଜଳୀୟ ମିଶ୍ରଣକୁ କାନ୍ଥରେ ଦିଆଯାଏ।</p><p>ପ୍ରଶ୍ନରେ X ହେଉଛି ଜଳ ମିଶିବା ଆଗର ପଦାର୍ଥ। ଜଳ ମିଶାଇଲେ ଶମିତ ଚୂନ ହୁଏ।</p><p>କାନ୍ଥରେ ଶମିତ ଚୂନ ବାୟୁର CO₂ ସହ ଧୀରେ ପ୍ରତିକ୍ରିୟା କରି ଧଳା CaCO₃ର ସ୍ତର କରେ। ତେଣୁ ଆରମ୍ଭ, ମିଶ୍ରଣ ଓ କାନ୍ଥ ଉପରେ ମିଳୁଥିବା ତିନି ପଦାର୍ଥ ଅଲଗା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=12">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୨–୧୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-25"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୧୬ · ୨. ‘ତୁମ ପାଇଁ କାମ ୧.୭’ରେ ଦୁଇଟି ପରୀକ୍ଷା ନଳୀରେ କେଉଁ ଗ୍ୟାସ୍ ମିଳେ? ଗୋଟିକର ଆୟତନ ଅନ୍ୟଟିର ଦୁଇଗୁଣ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଜଳର ବୈଦ୍ୟୁତିକ ବିଘଟନରେ 2H₂O(l) → 2H₂(g) + O₂(g)। ତେଣୁ ସମାନ ତାପ ଓ ଚାପରେ ହାଇଡ୍ରୋଜେନ୍ ଓ ଅକ୍ସିଜେନ୍‌ର ଆୟତନ ଅନୁପାତ ୨ : ୧।</p><p>ଅଧିକ ଗ୍ୟାସ୍ ଥିବା ନଳୀରେ ହାଇଡ୍ରୋଜେନ୍ ଥାଏ।</p><p>ଦୁଇଟି ଜଳ ଅଣୁରେ ଚାରି H ଓ ଦୁଇ O ପରମାଣୁ ଥାଏ। ସେଥିରୁ ଦୁଇଟି H₂ ଅଣୁ ଓ ଗୋଟିଏ O₂ ଅଣୁ ଗଠନ ହୁଏ।</p><p>ସମୀକରଣର ଏହି ସହଗରୁ ସମାନ ତାପ ଓ ଚାପରେ ଗ୍ୟାସ୍‌ର ଆୟତନ ତୁଳନା କରାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=15">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୫–୧୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬</a></small></article>
+<article id="exercise-26"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୦ · ୧. ଲୁହା କଣ୍ଟାକୁ କପର୍ ସଲ୍ଫେଟ୍ ଦ୍ରବଣରେ ବୁଡ଼ାଇଲେ ଦ୍ରବଣର ବର୍ଣ୍ଣ ବଦଳିବାର କାରଣ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଆଇରନ୍, କପର୍‌ଠାରୁ ଅଧିକ ପ୍ରତିକ୍ରିୟାଶୀଳ। Fe(s) + CuSO₄(aq) → FeSO₄(aq) + Cu(s)।</p><p>ନୀଳ ଦ୍ରବଣରେ ହାଲୁକା ସବୁଜ ଆଇରନ୍ (II) ସଲ୍ଫେଟ୍ ସୃଷ୍ଟି ହୁଏ ଓ କଣ୍ଟାରେ ଲାଲଚେ ବାଦାମୀ କପର୍ ଜମେ।</p><p>ବର୍ଣ୍ଣ ପରିବର୍ତ୍ତନ ଦ୍ରବଣ ମଧ୍ୟରେ ଘଟୁଛି ଓ ଧାତୁ ଜମିବା କଣ୍ଟା ଉପରେ ଦେଖାଯାଉଛି। ଏହି ଦୁଇ ପର୍ଯ୍ୟବେକ୍ଷଣ ଏକେ ପ୍ରତିକ୍ରିୟାର ଦୁଇ ଫଳ।</p><p>ସଲ୍‌ଫେଟ୍ ଗୋଷ୍ଠୀ ଦ୍ରବଣରେ ରହେ, ତାହା ସହ ଥିବା ଧାତୁ ବଦଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=16">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୬–୧୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-27"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୦ · ୨. ‘ତୁମ ପାଇଁ କାମ ୧.୧୦’ ବ୍ୟତୀତ ଅନ୍ୟ ଏକ ଦ୍ୱୈତ ବିସ୍ଥାପନର ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s)↓ + 2KNO₃(aq)। ଏଠାରେ ଆୟନଗୁଡ଼ିକ ସାଥୀ ବଦଳାନ୍ତି।</p><p>ଲେଡ୍ ଆୟନ ଓ ଆୟୋଡାଇଡ୍ ଆୟନ ମିଶି ହଳଦିଆ ଲେଡ୍ ଆୟୋଡାଇଡ୍ ଅବକ୍ଷେପ ଦିଅନ୍ତି।</p><p>ଦୁଇ KI ଦେଲେ ଗୋଟିଏ Pb²⁺ ପାଇଁ ଦୁଇଟି I⁻ ମିଳେ। ଅବଶିଷ୍ଟ ଦୁଇ K⁺ ଓ ଦୁଇ NO₃⁻ ଦ୍ରବଣରେ ରହେ।</p><p>ହଳଦିଆ କଠିନ ପଦାର୍ଥ ମିଳିବା ଯୋଗୁଁ ଏହା ଅବକ୍ଷେପଣର ମଧ୍ୟ ଉଦାହରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=7">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୭–୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+<article id="exercise-28"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୦ · ୩. ସୋଡିୟମ୍‌ରୁ Na₂O ଓ CuOରୁ Cu ସୃଷ୍ଟି ହେଉଥିବା ଦୁଇ ପ୍ରତିକ୍ରିୟାରେ କିଏ ଜାରିତ ଓ କିଏ ବିଜାରିତ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) 4Na + O₂ → 2Na₂O। Na ଇଲେକ୍ଟ୍ରନ୍ ହରାଇ ଜାରିତ ହୁଏ।</p><p>ଅକ୍ସିଜେନ୍ ଇଲେକ୍ଟ୍ରନ୍ ଗ୍ରହଣ କରି ବିଜାରିତ ହୁଏ।</p><p>(ii) CuO + H₂ → Cu + H₂O। H₂ ଅକ୍ସିଜେନ୍ ଗ୍ରହଣ କରି ଜାରିତ ହୁଏ।</p><p>CuO ଅକ୍ସିଜେନ୍ ହରାଇ ବିଜାରିତ ହୁଏ।</p><p>ପ୍ରଥମରେ Na ଧାତୁରୁ ଅକ୍ସାଇଡ୍ ହୋଇଛି। ଦ୍ୱିତୀୟରେ CuOର ଅକ୍ସିଜେନ୍ H₂କୁ ଯାଇଛି।</p><p>ପ୍ରଥମ ପଟର ପଦାର୍ଥଗୁଡ଼ିକୁ ଡାହାଣ ପଟରେ ଖୋଜିଲେ କାହାର ଅକ୍ସିଜେନ୍ ବଢ଼ିଲା ବା କମିଲା ବୁଝିହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=18">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୧୮–୧୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=20" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୦</a></small></article>
+
+</main></body></html>

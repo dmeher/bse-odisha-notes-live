@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଖଣିଜ ସମ୍ବଳ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଖଣିଜ ସମ୍ବଳ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1kf9ysHtu7IYTh0MMd0lVKz6g-0TBLSjj/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପ୍ରଶ୍ନ ୧ର ଚାରି ଚୟନ, ପ୍ରଶ୍ନ ୨ର ଚାରି ସଂକ୍ଷିପ୍ତ ଉତ୍ତର, ପ୍ରଶ୍ନ ୩ର ଦୁଇ ଦୀର୍ଘ ଉତ୍ତର ଓ ପ୍ରଶ୍ନ ୪ର ପାଞ୍ଚଟି ଯୋଡ଼ି ମିଳାଯାଇଛି। ବଲ୍‌ବ, ବକ୍ସାଇଟ୍ ମାନଚିତ୍ର, ଲୁହାପଥର–ଇସ୍ପାତ ସ୍ଥାନ ଓ ଧାତୁ ପୁନଃଚକ୍ରଣ କାମର ଉତ୍ତର ଯୋଡ଼ାଯାଇଛି।</p><p>ସ୍ଥାନୀୟ ପଦାର୍ଥ ସଂଗ୍ରହ ଓ ବଲ୍‌ବର ପ୍ରତି ଉପାଦାନର ପୂର୍ଣ୍ଣ ଖଣିଜ ତାଲିକା ପାଠରେ ନାହିଁ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୧, ୬–୯</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୫)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">1 (i)</a> <a href="#exercise-2">1 (ii)</a> <a href="#exercise-3">1 (iii)</a> <a href="#exercise-4">1 (iv)</a> <a href="#exercise-5">2 (i)</a> <a href="#exercise-6">2 (ii)</a> <a href="#exercise-7">2 (iii)</a> <a href="#exercise-8">2 (iv)</a> <a href="#exercise-9">3 (i)</a> <a href="#exercise-10">3 (ii)</a> <a href="#exercise-11">4</a> <a href="#exercise-12">କାମ · ପୃ. ୧</a> <a href="#exercise-13">କାମ · ପୃ. ୬ (୧)</a> <a href="#exercise-14">କାମ · ପୃ. ୬ (୨)</a> <a href="#exercise-15">କାମ · ପୃ. ୮</a></nav></details>
+<article id="exercise-1"><h2>1 (i). ଶିଳାର ଅବକ୍ଷୟ ପରେ ରହିଥିବା ପଦାର୍ଥରୁ କେଉଁ ଖଣିଜ ସୃଷ୍ଟି ହୁଏ?</h2>
+<ol type="A"><li>କୋଇଲା</li><li>ବକ୍ସାଇଟ୍</li><li>ସୁନା</li><li>ଦସ୍ତା</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ବକ୍ସାଇଟ୍</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅବକ୍ଷୟ ପରେ ଶିଳାର ଦ୍ରବଣୀୟ ଅଂଶ ବାହାରିଗଲେ ଅବଶିଷ୍ଟ ଅଂଶରେ ଖଣିଜର ଅନୁପାତ ବଢ଼ିପାରେ। ତେଣୁ ଏହି ପ୍ରଶ୍ନରେ ନଦୀ ବୋହିଆଣି ଜମା କରିଥିବା ଖଣିଜକୁ ଖୋଜିବା ଦରକାର ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିକଳ୍ପ (b), ବକ୍ସାଇଟ୍। ଶିଳାର ଅବକ୍ଷୟରେ କେତେକ ଅଂଶ ଅପସାରିତ ହେବା ପରେ ଅବଶିଷ୍ଟ ନିକ୍ଷେପରେ ଏହି ଖଣିଜ ମିଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୭–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭–୬୩</a></small></article>
+<article id="exercise-2"><h2>1 (ii). ଝାଡ଼ଖଣ୍ଡର କୋଦର୍ମା କେଉଁ ଖଣିଜ ପାଇଁ ପରିଚିତ?</h2>
+<ol type="A"><li>ବକ୍ସାଇଟ୍</li><li>ଅଭ୍ର</li><li>ଲୁହାପଥର</li><li>ତମ୍ବା</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ଅଭ୍ର</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଭ୍ର ଅନୁଚ୍ଛେଦରେ ଛୋଟନାଗପୁରର ଉତ୍ତର ପାର୍ଶ୍ୱ ଓ କୋଦର୍ମା–ଗୟା–ହଜାରିବାଗ ବଳୟ ଦିଆଯାଇଛି। ସେହି ଅନୁଚ୍ଛେଦର ଗୋଟିଏ ବାକ୍ୟରେ ‘ତମ୍ବା’ ମଧ୍ୟ ମୁଦ୍ରିତ ଅଛି। ତେଣୁ ଉତ୍ତରକୁ ଅଭ୍ରର ବିତରଣ ଆଲୋଚନା ସହ ମେଳାଇ ପଢ଼।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିକଳ୍ପ (b), ଅଭ୍ର। କୋଦର୍ମା ଅଭ୍ର ଉତ୍ତୋଳନ ଅଞ୍ଚଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=62">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=62" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୨–୬୩</a></small></article>
+<article id="exercise-3"><h2>1 (iii). କେଉଁ ଶିଳାରେ ଖଣିଜ ସ୍ତର ସ୍ତର ହୋଇ ଜମେ?</h2>
+<ol type="A"><li>ଅବକ୍ଷିପ୍ତ ଶିଳା</li><li>ଆଗ୍ନେୟ ଶିଳା</li><li>ରୂପାନ୍ତରିତ ଶିଳା</li><li>କୌଣସିଟିରେ ନୁହେଁ</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. ଅବକ୍ଷିପ୍ତ ଶିଳା</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅବକ୍ଷେପ ପରେ ଅବକ୍ଷେପ ଜମିବାରୁ ସ୍ତର ହୁଏ। ଆଗ୍ନେୟ ଓ ରୂପାନ୍ତରିତ ଶିଳାର ଫାଟ, ଛିଦ୍ର ବା ସନ୍ଧିରେ ଖଣିଜ ସଞ୍ଚୟର ଆକୃତି ଅଲଗା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିକଳ୍ପ (a), ଅବକ୍ଷିପ୍ତ ଶିଳା। ଅବକ୍ଷେପ ସ୍ତରରେ ଜମିବା ସହ ଖଣିଜ ମଧ୍ୟ ସ୍ତର ଆକାରରେ ସଞ୍ଚିତ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୭–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭–୬୩</a></small></article>
+<article id="exercise-4"><h2>1 (iv). ଦିଆଯାଇଥିବା ଖଣିଜ ମଧ୍ୟରୁ ପ୍ଲାସର ନିକ୍ଷେପର ଉଦାହରଣ କେଉଁଟି?</h2>
+<ol type="A"><li>ଦସ୍ତା</li><li>ରୂପା</li><li>ଜିପ୍ସମ୍</li><li>ମ୍ୟାଗ୍ନେସିୟମ୍</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. ରୂପା</b></p>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜଳ ସହ ପରିବାହିତ ହୋଇଥିବା ଭାରୀ ଖଣିଜ କଣା ନଦୀର ନିକ୍ଷେପରେ ସଞ୍ଚିତ ହୋଇପାରେ। ଏହି ପ୍ରକ୍ରିୟାକୁ ଶିଳା ଫାଟରେ ଶୀତଳୀକରଣ ବା ବାଷ୍ପୀଭବନ ସହ ମିଶାଅ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବିକଳ୍ପ (b), ରୂପା। ନଦୀର ପଟୁ ନିକ୍ଷେପରେ ଜଳ କ୍ଷୟ କରି ପାରୁନଥିବା କେତେକ ଖଣିଜ ଜମି ରହିଥାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୭–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮–୬୪</a></small></article>
+<article id="exercise-5"><h2>2 (i). ଲୌହମିଶ୍ରିତ ଓ ଲୌହବିହୀନ ଖଣିଜ ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଇସ୍ପାତ ଶିଳ୍ପରେ ଲୁହାପଥର ଓ ମାଙ୍ଗାନିଜର ସମ୍ପର୍କ ଦେଖ। ଲୌହବିହୀନ ଶ୍ରେଣୀର ତମ୍ବା ବିଦ୍ୟୁତ୍ ପରିବହନରେ ଓ ବକ୍ସାଇଟ୍ ଆଲୁମିନିୟମ ଉତ୍ପାଦନରେ ଲାଗେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଧାତବ ଖଣିଜର ଲୌହମିଶ୍ରିତ ଶ୍ରେଣୀରେ ଲୁହାପଥର ଓ ମାଙ୍ଗାନିଜ୍ ଆସେ। ଏଗୁଡ଼ିକ ଲୌହ ଓ ଇସ୍ପାତ ଶିଳ୍ପର ଆଧାର।</p><p>ତମ୍ବା ଓ ବକ୍ସାଇଟ୍ ଲୌହବିହୀନ ଧାତବ ଖଣିଜର ଉଦାହରଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=58">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୮–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭–୬୪</a></small></article>
+<article id="exercise-6"><h2>2 (ii). ଖଣିଜ କାହାକୁ କୁହାଯାଏ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (କ) · ବିକଳ୍ପ ୧ (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶିଳା ଏକ ବା ଏକାଧିକ ଖଣିଜର ସମାହାର ହୋଇପାରେ। ଖଣିଜ ଚିହ୍ନିବାରେ ତାହାର ନିର୍ଦ୍ଦିଷ୍ଟ ଗଠନ ଓ ଗୁଣକୁ ଗୁରୁତ୍ୱ ଦିଆଯାଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରକୃତିରେ ମିଳୁଥିବା ନିର୍ଦ୍ଦିଷ୍ଟ ଆଭ୍ୟନ୍ତରୀଣ ଗଠନବିଶିଷ୍ଟ ସମଜାତୀୟ ପଦାର୍ଥକୁ ଖଣିଜ କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=56">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୬–୫୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬–୬୪</a></small></article>
+<article id="exercise-7"><h2>2 (iii). ଆଗ୍ନେୟ ଓ ରୂପାନ୍ତରିତ ଶିଳାରେ ଖଣିଜ କିପରି ମିଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଖଣିଜଯୁକ୍ତ ପଦାର୍ଥ ଫାଟ ଭିତରେ ପ୍ରବେଶ କରି ଥଣ୍ଡା ହେଲେ ବା ସଞ୍ଚିତ ହେଲେ ଛୋଟ ଓ ବଡ଼ ଶିରା ପରି ନିକ୍ଷେପ ଗଠିତ ହୁଏ। ଏହାର ଆକୃତି ଶିଳାର ଫାଟ ଉପରେ ନିର୍ଭର କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶିଳାର ଫାଟ, ଛିଦ୍ର ଓ ସନ୍ଧି ମଧ୍ୟରେ ଖଣିଜ ସମୃଦ୍ଧ ପଦାର୍ଥ ପ୍ରବେଶ କରି ଥଣ୍ଡା ହୋଇ ଜମିଯାଏ। ଅଳ୍ପ ପରିମାଣର ଏପରି ନିକ୍ଷେପକୁ ଶିରା ବା ଭେନ୍ କୁହାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୭–୫୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭–୬୪</a></small></article>
+<article id="exercise-8"><h2>2 (iv). ଖଣିଜର ସଂରକ୍ଷଣ କାହିଁକି ଆବଶ୍ୟକ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୨, ପ୍ରଶ୍ନ ୬ (ଖ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସହଜରେ ମିଳୁଥିବା ଓ ଉଚ୍ଚମାନର ଭଣ୍ଡାର ସରିଗଲେ ଅଳ୍ପମାନର ଖଣିଜରୁ ଧାତୁ ପାଇବାକୁ ଅଧିକ ପ୍ରୟାସ ଲାଗେ। ଭଙ୍ଗା ଧାତୁ ପୁନଃଚକ୍ରଣ ଓ ଅପଚୟ କମାଇବାର ଆବଶ୍ୟକତା ଏଥିରୁ ବୁଝିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭଣ୍ଡାର ସୀମିତ, ପ୍ରାକୃତିକ ଗଠନ ଧୀର ଓ ବ୍ୟବହାର ଦ୍ରୁତ। ଭବିଷ୍ୟତ ପାଇଁ ଖଣିଜ ରଖିବାକୁ ଅପଚୟ ହ୍ରାସ ଓ ପୁନର୍ବ୍ୟବହାର ଆବଶ୍ୟକ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=62">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୨–୬୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩–୬୪</a></small></article>
+<article id="exercise-9"><h2>3 (i). ଭାରତର ଚାରିଟି ଲୁହାପଥର ବଳୟର ଆବଣ୍ଟନ ବର୍ଣ୍ଣନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଓଡ଼ିଶା–ଝାଡ଼ଖଣ୍ଡ ବଳୟରେ ବାଦାମପାହାଡ଼, ଗୁଆ ଓ ନୂଆମୁଣ୍ଡି ଆଦି ଖଣି ଅଛି। ଛତିଶଗଡ଼ ଓ ମହାରାଷ୍ଟ୍ରରେ ବିସ୍ତୃତ ଦୁର୍ଗ–ବସ୍ତର–ଚନ୍ଦ୍ରପୁର ବଳୟର ବଇଲାଡିଲା ଉଚ୍ଚମାନର ହେମାଟାଇଟ୍ ପାଇଁ ପ୍ରସିଦ୍ଧ।</p><p>ଏଠାରୁ ବିଶାଖାପାଟଣା ବନ୍ଦର ଦେଇ ରପ୍ତାନି ହୁଏ। କର୍ଣ୍ଣାଟକର ବେଲାରୀ–ଚିତ୍ରଦୁର୍ଗ–ଚିକ୍‌ମାଗାଲୁର–ଟୁମ୍‌କୁର ବଳୟରେ କୁଡ୍ରମୁଖ ଖଣି ଅଛି।</p><p>ମହାରାଷ୍ଟ୍ର–ଗୋଆ ବଳୟରେ ରତ୍ନଗିରି ଓ ଗୋଆର ଲୁହାପଥର ମାର୍ମାଗାଓ ବନ୍ଦର ଦେଇ ରପ୍ତାନି ହୁଏ। ବଳୟ ମାନେ କେବଳ ଗୋଟିଏ ଖଣି ନୁହେଁ।</p><p>ସମ୍ପୃକ୍ତ ଅଞ୍ଚଳରେ ଅନେକ ଖଣି ଓ ସେଥିରୁ ଉତ୍ତୋଳିତ ଲୁହାପଥରର ପରିବହନ ସୁବିଧାକୁ ଏକାଠି ଦେଖିବାକୁ ହୁଏ। ବଇଲାଡିଲା ପାହାଡ଼ଶ୍ରେଣୀରେ ପାଠ ଅନୁସାରେ ପ୍ରାୟ ଚଉଦଟି ଖଣି ଅଞ୍ଚଳ ଅଛି।</p><p>ଏଠାକାର ହେମାଟାଇଟ୍ ଇସ୍ପାତ ଉତ୍ପାଦନ ପାଇଁ ଉପଯୋଗୀ ଓ ଜାପାନ ଏବଂ ଦକ୍ଷିଣ କୋରିଆକୁ ରପ୍ତାନି ହୁଏ। କୁଡ୍ରମୁଖରେ ଲୁହାପଥରକୁ ସ୍ଲରି ଅର୍ଥାତ୍ ଓଦା ଅବସ୍ଥାରେ ପାଇପ୍‌ରେ ପଠାଯାଏ।</p><p>ତେଣୁ ଲୁହାପଥରର ମାନ ଓ ବନ୍ଦର ସହ ଯୋଗାଯୋଗ ବଳୟଗୁଡ଼ିକର ଅର୍ଥନୈତିକ ଗୁରୁତ୍ୱ ବୁଝାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=58">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୮–୬୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯–୬୪</a></small></article>
+<article id="exercise-10"><h2>3 (ii). ଖଣିଜ ସଂରକ୍ଷଣର ଆବଶ୍ୟକତା ଓ ଉପାୟ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦୀର୍ଘ ଭୂତାତ୍ତ୍ୱିକ ସମୟରେ ଖଣିଜ ସୃଷ୍ଟି ହୁଏ, କିନ୍ତୁ ଶିଳ୍ପରେ ଏହା ଅତି ଶୀଘ୍ର ଖର୍ଚ୍ଚ ହୁଏ। ନିରନ୍ତର ଖନନରେ ଅଧିକ ଗଭୀରକୁ ଯିବାକୁ ପଡ଼େ ଓ ବ୍ୟୟ ବଢ଼େ।</p><p>ଯୋଜନାବଦ୍ଧ ଉତ୍ତୋଳନ, ନିମ୍ନମାନର ଖଣିଜ ବ୍ୟବହାର ପାଇଁ କାରିଗରୀ ଉନ୍ନତି, ଭଙ୍ଗା ଧାତୁର ପୁନଃଚକ୍ରଣ ଓ ବିକଳ୍ପ ସାମଗ୍ରୀର ଉପଯୋଗ ନୂଆ ଖଣି ଉପରେ ଚାପ କମାଇଥାଏ। ମାନବ ଜୀବନକାଳ ଭିତରେ ଖୋଳି ସାରିଥିବା ଖଣିକୁ ପ୍ରକୃତି ପୂର୍ବପରି ଭରିପାରେ ନାହିଁ।</p><p>ଉପର ସ୍ତରର ଉଚ୍ଚମାନର ଧାତୁପିଣ୍ଡ ସରିଗଲେ ଅଳ୍ପ ଧାତୁ ପାଇବା ପାଇଁ ଅଧିକ ଶିଳା ଖୋଳିବାକୁ ହୁଏ। ଉତ୍ତୋଳନ ବେଳେ ଅପଚୟ କମାଇବା ଗୋଟିଏ ଉପାୟ।</p><p>ଅନ୍ୟ ଉପାୟ ହେଲା ବ୍ୟବହାର ସରିଥିବା ଧାତବ ସାମଗ୍ରୀକୁ ଫିଙ୍ଗି ନଦେଇ ପୁଣି କଞ୍ଚାମାଲ ଭାବେ ଲଗାଇବା। ଏହାଦ୍ୱାରା ନୂଆ ଧାତୁପିଣ୍ଡର ଚାହିଦା ଏବଂ ଖଣି ଖନନ ସହ ଜଡ଼ିତ ଧୂଳି, ବର୍ଜ୍ୟ ଓ ଭୂମିକ୍ଷୟ ହ୍ରାସ ପାଇପାରେ।</p><p>ସଂରକ୍ଷଣ ଏହିପରି ଉତ୍ତୋଳନ ଓ ଉପଭୋଗ ଉଭୟ ସହ ସମ୍ପୃକ୍ତ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=62">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୨–୬୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩–୬୪</a></small></article>
+<article id="exercise-11"><h2>4. ଦୁଇ ସ୍ତମ୍ଭରେ ଖଣିଜକୁ ଗୁଣ, ପ୍ରୟୋଗ ବା ପ୍ରାପ୍ତିସ୍ଥାନ ସହ ମିଳାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠାରେ କେତେକ ସୂତ୍ର ପ୍ରୟୋଗକୁ, ଗୋଟିଏ ସ୍ଥାନକୁ ଓ ଅନ୍ୟଟି ସୃଷ୍ଟି ପ୍ରକ୍ରିୟାକୁ ନେଇ। କ୍ଷେତ୍ରୀ ସହ ତମ୍ବାକୁ ମେଳାଅ, ତା’ପରେ ବାଷ୍ପୀଭବନ ସହ ଜିପସମ୍‌ର ସମ୍ପର୍କ ଯାଞ୍ଚ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସିମେଣ୍ଟ ଶିଳ୍ପର କଞ୍ଚାମାଲ—ଚୂନପଥର। ଆଲୁମିନିୟମ ମିଳେ—ବକ୍ସାଇଟ୍।</p><p>କ୍ଷେତ୍ରୀରେ ଉତ୍ତୋଳନ ହୁଏ—ତମ୍ବା। ବାଷ୍ପୀଭବନରୁ ସୃଷ୍ଟି ହୁଏ—ଜିପସମ୍।</p><p>ଲୌହବିହୀନ ଧାତବ ଖଣିଜ ପାଇଁ ତମ୍ବା ଏକ ଉତ୍ତର। ବକ୍ସାଇଟ୍ ମଧ୍ୟ ଏହି ଶ୍ରେଣୀରେ ଥିବାରୁ ଶେଷ ଯୋଡ଼ିଟିରେ ଏକାଧିକ ଉଦାହରଣ ସମ୍ଭବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୭–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭–୬୪</a></small></article>
+<article id="exercise-12"><h2>କାମ · ପୃ. ୧. ଇଲେକ୍ଟ୍ରିକ୍ ବଲ୍‌ବ ତିଆରିରେ କେଉଁ ଖଣିଜଜାତ ପଦାର୍ଥ ବ୍ୟବହାର ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଫିଲାମେଣ୍ଟରେ ଟଙ୍ଗ୍‌ଷ୍ଟନ୍ ବ୍ୟବହାର ହୁଏ। ତାହାର ଗଳନାଙ୍କ ଅଧିକ ଥିବାରୁ ଉଚ୍ଚ ତାପରେ ଆଲୋକ ଦେଇପାରେ।</p><p>ଏହି ବ୍ୟବହାରର ବିବରଣୀ ଦିଆଯାଇଥିବା ଭୌତିକ ବିଜ୍ଞାନର ବିଦ୍ୟୁତ୍ ପାଠରେ ରହିଛି। ଖଣିଜ ସମ୍ବଳ ପାଠରେ ବିଦ୍ୟୁତ୍ ତାର ପାଇଁ ତମ୍ବାର ବ୍ୟବହାର ଦିଆଯାଇଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬–୬୧</a></small></article>
+<article id="exercise-13"><h2>କାମ · ପୃ. ୬ (୧). ଭାରତର ରେଖାଙ୍କିତ ମାନଚିତ୍ରରେ ବକ୍ସାଇଟ୍ ଖଣି ଅଞ୍ଚଳ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରଥମେ ଓଡ଼ିଶାର କୋରାପୁଟ ଜିଲ୍ଲାରେ ପଞ୍ଚପଟ୍ଟମାଳୀ ଚିହ୍ନିତ କର। ମଧ୍ୟ ଭାରତର ଅମରକଣ୍ଟକ ମାଳଭୂମି, ମଇକାଲ ପାହାଡ଼ ଓ ବିଳାସପୁର–କଟନୀ ଅଞ୍ଚଳରେ ଖଣିଜ ନିକ୍ଷେପ ଥିବା ପାଠରେ ଦର୍ଶାଯାଇଛି।</p><p>ଗୋଟିଏ ଚିହ୍ନ ଖଣି ସ୍ଥାନ ପାଇଁ ଓ ପୃଥକ୍ ଛାୟା ନିକ୍ଷେପ ଅଞ୍ଚଳ ପାଇଁ ରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=61" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୧–୬୨</a></small></article>
+<article id="exercise-14"><h2>କାମ · ପୃ. ୬ (୨). ଲୁହାପଥର, ମାଙ୍ଗାନିଜ ଓ କୋଇଲା ମାନଚିତ୍ର ଉପରେ ଇସ୍ପାତ କାରଖାନାର ସ୍ଥାନ ମେଳାଇ କେଉଁ ସମ୍ପର୍କ ଦେଖିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଖଣିକୁ କାରଖାନା ଭାବେ ଚିହ୍ନିତ କରନାହିଁ। କଞ୍ଚାମାଲ ଓ ଇନ୍ଧନ ଭାରୀ ହୋଇଥିବାରୁ ନିକଟତା ପରିବହନ ଖର୍ଚ୍ଚ କମାଇପାରେ। ପ୍ରତ୍ୟେକ କାରଖାନା ଠିକ୍ ଖଣି ଉପରେ ରହିବା ଆବଶ୍ୟକ ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଏକେ ସ୍କେଲର ଦୁଇ ମାନଚିତ୍ରରେ ଖଣିକୁ ବିନ୍ଦୁ ଓ ଇସ୍ପାତ କାରଖାନାକୁ ତ୍ରିଭୁଜରେ ଦର୍ଶାଅ। ଲୁହାପଥର ଓ ମାଙ୍ଗାନିଜ ଇସ୍ପାତର କଞ୍ଚାମାଲ, କୋଇଲା ଶକ୍ତି ଯୋଗାଏ।</p><p>ଏଗୁଡ଼ିକ ନିକଟରେ ଭାରୀ କଞ୍ଚାମାଲ ପରିବହନ ସୁବିଧା ମିଳେ। ଭୂଗୋଳର ବିନିର୍ମାଣ ଉଦ୍ୟୋଗ PDF ପୃ. ୬ର ଇସ୍ପାତ କାରଖାନା ମାନଚିତ୍ର ସହ ଯାଞ୍ଚ କର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=59">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୯–୬୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯–୬୧</a></small></article>
+<article id="exercise-15"><h2>କାମ · ପୃ. ୮. ନୂଆ ଖଣିଜ ପଦାର୍ଥ ସ୍ଥାନରେ କେଉଁ ଦ୍ରବ୍ୟ ବ୍ୟବହାର କରିହେବ ଓ ତାହା କେଉଁଠୁ ମିଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭଙ୍ଗା ଲୁହା ଦ୍ରବ୍ୟର ଧାତୁ ପୁଣି ପ୍ରୟୋଗ କଲେ ନୂଆ ଲୁହାପଥରର ଚାହିଦା କମେ। ତାଲିକାରେ ପୁରୁଣା ଦ୍ରବ୍ୟର ଉତ୍ସ ଓ ତାହାରୁ ଫେରି ମିଳୁଥିବା ଧାତୁ ଅଲଗା କରି ଲେଖ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଭଙ୍ଗା ଧାତୁ ଦ୍ରବ୍ୟ ଓ ପୁରୁଣା ଧାତୁ ଟୁକୁରା ପୁନଃଚକ୍ରଣ କରି ନୂଆ ଖଣିରୁ ଧାତୁ ଆଣିବାର ଆବଶ୍ୟକତା କମାଇହେବ। ଏଗୁଡ଼ିକର ଉତ୍ସ ପରିତ୍ୟକ୍ତ ଧାତୁସାମଗ୍ରୀ।</p><p>ନିଜ ଅଞ୍ଚଳର ଅନ୍ୟ ବିକଳ୍ପ ମିଳିଲେ ଦ୍ରବ୍ୟ, ଉତ୍ସ ଓ କେଉଁ କାମରେ ଲାଗେ ଲେଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=63">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୬୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/104%20-%20OD_ODIA_GEOGRAPHYECONOMICS_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩</a></small></article>
+
+</main></body></html>

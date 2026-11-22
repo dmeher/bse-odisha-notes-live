@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 225">
+  <title>Ladder AB leaning against a vertical wall</title>
+  <rect width="320" height="225" rx="8" fill="white"/>
+  <g fill="none" stroke="#254b55" stroke-width="2">
+<path d="M65 32V175H262L65 32 M65 166h9v9"/>
+  </g>
+  <g fill="#173940" font-family="sans-serif" font-size="15">
+    <text x="49" y="29">A</text>
+    <text x="263" y="193">B</text>
+    <text x="47" y="195">C</text>
+  </g>
+</svg>

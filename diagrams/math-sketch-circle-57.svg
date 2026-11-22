@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">କେନ୍ଦ୍ର Oର ବ୍ୟାସ AB ସହ CD ସମାନ୍ତର | CD = OB ଓ BD ଜ୍ୟା |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="250.00" cy="160.00" r="127.50" stroke="#244355" stroke-width="2.5"/>
+<polyline points="122.50,160.00 377.50,160.00" stroke="#244355" stroke-width="2.35"/>
+<polyline points="186.25,49.58 313.75,49.58" stroke="#244355" stroke-width="2.35"/>
+<polyline points="377.50,160.00 313.75,49.58" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="122.50" cy="160.00" r="2.7" fill="#244355"/>
+<text x="108.50" y="160.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="377.50" cy="160.00" r="2.7" fill="#244355"/>
+<text x="391.50" y="160.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="186.25" cy="49.58" r="2.7" fill="#244355"/>
+<text x="179.25" y="36.59" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="313.75" cy="49.58" r="2.7" fill="#244355"/>
+<text x="320.75" y="36.59" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="250.00" cy="160.00" r="2.7" fill="#244355"/>
+<text x="250.00" y="175.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">O</text>
+</svg>

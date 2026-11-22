@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prepositions · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>Prepositions</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>Activity ୧–୭ ମେଳାଯାଇଛି। Activity ୨ରେ ମୁଦ୍ରିତ (ii) ପରେ (iv) ଅଛି; ପୃଷ୍ଠାରେ (iii) ପ୍ରଶ୍ନ ନାହିଁ। ପାଠମଧ୍ୟର ପାଞ୍ଚଟି end-prepositionର object ଓ ତାହାର ସ୍ଥାନ ବୁଝାଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୪୬–୪୭, ୫୨–୫୩, ୫୬, ୫୮–୫୯, ୬୧–୬୩।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">End-prepositions · i–v</a> <a href="#exercise-2">Activity 1 (i–v)</a> <a href="#exercise-3">Activity 1 (vi–xiii)</a> <a href="#exercise-4">Activity 1 (xiv–xx)</a> <a href="#exercise-5">Activity 2 (i–xiii as printed)</a> <a href="#exercise-6">Activity 3 (i–ix)</a> <a href="#exercise-7">Activity 4 (i–ix)</a> <a href="#exercise-8">Activity 5 (i–ix)</a> <a href="#exercise-9">Activity 6 (i–xii)</a> <a href="#exercise-10">Activity 7 (i–x)</a></nav></details>
+<article id="exercise-1"><h2>End-prepositions · i–v. Identify the object understood with the final preposition in each of the five constructions.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) at → what, moved to the front of the question. (ii) for → the book, referred to by the omitted relative pronoun. (iii) to → the person represented by I. Compare the active form “someone speaks to me” with “I am spoken to”. (iv) on → the chair in “no chair to sit on”. (v) in → what a difficult situation, fronted for emphasis. ଶେଷର preposition ପରେ ଶବ୍ଦ ନ ଥିଲେ ବି ତାହାର ଅର୍ଥସମ୍ପର୍କ ବାକ୍ୟର ଅନ୍ୟ ଅଂଶ ସହ ରହେ।</p><p>End-prepositionର object ସବୁବେଳେ ତା’ ପରେ ଦିଶେନାହିଁ। (i,v)ରେ ଆଗର what-phraseକୁ ଫେରି ଚାହଁ; (ii,iv)ରେ book ଓ chair ପୂର୍ବରୁ ନାମିତ; (iii)ରେ activeର me passiveର I ହୁଏ, କିନ୍ତୁ to ସେଠି ରହେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=46" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୬–୪୭</a></small></article>
+<article id="exercise-2"><h2>Activity 1 (i–v). Complete the place expressions.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) in the sea; (ii) on the medicine bottle; (iii) in the corner; (iv) on the Thames; (v) on a farm, in a shop.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ପାଣି ଭିତରେ in, ପୃଷ୍ଠରେ on ଓ ସ୍ଥାନ ଅନୁସାରେ at/in/on ବାଛ।</p><p>ପହଁରୁଥିବା ଲୋକ ପାଣି ଭିତରେ, label ବୋତଲର ପୃଷ୍ଠରେ, TV ଘରର କୋଣ ଭିତରେ। Thames ସହ on ମାନେ ନଦୀ କୂଳରେ।</p><p>On a farm ଜମିରେ ଜୀବନକୁ, in a shop ଦୋକାନ ଭିତର କାମକୁ ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=52" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୨–୫୩</a></small></article>
+<article id="exercise-3"><h2>Activity 1 (vi–xiii). Locate the hotel, workplace, address, bank, people, chair and hillside.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>vi at; vii in; viii at; ix at (or in); x below; xi off (onto if the intended meaning is that the hat landed on a chair); xii under; xiii on. At ନିର୍ଦ୍ଦିଷ୍ଟ ଠିକଣା, in ଭିତରେ, under ଏଠାରେ କାହାର ଅଧୀନରେ। (xi)ରେ ଗତି କେଉଁ ଦିଗକୁ ତାହା ଅର୍ଥ ବଦଳାଏ।</p><p>Hotel ଓ ଠିକଣା ଗନ୍ତବ୍ୟବିନ୍ଦୁ ହୋଇ at; factoryର କାମ ଭିତରେ ହେତୁ in। Bankକୁ workplace ବା premises ଭାବେ ଦୁଇ ରୂପରେ ପଢ଼ିହୁଏ।</p><p>Below ତଳ ସ୍ତର, off ପୃଷ୍ଠରୁ ଖସିବା, under ଅଧୀନରେ, on the hillside ପାହାଡ଼ ଢାଲର ପୃଷ୍ଠରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=53" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୩</a></small></article>
+<article id="exercise-4"><h2>Activity 1 (xiv–xx). Choose direction or position as appropriate.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(xiv) along the beach; (xv) at the corner; (xvi) among her five children; (xvii) between these two books; (xviii) at the front door; (xix) for home; (xx) off the wall.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ଗମନର ଦିଗ ପାଇଁ for/off ଏବଂ ଦୁଇ ବସ୍ତୁକୁ ତୁଳନା ପାଇଁ between।</p><p>Along କୂଳ ଅନୁସରି ଗତି; at the corner ଓ at the door ଭେଟିବାର ବିନ୍ଦୁ। Amongରେ ପାଞ୍ଚ ପିଲା ମଧ୍ୟରେ ବଣ୍ଟନ, betweenରେ ଦୁଇ ବହି ତୁଳନା।</p><p>For home ଗନ୍ତବ୍ୟ ଓ off the wall ଆରମ୍ଭ ପୃଷ୍ଠରୁ ଦୂରକୁ ଗତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=53" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୩</a></small></article>
+<article id="exercise-5"><h2>Activity 2 (i–xiii as printed). Choose prepositions for the time, dates and durations.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i at; ii by; iv since; v on; vi for; vii since; viii on; ix in; x on; xi at; xii by; xiii at. ପୃଷ୍ଠାରେ (ii) ପରେ (iv) ଅଛି। For the last month ସମୟର ଅବଧି; since last month ଆରମ୍ଭବିନ୍ଦୁ।</p><p>By next month କାମର ସମୟସୀମା, on time ନିର୍ଦ୍ଧାରିତ ସମୟରେ।</p><p>ଦଶଟା ଓ daybreak ସମୟବିନ୍ଦୁ, New Year ପର୍ବ ହେତୁ at। A winter evening ନିର୍ଦ୍ଦିଷ୍ଟ ସନ୍ଧ୍ୟା ଓ Friday ନିର୍ଦ୍ଦିଷ୍ଟ ଦିନ ହେତୁ on; 1945 ବର୍ଷ ହେତୁ in।</p><p>ସମୟରେ ଆସୁଥିବା train on time, କାମ ପାଇଁ ଶେଷ ସୀମା by December।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-6"><h2>Activity 3 (i–ix). Distinguish travel, communication, payment and instrument.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i on; ii on; iii by; iv with; v by; vi in; vii by; viii with; ix in. By telephoneରେ article ନାହିଁ। With a pencil ଲେଖିବାର ଯନ୍ତ୍ର ଓ in pencil ଲେଖାର ମାଧ୍ୟମ।</p><p>Aeroplane ଓ ନାମିତ trainରେ article ଅଛି: on an aeroplane/on the express। Registered parcel ଓ telephone ପ୍ରେରଣ ମାଧ୍ୟମ ହେତୁ by।</p><p>With a shovel/with a pencil ହାତର ଯନ୍ତ୍ର; in cash ଟଙ୍କାର ରୂପ, by cheque ଦେୟର ପଦ୍ଧତି, in pencil ଲେଖାର ମାଧ୍ୟମ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮</a></small></article>
+<article id="exercise-7"><h2>Activity 4 (i–ix). Supply the prepositions of the fixed expressions.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i by; ii at; iii on; iv for; v in; vi by; vii at; viii at; ix on. Use by surprise, at heart, on holiday, for sale, in all, by sight, at once, at lunch, on a visit. ଏହି ଉକ୍ତିଗୁଡ଼ିକୁ ସମ୍ପୂର୍ଣ୍ଣ ଭାବେ ମନେ ରଖ। At once = ତତ୍କ୍ଷଣାତ୍।</p><p>By surprise ଅପ୍ରସ୍ତୁତ ଅବସ୍ଥାରେ। At heart ମନ ଭିତରେ, on holiday ଛୁଟିରେ, for sale ବିକ୍ରି ପାଇଁ।</p><p>In all ମୋଟ, by sight ଦେଖି ଚିହ୍ନିବା, at once ତୁରନ୍ତ, at lunch ଖାଉଥିବାବେଳେ, on a visit ବୁଲିବାକୁ ଯାଇଥିବା ଅବସ୍ଥା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=59" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୯</a></small></article>
+<article id="exercise-8"><h2>Activity 5 (i–ix). Choose a preposition to follow each verb.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i to; ii of; iii from; iv from; v in; vi on; vii on; viii of (also about); ix of. Invite to dinner, borrow from someone, concentrate on studies ଭଳି ଯୋଡ଼ି ଗଠନ କର। Warn of a danger ଓ warn against doing somethingର ଗଠନ ଅଲଗା।</p><p>Invite to ନିମନ୍ତ୍ରଣର ଅବସର, assure of ଆଶ୍ୱାସନର ବିଷୟ, borrow from ଧାରର ଉତ୍ସ। Discourage from କାମରୁ ବିରତ କରିବା; indulge in ପସନ୍ଦର କାମ।</p><p>Congratulate on ସଫଳତାରେ ଓ concentrate on ଧ୍ୟାନର ବିଷୟରେ। Warn of ବିପଦ ସୂଚାଏ; remind of/about ଘଟଣା ମନେ ପକାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=61" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୧</a></small></article>
+<article id="exercise-9"><h2>Activity 6 (i–xii). Complete the adjective–preposition combinations.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i to; ii to; iii to; iv at (or about); v with; vi with; vii of; viii in; ix about (at is also possible); x of; xi of; xii for. Angry at an event ଓ furious with a personରେ ଯାହା ବିଷୟରେ ଭାବ ପ୍ରକାଶ ପାଉଛି ତାହା ଦେଖ। Short of funds = ଅର୍ଥର ଅଭାବ।</p><p>Impolite, rude ଓ cruel ପରେ to ଯାହା ପ୍ରତି ଆଚରଣ ସେହି ବ୍ୟକ୍ତି/ଜୀବକୁ ଦେଖାଏ। Furious with a person, contented with one&#39;s possessions।</p><p>Tired of arguing ବିରକ୍ତି, deficient in vitamins ପୋଷକ ଅଭାବ, conscious of ସଚେତନତା, short of ଅଭାବ, sufficient for ପ୍ରୟୋଜନ ପାଇଁ ପର୍ଯ୍ୟାପ୍ତତା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=62" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୨</a></small></article>
+<article id="exercise-10"><h2>Activity 7 (i–x). Use the preposition that belongs with the noun in each sentence.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>i with; ii in; iii between; iv to; v in; vi on (or about); vii with; viii for; ix with; x on. Fall in demand = ଚାହିଦା ହ୍ରାସ। Agreement with a view ଓ impression on a person ଭଳି ଯୋଡ଼ି ପ୍ରତି ବାକ୍ୟରେ ଯାଞ୍ଚ କର।</p><p>Relationship with ଓ familiarity withରେ ସମ୍ପର୍କର ଅନ୍ୟ ପକ୍ଷ ଆସେ। Fall in demand ଓ progress in studiesରେ ପରିବର୍ତ୍ତନର କ୍ଷେତ୍ର।</p><p>Difference between ଦୁଇ ବସ୍ତୁ; reaction to ଖବରକୁ ପ୍ରତିକ୍ରିୟା। Discussion on ବିଷୟ, admiration for ପ୍ରଶଂସାର ବସ୍ତୁ, agreement with ସମ୍ମତି ଓ impression on କାହା ଉପରେ ପ୍ରଭାବ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩</a></small></article>
+
+</main></body></html>

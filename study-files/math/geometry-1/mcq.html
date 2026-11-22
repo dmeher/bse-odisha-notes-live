@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଜ୍ୟାମିତିରେ ସାଦୃଶ୍ୟ · ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଜ୍ୟାମିତିରେ ସାଦୃଶ୍ୟ</p><h1>ବହୁବିକଳ୍ପ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/1V69TGcOZwU02TFiFpcrl4rPt7PJrAzru/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. △ABC ∼ △PQR ହେଲେ AC ର ଅନୁରୂପ ବାହୁ କେଉଁଟି?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଦୁଇ ସଦୃଶ ତ୍ରିଭୁଜ ABC ଓ PQR।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2ltaWxhciB0cmlhbmdsZXMgQUJDIGFuZCBQUVI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSA3NEwyOCAxNjNIMTE5Wk0xODMgNDJMMTMxIDE2N0gyNTlaIi8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjYwIiB5PSI2NyI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjEyIiB5PSIxNzgiPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxMTciIHk9IjE3OCI+QzwvdGV4dD4KICAgIDx0ZXh0IHg9IjE4MCIgeT0iMzQiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjEiIHk9IjE4MiI+UTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MCIgeT0iMTgyIj5SPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>PQ</li><li>QR</li><li>PR</li><li>AB</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. PR</b></p>
+<div class="lesson-body"><p>A ର ଅନୁରୂପ P ଓ C ର ଅନୁରୂପ R।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୨୩</small></article>
+<article><h2>୨. ସଦୃଶ ତ୍ରିଭୁଜର ଅନୁରୂପ ବାହୁର ଅନୁପାତ 2 : 3। କ୍ଷେତ୍ରଫଳର ଅନୁପାତ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>3 : 2</li><li>2 : 3</li><li>9 : 4</li><li>4 : 9</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 4 : 9</b></p>
+<div class="lesson-body"><p class="lesson-equation">(2/3)² = 4/9।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩୦</small></article>
+<article><h2>୩. ସଦୃଶ ତ୍ରିଭୁଜର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ 9 : 1। ଅନୁରୂପ ବାହୁର ଅନୁପାତ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>9 : 1</li><li>3 : 1</li><li>1 : 3</li><li>81 : 1</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 3 : 1</b></p>
+<div class="lesson-body"><p>କ୍ଷେତ୍ରଫଳ ଅନୁପାତର ବର୍ଗମୂଳ ନିଅ।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩୦</small></article>
+<article><h2>୪. △ABC ∼ △PQR ହେଲେ କେଉଁ ସମାନତା ସର୍ବଦା ସତ୍ୟ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>AB/QR = AC/PQ</li><li>AB/PR = BC/PQ</li><li>AB/BC = PR/PQ</li><li>AB/PQ = BC/QR</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. AB/PQ = BC/QR</b></p>
+<div class="lesson-body"><p>ନାମର କ୍ରମରୁ AB ↔ PQ ଓ BC ↔ QR।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩୦</small></article>
+<article><h2>୫. △ABC ∼ △PQR। AB : PQ = 2 : 4 ଓ BC = 6 ସେ.ମି. ହେଲେ QR କେତେ ସେ.ମି.?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଦୁଇ ସଦୃଶ ତ୍ରିଭୁଜରେ A, B, C ସହ କ୍ରମେ P, Q, R ଅନୁରୂପ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2ltaWxhciB0cmlhbmdsZXMgQUJDIGFuZCBQUVI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSA3NEwyOCAxNjNIMTE5Wk0xODMgNDJMMTMxIDE2N0gyNTlaIi8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjYwIiB5PSI2NyI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjEyIiB5PSIxNzgiPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxMTciIHk9IjE3OCI+QzwvdGV4dD4KICAgIDx0ZXh0IHg9IjE4MCIgeT0iMzQiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjEiIHk9IjE4MiI+UTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MCIgeT0iMTgyIj5SPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>6</li><li>13</li><li>12</li><li>10</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 12</b></p>
+<div class="lesson-body"><p>BC/QR = AB/PQ = 2/4। QR = 6 × 4/2 = 12।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୩୦</small></article>
+<article><h2>୬. ସଦୃଶ ତ୍ରିଭୁଜଦ୍ୱୟର ପରିସୀମା 6 ଓ 12। ପ୍ରଥମର କ୍ଷେତ୍ରଫଳ 5 ହେଲେ ଦ୍ୱିତୀୟର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୯ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>20</li><li>10</li><li>5</li><li>40</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 20</b></p>
+<div class="lesson-body"><p>ପରିସୀମାର ଅନୁପାତ 1 : 2। ତେଣୁ କ୍ଷେତ୍ରଫଳ ଅନୁପାତ 1 : 4।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୬–୩୦</small></article>
+<article><h2>୭. ଚିତ୍ରରେ DE ∥ BC ଓ AD : DB = 3 : 2। △ADE ଓ ଚତୁର୍ଭୁଜ DBCE ର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="△ABC ର AB ଓ AC ଉପରେ D ଓ E। DE ଓ BC ସମାନ୍ତର।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VHJpYW5nbGUgQUJDLCBERSBwYXJhbGxlbCB0byBCQzwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0iTTEyNSAyN0w0NCAxOTBIMjY2WiBNODQuNSAxMDguNUgxOTUuNSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIxMTkiIHk9IjIxIj5BPC90ZXh0PgogICAgPHRleHQgeD0iMjUiIHk9IjIwNiI+QjwvdGV4dD4KICAgIDx0ZXh0IHg9IjI3MCIgeT0iMjAyIj5DPC90ZXh0PgogICAgPHRleHQgeD0iNjUiIHk9IjEwOCI+RDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIwMiIgeT0iMTA1Ij5FPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>9 : 16</li><li>9 : 25</li><li>3 : 5</li><li>3 : 2</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 9 : 16</b></p>
+<div class="lesson-body"><p>ସଦୃଶତା ହେତୁ △ADE ଓ △ABC ର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ 9 : 25। ସମଗ୍ର ତ୍ରିଭୁଜରୁ ଛୋଟ ତ୍ରିଭୁଜ ବାଦ ଦେଲେ DBCE ର ଅଂଶ 25 − 9 = 16।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୩୦</small></article>
+<article><h2>୮. △ABC ରେ D ଓ E ଯଥାକ୍ରମେ AB ଓ AC ଉପରେ, DE ∥ BC। AD = 2, DB = 3, AE = 4। EC କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="△ABC ର ବାହୁ AB ଓ AC ଉପରେ D ଓ E। DE ∥ BC।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VHJpYW5nbGUgQUJDLCBERSBwYXJhbGxlbCB0byBCQzwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0iTTEyNSAyN0w0NCAxOTBIMjY2WiBNODQuNSAxMDguNUgxOTUuNSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIxMTkiIHk9IjIxIj5BPC90ZXh0PgogICAgPHRleHQgeD0iMjUiIHk9IjIwNiI+QjwvdGV4dD4KICAgIDx0ZXh0IHg9IjI3MCIgeT0iMjAyIj5DPC90ZXh0PgogICAgPHRleHQgeD0iNjUiIHk9IjEwOCI+RDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIwMiIgeT0iMTA1Ij5FPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୭ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>2</li><li>6</li><li>3</li><li>4</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 6</b></p>
+<div class="lesson-body"><p>AD/DB = AE/EC। ତେଣୁ EC = 4 × 3/2।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨–୭</small></article>
+<article><h2>୯. ସଦୃଶ ତ୍ରିଭୁଜଦ୍ୱୟର ଅନୁରୂପ ବାହୁର ଅନୁପାତ 2 : 4। ଛୋଟଟିର କ୍ଷେତ୍ରଫଳ 12 ହେଲେ ବଡ଼ଟିର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>49</li><li>12</li><li>24</li><li>48</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 48</b></p>
+<div class="lesson-body"><p>କ୍ଷେତ୍ରଫଳ ଅନୁପାତ 4 : 16। ବଡ଼ କ୍ଷେତ୍ରଫଳ = 12 × 16/4।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୬–୩୦</small></article>
+<article><h2>୧୦. △ABC ∼ △PQR। AB : PQ = 3 : 5 ଓ BC = 9 ସେ.ମି. ହେଲେ QR କେତେ ସେ.ମି.?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଦୁଇ ସଦୃଶ ତ୍ରିଭୁଜରେ A, B, C ସହ କ୍ରମେ P, Q, R ଅନୁରୂପ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2ltaWxhciB0cmlhbmdsZXMgQUJDIGFuZCBQUVI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSA3NEwyOCAxNjNIMTE5Wk0xODMgNDJMMTMxIDE2N0gyNTlaIi8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjYwIiB5PSI2NyI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjEyIiB5PSIxNzgiPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxMTciIHk9IjE3OCI+QzwvdGV4dD4KICAgIDx0ZXh0IHg9IjE4MCIgeT0iMzQiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjEiIHk9IjE4MiI+UTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MCIgeT0iMTgyIj5SPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>15</li><li>9</li><li>14</li><li>8</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 15</b></p>
+<div class="lesson-body"><p>BC/QR = AB/PQ = 3/5। QR = 9 × 5/3 = 15।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୩୦</small></article>
+<article><h2>୧୧. ସଦୃଶ ତ୍ରିଭୁଜଦ୍ୱୟର ଅନୁରୂପ ବାହୁର ଅନୁପାତ 3 : 5। ଛୋଟଟିର କ୍ଷେତ୍ରଫଳ 27 ହେଲେ ବଡ଼ଟିର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>45</li><li>15</li><li>75</li><li>27</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 75</b></p>
+<div class="lesson-body"><p>କ୍ଷେତ୍ରଫଳ ଅନୁପାତ 9 : 25। ବଡ଼ କ୍ଷେତ୍ରଫଳ = 27 × 25/9।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୬–୩୦</small></article>
+<article><h2>୧୨. ଏକ ସମକୋଣୀ ତ୍ରିଭୁଜର କର୍ଣ୍ଣ ଉପରେ ଲମ୍ବ ଖଣ୍ଡଦ୍ୱୟ 3 ଓ 12 କରିଛି। ଏହି ଲମ୍ବର ଦୈର୍ଘ୍ୟ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>6</li><li>12</li><li>3</li><li>15</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 6</b></p>
+<div class="lesson-body"><p>ଲମ୍ବର ବର୍ଗ = 3 × 12 = 36। ଧନାତ୍ମକ ବର୍ଗମୂଳ 6।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩୩–୩୫</small></article>
+<article><h2>୧୩. ଚିତ୍ରରେ DE ∥ BC ଓ AD : DB = 4 : 2। △ADE ଓ ଚତୁର୍ଭୁଜ DBCE ର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="△ABC ର AB ଓ AC ଉପରେ D ଓ E। DE ଓ BC ସମାନ୍ତର।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VHJpYW5nbGUgQUJDLCBERSBwYXJhbGxlbCB0byBCQzwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0iTTEyNSAyN0w0NCAxOTBIMjY2WiBNODQuNSAxMDguNUgxOTUuNSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIxMTkiIHk9IjIxIj5BPC90ZXh0PgogICAgPHRleHQgeD0iMjUiIHk9IjIwNiI+QjwvdGV4dD4KICAgIDx0ZXh0IHg9IjI3MCIgeT0iMjAyIj5DPC90ZXh0PgogICAgPHRleHQgeD0iNjUiIHk9IjEwOCI+RDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIwMiIgeT0iMTA1Ij5FPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>16 : 36</li><li>16 : 20</li><li>4 : 2</li><li>4 : 6</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 16 : 20</b></p>
+<div class="lesson-body"><p>ସଦୃଶତା ହେତୁ △ADE ଓ △ABC ର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ 16 : 36। ସମଗ୍ର ତ୍ରିଭୁଜରୁ ଛୋଟ ତ୍ରିଭୁଜ ବାଦ ଦେଲେ DBCE ର ଅଂଶ 36 − 16 = 20।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୩୦</small></article>
+<article><h2>୧୪. △ABC ରେ D ଓ E ଯଥାକ୍ରମେ AB ଓ AC ଉପରେ, DE ∥ BC। AD = 3, DB = 4, AE = 6। EC କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="△ABC ର ବାହୁ AB ଓ AC ଉପରେ D ଓ E। DE ∥ BC।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VHJpYW5nbGUgQUJDLCBERSBwYXJhbGxlbCB0byBCQzwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0iTTEyNSAyN0w0NCAxOTBIMjY2WiBNODQuNSAxMDguNUgxOTUuNSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIxMTkiIHk9IjIxIj5BPC90ZXh0PgogICAgPHRleHQgeD0iMjUiIHk9IjIwNiI+QjwvdGV4dD4KICAgIDx0ZXh0IHg9IjI3MCIgeT0iMjAyIj5DPC90ZXh0PgogICAgPHRleHQgeD0iNjUiIHk9IjEwOCI+RDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIwMiIgeT0iMTA1Ij5FPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>8</li><li>3</li><li>4</li><li>6</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 8</b></p>
+<div class="lesson-body"><p>AD/DB = AE/EC। ତେଣୁ EC = 6 × 4/3।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨–୭</small></article>
+<article><h2>୧୫. ସମକୋଣୀ △ABC ରେ ∠B = 90°। କର୍ଣ୍ଣ AC ର D ବିନ୍ଦୁରେ BD ଲମ୍ବ। AD = 9 ଓ DC = 16 ହେଲେ AB କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>25</li><li>15</li><li>20</li><li>12</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 15</b></p>
+<div class="lesson-body"><p>AC = 9 + 16 = 25। ସଦୃଶ ତ୍ରିଭୁଜର ସମ୍ପର୍କ AB² = AD × AC = 225 ରୁ AB = 15।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩୩–୩୫</small></article>
+<article><h2>୧୬. ସଦୃଶ ତ୍ରିଭୁଜଦ୍ୱୟର ଅନୁରୂପ ବାହୁର ଅନୁପାତ 4 : 6। ଛୋଟଟିର କ୍ଷେତ୍ରଫଳ 48 ହେଲେ ବଡ଼ଟିର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>72</li><li>18</li><li>48</li><li>108</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 108</b></p>
+<div class="lesson-body"><p>କ୍ଷେତ୍ରଫଳ ଅନୁପାତ 16 : 36। ବଡ଼ କ୍ଷେତ୍ରଫଳ = 48 × 36/16।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୬–୩୦</small></article>
+<article><h2>୧୭. △ABC ରେ D ଓ E ଯଥାକ୍ରମେ AB ଓ AC ଉପରେ, DE ∥ BC। AD = 4, DB = 5, AE = 8। EC କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="△ABC ର ବାହୁ AB ଓ AC ଉପରେ D ଓ E। DE ∥ BC।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VHJpYW5nbGUgQUJDLCBERSBwYXJhbGxlbCB0byBCQzwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0iTTEyNSAyN0w0NCAxOTBIMjY2WiBNODQuNSAxMDguNUgxOTUuNSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIxMTkiIHk9IjIxIj5BPC90ZXh0PgogICAgPHRleHQgeD0iMjUiIHk9IjIwNiI+QjwvdGV4dD4KICAgIDx0ZXh0IHg9IjI3MCIgeT0iMjAyIj5DPC90ZXh0PgogICAgPHRleHQgeD0iNjUiIHk9IjEwOCI+RDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIwMiIgeT0iMTA1Ij5FPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>5</li><li>8</li><li>10</li><li>4</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 10</b></p>
+<div class="lesson-body"><p>AD/DB = AE/EC। ତେଣୁ EC = 8 × 5/4।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨–୭</small></article>
+<article><h2>୧୮. △ABC ∼ △PQR। AB : PQ = 4 : 6 ଓ BC = 12 ସେ.ମି. ହେଲେ QR କେତେ ସେ.ମି.?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଦୁଇ ସଦୃଶ ତ୍ରିଭୁଜରେ A, B, C ସହ କ୍ରମେ P, Q, R ଅନୁରୂପ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2ltaWxhciB0cmlhbmdsZXMgQUJDIGFuZCBQUVI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSA3NEwyOCAxNjNIMTE5Wk0xODMgNDJMMTMxIDE2N0gyNTlaIi8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjYwIiB5PSI2NyI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjEyIiB5PSIxNzgiPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxMTciIHk9IjE3OCI+QzwvdGV4dD4KICAgIDx0ZXh0IHg9IjE4MCIgeT0iMzQiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjEiIHk9IjE4MiI+UTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MCIgeT0iMTgyIj5SPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>19</li><li>10</li><li>18</li><li>12</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 18</b></p>
+<div class="lesson-body"><p>BC/QR = AB/PQ = 4/6। QR = 12 × 6/4 = 18।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୩୦</small></article>
+<article><h2>୧୯. ସଦୃଶ ତ୍ରିଭୁଜଦ୍ୱୟର ପରିସୀମା 12 ଓ 24। ପ୍ରଥମର କ୍ଷେତ୍ରଫଳ 7 ହେଲେ ଦ୍ୱିତୀୟର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୫ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>14</li><li>56</li><li>7</li><li>28</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>D. 28</b></p>
+<div class="lesson-body"><p>ପରିସୀମାର ଅନୁପାତ 1 : 2। ତେଣୁ କ୍ଷେତ୍ରଫଳ ଅନୁପାତ 1 : 4।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୬–୩୦</small></article>
+<article><h2>୨୦. △ABC ∼ △PQR। AB : PQ = 5 : 7 ଓ BC = 15 ସେ.ମି. ହେଲେ QR କେତେ ସେ.ମି.?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଦୁଇ ସଦୃଶ ତ୍ରିଭୁଜରେ A, B, C ସହ କ୍ରମେ P, Q, R ଅନୁରୂପ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+U2ltaWxhciB0cmlhbmdsZXMgQUJDIGFuZCBQUVI8L3RpdGxlPgogIDxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjI1IiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNTRiNTUiIHN0cm9rZS13aWR0aD0iMiI+CjxwYXRoIGQ9Ik02NSA3NEwyOCAxNjNIMTE5Wk0xODMgNDJMMTMxIDE2N0gyNTlaIi8+CiAgPC9nPgogIDxnIGZpbGw9IiMxNzM5NDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij4KICAgIDx0ZXh0IHg9IjYwIiB5PSI2NyI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjEyIiB5PSIxNzgiPkI8L3RleHQ+CiAgICA8dGV4dCB4PSIxMTciIHk9IjE3OCI+QzwvdGV4dD4KICAgIDx0ZXh0IHg9IjE4MCIgeT0iMzQiPlA8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjEiIHk9IjE4MiI+UTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI2MCIgeT0iMTgyIj5SPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୧୨ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>15</li><li>12</li><li>21</li><li>22</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 21</b></p>
+<div class="lesson-body"><p>BC/QR = AB/PQ = 5/7। QR = 15 × 7/5 = 21।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୩୦</small></article>
+<article><h2>୨୧. ଏକ ସମକୋଣୀ ତ୍ରିଭୁଜର କର୍ଣ୍ଣ ଉପରେ ଲମ୍ବ ଖଣ୍ଡଦ୍ୱୟ 5 ଓ 20 କରିଛି। ଏହି ଲମ୍ବର ଦୈର୍ଘ୍ୟ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୬ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>5</li><li>25</li><li>10</li><li>20</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 10</b></p>
+<div class="lesson-body"><p>ଲମ୍ବର ବର୍ଗ = 5 × 20 = 100। ଧନାତ୍ମକ ବର୍ଗମୂଳ 10।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୩୩–୩୫</small></article>
+<article><h2>୨୨. △ABC ରେ D ଓ E ଯଥାକ୍ରମେ AB ଓ AC ଉପରେ, DE ∥ BC। AD = 5, DB = 6, AE = 10। EC କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="△ABC ର ବାହୁ AB ଓ AC ଉପରେ D ଓ E। DE ∥ BC।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VHJpYW5nbGUgQUJDLCBERSBwYXJhbGxlbCB0byBCQzwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0iTTEyNSAyN0w0NCAxOTBIMjY2WiBNODQuNSAxMDguNUgxOTUuNSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIxMTkiIHk9IjIxIj5BPC90ZXh0PgogICAgPHRleHQgeD0iMjUiIHk9IjIwNiI+QjwvdGV4dD4KICAgIDx0ZXh0IHg9IjI3MCIgeT0iMjAyIj5DPC90ZXh0PgogICAgPHRleHQgeD0iNjUiIHk9IjEwOCI+RDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIwMiIgeT0iMTA1Ij5FPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୨୮ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>12</li><li>5</li><li>6</li><li>10</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>A. 12</b></p>
+<div class="lesson-body"><p>AD/DB = AE/EC। ତେଣୁ EC = 10 × 6/5।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨–୭</small></article>
+<article><h2>୨୩. ଚିତ୍ରରେ DE ∥ BC ଓ AD : DB = 6 : 2। △ADE ଓ ଚତୁର୍ଭୁଜ DBCE ର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ କେତେ?</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="△ABC ର AB ଓ AC ଉପରେ D ଓ E। DE ଓ BC ସମାନ୍ତର।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+VHJpYW5nbGUgQUJDLCBERSBwYXJhbGxlbCB0byBCQzwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyMjUiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1NGI1NSIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0iTTEyNSAyN0w0NCAxOTBIMjY2WiBNODQuNSAxMDguNUgxOTUuNSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjMTczOTQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+CiAgICA8dGV4dCB4PSIxMTkiIHk9IjIxIj5BPC90ZXh0PgogICAgPHRleHQgeD0iMjUiIHk9IjIwNiI+QjwvdGV4dD4KICAgIDx0ZXh0IHg9IjI3MCIgeT0iMjAyIj5DPC90ZXh0PgogICAgPHRleHQgeD0iNjUiIHk9IjEwOCI+RDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIwMiIgeT0iMTA1Ij5FPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୪ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>6 : 2</li><li>36 : 28</li><li>6 : 8</li><li>36 : 64</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>B. 36 : 28</b></p>
+<div class="lesson-body"><p>ସଦୃଶତା ହେତୁ △ADE ଓ △ABC ର କ୍ଷେତ୍ରଫଳର ଅନୁପାତ 36 : 64। ସମଗ୍ର ତ୍ରିଭୁଜରୁ ଛୋଟ ତ୍ରିଭୁଜ ବାଦ ଦେଲେ DBCE ର ଅଂଶ 64 − 36 = 28।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୨–୩୦</small></article>
+<article><h2>୨୪. ସଦୃଶ ତ୍ରିଭୁଜଦ୍ୱୟର ଅନୁରୂପ ବାହୁର ଅନୁପାତ 5 : 7। ଛୋଟଟିର କ୍ଷେତ୍ରଫଳ 75 ହେଲେ ବଡ଼ଟିର କ୍ଷେତ୍ରଫଳ କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୧, ପ୍ରଶ୍ନ ୪୦ (୧ ନମ୍ବର)</p>
+<ol type="A"><li>105</li><li>75</li><li>147</li><li>21</li></ol>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<p><b>C. 147</b></p>
+<div class="lesson-body"><p>କ୍ଷେତ୍ରଫଳ ଅନୁପାତ 25 : 49। ବଡ଼ କ୍ଷେତ୍ରଫଳ = 75 × 49/25।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 1/chapter.pdf · ପୃଷ୍ଠା ୨୬–୩୦</small></article>
+
+</main></body></html>

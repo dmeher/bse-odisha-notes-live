@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Passive · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>The Passive</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>Activity ୧–୮ ସମାଧାନ ହୋଇଛି। ସପ୍ତମ Activityରେ ମୁଦ୍ରିତ (vi) ପରର ଉପପ୍ରଶ୍ନ (viii) ଭାବେ ଛପା ହୋଇଛି; ତାହାର ଉତ୍ତର ଅଛି। ଆରମ୍ଭର କ୍ରିୟା ଚିହ୍ନଟ, perfect progressive ପ୍ରଶ୍ନ ଓ Gର ଦୁଇ ଉଦାହରଣ ସାମିଲ।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୯୬–୯୭, ୧୦୦–୧୦୧, ୧୦୬, ୧୦୯–୧୧୧।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୩)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">Opening comparison · 1a–2b and B(i)</a> <a href="#exercise-2">B(vi) · Perfect progressive question</a> <a href="#exercise-3">Activity 1 (i–vi)</a> <a href="#exercise-4">Activity 2 (i–v)</a> <a href="#exercise-5">Activity 2 (vi–x)</a> <a href="#exercise-6">Activity 3</a> <a href="#exercise-7">Activity 4</a> <a href="#exercise-8">G · Mark the verb forms</a> <a href="#exercise-9">Activity 5 (i–viii)</a> <a href="#exercise-10">Activity 6. 1–4</a> <a href="#exercise-11">Activity 6. 5–7</a> <a href="#exercise-12">Activity 7 (i–vi, viii)</a> <a href="#exercise-13">Activity 8. 1–7</a></nav></details>
+<article id="exercise-1"><h2>Opening comparison · 1a–2b and B(i). What changes in the two active–passive pairs? Mark the present be auxiliaries in the badminton and clothes examples.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>In 1b she met me becomes I was met by her. In 2b Janaki made the attempt becomes the attempt was made by Janaki. The active object becomes the passive subject. In B(i), identify is + played and are + given. The first be-form agrees with singular badminton and the second with plural clothes. ମୁଖ୍ୟ କ୍ରିୟାର past participle ସ୍ଥିର ରହେ।</p><p>ସମୟ ଓ ନୂଆ subject ଅନୁସାରେ beର ରୂପ ବଦଳେ।</p><p>Active me object ଥିଲା, passiveରେ subject ହେଲେ I; she agent ହେଲେ by her। Past tenseକୁ was ନେଲା, met ଏବେ past participle।</p><p>Present examplesରେ ନୂଆ subject singular/plural ଦେଖି is ବା are ବାଛ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=96" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୬</a></small></article>
+<article id="exercise-2"><h2>B(vi) · Perfect progressive question. Why does the book avoid a passive transformation for present and past perfect progressive verbs?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Compare is being played (progressive passive) with has been decorated or had been decorated (perfect passive). To show both meanings mechanically would require has/have/had been being + past participle. The sequence been being is cumbersome and very rarely used. For this exercise keep the perfect progressive in the active voice, or recast the thought while preserving its duration. ଚାଲିଆସୁଥିବା କାମର ଅବଧି ବୁଝାଇବାକୁ ମୂଳ active ବାକ୍ୟ ରଖିଲେ ଅର୍ଥ ସ୍ପଷ୍ଟ ରହେ।</p><p>ସରଳ perfect passive ଲେଖିଦେଲେ ଚାଲିଥିବା କାମର ଭାବ ହରାଇପାରେ।</p><p>Perfect passiveର been ଓ progressive passiveର beingକୁ ଏକାଠି ରଖିଲେ has/had been being + V3 ଭଳି ଅସ୍ୱାଭାବିକ ଲମ୍ବା group ହୁଏ। ସେହିପାଇଁ ଏହି ପାଠର ଅଭ୍ୟାସରେ ମୂଳ active ରଖାଯାଏ ବା କଥାଟି ଅନ୍ୟ ଭାବରେ କୁହାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=97" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯୭</a></small></article>
+<article id="exercise-3"><h2>Activity 1 (i–vi). Mark each finite verb phrase active or passive.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) A — killed; (ii) A — has made; (iii) P — has been selected; (iv) A — wrote; (v) P — was beaten; (vi) A — must have finished. Has ଦେଖି passive ବୋଲି ଧରିବେ ନାହିଁ। (ii)ରେ କର୍ତ୍ତା କାମ କରିଛନ୍ତି; (iii)ରେ କର୍ତ୍ତାଙ୍କୁ ଚୟନ କରାଯାଇଛି।</p><p>Has made ଓ must have finishedରେ have ଥିଲେ ବି passive be ନାହିଁ। Has been selected ଓ was beatenରେ be + V3 ଅଛି ଓ subject ଉପରେ କାମ ପଡ଼ିଛି।</p><p>ଏକାକୀ past participle ଦେଖି P ବାଛନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-4"><h2>Activity 2 (i–v). Supply the passive forms in the car, earthquake, proverb, punishment and language examples.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) be bought; (ii) were killed; (iii) be cured, be endured; (iv) be punished; (v) is spoken. Will, cannot, must ଓ should ପରେ be + participle ଲାଗେ। Last year ଥିବା ବାକ୍ୟର plural subject ସହ were।</p><p>ସାଧାରଣ ତଥ୍ୟରେ is spoken।</p><p>(i,iii,iv) modal ପରେ base be ସହ bought/cured/endured/punished। (ii) ଅତୀତରେ ଅନେକ ଲୋକ ଉପରେ କାମ ପଡ଼ିଛି, ତେଣୁ were killed।</p><p>(v) ଭାଷା ବିଷୟର ସାଧାରଣ କଥା is spoken।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-5"><h2>Activity 2 (vi–x). Complete the road, accident, justice, grandfather and solitude examples.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(vi) was being repaired; (vii) have been caused; (viii) are being denied; (ix) is said; (x) to be left. (vi) ଦେଖିବା ସମୟରେ ମରାମତି ଚାଲୁଥିଲା। (vii)ରେ might ପୂର୍ବରୁ ଛପା ଅଛି, ତେଣୁ ସମ୍ପୂର୍ଣ୍ଣ ରୂପ might have been caused।</p><p>(viii)ରେ ଚାଲୁଥିବା ସ୍ଥିତିକୁ ଧରାଯାଇଛି; ସାଧାରଣ ଅର୍ଥରେ are denied ମଧ୍ୟ ଚାଲିବ।</p><p>(vi) ଅତୀତରେ ମରାମତି ଚାଲିଥିଲା was being repaired। (vii) ଏବେ ଯାଏ ଫଳ have been caused।</p><p>(viii) ବର୍ତ୍ତମାନ ଚାଲୁ are being denied। (ix) ପ୍ରଚଳିତ ଉକ୍ତି is said।</p><p>(x) infinitive ଭିତରେ be left।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=100" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୦</a></small></article>
+<article id="exercise-6"><h2>Activity 3. Complete the father’s letter with suitable forms, in order.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>be held; have been told; been invited; were held; be awarded; had been invited; had been. For the last two gaps the father imagines an unreal earlier invitation and attendance.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ହେବାକୁ ଥିବା ଉତ୍ସବରେ going to be held ଓ ସମ୍ପନ୍ନ ନିମନ୍ତ୍ରଣରେ has been invited। ଅତୀତର ଅପୂରିତ ଇଚ୍ଛା ପାଇଁ had been invited।</p><p>Letterର event କେବେ ହେବ, କେବେ ଖବର ମିଳିଲା ଓ ପୂର୍ବ ବର୍ଷ କ’ଣ ହୋଇଥିଲା ସମୟରେ ସଜାଅ। Will ପୂର୍ବରୁ ଥିଲେ be held; have ପୂର୍ବରୁ ଥିଲେ been invited।</p><p>ଖାଲି ସ୍ଥାନକୁ ମାତ୍ର ଗଣି ପୂରା groupକୁ ଦୁଇଥର ଲେଖନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=101" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୧</a></small></article>
+<article id="exercise-7"><h2>Activity 4. Complete the fire report with suitable passive forms.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>were burnt; were burnt; were completely destroyed; were rendered; were hospitalised; caused; is still shrouded; is badly needed. Last Sunday sets the main report in the past; the remaining mystery and present need take is.</p><p>ଓଡ଼ିଆ ବୁଝାମଣା — ଘଟଣାଦିନର ବିବରଣୀରେ were + participle। ଶେଷରେ ଆଜି ମଧ୍ୟ ରହିଥିବା ଅବସ୍ଥା କହିବାରୁ present ହୋଇଛି।</p><p>Fire reportର burnt/destroyed ଆଗରେ ଘରଗୁଡ଼ିକ subject, ତେଣୁ were। Hospitalisedରେ ପ୍ରଭାବିତ ଲୋକ subject।</p><p>Caused ଥିବା ସ୍ଥାନରେ subject ନିଜେ କାରଣ ହେଉଛି କି ଦେଖ। ଶେଷର is still shrouded/is badly needed ବର୍ତ୍ତମାନର ଅବସ୍ଥା ଦେଉଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=101" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୧</a></small></article>
+<article id="exercise-8"><h2>G · Mark the verb forms. Which words carry the passive pattern in the two printed examples?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Was born and was drowned both have was + past participle. Gandhiji was born gives an event in his life. He was drowned presents what happened to him. English regularly uses be born for birth. The second example shows a passive use of drown, which also permits an active use in other contexts. was ଅତୀତ କାଳ ଦର୍ଶାଏ।</p><p>born ଓ drowned ଘଟଣାର ଅର୍ଥ ଦିଅନ୍ତି।</p><p>Was born ହେଉଛି ଜନ୍ମର ସାଧାରଣ English expression। Was drownedରେ ମଣିଷ ଘଟଣାର ପ୍ରଭାବ ପାଇଲେ।</p><p>ଉଭୟରେ agentକୁ ବାଧ୍ୟତାମୂଳକ ଯୋଡ଼ିବା ନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=106" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୬</a></small></article>
+<article id="exercise-9"><h2>Activity 5 (i–viii). Make a passive sentence to fit each situation.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) He was murdered. (ii) He was sacked. (iii) He was asked to leave the examination hall. (iv) It was closed down. (v) He was punished. (vi) He was drowned. (vii) It was turned down. (viii) The people were kept waiting. ଏଠି ଦିଆଯାଇଥିବା ପ୍ରସଙ୍ଗର ଗ୍ରହୀତାକୁ ଆଗକୁ ଆଣାଯାଏ।</p><p>ଏକାଧିକ ଲୋକ ପାଇଁ (viii)ରେ were।</p><p>ବାକ୍ୟରେ ପ୍ରମୁଖ ପାତ୍ର କିଏ ତାକୁ ଆଗେ ରଖ। Sacked ମାନେ କାମରୁ ବରଖାସ୍ତ; asked to leave ନିର୍ଦ୍ଦେଶ ଦିଆଯିବା; closed down ସଂସ୍ଥା ବନ୍ଦ।</p><p>ପରିସ୍ଥିତି ଅନୁସାରେ verb ବଦଳେ, was + V3 ଗଠନ ରହେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=109" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୦୯</a></small></article>
+<article id="exercise-10"><h2>Activity 6. 1–4. Choose a passive form and decide whether the agent is needed.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. The Odia Bhagabat was written by Jagannath Das. 2. The prize was won by my friend Mohan. 3. A chair has been broken. 4. The essay will be finished within a week. ପ୍ରଥମ ଦୁଇ ବାକ୍ୟରେ ବ୍ୟକ୍ତିର ପରିଚୟ ହିଁ ସୂଚନା। ୩ରେ ନାମ ଗୋପନ ରଖିବାକୁ ହେବ।</p><p>୪ରେ କାମ ସରିବାକୁ ଗୁରୁତ୍ୱ ଦିଆଯାଏ।</p><p>ଲେଖକ Jagannath Das ଓ ପୁରସ୍କାରପ୍ରାପ୍ତ Mohanଙ୍କ ନାମ ଏଠି ପ୍ରଶ୍ନର ଦରକାରୀ ଖବର, ତେଣୁ by-agent ରଖ। ଭଙ୍ଗା chair ଦେଖି କିଏ ଭାଙ୍ଗିଲା ଜଣା ନ ଥିଲେ ଅନୁମାନରେ ନାମ ଦିଅନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-11"><h2>Activity 6. 5–7. Give one possible passive response for each remaining situation.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>5. Delicious cakes are made in our village during the Raja festival every year. 6. The earth was created long ago. 7. Your birthday will be celebrated this year. ୫ରେ ନିୟମିତ କାମ, ୬ରେ ଅତୀତ ଓ ୭ରେ ଭବିଷ୍ୟତ। କୌଣସିଟିରେ କର୍ତ୍ତାର ନାମ ଆବଶ୍ୟକ ନୁହେଁ।</p><p>ପ୍ରତି ବର୍ଷ Rajaରେ ପିଠା କରିବା ନିୟମିତ ପଦ୍ଧତି, ତେଣୁ are made। Long ago ଏକ ଅତୀତ ସୂତ୍ର, ତେଣୁ was created।</p><p>ପ୍ରତ୍ୟେକରେ ଯାହା ବିଷୟରେ ଖବର ଦିଆଯାଉଛି ତାହା subject ରହେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦</a></small></article>
+<article id="exercise-12"><h2>Activity 7 (i–vi, viii). Use a suitable form in each gap, following the numbering in the PDF.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(i) was written, was translated; (ii) is made; (iii) was injured, was not required; (iv) is never answered, are kept, is done; (v) was blown down; (vi) was posted; (viii) was run over. (iv)ରେ telephone ଓ work ଏକବଚନ; records ବହୁବଚନ।</p><p>PDFରେ ଶେଷ ଉପପ୍ରଶ୍ନର ଚିହ୍ନ (viii)।</p><p>Was written/was translated ଏକ କୃତି ଉପରେ ଦୁଇ ପୂର୍ବ କାମ। Is made କୌଣସି ବସ୍ତୁର ସାଧାରଣ ଗଠନ।</p><p>Is never answered ଓ are keptରେ ସ୍ଥାୟୀ ଅଭ୍ୟାସ ସମାନ ହେଲେ ବି subjectର number ପାଇଁ is/are ଭିନ୍ନ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=110" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୦–୧୧୧</a></small></article>
+<article id="exercise-13"><h2>Activity 8. 1–7. Describe the tea-making process in the passive.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. One tea bag is used per cup. 2. The required number of bags is placed in the kettle. 3. Boiling water is added as needed. 4. The water is stirred carefully so that the bags do not open. 5. The tea is allowed to stand for five minutes. 6. It is poured into cups. 7. Sugar and milk are added to taste. ସାଧାରଣ ପ୍ରଣାଳୀ ପାଇଁ present simple passive।</p><p>Sugar and milk ଦୁଇଟି ଥିବାରୁ ଶେଷରେ are added।</p><p>ପ୍ରକ୍ରିୟାରେ ଚା’ କରୁଥିବା ବ୍ୟକ୍ତିଠାରୁ ପର୍ଯ୍ୟାୟଗୁଡ଼ିକ ଆଗରେ। One tea bag is usedରୁ ଆରମ୍ଭ କରି water is added ଇତ୍ୟାଦି ଲେଖ।</p><p>Number of bagsର head number singular, ତେଣୁ is placed।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=111" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୧୧</a></small></article>
+
+</main></body></html>

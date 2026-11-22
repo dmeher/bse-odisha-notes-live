@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">∠ABC ଓ ∠ADC ସମକୋଣ, AB = AD | କର୍ଣ୍ଣ AC ଓ BDର ଛେଦ M |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<polyline points="112.85,141.76 172.63,287.50 387.15,199.51 226.31,32.50 112.85,141.76" stroke="#244355" stroke-width="2.35"/>
+<polyline points="112.85,141.76 387.15,199.51" stroke="#244355" stroke-width="2.35"/>
+<polyline points="172.63,287.50 226.31,32.50" stroke="#087b79" stroke-width="2.35" stroke-dasharray="7 6"/>
+<polyline points="168.84,278.25 178.09,274.45 181.88,283.71" stroke="#a9571e" stroke-width="1.7"/>
+<polyline points="219.11,39.44 226.05,46.64 233.25,39.70" stroke="#a9571e" stroke-width="1.7"/>
+</g>
+<circle cx="112.85" cy="141.76" r="2.7" fill="#244355"/>
+<text x="98.98" y="139.79" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="172.63" cy="287.50" r="2.7" fill="#244355"/>
+<text x="165.37" y="300.32" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="387.15" cy="199.51" r="2.7" fill="#244355"/>
+<text x="400.60" y="203.66" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="226.31" cy="32.50" r="2.7" fill="#244355"/>
+<text x="223.76" y="17.75" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="199.47" cy="160.00" r="2.7" fill="#244355"/>
+<text x="199.47" y="175.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">M</text>
+</svg>

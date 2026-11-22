@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସରଳ ସହସମୀକରଣ · ବିସ୍ତୃତ ଟିପ୍ପଣୀ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସରଳ ସହସମୀକରଣ</p><h1>ବିସ୍ତୃତ ଟିପ୍ପଣୀ</h1>
+<a href="https://drive.google.com/file/d/1xlrv9W4psXNexlb_4Y7h7Dfy5neajF3U/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+<aside class="lesson-opening"><h2>ଦୁଇଟି ସରଳ ସମୀକରଣର ଏକା ସମାଧାନ ଲେଖଚିତ୍ରରେ କେଉଁଠି ଦେଖାଯାଏ?</h2><div class="lesson-body"><p>ପ୍ରଥମେ ଗୋଟିଏ କ୍ରମିତ ଯୁଗଳକୁ ଉଭୟ ସମୀକରଣରେ ବସାଇ ଦେଖ। ରେଖାଦ୍ୱୟ ଛେଦ କଲେ ଗୋଟିଏ ସମାଧାନ, ସମାନ୍ତର ହେଲେ କୌଣସି ସମାଧାନ ନାହିଁ ଏବଂ ଏକ ରେଖା ହେଲେ ଅସଂଖ୍ୟ ସମାଧାନ।</p><p>ପ୍ରତିକଳ୍ପନ, ଅପସାରଣ, ବଜ୍ରଗୁଣନ ଓ ଡିଟରମିନାଣ୍ଟ ପଦ୍ଧତିରେ ଏହି ସମ୍ବନ୍ଧକୁ ବୀଜଗଣିତରେ ଯାଞ୍ଚ କର। ପାଟିଗଣିତ ପ୍ରଶ୍ନରେ ଅଜଣା ରାଶି ଦୁଇଟିକୁ ନାମ ଦେଇ ପ୍ରତି ସର୍ତ୍ତରୁ ଗୋଟିଏ ଲେଖାଏଁ ସମୀକରଣ ଲେଖ।</p></div></aside>
+<details class="note-index"><summary>ଏହି ଅଧ୍ୟାୟର ବିଷୟସୂଚୀ</summary>
+    <nav aria-label="ବିସ୍ତୃତ ଟିପ୍ପଣୀ ସୂଚୀ"><a href="#note-1">୧.୧ · ସରଳ ସମୀକରଣରୁ ସହସମୀକରଣ</a> <a href="#note-2">୧.୨–୧.୩ · ଜ୍ୟାମିତିକ ପରିପ୍ରକାଶ ଓ ଲେଖଚିତ୍ର</a> <a href="#note-3">ଉଦାହରଣ ୧ · ଛେଦବିନ୍ଦୁ ଯାଞ୍ଚ</a> <a href="#note-4">୧.୪ · ସମାଧାନର ସର୍ତ୍ତ</a> <a href="#note-5">ଅନୁଶୀଳନୀ ୧(a) · ୫(i) · ଦୁଇ ଲେଖଚିତ୍ରର ଛେଦବିନ୍ଦୁ</a> <a href="#note-6">୧.୫ · ପ୍ରତିକଳ୍ପନ ଓ ଅପସାରଣ ପଦ୍ଧତି</a> <a href="#note-7">ବଜ୍ରଗୁଣନ ଓ ରୂପାନ୍ତରଣ</a> <a href="#note-8">୧.୬ · ଡିଟରମିନାଣ୍ଟ ଓ Cramerଙ୍କ ନିୟମ</a> <a href="#note-9">୧.୭ · ପାଟିଗଣିତ ପ୍ରଶ୍ନକୁ ସମୀକରଣରେ ଲେଖିବା</a> <a href="#note-10">ଅନୁଶୀଳନୀ ୧(b) · ୬(iv) · Cramerଙ୍କ ନିୟମରେ ଦୁଇ ଅଜ୍ଞାତ ରାଶି</a> <a href="#note-11">ଅନୁଶୀଳନୀ ୧(c) · ୧୧ · ଦର ନିର୍ଣ୍ଣୟ ପାଇଁ ଦୁଇ ସର୍ତ୍ତ</a></nav></details>
+<article id="note-1" class="lesson-topic"><h2>୧.୧ · ସରଳ ସମୀକରଣରୁ ସହସମୀକରଣ</h2>
+<div class="lesson-body"><p>ଦୁଇ ଅଜ୍ଞାତ ରାଶି ଥିବା ax + by + c = 0 ସରଳ ସମୀକରଣରେ a ଓ b ଉଭୟ ଏକାସାଙ୍ଗରେ ଶୂନ ହେବେ ନାହିଁ। x ଓ y ପାଇଁ ଗୋଟିଏ କ୍ରମିତ ଯୋଡ଼ି ନେଇ ବାମପକ୍ଷରେ ବସାଅ।</p><p>ଫଳ ଶୂନ ହେଲେ ଯୋଡ଼ିଟି ସେହି ସମୀକରଣର ସମାଧାନ। ଦୁଇଟି ସମୀକରଣରେ ଏକା କ୍ରମିତ ଯୋଡ଼ି ସିଦ୍ଧ ହେଲେ ତାହା ସହସମୀକରଣର ସମାଧାନ।</p><p>(x, y)ରେ ପ୍ରଥମ ଓ ଦ୍ୱିତୀୟ ମାନର ସ୍ଥାନ ବଦଳାଇ ହୁଏ ନାହିଁ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=7" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୭–୮</a></small></article>
+<article id="note-2" class="lesson-topic"><h2>୧.୨–୧.୩ · ଜ୍ୟାମିତିକ ପରିପ୍ରକାଶ ଓ ଲେଖଚିତ୍ର</h2>
+<div class="lesson-body"><p>ଗୋଟିଏ ସମୀକରଣର ଦୁଇ ଭିନ୍ନ ସମାଧାନକୁ ବିନ୍ଦୁ ଭାବେ ବସାଇ ସେମାନଙ୍କ ମଧ୍ୟ ଦେଇ ସରଳରେଖା ଟାଣ। ଦ୍ୱିତୀୟ ସମୀକରଣ ପାଇଁ ଏକା ଅକ୍ଷ ଓ ମାପରେ ଦ୍ୱିତୀୟ ରେଖା ଅଙ୍କନ କର।</p><p>ଛେଦବିନ୍ଦୁ ଦୁଇ ରେଖାରେ ଥିବାରୁ ଏହାର ସ୍ଥାନାଙ୍କ ଦୁଇଟି ସମୀକରଣକୁ ସିଦ୍ଧ କରେ। ସମାନ୍ତର ଭିନ୍ନ ରେଖାର କୌଣସି ସାଧାରଣ ବିନ୍ଦୁ ନାହିଁ।</p><p>ଦୁଇ ରେଖା ମିଶିଯାଇଥିଲେ ପ୍ରତି ବିନ୍ଦୁ ସାଧାରଣ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=8" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୮–୧୧</a></small></article>
+<article id="note-3" class="lesson-topic"><h2>ଉଦାହରଣ ୧ · ଛେଦବିନ୍ଦୁ ଯାଞ୍ଚ</h2>
+<div class="lesson-body"><p>ପୁସ୍ତକର x + 2y − 3 = 0 ପାଇଁ (3, 0) ଓ (1, 1) ବାଛ। 2x − y − 1 = 0 ପାଇଁ (0, −1) ଓ (1, 1) ବାଛ।</p><p>ପ୍ରଥମ ଯୋଡ଼ା ବିନ୍ଦୁକୁ ଓ ଦ୍ୱିତୀୟ ଯୋଡ଼ା ବିନ୍ଦୁକୁ ଅଲଗା ସରଳରେଖାରେ ଯୋଡ଼। ସେମାନେ (1, 1)ରେ ଛେଦ କରନ୍ତି।</p><p>ଯାଞ୍ଚରେ 1 + 2×1 − 3 = 0 ଓ 2×1 − 1 − 1 = 0। ସେଥିପାଇଁ x = 1, y = 1।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=9" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୯–୧୦</a></small></article>
+<article id="note-4" class="lesson-topic"><h2>୧.୪ · ସମାଧାନର ସର୍ତ୍ତ</h2>
+<div class="lesson-body"><p>a₁x + b₁y + c₁ = 0 ଓ a₂x + b₂y + c₂ = 0 ନିଅ।</p><div class="lesson-table"><table><thead><tr><th scope="col">ସହଗ ଓ ଧ୍ରୁବକ ପଦର ସମ୍ପର୍କ</th><th scope="col">ରେଖା ଓ ସମାଧାନ</th></tr></thead><tbody><tr><td>a₁b₂ ≠ a₂b₁</td><td>ରେଖାଦ୍ୱୟ ଗୋଟିଏ ବିନ୍ଦୁରେ ଛେଦ କରନ୍ତି। ଅନନ୍ୟ ସମାଧାନ, ସଙ୍ଗତ ଓ ସ୍ୱତନ୍ତ୍ର।</td></tr><tr><td>ପ୍ରଥମ ସମୀକରଣର ସମସ୍ତ ପଦକୁ ଏକା ଅଶୂନ ସଂଖ୍ୟାରେ ଗୁଣିଲେ ଦ୍ୱିତୀୟଟି ମିଳେ।</td><td>ରେଖାଦ୍ୱୟ ଅଭିନ୍ନ। ଅସଂଖ୍ୟ ସମାଧାନ, ସଙ୍ଗତ ଓ ନିର୍ଭରଶୀଳ।</td></tr><tr><td>x ଓ yର ସହଗ ଏକା ଅନୁପାତରେ, ଧ୍ରୁବକ ପଦ ସେହି ଅନୁପାତରେ ନାହିଁ।</td><td>ଭିନ୍ନ ସମାନ୍ତର ରେଖା। ସମାଧାନ ନାହିଁ, ଅସଙ୍ଗତ।</td></tr></tbody></table></div><p>ଅନୁପାତ ଲେଖିଲାବେଳେ ଶୂନ ଦ୍ୱାରା ଭାଗ ଏଡ଼ାଇବାକୁ ଗୁଣଫଳ ତୁଳନା କର।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=12" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୨–୧୪</a></small></article>
+<article id="note-5" class="lesson-topic"><h2>ଅନୁଶୀଳନୀ ୧(a) · ୫(i) · ଦୁଇ ଲେଖଚିତ୍ରର ଛେଦବିନ୍ଦୁ</h2>
+<div class="lesson-body"><p>x + y = 4 ଓ x − y = 0ର ଲେଖଚିତ୍ର ଦ୍ୱାରା ସମାଧାନ କର।</p><ol><li>x + y = 4ରେ x = 0 ଓ 1 ନେଇ (0, 4) ଓ (1, 3) ମିଳେ। ଦୁଇ ବିନ୍ଦୁଦେଇ ରେଖା ଟାଣ।</li><li>x − y = 0ରେ x = 0 ଓ 1 ନେଇ (0, 0) ଓ (1, 1) ମିଳେ। ଦୁଇ ବିନ୍ଦୁଦେଇ ରେଖା ଟାଣ।</li><li>ଡିଟରମିନାଣ୍ଟ −2 ଓ x = 2, y = 2। ତେଣୁ (x, y) = (2, 2)।</li></ol><p>ଫଳ — ଛେଦବିନ୍ଦୁ ଓ ସମାଧାନ (2, 2)।</p></div>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="ଦୁଇ ସମୀକରଣର ଲେଖଚିତ୍ର। ପ୍ରଥମ ରେଖା ନିରବଚ୍ଛିନ୍ନ ଓ ଦ୍ୱିତୀୟ ରେଖା ଖଣ୍ଡିତ।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMzYwIiByb2xlPSJpbWciPjxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMzYwIiBmaWxsPSJ3aGl0ZSIvPjxnIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSIjMTgyNTJjIj48cGF0aCBkPSJNMjcuMDAgMjAgVjM0MCBNMjAgMzMzLjAwIEgzNDAiIHN0cm9rZT0iI2UwZTllOSIvPjx0ZXh0IHg9IjI3LjAwIiB5PSIxOTQiPi02PC90ZXh0Pjx0ZXh0IHg9IjE1NyIgeT0iMzMzLjAwIj4tNjwvdGV4dD48cGF0aCBkPSJNNTIuNTAgMjAgVjM0MCBNMjAgMzA3LjUwIEgzNDAiIHN0cm9rZT0iI2UwZTllOSIvPjx0ZXh0IHg9IjUyLjUwIiB5PSIxOTQiPi01PC90ZXh0Pjx0ZXh0IHg9IjE1NyIgeT0iMzA3LjUwIj4tNTwvdGV4dD48cGF0aCBkPSJNNzguMDAgMjAgVjM0MCBNMjAgMjgyLjAwIEgzNDAiIHN0cm9rZT0iI2UwZTllOSIvPjx0ZXh0IHg9Ijc4LjAwIiB5PSIxOTQiPi00PC90ZXh0Pjx0ZXh0IHg9IjE1NyIgeT0iMjgyLjAwIj4tNDwvdGV4dD48cGF0aCBkPSJNMTAzLjUwIDIwIFYzNDAgTTIwIDI1Ni41MCBIMzQwIiBzdHJva2U9IiNlMGU5ZTkiLz48dGV4dCB4PSIxMDMuNTAiIHk9IjE5NCI+LTM8L3RleHQ+PHRleHQgeD0iMTU3IiB5PSIyNTYuNTAiPi0zPC90ZXh0PjxwYXRoIGQ9Ik0xMjkuMDAgMjAgVjM0MCBNMjAgMjMxLjAwIEgzNDAiIHN0cm9rZT0iI2UwZTllOSIvPjx0ZXh0IHg9IjEyOS4wMCIgeT0iMTk0Ij4tMjwvdGV4dD48dGV4dCB4PSIxNTciIHk9IjIzMS4wMCI+LTI8L3RleHQ+PHBhdGggZD0iTTE1NC41MCAyMCBWMzQwIE0yMCAyMDUuNTAgSDM0MCIgc3Ryb2tlPSIjZTBlOWU5Ii8+PHRleHQgeD0iMTU0LjUwIiB5PSIxOTQiPi0xPC90ZXh0Pjx0ZXh0IHg9IjE1NyIgeT0iMjA1LjUwIj4tMTwvdGV4dD48cGF0aCBkPSJNMTgwLjAwIDIwIFYzNDAgTTIwIDE4MC4wMCBIMzQwIiBzdHJva2U9IiNlMGU5ZTkiLz48cGF0aCBkPSJNMjA1LjUwIDIwIFYzNDAgTTIwIDE1NC41MCBIMzQwIiBzdHJva2U9IiNlMGU5ZTkiLz48dGV4dCB4PSIyMDUuNTAiIHk9IjE5NCI+MTwvdGV4dD48dGV4dCB4PSIxNTciIHk9IjE1NC41MCI+MTwvdGV4dD48cGF0aCBkPSJNMjMxLjAwIDIwIFYzNDAgTTIwIDEyOS4wMCBIMzQwIiBzdHJva2U9IiNlMGU5ZTkiLz48dGV4dCB4PSIyMzEuMDAiIHk9IjE5NCI+MjwvdGV4dD48dGV4dCB4PSIxNTciIHk9IjEyOS4wMCI+MjwvdGV4dD48cGF0aCBkPSJNMjU2LjUwIDIwIFYzNDAgTTIwIDEwMy41MCBIMzQwIiBzdHJva2U9IiNlMGU5ZTkiLz48dGV4dCB4PSIyNTYuNTAiIHk9IjE5NCI+MzwvdGV4dD48dGV4dCB4PSIxNTciIHk9IjEwMy41MCI+MzwvdGV4dD48cGF0aCBkPSJNMjgyLjAwIDIwIFYzNDAgTTIwIDc4LjAwIEgzNDAiIHN0cm9rZT0iI2UwZTllOSIvPjx0ZXh0IHg9IjI4Mi4wMCIgeT0iMTk0Ij40PC90ZXh0Pjx0ZXh0IHg9IjE1NyIgeT0iNzguMDAiPjQ8L3RleHQ+PHBhdGggZD0iTTMwNy41MCAyMCBWMzQwIE0yMCA1Mi41MCBIMzQwIiBzdHJva2U9IiNlMGU5ZTkiLz48dGV4dCB4PSIzMDcuNTAiIHk9IjE5NCI+NTwvdGV4dD48dGV4dCB4PSIxNTciIHk9IjUyLjUwIj41PC90ZXh0PjxwYXRoIGQ9Ik0zMzMuMDAgMjAgVjM0MCBNMjAgMjcuMDAgSDM0MCIgc3Ryb2tlPSIjZTBlOWU5Ii8+PHRleHQgeD0iMzMzLjAwIiB5PSIxOTQiPjY8L3RleHQ+PHRleHQgeD0iMTU3IiB5PSIyNy4wMCI+NjwvdGV4dD48cGF0aCBkPSJNMTIgMTgwIEgzNDggTTE4MCAzNDggVjEyIiBzdHJva2U9IiMyOTM3NDAiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iMzQxIiB5PSIxNzUiPng8L3RleHQ+PHRleHQgeD0iMTg3IiB5PSIxNyI+eTwvdGV4dD48dGV4dCB4PSIxNjUiIHk9IjE5MyI+TzwvdGV4dD48cGF0aCBkPSJNMzMzLjAwIDIzMS4wMCBMMTI5LjAwIDI3LjAwIiBzdHJva2U9IiMxODc0NzgiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik0yNy4wMCAzMzMuMDAgTDMzMy4wMCAyNy4wMCIgc3Ryb2tlPSIjYWMzZDI2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjYgMyIvPjxjaXJjbGUgY3g9IjIzMS4wMCIgY3k9IjEyOS4wMCIgcj0iNCIgZmlsbD0iIzE3MmIzYiIvPjwvZz48L3N2Zz4="></div></figure>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=15" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୫</a></small></article>
+<article id="note-6" class="lesson-topic"><h2>୧.୫ · ପ୍ରତିକଳ୍ପନ ଓ ଅପସାରଣ ପଦ୍ଧତି</h2>
+<div class="lesson-body"><p>ପ୍ରତିକଳ୍ପନରେ ପ୍ରଥମେ ଯେଉଁ ସମୀକରଣରୁ x ବା y ଅଲଗା କରିବା ସହଜ ତାହା ବାଛ। ସେହି ରାଶିଟିକୁ ଅନ୍ୟ ସମୀକରଣରେ ବସାଅ।</p><p>ଏକ ଅଜ୍ଞାତ ରାଶିର ମାନ ମିଳିଲେ ମୂଳ ସମୀକରଣକୁ ଫେରି ଅନ୍ୟ ମାନ ନିଅ। ଅପସାରଣରେ ସମୀକରଣକୁ ଉପଯୁକ୍ତ ସଂଖ୍ୟା ଦ୍ୱାରା ଗୁଣି ଗୋଟିଏ ଚଳର ସହଗ ସମାନ କରି ବିୟୋଗ କର, ବା ବିପରୀତ କରି ଯୋଗ କର।</p><p>ପୂରା ସମୀକରଣର ପ୍ରତି ପଦକୁ ଗୁଣ କରିବାକୁ ହୁଏ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=16" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୬–୧୮</a></small></article>
+<article id="note-7" class="lesson-topic"><h2>ବଜ୍ରଗୁଣନ ଓ ରୂପାନ୍ତରଣ</h2>
+<div class="lesson-body"><p>a₁x+b₁y+c₁=0 ଓ a₂x+b₂y+c₂=0ରେ D=a₁b₂−a₂b₁ ≠ 0 ହେଲେ x=(b₁c₂−b₂c₁)/D ଓ y=(c₁a₂−c₂a₁)/D। ଧ୍ରୁବକ ଡାହାଣପଟେ ଦିଆଥିଲେ ଏହି ସୂତ୍ର ଲଗାଇବା ଆଗରୁ ବାମପଟକୁ ଆଣ।</p><p>1/x, 1/y ବା ଅନ୍ୟ ରାଶି ଦୁଇ ସମୀକରଣରେ ପୁନରାବୃତ୍ତ ହେଲେ ନୂଆ ଚଳ ନେଇ ସରଳ ରୂପ କର। ନୂଆ ଚଳର ମାନରୁ ପୁଣି x ଓ y ନିଅ।</p><p>ମୂଳ ହର ଶୂନ ହେଉଥିବା ମାନ ଗ୍ରହଣ କର ନାହିଁ।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=18" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୧୮–୨୧</a></small></article>
+<article id="note-8" class="lesson-topic"><h2>୧.୬ · ଡିଟରମିନାଣ୍ଟ ଓ Cramerଙ୍କ ନିୟମ</h2>
+<div class="lesson-body"><p>ଦୁଇ ଧାଡ଼ିର ଡିଟରମିନାଣ୍ଟରେ ପ୍ରଧାନ କର୍ଣ୍ଣର ଗୁଣଫଳରୁ ଅନ୍ୟ କର୍ଣ୍ଣର ଗୁଣଫଳ ବିୟୋଗ କର। a₁x+b₁y=d₁ ଓ a₂x+b₂y=d₂ ଲେଖ।</p><p>ସହଗଦ୍ୱୟରୁ D=a₁b₂−a₂b₁ ମିଳେ। xର ସ୍ତମ୍ଭ ସ୍ଥାନରେ d₁,d₂ ରଖି Dₓ=d₁b₂−d₂b₁ ଓ yର ସ୍ତମ୍ଭ ବଦଳାଇ Dᵧ=a₁d₂−a₂d₁ ମିଳେ।</p><p>D≠0 ହେଲେ x=Dₓ/D ଓ y=Dᵧ/D। D=0 ହେଲେ ପୂର୍ବ ସମାଧାନ ସର୍ତ୍ତ ବିଚାର କର।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=21" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୧–୨୩</a></small></article>
+<article id="note-9" class="lesson-topic"><h2>୧.୭ · ପାଟିଗଣିତ ପ୍ରଶ୍ନକୁ ସମୀକରଣରେ ଲେଖିବା</h2>
+<div class="lesson-body"><p>ପ୍ରଥମେ ଅଜ୍ଞାତ ରାଶି ଦୁଇଟିର ଅର୍ଥ ଓ ଏକକ ଲେଖ। ବୟସର ଉଦାହରଣରେ ପିତାଙ୍କ ବୟସ x ବର୍ଷ, ପୁତ୍ରଙ୍କ ବୟସ y ବର୍ଷ ହେଲେ 2x+y=105 ଓ x+2y=75।</p><p>ଦ୍ୱିତୀୟକୁ 2ରେ ଗୁଣି ପ୍ରଥମକୁ ବିୟୋଗ କଲେ 3y=45। ତେଣୁ y=15, x=45।</p><p>ଅଙ୍କ ଓଲଟାଇବା ପ୍ରଶ୍ନରେ 10x+y ଓ 10y+x ଲେଖ। କାର୍ଯ୍ୟରେ ଦିନ ସଂଖ୍ୟା ଦିଆଥିଲେ ଏକ ଦିନର କାର୍ଯ୍ୟ ପରିମାଣ ନେଇ ସମୀକରଣ ଗଢ଼।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=24" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୪–୨୭</a></small></article>
+<article id="note-10" class="lesson-topic"><h2>ଅନୁଶୀଳନୀ ୧(b) · ୬(iv) · Cramerଙ୍କ ନିୟମରେ ଦୁଇ ଅଜ୍ଞାତ ରାଶି</h2>
+<div class="lesson-body"><p>Cramerଙ୍କ ନିୟମ ଦ୍ୱାରା 2·x − y = 3 ଓ x − 3·y = −1ର ସମାଧାନ କର।</p><ol><li>Δ = (2)(−3) − (−1)(1) = −5।</li><li>Δx = (3)(−3) − (−1)(−1) = −10। Δy = (2)(−1) − (3)(1) = −5।</li><li>x = 2, y = 1। ତେଣୁ (x, y) = (2, 1)।</li></ol><p>ଫଳ — (x, y) = (2, 1)।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=24" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୪</a></small></article>
+<article id="note-11" class="lesson-topic"><h2>ଅନୁଶୀଳନୀ ୧(c) · ୧୧ · ଦର ନିର୍ଣ୍ଣୟ ପାଇଁ ଦୁଇ ସର୍ତ୍ତ</h2>
+<div class="lesson-body"><p>5 କଲମ ଓ 6 ପେନ୍‌ସିଲ୍‌ର ଦାମ 9 ଟଙ୍କା। 3 କଲମ ଓ 2 ପେନ୍‌ସିଲ୍‌ର ଦାମ 5 ଟଙ୍କା। ପ୍ରତ୍ୟେକର ଦାମ ନିର୍ଣ୍ଣୟ କର।</p><ol><li>ଏକ କଲମର ଦାମ x ଓ ଏକ ପେନ୍‌ସିଲ୍‌ର ଦାମ y ଟଙ୍କା।</li><li>ସରଳ କଲେ 5·x + 6·y = 9 ଓ 3·x + 2·y = 5।</li><li>Δ = (5)(2) − (6)(3) = −8।</li><li>Δx = (9)(2) − (6)(5) = −12। Δy = (5)(5) − (9)(3) = −2।</li><li>x = 3/2, y = 1/4। ତେଣୁ (x, y) = (3/2, 1/4)।</li><li>କଲମ 1.50 ଟଙ୍କା ଓ ପେନ୍‌ସିଲ୍ 0.25 ଟଙ୍କା।</li></ol><p>ଫଳ — କଲମ 1.50 ଟଙ୍କା ଓ ପେନ୍‌ସିଲ୍ 0.25 ଟଙ୍କା।</p></div>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=27" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୭</a></small></article>
+<aside class="lesson-check"><h2>ନିଜେ ଉତ୍ତର ଦିଅ</h2><p>x + y = 4 ଓ x − y = 0 ରେଖାଦ୍ୱୟର ଛେଦବିନ୍ଦୁ କିପରି ଯାଞ୍ଚ କରିବ?</p><details><summary>ଉତ୍ତର ମିଳାଅ</summary><div class="lesson-body"><p>ଦ୍ୱିତୀୟ ସମୀକରଣରେ x = y, ତେଣୁ ପ୍ରଥମରେ 2x = 4 | (2, 2) ପାଇଁ 2 + 2 = 4 ଓ 2 − 2 = 0।</p><p>ଏହି ବିନ୍ଦୁ ଉଭୟ ରେଖା ଉପରେ ଅଛି।</p></div></details><a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=15">ମୂଳ ପୁସ୍ତକ · PDF ପୃଷ୍ଠା ୧୫</a></aside>
+</main></body></html>

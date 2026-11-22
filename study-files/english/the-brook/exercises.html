@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Brook · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>The Brook</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1144kSU1gq_UX6bUnzm3xb1AFkRq_9qAW/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>F ୧–୯ର ଦୁଇଟି କ୍ରମ, G (a) ୧–୬, (b) ୧–୪, (c)ର ସାତ ଯୋଡ଼ା ଧ୍ୱନି ଓ ମୌଳିକ କବିତା, Hର ଦୁଇଟି ବାଚିକ କାମ ଏବଂ I (a–b)ର ଲେଖା ଅଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ପୁସ୍ତକ PDF ପୃଷ୍ଠା ୫୮, ୬୨–୬୫।</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୧୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">A–B · Listening</a> <a href="#exercise-2">F. 1–4</a> <a href="#exercise-3">F. 5–7</a> <a href="#exercise-4">F. 8–9</a> <a href="#exercise-5">G (a). 1–6</a> <a href="#exercise-6">G (b). 1–4</a> <a href="#exercise-7">G (c) · Rhymes and personification</a> <a href="#exercise-8">H (i)</a> <a href="#exercise-9">H (ii)</a> <a href="#exercise-10">I (a), (b)</a></nav></details>
+<article id="exercise-1"><h2>A–B · Listening. Identify two sounds and a movement in the speaker’s opening description.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Bicker suggests a noisy downhill rush; chatter later makes stones and water sound like speech. Sally suggests a sudden start. Partner A can read the opening briskly, then slow down for linger and loiter later. ଆରମ୍ଭର ଗତି ଓ ଶେଷର ଧୀର ସ୍ୱରକୁ ମୁଖରେ ପଢ଼ି ତୁଳନା କର।</p><p>Bicker ଓ chatter ପଢ଼ିଲେ ଝରଣାର ଶବ୍ଦ ଶୁଣିହୁଏ। Sally ତାହାର ହଠାତ୍ ଆଗକୁ ବାହାରିବାକୁ ଦେଖାଏ।</p><p>ଶବ୍ଦ ଓ ଗତି ପାଇଁ ପୃଥକ ଉଦାହରଣ ଦିଅ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=58" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୮</a></small></article>
+<article id="exercise-2"><h2>F. 1–4. Trace the brook from its source to its meeting with the river.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. It comes from the haunts of coot and hern. 2. It flashes into the light among the ferns. 3. It passes hills, ridges, villages, a town and bridges. 4. It joins the river by Philip’s farm.</p><p>Source ପାଇଁ ପକ୍ଷୀ ରହୁଥିବା ସ୍ଥାନ, route ପାଇଁ hills ଓ villages, destination ପାଇଁ river ରଖ। Brook riverରେ ମିଶିଲା ପରେ ଏହି ପଥବର୍ଣ୍ଣନା ସରେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=62" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୨–୬୩</a></small></article>
+<article id="exercise-3"><h2>F. 5–7. Explain the bank, chatter and quiet movement.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>5. Its winding current gradually wears away the banks. 6. Repetition imitates water making quick sounds over stones. 7. “Steal” and “slide” suggest its quiet, smooth movement.</p><p>ପାଣିରେ କୂଳ କ୍ଷୟ ଦୀର୍ଘ ସମୟର ଫଳ। Chatter ତତ୍କ୍ଷଣାତ୍ ଶୁଣାଯିବା ଶବ୍ଦ।</p><p>Steal by ଏଠି ଚୋରିର ଅର୍ଥ ଦିଏନାହିଁ; ଅଲକ୍ଷ୍ୟରେ ମୃଦୁ ଭାବରେ ଚାଲିବା ବୁଝାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=62" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୨–୬୩</a></small></article>
+<article id="exercise-4"><h2>F. 8–9. Explain the dancing sunbeam and reorder each printed set of lines.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>8. Sunlight falls in a net-like pattern across the shallow water; ripples make its reflection appear to dance. 9(i) 4 → 1 → 3 → 2: murmuring under the stars, brambles, shingly bars, cresses. 9(ii) 2 → 1 → 4 → 3: the brook curves, joins the river, mentions passing people and then its own continuing flow. ସଂଖ୍ୟା ପ୍ରତ୍ୟେକ ଖଣ୍ଡର ଛପା ଧାଡ଼ିର କ୍ରମକୁ ସୂଚାଏ।</p><p>ସୂର୍ଯ୍ୟର ସ୍ଥାନ ଦ୍ରୁତ ନାଚୁନାହିଁ। ଚଳନ୍ତା ଜଳର ପ୍ରତିଫଳନରୁ dance ଚିତ୍ର ହୁଏ।</p><p>ସଜାଣି ଅଂଶରେ ଗୋଟିଏ ପଙ୍କ୍ତିର subject ପର ପଙ୍କ୍ତିର verb ସହ ମିଳୁଛି କି ପରଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=62" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୨–୬୩</a></small></article>
+<article id="exercise-5"><h2>G (a). 1–6. Explain motion, sound, the river and the recurring refrain.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1. Here bicker describes the noisy descent; it makes us hear the water. 2. The stream winds in bends instead of taking a straight course. 3. Its ripples over stones and pebbles sound like quick speech. 4. Brimming suggests a river full of water. 5. I picture a narrow, lively brook entering a broad, full channel. 6. The refrain brings us back to the difference between a human lifetime and the brook’s continuing course. ପ୍ରଶ୍ନ ୫ର ଚିତ୍ର ନିଜର ହୋଇପାରେ; ଶବ୍ଦରୁ ପ୍ରମାଣ ଦିଅ।</p><p>ପ୍ରତ୍ୟେକ motion word ସହ ପଥର ପ୍ରକୃତି ଯୋଡ଼: ଢାଲରେ bicker, ବକ୍ରପଥରେ wind। ପୁନରୁକ୍ତ refrain ଉତ୍ତରରେ ଏକ ପିଢ଼ିର ମଣିଷ ଆସି ଚାଲିଗଲେ ବି ଜଳପ୍ରବାହ ଚାଲିଥିବା ଲେଖ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩</a></small></article>
+<article id="exercise-6"><h2>G (b). 1–4. Choose the answers about the journey, fish, speaker and duration.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>1 d, a human life; 2 i, the brook is full of life; 3 iv, the brook speaks; 4 iii, eternal, in the poem’s comparison. ଜୀବନ ସହ ଯାତ୍ରା ତୁଳନୀୟ ହେଲେ ମଧ୍ୟ ମନୁଷ୍ୟ ଓ ପ୍ରବାହର ସ୍ଥାୟିତ୍ୱ ଅଲଗା।</p><p>Fish ଉଲ୍ଲେଖ ଜଳ ଭିତର ଜୀବନର ପ୍ରମାଣ। “I” ଆମକୁ ବୁଝାଏ ଝରଣା ନିଜେ କହୁଛି।</p><p>Eternalକୁ ଏଠି କବିତାର ମାନବଜୀବନ ସହ ତୁଳନା ଭାବେ ପଢ଼।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=63" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୩–୬୪</a></small></article>
+<article id="exercise-7"><h2>G (c) · Rhymes and personification. Name seven rhyming pairs and write a six-line poem spoken by an object.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>hern/fern, sally/valley, down/town, ridges/bridges, flow/go, ways/bays, trebles/pebbles. A lamp speaks: I wait beside your chair at night. / You open books beneath my light. / I see the letters line by line. / Your pencil moves beside my shine. / At dawn you close the book with care. / I watch the sunrise from my chair. ଜଡ଼ବସ୍ତୁ ନିଜେ କହୁଛି ବୋଲି I ବ୍ୟବହାର କରାଯାଇଛି।</p><p>ଏକ ବସ୍ତୁ ପ୍ରଥମ ପୁରୁଷରେ କଥା କହିଲେ personification ହୁଏ। ନିଜ ଛଅ ପଙ୍କ୍ତିରେ ସେ ବସ୍ତୁ କ’ଣ କରେ ଓ କ’ଣ ଦେଖେ ତାହା ଲେଖି ଶେଷ ଶବ୍ଦଗୁଡ଼ିକୁ ଯୋଡ଼ାରେ ଶୁଣ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪</a></small></article>
+<article id="exercise-8"><h2>H (i). Match children’s questions to stanzas a reader can use as replies.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Where do you rise? — stanza 1. What places do you pass? — stanza 2. What sounds do you make over stones? — stanza 4. Which fish swim with you? — stanza 7. What do you do under the moon? — stanza 12. Where are you going at the end? — stanza 13. ଉତ୍ତରଦାତା ନିଜ ପୁସ୍ତକର ସମ୍ପୃକ୍ତ ସ୍ତବକଟି ପଢ଼ିବେ।</p><p>Where ପାଇଁ ସ୍ଥାନ ଥିବା stanza, what sound ପାଇଁ chatter ଆଦି ଥିବା stanza ବାଛ। ପ୍ରଶ୍ନ ଓ ଉତ୍ତରର ପ୍ରଥମ ଶବ୍ଦ ଏକେ ନଥିଲେ ମଧ୍ୟ ଏହି ସମ୍ପର୍କ ମିଳେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=64" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୪</a></small></article>
+<article id="exercise-9"><h2>H (ii). Complete and enact the conversation between a child and a brook.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Child: Who are you? Brook: I am a small stream. Child: Where are you going?</p><p>Brook: To join the river. Child: Where will you meet it? Brook: Near Philip’s farm. Child: What do you see en route?</p><p>Brook: I pass hills, bridges, fields and flowers. Child: How long will you flow? Brook: In my song I flow for ever. ନିଜ ଭାଷାରେ କଥୋପକଥନ କରି ପ୍ରଥମ ପୁରୁଷର ସ୍ୱର ରଖ।</p><p>Child ପ୍ରଶ୍ନରେ you କହିବ, brook ଉତ୍ତରରେ I କହିବ। “I pass …” ପରେ ପଥର ସ୍ଥାନ ଓ “I join …” ପରେ river ରଖିଲେ ସଂଳାପ ଯାତ୍ରାର କ୍ରମ ଦେଖାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=65" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୫</a></small></article>
+<article id="exercise-10"><h2>I (a), (b). Write an object’s self-description and a rhyming stanza.</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>a. I am a blackboard. All day I carry questions and diagrams. At the end of the lesson someone wipes me clean, and the next class gives me a new beginning. b. I am a pen that leaves a trail, / I ride each line as boats might sail. / You rest my point when day is done, / I wake to greet the morning sun. ଶେଷ ଧ୍ୱନି trail/sail ଓ done/sun ମିଳିଛି।</p><p>Blackboard ନିଜ ପୃଷ୍ଠରେ ଲେଖା ଓ ପୋଛାଯିବା କହିପାରେ। ଏଭଳି ବସ୍ତୁ ସହ ମେଳ ଥିବା ଦୁଇ କାମ ବାଛ, ପରେ ଏକ ଯୋଡ଼ା rhyming end words ଖୋଜ।</p><p>କେବଳ rhyme ପାଇଁ ବସ୍ତୁର ଅର୍ଥ ବଦଳାଅନାହିଁ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=65" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୬୫</a></small></article>
+
+</main></body></html>

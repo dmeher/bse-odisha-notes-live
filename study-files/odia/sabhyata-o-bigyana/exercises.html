@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ସଭ୍ୟତା ଓ ବିଜ୍ଞାନ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ସଭ୍ୟତା ଓ ବିଜ୍ଞାନ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1lTSObttEcXqOKHT2Zy3zizh23MucSHvJ/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୩୦। ଯାଞ୍ଚ କରାଯାଇଥିବା ଉତ୍ତର ପ୍ରଶ୍ନକ୍ରମରେ ଦିଆଯାଇଛି।</p><p>୨୮ରେ ଅନ୍ୟ ବିଜ୍ଞାନ ପ୍ରବନ୍ଧ ପାଠ ଆବଶ୍ୟକ। ମୂଳ ଅଧ୍ୟାୟର ଲେଖକ ପରିଚୟରୁ ପତ୍ରିକା ଓ ରଚନା ସନ୍ଧାନର ସୂତ୍ର ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · ୭–୯</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୩୦)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">୧୬</a> <a href="#exercise-17">୧୭</a> <a href="#exercise-18">୧୮</a> <a href="#exercise-19">୧୯</a> <a href="#exercise-20">୨୦</a> <a href="#exercise-21">୨୧</a> <a href="#exercise-22">୨୨</a> <a href="#exercise-23">୨୩</a> <a href="#exercise-24">୨୪</a> <a href="#exercise-25">୨୫</a> <a href="#exercise-26">୨୬</a> <a href="#exercise-27">୨୭</a> <a href="#exercise-28">୨୮</a> <a href="#exercise-29">୨୯</a> <a href="#exercise-30">୩୦</a></nav></details>
+<article id="exercise-1"><h2>୧. ଆଠଟି ଶବ୍ଦର ବିପରୀତାର୍ଥ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ବିପରୀତ ପଦରେ କେଉଁ ଭାବଟି ଓଲଟିଲା ଦେଖ। ନୈତିକ–ଅନୈତିକରେ ନୀତି, ଇଚ୍ଛାକୃତ–ଅନିଚ୍ଛାକୃତରେ ଇଚ୍ଛା ଓ ଅକ୍ଷୁଣ୍ଣ–କ୍ଷୁଣ୍ଣରେ ଅକ୍ଷତ ରହିବାର ଭାବ।</li><li>ପ୍ରାଚୀନ–ଆଧୁନିକ ଓ ପୂର୍ବବର୍ତ୍ତୀ–ପରବର୍ତ୍ତୀ ଯୋଡ଼ାରେ ସମୟର ପାର୍ଥକ୍ୟ। ଉନ୍ନତି–ଅବନତିରେ ଉତ୍ଥାନ ଓ ପତନ, ବିକାଶ–ସଙ୍କୋଚରେ ପ୍ରସାର ଓ ସଙ୍କୁଚନ, ସଂଯୋଗ–ବିଯୋଗରେ ମିଳିବା ଓ ଅଲଗା ହେବାର ଭାବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନୈତିକ — ଅନୈତିକ। ଉନ୍ନତି — ଅବନତି।</p><p>ପ୍ରାଚୀନ — ଆଧୁନିକ। ଇଚ୍ଛାକୃତ — ଅନିଚ୍ଛାକୃତ।</p><p>ଅକ୍ଷୁଣ୍ଣ — କ୍ଷୁଣ୍ଣ। ପୂର୍ବବର୍ତ୍ତୀ — ପରବର୍ତ୍ତୀ।</p><p>ବିକାଶ — ସଙ୍କୋଚ। ସଂଯୋଗ — ବିଯୋଗ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫</a></small></article>
+<article id="exercise-2"><h2>୨. ସାତଟି ଶବ୍ଦକୁ ବାକ୍ୟରେ ପ୍ରୟୋଗ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ନମୁନା ବାକ୍ୟରେ ‘ବୈଷୟିକ’ ବାହ୍ୟ ଜୀବନର ସୁଖକୁ ଓ ‘ମାନବିକତା’ ମଣିଷ ପ୍ରତି ସ୍ନେହ ଓ କର୍ତ୍ତବ୍ୟକୁ ବୁଝାଏ। ଏହି ଦୁଇ ଧାରଣାର ସମ୍ପର୍କ ପ୍ରବନ୍ଧର ଆଲୋଚ୍ୟ।</li><li>ଆରୋହଣରେ ଉପରକୁ ଚଢ଼ିବା, ଅନବରତରେ ଲଗାତାର ଚାଲିବା, ଦୁରୂହରେ କଠିନତା, ବିସ୍ତୃତରେ ପ୍ରସାର ଓ ବିଚଳିତରେ ଅସ୍ଥିର ହେବାର ଭାବ ରଖ। ତେବେ ଶବ୍ଦ ବଦଳାଇ ପଢ଼ିଲେ ମଧ୍ୟ ମୂଳ ଅର୍ଥ ମେଳ ଖାଇବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନମୁନା ବାକ୍ୟ — ରେଳ ଓ ମଟର ଆମକୁ ବୈଷୟିକ ସୁଖ ଦିଅନ୍ତି। ମାନବିକତା ଆଧୁନିକ ସଭ୍ୟତାର ଏକ ଆଦର୍ଶ।</p><p>ମଣିଷ ଉଚ୍ଚ ପର୍ବତ ଆରୋହଣ କରେ। ସତ୍ୟର ଅନୁସନ୍ଧାନ ଅନବରତ ଚାଲିଛି।</p><p>ବିଜ୍ଞାନ ଦୁରୂହ ସମସ୍ୟାକୁ ସହଜ କରେ। ଅଧ୍ୟୟନରେ ଜ୍ଞାନର ସୀମା ବିସ୍ତୃତ ହୁଏ।</p><p>ବାଧା ଆସିଲେ ଅନୁସନ୍ଧାନୀ ବିଚଳିତ ହୁଏନି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=49">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୯–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫</a></small></article>
+<article id="exercise-3"><h2>୩. ଛଅଟି ଶବ୍ଦର ସନ୍ଧିବିଚ୍ଛେଦ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଦୁଇ ମୂଳ ଭାଗର ସୀମା ଚିହ୍ନ। ଅନ୍ୟ + ଅନ୍ୟରେ ସନ୍ଧିସ୍ଥଳରେ ଦୀର୍ଘ ‘ଆ’ ମିଳେ। ସମ୍ + ଯୋଗରେ ଅନ୍ତିମ ମ୍ ସ୍ଥାନରେ ଅନୁସ୍ୱାର ଦିଶେ।</li><li>ଅନ୍ତଃ, ଆୟୁଃ ଓ ମନଃର ଅନ୍ତିମ ବିସର୍ଗ ପରପଦ ସହ ମିଶି କ୍ରମେ ଅନ୍ତର୍ଗତ, ଆୟୁର୍ବେଦ ଓ ମନସ୍ତତ୍ତ୍ୱ ହୋଇଛି। ଉଲ୍ଲିଖିତର ‘ଲ୍ଲ’କୁ ପୃଥକ୍ କଲେ ଉତ୍ + ଲିଖିତ ମିଳେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଅନ୍ୟାନ୍ୟ = ଅନ୍ୟ + ଅନ୍ୟ। ଅନ୍ତର୍ଗତ = ଅନ୍ତଃ + ଗତ।</p><p>ସଂଯୋଗ = ସମ୍ + ଯୋଗ। ଆୟୁର୍ବେଦ = ଆୟୁଃ + ବେଦ।</p><p>ମନସ୍ତତ୍ତ୍ୱ = ମନଃ + ତତ୍ତ୍ୱ। ଉଲ୍ଲିଖିତ = ଉତ୍ + ଲିଖିତ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫</a></small></article>
+<article id="exercise-4"><h2>୪. ନଅଟି ଶବ୍ଦର ପ୍ରକୃତି ଓ ପ୍ରତ୍ୟୟ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏକା ପ୍ରତ୍ୟୟ ଥିବା ପଦକୁ ମିଳାଅ। ପାର୍ବତୀୟ ଓ ଭାରତୀୟରେ ‘ଈୟ’, ଶାରୀରିକ, ମାନସିକ ଓ ବୈଜ୍ଞାନିକରେ ‘ଇକ’। ପ୍ରତ୍ୟୟ ଯୋଗ ହେଲେ ପ୍ରକୃତିର ସ୍ୱର ମଧ୍ୟ ବଦଳିପାରେ।</li><li>କରଣୀୟ ଓ କର୍ତ୍ତବ୍ୟର ପ୍ରକୃତି ଏକ—‘କୃ’। କିନ୍ତୁ ‘ଅନୀୟ’ ଓ ‘ତବ୍ୟ’ ପ୍ରତ୍ୟୟ ଅଲଗା। ‘ତ୍ୟାଗ’ର ମୂଳ ଧାତୁ ‘ତ୍ୟଜ୍’ ଓ ‘ସର୍ବାଙ୍ଗୀନ’ର ମୂଳ ‘ସର୍ବାଙ୍ଗ’ ଚିହ୍ନିଲେ ଶେଷର ଯୋଗକୁ ସହଜରେ ଅଲଗା କରିହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଶାରୀରିକ = ଶରୀର + ଇକ। ମାନସିକ = ମନସ୍ + ଇକ।</p><p>ପାର୍ବତୀୟ = ପର୍ବତ + ଈୟ। ଭାରତୀୟ = ଭାରତ + ଈୟ।</p><p>ତ୍ୟାଗ = ତ୍ୟଜ୍ + ଅ। ସର୍ବାଙ୍ଗୀନ = ସର୍ବାଙ୍ଗ + ଈନ।</p><p>କରଣୀୟ = କୃ + ଅନୀୟ। ବୈଜ୍ଞାନିକ = ବିଜ୍ଞାନ + ଇକ।</p><p>କର୍ତ୍ତବ୍ୟ = କୃ + ତବ୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫</a></small></article>
+<article id="exercise-5"><h2>୫. ଚାରିଟି ଶବ୍ଦର ଦୁଇଟି ଲେଖାଏଁ ପ୍ରତିଶବ୍ଦ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ପଦ କାହାକୁ ବୁଝାଉଛି ଦେଖ। ହସ୍ତୀ, ଗଜ ଓ କରୀ ଏକ ପ୍ରାଣୀକୁ; ମାନବ, ନର ଓ ମନୁଷ୍ୟ ମଣିଷକୁ ସୂଚାନ୍ତି।</li><li>ପ୍ରସଙ୍ଗରେ ବସାଇ ପରଖ। ‘ମୈତ୍ରୀର ଧ୍ୱଜା’ରେ ଧ୍ୱଜା ସ୍ଥାନରେ ପତାକା ବା କେତନ ରଖିଲେ ପ୍ରତୀକଟି ରହେ। ହିମାଳୟ ପାଇଁ ଗିରି ବା ଶୈଳ କହିଲେ ପର୍ବତର ପରିଚୟ ରହେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ହସ୍ତୀ — ଗଜ, କରୀ। ମାନବ — ନର, ମନୁଷ୍ୟ।</p><p>ଧ୍ୱଜା — ପତାକା, କେତନ। ପର୍ବତ — ଗିରି, ଶୈଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=52">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୨–୫୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=55" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୫</a></small></article>
+<article id="exercise-6"><h2>୬. ଦିଆଯାଇଥିବା ଚାରୋଟି ଅଶୁଦ୍ଧ ଶବ୍ଦ ସଂଶୋଧନ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଶରୀର’ରୁ ‘ଶାରୀରିକ’ ହେଉଛି। ‘ସାହାଯ୍ୟ’ ଶେଷରେ ଯୁକ୍ତାକ୍ଷର ‘ଯ୍ୟ’ ଓ ‘ଆଶୀର୍ବାଦ’ରେ ଦୀର୍ଘ ‘ଈ’ ପ୍ରତି ଧ୍ୟାନ ଦିଅ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>କ୍ରମ ଅନୁସାରେ ଶୁଦ୍ଧ ରୂପ — ଶାରୀରିକ, ସାହାଯ୍ୟ, ସଂଶ୍ଳିଷ୍ଟ, ଆଶୀର୍ବାଦ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-7"><h2>୭. ଲକ୍ଷ–ଲକ୍ଷ୍ୟ, କୁଳ–କୂଳ ଓ ଚରିତ–ଚରିତ୍ରର ଅର୍ଥଭେଦ ଦର୍ଶାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଯାଞ୍ଚ ପାଇଁ ନମୁନା ବାକ୍ୟ ନିଅ—“ଲକ୍ଷ ଲୋକଙ୍କ ଲକ୍ଷ୍ୟ ଏକ।” ପ୍ରଥମ ପଦ ସଂଖ୍ୟା, ଦ୍ୱିତୀୟଟି ଉଦ୍ଦେଶ୍ୟ। “ନଦୀକୂଳରେ ମୋର କୁଳ ବସବାସ କରେ”ରେ ସ୍ଥାନ ଓ ବଂଶ ଭିନ୍ନ।</li><li>“ତାଙ୍କ ଚରିତ ପଢ଼ି ତାଙ୍କ ଚରିତ୍ରର ପରିଚୟ ପାଇଲି”ରେ ପ୍ରଥମଟି ଜୀବନବୃତ୍ତାନ୍ତ ଓ ଦ୍ୱିତୀୟଟି ସ୍ୱଭାବ। ବନାନର ସାନ ପାର୍ଥକ୍ୟ ଅନୁସାରେ ଠିକ୍ ଅର୍ଥ ବାଛିବାକୁ ହୁଏ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲକ୍ଷ — ଶହେ ହଜାର, ଲକ୍ଷ୍ୟ — ଉଦ୍ଦେଶ୍ୟ ବା ନିଶାଣ। କୁଳ — ବଂଶ, କୂଳ — ନଦୀ ଆଦିର ତୀର।</p><p>ଚରିତ — ଜୀବନ ବୃତ୍ତାନ୍ତ, ଚରିତ୍ର — ଆଚରଣ ବା ସ୍ୱଭାବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-8"><h2>୮. କାହାକୁ ସଭ୍ୟତା ଆଖ୍ୟା ମିଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସଭ୍ୟତାର ବିଚାରରେ ଲେଖକ ବୈଷୟିକ ଉନ୍ନତି ସହ ଶାରୀରିକ, ମାନସିକ, ନୈତିକ ଉନ୍ନତି ଓ ଜ୍ଞାନସାଧନକୁ ଗଣନା କରନ୍ତି। ଭିନ୍ନ ଯୁଗ ଓ ଜାତି ଏହି ଅଙ୍ଗଗୁଡ଼ିକୁ ଭିନ୍ନ ଗୁରୁତ୍ୱ ଦେଇଥାନ୍ତି। (ପାଠର ପୃ. ୧)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମାନବର ବୈଷୟିକ, ଶାରୀରିକ, ମାନସିକ ଓ ନୈତିକ ଉନ୍ନତି ଏବଂ ଜ୍ଞାନସାଧନର ସମଷ୍ଟିକୁ ସଭ୍ୟତା କୁହାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-9"><h2>୯. ରୋମୀୟ ଓ ଭାରତୀୟ ଆଦର୍ଶର ପାର୍ଥକ୍ୟ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଲେଖକଙ୍କ ତୁଳନାରେ ପ୍ରାଚୀନ ରୋମ ଓ ଗ୍ରୀସର ବୈଷୟିକ ସମୃଦ୍ଧିରେ ଭୋଗର ଆଦର୍ଶ ପ୍ରମୁଖ। ଭାରତୀୟ ସଭ୍ୟତାରେ କଳା ଓ ସମ୍ପଦ ସହ ଆତ୍ମସଂଯମ, ତ୍ୟାଗ ଓ ଆଧ୍ୟାତ୍ମିକତାକୁ ବିଶେଷ ସ୍ଥାନ ମିଳିଛି। (ପାଠର ପୃ. ୧–୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲେଖକଙ୍କ ତୁଳନାରେ ରୋମୀୟ ସଭ୍ୟତା ବୈଷୟିକ ଉନ୍ନତି ଓ ଭୋଗକୁ ଲକ୍ଷ୍ୟ କରିଥିଲା। ଭାରତୀୟ ସଭ୍ୟତାର ଆଦର୍ଶ ଥିଲା ତ୍ୟାଗ ଓ ଆତ୍ମସଂଯମ।</p><p>ଭାରତରେ ବୈଷୟିକ ଉନ୍ନତି ମଧ୍ୟ ହୋଇଥିଲା, କିନ୍ତୁ ତାହା ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ ନଥିଲା।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-10"><h2>୧୦. ଭାରତୀୟ ସଭ୍ୟତାର ଆଦର୍ଶ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଭାରତୀୟ ସଭ୍ୟତାରେ କଳା ଓ ସମ୍ପଦ ସହ ଆତ୍ମସଂଯମ, ତ୍ୟାଗ ଓ ଆଧ୍ୟାତ୍ମିକତାକୁ ବିଶେଷ ସ୍ଥାନ ମିଳିଛି। ଏହି ତୁଳନା ଲେଖକ କେଉଁ ଲକ୍ଷ୍ୟ ଧରି ସଭ୍ୟତାକୁ ବିଚାର କରୁଛନ୍ତି ତାହା ବୁଝାଏ। (ପାଠର ପୃ. ୧–୨)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତ୍ୟାଗ, ଆତ୍ମସଂଯମ ଓ ଆଧ୍ୟାତ୍ମିକତା। ଗୃହସ୍ଥ ବିଷୟସମ୍ପତ୍ତିକୁ ବ୍ୟବହାର କଲେ ମଧ୍ୟ ସେଥିରେ ଆସକ୍ତ ନ ହେବା ଏହି ଆଦର୍ଶର ପରିଚୟ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-11"><h2>୧୧. ଗୃହସ୍ଥର ପଥ କେତେବେଳେ ପୃଥକ୍ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏଠି ‘ବିଷୟ’ର ଅର୍ଥ ସମ୍ପଦ ଓ ସାଂସାରିକ ଉପକରଣ। ଗୃହସ୍ଥ ପାଖରେ ସେଗୁଡ଼ିକ ରହିବା ଓ ସେଗୁଡ଼ିକ ପ୍ରତି ଆସକ୍ତ ହେବା ଏକ କଥା ନୁହେଁ।</li><li>ଲେଖକ ଗୃହସ୍ଥର ପଥ ଚିହ୍ନିବା ପାଇଁ ସେ କେତେ ଧନୀ ତାହା ଅପେକ୍ଷା କେଉଁ ଆଦର୍ଶରେ ତାହା ବ୍ୟବହାର କରେ ସେଥିରେ ଗୁରୁତ୍ୱ ଦେଇଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ତ୍ୟାଗମାର୍ଗରେ ଦୀକ୍ଷିତ ହୋଇ ସେ ବିଷୟର ମାଲିକ ହେଲେ ମଧ୍ୟ ବିଷୟରେ ଆସକ୍ତ ହୁଏନି। ସେତେବେଳେ ତା’ର ପଥ ଭୋଗକୁ ଲକ୍ଷ୍ୟ କରିଥିବା ଜାତିର ପଥରୁ ପୃଥକ୍ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=50">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-12"><h2>୧୨. ବର୍ତ୍ତମାନ ସଭ୍ୟତାର ଆଦର୍ଶ ପ୍ରବନ୍ଧରେ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶାରୀରିକ, ମାନସିକ ଓ ନୈତିକ ଉନ୍ନତି ସହ ବିଶ୍ୱ ଓ ତା’ର ଅନ୍ତର୍ନିହିତ ଶକ୍ତିକୁ ବୁଝିବା ଆଧୁନିକ ଜିଜ୍ଞାସା। ତଦନ୍ତ ଓ ପରୀକ୍ଷା ଚାଲୁଥିବା ବେଳେ ଆଜିର ଫଳକୁ ଶେଷ ଫଳ ବୋଲି କହିହେବ ନାହିଁ। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ମଣିଷର ସର୍ବାଙ୍ଗୀନ ଉନ୍ନତି। ବୈଷୟିକ, ଶାରୀରିକ, ମାନସିକ ଓ ନୈତିକ ବିକାଶ ସହ ବିଶ୍ୱମାନବିକତାର ପ୍ରତିଷ୍ଠା, ସୃଷ୍ଟିର ରହସ୍ୟ ଓ ତା’ ମୂଳର ମହାଶକ୍ତିର ଅନୁସନ୍ଧାନ ଏହାର ଅଂଶ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-13"><h2>୧୩. ଜଡ଼ବିଜ୍ଞାନର ଭାଗଗୁଡ଼ିକ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଆଲୋକ, ଉତ୍ତାପ ଓ ଶବ୍ଦ ଉଦାହରଣ। ଭାଗ ପଚାରିଲେ ପ୍ରଥମେ ପଦାର୍ଥବିଜ୍ଞାନ ଓ ରସାୟନବିଜ୍ଞାନ ଏହି ଦୁଇ ନାମ ଲେଖିବା ଦରକାର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଦୁଇ ଭାଗ। ପଦାର୍ଥବିଜ୍ଞାନ ଓ ରସାୟନବିଜ୍ଞାନ।</p><p>ପଦାର୍ଥବିଜ୍ଞାନରେ ଆଲୋକ, ଉତ୍ତାପ, ବିଦ୍ୟୁତ୍ ଓ ଶବ୍ଦ ଆଦିର ଅନୁସନ୍ଧାନ କରାଯାଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-14"><h2>୧୪. ବୈଷୟିକ ସୁଖସମୃଦ୍ଧି ଦେବା ଉପକରଣର ଉଦାହରଣ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ରେଳ, ଉଡ଼ାଜାହାଜ, ବୁଡ଼ାଜାହାଜ, ରେଡ଼ିଓ ଓ ଟେଲିଫୋନ୍ ପାଠର ଉଦାହରଣ। ସାଗର ଓ ହିମାଳୟ ପାର ହେବାର ଉଲ୍ଲେଖ ଭୌଗୋଳିକ ବାଧା କିପରି ମଣିଷର ଜ୍ଞାନ ଆଗରେ କମିଛି ତାହା ଦେଖାଏ। (ପାଠର ପୃ. ୩–୪)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ରେଳ, ମଟର, ଉଡ଼ାଜାହାଜ ଓ ବୁଡ଼ାଜାହାଜ ଯାତାୟାତର ସୁବିଧା ଦେଇଛି। ବେତାର ଯନ୍ତ୍ର, ରେଡ଼ିଓ, ଟେଲିଭିଜନ ଓ ଟେଲିଫୋନ ଦୂରରୁ କଥା ଓ ଖବର ପହଞ୍ଚାଇଛି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-15"><h2>୧୫. ଜୀବବିଜ୍ଞାନର ଚର୍ଚ୍ଚାରୁ କ’ଣ ସନ୍ଧାନ ମିଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରାଣୀ ଓ ଉଦ୍ଭିଦ ଭିନ୍ନ ହୋଇଥିଲେ ବି ଉଭୟ ଜୀବନ୍ତ। ତେଣୁ ଲେଖକ ଏହି ଦୁଇଟି ଅଧ୍ୟୟନକୁ ଏକାଠି କରି ଜୀବର ଗଠନ ଓ ତାହା ଭିତରେ ଜୀବନଶକ୍ତିର କଥା ବୁଝାଇଛନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାଣୀବିଜ୍ଞାନ ଓ ଉଦ୍ଭିଦବିଜ୍ଞାନର ଚର୍ଚ୍ଚାରୁ ଜୀବର ବିଭିନ୍ନ ଗଠନ, ଜୀବନପ୍ରକ୍ରିୟା ଓ ଜୀବନଶକ୍ତି ସମ୍ପର୍କରେ ସନ୍ଧାନ ମିଳେ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-16"><h2>୧୬. ଆମ ଜ୍ଞାନର ସୀମା କିପରି ବିସ୍ତୃତ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଜଡ଼ବିଜ୍ଞାନ ଓ ଜୀବବିଜ୍ଞାନର ସହଯୋଗରେ ଶରୀରତତ୍ତ୍ୱ, ଚିକିତ୍ସା ଓ କୃଷିର ଜ୍ଞାନ ବଢ଼େ। ପ୍ରକୃତିର ବିଭିନ୍ନ ଶକ୍ତିର ସମ୍ପର୍କ ଚିହ୍ନିବା ଓ ସେହି ବୋଧକୁ ଜୀବନର ବୃହତ୍ତର ଲକ୍ଷ୍ୟରେ ଲଗାଇବା ଲେଖକଙ୍କ ନିକଟରେ ବିଜ୍ଞାନ ଓ ସଭ୍ୟତାର ଯୋଗସୂତ୍ର। (ପାଠର ପୃ. ୪–୫)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜଡ଼ବିଜ୍ଞାନ ଓ ଜୀବବିଜ୍ଞାନର ସହଯୋଗରୁ ଶରୀରତତ୍ତ୍ୱ, ଆୟୁର୍ବେଦ, ମନସ୍ତତ୍ତ୍ୱ, କୃଷିବିଜ୍ଞାନ ଓ ପୃଥିବୀତତ୍ତ୍ୱ ଆଦିରେ ନୂଆ ଜ୍ଞାନ ମିଳେ। ବିଭିନ୍ନ ବିଭାଗର ତଥ୍ୟ ଏକାଠି କଲେ ଗୋଟିଏ ପ୍ରଶ୍ନକୁ ଏକାଧିକ ଦିଗରୁ ବୁଝିହୁଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-17"><h2>୧୭. ଜୀବନ୍ତ ପଦାର୍ଥର ଶରୀର ବିଷୟରେ ପ୍ରବନ୍ଧର ଧାରଣା କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଶରୀରକୁ ବିଶ୍ଳେଷଣ କଲେ ତାହା ମଧ୍ୟରେ ଜଡ଼ ଉପାଦାନ ମିଳେ। ଏହା ଶରୀର କେଉଁଥିରେ ଗଢ଼ା ତାହାର ଉତ୍ତର।</li><li>ସେହି ଉପାଦାନର ସମାବେଶରେ ଜୀବନ୍ତ ଶକ୍ତି କିପରି ପ୍ରକାଶ ପାଏ ତାହା ଆଉ ଏକ ପ୍ରଶ୍ନ। ତାହାକୁ ଲେଖକ ଅନୁସନ୍ଧାନର ବିଷୟ କରିଛନ୍ତି। ଉତ୍ତରରେ ପ୍ରବନ୍ଧର ଏହି ମତକୁ ସ୍ପଷ୍ଟ କର।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜୀବନ୍ତ ଶରୀର ବିଭିନ୍ନ ଜଡ଼ ଉପାଦାନରେ ଗଠିତ। ସେମାନଙ୍କ ସମାବେଶ ସହ ଜୀବନ୍ତ ଶକ୍ତିର ବିକାଶ ଯୋଡ଼ି ଜୀବନକୁ ବୁଝିବା ପାଇଁ ଲେଖକ ପ୍ରୟାସ କରିଛନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=52">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୨–୫୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-18"><h2>୧୮. ବିଜ୍ଞାନ ମଣିଷକୁ ଧ୍ୱଂସପଥରେ ନେଉଛି ବୋଲି କାହିଁକି ଅଭିଯୋଗ ହୋଇଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଅଭିଯୋଗର ପ୍ରମାଣ ଭାବେ ଯୁଦ୍ଧର ଲୋକକ୍ଷୟ ଦିଆଯାଏ। ହିଂସାର କାମରେ ମଣିଷ ବିଜ୍ଞାନରୁ ମିଳିଥିବା ଶକ୍ତି ପ୍ରୟୋଗ କରିଛି।</li><li>କିନ୍ତୁ ସେହି ଜ୍ଞାନ ରୋଗ ଚିକିତ୍ସାରେ ମଧ୍ୟ ଲାଗେ। ଏହି ଦୁଇ ପରିଣାମକୁ ମେଳାଇ ଲେଖକ ଜ୍ଞାନ ଓ ମଣିଷର ବ୍ୟବହାର ମଧ୍ୟରେ ପାର୍ଥକ୍ୟ ଦେଖାନ୍ତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଯୁଦ୍ଧରେ ମାରାତ୍ମକ ଗ୍ୟାସ ଓ ବିସ୍ଫୋରକ ଲୋକକ୍ଷୟ ଘଟାଉଥିବା ଦେଖି ବିପକ୍ଷବାଦୀ ଏହା କହନ୍ତି। ଲେଖକଙ୍କ ଉତ୍ତର ହେଉଛି ହିଂସା, ଦ୍ୱେଷ ଓ ଜ୍ଞାନର ଅପପ୍ରୟୋଗ ଏହି କ୍ଷତି ଘଟାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-19"><h2>୧୯. ମୈତ୍ରୀର ଧ୍ୱଜା କେବେ ଉଡ଼ିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଧ୍ୱଜା ଉଡ଼ିବ’ ଏଠି ମଣିଷଙ୍କ ମଧ୍ୟରେ ମିତ୍ରଭାବ ପ୍ରତିଷ୍ଠିତ ହେବାର ପ୍ରତୀକ। ପ୍ରଶ୍ନର ‘କେବେ’ର ଉତ୍ତର ତାରିଖ ନୁହେଁ, ମାନବିକତାର ସର୍ତ୍ତ।</li><li>ବିଜ୍ଞାନ ଶକ୍ତି ଦିଏ, ତାହା କାହାର ହିତରେ ଲାଗିବ ସେ ନିଷ୍ପତ୍ତି ମଣିଷ ନିଏ। ପରସ୍ପର ପ୍ରତି କର୍ତ୍ତବ୍ୟ ଚିହ୍ନିଲେ ହିଂସା ଓ ଦ୍ୱେଷରେ ସେହି ଶକ୍ତି ବ୍ୟୟ ହେବ ନାହିଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟେକ ମଣିଷ ସଭ୍ୟତାର ପ୍ରକୃତ ଆଦର୍ଶ ଓ ପରସ୍ପର ପ୍ରତି ନିଜ କର୍ତ୍ତବ୍ୟ ବୁଝିବାବେଳେ। ମାନବିକତା ସ୍ଥାପିତ ହେଲେ ହିଂସା କମି ମୈତ୍ରୀ ପ୍ରତିଷ୍ଠିତ ହେବ ବୋଲି ଲେଖକଙ୍କ ଆଶା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=53">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୩</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-20"><h2>୨୦. ବିଜ୍ଞାନର ଅନ୍ଧକାର ଦିଗ ଅପସାରିତ ହେଲେ କ’ଣ ରହିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଅନ୍ଧକାର’ ଓ ‘ଆଲୋକମୟ’ ଦୁଇଟି ରୂପକ। ଅଧୂରା ଜ୍ଞାନର ବିପଦ ଓ ଜ୍ଞାନର ମଙ୍ଗଳକାରୀ ପ୍ରଭାବ ଏମାନଙ୍କ ଦ୍ୱାରା ଅଲଗା ହୋଇଛି।</li><li>ପର୍ବତ ଶିଖରରେ ପହଞ୍ଚିବାର ତୁଳନା ଦେଇ ଲେଖକ ଜ୍ଞାନର ପୂର୍ଣ୍ଣତାକୁ ବୁଝାଇଛନ୍ତି। ତାଙ୍କ ଆଶା ଅନୁସାରେ ସେହି ସ୍ଥିତିରେ ଆଲୋକମୟ ପ୍ରଭାବ ରହିବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜ୍ଞାନ ଓ ଦାୟିତ୍ୱବୋଧ ସମ୍ପୂର୍ଣ୍ଣ ହେଲେ ବିଜ୍ଞାନର ଆଲୋକମୟ ପ୍ରଭାବ ରହିବ। ସେହି ପଥପ୍ରଦର୍ଶନରେ ସର୍ବାଙ୍ଗୀନ ଉନ୍ନତି ଓ ଉଚ୍ଚତର ସଭ୍ୟତା ସମ୍ଭବ ବୋଲି ଲେଖକ ବିଶ୍ୱାସ କରନ୍ତି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=54">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-21"><h2>୨୧. ତ୍ୟାଗମାର୍ଗୀ ଗୃହସ୍ଥର ପଥ କିପରି ଭୋଗମାର୍ଗଠାରୁ ଅଲଗା? ସରଳାର୍ଥ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରସଙ୍ଗଟି ପ୍ରାଚୀନ ସଭ୍ୟତାର ଆଦର୍ଶ ତୁଳନା। ‘ଗୃହସ୍ଥ’ ଶବ୍ଦ ବାଛିଥିବାରୁ ମଣିଷ ସଂସାରରେ ରହି କିପରି ତ୍ୟାଗମାର୍ଗ ଗ୍ରହଣ କରିପାରେ ତାହା ସ୍ପଷ୍ଟ ହୁଏ।</li><li>ଯେଉଁ ଜୀବନର ଲକ୍ଷ୍ୟ କେବଳ ଭୋଗ ସେଠି ସମ୍ପଦ ହିଁ ସଫଳତା। ତ୍ୟାଗମାର୍ଗୀ ପାଇଁ ସମ୍ପଦ ଅଧୀନରେ ଥାଏ କିନ୍ତୁ ମନ ତାହାର ଅଧୀନ ହୁଏନାହିଁ। ଏହାହିଁ ପଥ ପୃଥକ୍ ହେବାର ସରଳ ଅର୍ଥ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ବଂଶୀଧର ସାମନ୍ତରାୟ ଭାରତୀୟ ଆଦର୍ଶର ଗୃହସ୍ଥକୁ ଉଦାହରଣ ଦେଇଛନ୍ତି। ସେ ସମ୍ପତ୍ତି ପରିଚାଳନା କରିପାରେ, କିନ୍ତୁ ତା’ ମନକୁ ସମ୍ପତ୍ତିର ଅଧୀନ ହେବାକୁ ଦିଏନି।</p><p>ବାହ୍ୟ ଐଶ୍ୱର୍ଯ୍ୟ ଦୁଇ ସଭ୍ୟତାରେ ଥିଲେ ବି ଆସକ୍ତି ଓ ଆତ୍ମସଂଯମର ଭେଦରେ ସେମାନଙ୍କ ଲକ୍ଷ୍ୟ ଅଲଗା।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=50">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-22"><h2>୨୨. ଭାରତର ବୈଶିଷ୍ଟ୍ୟ ତାହାର ଆଧ୍ୟାତ୍ମିକତା—ଅର୍ଥ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରସଙ୍ଗରେ ଲେଖକ ଦୁଇଟି ପ୍ରଶ୍ନ ପୃଥକ୍ କରିଛନ୍ତି। ଦେଶରେ କଳା ଓ ବୈଷୟିକ ସମ୍ପଦ ଥିଲା କି, ଏବଂ ଜୀବନର ସର୍ବୋଚ୍ଚ ଲକ୍ଷ୍ୟ କ’ଣ ଥିଲା?</li><li>ପ୍ରଥମ ପ୍ରଶ୍ନରେ ଭାରତର ମଧ୍ୟ ନିଦର୍ଶନ ଅଛି। ଦ୍ୱିତୀୟ ପ୍ରଶ୍ନରେ ଲେଖକ ଆତ୍ମସଂଯମ, ତ୍ୟାଗ ଓ ଅନ୍ତରର ସତ୍ୟ ଅନ୍ୱେଷଣକୁ ସ୍ୱାତନ୍ତ୍ର୍ୟ ଭାବେ ଦେଖନ୍ତି। ଏହି ଦ୍ୱିତୀୟ ଅର୍ଥରେ ଭାରତର ବୈଶିଷ୍ଟ୍ୟ ଆଧ୍ୟାତ୍ମିକତା।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରାଚୀନ ରୋମ ଓ ଗ୍ରୀସ ସହ ତୁଳନା ପ୍ରସଙ୍ଗରେ ଲେଖକ ଏହା କହନ୍ତି। ଭାରତରେ କଳା ଓ ବୈଷୟିକ ସମୃଦ୍ଧିର ନିଦର୍ଶନ ଥିଲେ ବି ଭୋଗ ଜୀବନର ଚରମ ଲକ୍ଷ୍ୟ ନଥିଲା।</p><p>ଆତ୍ମସଂଯମ ଓ ତ୍ୟାଗ ଦ୍ୱାରା ଆନ୍ତରିକ ଉନ୍ନତି ଏହାର ସ୍ୱାତନ୍ତ୍ର୍ୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=49">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୯–୫୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-23"><h2>୨୩. ଶେଷ ଫଳ ଭବିଷ୍ୟତ ଗର୍ଭରେ, ବର୍ତ୍ତମାନ ପରୀକ୍ଷଣ ଚାଲିଛି—ସରଳାର୍ଥ କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ତଦନ୍ତ ଓ ପରୀକ୍ଷା ଚାଲୁଥିବା ବେଳେ ଆଜିର ଫଳକୁ ଶେଷ ଫଳ ବୋଲି କହିହେବ ନାହିଁ। ତେଣୁ ସଭ୍ୟତାର ଭବିଷ୍ୟତ ବିଚାରରେ ଲେଖକ ସମ୍ଭାବନା ଓ ଅପୂର୍ଣ୍ଣତା ଉଭୟକୁ ସ୍ଥାନ ଦେଇଛନ୍ତି। (ପାଠର ପୃ. ୨–୩)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଆଧୁନିକ ସଭ୍ୟତା ସର୍ବାଙ୍ଗୀନ ବିକାଶ ଓ ସୃଷ୍ଟିର ରହସ୍ୟ ଉଦ୍‌ଘାଟନକୁ ଲକ୍ଷ୍ୟ କରିଛି। ମଣିଷ ଏହି ଯାତ୍ରାର ଶେଷ ସୋପାନରେ ପହଞ୍ଚିନି।</p><p>ବିଜ୍ଞାନର ପରୀକ୍ଷା ଓ ନୂତନ ଜ୍ଞାନରେ ସେ ଆଗକୁ ବଢ଼ୁଛି। ତେଣୁ ଏବର ଅସମ୍ପୂର୍ଣ୍ଣ ଅବସ୍ଥା ଦେଖି ଶେଷ ଫଳର ବିଚାର କରିହେବନି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-24"><h2>୨୪. ସାଗର ଓ ହିମାଳୟ ସମ୍ପର୍କିତ ଉକ୍ତିର ସରଳାର୍ଥ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>‘ଦୁର୍ଲଙ୍ଘ୍ୟ’ ଅର୍ଥ ଯାହାକୁ ପାର କରିବା କଠିନ; ‘ଦୁରୂହ’ ଅର୍ଥ କଷ୍ଟସାଧ୍ୟ। ବିରାଟ ସାଗର ଓ ତୁଙ୍ଗ ହିମାଳୟ ଦୂରତା ଓ ଉଚ୍ଚତାର ଦୁଇ ଦୃଷ୍ଟାନ୍ତ।</li><li>ସାଗରର ବିସ୍ତାର ବା ହିମାଳୟର ଉଚ୍ଚତା କମିନାହିଁ। ଯାତାୟାତର ଉପକରଣ ଉଦ୍ଭାବନ ଫଳରେ ପୂର୍ବେ ଯେଉଁ ବାଧା ମଣିଷକୁ ଅଟକାଉଥିଲା ତାହା ଅତିକ୍ରମ କରିବାର ସାମର୍ଥ୍ୟ ବଢ଼ିଛି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଜଡ଼ବିଜ୍ଞାନର ସଫଳତା ବୁଝାଇବାକୁ ଲେଖକ ଏହି ଦୃଷ୍ଟାନ୍ତ ଦିଅନ୍ତି। ଦୂରତା ଓ ଉଚ୍ଚତା ପୂର୍ବେ ମଣିଷର ଗତି ଅଟକାଉଥିଲା।</p><p>ଜାହାଜ, ଉଡ଼ାଜାହାଜ ଓ ଅନ୍ୟ ଯାନର ଉଦ୍ଭାବନରୁ ମଣିଷ ସାଗର ପାରି ହେଉଛି ଓ ଉଚ୍ଚ ପର୍ବତ ଅତିକ୍ରମ କରୁଛି। ଉକ୍ତିଟି ଜ୍ଞାନ ଦ୍ୱାରା ପ୍ରାକୃତିକ ବାଧା ଜୟର ଚିତ୍ର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=52">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=56" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୬</a></small></article>
+<article id="exercise-25"><h2>୨୫. ସଭ୍ୟତାର ବିକାଶରେ ବିଜ୍ଞାନର ଅବଦାନ ଆଲୋଚନା କର।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>କ୍ଷୁଦ୍ର ଜୀବଠାରୁ ହସ୍ତୀ, ତିମି ଓ ବଟବୃକ୍ଷ ପର୍ଯ୍ୟନ୍ତ ଜୀବନର କ୍ରିୟା ଅନୁସନ୍ଧାନର ବିଷୟ। ଜଡ଼ବିଜ୍ଞାନ ଓ ଜୀବବିଜ୍ଞାନର ସହଯୋଗରେ ଶରୀରତତ୍ତ୍ୱ, ଚିକିତ୍ସା ଓ କୃଷିର ଜ୍ଞାନ ବଢ଼େ। (ପାଠର ପୃ. ୪–୫)</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଗଣିତ ଆଧାରରେ ଜଡ଼ବିଜ୍ଞାନ ଆଲୋକ, ଉତ୍ତାପ, ବିଦ୍ୟୁତ୍ ଓ ପଦାର୍ଥର ପରସ୍ପର କ୍ରିୟା ବୁଝାଇଛି। ଏହି ଜ୍ଞାନରୁ ଯାତାୟାତ ଓ ଯୋଗାଯୋଗ ସହଜ ହୋଇଛି।</p><p>ଜୀବବିଜ୍ଞାନ କ୍ଷୁଦ୍ର ଜୀବରୁ ବଟବୃକ୍ଷ ଯାଏ ଗଠନ ଓ ପ୍ରକ୍ରିୟା ବୁଝାଇଛି। ଦୁଇ ଶାଖାର ସହଯୋଗରୁ ଚିକିତ୍ସା, କୃଷି ଓ ଇଞ୍ଜିନିୟରିଂର ବିକାଶ ହୋଇଛି।</p><p>ଜ୍ଞାନର ଫଳ ମଣିଷର ହିତରେ ଲଗାଇବା ପାଇଁ ନୈତିକତା ଓ ବିଶ୍ୱମାନବିକତା ଆବଶ୍ୟକ। ଏହି ସମନ୍ୱୟରେ ବିଜ୍ଞାନ ସର୍ବାଙ୍ଗୀନ ସଭ୍ୟତାର ପଥପ୍ରଦର୍ଶକ।</p><p>ଯୋଗାଯୋଗର ଉଦାହରଣରେ ଉପକାରର ରୂପଟି ସ୍ପଷ୍ଟ। ରେଡ଼ିଓ ଓ ଟେଲିଫୋନ୍ ଦୂରର କଥା ପହଞ୍ଚାନ୍ତି, ରେଳ ଓ ଉଡ଼ାଜାହାଜ ଲୋକଙ୍କ ଯାତାୟାତକୁ ସହଜ କରନ୍ତି।</p><p>ଜୀବବିଜ୍ଞାନର ଚର୍ଚ୍ଚାରୁ ମଣିଷ ନିଜ ଶରୀର ଓ ଜୀବନର କ୍ରିୟାକୁ ମଧ୍ୟ ଭଲ ଭାବେ ଜାଣେ। ଏହି ଜ୍ଞାନରେ ଚିକିତ୍ସା ଓ କୃଷିର ଉନ୍ନତି ସମ୍ଭବ।</p><p>ଏଭଳି ବିଜ୍ଞାନ ସଭ୍ୟତାକୁ ଉଭୟ ବୁଝିବାର ଓ କାମ କରିବାର ଶକ୍ତି ଦିଏ।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭</a></small></article>
+<article id="exercise-26"><h2>୨୬. ଭାରତୀୟ ଓ ବାହ୍ୟ ସଭ୍ୟତା ବିଷୟରେ ଲେଖକଙ୍କ ଦୃଷ୍ଟିଭଙ୍ଗୀ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଲେଖକ ଲକ୍ଷ୍ୟ ଓ ସାଧନର ତୁଳନା କରନ୍ତି। ପ୍ରାଚୀନ ରୋମ, ଗ୍ରୀସ ଓ ମିଶରରେ ବୈଷୟିକ ସମୃଦ୍ଧି ଓ ଭୋଗ ପ୍ରଧାନ ଆଦର୍ଶ ଥିଲା।</p><p>ପ୍ରାଚୀନ ଭାରତରେ ଗୃହସ୍ଥ ହୋଇ ମଧ୍ୟ ତ୍ୟାଗ ଓ ସଂଯମରେ ଜୀବନ କାଟିବା ଆଦର୍ଶ ଥିଲା। ଫଳରେ ତାହାର ବୈଷୟିକ ନିଦର୍ଶନ ନ୍ୟୂନ ନ ହୋଇ ବି ଭିନ୍ନ ପ୍ରେରଣାରୁ ଆସିଥିଲା।</p><p>ଆଜି ଏହି ଏକେକ ଦିଗକୁ ଅତିକ୍ରମ କରି ଜ୍ଞାନ, ଶରୀର, ମନ ଓ ନୀତିର ଏକତ୍ର ଉନ୍ନତି ଆବଶ୍ୟକ।</p><p>ଏହି ତୁଳନାରେ ପ୍ରଶ୍ନ ହେଉଛି, ସମାଜ ନିଜ ସାମର୍ଥ୍ୟକୁ କେଉଁ ଲକ୍ଷ୍ୟରେ ବ୍ୟବହାର କରେ। ଭୋଗର ସାମଗ୍ରୀ ଥିଲେ ମଧ୍ୟ ଜଣେ ଗୃହସ୍ଥ ସେଥିରେ ନିଜକୁ ବନ୍ଧା ନ ରଖି ତ୍ୟାଗର ଆଦର୍ଶ ଗ୍ରହଣ କରିପାରନ୍ତି।</p><p>ଏହି ଦୃଷ୍ଟାନ୍ତରେ ବାହାରର ଆୟୋଜନ ଓ ମନର ଲକ୍ଷ୍ୟ ମଧ୍ୟରେ ତଫାତ ଦିଶେ। ସଭ୍ୟତା ବିଚାରରେ ଉଭୟକୁ ଗଣନା କରିବା ଲେଖକଙ୍କ ପଦ୍ଧତି।</p></div>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭</a></small></article>
+<article id="exercise-27"><h2>୨୭. ସଭ୍ୟତା ଓ ବିଜ୍ଞାନକୁ ପରସ୍ପର ଆଶ୍ରୟୀ କରୁଥିବା ଏକ ଅନୁଭୂତି ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଏହି ନମୁନାରେ ଦୁଇ ଦିଗର ସମ୍ପର୍କ ଚିହ୍ନ। ଦୂରର ଲୋକଙ୍କ ସହ ଯୋଗାଯୋଗର ପ୍ରୟୋଜନରୁ ଯନ୍ତ୍ର ପାଇଁ ଚାହିଦା ଆସେ। ଯନ୍ତ୍ରଟି ପୁଣି ଦୂରର କଥା ଶୁଣାଇ ଲୋକଙ୍କ ଜ୍ଞାନର ପରିସର ବଢ଼ାଏ।</li><li>ନିଜ ଉତ୍ତରରେ ଯେଉଁ ଯନ୍ତ୍ର ପ୍ରକୃତରେ ବ୍ୟବହାର କରିଛ ତାହା ନେଇ କାହାର କେଉଁ ଆବଶ୍ୟକତା ପୂରଣ ହେଲା ଲେଖ। ବେତାରର ଏହି ଲେଖାଟି ଗୋଟିଏ ନମୁନା ଅନୁଭୂତି।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ନମୁନା ଅନୁଭୂତି। ରେଡ଼ିଓରେ ଦୂର ଅଞ୍ଚଳର କଥା ଶୁଣିଲେ ସେଠାର ଲୋକଙ୍କୁ ନିକଟରୁ ଜାଣିବାର ସୁଯୋଗ ମିଳେ।</p><p>ବେତାର ଯନ୍ତ୍ର ବିନା ସେ ଯୋଗାଯୋଗ ହୋଇ ନଥାନ୍ତା। କିନ୍ତୁ ଲୋକେ ଜ୍ଞାନ ବାଣ୍ଟିବା ଓ ପରସ୍ପରର ହିତ ଚାହିଁଲେ ହିଁ ଯନ୍ତ୍ରଟି ଶିକ୍ଷାର କାମରେ ଆସେ।</p><p>ମଣିଷର ପ୍ରୟୋଜନ ବିଜ୍ଞାନକୁ ପ୍ରଶ୍ନ ଦିଏ ଓ ବିଜ୍ଞାନ ସେହି ପ୍ରୟୋଜନ ପୂରଣର ଉପାୟ ଦିଏ। ପ୍ରୟୋଗକୁ ସାର୍ଥକ କରେ ସଭ୍ୟତାର ମାନବିକ ଆଦର୍ଶ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=52">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୨–୫୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭</a></small></article>
+<article id="exercise-28"><h2>୨୮. ପ୍ରାବନ୍ଧିକଙ୍କ ଅନ୍ୟ ବିଜ୍ଞାନ ପ୍ରବନ୍ଧ ପାଇଁ ପଠନସୂତ୍ର ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ପ୍ରଥମେ ଲେଖକ ଓ ପତ୍ରିକା ନାମ ମେଳାଅ। ୧୯୪୨ ଜ୍ୟେଷ୍ଠ ସଂଖ୍ୟାର ସୂଚନାଟି ବର୍ତ୍ତମାନ ପଠିତ ପ୍ରବନ୍ଧର, ତାଙ୍କ ଅନ୍ୟ ପ୍ରତ୍ୟେକ ରଚନାର ନୁହେଁ।</li><li>ଅନ୍ୟ ରଚନା ପାଇଲେ ପଢ଼ିବା ଖାତାରେ ନାମ, ସଂଖ୍ୟା, ପୃଷ୍ଠା ଓ କେଉଁ ବିଜ୍ଞାନ ପ୍ରଶ୍ନ ଆଲୋଚିତ ହୋଇଛି ଲେଖ। ପଠନସୂତ୍ର ଓ ପ୍ରକୃତରେ ପଢ଼ିଥିବା ପ୍ରବନ୍ଧର ତାଲିକା ଏହିପରି ଅଲଗା ରହିବ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ଲେଖକ ପରିଚୟ ଅନୁସାରେ ବଂଶୀଧର ସାମନ୍ତରାୟଙ୍କ ଅନେକ ବିଜ୍ଞାନ ରଚନା ‘ଉତ୍କଳ ସାହିତ୍ୟ’ରେ ପ୍ରକାଶିତ। ପଠିତ ରଚନାଟି ୧୯୪୨ର ଜ୍ୟେଷ୍ଠ ସଂଖ୍ୟାର।</p><p>ପାଠାଗାରରେ ଅନ୍ୟ ସଂଖ୍ୟାର ସୂଚୀରୁ ତାଙ୍କ ନାମ, ରଚନାର ନାମ ଓ ବିଷୟ ଟିପି ପ୍ରବନ୍ଧ ପଢ଼ିବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=49">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭</a></small></article>
+<article id="exercise-29"><h2>୨୯. ବିଭିନ୍ନ ଦେଶର ସଭ୍ୟତା ସମ୍ପର୍କରେ ସୂଚନା ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ଟିପ୍ପଣୀରେ ପ୍ରଥମେ ଦେଶ, ପରେ ପ୍ରାବନ୍ଧିକଙ୍କ ମତରେ ସେହି ସଭ୍ୟତାର ଲକ୍ଷ୍ୟ ଲେଖ। ଗ୍ରୀସ ଓ ରୋମ ପାଇଁ ବୈଷୟିକ ଉନ୍ନତି, ମିଶର ପାଇଁ ସେହି ଆଦର୍ଶର ପ୍ରଭାବ, ଭାରତ ପାଇଁ ଆଧ୍ୟାତ୍ମିକତା ଚିହ୍ନାଅ।</li><li>ଭାରତରେ ମଧ୍ୟ ବୈଷୟିକ ଉନ୍ନତିର ନିଦର୍ଶନ ଥିଲା ବୋଲି ପ୍ରବନ୍ଧ ମାନେ। ତେଣୁ ଏହି ଟିପ୍ପଣୀ ସଭ୍ୟତାର ମୂଳ ଆଦର୍ଶ ଉପରେ ଲେଖକଙ୍କ ତୁଳନା, ସେହି ଦେଶଗୁଡ଼ିକର ସମସ୍ତ ଇତିହାସର ବର୍ଣ୍ଣନା ନୁହେଁ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ପ୍ରବନ୍ଧଭିତ୍ତିକ ଟିପ୍ପଣୀ। ଗ୍ରୀସ ଓ ରୋମରେ ବୈଷୟିକ ଉନ୍ନତି ଇଚ୍ଛାକୃତ ଲକ୍ଷ୍ୟ ଥିଲା।</p><p>ମିଶରର ପ୍ରାଚୀନ ସଭ୍ୟତା ମଧ୍ୟ ସେହି ଆଦର୍ଶରେ ଅନୁପ୍ରାଣିତ। ଭାରତ ତ୍ୟାଗ ଓ ଆତ୍ମସଂଯମକୁ ପ୍ରାଧାନ୍ୟ ଦେଇ ମଧ୍ୟ ବୈଷୟିକ ନିଦର୍ଶନ ଛାଡ଼ିଛି।</p><p>ଏହି ତୁଳନାକୁ ଶିକ୍ଷକଙ୍କୁ ଦେଖାଇବି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=49">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୯–୫୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭</a></small></article>
+<article id="exercise-30"><h2>୩୦. ‘ସଭ୍ୟତା ଓ ବିଜ୍ଞାନ’ ତର୍କସଭା ପାଇଁ ଦୁଇ ପକ୍ଷର ବକ୍ତବ୍ୟ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>ସପକ୍ଷ ଦଳକୁ ପ୍ରଶ୍ନ ଦିଅ—ଚିକିତ୍ସା ଓ ଯାତାୟାତର ଦୃଷ୍ଟାନ୍ତରୁ ମଣିଷର କେଉଁ ପ୍ରୟୋଜନ ପୂରଣ ହେଉଛି? ଅପରପକ୍ଷକୁ ପଚାର—ଯୁଦ୍ଧରେ ଅନିଷ୍ଟର କାରଣ ଜ୍ଞାନ ନା ତାହାର ବ୍ୟବହାର?</li><li>ସଭାପତି ଦୁଇ ଦଳର ଦୃଷ୍ଟାନ୍ତକୁ ମେଳାଇ କହିପାରନ୍ତି ଯେ ବିଜ୍ଞାନ କାମ କରିବାର ଶକ୍ତି ଦିଏ, କାମର ଲକ୍ଷ୍ୟ ମଣିଷର ଆଦର୍ଶରୁ ଆସେ। ଏହି ନିଷ୍କର୍ଷକୁ ନେଇ ଶ୍ରେଣୀର ପ୍ରଶ୍ନ ନିଆଯାଇପାରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>ସପକ୍ଷ — ରେଳ ଦୂରତା କମାଇଛି, ଚିକିତ୍ସା ରୋଗରୁ ମୁକ୍ତି ଦେଇଛି, ତେଣୁ ବିଜ୍ଞାନ ସଭ୍ୟତାକୁ ଆଗେଇ ନିଏ। ବିଚାରର ଅନ୍ୟ ପକ୍ଷ — ଯୁଦ୍ଧରେ ଜ୍ଞାନର ଅପପ୍ରୟୋଗ ହେଲେ ମଣିଷ କ୍ଷତିଗ୍ରସ୍ତ ହୁଏ, ତେଣୁ ଆବିଷ୍କାର ମାତ୍ରେ ମଙ୍ଗଳ ନିଶ୍ଚିତ ନୁହେଁ।</p><p>ସଭାପତିଙ୍କ ମତ — ଜ୍ଞାନ ସହ କର୍ତ୍ତବ୍ୟବୋଧ ଯୋଡ଼ିବା ଦରକାର। ପ୍ରତ୍ୟେକ ଦଳ ଗୋଟିଏ ପାଠଗତ ଉଦାହରଣ ଦେଇ ପରପକ୍ଷର ପ୍ରଶ୍ନର ଉତ୍ତର ଦେବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=52">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୫୨–୫୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-01A-MIL_Odia_Class_X.pdf#page=57" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୫୭</a></small></article>
+
+</main></body></html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ତ୍ରିକୋଣମିତି · ବର୍ଣ୍ଣନାମୂଳକ ପ୍ରଶ୍ନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ତ୍ରିକୋଣମିତି</p><h1>ବର୍ଣ୍ଣନାମୂଳକ ପ୍ରଶ୍ନ</h1>
+<a href="https://drive.google.com/file/d/15Bf8NQP29BHLqI2KXWZdXjamh3q27s6L/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+
+
+
+
+<article><h2>୧. ଦୁଇଟି ସୂକ୍ଷ୍ମକୋଣ A, B ପାଇଁ sin A = cos B ହେଲେ A + B କେତେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>cos B = sin(90° − B)।</li><li>ସେଥିରୁ sin A = sin(90° − B)। ଉଭୟ କୋଣ ସୂକ୍ଷ୍ମ ହେତୁ A = 90° − B।</li><li>ଉଭୟ ପାର୍ଶ୍ୱରେ B ଯୋଗ କର।</li></ol>
+<div class="lesson-body"><p class="lesson-equation">A + B = 90°।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୮</small></article>
+<article><h2>୨. ପାହାଡ଼ AB ଓ ତାହା ପାଖରେ ଏକ ସମତଳରେ ଥିବା ସ୍ତମ୍ଭ CD ମଧ୍ୟରେ AC ଭୂସମାନ୍ତର। ସ୍ତମ୍ଭର ଉଚ୍ଚତା CD = 100 ମି.। B ରୁ D ଓ C ପ୍ରତି କୌଣିକ ଅବନତି ଯଥାକ୍ରମେ 30° ଓ 60°। ପାହାଡ଼ର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<figure><div class="figure-scroll"><img loading="lazy" decoding="async" style="max-width:100%;height:auto" alt="A ଓ C ସମତଳରେ, D ଓ Q ଏକେ ସ୍ତରରେ। B ରୁ D ଏବଂ C ପ୍ରତି ଦୁଇ ଦୃଷ୍ଟିରେଖା।" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHJvbGU9ImltZyIgYXJpYS1sYWJlbGxlZGJ5PSJ0aXRsZSIgdmlld0JveD0iMCAwIDQ0MCAyNjAiPjx0aXRsZSBpZD0idGl0bGUiPuCsquCsvuCsueCsvuCsoeCsvOCssCDgrLbgrYDgrLDgrY3grLcgQiDgrLDgrYEg4Ky44K2N4Kyk4Kyu4K2N4Kyt4KywIOCstuCtgOCssOCtjeCstyBEIOCskyDgrKrgrL7grKYgQyDgrKrgrY3grLDgrKTgrL8g4Kym4K2D4Ky34K2N4Kyf4Ky/4Kyw4K2H4KyW4Ky+PC90aXRsZT48c3R5bGU+cGF0aCxsaW5lLHBvbHlsaW5lLGNpcmNsZSxyZWN0e2ZpbGw6bm9uZTtzdHJva2U6IzI4NWM1MDtzdHJva2Utd2lkdGg6Mn0gLmd1aWRle3N0cm9rZTojN2I4NTgzO3N0cm9rZS1kYXNoYXJyYXk6NSA0fSAuc2Vjb25ke3N0cm9rZTojYWQ0MzM5fSAuZG90e2ZpbGw6IzE2M2IzM30gdGV4dHtmb250OjE1cHggc3lzdGVtLXVpLHNhbnMtc2VyaWY7ZmlsbDojMTQyYjI4fSAuZ3JpZHtzdHJva2U6I2UyZTZlMDtzdHJva2Utd2lkdGg6MX08L3N0eWxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHN0eWxlPSJmaWxsOndoaXRlO3N0cm9rZTpub25lIi8+PGxpbmUgeDE9IjEyMCIgeTE9IjIxNyIgeDI9IjEyMCIgeTI9IjM3IiBjbGFzcz0iIi8+PGxpbmUgeDE9IjEyMCIgeTE9IjIxNyIgeDI9IjIyMy45MjMiIHkyPSIyMTciIGNsYXNzPSIiLz48bGluZSB4MT0iMjIzLjkyMyIgeTE9IjIxNyIgeDI9IjIyMy45MjMiIHkyPSI5NyIgY2xhc3M9IiIvPjxsaW5lIHgxPSIxMjAiIHkxPSIzNyIgeDI9IjIyMy45MjMiIHkyPSI5NyIgY2xhc3M9IiIvPjxsaW5lIHgxPSIxMjAiIHkxPSIzNyIgeDI9IjIyMy45MjMiIHkyPSIyMTciIGNsYXNzPSIiLz48bGluZSB4MT0iMTIwIiB5MT0iMzciIHgyPSIyNjAiIHkyPSIzNyIgY2xhc3M9Imd1aWRlIi8+PGxpbmUgeDE9IjEyMCIgeTE9Ijk3IiB4Mj0iMjIzLjkyMyIgeTI9Ijk3IiBjbGFzcz0iZ3VpZGUiLz48cGF0aCBkPSJNMTUzIDM3IEEzMyAzMyAwIDAgMSAxNDguNTggNTMuNSIvPjxwYXRoIGQ9Ik0xNzAgMzcgQTUwIDUwIDAgMCAxIDE0NSA4MC4zIiBjbGFzcz0ic2Vjb25kIi8+PGNpcmNsZSBjeD0iMTIwIiBjeT0iMjE3IiByPSIyLjciIGNsYXNzPSJkb3QiLz48dGV4dCB4PSIxMDIiIHk9IjIyNSI+QTwvdGV4dD48Y2lyY2xlIGN4PSIxMjAiIGN5PSIzNyIgcj0iMi43IiBjbGFzcz0iZG90Ii8+PHRleHQgeD0iMTAyIiB5PSIzNCI+QjwvdGV4dD48Y2lyY2xlIGN4PSIyMjMuOTIzIiBjeT0iMjE3IiByPSIyLjciIGNsYXNzPSJkb3QiLz48dGV4dCB4PSIyMzAuOTIzIiB5PSIyMjYiPkM8L3RleHQ+PGNpcmNsZSBjeD0iMjIzLjkyMyIgY3k9Ijk3IiByPSIyLjciIGNsYXNzPSJkb3QiLz48dGV4dCB4PSIyMzAuOTIzIiB5PSIxMDAiPkQ8L3RleHQ+PGNpcmNsZSBjeD0iMTIwIiBjeT0iOTciIHI9IjIuNyIgY2xhc3M9ImRvdCIvPjx0ZXh0IHg9IjEwMSIgeT0iMTAxIj5RPC90ZXh0Pjx0ZXh0IHg9IjE1OCIgeT0iNTIiPjMwwrA8L3RleHQ+PHRleHQgeD0iMTYzIiB5PSI4MCI+NjDCsDwvdGV4dD48dGV4dCB4PSIyMzEiIHk9IjE1OCI+MTAwIG08L3RleHQ+PC9zdmc+Cg=="></div></figure>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>AB = h, AC = d ଧର। D ଦେଇ AC ସହ ସମାନ୍ତର ରେଖା AB କୁ Q ଠାରେ ଛେଦ କରୁ। BQ = h − 100 ଓ DQ = d।</li><li>ଭୂସମାନ୍ତର ରେଖାଗୁଡ଼ିକ ସମାନ୍ତର ଥିବାରୁ tan 60° = h/d ଓ tan 30° = (h − 100)/d।</li><li>ତେଣୁ h = √3d ଓ h − 100 = d/√3। ଦ୍ୱିତୀୟଟିକୁ 3 ଗୁଣ କଲେ 3(h − 100) = √3d = h।</li><li>3h − 300 = h ⇒ 2h = 300 ⇒ h = 150।</li></ol>
+<div class="lesson-body"><p>ପାହାଡ଼ର ଉଚ୍ଚତା 150 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୨୩</small></article>
+<article><h2>୩. 27 ମିଟର ଉଚ୍ଚ ବତୀଘରର ଶୀର୍ଷରୁ ଏକ ଜାହାଜର କୌଣିକ ଅବନତି 30°। ପାଦଦେଶରୁ ଜାହାଜର ଭୂସମାନ୍ତର ଦୂରତା ଓ ଶୀର୍ଷରୁ ଜାହାଜର ସରଳ ଦୂରତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>A ପାଦଦେଶ, B ଶୀର୍ଷ ଓ C ଜାହାଜ ନିଅ। BC ଦୃଷ୍ଟିରେଖା। ∠A = 90°।</li><li>ଶୀର୍ଷର ଭୂସମାନ୍ତର ରେଖା ଓ AC ସମାନ୍ତର। ଏଣୁ ∠BCA = 30°।</li><li>tan 30° = AB/AC = 27/AC ⇒ AC = 27√3।</li><li>sin 30° = AB/BC = 27/BC ⇒ BC = 54।</li></ol>
+<div class="lesson-body"><p>ଭୂସମାନ୍ତର ଦୂରତା 27√3 ମିଟର ଓ ସରଳ ଦୂରତା 54 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୩</small></article>
+<article><h2>୪. ଗୋଟିଏ ସ୍ତମ୍ଭର ପାଦଦେଶକୁ ଧରି ଏକ ସରଳରେଖାରେ ସମାନ ପାର୍ଶ୍ୱରେ ଦୁଇ ବିନ୍ଦୁ ଅଛନ୍ତି। ଦୂର ବିନ୍ଦୁରୁ କୌଣିକ ଉନ୍ନତି 30°, ନିକଟ ବିନ୍ଦୁରୁ 60°। ବିନ୍ଦୁଦ୍ୱୟର ଦୂରତା 4 ମିଟର। ନିକଟ ବିନ୍ଦୁରୁ ପାଦଦେଶର ଦୂରତା ଓ ସ୍ତମ୍ଭର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ନିକଟ ଦୂରତା x, ଉଚ୍ଚତା h ଧର। ଦୂର ବିନ୍ଦୁରୁ ପାଦଦେଶ x + 4।</li><li>ନିକଟ ତ୍ରିଭୁଜରେ h/x = tan 60° = √3।</li><li>ଦୂର ତ୍ରିଭୁଜରେ h/(x + 4) = tan 30° = 1/√3।</li><li>ଏଣୁ √3x = (x + 4)/√3 ⇒ 3x = x + 4 ⇒ x = 2। h = 2√3।</li></ol>
+<div class="lesson-body"><p>ନିକଟ ଦୂରତା 2 ମିଟର ଓ ଉଚ୍ଚତା 2√3 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୫. ଯୋଗ ଓ ଅନ୍ତର କୋଣର ସୂତ୍ରରୁ sin(47°)cos(2°) − cos(47°)sin(2°) ଏବଂ cos(58°)cos(2°) − sin(58°)sin(2°) ର ମାନ ନିର୍ଣ୍ଣୟ କର। ପ୍ରଥମ ମାନର ବର୍ଗ ଓ ଦ୍ୱିତୀୟ ମାନର ଅନ୍ତର କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୨, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ପ୍ରଥମ ରାଶି sin A cos B − cos A sin B = sin(A − B) ସୂତ୍ରରେ ଅଛି।</li><li>A = 47°, B = 2°। ଅନ୍ତର 45° ହେତୁ ପ୍ରଥମ ମାନ sin 45° = 1/√2।</li><li>ଦ୍ୱିତୀୟ ରାଶି cos C cos D − sin C sin D = cos(C + D)।</li><li>C = 58° ଓ D = 2° ର ଯୋଗ 60°। ଦ୍ୱିତୀୟ ମାନ cos 60° = 1/2।</li><li>ଅନ୍ତର = (1/√2)² − 1/2 = 0।</li></ol>
+<div class="lesson-body"><p>ମାନ 1/√2 ଓ 1/2। ମାଗିଥିବା ଅନ୍ତର 0।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୬. ଭୂମି ସହ 60° କୋଣ କରି 12 ମିଟର ଲମ୍ବା ସିଡ଼ି କାନ୍ଥକୁ ଛୁଇଁଛି। କାନ୍ଥରେ ସ୍ପର୍ଶବିନ୍ଦୁର ଉଚ୍ଚତା ଓ କାନ୍ଥରୁ ପାଦର ଦୂରତା ନିର୍ଣ୍ଣୟ କର। ପିଥାଗୋରାସ୍ ସୂତ୍ରରେ ଯାଞ୍ଚ କର।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ସିଡ଼ି କର୍ଣ୍ଣ = 12। କାନ୍ଥ ଓ ଭୂମି ପରସ୍ପର ପ୍ରତି ଲମ୍ବ।</li><li>ଉଚ୍ଚତା = 12 sin 60° = 6√3।</li><li>ଦୂରତା = 12 cos 60° = 6।</li><li>ଯାଞ୍ଚରେ (6√3)² + 6² = 108 + 36 = 144 = 12²।</li></ol>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 6√3 ମିଟର ଓ ଭୂସମାନ୍ତର ଦୂରତା 6 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୭. ଗୋଟିଏ ସ୍ତମ୍ଭର ପାଦଦେଶକୁ ଧରି ଏକ ସରଳରେଖାରେ ସମାନ ପାର୍ଶ୍ୱରେ ଦୁଇ ବିନ୍ଦୁ ଅଛନ୍ତି। ଦୂର ବିନ୍ଦୁରୁ କୌଣିକ ଉନ୍ନତି 30°, ନିକଟ ବିନ୍ଦୁରୁ 60°। ବିନ୍ଦୁଦ୍ୱୟର ଦୂରତା 6 ମିଟର। ନିକଟ ବିନ୍ଦୁରୁ ପାଦଦେଶର ଦୂରତା ଓ ସ୍ତମ୍ଭର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୩, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ନିକଟ ଦୂରତା x, ଉଚ୍ଚତା h ଧର। ଦୂର ବିନ୍ଦୁରୁ ପାଦଦେଶ x + 6।</li><li>ନିକଟ ତ୍ରିଭୁଜରେ h/x = tan 60° = √3।</li><li>ଦୂର ତ୍ରିଭୁଜରେ h/(x + 6) = tan 30° = 1/√3।</li><li>ଏଣୁ √3x = (x + 6)/√3 ⇒ 3x = x + 6 ⇒ x = 3। h = 3√3।</li></ol>
+<div class="lesson-body"><p>ନିକଟ ଦୂରତା 3 ମିଟର ଓ ଉଚ୍ଚତା 3√3 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୮. ଗୋଟିଏ ସ୍ତମ୍ଭର ପାଦଦେଶକୁ ଧରି ଏକ ସରଳରେଖାରେ ସମାନ ପାର୍ଶ୍ୱରେ ଦୁଇ ବିନ୍ଦୁ ଅଛନ୍ତି। ଦୂର ବିନ୍ଦୁରୁ କୌଣିକ ଉନ୍ନତି 30°, ନିକଟ ବିନ୍ଦୁରୁ 60°। ବିନ୍ଦୁଦ୍ୱୟର ଦୂରତା 8 ମିଟର। ନିକଟ ବିନ୍ଦୁରୁ ପାଦଦେଶର ଦୂରତା ଓ ସ୍ତମ୍ଭର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ନିକଟ ଦୂରତା x, ଉଚ୍ଚତା h ଧର। ଦୂର ବିନ୍ଦୁରୁ ପାଦଦେଶ x + 8।</li><li>ନିକଟ ତ୍ରିଭୁଜରେ h/x = tan 60° = √3।</li><li>ଦୂର ତ୍ରିଭୁଜରେ h/(x + 8) = tan 30° = 1/√3।</li><li>ଏଣୁ √3x = (x + 8)/√3 ⇒ 3x = x + 8 ⇒ x = 4। h = 4√3।</li></ol>
+<div class="lesson-body"><p>ନିକଟ ଦୂରତା 4 ମିଟର ଓ ଉଚ୍ଚତା 4√3 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୯. ଯୋଗ ଓ ଅନ୍ତର କୋଣର ସୂତ୍ରରୁ sin(49°)cos(4°) − cos(49°)sin(4°) ଏବଂ cos(56°)cos(4°) − sin(56°)sin(4°) ର ମାନ ନିର୍ଣ୍ଣୟ କର। ପ୍ରଥମ ମାନର ବର୍ଗ ଓ ଦ୍ୱିତୀୟ ମାନର ଅନ୍ତର କେତେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୪, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ପ୍ରଥମ ରାଶି sin A cos B − cos A sin B = sin(A − B) ସୂତ୍ରରେ ଅଛି।</li><li>A = 49°, B = 4°। ଅନ୍ତର 45° ହେତୁ ପ୍ରଥମ ମାନ sin 45° = 1/√2।</li><li>ଦ୍ୱିତୀୟ ରାଶି cos C cos D − sin C sin D = cos(C + D)।</li><li>C = 56° ଓ D = 4° ର ଯୋଗ 60°। ଦ୍ୱିତୀୟ ମାନ cos 60° = 1/2।</li><li>ଅନ୍ତର = (1/√2)² − 1/2 = 0।</li></ol>
+<div class="lesson-body"><p>ମାନ 1/√2 ଓ 1/2। ମାଗିଥିବା ଅନ୍ତର 0।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୨–୧୮</small></article>
+<article><h2>୧୦. ଭୂମି ସହ 60° କୋଣ କରି 20 ମିଟର ଲମ୍ବା ସିଡ଼ି କାନ୍ଥକୁ ଛୁଇଁଛି। କାନ୍ଥରେ ସ୍ପର୍ଶବିନ୍ଦୁର ଉଚ୍ଚତା ଓ କାନ୍ଥରୁ ପାଦର ଦୂରତା ନିର୍ଣ୍ଣୟ କର। ପିଥାଗୋରାସ୍ ସୂତ୍ରରେ ଯାଞ୍ଚ କର।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ସିଡ଼ି କର୍ଣ୍ଣ = 20। କାନ୍ଥ ଓ ଭୂମି ପରସ୍ପର ପ୍ରତି ଲମ୍ବ।</li><li>ଉଚ୍ଚତା = 20 sin 60° = 10√3।</li><li>ଦୂରତା = 20 cos 60° = 10।</li><li>ଯାଞ୍ଚରେ (10√3)² + 10² = 300 + 100 = 400 = 20²।</li></ol>
+<div class="lesson-body"><p>ଉଚ୍ଚତା 10√3 ମିଟର ଓ ଭୂସମାନ୍ତର ଦୂରତା 10 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+<article><h2>୧୧. ଗୋଟିଏ ସ୍ତମ୍ଭର ପାଦଦେଶକୁ ଧରି ଏକ ସରଳରେଖାରେ ସମାନ ପାର୍ଶ୍ୱରେ ଦୁଇ ବିନ୍ଦୁ ଅଛନ୍ତି। ଦୂର ବିନ୍ଦୁରୁ କୌଣିକ ଉନ୍ନତି 30°, ନିକଟ ବିନ୍ଦୁରୁ 60°। ବିନ୍ଦୁଦ୍ୱୟର ଦୂରତା 10 ମିଟର। ନିକଟ ବିନ୍ଦୁରୁ ପାଦଦେଶର ଦୂରତା ଓ ସ୍ତମ୍ଭର ଉଚ୍ଚତା ନିର୍ଣ୍ଣୟ କର।</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୨, ପ୍ରଶ୍ନ ୫a · ବିକଳ୍ପ ୧ (୫ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<ol><li>ନିକଟ ଦୂରତା x, ଉଚ୍ଚତା h ଧର। ଦୂର ବିନ୍ଦୁରୁ ପାଦଦେଶ x + 10।</li><li>ନିକଟ ତ୍ରିଭୁଜରେ h/x = tan 60° = √3।</li><li>ଦୂର ତ୍ରିଭୁଜରେ h/(x + 10) = tan 30° = 1/√3।</li><li>ଏଣୁ √3x = (x + 10)/√3 ⇒ 3x = x + 10 ⇒ x = 5। h = 5√3।</li></ol>
+<div class="lesson-body"><p>ନିକଟ ଦୂରତା 5 ମିଟର ଓ ଉଚ୍ଚତା 5√3 ମିଟର।</p></div>
+</details>
+<small class="lesson-source">math/geometry/chapter 4/chapter.pdf · ପୃଷ୍ଠା ୧୯–୨୪</small></article>
+
+</main></body></html>

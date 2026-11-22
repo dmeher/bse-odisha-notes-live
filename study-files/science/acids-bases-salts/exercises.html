@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="or"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ଅମ୍ଳ, କ୍ଷାରକ ଓ ଲବଣ · ଅନୁଶୀଳନୀ ସମାଧାନ</title><link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+body{max-width:52rem;margin:auto;padding:1.5rem;background:#fff;color:#20372e;font:1.1rem/1.7 "Noto Sans Oriya","Noto Sans Devanagari","Nirmala UI",sans-serif;overflow-wrap:anywhere}
+h1,h2{line-height:1.5} article{padding:1rem 0;border-top:1px solid #c3cec7} p,li{white-space:pre-line} small{display:block;margin-top:1rem}
+
+figure{margin:1rem 0;text-align:center}
+.figure-scroll{max-width:100%;overflow:auto}
+figure img{display:block;margin:auto;max-height:44rem;object-fit:contain}
+figcaption{color:#44574e;font-size:.94rem}
+.figure-switch{display:block;cursor:pointer}
+figure:has(.figure-switch input:checked) .figure-scroll img{max-width:none!important;min-width:100%;width:max(44rem,100%);max-height:none}
+
+.study-plate .figure-art {position:relative;width:100%;margin-inline:auto;border-radius:12px;overflow:hidden;border:1px solid #E5DDD0;background:#FCFBF7}
+.study-plate .figure-art img {display:block;width:100%!important;max-width:100%!important;height:auto;max-height:none}
+.study-plate:has(.figure-switch input:checked) .figure-art {width:max(65rem,150%)}
+.study-plate .figure-pin {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:1.7rem;height:1.7rem;background:#C4532D;color:#FFFFFF;border:2.5px solid #FFFFFF;box-shadow:0 2px 8px rgba(22,33,62,.35);font:800 .84rem/1 var(--sans,sans-serif);cursor:pointer;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.study-plate .figure-pin.active,.study-plate .figure-pin:hover {transform:translate(-50%,-50%) scale(1.25);background:#146C78;box-shadow:0 0 0 5px rgba(20,108,120,.25),0 3px 10px rgba(22,33,62,.35);z-index:4}
+.study-plate .figure-key {padding:.8rem .4rem .45rem;margin:0;display:flex;gap:.45rem .85rem;flex-wrap:wrap;justify-content:center;list-style:none}
+.study-plate .figure-key li {display:flex;align-items:baseline;gap:.38rem;text-align:start;padding:.3rem .68rem;border-radius:999px;background:#F6F1E8;border:1px solid #E4DAC8;font-size:.89rem;color:#16213E;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.study-plate .figure-key li:hover,.study-plate .figure-key li.active {background:#146C78;border-color:#146C78;color:#FFFFFF}
+.study-plate .figure-key li:hover b,.study-plate .figure-key li.active b {color:#F9D89C}
+.study-plate .figure-key b {color:#C4532D}
+.note-index {margin-block:1rem}
+.note-index nav {display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin:.85rem 0 .2rem}
+.note-index summary {font-weight:700;cursor:pointer;color:#16213E}
+@media(max-width:480px){.study-plate .figure-pin{width:1.35rem;height:1.35rem;font-size:.74rem}}
+
+
+.lesson-opening,.lesson-check{padding:1.25rem 1.45rem;margin:1.25rem 0 1.65rem;background:linear-gradient(135deg,#FBF2EC 0%,#F7EFE4 100%);border:1px solid #EAD7C8;border-inline-start:4px solid #C4532D;border-radius:14px;box-shadow:0 2px 10px rgba(22,33,62,.04)}
+.lesson-check{background:linear-gradient(135deg,#EDF6F7 0%,#F5F9F9 100%);border-color:#CBE2E4;border-inline-start-color:#146C78}
+.lesson-opening :is(h2,h3),.lesson-check :is(h2,h3){font-family:var(--display,serif);font-size:1.22rem;margin:.1rem 0 .6rem;color:#16213E;line-height:1.5}
+.lesson-opening p,.lesson-check p{margin:.45rem 0;color:#2C384E}
+.lesson-check summary{cursor:pointer;font-weight:700;color:#146C78}
+.lesson-body{font-size:var(--reader-font,1.06rem);line-height:1.9;overflow-wrap:anywhere;word-spacing:.03em;color:#233046}
+.lesson-body p{margin:.7rem 0;white-space:pre-line}
+.lesson-body ol,.lesson-body ul{padding-inline-start:1.55rem;margin:.75rem 0}
+.lesson-body li{padding-inline-start:.25rem;margin:.5rem 0}
+.lesson-body li::marker{color:#C4532D;font-weight:700}
+.lesson-equation{background:#FBF5E8;border:1px solid #EBDAB4;border-inline-start:4px solid #C88A2E;border-radius:10px;padding:.75rem 1.1rem;font-variant-numeric:tabular-nums;font-weight:650;color:#16213E;letter-spacing:.01em}
+.lesson-table{margin:1rem 0;overflow-x:auto;border-radius:12px;border:1px solid #E2D9C8}
+.lesson-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.lesson-table th,.lesson-table td{text-align:start;vertical-align:top;padding:.68rem .9rem;border-bottom:1px solid #E8E0D1;border-inline-end:1px solid #E8E0D1}
+.lesson-table th:last-child,.lesson-table td:last-child{border-inline-end:0}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th{background:#F3ECE0;color:#16213E;font-weight:700}
+.lesson-table tbody tr:nth-child(even){background:#FCFBF8}
+.note-index nav{padding-inline-start:.2rem}
+.lesson-topic{padding:1.45rem 1.55rem}
+.lesson-topic h3,.lesson-topic h2{line-height:1.55;color:#16213E}
+.question-parts{margin:.7rem 0 1.05rem;padding-inline-start:.95rem;border-inline-start:3px solid #E4D7C4;color:#344156}
+.question-parts p{margin:.35rem 0}
+.lesson-source{display:inline-flex;align-items:center;gap:.35rem;color:#626E82;font-size:.84rem;margin-top:1rem}
+.solution-label{margin:1rem 0 .35rem;font-size:.98rem;color:#146C78;font-weight:700;letter-spacing:.02em}
+.solution-label+ol{padding-inline-start:1.65rem;margin:.45rem 0}
+.solution-label+ol li{margin:.45rem 0}
+@media(max-width:560px){.lesson-opening,.lesson-check{padding:.95rem 1rem}.lesson-topic{padding:1.1rem 1.05rem}.lesson-body{font-size:var(--reader-font,1rem)}.lesson-table th,.lesson-table td{padding:.48rem .55rem}}
+@media print{.lesson-opening,.lesson-check,.lesson-table tr{break-inside:avoid}}
+
+summary{font-weight:bold;cursor:pointer} details{padding:.75rem;background:#f0f5f2}
+.exercise-index{margin:1rem 0}.exercise-index nav{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-block:.6rem}article:target{border-inline-start:3px solid #35765b;padding-inline-start:1rem}
+</style></head><body><main><header><p>ଅମ୍ଳ, କ୍ଷାରକ ଓ ଲବଣ</p><h1>ଅନୁଶୀଳନୀ ସମାଧାନ</h1>
+<a href="https://drive.google.com/file/d/1-O4kxpDn-qVRLFkDlMjqTki_kMV6OfwJ/view" target="_blank" rel="noreferrer">ମୂଳ PDF ଖୋଲନ୍ତୁ</a></header>
+<aside><p>ପାଠ ଶେଷର ମୁଦ୍ରିତ ପ୍ରଶ୍ନ ୧–୧୫ ଓ ସେଗୁଡ଼ିକର ଉପପ୍ରଶ୍ନର ଉତ୍ତର ଦିଆଯାଇଛି। ପାଠମଧ୍ୟରେ ମୁଦ୍ରିତ ୧୯ଟି ପ୍ରଶ୍ନ ଓ ସେଗୁଡ଼ିକର ଉପପ୍ରଶ୍ନର ସମାଧାନ ମଧ୍ୟ ଦିଆଯାଇଛି।</p><small>ମୂଳ ଅନୁଶୀଳନୀ · PDF ୪୨–୪୩ · ପାଠମଧ୍ୟ ୨୪, ୨୯, ୩୨, ୩୬, ୪୧</small></aside>
+
+
+<details class="exercise-index">
+    <summary>ପ୍ରଶ୍ନ ସଂଖ୍ୟା ବାଛନ୍ତୁ (୩୪)</summary>
+    <nav aria-label="ଅନୁଶୀଳନୀ ପ୍ରଶ୍ନ ସୂଚୀ"><a href="#exercise-1">୧</a> <a href="#exercise-2">୨</a> <a href="#exercise-3">୩</a> <a href="#exercise-4">୪</a> <a href="#exercise-5">୫</a> <a href="#exercise-6">୬</a> <a href="#exercise-7">୭</a> <a href="#exercise-8">୮</a> <a href="#exercise-9">୯</a> <a href="#exercise-10">୧୦</a> <a href="#exercise-11">୧୧</a> <a href="#exercise-12">୧୨</a> <a href="#exercise-13">୧୩</a> <a href="#exercise-14">୧୪</a> <a href="#exercise-15">୧୫</a> <a href="#exercise-16">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୪ · ୧</a> <a href="#exercise-17">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୯ · ୧</a> <a href="#exercise-18">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୯ · ୨</a> <a href="#exercise-19">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୯ · ୩</a> <a href="#exercise-20">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୧</a> <a href="#exercise-21">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୨</a> <a href="#exercise-22">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୩</a> <a href="#exercise-23">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୪</a> <a href="#exercise-24">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୫</a> <a href="#exercise-25">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୬</a> <a href="#exercise-26">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୧</a> <a href="#exercise-27">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୨</a> <a href="#exercise-28">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୩</a> <a href="#exercise-29">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୪</a> <a href="#exercise-30">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୧</a> <a href="#exercise-31">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୨</a> <a href="#exercise-32">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୩</a> <a href="#exercise-33">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୪</a> <a href="#exercise-34">ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୫</a></nav></details>
+<article id="exercise-1"><h2>୧. ଲାଲ୍ ଲିଟ୍‌ମସ୍‌କୁ ନୀଳ କରୁଥିବା ଦ୍ରବଣର pH ପାଇଁ 1, 4, 5, 10ରୁ ବାଛ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>10। ଲାଲ୍ ଲିଟ୍‌ମସ୍ ନୀଳ ହେବା କ୍ଷାରୀୟ ଦ୍ରବଣର ଲକ୍ଷଣ।</p><p>ଏହାର pH 7ରୁ ଅଧିକ।</p><p>ବିକଳ୍ପଗୁଡ଼ିକୁ ପ୍ରଥମେ ନିରପେକ୍ଷ ମାନ 7 ସହ ତୁଳନା କର। 1, 4 ଓ 5 ଅମ୍ଳୀୟ ଦିଗରେ ପଡ଼େ।</p><p>ଦିଆଯାଇଥିବା ପରୀକ୍ଷାର ରଙ୍ଗ ପରିବର୍ତ୍ତନ କେବଳ 10 ସହ ମେଳ ଖାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୨–୩୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨</a></small></article>
+<article id="exercise-2"><h2>୨. ଅଣ୍ଡା ଖୋଳପା ସହ ଏକ ଦ୍ରବଣ ପ୍ରତିକ୍ରିୟା କଲେ ଯେଉଁ ଗ୍ୟାସ୍ ମିଳେ, ତାହା ଚୂନପାଣିକୁ ଦୁଧିଆ କରେ। NaCl, HCl, LiCl ଓ KCl ମଧ୍ୟରୁ କେଉଁଟି ସେହି ଦ୍ରବଣରେ ଅଛି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦିଆ ବିକଳ୍ପରୁ HCl। ଖୋଳପାର CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂।</p><p>CO₂ ଚୂନପାଣି ସହ CaCO₃ ତିଆରି କରି ତାହାକୁ ଦୁଧିଆ କରେ।</p><p>ଏଠାରେ ଦୁଇଟି ପର୍ଯ୍ୟବେକ୍ଷଣ ଅଛି। ଖୋଳପାର କାର୍ବୋନେଟ୍ ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟା କଲେ ଗ୍ୟାସ୍ ମିଳେ।</p><p>ସେହି ଗ୍ୟାସ୍‌କୁ ଚୂନପାଣିରେ ଦେଲେ Ca(OH)₂ + CO₂ → CaCO₃↓ + H₂O। ଧଳା ଅବକ୍ଷେପ ପାଇଁ ଚୂନପାଣି ଦୁଧିଆ ଦିଶେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=27">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୭–୨୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨</a></small></article>
+<article id="exercise-3"><h2>୩. 10 mL NaOH ପାଇଁ 8 mL HCl ଲାଗେ। ଏକେ ଦ୍ରବଣର 20 mL NaOH ପାଇଁ HCl କେତେ ଲାଗିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>NaOHର ପରିମାଣ ଦୁଇଗୁଣ, ଉଭୟ ଗାଢ଼ତା ଅପରିବର୍ତ୍ତିତ। HCl = 8 × 20/10 = 16 mL।</p><p>ପ୍ରତି 1 mL ସେହି NaOH ଦ୍ରବଣ ପାଇଁ 8/10 mL ସେହି HCl ଦ୍ରବଣ ଲାଗେ। ତେଣୁ 20 mL ପାଇଁ 20 × 8/10 = 16 mL।</p><p>ଏହି ଅନୁପାତ ଲଗାଇବାର କାରଣ ହେଉଛି ଦୁଇ ଦ୍ରବଣର ଗାଢ଼ତା ପ୍ରଶ୍ନରେ ଏକା ରଖାଯାଇଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=28">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୮–୨୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨</a></small></article>
+<article id="exercise-4"><h2>୪. ଅଜୀର୍ଣ୍ଣରେ ଅତ୍ୟଧିକ ପାକସ୍ଥଳୀ ଅମ୍ଳ ପ୍ରଶମିତ କରିବା ପାଇଁ ଔଷଧର କେଉଁ ଶ୍ରେଣୀ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରତି-ଅମ୍ଳ। କ୍ଷାରକୀୟ ପଦାର୍ଥ ଅତିରିକ୍ତ ଅମ୍ଳକୁ ପ୍ରଶମିତ କରେ।</p><p>ପାକସ୍ଥଳୀରେ ସାଧାରଣ ଭାବେ HCl ଥାଏ। ପାଠରେ ଅଧିକ ଅମ୍ଳ ହୋଇଥିବା ଅବସ୍ଥା ବିଚାର କରାଯାଇଛି।</p><p>ପ୍ରତି-ଅମ୍ଳର କ୍ଷାରୀୟ ଉପାଦାନ ସେହି ଅତିରିକ୍ତ ଅମ୍ଳ ସହ ପ୍ରଶମନୀକରଣ ପ୍ରତିକ୍ରିୟା କରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=34">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୪–୩୫</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨</a></small></article>
+<article id="exercise-5"><h2>୫. ପ୍ରତି ଯୋଡ଼ି ପାଇଁ ଶବ୍ଦ-ସମୀକରଣ ଓ ତା’ପରେ ସମତୁଲ ରାସାୟନିକ ସମୀକରଣ ଲେଖ।</h2>
+<div class="question-parts"><p>(a) ଲଘୁ ସଲ୍‌ଫ୍ୟୁରିକ୍ ଏସିଡ୍ ଓ ଜିଙ୍କ୍।</p><p>(b) ଲଘୁ ହାଇଡ୍ରୋକ୍ଲୋରିକ୍ ଏସିଡ୍ ଓ ମ୍ୟାଗ୍ନେସିୟମ୍ ପାତ।</p><p>(c) ଲଘୁ ସଲ୍‌ଫ୍ୟୁରିକ୍ ଏସିଡ୍ ଓ ଏଲୁମିନିୟମ୍ ଗୁଣ୍ଡ।</p><p>(d) ଲଘୁ ହାଇଡ୍ରୋକ୍ଲୋରିକ୍ ଏସିଡ୍ ଓ ଲୁହାଗୁଣ୍ଡ।</p></div>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) ଜିଙ୍କ୍ + ସଲ୍‌ଫ୍ୟୁରିକ୍ ଏସିଡ୍ → ଜିଙ୍କ୍ ସଲ୍‌ଫେଟ୍ + ହାଇଡ୍ରୋଜେନ୍। Zn + H₂SO₄ → ZnSO₄ + H₂।</li><li>(b) ମ୍ୟାଗ୍ନେସିୟମ୍ + ହାଇଡ୍ରୋକ୍ଲୋରିକ୍ ଏସିଡ୍ → ମ୍ୟାଗ୍ନେସିୟମ୍ କ୍ଲୋରାଇଡ୍ + ହାଇଡ୍ରୋଜେନ୍। Mg + 2HCl → MgCl₂ + H₂।</li><li>(c) ଏଲୁମିନିୟମ୍ + ସଲ୍‌ଫ୍ୟୁରିକ୍ ଏସିଡ୍ → ଏଲୁମିନିୟମ୍ ସଲ୍‌ଫେଟ୍ + ହାଇଡ୍ରୋଜେନ୍। 2Al + 3H₂SO₄ → Al₂(SO₄)₃ + 3H₂।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(d) ଆଇରନ୍ + ହାଇଡ୍ରୋକ୍ଲୋରିକ୍ ଏସିଡ୍ → ଆଇରନ୍ (II) କ୍ଲୋରାଇଡ୍ + ହାଇଡ୍ରୋଜେନ୍। Fe + 2HCl → FeCl₂ + H₂।</p><p>ଲବଣର ନାମ ବାଛିଲାବେଳେ ଅମ୍ଳର ଋଣାତ୍ମକ ଆୟନକୁ ଦେଖ। HClରୁ କ୍ଲୋରାଇଡ୍ ଓ H₂SO₄ରୁ ସଲ୍‌ଫେଟ୍ ହୁଏ।</p><p>MgCl₂ ଓ FeCl₂ ପାଇଁ 2HCl ଲାଗେ। Al₂(SO₄)₃ରେ ଦୁଇ Al ଓ ତିନି SO₄ ଥିବାରୁ ବାମରେ 2Al ଓ 3H₂SO₄ ନିଅ।</p><p>ବଳିଥିବା ଛଅ Hରୁ 3H₂ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=26">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୬–୨୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=42" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୨</a></small></article>
+<article id="exercise-6"><h2>୬. ଆଲ୍‌କହଲ୍ ଓ ଗ୍ଲୁକୋଜ୍‌ରେ H ଥିଲେ ମଧ୍ୟ ସେଗୁଡ଼ିକ ଅମ୍ଳ ନୁହେଁ। ପରିବାହିତା ତୁଳନାରୁ ବୁଝାଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ନିମ୍ନ ବିଭବର ବ୍ୟାଟେରୀ ଓ ବଲ୍‌ବ ଥିବା ପରିପଥର ଦୁଇ ଇଲେକ୍‌ଟ୍ରୋଡ୍‌କୁ ପୃଥକ୍ ଭାବେ ଲଘୁ ଅମ୍ଳ, ଗ୍ଲୁକୋଜ୍ ଓ ଆଲ୍‌କହଲ୍‌ର ଜଳୀୟ ଦ୍ରବଣରେ ରଖି ପରିବାହିତା ତୁଳନା କର। ଅମ୍ଳ ଦ୍ରବଣରେ ବଲ୍‌ବ ଜଳେ।</p><p>ଅନ୍ୟ ଦୁଇଟିରେ ସେପରି ଜଳେ ନାହିଁ। ଅମ୍ଳ ଜଳରେ H₃O⁺ ସୃଷ୍ଟି କରେ, ଗ୍ଲୁକୋଜ୍ ଓ ଆଲ୍‌କହଲ୍ ସେପରି ଆୟନ ଦିଅନ୍ତି ନାହିଁ।</p><p>ଏକେ ପରିପଥ ଓ ଦୁଇଟି ଇଲେକ୍‌ଟ୍ରୋଡ୍ ରଖି ଦ୍ରବଣ ବଦଳାଇଲେ କେବଳ ଦ୍ରବଣର ପ୍ରଭାବ ତୁଳନା ହୁଏ। ଅମ୍ଳର ଜଳୀୟ ଦ୍ରବଣରେ ଗତିଶୀଳ ଆୟନ ଥିବାରୁ ବଲ୍‌ବ ଜଳେ।</p><p>ଗ୍ଲୁକୋଜ୍ ଓ ଆଲ୍‌କହଲ୍ ଅଣୁରେ H ବନ୍ଧା ରହେ, ଜଳରେ ସେଗୁଡ଼ିକ ଅମ୍ଳ ପରି H₃O⁺ ଦିଅନ୍ତି ନାହିଁ। ଅଣୁରେ H ଥିବା ଏକା ଅମ୍ଳତ୍ୱର ପ୍ରମାଣ ହୋଇପାରେ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=29">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୯–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-7"><h2>୭. ପାତିତ ଜଳ ଓ ବର୍ଷାଜଳର ପରିବାହିତା ଭିନ୍ନ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପାତିତ ଜଳରେ ଚଳନଶୀଳ ଆୟନ ଅତି କମ୍। ବର୍ଷାଜଳରେ ବାୟୁର ଗ୍ୟାସ୍ ଓ ଅନ୍ୟ ପଦାର୍ଥ ଦ୍ରବୀଭୂତ ହୋଇ ଆୟନ ଦିଅନ୍ତି।</p><p>ତେଣୁ ଏହାର ପରିବାହିତା ଅଧିକ।</p><p>ପାତିତ ଜଳରେ ଦ୍ରବୀଭୂତ ଲବଣ ପ୍ରାୟ ନଥାଏ, ତେଣୁ ଚାର୍ଜ ବହନ କରୁଥିବା ଆୟନ ଖୁବ୍ କମ୍। ବର୍ଷାଜଳରେ ବାୟୁର ଗ୍ୟାସ୍ ଆଦି ଦ୍ରବୀଭୂତ ହୋଇ ଆୟନ ଦେଇପାରେ।</p><p>ଏକେ ପରିପଥରେ ତାହାର ବିଦ୍ୟୁତ୍ ପରିବାହିତା ଅଧିକ ହେବାର କାରଣ ଏହି ଗତିଶୀଳ ଆୟନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=29">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୯–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-8"><h2>୮. ଜଳ ଅନୁପସ୍ଥିତିରେ ଅମ୍ଳର ଅମ୍ଳୀୟ ଆଚରଣ କାହିଁକି ଦିଶେ ନାହିଁ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅମ୍ଳୀୟ ଆଚରଣ ପାଇଁ ଜଳରେ H₃O⁺ ଆୟନ ଆବଶ୍ୟକ। ଉଦାହରଣରେ ଶୁଖିଲା HCl ଶୁଖିଲା ଲିଟ୍‌ମସ୍‌ର ରଙ୍ଗ ବଦଳାଏ ନାହିଁ।</p><p>ଜଳ ଥିଲେ HCl + H₂O → H₃O⁺ + Cl⁻ | ଲିଟ୍‌ମସ୍‌ରେ ଅମ୍ଳୀୟ ରଙ୍ଗ ପରିବର୍ତ୍ତନ ଏହି ଜଳୀୟ ଆୟନ ଯୋଗୁଁ ହୁଏ।</p><p>ଶୁଖିଲା କାଗଜ ଓ ଶୁଷ୍କ HClରେ ସେହି ଜଳୀୟ ଅବସ୍ଥା ମିଳେ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-9"><h2>୯. A–Eର pH କ୍ରମେ 4, 1, 11, 7 ଓ 9। ପ୍ରକୃତି ଚିହ୍ନଟ ଓ ହାଇଡ୍ରୋଜେନ୍ ଆୟନ ଗାଢ଼ତାର ବୃଦ୍ଧିକ୍ରମ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>(a) ନିରପେକ୍ଷ D। (b) ସବୁଠାରୁ ଅଧିକ କ୍ଷାରୀୟ C।</p><p>(c) ସବୁଠାରୁ ଅଧିକ ଅମ୍ଳୀୟ B। (d) ଦୁର୍ବଳ ଅମ୍ଳୀୟ A।</p><p>(e) ଦୁର୍ବଳ କ୍ଷାରୀୟ E। pH କମିଲେ H⁺ ଗାଢ଼ତା ବଢ଼େ, ତେଣୁ ବୃଦ୍ଧିକ୍ରମ C &lt; E &lt; D &lt; A &lt; B।</p><p>ପ୍ରଥମେ 7 ଠାରୁ କମ୍ ମାନ (A, B), 7 (D) ଓ 7 ଠାରୁ ଅଧିକ ମାନ (C, E) ଅଲଗା କର। H⁺ର ଗାଢ଼ତା ବଢ଼ିଲେ pH କମେ।</p><p>ତେଣୁ H⁺ ବୃଦ୍ଧିକ୍ରମ ଲେଖିବାକୁ pHକୁ ବଡ଼ରୁ ସାନ କ୍ରମରେ ସଜାଅ: 11, 9, 7, 4, 1 ଅର୍ଥାତ୍ C, E, D, A, B।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୨–୩୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-10"><h2>୧୦. ସମାନ Mg ପାତ ଓ ସମାନ ଗାଢ଼ତାର HCl ଓ ଏସିଟିକ୍ ଏସିଡ୍‌ରୁ କେଉଁଥିରେ ଗ୍ୟାସ୍ ଶୀଘ୍ର ବାହାରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପରୀକ୍ଷା ନଳୀ Aର HClରେ। ସମାନ ଗାଢ଼ତାରେ ସବଳ HCl ଦୁର୍ବଳ ଏସିଟିକ୍ ଏସିଡ୍‌ଠାରୁ ଅଧିକ H⁺ ଦିଏ।</p><p>ତେଣୁ Mg ସହ ପ୍ରତିକ୍ରିୟା ଓ H₂ ବୁଦ୍‌ବୁଦ୍ ସୃଷ୍ଟି ଦ୍ରୁତ।</p><p>ପାତର ମାପ ଓ ଅମ୍ଳ ଦ୍ରବଣର ଗାଢ଼ତା ସମାନ ରଖାଯାଇଛି। HCl ସବଳ ଅମ୍ଳ ହେତୁ ସମାନ ପରିମାଣର ଦ୍ରବଣରେ ଅଧିକ H⁺ ଉପଲବ୍ଧ କରାଏ।</p><p>Mg ସହ ଏହି ଆୟନଗୁଡ଼ିକର ପ୍ରତିକ୍ରିୟାରୁ H₂ ମିଳୁଥିବାରୁ HClରେ ବୁଦ୍‌ବୁଦ୍ ଅଧିକ ଶୀଘ୍ର ଦିଶେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୨–୩୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-11"><h2>୧୧. ତଟକା କ୍ଷୀରର pH ୬। ଦହି ହେବାବେଳେ ଏହା କିପରି ବଦଳେ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (କ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଦହି ହେବାବେଳେ ଲାକ୍ଟିକ୍ ଅମ୍ଳ ସୃଷ୍ଟି ହୁଏ। ଅମ୍ଳୀୟତା ବଢ଼ିବାରୁ pH ୬ଠାରୁ କମିଯାଏ।</p><p>କ୍ଷୀରରୁ ଦହି ହେବା ସମୟରେ ଲାକ୍ଟିକ୍ ଏସିଡ୍ ସୃଷ୍ଟି ହୁଏ। ଏହାର ଅର୍ଥ କ୍ଷୀର ଆଗ ଅପେକ୍ଷା ଅଧିକ ଅମ୍ଳୀୟ ହେଲା।</p><p>ତେଣୁ pH, 6 ଠାରୁ କମେ। ଦିଆ ତଥ୍ୟରୁ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଶେଷ pH ଗଣନା କରିବା ସମ୍ଭବ ନୁହେଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=33">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୩–୩୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨–୪୩</a></small></article>
+<article id="exercise-12"><h2>୧୨. ତଟକା କ୍ଷୀରରେ ଖାଇବା ସୋଡା ମିଶିଲେ pH ଓ ଦହି ହେବା ସମୟର କ’ଣ ପରିବର୍ତ୍ତନ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<h3 class="solution-label">ବ୍ୟାଖ୍ୟା</h3>
+<ol><li>(a) NaHCO₃ କ୍ଷାରୀୟ। ଏହା କ୍ଷୀରକୁ ସାମାନ୍ୟ କ୍ଷାରୀୟ କରି ଶୀଘ୍ର ଖଟା ହେବା ବିଳମ୍ବ କରେ।</li></ol>
+<h3 class="solution-label">ଉତ୍ତର</h3>
+<div class="lesson-body"><p>(b) ଉତ୍ପନ୍ନ ଲାକ୍ଟିକ୍ ଅମ୍ଳର କିଛି ଅଂଶ ପ୍ରଥମେ ସୋଡାକୁ ପ୍ରଶମିତ କରେ। ଦହି ହେବା ପାଇଁ ଉପଯୁକ୍ତ ଅମ୍ଳତାରେ ପହଞ୍ଚିବାକୁ ଅଧିକ ସମୟ ଲାଗେ।</p><p>ପ୍ରଥମ ପରିବର୍ତ୍ତନ ହୁଏ ସୋଡା ମିଶାଇବାବେଳେ: କ୍ଷୀର ଅଳ୍ପ କ୍ଷାରୀୟ ହୁଏ। ପରେ ଲାକ୍ଟିକ୍ ଏସିଡ୍ ହେଲେ ତାହାର କିଛି ଅଂଶ ସୋଡାକୁ ପ୍ରଶମିତ କରିବାରେ ଲାଗେ।</p><p>ଦହି ହେବା ପାଇଁ ଯେତିକି ଅମ୍ଳତା ଦରକାର ତାହା ପହଞ୍ଚିବାକୁ ଅଧିକ ସମୟ ଲାଗେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=33">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୩–୩୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-13"><h2>୧୩. ପ୍ଲାଷ୍ଟର୍ ଅଫ୍ ପ୍ୟାରିସ୍‌କୁ ଆର୍ଦ୍ରତାରୁ କାହିଁକି ରକ୍ଷା କରିବା ଉଚିତ?</h2>
+<p>ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୫, ଭାଗ ୨, ପ୍ରଶ୍ନ ୩ (ଖ) (୨ ନମ୍ବର)</p>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଏହା ଜଳ ଗ୍ରହଣ କରି ଜିପ୍‌ସମ୍‌ରେ ପରିଣତ ହୋଇ କଠିନ ହୋଇଯାଏ। ପୂର୍ବରୁ ଏହା ଘଟିଲେ ଆବଶ୍ୟକ ସମୟରେ ଛାଞ୍ଚରେ ରୂପ ଦେଇହେବ ନାହିଁ।</p><p>ଶୁଖିଲା ଗୁଣ୍ଡ CaSO₄·½H₂O ଜଳ ନେଲେ CaSO₄·2H₂O ହୋଇ ଟାଣ ହୁଏ। ପ୍ରତି CaSO₄ ପାଇଁ ବାହାରୁ ଆଉ 1½H₂O ଲାଗେ।</p><p>ଆର୍ଦ୍ର ବାୟୁରେ ଏହି ପରିବର୍ତ୍ତନ ଆଗରୁ ଘଟିଗଲେ ଆବଶ୍ୟକ ଆକୃତି ଦେବା ପାଇଁ ଗୁଣ୍ଡଟି ଆଉ ଉପଯୋଗୀ ରହେନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=40">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୦–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=40" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୦–୪୩</a></small></article>
+<article id="exercise-14"><h2>୧୪. ପ୍ରଶମନୀକରଣ କ’ଣ? ଦୁଇଟି ଉଦାହରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅମ୍ଳ ଓ କ୍ଷାରକର ପ୍ରତିକ୍ରିୟାରୁ ଲବଣ ଓ ଜଳ ହୁଏ। HCl + NaOH → NaCl + H₂O।</p><p>ଅନ୍ୟ ଉଦାହରଣ H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O।</p><p>ଉଭୟ ଉଦାହରଣରେ ଅମ୍ଳର H⁺ ଓ କ୍ଷାରକର OH⁻ ଏକାଠି ହୋଇ H₂O ଗଠନ କରନ୍ତି। ଯଥା NaOH + HCl → NaCl + H₂O ରେ Na⁺ ଓ Cl⁻ ଲବଣର ଆୟନ।</p><p>ଗୋଟିଏ H⁺ ପ୍ରତି ଗୋଟିଏ OH⁻ ଆବଶ୍ୟକ ବୋଲି ଗଣିଲେ ସମୀକରଣ ସମତୁଲ କରିହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=28">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୮–୨୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-15"><h2>୧୫. ଧୋଇବା ସୋଡା ଓ ଖାଇବା ସୋଡାର ଦୁଇଟି ଲେଖାଏଁ ବ୍ୟବହାର ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଧୋଇବା ସୋଡା ପୋଷାକ ସଫା ଓ ଜଳର ସ୍ଥାୟୀ ଖରତ୍ୱ ଦୂର କରିବାରେ ଲାଗେ। ଖାଇବା ସୋଡା ବେକିଙ୍ଗ୍ ପାଉଡର୍‌ରେ ଓ ପ୍ରତି-ଅମ୍ଳ ଭାବେ ବ୍ୟବହୃତ ହୁଏ।</p><p>ଧୋଇବା ସୋଡା Na₂CO₃·10H₂O ଓ ଖାଇବା ସୋଡା NaHCO₃ର ସଙ୍କେତ ଅଲଗା। ଧୋଇବା ସୋଡାର କାର୍ବୋନେଟ୍ ଖର ଜଳର କେତେକ ଲବଣକୁ ଅଦ୍ରବଣୀୟ ରୂପେ ପୃଥକ୍ କରେ।</p><p>ଖାଇବା ସୋଡାରୁ ମିଳୁଥିବା CO₂ ବେକିଙ୍ଗ୍‌ରେ ମିଶ୍ରଣକୁ ଫୁଲାଏ ଓ ଏହାର କ୍ଷାରୀୟ ଧର୍ମ ପ୍ରତି-ଅମ୍ଳ ଭାବେ ଲାଗେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮–୪୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=43" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୩</a></small></article>
+<article id="exercise-16"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୪ · ୧. କେବଳ ଲାଲ୍ ଲିଟ୍‌ମସ୍ କାଗଜରେ ତିନି ନଳୀର ପାତିତ ଜଳ, ଅମ୍ଳୀୟ ଦ୍ରବଣ ଓ କ୍ଷାରୀୟ ଦ୍ରବଣକୁ କିପରି ଚିହ୍ନିବ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ପ୍ରତ୍ୟେକ ନମୁନାକୁ ଅଲଗା ଲାଲ୍ କାଗଜରେ ପରୀକ୍ଷା କର। ଯେଉଁଟି କାଗଜକୁ ନୀଳ କରେ ତାହା କ୍ଷାରୀୟ।</p><p>ସେହି ଦ୍ରବଣରେ ଆଉ ଦୁଇ ଖଣ୍ଡ କାଗଜ ନୀଳ କରି ଅନ୍ୟ ଦୁଇ ନମୁନାର ଅଲଗା ବୁନ୍ଦା ଦିଅ। ଯେଉଁଟି ନୀଳକୁ ଲାଲ୍ କରେ ତାହା ଅମ୍ଳୀୟ।</p><p>ଯେଉଁଟି ବର୍ଣ୍ଣ ଅପରିବର୍ତ୍ତିତ ରଖେ ତାହା ପାତିତ ଜଳ।</p><p>ପ୍ରଥମ ପରୀକ୍ଷାରେ ଲାଲ୍ କାଗଜ ନୀଳ ହୋଇଥିବା ନଳୀଟିକୁ ଚିହ୍ନ ଦିଅ। ଏହି ନୀଳ କାଗଜର ଅଲଗା ଖଣ୍ଡ ଅବଶିଷ୍ଟ ଦୁଇ ଦ୍ରବଣ ପାଇଁ ସୂଚକ ହୁଏ।</p><p>ରଙ୍ଗ ପୁଣି ଲାଲ୍ ହେଲେ ଅମ୍ଳ, ଅପରିବର୍ତ୍ତିତ ରହିଲେ ପାତିତ ଜଳ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=24">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୪–୨୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=24" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୪</a></small></article>
+<article id="exercise-17"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୯ · ୧. ଦହି ଓ ଅନ୍ୟ ଖଟା ଜିନିଷକୁ ପିତ୍ତଳ ବା ତମ୍ବା ପାତ୍ରରେ ରଖିବା ଅନୁଚିତ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଏହି ଖାଦ୍ୟରେ ଅମ୍ଳ ଥାଏ। ପାତ୍ରର ଧାତବ ପୃଷ୍ଠ ସହିତ ଅମ୍ଳର ପ୍ରତିକ୍ରିୟାରୁ ଲବଣ ସୃଷ୍ଟି ହୋଇ ଖାଦ୍ୟରେ ମିଶିପାରେ।</p><p>ଏଥିରେ ଖାଦ୍ୟ ଖାଇବା ଅନୁପଯୁକ୍ତ ହୋଇଯାଏ।</p><p>ଖଟା ଖାଦ୍ୟ ଓ ପାତ୍ରର ସଂସ୍ପର୍ଶ ଏଠାରେ ମୁଖ୍ୟ। ଅମ୍ଳ ସହ ଧାତୁ ବା ତାହାର ପୃଷ୍ଠରେ ଥିବା ଅକ୍ସାଇଡ୍‌ର ପ୍ରତିକ୍ରିୟାରୁ ଯେଉଁ ଲବଣ ହୁଏ ତାହା ଖାଦ୍ୟରେ ମିଶିପାରେ।</p><p>ଏଣୁ ପାତ୍ର ବାଛିବାବେଳେ ତାହା କେଉଁ ପଦାର୍ଥରେ ତିଆରି ଏବଂ ଖାଦ୍ୟର ପ୍ରକୃତି କ’ଣ, ଉଭୟ ବିଚାର କରାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=26">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୬–୨୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=29" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୯</a></small></article>
+<article id="exercise-18"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୯ · ୨. ଅମ୍ଳ ଓ ପ୍ରତିକ୍ରିୟାଶୀଳ ଧାତୁରୁ ସାଧାରଣତଃ ମିଳୁଥିବା ଗ୍ୟାସ୍‌ର ନାମ, ଗୋଟିଏ ସମୀକରଣ ଓ ଚିହ୍ନଟ ଲକ୍ଷଣ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଗ୍ୟାସ୍‌ଟି ହାଇଡ୍ରୋଜେନ୍। ଉଦାହରଣ, Zn + 2HCl → ZnCl₂ + H₂↑।</p><p>ପାଠ୍ୟପୁସ୍ତକର ପରୀକ୍ଷାରେ ହାଇଡ୍ରୋଜେନ୍ ଦହନ ସମୟରେ ‘ପପ୍’ ଶବ୍ଦ ହେବା ଏହାର ଚିହ୍ନଟ ଲକ୍ଷଣ।</p><p>Zn + 2HCl → ZnCl₂ + H₂ ରେ ପ୍ରତ୍ୟେକ Zn ପାଇଁ ଦୁଇ Cl ଲବଣରେ ଯାଏ ଓ ଦୁଇ H ମିଶି ଗ୍ୟାସ୍ ହୁଏ। ଗ୍ୟାସ୍‌ର ବୁଦ୍‌ବୁଦ୍ ବାହାରିବା ଏକ ପର୍ଯ୍ୟବେକ୍ଷଣ, ପୁସ୍ତକରେ ଦିଆ ବିଶିଷ୍ଟ ଧ୍ୱନି ସେହି ଗ୍ୟାସ୍‌ର ଚିହ୍ନଟ ଲକ୍ଷଣ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=26">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୬–୨୭</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=29" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୯</a></small></article>
+<article id="exercise-19"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୨୯ · ୩. ଯୌଗିକ A ଲଘୁ HCl ସହ କ୍ୟାଲ୍ସିୟମ୍ କ୍ଲୋରାଇଡ୍ ଓ ମହମବତୀ ଲିଭାଉଥିବା ଗ୍ୟାସ୍ ଦିଏ। Aକୁ ଚିହ୍ନଟ କରି ସମୀକରଣ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବୁଦ୍‌ବୁଦ ହୋଇ ବାହାରୁଥିବା ଓ ଦହନରେ ସାହାଯ୍ୟ କରୁ ନ ଥିବା ଗ୍ୟାସ୍ ହେଉଛି କାର୍ବନ୍ ଡାଇଅକ୍ସାଇଡ୍। A ହେଉଛି କ୍ୟାଲ୍ସିୟମ୍ କାର୍ବୋନେଟ୍।</p><p>CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g)।</p><p>CaCl₂ରୁ A ଭିତରେ Ca ଥିବା ଜାଣିହୁଏ। ମହମବତୀ ଲିଭାଉଥିବା ଗ୍ୟାସ୍ CO₂ ବୋଲି ଅମ୍ଳ–କାର୍ବୋନେଟ୍ ଉଦାହରଣ ସହ ମେଳାଅ।</p><p>ଏହି ଦୁଇ ସୂଚନା ବ୍ୟବହାର କରି A = CaCO₃ ବାଛିଲେ, ସମତୁଲ ସମୀକରଣର ଅନ୍ୟ ଉତ୍ପାଦ ଜଳ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=27">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୭–୨୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=29" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୨୯</a></small></article>
+<article id="exercise-20"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୧. ହାଇଡ୍ରୋଜେନ୍ ଥାଇ ମଧ୍ୟ ଆଲ୍‌କହଲ୍ ଓ ଗ୍ଲୁକୋଜ୍‌ର ଦ୍ରବଣ HCl ଓ HNO₃ ପରି ଅମ୍ଳୀୟ ଲକ୍ଷଣ ଦେଖାଏନାହିଁ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>HCl ଓ HNO₃ ଜଳରେ ହାଇଡ୍ରୋଜେନ୍ ଆୟନ ଦିଅନ୍ତି। ଏହା ଜଳ ଅଣୁ ସହ ହାଇଡ୍ରୋନିୟମ୍ ଆୟନ (H₃O⁺) ଗଠନ କରେ।</p><p>ଆଲ୍‌କହଲ୍ ଓ ଗ୍ଲୁକୋଜ୍ ଜଳରେ ଏପରି ଆୟନ ଉତ୍ପନ୍ନ କରନ୍ତି ନାହିଁ।</p><p>HCl ଓ HNO₃ ଜଳରେ ଦ୍ରବୀଭୂତ ହେଲେ H₃O⁺ ମିଳୁଛି କି ନାହିଁ ଦେଖ। ଏହି ଆୟନ ଅମ୍ଳୀୟ ଆଚରଣକୁ ବୁଝାଏ।</p><p>ଆଲ୍‌କହଲ୍ ଓ ଗ୍ଲୁକୋଜ୍ ସଙ୍କେତରେ H ଥିଲେ ମଧ୍ୟ ସେହି H ଜଳରେ ଏପରି ଆୟନ ଭାବରେ ବାହାରେ ନାହିଁ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=29">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୯–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-21"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୨. ଅମ୍ଳର ଜଳୀୟ ଦ୍ରବଣ ଦେଇ ବିଦ୍ୟୁତ୍ କିପରି ପ୍ରବାହିତ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଜଳରେ ଅମ୍ଳ ଆୟନ ସୃଷ୍ଟି କରେ। ଉଦାହରଣରେ HCl + H₂O → H₃O⁺ + Cl⁻।</p><p>ଏହି ଧନାତ୍ମକ ଓ ଋଣାତ୍ମକ ଆୟନ ଗତି କରି ଚାର୍ଜ ବହନ କରନ୍ତି।</p><p>ଜଳରେ ଅମ୍ଳରୁ ଧନାତ୍ମକ ଓ ଋଣାତ୍ମକ ଆୟନ ମିଳନ୍ତି। ଇଲେକ୍‌ଟ୍ରୋଡ୍‌ଗୁଡ଼ିକ ମଝିରେ ଏମାନଙ୍କ ଗତି ଦ୍ୱାରା ଚାର୍ଜ ବହନ ହୁଏ।</p><p>ସେହି କାରଣରୁ ତାର, ବ୍ୟାଟେରୀ ଓ ଅମ୍ଳ ଦ୍ରବଣ ଥିବା ସମ୍ପୂର୍ଣ୍ଣ ପରିପଥରେ ବଲ୍‌ବ ଜଳିପାରେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=29">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୨୯–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-22"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୩. ଶୁଷ୍କ HCl ଗ୍ୟାସ୍ ଶୁଷ୍କ ଲିଟ୍‌ମସ୍ କାଗଜର ବର୍ଣ୍ଣ ବଦଳାଏନାହିଁ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଜଳ ନ ଥିଲେ HClରୁ ଜଳୀୟ H₃O⁺ ଆୟନ ଗଠିତ ହୁଏନାହିଁ। ତେଣୁ ଶୁଷ୍କ କାଗଜରେ ଅମ୍ଳୀୟ ବର୍ଣ୍ଣ ପରିବର୍ତ୍ତନ ଦେଖାଯାଏନାହିଁ।</p><p>ଶୁଷ୍କ କାଗଜରେ ଗ୍ୟାସ୍‌ର HCl ଜଳୀୟ H₃O⁺ ରୂପ ନେଇପାରେନାହିଁ। କାଗଜକୁ ଆର୍ଦ୍ର କଲେ ତାହା ଉପରର ଜଳରେ HCl ଦ୍ରବୀଭୂତ ହୁଏ।</p><p>ସେଥିପାଇଁ ଏକା ଗ୍ୟାସ୍ ହୋଇଥିଲେ ମଧ୍ୟ ଶୁଷ୍କ ଓ ଆର୍ଦ୍ର ଲିଟ୍‌ମସ୍‌ର ଫଳ ଭିନ୍ନ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=30">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୦–୩୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-23"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୪. ଗାଢ଼ ଅମ୍ଳର ଲଘୁକରଣ ବେଳେ ଜଳରେ ଅମ୍ଳ ମିଶାଇବାର କାରଣ କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମିଶ୍ରଣ ସମୟରେ ପ୍ରଚୁର ତାପ ନିର୍ଗତ ହୁଏ। ଅଧିକ ଜଳ ସେହି ତାପ ଗ୍ରହଣ କରିପାରେ।</p><p>ଗାଢ଼ ଅମ୍ଳରେ ଅଳ୍ପ ଜଳ ପଡ଼ିଲେ ସ୍ଥାନୀୟ ଭାବେ ତାପମାତ୍ରା ହଠାତ୍ ବଢ଼ି ଅମ୍ଳ ଛିଟିକିପାରେ।</p><p>ଅମ୍ଳର ଲଘୁକରଣ ତାପଉତ୍ପାଦୀ। ବହୁ ପରିମାଣର ଜଳ ମୁକ୍ତ ତାପକୁ ନେଇପାରେ।</p><p>ଗାଢ଼ ଅମ୍ଳ ଉପରେ ଅଳ୍ପ ଜଳ ପଡ଼ିଲେ ସେହି ଅଳ୍ପ ଜଳ ଏକାଥରେ ଅଧିକ ଗରମ ହୋଇ ଛିଟିକିବା ଆଶଙ୍କା ରହେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-24"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୫. ଅମ୍ଳୀୟ ଦ୍ରବଣର ଲଘୁକରଣରେ H₃O⁺ର ଗାଢ଼ତାର କ’ଣ ହୁଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଜଳ ମିଶିବାରୁ ଏକକ ଆୟତନରେ ହାଇଡ୍ରୋନିୟମ୍ ଆୟନ ସଂଖ୍ୟା କମିଯାଏ। ତେଣୁ H₃O⁺ର ଗାଢ଼ତା କମେ।</p><p>ଗାଢ଼ତା କହିଲେ ଏକକ ଆୟତନରେ କେତେ ଆୟନ ଅଛି ବୁଝାଯାଏ। ଜଳ ମିଶାଇଲେ ଦ୍ରବଣର ମୋଟ ଆୟତନ ବଢ଼େ।</p><p>ତେଣୁ ସମାନ ଆୟତନର ଏକ ନମୁନାରେ ପୂର୍ବ ଅପେକ୍ଷା H₃O⁺ କମ୍ ମିଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-25"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୨ · ୬. ସୋଡିୟମ୍ ହାଇଡ୍ରକ୍ସାଇଡ୍ ଦ୍ରବଣରେ ଅଧିକ କ୍ଷାରକ ଦ୍ରବୀଭୂତ ହେଲେ OH⁻ର ଗାଢ଼ତା କିପରି ବଦଳେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଆଉ କ୍ଷାରକ ଦ୍ରବୀଭୂତ ହେଲେ ଅଧିକ ହାଇଡ୍ରକ୍ସାଇଡ୍ ଆୟନ ମିଳେ। ତେଣୁ ଏକକ ଆୟତନରେ OH⁻ର ଗାଢ଼ତା ବଢ଼େ।</p><p>NaOH ଜଳରେ Na⁺ ଓ OH⁻ ଦିଏ। ଏକା ଜଳରେ ଅଧିକ NaOH ଦ୍ରବୀଭୂତ କଲେ ପ୍ରତି ଏକକ ଆୟତନରେ OH⁻ ବଢ଼େ।</p><p>ଏହି ଘଟଣାକୁ କେବଳ ଜଳ ଢାଳି ଦ୍ରବଣକୁ ଲଘୁ କରିବା ସହ ତୁଳନା କର।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=31">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୧–୩୨</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୨</a></small></article>
+<article id="exercise-26"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୧. ଦ୍ରବଣ Aର pH ୬ ଓ Bର pH ୮। କେଉଁଟିରେ H⁺ ଅଧିକ? ଉଭୟର ପ୍ରକୃତି ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>Aର pH ଅପେକ୍ଷାକୃତ କମ୍, ତେଣୁ Aରେ H⁺ର ଗାଢ଼ତା ଅଧିକ। ୬ &lt; ୭ ହେତୁ A ଅମ୍ଳୀୟ ଓ ୮ &gt; ୭ ହେତୁ B କ୍ଷାରୀୟ।</p><p>7କୁ ମଝିରେ ରଖି 6 ଓ 8 କେଉଁ ପଟେ ଅଛି ଦେଖ। କମ୍ pH ଅଧିକ H⁺ର ସୂଚନା ଦିଏ।</p><p>ତେଣୁ Aରେ H⁺ ଅଧିକ ଓ ତାହା ଅମ୍ଳୀୟ। Bରେ ତୁଳନାରେ ଅଧିକ OH⁻ ଥିବାରୁ ତାହା କ୍ଷାରୀୟ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୨–୩୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=36" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୬</a></small></article>
+<article id="exercise-27"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୨. H⁺(aq)ର ଗାଢ଼ତା ଜଳୀୟ ଦ୍ରବଣର ପ୍ରକୃତିକୁ କିପରି ପ୍ରଭାବିତ କରେ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>H⁺(aq)ର ଗାଢ଼ତା ବଢ଼ିଲେ pH କମେ ଓ ଅମ୍ଳୀୟତା ବଢ଼େ। ଏହାର ଗାଢ଼ତା କମିଲେ pH ବଢ଼େ।</p><p>H⁺ର ଗାଢ଼ତା ବଢ଼ିଲେ pH ସ୍କେଲ୍‌ରେ ମାନ କମ୍ ହୁଏ ଓ ଅମ୍ଳୀୟ ପ୍ରକୃତି ବଢ଼େ। ଏକ ସ୍କେଲ୍ ପଢ଼ିବାବେଳେ pH ସଂଖ୍ୟା ବଡ଼ ହେବା ଓ H⁺ ଅଧିକ ହେବା ଦୁଇଟିର ଦିଗ ଓଲଟା ମନେ ରଖ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୨–୩୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=36" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୬</a></small></article>
+<article id="exercise-28"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୩. କ୍ଷାରୀୟ ଦ୍ରବଣରେ H⁺ ଥିଲେ ସୁଦ୍ଧା ସେହି ଦ୍ରବଣ କ୍ଷାରୀୟ କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଜଳୀୟ ଦ୍ରବଣରେ H⁺ ଓ OH⁻ ଉଭୟ ଥାଆନ୍ତି। କ୍ଷାରୀୟ ଦ୍ରବଣରେ OH⁻ର ଗାଢ଼ତା H⁺ର ଗାଢ଼ତାଠାରୁ ଅଧିକ।</p><p>କେବଳ H⁺ ଥିବା ଜାଣିଲେ ଦ୍ରବଣର ପ୍ରକୃତି ନିର୍ଣ୍ଣୟ ହୁଏନାହିଁ। ଜଳୀୟ ଦ୍ରବଣରେ H⁺ ଓ OH⁻ ଉଭୟ ରହିପାରନ୍ତି।</p><p>କେଉଁ ଆୟନର ଗାଢ଼ତା ଅଧିକ ତାହା ଦେଖି ଅମ୍ଳୀୟ ବା କ୍ଷାରୀୟ ବୋଲି ଲେଖାଯାଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=32">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୨–୩୪</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=36" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୬</a></small></article>
+<article id="exercise-29"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୩୬ · ୪. କେଉଁ ପ୍ରକାର ମାଟିରେ କଲିଚୂନ, ଶମିତ ଚୂନ ବା ଚକ୍ ପ୍ରୟୋଗ କରାଯାଏ? କାହିଁକି?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ମାଟି ଅତ୍ୟଧିକ ଅମ୍ଳୀୟ ହେଲେ ଏହି ପଦାର୍ଥ ଦିଆଯାଏ। CaO, Ca(OH)₂ ବା CaCO₃ ମାଟିର ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟା କରି ତାହାର ଅମ୍ଳୀୟତା କମାଏ।</p><p>ପ୍ରଥମେ ମାଟିର pHରୁ ତାହାର ଅମ୍ଳତା ଜାଣିହୁଏ। କଲିଚୂନ, ଶମିତ ଚୂନ ବା ଚକ୍ ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟା କରି ସେହି ଅମ୍ଳତା କମାଏ।</p><p>ଏଠାରେ ପାଠର ପ୍ରଶମନୀକରଣ ଧାରଣା ମାଟିରେ ପ୍ରୟୋଗ ହେଉଛି।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=34">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୪–୩୬</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=36" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୩୬</a></small></article>
+<article id="exercise-30"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୧. CaOCl₂ କେଉଁ ସାଧାରଣ ନାମରେ ପରିଚିତ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>CaOCl₂ର ସାଧାରଣ ନାମ ବ୍ଲିଚିଂ ପାଉଡର।</p><p>CaOCl₂କୁ ପାଠରେ ବ୍ଲିଚିଂ ପାଉଡରର ସଙ୍କେତ ଭାବରେ ଦିଆଯାଇଛି। ଏହାକୁ ଶମିତ ଚୂନ Ca(OH)₂ରୁ ଅଲଗା କରି ଚିହ୍ନ।</p><p>ଗୋଟିଏ ଉତ୍ପାଦର ନାମ, ଅନ୍ୟଟି ଏହି ପାଠରେ ଥିବା ପ୍ରତିକାରକର ନାମ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=41" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୧</a></small></article>
+<article id="exercise-31"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୨. ବ୍ଲିଚିଂ ପାଉଡର ସୃଷ୍ଟି କରୁଥିବା ପ୍ରତିକ୍ରିୟାରେ କ୍ଲୋରିନ୍ ସହ ଅନ୍ୟ ପଦାର୍ଥଟି କ’ଣ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଅନ୍ୟ ପଦାର୍ଥଟି ଶୁଷ୍କ ଶମିତ ଚୂନ, ଅର୍ଥାତ୍ କ୍ୟାଲ୍ସିୟମ୍ ହାଇଡ୍ରକ୍ସାଇଡ୍ [Ca(OH)₂]।</p><p>କଲିଚୂନ CaO ଜଳ ସହ ଯୁକ୍ତ ହୋଇ ଶମିତ ଚୂନ Ca(OH)₂ ଦିଏ। ପ୍ରଶ୍ନରେ ଏହି ଦ୍ୱିତୀୟ ପଦାର୍ଥର ନାମ ଚାହିଁଛି।</p><p>ଦୁଇଟି ଚୂନର ସଙ୍କେତକୁ ମେଳାଇ ଦେଖିଲେ ଉତ୍ତର ବାଛିପାରିବ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=41" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୧</a></small></article>
+<article id="exercise-32"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୩. ଖର ଜଳକୁ ମୃଦୁ କରିବା ପାଇଁ କେଉଁ ସୋଡିୟମ୍ ଯୌଗିକ ବ୍ୟବହାର କରାଯାଏ?</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ଧୋଇବା ସୋଡା (ୱାସିଂ ସୋଡା), Na₂CO₃·10H₂O। କାର୍ବୋନେଟ୍ ଆୟନ ଖରତା ସୃଷ୍ଟି କରୁଥିବା କ୍ୟାଲ୍ସିୟମ୍ ଓ ମ୍ୟାଗ୍ନେସିୟମ୍ ଆୟନକୁ ଅଦ୍ରବଣୀୟ କାର୍ବୋନେଟ୍ ରୂପେ ପୃଥକ୍ କରେ।</p><p>ଦ୍ରବଣରେ ଥିବା Ca²⁺ ପାଇଁ ଉଦାହରଣ ହେଉଛି Ca²⁺ + CO₃²⁻ → CaCO₃↓ | ଏପରି ଭାବରେ ଖରତା ସୃଷ୍ଟି କରୁଥିବା ଆୟନ ଦ୍ରବଣରୁ ପୃଥକ୍ ହୁଏ।</p><p>ଧୋଇବା ସୋଡା ଏଠାରେ CO₃²⁻ର ଉତ୍ସ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=39">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୯–୪୦</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=41" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୧</a></small></article>
+<article id="exercise-33"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୪. ସୋଡିୟମ୍ ହାଇଡ୍ରୋଜେନ୍ କାର୍ବୋନେଟ୍ ଦ୍ରବଣକୁ ଗରମ କଲେ କ’ଣ ଘଟେ? ସମୀକରଣ ଦିଅ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>ବିଘଟନରେ ସୋଡିୟମ୍ କାର୍ବୋନେଟ୍, ଜଳ ଓ କାର୍ବନ୍ ଡାଇଅକ୍ସାଇଡ୍ ମିଳେ। 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂↑।</p><p>ସମୀକରଣରେ 2NaHCO₃ ନେଲେ ବାମରେ Na ଦୁଇ, H ଦୁଇ, C ଦୁଇ ଓ O ଛଅ। ଡାହାଣରେ Na₂CO₃, H₂O ଓ CO₂ ମିଶି ସେହି ସଂଖ୍ୟା ଦିଅନ୍ତି।</p><p>CO₂ ମୁକ୍ତ ହେବା ସହ ସୋଡିୟମ୍ କାର୍ବୋନେଟ୍ ମିଳେ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=38">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୩୮–୩୯</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=41" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୧</a></small></article>
+<article id="exercise-34"><h2>ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୧ · ୫. ପ୍ଲାଷ୍ଟର ଅଫ୍ ପ୍ୟାରିସ୍ ଜଳ ସହ ମିଶି କେଉଁ ପଦାର୍ଥ ଗଠନ କରେ? ସମୀକରଣ ଲେଖ।</h2>
+<details><summary>ଉତ୍ତର ଦେଖନ୍ତୁ</summary>
+<div class="lesson-body"><p>CaSO₄·½H₂O + 1½H₂O → CaSO₄·2H₂O। ପ୍ଲାଷ୍ଟର ଅଫ୍ ପ୍ୟାରିସ୍ ଜଳ ଗ୍ରହଣ କରି କଠିନ ଜିପ୍‌ସମ୍‌ରେ ପରିଣତ ହୁଏ।</p><p>ଗୋଟିଏ ସୂତ୍ର ଏକକ ପ୍ଲାଷ୍ଟର ଅଫ୍ ପ୍ୟାରିସ୍‌ରେ ½H₂O ଥାଏ। ଜିପ୍‌ସମ୍‌ରେ 2H₂O ଥାଏ।</p><p>ତେଣୁ ପ୍ରତି CaSO₄ ପାଇଁ ଆଉ 1½ ଏକକ ଜଳ ଯୋଡ଼ିଲେ ଏହି ଦୁଇ ସଙ୍କେତ ମେଳ ଖାଏ ଓ କଠିନ ପଦାର୍ଥ ଗଠିତ ହୁଏ।</p></div>
+<a class="lesson-source" target="_blank" rel="noreferrer" href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=40">ବ୍ୟାଖ୍ୟାର ଆଧାର · PDF ପୃଷ୍ଠା ୪୦–୪୧</a>
+</details>
+<small class="lesson-source"><a href="https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/101%20-%20OD_ODIA_PHYSICALSCIENCE_CLASS10_TERM1.pdf#page=41" target="_blank" rel="noreferrer">ମୂଳ ପୁସ୍ତକରେ ପଢ଼ନ୍ତୁ · PDF ପୃଷ୍ଠା ୪୧</a></small></article>
+
+</main></body></html>

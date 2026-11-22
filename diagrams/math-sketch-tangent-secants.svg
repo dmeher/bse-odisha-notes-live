@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-labelledby="title">
+<title id="title">ବହିଃସ୍ଥ ବିନ୍ଦୁ Pରୁ ବୃତ୍ତକୁ ଦୁଇ ଛେଦକ, P–A–B ଓ P–C–D |</title>
+<rect width="100%" height="100%" rx="8" fill="#fffcf5"/>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="165.36" cy="160.00" r="112.86" stroke="#244355" stroke-width="2.5"/>
+<polyline points="447.50,160.00 78.26,231.77" stroke="#087b79" stroke-width="2.35"/>
+<polyline points="447.50,160.00 101.14,67.19" stroke="#087b79" stroke-width="2.35"/>
+</g>
+<circle cx="273.00" cy="193.92" r="2.7" fill="#244355"/>
+<text x="283.00" y="201.92" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">A</text>
+<circle cx="78.26" cy="231.77" r="2.7" fill="#244355"/>
+<text x="66.26" y="240.77" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">B</text>
+<circle cx="267.37" cy="111.74" r="2.7" fill="#244355"/>
+<text x="276.37" y="99.74" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">C</text>
+<circle cx="101.14" cy="67.19" r="2.7" fill="#244355"/>
+<text x="91.14" y="55.19" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">D</text>
+<circle cx="447.50" cy="160.00" r="2.7" fill="#244355"/>
+<text x="460.50" y="162.00" font-family="Georgia,serif" font-size="19" font-style="italic" text-anchor="middle" dominant-baseline="central" fill="#1d3849" stroke="#fffcf5" stroke-width="3.5" paint-order="stroke">P</text>
+</svg>
