@@ -117,7 +117,7 @@ export default {
       ],
       "number": "H (i)",
       "prompt": "Match children’s questions to stanzas a reader can use as replies.",
-      "answer": "Where do you rise? — stanza 1. What places do you pass? — stanza 2. What sounds do you make over stones? — stanza 4. Which fish swim with you? — stanza 7. What do you do under the moon? — stanza 12. Where are you going at the end? — stanza 13. ଉତ୍ତରଦାତା ନିଜ ପୁସ୍ତକର ସମ୍ପୃକ୍ତ ସ୍ତବକଟି ପଢ଼ିବେ।\n\nWhere ପାଇଁ ସ୍ଥାନ ଥିବା stanza, what sound ପାଇଁ chatter ଆଦି ଥିବା stanza ବାଛ। ପ୍ରଶ୍ନ ଓ ଉତ୍ତରର ପ୍ରଥମ ଶବ୍ଦ ଏକେ ନଥିଲେ ମଧ୍ୟ ଏହି ସମ୍ପର୍କ ମିଳେ।",
+      "answer": "Where do you rise? — stanza 1. What places do you pass? — stanza 2. What sounds do you make over stones? — stanza 4. Which fish swim with you? — stanza 7. What do you do under the moon? — stanza 12. Where are you going at the end? — stanza 13. ଉତ୍ତରଦାତା ନିଜ ପୁସ୍ତକର ସମ୍ପୃକ୍ତ ସ୍ତବକଟି ପଢ଼ିବେ।\n\nWhere ପାଇଁ ସ୍ଥାନ ଥିବା stanza, what sound ପାଇଁ chatter ଆଦି ଥିବା stanza ବାଛ। ପ୍ରଶ୍ନ ଓ ଉତ୍ତରର ପ୍ରଥମ ଶବ୍ଦ ଏକା ନଥିଲେ ମଧ୍ୟ ଏହି ସମ୍ପର୍କ ମିଳେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=64",
         "pages": [

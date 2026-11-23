@@ -5,7 +5,7 @@ export default {
   "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view",
   "lesson": {
     "question": "Verb groupରେ କେଉଁ ଶବ୍ଦ tense ବହନ କରେ ଓ କେଉଁ ଶବ୍ଦର ରୂପ ତାହାର ସଙ୍ଗୀ ବାଛେ?",
-    "overview": "Main verbର ପୂର୍ବରେ modal, to, be, have ବା ଅନ୍ୟ verb ଅଛି କି ଦେଖ। ପରେ bare infinitive, to-infinitive, -ing form ଓ past participleର କାମ ଚିହ୍ନା।",
+    "overview": "Main verbର ପୂର୍ବରେ modal, to, be, have ବା ଅନ୍ୟ verb ଅଛି କି ଦେଖ। ପରେ bare infinitive, to-infinitive, -ing form ଓ past participleର କାମ ଚିହ୍ନ।",
     "check": {
       "question": "“She can sing”ରେ “She” singular ଥିଲେ ମଧ୍ୟ “sings” କାହିଁକି ହୁଏନାହିଁ?",
       "answer": "Can is the finite modal; sing is its bare infinitive. Subject ସହ ଏକ finite verb group ଗଢ଼ିଛି। Modal ପରେ ଆଉ ଗୋଟିଏ tense-marked form ବସେନାହିଁ।",

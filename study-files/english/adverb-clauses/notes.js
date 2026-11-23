@@ -106,7 +106,7 @@ export default {
     },
     {
       "heading": "Whenever, provided, whether ଓ ଆରମ୍ଭରେ inversion",
-      "text": "Whenever ଗୋଟିଏ ମାତ୍ର ଘଟଣା ଅପେକ୍ଷା ପ୍ରତିଥର ଘଟିବା ବୁଝାଏ। “Whenever ice is heated enough, it melts” ପରି ସାଧାରଣ ଫଳରେ when ଓ if ଏକାପରି ଆସିପାରେ। Provided କହିଲେ ଫଳ ପାଇଁ ନିର୍ଦ୍ଦିଷ୍ଟ ସର୍ତ୍ତ ରହେ। “Whether you join the picnic or not, you must pay”ରେ ଦୁଇ ସମ୍ଭାବନା ଥିଲେ ମଧ୍ୟ ଫଳ ସମାନ। Whether ଦେଖି ସର୍ବଦା ପ୍ରଶ୍ନର noun clause କୁହନି। “I wonder whether you will join”ରେ କିନ୍ତୁ wonder ପରେ କ’ଣ ସନ୍ଦେହ ହେଉଛି ତାହାର object। “Were wishes horses …” ପାଠରେ if wishes were horsesର କଳ୍ପିତ ସର୍ତ୍ତ। ଏଠାରେ were ଆଗକୁ ଆସିଲେ ମଧ୍ୟ ବାକ୍ୟର ଶେଷରେ question mark ଆସେ ନାହିଁ। ଏକେ connecting word ବା ଶବ୍ଦକ୍ରମ ବିଭିନ୍ନ କାମ କରିପାରେ ବୋଲି main clause ସହ ଏହିପରି ମିଳାଇ ଦେଖ।",
+      "text": "Whenever ଗୋଟିଏ ମାତ୍ର ଘଟଣା ଅପେକ୍ଷା ପ୍ରତିଥର ଘଟିବା ବୁଝାଏ। “Whenever ice is heated enough, it melts” ପରି ସାଧାରଣ ଫଳରେ when ଓ if ଏକାପରି ଆସିପାରେ। Provided କହିଲେ ଫଳ ପାଇଁ ନିର୍ଦ୍ଦିଷ୍ଟ ସର୍ତ୍ତ ରହେ। “Whether you join the picnic or not, you must pay”ରେ ଦୁଇ ସମ୍ଭାବନା ଥିଲେ ମଧ୍ୟ ଫଳ ସମାନ। Whether ଦେଖି ସର୍ବଦା ପ୍ରଶ୍ନର noun clause କୁହନି। “I wonder whether you will join”ରେ କିନ୍ତୁ wonder ପରେ କ’ଣ ସନ୍ଦେହ ହେଉଛି ତାହାର object। “Were wishes horses …” ପାଠରେ if wishes were horsesର କଳ୍ପିତ ସର୍ତ୍ତ। ଏଠାରେ were ଆଗକୁ ଆସିଲେ ମଧ୍ୟ ବାକ୍ୟର ଶେଷରେ question mark ଆସେ ନାହିଁ। ଏକା connecting word ବା ଶବ୍ଦକ୍ରମ ବିଭିନ୍ନ କାମ କରିପାରେ ବୋଲି main clause ସହ ଏହିପରି ମିଳାଇ ଦେଖ।",
       "pages": [
         89,
         92
@@ -166,7 +166,7 @@ export default {
     },
     {
       "heading": "ଲମ୍ବା ବାକ୍ୟରେ clauseଗୁଡ଼ିକର ସୀମା କାଢ଼ିବା",
-      "text": "ଏକ ଅନୁଚ୍ଛେଦରେ ପ୍ରଥମେ finite verb ରେଖାଙ୍କିତ କର, ପ୍ରତିଟି ସହ ତାହାର subject ଯୋଡ଼। କେବଳ and ଦେଖି ସମଗ୍ର ବାକ୍ୟ compound କୁହନି। And ଦୁଇଟି nounକୁ ମଧ୍ୟ ଯୋଡ଼ିପାରେ। ପ୍ରଥମ ଅଂଶକୁ ଅଲଗା ବିବୃତି ଭାବେ ପଢ଼ି ଦ୍ୱିତୀୟର କାମ ଚିହ୍ନ। “I returned when the lesson ended”ରେ returned ମୁଖ୍ୟ କାମ, endedର clause ତାହାର ସମୟ। “I know when the lesson ended”ରେ ଏକେ ଶବ୍ଦ ଗୋଷ୍ଠୀ knowର object ଭାବେ କାମ କରୁଛି। ଏହି ତୁଳନା ଦୁଧ ଗଳ୍ପରେ ଭିନ୍ନ ପ୍ରକାରର subordinate clause ଖୋଜିବା ପାଇଁ ଉପଯୋଗୀ। ଶ୍ରେଣୀକରଣ ପରେ ନିଜ ଯୁକ୍ତିକୁ ‘ଏହା ସମୟ କହେ’ ବା ‘ଏହା verbର object’ ବୋଲି ଏକ ବାକ୍ୟରେ ଯାଞ୍ଚ କର।",
+      "text": "ଏକ ଅନୁଚ୍ଛେଦରେ ପ୍ରଥମେ finite verb ରେଖାଙ୍କିତ କର, ପ୍ରତିଟି ସହ ତାହାର subject ଯୋଡ଼। କେବଳ and ଦେଖି ସମଗ୍ର ବାକ୍ୟ compound କୁହନି। And ଦୁଇଟି nounକୁ ମଧ୍ୟ ଯୋଡ଼ିପାରେ। ପ୍ରଥମ ଅଂଶକୁ ଅଲଗା ବିବୃତି ଭାବେ ପଢ଼ି ଦ୍ୱିତୀୟର କାମ ଚିହ୍ନ। “I returned when the lesson ended”ରେ returned ମୁଖ୍ୟ କାମ, endedର clause ତାହାର ସମୟ। “I know when the lesson ended”ରେ ଏକା ଶବ୍ଦ ଗୋଷ୍ଠୀ knowର object ଭାବେ କାମ କରୁଛି। ଏହି ତୁଳନା ଦୁଧ ଗଳ୍ପରେ ଭିନ୍ନ ପ୍ରକାରର subordinate clause ଖୋଜିବା ପାଇଁ ଉପଯୋଗୀ। ଶ୍ରେଣୀକରଣ ପରେ ନିଜ ଯୁକ୍ତିକୁ ‘ଏହା ସମୟ କହେ’ ବା ‘ଏହା verbର object’ ବୋଲି ଏକ ବାକ୍ୟରେ ଯାଞ୍ଚ କର।",
       "pages": [
         92,
         95

@@ -11,7 +11,7 @@ export default {
       ],
       "number": "A–B · Listening",
       "prompt": "How can two speakers understand the same family differently? Read their parts aloud.",
-      "answer": "The adult counts living people. The child counts those she still loves. A partner can voice the adult’s surprised questions and another the child’s calm, firm replies. Pause at the repeated number. ଦୁଇ ସ୍ୱରର ପାର୍ଥକ୍ୟ ପଢ଼ିବା ଓ ଶୁଣିବା ବେଳେ ଚିହ୍ନାଅ।\n\nକଥକଙ୍କ ପ୍ରଶ୍ନରେ ଗଣନାର ସନ୍ଦେହ ଶୁଣାଅ। ଝିଅର ପୁନରୁକ୍ତ ଉତ୍ତରକୁ ଶାନ୍ତ ଓ ନିଶ୍ଚିତ ରଖ। ଏକେ ଗାଁର ଦୃଶ୍ୟକୁ ଦୁହେଁ ଭିନ୍ନ ସମ୍ପର୍କରେ ଦେଖନ୍ତି।",
+      "answer": "The adult counts living people. The child counts those she still loves. A partner can voice the adult’s surprised questions and another the child’s calm, firm replies. Pause at the repeated number. ଦୁଇ ସ୍ୱରର ପାର୍ଥକ୍ୟ ପଢ଼ିବା ଓ ଶୁଣିବା ବେଳେ ଚିହ୍ନାଅ।\n\nକଥକଙ୍କ ପ୍ରଶ୍ନରେ ଗଣନାର ସନ୍ଦେହ ଶୁଣାଅ। ଝିଅର ପୁନରୁକ୍ତ ଉତ୍ତରକୁ ଶାନ୍ତ ଓ ନିଶ୍ଚିତ ରଖ। ଏକା ଗାଁର ଦୃଶ୍ୟକୁ ଦୁହେଁ ଭିନ୍ନ ସମ୍ପର୍କରେ ଦେଖନ୍ତି।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=19",
         "pages": [
@@ -69,7 +69,7 @@ export default {
       ],
       "number": "H (a). 1–5",
       "prompt": "Interpret the child’s breathing, vitality, surroundings and surprise.",
-      "answer": "1. Light breathing suggests ease and freedom from anxiety. 2. Each limb seems full of energy. 3. The speaker questions whether such a child can yet grasp death. 4. She is a country girl associated with the cottage and a nearby churchyard. 5. Counting the people she loves seems perfectly natural to her, so his uncertainty surprises her. ଗାଁର ପରିବେଶ ଓ ଆତ୍ମୀୟତା ତାର ଭାବକୁ ବୁଝାଏ।\n\nପିଲାର ଶରୀରର ଶକ୍ତି ଦେଖି କଥକ ଭାବନ୍ତି ଏପରି ପିଲା ମୃତ୍ୟୁକୁ କ’ଣ ଜାଣିପାରେ। ତାଙ୍କ ଏହି ଆରମ୍ଭର ଅନୁମାନକୁ ଝିଅ ନିଜ ପରିବାରର ଘଟଣାରେ ଆହ୍ୱାନ କରେ।",
+      "answer": "1. Light breathing suggests ease and freedom from anxiety. 2. Each limb seems full of energy. 3. The speaker questions whether such a child can yet grasp death. 4. She is a country girl associated with the cottage and a nearby churchyard. 5. Counting the people she loves seems perfectly natural to her, so his uncertainty surprises her. ଗାଁର ପରିବେଶ ଓ ଆତ୍ମୀୟତା ତା’ର ଭାବକୁ ବୁଝାଏ।\n\nପିଲାର ଶରୀରର ଶକ୍ତି ଦେଖି କଥକ ଭାବନ୍ତି ଏପରି ପିଲା ମୃତ୍ୟୁକୁ କ’ଣ ଜାଣିପାରେ। ତାଙ୍କ ଏହି ଆରମ୍ଭର ଅନୁମାନକୁ ଝିଅ ନିଜ ପରିବାରର ଘଟଣାରେ ଆହ୍ୱାନ କରେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=25",
         "pages": [

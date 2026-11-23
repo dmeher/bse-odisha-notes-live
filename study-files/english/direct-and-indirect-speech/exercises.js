@@ -184,7 +184,7 @@ export default {
       ],
       "number": "K · Mark the modals, v–ix",
       "prompt": "In the party, journey, roof, sweet and telephone examples, how is the speaker’s modal reported?",
-      "answer": "v must stays must in the proposed celebration. vi must go becomes had to go for necessity. vii must mend becomes would have to mend for a future obligation. viii can I have …? is a request for permission: the child asked if he could have a sweet, or asked to have one. ix could I speak …? keeps could in the polite telephone request. ଅନୁମତି ମାଗିବା, ଆବଶ୍ୟକତା ଓ ଭବିଷ୍ୟତର କର୍ତ୍ତବ୍ୟକୁ ଏକେ ଭାବେ ଅନୁବାଦ କରିବ ନାହିଁ।\n\nMustର ଅର୍ଥ ପ୍ରସ୍ତାବ, ବାଧ୍ୟତା ବା ଭବିଷ୍ୟତ ଆବଶ୍ୟକତା ହୋଇପାରେ। Journey ପାଇଁ ପୂର୍ବ ଆବଶ୍ୟକତା had to; roofର ପରର କାମ would have to। ପ୍ରତି mustକୁ ଗୋଟିଏ ଯାନ୍ତ୍ରିକ ରୂପ ଦିଅନାହିଁ।",
+      "answer": "v must stays must in the proposed celebration. vi must go becomes had to go for necessity. vii must mend becomes would have to mend for a future obligation. viii can I have …? is a request for permission: the child asked if he could have a sweet, or asked to have one. ix could I speak …? keeps could in the polite telephone request. ଅନୁମତି ମାଗିବା, ଆବଶ୍ୟକତା ଓ ଭବିଷ୍ୟତର କର୍ତ୍ତବ୍ୟକୁ ଏକା ଭାବେ ଅନୁବାଦ କରିବ ନାହିଁ।\n\nMustର ଅର୍ଥ ପ୍ରସ୍ତାବ, ବାଧ୍ୟତା ବା ଭବିଷ୍ୟତ ଆବଶ୍ୟକତା ହୋଇପାରେ। Journey ପାଇଁ ପୂର୍ବ ଆବଶ୍ୟକତା had to; roofର ପରର କାମ would have to। ପ୍ରତି mustକୁ ଗୋଟିଏ ଯାନ୍ତ୍ରିକ ରୂପ ଦିଅନାହିଁ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=125",
         "pages": [

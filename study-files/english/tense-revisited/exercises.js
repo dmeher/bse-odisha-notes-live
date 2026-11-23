@@ -54,7 +54,7 @@ export default {
       ],
       "number": "Present · Activity 3",
       "prompt": "Correct the ten incorrect statements in the pair task.",
-      "answer": "A: Water freezes at 0°C under ordinary conditions. Bhubaneswar is the capital of Odisha. The earth goes round the sun. Viswanathan Anand plays chess. The Prime Minister of India lives in New Delhi. B: Oil floats on water. A rose is a flower. Sachin Tendulkar is known for playing cricket. Vande Mataram is our National Song. Washington, D.C., is the capital of the USA. ସାଧାରଣ ତଥ୍ୟକୁ present simpleରେ ଠିକ୍ କର। ଖେଳାଳିଙ୍କୁ ତାଙ୍କ ଖେଳ ସହ ଚିହ୍ନାଇବା ଏଠାରେ ଲକ୍ଷ୍ୟ।\n\nସ୍ଥାୟୀ ପରିଚୟ ପାଇଁ is, ସାଧାରଣ କ୍ରିୟା ପାଇଁ freezes/goes। ଭୁଲ୍ ତଥ୍ୟକୁ ଏକଥର ନାକାର କରି ପରେ ସଠିକ୍ ସକାରାତ୍ମକ ବାକ୍ୟ ଦେଲେ ସାଥୀ ତଫାତ ଶୁଣିପାରେ।",
+      "answer": "A: Water freezes at 0°C under ordinary conditions. Bhubaneswar is the capital of Odisha. The earth goes round the sun. Viswanathan Anand plays chess. The Prime Minister of India lives in New Delhi. B: Oil floats on water. A rose is a flower. Sachin Tendulkar is known for playing cricket. Vande Mataram is our National Song. Washington, D.C., is the capital of the USA. ସାଧାରଣ ତଥ୍ୟକୁ present simpleରେ ଠିକ୍ କର। ଖେଳାଳିଙ୍କୁ ତାଙ୍କ ଖେଳ ସହ ଚିହ୍ନାଇବା ଏଠାରେ ଲକ୍ଷ୍ୟ।\n\nସ୍ଥାୟୀ ପରିଚୟ ପାଇଁ is, ସାଧାରଣ କ୍ରିୟା ପାଇଁ freezes/goes। ଭୁଲ୍ ତଥ୍ୟକୁ ଏକଥର ଖଣ୍ଡନ କରି ପରେ ସଠିକ୍ ସକାରାତ୍ମକ ବାକ୍ୟ ଦେଲେ ସାଥୀ ତଫାତ ଶୁଣିପାରେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=8",
         "pages": [

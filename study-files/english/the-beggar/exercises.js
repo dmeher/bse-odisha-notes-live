@@ -11,7 +11,7 @@ export default {
       ],
       "number": "A. 1–5 · Before you read",
       "prompt": "Discuss the title, personal encounters, feelings and possible help.",
-      "answer": "1. I expect a story about why a man begs and what changes his life. 2. A pupil may name a place from personal observation, for example, a market. 3. I would first listen to what help the person needs. 4. I would wish people had a secure livelihood. 5. Immediate help and suitable work are two approaches explored in the story. ନିଜ ଅଭିଜ୍ଞତା ଅନୁସାରେ ୨–୪ର ଉତ୍ତର ଦିଅ।\n\nନିଜ ଅନୁଭବ କହିବାରେ ସମସ୍ତ ଭିକ୍ଷୁକଙ୍କ ପାଇଁ ଏକ କାରଣ ଧରନାହିଁ। ଗଳ୍ପ ପଢ଼ିଲେ Lushkoffଙ୍କ ନିଜ ଜୀବନରେ କାମ ହରାଇବା, ପାନ ଅଭ୍ୟାସ ଓ ସାହାଯ୍ୟର ଭିନ୍ନ ଭୂମିକା ମିଳେ।",
+      "answer": "1. I expect a story about why a man begs and what changes his life. 2. A pupil may name a place from personal observation, for example, a market. 3. I would first listen to what help the person needs. 4. I would wish people had a secure livelihood. 5. Immediate help and suitable work are two approaches explored in the story. ନିଜ ଅଭିଜ୍ଞତା ଅନୁସାରେ ୨–୪ର ଉତ୍ତର ଦିଅ।\n\nନିଜ ଅନୁଭବ କହିବାରେ ସମସ୍ତ ଭିକ୍ଷୁକଙ୍କ ପାଇଁ ଏକ କାରଣ ଧରନାହିଁ। ଗଳ୍ପ ପଢ଼ିଲେ Lushkoffଙ୍କ ନିଜ ଜୀବନରେ କାମ ହରାଇବା, ମଦ୍ୟପାନ ଅଭ୍ୟାସ ଓ ସାହାଯ୍ୟର ଭିନ୍ନ ଭୂମିକା ମିଳେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=99",
         "pages": [

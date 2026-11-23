@@ -39,7 +39,7 @@ export default {
       ],
       "number": "D. 6–7",
       "prompt": "Give the composition of dry air stated in the lesson and explain when air is polluted.",
-      "answer": "6. The text gives 78% nitrogen, 21% oxygen, a little under 1% argon and 0.03% carbon dioxide. 7. A change such as a lower oxygen level or the entry of irritating gases makes air polluted. ଶତକଡ଼ା ସଂଖ୍ୟା ଏହି ପାଠରେ ଦିଆଯାଇଥିବା ମୂଲ୍ୟ।\n\nଶତକଡ଼ା ତାଲିକାଟି ପାଠର dry air ପାଇଁ। ଦ୍ୱିତୀୟ ଉତ୍ତରରେ ସ୍ୱାଭାବିକ ମିଶ୍ରଣ ସହ ବିଷାକ୍ତ ଗ୍ୟାସ୍ କିମ୍ବା କଣିକା ଯୋଡ଼ାଯିବାର ପ୍ରଭାବ ଦେଖାଅ। ଏକେ ସୂଚୀକୁ ଦୁଇଥର ଦେଲେ ତାହା ବୁଝାଯାଏନାହିଁ।",
+      "answer": "6. The text gives 78% nitrogen, 21% oxygen, a little under 1% argon and 0.03% carbon dioxide. 7. A change such as a lower oxygen level or the entry of irritating gases makes air polluted. ଶତକଡ଼ା ସଂଖ୍ୟା ଏହି ପାଠରେ ଦିଆଯାଇଥିବା ମୂଲ୍ୟ।\n\nଶତକଡ଼ା ତାଲିକାଟି ପାଠର dry air ପାଇଁ। ଦ୍ୱିତୀୟ ଉତ୍ତରରେ ସ୍ୱାଭାବିକ ମିଶ୍ରଣ ସହ ବିଷାକ୍ତ ଗ୍ୟାସ୍ କିମ୍ବା କଣିକା ଯୋଡ଼ାଯିବାର ପ୍ରଭାବ ଦେଖାଅ। ଏକା ସୂଚୀକୁ ଦୁଇଥର ଦେଲେ ତାହା ବୁଝାଯାଏନାହିଁ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72",
         "pages": [
@@ -81,7 +81,7 @@ export default {
       ],
       "number": "D. 17–18",
       "prompt": "Distinguish the warming effect from the harm due to refrigerants.",
-      "answer": "17. More carbon dioxide, methane and nitrous oxide can trap radiation and warm the atmosphere. 18. The lesson describes chlorofluorocarbons used in refrigeration as a threat to the layer that protects us from harmful solar energy. ତାପମାତ୍ରା ବଢ଼ିବା ଓ ସୁରକ୍ଷାଦାୟୀ ସ୍ତର ନଷ୍ଟ ହେବା ଦୁଇଟି ଭିନ୍ନ ପ୍ରଭାବ।\n\nଉଷ୍ମତା ବଢ଼ିବାରେ ତାପ ଧରି ରଖୁଥିବା gasesର କଥା। Ozone ହ୍ରାସରେ କ୍ଷତିକାରକ କିରଣ ଅଧିକ ତଳକୁ ପହଞ୍ଚିବାର କଥା। ଦୁହିଁଟି ପାଇଁ ଏକେ ଫଳ ଲେଖିଲେ କାରଣକ୍ରମ ହଜେ।",
+      "answer": "17. More carbon dioxide, methane and nitrous oxide can trap radiation and warm the atmosphere. 18. The lesson describes chlorofluorocarbons used in refrigeration as a threat to the layer that protects us from harmful solar energy. ତାପମାତ୍ରା ବଢ଼ିବା ଓ ସୁରକ୍ଷାଦାୟୀ ସ୍ତର ନଷ୍ଟ ହେବା ଦୁଇଟି ଭିନ୍ନ ପ୍ରଭାବ।\n\nଉଷ୍ମତା ବଢ଼ିବାରେ ତାପ ଧରି ରଖୁଥିବା gasesର କଥା। Ozone ହ୍ରାସରେ କ୍ଷତିକାରକ କିରଣ ଅଧିକ ତଳକୁ ପହଞ୍ଚିବାର କଥା। ଦୁହିଁଟି ପାଇଁ ଏକା ଫଳ ଲେଖିଲେ କାରଣକ୍ରମ ହଜେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=72",
         "pages": [
@@ -295,7 +295,7 @@ export default {
       ],
       "number": "I. Local project",
       "prompt": "Plan your survey and write the conclusion after collecting evidence.",
-      "answer": "Worked illustration using fictional observations. Title: Air near our school gate. Question: When is smoke most noticeable? Observation sheet: Monday morning, gate, two buses leaving, exhaust visible; Monday midday, gate, no vehicles passing, no exhaust visible. Interpretation: smoke was observed at the busier visit, but two observations are insufficient to establish the usual pattern. Proposed control: check vehicle emissions and compare several days at the same times. ଏହି ତଥ୍ୟ କଳ୍ପିତ। ନିଜ ପ୍ରକଳ୍ପରେ ସ୍ଥାନ, ସମୟ, ଉତ୍ସ, ପ୍ରଭାବ, ନିୟନ୍ତ୍ରଣ ଉପାୟ ଓ ନିଜର ନିରୀକ୍ଷଣ ଲେଖ।\n\nନମୁନା ପ୍ରକଳ୍ପରେ ଧୂଆଁ ଦେଖାଗଲା କି ଓ କେତେ ଗାଡ଼ି ଗଲା ଦୁଇଟି ପର୍ଯ୍ୟବେକ୍ଷଣ। ନିଜ ସର୍ବେରେ ତାରିଖ ଓ ସମୟ ଲେଖ। ଦେଖା ଧୂଆଁକୁ ସିଧା ରାସାୟନିକ ମାପ ବୋଲି ଦାବି କରନାହିଁ।",
+      "answer": "Worked illustration using fictional observations. Title: Air near our school gate. Question: When is smoke most noticeable? Observation sheet: Monday morning, gate, two buses leaving, exhaust visible; Monday midday, gate, no vehicles passing, no exhaust visible. Interpretation: smoke was observed at the busier visit, but two observations are insufficient to establish the usual pattern. Proposed control: check vehicle emissions and compare several days at the same times. ଏହି ତଥ୍ୟ କଳ୍ପିତ। ନିଜ ପ୍ରକଳ୍ପରେ ସ୍ଥାନ, ସମୟ, ଉତ୍ସ, ପ୍ରଭାବ, ନିୟନ୍ତ୍ରଣ ଉପାୟ ଓ ନିଜର ନିରୀକ୍ଷଣ ଲେଖ।\n\nନମୁନା ପ୍ରକଳ୍ପରେ ଧୂଆଁ ଦେଖାଗଲା କି ଓ କେତେ ଗାଡ଼ି ଗଲା ଦୁଇଟି ପର୍ଯ୍ୟବେକ୍ଷଣ। ନିଜ ସର୍ଭେରେ ତାରିଖ ଓ ସମୟ ଲେଖ। ଦେଖା ଧୂଆଁକୁ ସିଧା ରାସାୟନିକ ମାପ ବୋଲି ଦାବି କରନାହିଁ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=77",
         "pages": [

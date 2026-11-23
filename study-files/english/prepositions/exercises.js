@@ -12,7 +12,7 @@ export default {
       ],
       "number": "End-prepositions · i–v",
       "prompt": "Identify the object understood with the final preposition in each of the five constructions.",
-      "answer": "(i) at → what, moved to the front of the question. (ii) for → the book, referred to by the omitted relative pronoun. (iii) to → the person represented by I. Compare the active form “someone speaks to me” with “I am spoken to”. (iv) on → the chair in “no chair to sit on”. (v) in → what a difficult situation, fronted for emphasis. ଶେଷର preposition ପରେ ଶବ୍ଦ ନ ଥିଲେ ବି ତାହାର ଅର୍ଥସମ୍ପର୍କ ବାକ୍ୟର ଅନ୍ୟ ଅଂଶ ସହ ରହେ।\n\nEnd-prepositionର object ସବୁବେଳେ ତା’ ପରେ ଦିଶେନାହିଁ। (i,v)ରେ ଆଗର what-phraseକୁ ଫେରି ଚାହଁ; (ii,iv)ରେ book ଓ chair ପୂର୍ବରୁ ନାମିତ; (iii)ରେ activeର me passiveର I ହୁଏ, କିନ୍ତୁ to ସେଠି ରହେ।",
+      "answer": "(i) at → what, moved to the front of the question. (ii) for → the book, referred to by the omitted relative pronoun. (iii) to → the person represented by I. Compare the active form “someone speaks to me” with “I am spoken to”. (iv) on → the chair in “no chair to sit on”. (v) in → what a difficult situation, fronted for emphasis. ଶେଷର preposition ପରେ ଶବ୍ଦ ନ ଥିଲେ ବି ତାହାର ଅର୍ଥସମ୍ପର୍କ ବାକ୍ୟର ଅନ୍ୟ ଅଂଶ ସହ ରହେ।\n\nEnd-prepositionର object ସବୁବେଳେ ତା’ ପରେ ଦିଶେନାହିଁ। (i,v)ରେ ଆଗର what-phraseକୁ ଫେରି ଦେଖ; (ii,iv)ରେ book ଓ chair ପୂର୍ବରୁ ନାମିତ; (iii)ରେ activeର me passiveର I ହୁଏ, କିନ୍ତୁ to ସେଠି ରହେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=46",
         "pages": [
@@ -54,7 +54,7 @@ export default {
     {
       "number": "Activity 1 (xiv–xx)",
       "prompt": "Choose direction or position as appropriate.",
-      "answer": "(xiv) along the beach; (xv) at the corner; (xvi) among her five children; (xvii) between these two books; (xviii) at the front door; (xix) for home; (xx) off the wall.\nଓଡ଼ିଆ ବୁଝାମଣା — ଗମନର ଦିଗ ପାଇଁ for/off ଏବଂ ଦୁଇ ବସ୍ତୁକୁ ତୁଳନା ପାଇଁ between।\n\nAlong କୂଳ ଅନୁସରି ଗତି; at the corner ଓ at the door ଭେଟିବାର ବିନ୍ଦୁ। Amongରେ ପାଞ୍ଚ ପିଲା ମଧ୍ୟରେ ବଣ୍ଟନ, betweenରେ ଦୁଇ ବହି ତୁଳନା। For home ଗନ୍ତବ୍ୟ ଓ off the wall ଆରମ୍ଭ ପୃଷ୍ଠରୁ ଦୂରକୁ ଗତି।",
+      "answer": "(xiv) along the beach; (xv) at the corner; (xvi) among her five children; (xvii) between these two books; (xviii) at the front door; (xix) for home; (xx) off the wall.\nଓଡ଼ିଆ ବୁଝାମଣା — ଗମନର ଦିଗ ପାଇଁ for/off ଏବଂ ଦୁଇ ବସ୍ତୁକୁ ତୁଳନା ପାଇଁ between।\n\nAlong କୂଳ ଧାରେ ଧାରେ ଗତି; at the corner ଓ at the door ଭେଟିବାର ବିନ୍ଦୁ। Amongରେ ପାଞ୍ଚ ପିଲା ମଧ୍ୟରେ ବଣ୍ଟନ, betweenରେ ଦୁଇ ବହି ତୁଳନା। For home ଗନ୍ତବ୍ୟ ଓ off the wall ଆରମ୍ଭ ପୃଷ୍ଠରୁ ଦୂରକୁ ଗତି।",
       "pages": [
         53
       ],

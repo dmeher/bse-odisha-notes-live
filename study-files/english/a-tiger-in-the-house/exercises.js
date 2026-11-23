@@ -193,7 +193,7 @@ export default {
       ],
       "number": "D. 7",
       "prompt": "Suggest a different short ending.",
-      "answer": "An imagined ending: Grandfather withdrew his hand and asked the keeper to tell him something about Timothy’s last weeks. Then he looked once more at the stranger in the cage. He thanked the keeper, left without speaking to the crowd and remembered the little tiger he had carried out of the forest. ଏହା କଳ୍ପିତ ଶେଷ, ନିଜେ ଅନ୍ୟ ଶେଷ ମଧ୍ୟ ଲେଖିପାରିବ।\n\nନିଜ ଶେଷ ଲେଖିଲେ ତାହାକୁ imagined ending ଭାବେ ଚିହ୍ନା। ଯେଉଁ ଘଟଣା ପରେ ନୂଆ ଶେଷ ଆସୁଛି ସେହି keeperଙ୍କ ଖବରକୁ ମାନି ଚରିତ୍ରର ପର କାମ ବାଛିଲେ ଗଳ୍ପ ସହ ଯୋଗ ରହେ।",
+      "answer": "An imagined ending: Grandfather withdrew his hand and asked the keeper to tell him something about Timothy’s last weeks. Then he looked once more at the stranger in the cage. He thanked the keeper, left without speaking to the crowd and remembered the little tiger he had carried out of the forest. ଏହା କଳ୍ପିତ ଶେଷ, ନିଜେ ଅନ୍ୟ ଶେଷ ମଧ୍ୟ ଲେଖିପାରିବ।\n\nନିଜ ଶେଷ ଲେଖିଲେ ତାହାକୁ imagined ending ଭାବେ ଚିହ୍ନ। ଯେଉଁ ଘଟଣା ପରେ ନୂଆ ଶେଷ ଆସୁଛି ସେହି keeperଙ୍କ ଖବରକୁ ମାନି ଚରିତ୍ରର ପର କାମ ବାଛିଲେ ଗଳ୍ପ ସହ ଯୋଗ ରହେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=97",
         "pages": [

@@ -73,7 +73,7 @@ export default {
           "type": "comparison",
           "headings": [
             "ମାଟିର ଆଚରଣ",
-            "କବିଙ୍କ ଆକାଙ୍କ୍ଷା"
+            "କବିଙ୍କ ଆକାଂକ୍ଷା"
           ],
           "rows": [
             [

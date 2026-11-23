@@ -412,7 +412,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -430,7 +430,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -448,7 +448,7 @@ export default {
         3
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -466,7 +466,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -561,7 +561,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1Z8-vOpybd4gEu2gDPcEJOlnZqRSgpMQg/view"
     },
     {
-      "prompt": "ଏହି ପାଠରେ “ଲାଲ ରଙ୍ଗର ପାଟ ବସ୍ତ୍ର” ଅର୍ଥରେ କେଉଁ ଶବ୍ଦ ଆସିଛି?",
+      "prompt": "ଏହି ପାଠରେ “ଲାଲ (ଅରୁଣ) ରଙ୍ଗର କଷାୟ ବସ୍ତ୍ର” ଅର୍ଥରେ କେଉଁ ଶବ୍ଦ ଆସିଛି?",
       "options": [
         "ଅରୁଣ କଷାୟ ବାସ",
         "ଅନନ୍ତ",
@@ -569,7 +569,7 @@ export default {
         "ବୈକୁଣ୍ଠେ"
       ],
       "correct": 0,
-      "answer": "ଅରୁଣ କଷାୟ ବାସ ଏଠାରେ ଲାଲ ରଙ୍ଗର ପାଟ ବସ୍ତ୍ର ଅର୍ଥରେ ବ୍ୟବହୃତ।",
+      "answer": "ଅରୁଣ କଷାୟ ବାସ ଏଠାରେ ଲାଲ (ଅରୁଣ) ରଙ୍ଗର କଷାୟ ବସ୍ତ୍ର ଅର୍ଥରେ ବ୍ୟବହୃତ।",
       "pages": [
         4
       ],
@@ -669,7 +669,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1eA1bYbXBPpzPG6MqHkGmI9656L5umbP3/view"
     },
     {
-      "prompt": "ମାଟିମାଆର କାଖ ଛାଡ଼ିବାକୁ କବି କେବେ ବି ମନ ବଳାନ୍ତିନି?",
+      "prompt": "ମାଟିମାଆର କାଖ ଛାଡ଼ିବାକୁ କବି କେଉଁ ପରିସ୍ଥିତିରେ ମଧ୍ୟ ମନ ବଳାନ୍ତି ନାହିଁ?",
       "options": [
         "ରାତି ହେଲେ ମାତ୍ର",
         "ସରଗ ଡାକିଲେ ମଧ୍ୟ",
@@ -833,7 +833,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1_4qA5Z97TyAJZc4nxS69dXCIuUizJmx-/view"
     },
     {
-      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଧରାକୁ ସରା ମଣିବା” ଶବ୍ଦର ଅର୍ଥ ବାଛ।",
+      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଧରାକୁ ସରା ମଣିବା” ରୂଢ଼ିର ଅର୍ଥ ବାଛ।",
       "options": [
         "ଅତ୍ୟନ୍ତ ଗର୍ବ କରିବା",
         "ନମ୍ର ବ୍ୟବହାରରେ ଶତ୍ରୁକୁ ଆପଣାର କରିବା",
@@ -958,7 +958,7 @@ export default {
           ],
           "prompt": "ଚିଲିକାର ସନ୍ଧ୍ୟାକୁ ଏକ ଚଳମାନ ଦୃଶ୍ୟ ବୋଲି କାହିଁକି କହିବ?",
           "answer": "କବି ଏକ ସମୟର ସ୍ଥିର ଛବି ଦେଇ ଅଟକି ନାହାନ୍ତି। ମୁହାଣରୁ ମାଛ ଆଣି ମୀନଜୀବୀମାନେ ଫେରୁଛନ୍ତି। ପାଲ, ପବନ ଓ ନୌକାର ଗତି ସହ ଗୀତର ଧ୍ୱନି ମିଶିଛି। ଆଲୋକ କମିବାରୁ ମଶାଲ ଶିଖା ଅଧିକ ଦିଶେ। ଢେଉ ସହିତ ତାହାର ଉଠାପଡ଼ା ଦେଖି କବି ଦୁଃଖୀ ମଣିଷର ଆଶା କଥା ଭାବନ୍ତି। ଚନ୍ଦ୍ରକିରଣ ବିଛାଡ଼ି ହେବାବେଳକୁ ଚାରିପାଖ ନିସ୍ତବ୍ଧ। ରଙ୍ଗ, ଆଲୋକ, ଶବ୍ଦ ଓ ଗତିର ଏହି ପରିବର୍ତ୍ତନ ଦ୍ୱାରା ପାଠକ ନିଜେ ସନ୍ଧ୍ୟାରୁ ରାତିକୁ ଯିବା ଅନୁଭବ କରେ।",
-          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
           "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
           "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
         }

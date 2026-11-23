@@ -14,7 +14,7 @@ export default {
         "Among banyan roots"
       ],
       "correct": 3,
-      "answer": "ବରଗଛର ଚେର ତାର ଲୁଚିବା ଜାଗା ଥିଲା।",
+      "answer": "ବରଗଛର ଚେର ତା’ର ଲୁଚିବା ଜାଗା ଥିଲା।",
       "pages": [
         91,
         96

@@ -114,7 +114,7 @@ export default {
       ],
       "number": "G (ii) 1–6",
       "prompt": "Explain how the meaning of hope changes across the six examples.",
-      "answer": "1. Wanting a result thought possible. 2. A polite wish that one’s words will not offend. 3. A renewed expectation of something good. 4. Wishing for an unlikely result. 5. Acting with an expectation that may or may not come true. 6. Having stopped expecting the good outcome. ଏକେ ଶବ୍ଦ ପାଇଁ ପ୍ରସଙ୍ଗ ଅନୁସାରେ ଆଶା, ଭଦ୍ର ଅନୁରୋଧ, ଅତି କ୍ଷୀଣ ଆଶା ବା ଆଶା ଛାଡ଼ିବା ବୁଝାଯାଏ।\n\n“I hope …” ଏକ ସମ୍ଭବ ଫଳର ଇଚ୍ଛା ବା ଭଦ୍ରତାସୂଚକ ଅଭିବ୍ୟକ୍ତି ହୋଇପାରେ। “A hope” ଆଶାଟିକୁ ନାମ ଦିଏ। ଆଶା ହରାଇବା, ପୁଣି ଫେରିବା ବା କାହା ପାଖରେ ଆଶା ରଖିବାକୁ ପାଖ ଶବ୍ଦ ଜଣାଏ।",
+      "answer": "1. Wanting a result thought possible. 2. A polite wish that one’s words will not offend. 3. A renewed expectation of something good. 4. Wishing for an unlikely result. 5. Acting with an expectation that may or may not come true. 6. Having stopped expecting the good outcome. ଏକା ଶବ୍ଦ ପାଇଁ ପ୍ରସଙ୍ଗ ଅନୁସାରେ ଆଶା, ଭଦ୍ର ଅନୁରୋଧ, ଅତି କ୍ଷୀଣ ଆଶା ବା ଆଶା ଛାଡ଼ିବା ବୁଝାଯାଏ।\n\n“I hope …” ଏକ ସମ୍ଭବ ଫଳର ଇଚ୍ଛା ବା ଭଦ୍ରତାସୂଚକ ଅଭିବ୍ୟକ୍ତି ହୋଇପାରେ। “A hope” ଆଶାଟିକୁ ନାମ ଦିଏ। ଆଶା ହରାଇବା, ପୁଣି ଫେରିବା ବା କାହା ପାଖରେ ଆଶା ରଖିବାକୁ ପାଖ ଶବ୍ଦ ଜଣାଏ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=14",
         "pages": [
@@ -129,7 +129,7 @@ export default {
       ],
       "number": "G (iii)",
       "prompt": "Use two words from the story as both nouns and verbs.",
-      "answer": "Hope (noun): His hope survived the storm. Hope (verb): The farmers hope for rain. Rain (noun): The rain covered the field. Rain (verb): It may rain again. Noun ବସ୍ତୁ ବା ଭାବର ନାମ ଦିଏ; verb ଘଟଣା ବା ଅବସ୍ଥା ସୂଚାଏ। ଏହା ଖୋଲା ଅଭ୍ୟାସର ନମୁନା।\n\nNounଟିର ଆଗରେ his/the ପରି determiner ଆସିଛି। Verbଟି subject ପରେ କାମଟି କହୁଛି ଏବଂ tense ବଦଳାଇପାରେ: farmers hoped; it rained. ତେଣୁ ଅକ୍ଷର ଏକେ ହେଲେ ବି ବାକ୍ୟର କାମ ଭିନ୍ନ।",
+      "answer": "Hope (noun): His hope survived the storm. Hope (verb): The farmers hope for rain. Rain (noun): The rain covered the field. Rain (verb): It may rain again. Noun ବସ୍ତୁ ବା ଭାବର ନାମ ଦିଏ; verb ଘଟଣା ବା ଅବସ୍ଥା ସୂଚାଏ। ଏହା ଖୋଲା ଅଭ୍ୟାସର ନମୁନା।\n\nNounଟିର ଆଗରେ his/the ପରି determiner ଆସିଛି। Verbଟି subject ପରେ କାମଟି କହୁଛି ଏବଂ tense ବଦଳାଇପାରେ: farmers hoped; it rained. ତେଣୁ ଅକ୍ଷର ଏକା ହେଲେ ବି ବାକ୍ୟର କାମ ଭିନ୍ନ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=15",
         "pages": [

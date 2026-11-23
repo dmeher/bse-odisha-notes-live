@@ -62,7 +62,7 @@ export default {
     {
       "prompt": "बच्चे के घाव पर कौन-सा लेप लगाया गया?",
       "options": [
-        "पेंसिलिन का मरहम",
+        "पेनिसिलिन का मरहम",
         "मक्खन",
         "काजू का दूध",
         "चंदन का लेप"
@@ -287,7 +287,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1jqXzVD24_tCnCCTEVhOhcjp2vkq0oHn1/view"
     },
     {
-      "prompt": "तुलसी स्वीकरण और मेल के लिए किस साधन की प्रशंसा करते हैं?",
+      "prompt": "तुलसी वशीकरण (सबका मन जीतने) और मेल के लिए किस साधन की प्रशंसा करते हैं?",
       "options": [
         "रोष की",
         "हठ की",
@@ -699,7 +699,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/19XzfC_XWQ0wJgkxd1GTWoM-eutgFtt-c/view"
     },
     {
-      "prompt": "इस प्रयोग में सर्वनाम का भेद चुनिए — कौन आया?।",
+      "prompt": "इस प्रयोग में सर्वनाम का भेद चुनिए — कौन आया?",
       "options": [
         "निजवाचक",
         "अनिश्चयवाचक",

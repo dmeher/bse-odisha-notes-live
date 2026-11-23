@@ -418,7 +418,7 @@ export default {
         "Among banyan roots"
       ],
       "correct": 3,
-      "answer": "ବରଗଛର ଚେର ତାର ଲୁଚିବା ଜାଗା ଥିଲା।",
+      "answer": "ବରଗଛର ଚେର ତା’ର ଲୁଚିବା ଜାଗା ଥିଲା।",
       "pages": [
         91,
         96
@@ -532,7 +532,7 @@ export default {
         "A book names it"
       ],
       "correct": 2,
-      "answer": "କୁକୁଡ଼ା ଖୁମ୍ପି କଣା କରିବା ପରେ ପରିଚୟ ଜଣାପଡ଼େ।",
+      "answer": "କୁକୁଡ଼ା ଖୁଣ୍ଟି କଣା କରିବା ପରେ ପରିଚୟ ଜଣାପଡ଼େ।",
       "pages": [
         117,
         121

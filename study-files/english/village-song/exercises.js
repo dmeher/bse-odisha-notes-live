@@ -36,7 +36,7 @@ export default {
     {
       "number": "F. 5–8",
       "prompt": "Compare the two kinds of music and their meaning.",
-      "answer": "5. The mother means the joys of marriage, children and leisure. 6. Both songs are part of family life and both sound sad to the girl. 7. Today’s laughter is set against tomorrow’s death. 8. For the daughter the music of streams is sweeter than the songs of domestic life.\nଓଡ଼ିଆ ବୁଝାମଣା — ଏକେ ପାରିବାରିକ ସଙ୍ଗୀତ ମାଆଙ୍କୁ ସୁଖ ଓ ଝିଅକୁ ଦୁଃଖର ସମ୍ଭାବନା ଶୁଣାଏ।\n\nWedding ଓ cradleର ଗୀତରେ ମା’ଙ୍କ ପାଇଁ ଜୀବନର ଆନନ୍ଦ ଅଛି। ଝିଅର କାନ ସେଥିର ଅସ୍ଥାୟିତ୍ୱ ମଧ୍ୟ ଶୁଣେ। Forest song କାହିଁକି ତାକୁ ବେଶି ଡାକେ ଏହି ଫରକରୁ ବୁଝାଯାଏ।",
+      "answer": "5. The mother means the joys of marriage, children and leisure. 6. Both songs are part of family life and both sound sad to the girl. 7. Today’s laughter is set against tomorrow’s death. 8. For the daughter the music of streams is sweeter than the songs of domestic life.\nଓଡ଼ିଆ ବୁଝାମଣା — ଏକା ପାରିବାରିକ ସଙ୍ଗୀତ ମାଆଙ୍କୁ ସୁଖ ଓ ଝିଅକୁ ଦୁଃଖର ସମ୍ଭାବନା ଶୁଣାଏ।\n\nWedding ଓ cradleର ଗୀତରେ ମା’ଙ୍କ ପାଇଁ ଜୀବନର ଆନନ୍ଦ ଅଛି। ଝିଅର କାନ ସେଥିର ଅସ୍ଥାୟିତ୍ୱ ମଧ୍ୟ ଶୁଣେ। Forest song କାହିଁକି ତାକୁ ବେଶି ଡାକେ ଏହି ଫରକରୁ ବୁଝାଯାଏ।",
       "pages": [
         39
       ],
@@ -68,7 +68,7 @@ export default {
       ],
       "number": "I. 1–3",
       "prompt": "Count would and the questions; suggest a further bridal expression.",
-      "answer": "1. “Would” occurs three times. 2. Five questions appear in the poem: four in stanza 1 and one in stanza 3. The mother asks them all. 3. Sample: bridal jewellery. ଶବ୍ଦ ଗଣିବାବେଳେ lead-in ନୁହେଁ, କେବଳ ମୂଳ କବିତା ଦେଖନ୍ତୁ।\n\nWould ଥିବା ଧାଡ଼ି ଓ ପ୍ରଶ୍ନଚିହ୍ନର ଧାଡ଼ି ସବୁବେଳେ ଏକେ ନୁହେଁ। ଦୁଇ ଗଣନା ପୃଥକ କର। ନିଜ bridal expression ଦେବା ବେଳେ ସେହିଟି ମୂଳ କବିତାର ଉଦ୍ଧୃତି ନୁହେଁ ବୋଲି ଜଣାଅ।",
+      "answer": "1. “Would” occurs three times. 2. Five questions appear in the poem: four in stanza 1 and one in stanza 3. The mother asks them all. 3. Sample: bridal jewellery. ଶବ୍ଦ ଗଣିବାବେଳେ lead-in ନୁହେଁ, କେବଳ ମୂଳ କବିତା ଦେଖନ୍ତୁ।\n\nWould ଥିବା ଧାଡ଼ି ଓ ପ୍ରଶ୍ନଚିହ୍ନର ଧାଡ଼ି ସବୁବେଳେ ଏକା ନୁହେଁ। ଦୁଇ ଗଣନା ପୃଥକ କର। ନିଜ bridal expression ଦେବା ବେଳେ ସେହିଟି ମୂଳ କବିତାର ଉଦ୍ଧୃତି ନୁହେଁ ବୋଲି ଜଣାଅ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=39",
         "pages": [

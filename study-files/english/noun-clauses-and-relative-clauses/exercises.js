@@ -229,7 +229,7 @@ export default {
       ],
       "number": "Relative clauses · Activity 5 (i–x)",
       "prompt": "Identify the relative clause and distinguish defining (D) from non-defining (N).",
-      "answer": "i who sells fruits and vegetables D; ii who is a green grocer N; iii who often comes to our house D; iv who often comes to our house N; v who is a judge D; vi who is a judge N; vii who is a teacher N; viii that wears a crown D; ix who thinks of our welfare D; x who thinks of our welfare N. (v) କେଉଁ କକା ବୋଲି ଚିହ୍ନାଏ, (vi) କକାଙ୍କ ବିଷୟରେ ଅଧିକ ଖବର ଦେଏ।\n\nଏକେ “who often comes to our house” ଦୁଇଥର ଥିଲେ ମଧ୍ୟ antecedent ନିଜେ ନିର୍ଦ୍ଦିଷ୍ଟ କି ଚିହ୍ନ। ସାଧାରଣ nounକୁ ଚିହ୍ନାଇଲେ D; ପୂର୍ବରୁ ଚିହ୍ନା ବ୍ୟକ୍ତି ବିଷୟରେ ଯୋଡ଼ିଲେ N। Comma ଏହି ପଠନକୁ ଦେଖାଏ।",
+      "answer": "i who sells fruits and vegetables D; ii who is a green grocer N; iii who often comes to our house D; iv who often comes to our house N; v who is a judge D; vi who is a judge N; vii who is a teacher N; viii that wears a crown D; ix who thinks of our welfare D; x who thinks of our welfare N. (v) କେଉଁ କକା ବୋଲି ଚିହ୍ନାଏ, (vi) କକାଙ୍କ ବିଷୟରେ ଅଧିକ ଖବର ଦିଏ।\n\nଏକା “who often comes to our house” ଦୁଇଥର ଥିଲେ ମଧ୍ୟ antecedent ନିଜେ ନିର୍ଦ୍ଦିଷ୍ଟ କି ଚିହ୍ନ। ସାଧାରଣ nounକୁ ଚିହ୍ନାଇଲେ D; ପୂର୍ବରୁ ଚିହ୍ନା ବ୍ୟକ୍ତି ବିଷୟରେ ଯୋଡ଼ିଲେ N। Comma ଏହି ପଠନକୁ ଦେଖାଏ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=86",
         "pages": [

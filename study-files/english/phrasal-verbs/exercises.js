@@ -169,7 +169,7 @@ export default {
       ],
       "number": "Activity 7",
       "prompt": "Make ten combinations and use each in a sentence.",
-      "answer": "1. The old machine broke down. 2. The publisher brought out a book. 3. We called off the meeting. 4. The plan came off. 5. We cut down our expenses. 6. She got over her fear. 7. He gave in at last. 8. Please keep on reading. 9. I made out the words. 10. We set up a club. ପ୍ରତି ବାକ୍ୟରେ particle ବଦଳିଲେ ମୁଖ୍ୟ କ୍ରିୟାର ଅର୍ଥ କିପରି ବଦଳେ ବିଚାର କର। ଏହା ଗୋଟିଏ ନମୁନା ତାଲିକା।\n\nCalled offରେ meeting ବାତିଲ ହେଲା, came offରେ plan ସଫଳ ହେଲା। ଏକେ offକୁ କେବଳ ଦୂରକୁ ଯିବା ଅର୍ଥ ଦେଲେ ଉଭୟ ଭୁଲ୍ ହେବ। ପ୍ରତି ନୂଆ ବାକ୍ୟରେ ଫଳ ବୁଝାଉଥିବା object ବା subject ରଖ।",
+      "answer": "1. The old machine broke down. 2. The publisher brought out a book. 3. We called off the meeting. 4. The plan came off. 5. We cut down our expenses. 6. She got over her fear. 7. He gave in at last. 8. Please keep on reading. 9. I made out the words. 10. We set up a club. ପ୍ରତି ବାକ୍ୟରେ particle ବଦଳିଲେ ମୁଖ୍ୟ କ୍ରିୟାର ଅର୍ଥ କିପରି ବଦଳେ ବିଚାର କର। ଏହା ଗୋଟିଏ ନମୁନା ତାଲିକା।\n\nCalled offରେ meeting ବାତିଲ ହେଲା, came offରେ plan ସଫଳ ହେଲା। ଏକା offକୁ କେବଳ ଦୂରକୁ ଯିବା ଅର୍ଥ ଦେଲେ ଉଭୟ ଭୁଲ୍ ହେବ। ପ୍ରତି ନୂଆ ବାକ୍ୟରେ ଫଳ ବୁଝାଉଥିବା object ବା subject ରଖ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=75",
         "pages": [

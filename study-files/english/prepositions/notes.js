@@ -4,7 +4,7 @@ export default {
   "source": "english/learn-and-practice-grammar/source.pdf",
   "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view",
   "lesson": {
-    "question": "ସ୍ଥାନ, ସମୟ ଓ ଗତିର ସମ୍ପର୍କ ବଦଳିଲେ ଏକେ noun ସହ preposition କିପରି ବଦଳେ?",
+    "question": "ସ୍ଥାନ, ସମୟ ଓ ଗତିର ସମ୍ପର୍କ ବଦଳିଲେ ଏକା noun ସହ preposition କିପରି ବଦଳେ?",
     "overview": "ପ୍ରଥମେ object of the preposition ଚିହ୍ନ। ପରେ ଦିନଟି ଘଟଣାର ସମୟ, ଶେଷ ସୀମା, ନା ଚାଲିଥିବା ଅବଧିର ଶେଷ ତାହା ଭାବି ଶବ୍ଦ ବାଛ।",
     "check": {
       "question": "“on Friday”, “by Friday” ଓ “until Friday” ତିନିଟି ଯୋଜନାକୁ କିପରି ଭିନ୍ନ କରେ?",
@@ -135,7 +135,7 @@ export default {
       }
     },
     {
-      "heading": "ଏକେ Friday ସହ କେବେ on, କେବେ by?",
+      "heading": "ଏକା Friday ସହ କେବେ on, କେବେ by?",
       "text": "“The work starts on Friday”ରେ ଘଟଣା ଘଟିବାର ଦିନ ଜାଣୁ। “Finish it by Friday”ରେ ଶୁକ୍ରବାର ସର୍ବଶେଷ ସୀମା, ଆଗରୁ ମଧ୍ୟ ସାରିହେବ। “Wait until Friday”ରେ ଅପେକ୍ଷା ସେ ଦିନ ପର୍ଯ୍ୟନ୍ତ ଚାଲିବ। From Monday to Friday ଆରମ୍ଭ ଓ ଶେଷ ସୀମା, between eight and twelve ସମୟର ଦୁଇ ପ୍ରାନ୍ତ। For a month କେତେଦିନ, since last month କେବେଠାରୁ ତାହାର ଉତ୍ତର। During the meetingରେ ମିଟିଂର ମୋଟ ଲମ୍ବ କହିବା ଆବଶ୍ୟକ ନାହିଁ, ଘଟଣାଟି ତାହାରି ଭିତରେ ଘଟିଛି। Last month କେବେ କାମଟି ଘଟିଲା କହିଲେ ସାଧାରଣତଃ ଅଲଗା preposition ଲାଗେନାହିଁ। ତେଣୁ month ଶବ୍ଦ ଦେଖି ସମସ୍ତ ସ୍ଥାନରେ in ବସାଅ ନାହିଁ।",
       "pages": [
         53,
@@ -196,7 +196,7 @@ export default {
     },
     {
       "heading": "Fixed combinations · ଶବ୍ଦପରିବାର ଧରି ଶିଖିବା",
-      "text": "ଲକ୍ଷ୍ୟକୁ aim at, ବିପଦ ବିରୁଦ୍ଧରେ warn against, ଅସୁସ୍ଥତାରୁ recover from, ପ୍ରେରଣାର ଉତ୍ସ ପାଇଁ thank someone for something। ଏକେ verb ସହ ଭିନ୍ନ preposition ବିଷୟ ବଦଳାଇପାରେ, ଯଥା agree with a person, agree on a date। Adjective ସହ afraid of, interested in, kind to, different from ପ୍ରୟୋଗରେ ଭୟର ବିଷୟ, ଆଗ୍ରହର କ୍ଷେତ୍ର, ଦୟାର ପାତ୍ର ଓ ତୁଳନାର ଆଧାର ଅଲଗା। Noun ସହ demand for, belief in, knowledge of, influence on, access to, attitude towards ଦେଖ। କୌଣସି ନୂଆ sentenceରେ ମୁଖ୍ୟ ଶବ୍ଦକୁ ଏକ ବର୍ଗରେ ରଖି ଏହି ସମ୍ପର୍କଟି ନାମ ଦିଅ। ପ୍ରୟୋଗକୁ ମନେ ରଖିବା ପାଇଁ “She is interested in the result” ଓ “She has access to the report” ପରି ଅତି ଛୋଟ ପୂରା ବାକ୍ୟ ଲେଖ।",
+      "text": "ଲକ୍ଷ୍ୟକୁ aim at, ବିପଦ ବିରୁଦ୍ଧରେ warn against, ଅସୁସ୍ଥତାରୁ recover from, ପ୍ରେରଣାର ଉତ୍ସ ପାଇଁ thank someone for something। ଏକା verb ସହ ଭିନ୍ନ preposition ବିଷୟ ବଦଳାଇପାରେ, ଯଥା agree with a person, agree on a date। Adjective ସହ afraid of, interested in, kind to, different from ପ୍ରୟୋଗରେ ଭୟର ବିଷୟ, ଆଗ୍ରହର କ୍ଷେତ୍ର, ଦୟାର ପାତ୍ର ଓ ତୁଳନାର ଆଧାର ଅଲଗା। Noun ସହ demand for, belief in, knowledge of, influence on, access to, attitude towards ଦେଖ। କୌଣସି ନୂଆ sentenceରେ ମୁଖ୍ୟ ଶବ୍ଦକୁ ଏକ ବର୍ଗରେ ରଖି ଏହି ସମ୍ପର୍କଟି ନାମ ଦିଅ। ପ୍ରୟୋଗକୁ ମନେ ରଖିବା ପାଇଁ “She is interested in the result” ଓ “She has access to the report” ପରି ଅତି ଛୋଟ ପୂରା ବାକ୍ୟ ଲେଖ।",
       "pages": [
         59,
         63

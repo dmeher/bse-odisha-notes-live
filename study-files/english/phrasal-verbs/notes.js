@@ -5,7 +5,7 @@ export default {
   "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view",
   "lesson": {
     "question": "Verb ଓ particleକୁ ଏକାଠି ପଢ଼ିଲେ ଅର୍ଥ ଓ objectର ସ୍ଥାନ କିପରି ଜାଣିବ?",
-    "overview": "ଏକେ verb ସହ ଭିନ୍ନ particleରେ ଅର୍ଥ ବଦଳୁଥିବା ଦେଖ। ପ୍ରତ୍ୟେକ ଅର୍ଥକୁ ନେଇ ଗୋଟିଏ ପୂରା ବାକ୍ୟ ଗଢ଼, ପରେ noun object ବଦଳରେ pronoun ରଖି ଶବ୍ଦକ୍ରମ ପରଖ।",
+    "overview": "ଏକା verb ସହ ଭିନ୍ନ particleରେ ଅର୍ଥ ବଦଳୁଥିବା ଦେଖ। ପ୍ରତ୍ୟେକ ଅର୍ଥକୁ ନେଇ ଗୋଟିଏ ପୂରା ବାକ୍ୟ ଗଢ଼, ପରେ noun object ବଦଳରେ pronoun ରଖି ଶବ୍ଦକ୍ରମ ପରଖ।",
     "check": {
       "question": "“Put the meeting off”ର meetingକୁ it କଲେ “Put it off” କାହିଁକି ହେବ?",
       "answer": "Put off means postpone and allows separation. ନାମପଦ meetingକୁ ଦୁଇ ସ୍ଥାନରେ ରଖିହୁଏ। ଛୋଟ object pronoun it ଏହି ପ୍ରୟୋଗରେ put ଓ off ମଧ୍ୟରେ ରହେ।",
@@ -58,8 +58,8 @@ export default {
       }
     },
     {
-      "heading": "ଏକେ କଣିକା, ଭିନ୍ନ ଅର୍ଥ ଓ ବାକ୍ୟରେ ପରୀକ୍ଷା",
-      "text": "“The battery has run down”ରେ ଦୁର୍ବଳ ହୋଇଗଲା ବୋଲି ବୁଝାଏ। “He runs down his neighbours”ରେ ପଡ଼ୋଶୀଙ୍କୁ ସବୁବେଳେ ନିନ୍ଦା କରେ। ପ୍ରଥମେ ଦଳଟି କାମ କରିବା ଶେଷ କରିଛି ବୋଲି ଅର୍ଥ ହେଉନାହିଁ, ଦ୍ୱିତୀୟରେ କୌଣସି ଲୋକ ତଳକୁ ଦୌଡ଼ୁନାହାନ୍ତି। Turn out ଦେଇ ଲୋକମାନେ ଆସି ଭିଡ଼ କରିବା ଓ କାରଖାନା ଗାଡ଼ି ଉତ୍ପାଦନ କରିବା ଦୁଇଟି ଅଲଗା ପ୍ରୟୋଗ। Give outରେ ଧୈର୍ଯ୍ୟ ସରିଯିବା ଓ ପୁସ୍ତକ ବଣ୍ଟିବାର ଫରକ object ଦେଖି ଧରିହୁଏ। ଏକେ verb–particle ସବୁଥରେ ଗୋଟିଏ ଓଡ଼ିଆ କ୍ରିୟା ଚାହେ ନାହିଁ। Subject, object ଓ ଘଟଣାକୁ ଗୋଟିଏ ଛୋଟ ଚିତ୍ର ଭାବେ ଦେଖ।",
+      "heading": "ଏକା କଣିକା, ଭିନ୍ନ ଅର୍ଥ ଓ ବାକ୍ୟରେ ପରୀକ୍ଷା",
+      "text": "“The battery has run down”ରେ ଦୁର୍ବଳ ହୋଇଗଲା ବୋଲି ବୁଝାଏ। “He runs down his neighbours”ରେ ପଡ଼ୋଶୀଙ୍କୁ ସବୁବେଳେ ନିନ୍ଦା କରେ। ପ୍ରଥମେ ଦଳଟି କାମ କରିବା ଶେଷ କରିଛି ବୋଲି ଅର୍ଥ ହେଉନାହିଁ, ଦ୍ୱିତୀୟରେ କୌଣସି ଲୋକ ତଳକୁ ଦୌଡ଼ୁନାହାନ୍ତି। Turn out ଦେଇ ଲୋକମାନେ ଆସି ଭିଡ଼ କରିବା ଓ କାରଖାନା ଗାଡ଼ି ଉତ୍ପାଦନ କରିବା ଦୁଇଟି ଅଲଗା ପ୍ରୟୋଗ। Give outରେ ଧୈର୍ଯ୍ୟ ସରିଯିବା ଓ ପୁସ୍ତକ ବଣ୍ଟିବାର ଫରକ object ଦେଖି ଧରିହୁଏ। ଏକା verb–particle ସବୁଥରେ ଗୋଟିଏ ଓଡ଼ିଆ କ୍ରିୟା ଚାହେ ନାହିଁ। Subject, object ଓ ଘଟଣାକୁ ଗୋଟିଏ ଛୋଟ ଚିତ୍ର ଭାବେ ଦେଖ।",
       "pages": [
         64,
         66
@@ -74,7 +74,7 @@ export default {
     },
     {
       "heading": "Transitive ଓ intransitive ବ୍ୟବହାର",
-      "text": "The plane took offରେ take off ଅଲଗା object ନିଏନାହିଁ। Set up a schoolରେ school ହେଉଛି object। ଏକେ verb ଦୁଇ ଭାବରେ ମଧ୍ୟ ଚାଲେ। Battery run down କହିଲେ ଶକ୍ତି କମିବା, run down a personରେ ସମାଲୋଚନା କରିବା। Turn out ଓ give outର ଉଦାହରଣରେ କ’ଣ ଘଟୁଛି ଓ କାହା ଉପରେ କାମ ପଡ଼ୁଛି ପ୍ରଥମେ ଚିହ୍ନ।",
+      "text": "The plane took offରେ take off ଅଲଗା object ନିଏନାହିଁ। Set up a schoolରେ school ହେଉଛି object। ଏକା verb ଦୁଇ ଭାବରେ ମଧ୍ୟ ଚାଲେ। Battery run down କହିଲେ ଶକ୍ତି କମିବା, run down a personରେ ସମାଲୋଚନା କରିବା। Turn out ଓ give outର ଉଦାହରଣରେ କ’ଣ ଘଟୁଛି ଓ କାହା ଉପରେ କାମ ପଡ଼ୁଛି ପ୍ରଥମେ ଚିହ୍ନ।",
       "pages": [
         65,
         66

@@ -322,7 +322,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -340,7 +340,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -358,7 +358,7 @@ export default {
         1
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -376,7 +376,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -438,8 +438,8 @@ export default {
       "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଆଗମନଶଂସୀ” ଶବ୍ଦର ଅର୍ଥ ବାଛ।",
       "options": [
         "ଆସିବାର ସୂଚକ",
-        "ବାସୁକି",
-        "ଲାଲ ରଙ୍ଗର ପାଟ ବସ୍ତ୍ର",
+        "ବାସୁକୀ",
+        "ଲାଲ (ଅରୁଣ) ରଙ୍ଗର କଷାୟ ବସ୍ତ୍ର",
         "ବିଷ୍ଣୁଙ୍କ ଧାମରେ"
       ],
       "correct": 0,
@@ -798,7 +798,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1WVw9B_Vz4JXO76cMlUo3Gc8UQEnFgGqU/view"
     },
     {
-      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “କୂପ ମଣ୍ଡୁକ” ଶବ୍ଦର ଅର୍ଥ ବାଛ।",
+      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “କୂପ ମଣ୍ଡୁକ” ରୂଢ଼ିର ଅର୍ଥ ବାଛ।",
       "options": [
         "ପ୍ରତିକୂଳ ପରିବେଶରେ ପ୍ରତିଭାର ସ୍ଫୁରଣ",
         "ସଂକୁଚିତ ପରିବେଶରେ ବଢ଼ିଥିବା ଲୋକ",
@@ -816,7 +816,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1_4qA5Z97TyAJZc4nxS69dXCIuUizJmx-/view"
     },
     {
-      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଘରବୁଡ଼ି ପାଣି ଆଣ୍ଠୁଏ” ଶବ୍ଦର ଅର୍ଥ ବାଛ।",
+      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଘରବୁଡ଼ି ପାଣି ଆଣ୍ଠୁଏ” ରୂଢ଼ିର ଅର୍ଥ ବାଛ।",
       "options": [
         "ବିପଦ ଉପରେ ବିପଦ",
         "ସଂକୁଚିତ ପରିବେଶରେ ବଢ଼ିଥିବା ଲୋକ",
@@ -1087,7 +1087,7 @@ export default {
           ],
           "prompt": "ଚିଲିକାର ସନ୍ଧ୍ୟାବର୍ଣ୍ଣନା ପଢ଼ି କ’ଣ ଭଲ ଲାଗିଲା ଜଣାଇ ସାଙ୍ଗକୁ ପ୍ରାୟ ୧୦୦ ଶବ୍ଦରେ ପତ୍ର ଲେଖ।",
           "answer": "ନିଜ ଗ୍ରାମ\nତାରିଖ …\nପ୍ରିୟ ବନ୍ଧୁ,\nଗତକାଲି ଚିଲିକାର ସନ୍ଧ୍ୟା ଉପରେ ରାଧାନାଥ ରାୟଙ୍କ କବିତା ପଢ଼ିଲି। ତୋତେ ଏକ କଥା ଲେଖିବାକୁ ଇଚ୍ଛା ହେଲା। ମାଛ ଧରି ଫେରୁଥିବା ଲୋକେ ଘରକୁ ମନେ ପକାଉଛନ୍ତି। ଦୂରର ନାଆଁ ଛାୟା ପରି ଦିଶୁଛି। ମଶାଲ ଆଲୋକ ତରଙ୍ଗରେ କେବେ ଉଠୁଛି, କେବେ ପଡ଼ୁଛି। କବି ଏହି ସାମାନ୍ୟ ଦୃଶ୍ୟରେ ଦୁଃଖୀ ଲୋକର ଆଶା ଦେଖିବା କଥାଟି ମୋ ମନକୁ ବେଶି ଛୁଇଁଲା। ପରେ ଜ୍ୟୋତ୍ସ୍ନା ବଢ଼େ ଓ ଲୋକଙ୍କ କୋଳାହଳ ଥମିଯାଏ। ଲାଗେ ଯେମିତି ଆଖି ଆଗରେ ସମୟ ବଦଳୁଛି। ତୋର ପଢ଼ା ସରିଲେ କେଉଁ ଚିତ୍ର ତୋତେ ଅଧିକ ଭଲ ଲାଗିଲା ଲେଖିବୁ। ଆମେ ପୁଣି ମିଶି କବିତାଟି ଆବୃତ୍ତି କରିବା।\nତୋ ଉତ୍ତର ପାଇଲେ ଆମ ଦୁହିଁଙ୍କୁ ଭିନ୍ନ ଚିତ୍ର କାହିଁକି ଭଲ ଲାଗିଲା ସେ କଥା ଶ୍ରେଣୀରେ ମଧ୍ୟ ଆଲୋଚନା କରିବା।\nତୋର ବନ୍ଧୁ\nକ",
-          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
           "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
           "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
         }

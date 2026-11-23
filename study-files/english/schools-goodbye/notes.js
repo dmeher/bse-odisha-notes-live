@@ -154,7 +154,7 @@ export default {
     },
     {
       "heading": "Althoughରେ ବାଧା ଓ imperativeରେ ପରାମର୍ଶ",
-      "text": "“Although the job is temporary, you can keep learning.” ପ୍ରଥମ ଅଂଶରେ ବାଧା, ଦ୍ୱିତୀୟରେ ଏହା ସତ୍ତ୍ୱେ ସମ୍ଭବ କାମ। ଏକେ ବାକ୍ୟରେ although ପରେ ପୁଣି but ଯୋଡ଼ିବା ଦରକାର ନାହିଁ। ବିଦାୟର ପରାମର୍ଶକୁ ସିଧା କହିଲେ “Ask a teacher when you are in doubt.” ଏଠାରେ you ବୁଝାଯାଉଛି। ଅନ୍ୟଜଣଙ୍କ ପରାମର୍ଶ ରିପୋର୍ଟ କଲେ “The speaker advises pupils to ask a teacher when they are in doubt.” ଏବେ କିଏ ଉପଦେଶ ଦେଉଛନ୍ତି ଓ କାହାକୁ ଦେଉଛନ୍ତି ସ୍ପଷ୍ଟ। ଶେଷ group write-upରେ ‘Use of leisure’ ବିଷୟ ହେଲେ ଅବସରବେଳେ କ’ଣ କରିବା, କାହିଁକି ବାଛିବା ଓ କିପରି ଚରିତ୍ର ଉପରେ ପ୍ରଭାବ ପଡ଼େ ତିନୋଟି ବାକ୍ୟରେ ରଖ। “A hobby gives an idle hour a purpose. Books and companions influence what a young person values. The choice made after work can therefore affect the person’s conduct at work as well.” ଏଠାରେ ଆଚରଣର କାରଣ ଅଛି, କେବଳ ଭଲ ଅଭ୍ୟାସର ତାଲିକା ନୁହେଁ।",
+      "text": "“Although the job is temporary, you can keep learning.” ପ୍ରଥମ ଅଂଶରେ ବାଧା, ଦ୍ୱିତୀୟରେ ଏହା ସତ୍ତ୍ୱେ ସମ୍ଭବ କାମ। ଏକା ବାକ୍ୟରେ although ପରେ ପୁଣି but ଯୋଡ଼ିବା ଦରକାର ନାହିଁ। ବିଦାୟର ପରାମର୍ଶକୁ ସିଧା କହିଲେ “Ask a teacher when you are in doubt.” ଏଠାରେ you ବୁଝାଯାଉଛି। ଅନ୍ୟଜଣଙ୍କ ପରାମର୍ଶ ରିପୋର୍ଟ କଲେ “The speaker advises pupils to ask a teacher when they are in doubt.” ଏବେ କିଏ ଉପଦେଶ ଦେଉଛନ୍ତି ଓ କାହାକୁ ଦେଉଛନ୍ତି ସ୍ପଷ୍ଟ। ଶେଷ group write-upରେ ‘Use of leisure’ ବିଷୟ ହେଲେ ଅବସରବେଳେ କ’ଣ କରିବା, କାହିଁକି ବାଛିବା ଓ କିପରି ଚରିତ୍ର ଉପରେ ପ୍ରଭାବ ପଡ଼େ ତିନୋଟି ବାକ୍ୟରେ ରଖ। “A hobby gives an idle hour a purpose. Books and companions influence what a young person values. The choice made after work can therefore affect the person’s conduct at work as well.” ଏଠାରେ ଆଚରଣର କାରଣ ଅଛି, କେବଳ ଭଲ ଅଭ୍ୟାସର ତାଲିକା ନୁହେଁ।",
       "pages": [
         87,
         90

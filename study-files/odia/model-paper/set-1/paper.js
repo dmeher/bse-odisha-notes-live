@@ -269,7 +269,7 @@ export default {
         1
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -287,7 +287,7 @@ export default {
         3
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -305,7 +305,7 @@ export default {
         3
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -1013,7 +1013,7 @@ export default {
           ],
           "prompt": "ପ୍ରସଙ୍ଗ ସହ ବ୍ୟାଖ୍ୟା କର — “ଦୁଃଖିମନେ ଆଶା ଉତ୍ଥାନ ପତନ-ପ୍ରାୟେ ଶିଖା ଉଠେ ପଡ଼େ ଘନ ଘନ।”",
           "answer": "ଚିଲିକାର ସନ୍ଧ୍ୟା ଦୃଶ୍ୟରେ କବି ରାଧାନାଥ ରାୟଙ୍କ ଦୃଷ୍ଟି ନାଆଁର ମଶାଲ ଉପରେ ପଡ଼ିଛି। ତରଙ୍ଗ ସହ ବୋଇତ ଦୋହଲେ। ତାହା ସହିତ ଶିଖା କେବେ ଉପରକୁ ଉଠେ ଓ କେବେ ତଳକୁ ଖସେ। ଦୁଃଖୀ ମଣିଷର ମନରେ ଆଶା ମଧ୍ୟ କେବେ ଉଜ୍ଜ୍ୱଳ ହୋଇଉଠେ, କେବେ ମଳିନ ହୁଏ। ଜଳରାଶିର ଛୋଟ ଦୃଶ୍ୟ ସହ ଏକ ଗଭୀର ମାନସିକ ଅନୁଭୂତିକୁ କବି ଏହି ତୁଳନା ଦ୍ୱାରା ଯୋଡ଼ିଛନ୍ତି।",
-          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
           "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
           "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
         }
@@ -1088,7 +1088,7 @@ export default {
           "sourceUrl": "https://drive.google.com/file/d/1-p9aKK1vAHGW0NUOc_QX9A2uqz8Grt3Y/view"
         }
       ],
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },

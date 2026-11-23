@@ -121,7 +121,7 @@ export default {
     },
     {
       "heading": "This, these, here, tomorrow ଓ reported question",
-      "text": "ଏକେ ବ୍ୟକ୍ତି ଏକେ ସ୍ଥାନରେ ସେହି ଦିନ କହୁଥିଲେ here ବା today ତଥାପି ଠିକ୍ ହୋଇପାରେ। ପରେ ଅନ୍ୟ ସ୍ଥାନକୁ ଯାଇ କହିଲେ there, that day ଓ the next day ଅଧିକ ସ୍ପଷ୍ଟ। ହାତରେ ଧରି ଦେଖାଇଥିବା ଜିନିଷ ବିଷୟରେ କହିଲେ “this saree” reported ରୂପରେ “the saree” ମଧ୍ୟ ହୋଇପାରେ। ପ୍ରଶ୍ନରେ ସ୍ଥାନକାଳ ବଦଳିବା ସହ ଶବ୍ଦକ୍ରମ ମଧ୍ୟ ବଦଳେ। “Where does he live?” → She asked where he lived. Does ଆଉ ନାହିଁ, he ଏବେ verb ଆଗରେ। “Does he live here?” → She asked whether he lived there, ଯଦି ସ୍ଥାନ ବଦଳିଛି। Where ଓ whether ଦୁଇଟି ମଧ୍ୟରୁ କେଉଁଟି ବାଛିବ ତାହା ମୂଳ ଉତ୍ତର ସ୍ଥାନର ନାମ ନା ହଁ/ନା, ସେଥିରୁ ଜଣାପଡ଼େ।",
+      "text": "ଏକା ବ୍ୟକ୍ତି ଏକା ସ୍ଥାନରେ ସେହି ଦିନ କହୁଥିଲେ here ବା today ତଥାପି ଠିକ୍ ହୋଇପାରେ। ପରେ ଅନ୍ୟ ସ୍ଥାନକୁ ଯାଇ କହିଲେ there, that day ଓ the next day ଅଧିକ ସ୍ପଷ୍ଟ। ହାତରେ ଧରି ଦେଖାଇଥିବା ଜିନିଷ ବିଷୟରେ କହିଲେ “this saree” reported ରୂପରେ “the saree” ମଧ୍ୟ ହୋଇପାରେ। ପ୍ରଶ୍ନରେ ସ୍ଥାନକାଳ ବଦଳିବା ସହ ଶବ୍ଦକ୍ରମ ମଧ୍ୟ ବଦଳେ। “Where does he live?” → She asked where he lived. Does ଆଉ ନାହିଁ, he ଏବେ verb ଆଗରେ। “Does he live here?” → She asked whether he lived there, ଯଦି ସ୍ଥାନ ବଦଳିଛି। Where ଓ whether ଦୁଇଟି ମଧ୍ୟରୁ କେଉଁଟି ବାଛିବ ତାହା ମୂଳ ଉତ୍ତର ସ୍ଥାନର ନାମ ନା ହଁ/ନା, ସେଥିରୁ ଜଣାପଡ଼େ।",
       "pages": [
         119,
         123

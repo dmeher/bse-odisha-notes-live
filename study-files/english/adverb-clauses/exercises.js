@@ -50,7 +50,7 @@ export default {
     {
       "number": "Activity 2 · examples 3–6",
       "prompt": "Classify the subordinate clauses by meaning.",
-      "answer": "3. “Where there is no vision” — place. 4. “as they would do unto you” — manner. 5. “as the weather became better” — reason in this reading. 6. “Although he went to the market” — concession.\nଓଡ଼ିଆ ବୁଝାମଣା — ସଂଯୋଜକ ଏକା ଦେଖିଲେ ଯଥେଷ୍ଟ ନୁହେଁ। ମୂଳ କାମର ସ୍ଥାନ, ଢଙ୍ଗ, ସମୟ ବା ବିରୋଧ ବୁଝାଉଛି କି ଦେଖ।\n\nWhere ଦ୍ୱାରା ପରିସ୍ଥିତିକୁ ଏକ ସ୍ଥାନ ଭାବେ ଧର। “As they would do”ରେ କିପରି ବ୍ୟବହାର, “as the weather became better”ରେ ଆବହାଓଆ ସୁଧାରିବା ଯୋଗୁଁ କାମ ସମ୍ଭବ ହେଲା। Asର ଏକମାତ୍ର ଅର୍ଥ ଧରନାହିଁ।",
+      "answer": "3. “Where there is no vision” — place. 4. “as they would do unto you” — manner. 5. “as the weather became better” — reason in this reading. 6. “Although he went to the market” — concession.\nଓଡ଼ିଆ ବୁଝାମଣା — ସଂଯୋଜକ ଏକା ଦେଖିଲେ ଯଥେଷ୍ଟ ନୁହେଁ। ମୂଳ କାମର ସ୍ଥାନ, ଢଙ୍ଗ, ସମୟ ବା ବିରୋଧ ବୁଝାଉଛି କି ଦେଖ।\n\nWhere ଦ୍ୱାରା ପରିସ୍ଥିତିକୁ ଏକ ସ୍ଥାନ ଭାବେ ଧର। “As they would do”ରେ କିପରି ବ୍ୟବହାର, “as the weather became better”ରେ ପାଗ ସୁଧୁରିବା ଯୋଗୁଁ କାମ ସମ୍ଭବ ହେଲା। Asର ଏକମାତ୍ର ଅର୍ଥ ଧରନାହିଁ।",
       "pages": [
         90
       ],
@@ -169,7 +169,7 @@ export default {
       ],
       "number": "Activity 5 (i–xviii)",
       "prompt": "Label the eighteen sentences S (simple), X (complex) or D (compound).",
-      "answer": "i D; ii X; iii S; iv X; v X; vi X; vii X; viii X; ix S; x D; xi X; xii X; xiii X; xiv X; xv X; xvi X; xvii X; xviii D. (iii)ରେ ଅନେକ adjective ଥିଲେ ମଧ୍ୟ clause ଗୋଟିଏ। (viii)ରେ ଦୁଇ କାର୍ଯ୍ୟ knowର ଅଧୀନରେ ଆସୁଛି। (x)ରେ ଦୁଇଟି ସ୍ୱାଧୀନ ନିର୍ଦ୍ଦେଶ।\n\n(i,x,xviii)ରେ ଏକାଧିକ independent statement ଥିବାରୁ D। (iii)ର bright, warm ଦୁଇ adjective ଏକେ is ସହ, (ix)ରେ ଏକ negative imperative ଥିବାରୁ S। ଅନ୍ୟଗୁଡ଼ିକରେ ଅଧୀନ clause ଖୋଜ; viiiରେ and ଥିଲେ ମଧ୍ୟ ପୂରା objectଟି know ଉପରେ ନିର୍ଭର।",
+      "answer": "i D; ii X; iii S; iv X; v X; vi X; vii X; viii X; ix S; x D; xi X; xii X; xiii X; xiv X; xv X; xvi X; xvii X; xviii D. (iii)ରେ ଅନେକ adjective ଥିଲେ ମଧ୍ୟ clause ଗୋଟିଏ। (viii)ରେ ଦୁଇ କାର୍ଯ୍ୟ knowର ଅଧୀନରେ ଆସୁଛି। (x)ରେ ଦୁଇଟି ସ୍ୱାଧୀନ ନିର୍ଦ୍ଦେଶ।\n\n(i,x,xviii)ରେ ଏକାଧିକ independent statement ଥିବାରୁ D। (iii)ର bright, warm ଦୁଇ adjective ଏକା is ସହ, (ix)ରେ ଏକ negative imperative ଥିବାରୁ S। ଅନ୍ୟଗୁଡ଼ିକରେ ଅଧୀନ clause ଖୋଜ; viiiରେ and ଥିଲେ ମଧ୍ୟ ପୂରା objectଟି know ଉପରେ ନିର୍ଭର।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=94",
         "pages": [

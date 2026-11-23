@@ -57,7 +57,7 @@ export default {
       ],
       "number": "E. 8–9",
       "prompt": "What hinders success, and what does Percy particularly stress?",
-      "answer": "8. Idleness, giving up learning, and habits which weaken health prevent progress. 9. Good health is especially important. Hard work and continued learning are also needed. ପ୍ରଶ୍ନ ୮ରେ କାମ ଓ ଶିଖିବାର ଅଭ୍ୟାସ, ୯ରେ ସୁସ୍ୱାସ୍ଥ୍ୟ ସମ୍ପର୍କିତ ଅନୁଚ୍ଛେଦ ବିଚାର କର।\n\nIdleness ଅଭ୍ୟାସ ଓ ଦକ୍ଷତାକୁ କ୍ଷୀଣ କରେ; ଖରାପ ସ୍ୱାସ୍ଥ୍ୟ କାମ କରିବାର ଶକ୍ତି କମାଏ। ଏହି ଭିନ୍ନ ପଥ ଦେଇ ଦୁଇଟି ଅସୁବିଧା ଏକେ ଲକ୍ଷ୍ୟକୁ ବାଧା ଦିଏ।",
+      "answer": "8. Idleness, giving up learning, and habits which weaken health prevent progress. 9. Good health is especially important. Hard work and continued learning are also needed. ପ୍ରଶ୍ନ ୮ରେ କାମ ଓ ଶିଖିବାର ଅଭ୍ୟାସ, ୯ରେ ସୁସ୍ୱାସ୍ଥ୍ୟ ସମ୍ପର୍କିତ ଅନୁଚ୍ଛେଦ ବିଚାର କର।\n\nIdleness ଅଭ୍ୟାସ ଓ ଦକ୍ଷତାକୁ କ୍ଷୀଣ କରେ; ଖରାପ ସ୍ୱାସ୍ଥ୍ୟ କାମ କରିବାର ଶକ୍ତି କମାଏ। ଏହି ଭିନ୍ନ ପଥ ଦେଇ ଦୁଇଟି ଅସୁବିଧା ଏକା ଲକ୍ଷ୍ୟକୁ ବାଧା ଦିଏ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=85",
         "pages": [
@@ -187,7 +187,7 @@ export default {
       ],
       "number": "H. Pair discussion",
       "prompt": "Give an opening contribution for either group.",
-      "answer": "Rights group: I would like to be heard and treated fairly. Can a class give everyone the same opportunity to speak? Duties group: Fairness calls for action from me too. I should listen when others speak and support a classmate who needs help. ଦଳର ପରବର୍ତ୍ତୀ ପ୍ରତିକ୍ରିୟା ଶ୍ରେଣୀର ଆଲୋଚନାରୁ ଆସିବ।\n\nଦୁଇ ଦଳକୁ ଏକେ ଉଦାହରଣରେ ଯୋଡ଼ିହୁଏ। “I have a right to speak” କହୁଥିବା ଲୋକର “I should listen while others speak” ଦାୟିତ୍ୱ ମଧ୍ୟ ଅଛି।",
+      "answer": "Rights group: I would like to be heard and treated fairly. Can a class give everyone the same opportunity to speak? Duties group: Fairness calls for action from me too. I should listen when others speak and support a classmate who needs help. ଦଳର ପରବର୍ତ୍ତୀ ପ୍ରତିକ୍ରିୟା ଶ୍ରେଣୀର ଆଲୋଚନାରୁ ଆସିବ।\n\nଦୁଇ ଦଳକୁ ଏକା ଉଦାହରଣରେ ଯୋଡ଼ିହୁଏ। “I have a right to speak” କହୁଥିବା ଲୋକର “I should listen while others speak” ଦାୟିତ୍ୱ ମଧ୍ୟ ଅଛି।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=87",
         "pages": [

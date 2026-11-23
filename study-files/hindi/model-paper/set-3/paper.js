@@ -22,7 +22,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1t1Ya3HwCQshJKbxEmR5AXGt7GdVTROZl/view"
     },
     {
-      "prompt": "चाँद को दिन में एक उँगल और कभी एक फुट बताकर माँ क्या दिखाती है?",
+      "prompt": "चाँद को कभी एक उँगल और कभी एक फुट बताकर माँ क्या दिखाती है?",
       "options": [
         "यात्रा की दूरी",
         "नाप की अस्थिरता",
@@ -829,7 +829,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1zdpm0Pt1beDebFW-f2rDx4YhCIJQ5z-d/view"
     },
     {
-      "prompt": "इस प्रयोग में सर्वनाम का भेद चुनिए — कोई आया है।।",
+      "prompt": "इस प्रयोग में सर्वनाम का भेद चुनिए — कोई आया है।",
       "options": [
         "पुरुषवाचक",
         "अनिश्चयवाचक",

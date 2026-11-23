@@ -5,7 +5,7 @@ export default {
   "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view",
   "lesson": {
     "question": "Activeର objectକୁ ବାକ୍ୟର ଆରମ୍ଭକୁ ଆଣି ମୂଳ tense ଓ ଅର୍ଥ କିପରି ରଖିବ?",
-    "overview": "କାମର ପ୍ରଭାବ କାହା ଉପରେ ପଡ଼ୁଛି ଚିହ୍ନା। ତାକୁ ନୂଆ subject କରି ଠିକ୍ be-form ଓ past participle ଲେଖ। Agent ରଖିଲେ କି ସୂଚନା ଯୋଡ଼ାଯାଏ ଭାବ।",
+    "overview": "କାମର ପ୍ରଭାବ କାହା ଉପରେ ପଡ଼ୁଛି ଚିହ୍ନ। ତାକୁ ନୂଆ subject କରି ଠିକ୍ be-form ଓ past participle ଲେଖ। Agent ରଖିଲେ କି ସୂଚନା ଯୋଡ଼ାଯାଏ ଭାବ।",
     "check": {
       "question": "“They have painted the door”ର passiveରେ “been” କାହିଁକି ଦରକାର?",
       "answer": "The door has been painted. Have/has marks perfect, been supplies the passive be, and painted is the past participle. ନୂଆ subject door singular ତେଣୁ has। କାମ କିଏ କଲା ଅଜଣା ହେଲେ by them କହିବା ଆବଶ୍ୟକ ନାହିଁ।",
@@ -61,7 +61,7 @@ export default {
     },
     {
       "heading": "ସମୟରେଖା ରଖି ଗୋଟିଏ exampleକୁ ଘୁରାଇବା",
-      "text": "“Someone repairs the road”ରେ ପରିପ୍ରେକ୍ଷ୍ୟ ଅନୁସାରେ ନିୟମିତ କାମ। Roadକୁ subject କଲେ “The road is repaired.” ଏବେ କାମ ଚାଲିଛି ହେଲେ is being repaired। ଆଗରୁ ସରି ବର୍ତ୍ତମାନ ଫଳ ଦିଶୁଛି ହେଲେ has been repaired। ଅତୀତର ଏକ ସମୟରେ କାମ ଚାଲିଥିଲା ହେଲେ was being repaired। କାମଟି ଭବିଷ୍ୟତରେ ସରିବ ବୋଲି ଥିଲେ will be repaired। ପ୍ରତି ରୂପରେ repaired ଏକେ ଅଛି, ପରିବର୍ତ୍ତନ auxiliaryରେ। ଏକବଚନ road ବଦଳରେ roads ଲେଖିଲେ is → are, has → have ହୁଏ, କିନ୍ତୁ will ଓ past participle ବଦଳେନାହିଁ। ରୂପାନ୍ତର ପରେ subject ବଦଳିବା ଓ ଘଟଣାର ସମୟ ଅକ୍ଷୁଣ୍ଣ ରଖିବା ଦୁଇ କାମ ଉଭୟ ପରଖ।",
+      "text": "“Someone repairs the road”ରେ ପରିପ୍ରେକ୍ଷ୍ୟ ଅନୁସାରେ ନିୟମିତ କାମ। Roadକୁ subject କଲେ “The road is repaired.” ଏବେ କାମ ଚାଲିଛି ହେଲେ is being repaired। ଆଗରୁ ସରି ବର୍ତ୍ତମାନ ଫଳ ଦିଶୁଛି ହେଲେ has been repaired। ଅତୀତର ଏକ ସମୟରେ କାମ ଚାଲିଥିଲା ହେଲେ was being repaired। କାମଟି ଭବିଷ୍ୟତରେ ସରିବ ବୋଲି ଥିଲେ will be repaired। ପ୍ରତି ରୂପରେ repaired ଏକା ଅଛି, ପରିବର୍ତ୍ତନ auxiliaryରେ। ଏକବଚନ road ବଦଳରେ roads ଲେଖିଲେ is → are, has → have ହୁଏ, କିନ୍ତୁ will ଓ past participle ବଦଳେନାହିଁ। ରୂପାନ୍ତର ପରେ subject ବଦଳିବା ଓ ଘଟଣାର ସମୟ ଅକ୍ଷୁଣ୍ଣ ରଖିବା ଦୁଇ କାମ ଉଭୟ ପରଖ।",
       "pages": [
         96,
         98
@@ -121,7 +121,7 @@ export default {
     },
     {
       "heading": "ଘଟଣାର ଖବର, perfect infinitive ଓ ପ୍ରଶ୍ନ",
-      "text": "“People say that he is honest” → “He is said to be honest.” ଦୁଇ କାମ ଏକେ ସମୟର ସନ୍ଦର୍ଭରେ। ଲୋକେ ଏବେ ତାଙ୍କ ପୂର୍ବ ଆଚରଣ କଥା କହୁଥିଲେ “He is said to have been honest” ଅତୀତର ଫରକ ଦେଖାଏ। “It is said that …” ବ୍ୟବହାର କଲେ ପୂରା ମତକୁ ଏକାଠି ରଖିହୁଏ। ସେହିପରି “Who wrote the book?”ରେ ଉତ୍ତର ଲେଖକଙ୍କ ନାମ ହେବ ବୋଲି ପ୍ରଥମେ ନିଶ୍ଚିତ କର। ପରେ “By whom was the book written?” ବନାଅ। ଯଦି କେବଳ “Was the book written?” କୁହାଯାଏ ତେବେ ମିଳିବା ଉତ୍ତର ହଁ ବା ନା। ମୂଳ ଜାଣିବାକୁ ଚାହିଁଥିବା ସୂଚନା ହଜିଗଲେ ବ୍ୟାକରଣ ଭଳି ଦିଶିଲେ ମଧ୍ୟ ରୂପାନ୍ତର ଅସମ୍ପୂର୍ଣ୍ଣ।",
+      "text": "“People say that he is honest” → “He is said to be honest.” ଦୁଇ କାମ ଏକା ସମୟର ସନ୍ଦର୍ଭରେ। ଲୋକେ ଏବେ ତାଙ୍କ ପୂର୍ବ ଆଚରଣ କଥା କହୁଥିଲେ “He is said to have been honest” ଅତୀତର ଫରକ ଦେଖାଏ। “It is said that …” ବ୍ୟବହାର କଲେ ପୂରା ମତକୁ ଏକାଠି ରଖିହୁଏ। ସେହିପରି “Who wrote the book?”ରେ ଉତ୍ତର ଲେଖକଙ୍କ ନାମ ହେବ ବୋଲି ପ୍ରଥମେ ନିଶ୍ଚିତ କର। ପରେ “By whom was the book written?” ବନାଅ। ଯଦି କେବଳ “Was the book written?” କୁହାଯାଏ ତେବେ ମିଳିବା ଉତ୍ତର ହଁ ବା ନା। ମୂଳ ଜାଣିବାକୁ ଚାହିଁଥିବା ସୂଚନା ହଜିଗଲେ ବ୍ୟାକରଣ ଭଳି ଦିଶିଲେ ମଧ୍ୟ ରୂପାନ୍ତର ଅସମ୍ପୂର୍ଣ୍ଣ।",
       "pages": [
         99,
         103

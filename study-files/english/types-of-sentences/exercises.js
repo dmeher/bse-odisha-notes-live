@@ -22,7 +22,7 @@ export default {
     {
       "number": "Activity 2 (i–viii)",
       "prompt": "Classify the eight sentences by their purpose.",
-      "answer": "(i) declarative, (ii) imperative, (iii) interrogative, (iv) exclamatory, (v) imperative, (vi) interrogative, (vii) imperative, (viii) interrogative.\nଓଡ଼ିଆ ବୁଝାମଣା — ବାକ୍ୟର କାମ ଓ ଗଠନ ଦୁହିଁ ଦେଖ। ସାବଧାନ କରାଇବା ମଧ୍ୟ imperative ହୋଇପାରେ।\n\nଯେଉଁଠି ତଥ୍ୟ କୁହାଯାଏ declarative; ଉତ୍ତର ମାଗିଲେ interrogative; ନିର୍ଦ୍ଦେଶ ବା ଅନୁରୋଧ ହେଲେ imperative। ଆଶ୍ଚର୍ଯ୍ୟରେ What/How ଆରମ୍ଭ ହେଲେ ମଧ୍ୟ ଉତ୍ତର ମାଗୁନଥିଲେ exclamatory।",
+      "answer": "(i) declarative, (ii) imperative, (iii) interrogative, (iv) exclamatory, (v) imperative, (vi) interrogative, (vii) imperative, (viii) interrogative.\nଓଡ଼ିଆ ବୁଝାମଣା — ବାକ୍ୟର କାମ ଓ ଗଠନ ଉଭୟ ଦେଖ। ସାବଧାନ କରାଇବା ମଧ୍ୟ imperative ହୋଇପାରେ।\n\nଯେଉଁଠି ତଥ୍ୟ କୁହାଯାଏ declarative; ଉତ୍ତର ମାଗିଲେ interrogative; ନିର୍ଦ୍ଦେଶ ବା ଅନୁରୋଧ ହେଲେ imperative। ଆଶ୍ଚର୍ଯ୍ୟରେ What/How ଆରମ୍ଭ ହେଲେ ମଧ୍ୟ ଉତ୍ତର ମାଗୁନଥିଲେ exclamatory।",
       "pages": [
         23
       ],

@@ -61,7 +61,7 @@ export default {
     },
     {
       "heading": "ପାଖରେ ଦିଶୁଥିବା noun ସବୁବେଳେ subject ନୁହେଁ",
-      "text": "“The books on the table are mine.” Table verbର ପାଖରେ ଅଛି, କିନ୍ତୁ କ’ଣ ମୋର ବୋଲି ପଚାରିଲେ books ମିଳେ। “The table on which the books are placed is mine” ଲେଖିଲେ ଏବେ main clauseର subject table। ଭିତର relative clauseର books ପାଇଁ are placed ଓ ବାହାର table ପାଇଁ is। ଏକ ବାକ୍ୟରେ ଦୁଇ finite verb ଥିଲେ ଦୁଇଟି ପାଇଁ ଅଲଗା subject ଖୋଜ। There is room ଓ there are opportunitiesରେ there ଏକେ ରହିଲେ ମଧ୍ୟ room/ opportunities ବଦଳିଲେ verb ବଦଳେ। It is rainingରେ ଆଉ କୌଣସି ପ୍ରକୃତ plural subject ପରେ ଖୋଜିବାର ଆବଶ୍ୟକତା ନାହିଁ।",
+      "text": "“The books on the table are mine.” Table verbର ପାଖରେ ଅଛି, କିନ୍ତୁ କ’ଣ ମୋର ବୋଲି ପଚାରିଲେ books ମିଳେ। “The table on which the books are placed is mine” ଲେଖିଲେ ଏବେ main clauseର subject table। ଭିତର relative clauseର books ପାଇଁ are placed ଓ ବାହାର table ପାଇଁ is। ଏକ ବାକ୍ୟରେ ଦୁଇ finite verb ଥିଲେ ଦୁଇଟି ପାଇଁ ଅଲଗା subject ଖୋଜ। There is room ଓ there are opportunitiesରେ there ଏକା ରହିଲେ ମଧ୍ୟ room/ opportunities ବଦଳିଲେ verb ବଦଳେ। It is rainingରେ ଆଉ କୌଣସି ପ୍ରକୃତ plural subject ପରେ ଖୋଜିବାର ଆବଶ୍ୟକତା ନାହିଁ।",
       "pages": [
         29,
         32
@@ -121,7 +121,7 @@ export default {
     },
     {
       "heading": "ଏକବଚନ ନା ବହୁବଚନ ବାଛିବାରେ of ପରର nounର ଭୂମିକା",
-      "text": "“One of the boys has come.” ପୁଅ ଅନେକ ହେଲେ ମଧ୍ୟ ଆସିଛି ଜଣେ। ପାଠର formal exerciseରେ either of, neither of ଓ none of ପରେ plural noun ଥାଇ ମଧ୍ୟ ସାଧାରଣତଃ singular verb ବାଛାଯାଇଛି। କଥାବାର୍ତ୍ତାରେ କେତେକ plural ପ୍ରୟୋଗ ମଧ୍ୟ ମିଳେ ବୋଲି ପାଠ ଉଲ୍ଲେଖ କରିଛି। “Most of the water is gone” ଓ “Most of the children are here”ରେ କିନ୍ତୁ ମାପାଯାଉଥିବା nounଟି ନିର୍ଣ୍ଣାୟକ। ପ୍ରଥମେ one/each ପରି ଗୋଟିଏ ସଦସ୍ୟ ଉଦ୍ଦିଷ୍ଟ କି, ନା ପରର nounର ପରିମାଣ ବା ଅଂଶ ଉଦ୍ଦିଷ୍ଟ ତାହା ପରଖ। ସମସ୍ତ of-phrase ପାଇଁ ଏକେ ଯାନ୍ତ୍ରିକ ନିୟମ ହୁଏନାହିଁ।",
+      "text": "“One of the boys has come.” ପୁଅ ଅନେକ ହେଲେ ମଧ୍ୟ ଆସିଛି ଜଣେ। ପାଠର formal exerciseରେ either of, neither of ଓ none of ପରେ plural noun ଥାଇ ମଧ୍ୟ ସାଧାରଣତଃ singular verb ବାଛାଯାଇଛି। କଥାବାର୍ତ୍ତାରେ କେତେକ plural ପ୍ରୟୋଗ ମଧ୍ୟ ମିଳେ ବୋଲି ପାଠ ଉଲ୍ଲେଖ କରିଛି। “Most of the water is gone” ଓ “Most of the children are here”ରେ କିନ୍ତୁ ମାପାଯାଉଥିବା nounଟି ନିର୍ଣ୍ଣାୟକ। ପ୍ରଥମେ one/each ପରି ଗୋଟିଏ ସଦସ୍ୟ ଉଦ୍ଦିଷ୍ଟ କି, ନା ପରର nounର ପରିମାଣ ବା ଅଂଶ ଉଦ୍ଦିଷ୍ଟ ତାହା ପରଖ। ସମସ୍ତ of-phrase ପାଇଁ ଏକା ଯାନ୍ତ୍ରିକ ନିୟମ ହୁଏନାହିଁ।",
       "pages": [
         32,
         34
@@ -196,7 +196,7 @@ export default {
     },
     {
       "heading": "Relative clauseର ନିଜ verb ଓ antecedent",
-      "text": "“It is he who has …” ଓ “It is you who have …” ମିଳାଅ। ଦୁଇଟିରେ ପ୍ରଥମ it ପାଇଁ is, କିନ୍ତୁ ଦ୍ୱିତୀୟ verb ପାଇଁ who କାହାକୁ ସୂଚାଉଛି ଦେଖିବାକୁ ହେବ। He ସହ has, you ସହ have। ଏହିପରି ଏକେ ବାକ୍ୟରେ ଦୁଇଟି ଅଲଗା agreement ନିୟନ୍ତ୍ରଣ କରୁଛି। ଅନ୍ୟ ଉଦାହରଣ, “The friend who helps the boys is here” ଓ “The friends who help the boy are here.” ଦ୍ୱିତୀୟ ବାକ୍ୟର boy ଏକବଚନ ହେଲେ ମଧ୍ୟ ସେ helpର object, ତେଣୁ କ୍ରିୟା boy ସହ ମେଳିବା କଥା ନାହିଁ। ପରୀକ୍ଷାରେ ଏପରି ବାକ୍ୟ ଆସିଲେ ଆଗେ who-clauseର verb ସହ ଗୋଟିଏ ରେଖାରେ antecedentକୁ ଯୋଡ଼, ପରେ main verb ପାଇଁ ପୃଥକ ରେଖା କର।",
+      "text": "“It is he who has …” ଓ “It is you who have …” ମିଳାଅ। ଦୁଇଟିରେ ପ୍ରଥମ it ପାଇଁ is, କିନ୍ତୁ ଦ୍ୱିତୀୟ verb ପାଇଁ who କାହାକୁ ସୂଚାଉଛି ଦେଖିବାକୁ ହେବ। He ସହ has, you ସହ have। ଏହିପରି ଏକା ବାକ୍ୟରେ ଦୁଇଟି ଅଲଗା agreement ନିୟନ୍ତ୍ରଣ କରୁଛି। ଅନ୍ୟ ଉଦାହରଣ, “The friend who helps the boys is here” ଓ “The friends who help the boy are here.” ଦ୍ୱିତୀୟ ବାକ୍ୟର boy ଏକବଚନ ହେଲେ ମଧ୍ୟ ସେ helpର object, ତେଣୁ କ୍ରିୟା boy ସହ ମେଳିବା କଥା ନାହିଁ। ପରୀକ୍ଷାରେ ଏପରି ବାକ୍ୟ ଆସିଲେ ଆଗେ who-clauseର verb ସହ ଗୋଟିଏ ରେଖାରେ antecedentକୁ ଯୋଡ଼, ପରେ main verb ପାଇଁ ପୃଥକ ରେଖା କର।",
       "pages": [
         35,
         36

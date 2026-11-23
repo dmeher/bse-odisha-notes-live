@@ -11,7 +11,7 @@ export default {
       ],
       "number": "Opening comparison · 1–2",
       "prompt": "Why do the grandmother and the sparrows take different past progressive auxiliaries?",
-      "answer": "Grandmother is a singular third-person subject, so the finite verb is was in was praying. The sparrows is plural and takes were in were not chirping. The negative word not does not control agreement. ଉଭୟ ବାକ୍ୟ ଅତୀତ କାଳର। ପକ୍ଷୀଙ୍କ ସଂଖ୍ୟା ଏକରୁ ଅଧିକ ଥିବାରୁ were ବସିଛି। ଦାଦିଙ୍କ ଦୁଇ କାମ praying ଓ telling ଥିଲେ ମଧ୍ୟ subject ଏକବଚନ।\n\nଉଭୟ ବାକ୍ୟରେ ଗଠନ past progressive। Praying/ଚାଲିଥିବା କାମର -ing ରୂପ number ବଦଳାଏନାହିଁ। Subject singularରୁ plural ହେଲେ ବଦଳ ହୁଏ finite beରେ: was → were।",
+      "answer": "Grandmother is a singular third-person subject, so the finite verb is was in was praying. The sparrows is plural and takes were in were not chirping. The negative word not does not control agreement. ଉଭୟ ବାକ୍ୟ ଅତୀତ କାଳର। ପକ୍ଷୀଙ୍କ ସଂଖ୍ୟା ଏକରୁ ଅଧିକ ଥିବାରୁ were ବସିଛି। ଜେଜେମା’ଙ୍କ ଦୁଇ କାମ praying ଓ telling ଥିଲେ ମଧ୍ୟ subject ଏକବଚନ।\n\nଉଭୟ ବାକ୍ୟରେ ଗଠନ past progressive। Praying/ଚାଲିଥିବା କାମର -ing ରୂପ number ବଦଳାଏନାହିଁ। Subject singularରୁ plural ହେଲେ ବଦଳ ହୁଏ finite beରେ: was → were।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=29",
         "pages": [
@@ -64,7 +64,7 @@ export default {
     {
       "number": "Activity 2 (a–e)",
       "prompt": "Choose suitable auxiliaries for the first five gaps.",
-      "answer": "(a) has, (b) is, (c) is, (d) is, (e) has. In (e) the one title expression denotes the same office-holder in the exercise.\nଓଡ଼ିଆ ବୁଝାମଣା — Either, neither ଓ one ଏଠାରେ ଏକବଚନ। ଦୁଇଟି ପଦବି ଏକ ଲୋକଙ୍କୁ ସୂଚାଇଲେ (e)ରେ ଏକବଚନ।\n\n(a,b,c)ରେ boys/officers/friends ବହୁବଚନ ଦେଖାଗଲେ ବି either, neither, one ଏକ ସଦସ୍ୟକୁ ନିଏ। (d) honeyକୁ ଅଗଣନୀୟ ଅଂଶ ଭାବେ ଦେଖାଯାଇଛି। (e) governor ଓ chancellor ଏକେ ବ୍ୟକ୍ତିର ଦୁଇ ପଦବି।",
+      "answer": "(a) has, (b) is, (c) is, (d) is, (e) has. In (e) the one title expression denotes the same office-holder in the exercise.\nଓଡ଼ିଆ ବୁଝାମଣା — Either, neither ଓ one ଏଠାରେ ଏକବଚନ। ଦୁଇଟି ପଦବି ଏକ ଲୋକଙ୍କୁ ସୂଚାଇଲେ (e)ରେ ଏକବଚନ।\n\n(a,b,c)ରେ boys/officers/friends ବହୁବଚନ ଦେଖାଗଲେ ବି either, neither, one ଏକ ସଦସ୍ୟକୁ ନିଏ। (d) honeyକୁ ଅଗଣନୀୟ ଅଂଶ ଭାବେ ଦେଖାଯାଇଛି। (e) governor ଓ chancellor ଏକା ବ୍ୟକ୍ତିର ଦୁଇ ପଦବି।",
       "pages": [
         34
       ],

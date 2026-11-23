@@ -40,7 +40,7 @@ export default {
       ],
       "number": "A · Examples 11–15",
       "prompt": "Separate the finite and non-finite forms in the four sentences about Seema, then compare 15(a–b).",
-      "answer": "11 made / write, 12 want / to write, 13 found / written and typed, 14 saw / writing. In each pair the first form is finite. In 15(a–b) wants changes to wanted when the tense changes. The infinitive to write stays the same. ୧୩ରେ written ଓ typed ପତ୍ରଗୁଡ଼ିକର ଅବସ୍ଥା ଜଣାଏ। ୧୪ରେ writing ଦ୍ୱାରା Seemaଙ୍କ ଲେଖିବା କାର୍ଯ୍ୟକୁ ଦେଖିବା କଥା ବୁଝାଏ।\n\nMade someone writeରେ bare form, want someone to writeରେ to-form। Written/typedରେ ଲେଖା ବା ଟାଇପ ହୋଇସାରିଥିବା ଅବସ୍ଥା; saw someone writingରେ ଚାଲିଥିବା କାମ। ତେଣୁ ଚାରିଟିକୁ ଏକେ infinitive ନାମ ଦିଅନାହିଁ।",
+      "answer": "11 made / write, 12 want / to write, 13 found / written and typed, 14 saw / writing. In each pair the first form is finite. In 15(a–b) wants changes to wanted when the tense changes. The infinitive to write stays the same. ୧୩ରେ written ଓ typed ପତ୍ରଗୁଡ଼ିକର ଅବସ୍ଥା ଜଣାଏ। ୧୪ରେ writing ଦ୍ୱାରା Seemaଙ୍କ ଲେଖିବା କାର୍ଯ୍ୟକୁ ଦେଖିବା କଥା ବୁଝାଏ।\n\nMade someone writeରେ bare form, want someone to writeରେ to-form। Written/typedରେ ଲେଖା ବା ଟାଇପ ହୋଇସାରିଥିବା ଅବସ୍ଥା; saw someone writingରେ ଚାଲିଥିବା କାମ। ତେଣୁ ଚାରିଟିକୁ ଏକା infinitive ନାମ ଦିଅନାହିଁ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/94%20-%20OD_ENGLISH_ENGLISHGRAMMAR_CLASS10_TERM1.pdf#page=37",
         "pages": [
@@ -110,7 +110,7 @@ export default {
     {
       "number": "Activity 4 (a–e)",
       "prompt": "Supply the non-finite clauses.",
-      "answer": "(a) me do it; (b) them touch the flowers; (c) the beggar curse the rude boys; (d) anyone to see the files; (e) him to write the letter.\nଓଡ଼ିଆ ବୁଝାମଣା — Make, let, hear ପରେ object + bare infinitive। Allow ଓ remind ସହ to ଦରକାର।\n\nMake/let ପରେ object + bare verb। Hear ପରେ କାମଟି ପୂରା ଶୁଣାଗଲେ bare form ହୋଇପାରେ। Allow/want ପରି ଗଠନରେ object + to-infinitive ରଖ। Them ଓ him ପରେ ସମସ୍ତଠାରେ ଏକେ pattern ନୁହେଁ।",
+      "answer": "(a) me do it; (b) them touch the flowers; (c) the beggar curse the rude boys; (d) anyone to see the files; (e) him to write the letter.\nଓଡ଼ିଆ ବୁଝାମଣା — Make, let, hear ପରେ object + bare infinitive। Allow ଓ remind ସହ to ଦରକାର।\n\nMake/let ପରେ object + bare verb। Hear ପରେ କାମଟି ପୂରା ଶୁଣାଗଲେ bare form ହୋଇପାରେ। Allow/want ପରି ଗଠନରେ object + to-infinitive ରଖ। Them ଓ him ପରେ ସମସ୍ତଠାରେ ଏକା pattern ନୁହେଁ।",
       "pages": [
         42
       ],
@@ -138,7 +138,7 @@ export default {
     {
       "number": "Activity 6 (a–g)",
       "prompt": "Supply the suitable non-finite forms.",
-      "answer": "(a) playing; (b) to go; (c) to swim; (d) to study, talking; (e) travelling, to travel; (f) read; (g) to see.\nଓଡ଼ିଆ ବୁଝାମଣା — ମୁଖ୍ୟ କ୍ରିୟା ପର ରୂପ ନିର୍ଣ୍ଣୟ କରେ। Enjoy ଓ mind ପରେ -ing, hope ପରେ to-infinitive।\n\nPlaying ଓ talking କାମର ନାମ ଭଳି verbର complement ହୁଅନ୍ତି। To study ଉଦ୍ଦିଷ୍ଟ କାମକୁ, bare read ଅନ୍ୟ verb ପରେ ମୂଳ ରୂପକୁ ଦେଖାଏ। Travelling/to travel ଥିବା ଦୁଇ ସ୍ଥାନରେ ପୂର୍ବ verb ଏକେ ନୁହେଁ।",
+      "answer": "(a) playing; (b) to go; (c) to swim; (d) to study, talking; (e) travelling, to travel; (f) read; (g) to see.\nଓଡ଼ିଆ ବୁଝାମଣା — ମୁଖ୍ୟ କ୍ରିୟା ପର ରୂପ ନିର୍ଣ୍ଣୟ କରେ। Enjoy ଓ mind ପରେ -ing, hope ପରେ to-infinitive।\n\nPlaying ଓ talking କାମର ନାମ ଭଳି verbର complement ହୁଅନ୍ତି। To study ଉଦ୍ଦିଷ୍ଟ କାମକୁ, bare read ଅନ୍ୟ verb ପରେ ମୂଳ ରୂପକୁ ଦେଖାଏ। Travelling/to travel ଥିବା ଦୁଇ ସ୍ଥାନରେ ପୂର୍ବ verb ଏକା ନୁହେଁ।",
       "pages": [
         42
       ],

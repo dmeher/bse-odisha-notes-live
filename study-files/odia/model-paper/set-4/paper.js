@@ -394,7 +394,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -412,7 +412,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -430,7 +430,7 @@ export default {
         1
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -448,7 +448,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -561,7 +561,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1Z8-vOpybd4gEu2gDPcEJOlnZqRSgpMQg/view"
     },
     {
-      "prompt": "ଏହି ପାଠରେ “ବାସୁକି” ଅର୍ଥରେ କେଉଁ ଶବ୍ଦ ଆସିଛି?",
+      "prompt": "ଏହି ପାଠରେ “ବାସୁକୀ” ଅର୍ଥରେ କେଉଁ ଶବ୍ଦ ଆସିଛି?",
       "options": [
         "ଅନନ୍ତ",
         "ବୈକୁଣ୍ଠେ",
@@ -569,7 +569,7 @@ export default {
         "ଆଗମନଶଂସୀ"
       ],
       "correct": 0,
-      "answer": "ଅନନ୍ତ ଏଠାରେ ବାସୁକି ଅର୍ଥରେ ବ୍ୟବହୃତ।",
+      "answer": "ଅନନ୍ତ ଏଠାରେ ବାସୁକୀ ଅର୍ଥରେ ବ୍ୟବହୃତ।",
       "pages": [
         4
       ],
@@ -834,7 +834,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1_4qA5Z97TyAJZc4nxS69dXCIuUizJmx-/view"
     },
     {
-      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଧୀର କଥାରେ ବଇରି ବଶ” ଶବ୍ଦର ଅର୍ଥ ବାଛ।",
+      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଧୀର କଥାରେ ବଇରି ବଶ” ରୂଢ଼ିର ଅର୍ଥ ବାଛ।",
       "options": [
         "ଅତ୍ୟନ୍ତ ଗର୍ବ କରିବା",
         "ବୃଥା ପରିଶ୍ରମ",
@@ -1063,7 +1063,7 @@ export default {
           "sourceUrl": "https://drive.google.com/file/d/1lFEuWD9XS6qA1fIEaUjLTOfK7gSdjjYL/view"
         }
       ],
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },

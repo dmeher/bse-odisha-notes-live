@@ -322,7 +322,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -340,7 +340,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -358,7 +358,7 @@ export default {
         4
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -376,7 +376,7 @@ export default {
         1
       ],
       "chapter": "chilikare-sayantana",
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -438,9 +438,9 @@ export default {
       "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ବୈକୁଣ୍ଠେ” ଶବ୍ଦର ଅର୍ଥ ବାଛ।",
       "options": [
         "ବିଷ୍ଣୁଙ୍କ ଧାମରେ",
-        "ଲାଲ ରଙ୍ଗର ପାଟ ବସ୍ତ୍ର",
+        "ଲାଲ (ଅରୁଣ) ରଙ୍ଗର କଷାୟ ବସ୍ତ୍ର",
         "ଆସିବାର ସୂଚକ",
-        "ବାସୁକି"
+        "ବାସୁକୀ"
       ],
       "correct": 0,
       "answer": "ବୈକୁଣ୍ଠେର ପ୍ରାସଙ୍ଗିକ ଅର୍ଥ ବିଷ୍ଣୁଙ୍କ ଧାମରେ।",
@@ -494,7 +494,7 @@ export default {
         "ଯାତ୍ରାର ସମାପ୍ତି",
         "ଅମର ଗାନ",
         "ଅତୀତକୁ ଫେରିବା",
-        "ନିରବ ସମ୍ମତି"
+        "ନୀରବ ସମ୍ମତି"
       ],
       "correct": 1,
       "answer": "ଜାଗ ବନ୍ଧନହରା ପାଠର ପ୍ରସଙ୍ଗରେ ଠିକ୍ ଉତ୍ତର — ଅମର ଗାନ।",
@@ -581,7 +581,7 @@ export default {
     {
       "prompt": "ସରକାରୀ ବସ୍ ଚାଲିଯିବାରୁ ପରେ ନଟବର କ’ଣ କଲେ?",
       "options": [
-        "ନାଆଁ ଧରିଲେ",
+        "ନାଆ ଧରିଲେ",
         "ପଛ ବସ୍ ଧରି ଫୁଲନଖରାରେ ବସ୍ ବଦଳାଇଲେ",
         "ଘରକୁ ଫେରିଗଲେ",
         "ଟ୍ରେନ ଅପେକ୍ଷା କଲେ"
@@ -815,7 +815,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1WVw9B_Vz4JXO76cMlUo3Gc8UQEnFgGqU/view"
     },
     {
-      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଘର ଢିଙ୍କି କୁମ୍ଭୀର” ଶବ୍ଦର ଅର୍ଥ ବାଛ।",
+      "prompt": "ପାଠ ପ୍ରସଙ୍ଗରେ “ଘର ଢିଙ୍କି କୁମ୍ଭୀର” ରୂଢ଼ିର ଅର୍ଥ ବାଛ।",
       "options": [
         "ବିପଦ ଉପରେ ବିପଦ",
         "ସଂକୁଚିତ ପରିବେଶରେ ବଢ଼ିଥିବା ଲୋକ",
@@ -963,7 +963,7 @@ export default {
           "sourceUrl": "https://drive.google.com/file/d/1eA1bYbXBPpzPG6MqHkGmI9656L5umbP3/view"
         }
       ],
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -1057,7 +1057,7 @@ export default {
           ],
           "prompt": "ପ୍ରାୟ ୨୦୦ ଶବ୍ଦରେ ରଚନା ଲେଖ — ପ୍ରକୃତିକୁ ଦେଖିବାର ଆନନ୍ଦ।",
           "answer": "ପ୍ରକୃତିକୁ ଦେଖିବାର ଆନନ୍ଦ\n\nପ୍ରକୃତିକୁ ଦେଖିବା ପାଇଁ କେବଳ ଆଖି ଖୋଲା ରଖିଲେ ଚଳେନାହିଁ। ଏକ ସ୍ଥାନରେ କିଛି ସମୟ ରହିଲେ ସେହି ସ୍ଥାନ କିପରି ବଦଳୁଛି ତାହା ଧରି ହୁଏ। ଚିଲିକାର ସନ୍ଧ୍ୟା ବିଷୟରେ ପଢ଼ିଲେ ଏମିତି ଦେଖିବାର ଅଭ୍ୟାସ ହୁଏ। ଦିନ ସରିଗଲେ ମଧ୍ୟ ଦୃଶ୍ୟ ସରିଯାଏ ନାହିଁ। ତାହା ଅନ୍ୟ ଏକ ରୂପ ନିଏ।\n\nପ୍ରଥମେ ଧ୍ୟାନ ଦିଶୁଥିବା ବସ୍ତୁ ଆଡ଼କୁ ଯାଏ। ଦୂରରେ ପାହାଡ଼, ପାଣିରେ ନୌକା, ନୌକାରେ ମୀନଜୀବୀ। ସେମାନଙ୍କ ଗୀତ ଶୁଣିଲେ ଦୃଶ୍ୟ ସହିତ ଦିନର କାମ ଓ ଘରକୁ ଫେରିବାର ଖୁସି ମିଶିଯାଏ। ଅନ୍ଧାର ବଢ଼ିଲେ ମଶାଲର ଆଲୋକ ଦିଶେ। ଢେଉ ସହିତ ତାହା ଉଠୁଛି ଓ ପଡ଼ୁଛି। ଦୁଃଖୀ ମଣିଷର ଆଶା ମଧ୍ୟ ଏହିପରି ବେଳେ ବେଳେ ଉଜ୍ଜ୍ୱଳ ହୁଏ ଓ ପୁଣି ମ୍ଳାନ ହୁଏ। ଏକ ଛୋଟ ଆଲୋକ ଆମ ମନକୁ ଅନ୍ୟ ଜଣକର ଅନୁଭବ ନିକଟକୁ ନେଇଯାଏ।\n\nଆଉ ଗୋଟିଏ କଥା ଏଠି ଶିଖିବାକୁ ଅଛି। ପ୍ରକୃତି ଓ ମଣିଷକୁ ଦୁଇଟି ଅଲଗା ଛବିରେ ରଖିଲେ ଏହି ସନ୍ଧ୍ୟାର ପରିଚୟ ପୂରା ହୁଏ ନାହିଁ। ପବନ ଥିବାରୁ ପାଲ ଫୁଲୁଛି, ପାଣିରେ ମାଛ ମିଳୁଥିବାରୁ ନୌକା ଫେରୁଛି, ନୌକା ଫେରୁଥିବାରୁ ଗୀତ ଶୁଣାଯାଉଛି। ସେଥିପାଇଁ ପବନର ସ୍ପର୍ଶ ସହ ମଣିଷର ପରିଶ୍ରମକୁ ମଧ୍ୟ କବି ଅନୁଭବ କରାନ୍ତି। ଆମ ଚାରିପାଖର ସୁନ୍ଦରତାକୁ ବୁଝିବାବେଳେ ଏହି ସମ୍ପର୍କ ମନେ ରଖିବା ଭଲ।\n\nସେହି ପାଣି ଉପରେ ପରେ ଚନ୍ଦ୍ରକିରଣ ପଡ଼େ। ଶବ୍ଦ କମିଯାଏ, କିନ୍ତୁ ଶାନ୍ତିର ମଧ୍ୟ ନିଜର ସୌନ୍ଦର୍ଯ୍ୟ ଅଛି। ମୁଁ ନିଜ ପରିବେଶକୁ ଏହିପରି ଧ୍ୟାନରେ ଦେଖିବାକୁ ଚାହେଁ। କ’ଣ ଦିଶିଲା, କ’ଣ ଶୁଣାଗଲା ଓ ତାହା ମୋତେ କାହା କଥା ମନେ ପକାଇଲା ବିଚାର କଲେ ଚିହ୍ନା ସ୍ଥାନକୁ ମଧ୍ୟ ନୂଆ କରି ଚିହ୍ନିହୁଏ।",
-          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+          "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
           "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
           "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
         }
@@ -1135,7 +1135,7 @@ export default {
       "number": "୫ (କ)",
       "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
       "marks": 2,
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -1150,7 +1150,7 @@ export default {
       "number": "୫ (ଖ)",
       "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
       "marks": 2,
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -1165,7 +1165,7 @@ export default {
       "number": "୫ (ଗ)",
       "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
       "marks": 2,
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -1180,7 +1180,7 @@ export default {
       "number": "୫ (ଘ)",
       "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
       "marks": 2,
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     },
@@ -1195,7 +1195,7 @@ export default {
       "number": "୫ (ଙ)",
       "area": "ଅପଠିତ ଅନୁଚ୍ଛେଦ",
       "marks": 2,
-      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ",
+      "title": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",
       "source": "odia/sahitya-sindhu/chapter 3/chapter.pdf",
       "sourceUrl": "https://drive.google.com/file/d/1Pm7pQEKsWqgUhcmRGLP953mMN4hlts4H/view"
     }

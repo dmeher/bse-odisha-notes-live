@@ -7,7 +7,7 @@ export default {
   "items": [
     {
       "heading": "ମନେ ରଖନ୍ତୁ",
-      "text": "ମାଆଙ୍କ ସ୍ୱରରେ bridal songs; ଝିଅର ସ୍ୱରରେ forest-notes। ଏକେ ଗୀତ ଦୁଇ ଜଣଙ୍କ ପାଖରେ ଭିନ୍ନ ଅର୍ଥ ବହନ କରେ।",
+      "text": "ମାଆଙ୍କ ସ୍ୱରରେ bridal songs; ଝିଅର ସ୍ୱରରେ forest-notes। ଏକା ଗୀତ ଦୁଇ ଜଣଙ୍କ ପାଖରେ ଭିନ୍ନ ଅର୍ଥ ବହନ କରେ।",
       "pages": [
         36,
         38

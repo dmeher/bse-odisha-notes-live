@@ -4,7 +4,7 @@ export default {
   "source": "english/learn-and-practice-grammar/source.pdf",
   "sourceUrl": "https://drive.google.com/file/d/1e_mO0Ft6saRjF6ml00fSVgMawbqm6eJL/view",
   "lesson": {
-    "question": "ଏକେ ଘଟଣାକୁ simple, compound ବା complex କଲେ କେଉଁ ଗଠନ ବଦଳେ?",
+    "question": "ଏକା ଘଟଣାକୁ simple, compound ବା complex କଲେ କେଉଁ ଗଠନ ବଦଳେ?",
     "overview": "ବାକ୍ୟର ଲମ୍ବ ମାପିବା ପରିବର୍ତ୍ତେ finite verb groupଗୁଡ଼ିକୁ ଚିହ୍ନ। ପରେ clauseଗୁଡ଼ିକ ସ୍ୱାଧୀନ ନା ଗୋଟିଏ ଅନ୍ୟଟିର ଅଧୀନ ତାହା ଦେଖ।",
     "check": {
       "question": "“On reaching home, she rested” ଓ “When she reached home, she rested”ରେ କାହାକୁ complex କହିବ?",
@@ -61,7 +61,7 @@ export default {
     },
     {
       "heading": "ବାକ୍ୟର କାମ ଓ ବାକ୍ୟର ଗଠନ ଅଲଗା ଚିହ୍ନ",
-      "text": "“The cuckoo sings.” ଏହା ଗୋଟିଏ ତଥ୍ୟ ଦେଉଛି ଓ ଗୋଟିଏ ସ୍ୱାଧୀନ clause ଥିବାରୁ simple declarative। “Is the cuckoo singing?” ଗୋଟିଏ ପ୍ରଶ୍ନ, ତଥାପି ଏକେ clause ଥିବାରୁ simple interrogative। “Listen to the bird”ରେ subject ଛାପା ହୋଇ ନଥିଲେ ମଧ୍ୟ ଯାହାକୁ କୁହାଯାଉଛି ସେହି youକୁ ବୁଝିହୁଏ। “How beautifully it sings!” ରେ ବିସ୍ମୟ, କିନ୍ତୁ ପ୍ରଶ୍ନ ଭଳି subject ଓ verb ଓଲଟି ନାହାନ୍ତି। ଏହି ଚାରି ବାକ୍ୟରେ ପକ୍ଷୀର କଥାଟି ପ୍ରାୟ ସମାନ ରଖାଯାଇଛି। ପରିବର୍ତ୍ତନ ହେଉଛି ଶ୍ରୋତାଙ୍କଠାରୁ କ’ଣ ଆଶା କରାଯାଉଛି—ସୂଚନା ଗ୍ରହଣ, ଉତ୍ତର, କାମ ବା ଅନୁଭବର ଭାଗୀଦାରି।",
+      "text": "“The cuckoo sings.” ଏହା ଗୋଟିଏ ତଥ୍ୟ ଦେଉଛି ଓ ଗୋଟିଏ ସ୍ୱାଧୀନ clause ଥିବାରୁ simple declarative। “Is the cuckoo singing?” ଗୋଟିଏ ପ୍ରଶ୍ନ, ତଥାପି ଏକା clause ଥିବାରୁ simple interrogative। “Listen to the bird”ରେ subject ଛାପା ହୋଇ ନଥିଲେ ମଧ୍ୟ ଯାହାକୁ କୁହାଯାଉଛି ସେହି youକୁ ବୁଝିହୁଏ। “How beautifully it sings!” ରେ ବିସ୍ମୟ, କିନ୍ତୁ ପ୍ରଶ୍ନ ଭଳି subject ଓ verb ଓଲଟି ନାହାନ୍ତି। ଏହି ଚାରି ବାକ୍ୟରେ ପକ୍ଷୀର କଥାଟି ପ୍ରାୟ ସମାନ ରଖାଯାଇଛି। ପରିବର୍ତ୍ତନ ହେଉଛି ଶ୍ରୋତାଙ୍କଠାରୁ କ’ଣ ଆଶା କରାଯାଉଛି—ସୂଚନା ଗ୍ରହଣ, ଉତ୍ତର, କାମ ବା ଅନୁଭବର ଭାଗୀଦାରି।",
       "pages": [
         19,
         22
@@ -181,7 +181,7 @@ export default {
     },
     {
       "heading": "Phraseକୁ clause କରିଲେ ଶ୍ରେଣୀ କାହିଁକି ବଦଳେ?",
-      "text": "“Tell me the place of your birth.” ଏଠାରେ of your birth ମଧ୍ୟରେ finite verb ନାହିଁ। “Tell me where you were born” ଗଠନରେ where ପରେ you ଓ were ଆସି ଏକ ଅଲଗା clause ତିଆରି ହେଲା। ମୂଳ ଅନୁରୋଧ ରହିଲେ ମଧ୍ୟ ବାକ୍ୟ ଏବେ complex। କେତେ conjunction ଅଛି ସେତିକି ଗଣିଲେ ପର୍ଯ୍ୟାପ୍ତ ନୁହେଁ। He can sing and actରେ କ୍ରିୟାଦ୍ୱୟ ଏକେ auxiliaryକୁ ବାଣ୍ଟିପାରେ। ଅନ୍ୟ ବାକ୍ୟରେ and ପରେ ସ୍ୱାଧୀନ ବିବୃତି ଥାଇପାରେ। ପାଠର ଅଭ୍ୟାସରେ ଦ୍ୱିତୀୟ ଅଂଶର ଅନୁକ୍ତ subject ବା auxiliary ପୁନସ୍ଥାପନ କରି ବାକ୍ୟର ଦୁଇ ଭାଗ ପରୀକ୍ଷା କର।",
+      "text": "“Tell me the place of your birth.” ଏଠାରେ of your birth ମଧ୍ୟରେ finite verb ନାହିଁ। “Tell me where you were born” ଗଠନରେ where ପରେ you ଓ were ଆସି ଏକ ଅଲଗା clause ତିଆରି ହେଲା। ମୂଳ ଅନୁରୋଧ ରହିଲେ ମଧ୍ୟ ବାକ୍ୟ ଏବେ complex। କେତେ conjunction ଅଛି ସେତିକି ଗଣିଲେ ପର୍ଯ୍ୟାପ୍ତ ନୁହେଁ। He can sing and actରେ କ୍ରିୟାଦ୍ୱୟ ଏକା auxiliaryକୁ ବାଣ୍ଟିପାରେ। ଅନ୍ୟ ବାକ୍ୟରେ and ପରେ ସ୍ୱାଧୀନ ବିବୃତି ଥାଇପାରେ। ପାଠର ଅଭ୍ୟାସରେ ଦ୍ୱିତୀୟ ଅଂଶର ଅନୁକ୍ତ subject ବା auxiliary ପୁନସ୍ଥାପନ କରି ବାକ୍ୟର ଦୁଇ ଭାଗ ପରୀକ୍ଷା କର।",
       "pages": [
         26,
         28

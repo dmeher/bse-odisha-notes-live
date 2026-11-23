@@ -68,7 +68,7 @@ export default {
       ],
       "number": "Comprehension check III. 1–5",
       "prompt": "Trace the break between the friends and the sale of the bullock.",
-      "answer": "1. The friendship broke and Jumman wanted revenge. 2. Jumman called the death of one bullock a punishment; Algu suspected poisoning. Neither opinion establishes the cause. 3. Samjhoo Sahu is introduced. 4. He wanted more trading trips and promised payment after a month. 5. He overworked and underfed the animal until it died. ପ୍ରଥମ ବଳଦର ମୃତ୍ୟୁ ଉପରେ ସନ୍ଦେହ ଓ ଦ୍ୱିତୀୟ ବଳଦର ପ୍ରମାଣିତ ଅବହେଳା ଭିନ୍ନ। Prediction: Sahu may refuse to pay for an animal that has died; the next part confirms that refusal.\n\nପ୍ରଥମ ବଳଦର ମୃତ୍ୟୁ ବିଷୟରେ Alguଙ୍କ ସନ୍ଦେହ ପ୍ରମାଣ ନୁହେଁ। ଅନ୍ୟ ବଳଦକୁ ବେଚିବା ଓ Sahuଙ୍କ ବ୍ୟବହାର ହେଉଛି ପର ମାମଲାର ସିଧା ଘଟଣା। ଦୁଇ ବଳଦକୁ ମିଶାଅନାହିଁ।",
+      "answer": "1. The friendship broke and Jumman wanted revenge. 2. Jumman called the death of one bullock a punishment; Algu suspected poisoning. Neither opinion establishes the cause. 3. Samjhoo Sahu is introduced. 4. He wanted more trading trips and promised payment after a month. 5. He overworked and underfed the animal until it died. ପ୍ରଥମ ବଳଦର ମୃତ୍ୟୁ ଉପରେ ସନ୍ଦେହ ଓ ଦ୍ୱିତୀୟ ବଳଦର ପ୍ରମାଣିତ ଅବହେଳା ଭିନ୍ନ। Prediction: Sahu may refuse to pay for an animal that has died; the next part confirms that refusal.\n\nପ୍ରଥମ ବଳଦର ମୃତ୍ୟୁ ବିଷୟରେ Alguଙ୍କ ସନ୍ଦେହ ପ୍ରମାଣ ନୁହେଁ। ଅନ୍ୟ ବଳଦକୁ ବିକିବା ଓ Sahuଙ୍କ ବ୍ୟବହାର ହେଉଛି ପର ମାମଲାର ସିଧା ଘଟଣା। ଦୁଇ ବଳଦକୁ ମିଶାଅନାହିଁ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=113",
         "pages": [

@@ -22,7 +22,7 @@ export default {
     {
       "number": "F. 1–3",
       "prompt": "How does the poet see creation, who made it and which small things are named?",
-      "answer": "1. Things are bright, beautiful, wise or wonderful. 2. The Lord God made them. 3. Little flowers and little birds. ଫୁଲ ଓ ପକ୍ଷୀ ଏହି ସାଧାରଣ କଥାର ଉଦାହରଣ।\nଓଡ଼ିଆ ବୁଝାମଣା — ପ୍ରଥମ ସ୍ତବକର ସାଧାରଣ କଥା ପରେ ଫୁଲ ଓ ପକ୍ଷୀ ପରି ଛୋଟ ଉଦାହରଣ ଆସେ।\n\nBright ରଙ୍ଗ ବା ଆଲୋକ ମନେ ପକାଏ; small ଜିନିଷର ଆକାର ବୁଝାଏ। ଏକେ ଫୁଲ ରଙ୍ଗ ପାଇଁ bright ଓ ଆକାର ପାଇଁ small ଉଭୟର ଉଦାହରଣ ହୋଇପାରେ।",
+      "answer": "1. Things are bright, beautiful, wise or wonderful. 2. The Lord God made them. 3. Little flowers and little birds. ଫୁଲ ଓ ପକ୍ଷୀ ଏହି ସାଧାରଣ କଥାର ଉଦାହରଣ।\nଓଡ଼ିଆ ବୁଝାମଣା — ପ୍ରଥମ ସ୍ତବକର ସାଧାରଣ କଥା ପରେ ଫୁଲ ଓ ପକ୍ଷୀ ପରି ଛୋଟ ଉଦାହରଣ ଆସେ।\n\nBright ରଙ୍ଗ ବା ଆଲୋକ ମନେ ପକାଏ; small ଜିନିଷର ଆକାର ବୁଝାଏ। ଏକା ଫୁଲ ରଙ୍ଗ ପାଇଁ bright ଓ ଆକାର ପାଇଁ small ଉଭୟର ଉଦାହରଣ ହୋଇପାରେ।",
       "pages": [
         3
       ],
@@ -125,7 +125,7 @@ export default {
       ],
       "number": "Activity I",
       "prompt": "List the rhyming end words stanza by stanza.",
-      "answer": "small/all; sings/wings; by/sky; sun/everyone; play/day; tell/well. ପ୍ରତି ସ୍ତବକର ଦ୍ୱିତୀୟ ଓ ଚତୁର୍ଥ ଧାଡ଼ିର ଶେଷ ଧ୍ୱନି ଶୁଣି ମେଳାନ୍ତୁ।\n\nଲିଖିତ ଶେଷ ଅକ୍ଷର ଅପେକ୍ଷା ଉଚ୍ଚାରଣ ଶୁଣ। by/skyର spelling ଭିନ୍ନ, କିନ୍ତୁ ସ୍ୱର ମିଳେ। Sings/wingsରେ ଶେଷ ବ୍ୟଞ୍ଜନ ଧ୍ୱନି ମଧ୍ୟ ମିଳେ।",
+      "answer": "small/all; sings/wings; by/sky; sun/every one; play/day; tell/well. ପ୍ରତି ସ୍ତବକର ଦ୍ୱିତୀୟ ଓ ଚତୁର୍ଥ ଧାଡ଼ିର ଶେଷ ଧ୍ୱନି ଶୁଣି ମେଳାନ୍ତୁ।\n\nଲିଖିତ ଶେଷ ଅକ୍ଷର ଅପେକ୍ଷା ଉଚ୍ଚାରଣ ଶୁଣ। by/skyର spelling ଭିନ୍ନ, କିନ୍ତୁ ସ୍ୱର ମିଳେ। Sings/wingsରେ ଶେଷ ବ୍ୟଞ୍ଜନ ଧ୍ୱନି ମଧ୍ୟ ମିଳେ।",
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/10th-02A-English_Text_Class_X.pdf#page=4",
         "pages": [

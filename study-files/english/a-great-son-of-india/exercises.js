@@ -80,7 +80,7 @@ export default {
     {
       "number": "Comprehension check II. 7–9",
       "prompt": "Explain the inner light, the test of religion and the ideal society.",
-      "answer": "7. The inner light means the divine present within every person. 8. True religion recognises truth and reconciles people. 9. Dedication, constructive service and overcoming hatred can help transform society.\n\nଅନ୍ୟର ଅନ୍ତରରେ ମଧ୍ୟ ଏକେ ଆଲୋକ ଦେଖିଲେ ତାକୁ ଅବମାନନା କରିବାର ଯୁକ୍ତି ଦୁର୍ବଳ ହୁଏ। ସତ୍ୟ, ସମନ୍ୱୟ ଓ ସେବା ତେଣୁ ବ୍ୟକ୍ତିଗତ ବିଶ୍ୱାସକୁ ନ୍ୟାୟପୂର୍ଣ୍ଣ ସମାଜ ସହ ଯୋଡ଼ନ୍ତି।",
+      "answer": "7. The inner light means the divine present within every person. 8. True religion recognises truth and reconciles people. 9. Dedication, constructive service and overcoming hatred can help transform society.\n\nଅନ୍ୟର ଅନ୍ତରରେ ମଧ୍ୟ ଏକା ଆଲୋକ ଦେଖିଲେ ତାକୁ ଅବମାନନା କରିବାର ଯୁକ୍ତି ଦୁର୍ବଳ ହୁଏ। ସତ୍ୟ, ସମନ୍ୱୟ ଓ ସେବା ତେଣୁ ବ୍ୟକ୍ତିଗତ ବିଶ୍ୱାସକୁ ନ୍ୟାୟପୂର୍ଣ୍ଣ ସମାଜ ସହ ଯୋଡ଼ନ୍ତି।",
       "pages": [
         128
       ],
