@@ -719,7 +719,7 @@ export default {
       "steps": [
         "PQ² = 3² + (y − 2)² = 25।",
         "(y − 2)² = 16ରୁ y − 2 = ±4।",
-        "ଦୁଇ ମାନରେ |y − 2| = 4 | x-ସ୍ଥାନାଙ୍କର ବ୍ୟବଧାନ 3 ସ୍ଥିର। 3² + 4² = 25 ହେତୁ ଉଭୟ ମାନ ପାଇଁ PQ = 5।"
+        "ଦୁଇ ମାନରେ |y − 2| = 4। x-ସ୍ଥାନାଙ୍କର ବ୍ୟବଧାନ 3 ସ୍ଥିର। 3² + 4² = 25 ହେତୁ ଉଭୟ ମାନ ପାଇଁ PQ = 5।"
       ],
       "pages": [
         8
@@ -852,7 +852,7 @@ export default {
       "prompt": "(1, −2) ଯଦି (4, 2) ଓ (k, −6)ର ମଧ୍ୟବିନ୍ଦୁ, kର ମାନ କେତେ?",
       "answer": "k = −2।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "x-ସ୍ଥାନାଙ୍କରୁ (4 + k)/2 = 1, ତେଣୁ k = −2।",
         "y-ସ୍ଥାନାଙ୍କ (2 − 6)/2 = −2 ମଧ୍ୟ ମେଳ ଖାଏ।"
       ],
@@ -871,7 +871,7 @@ export default {
       "prompt": "(−2, 3) ଓ (3, −2)ର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।",
       "answer": "(1/2, 1/2)।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "x = (−2 + 3)/2 = 1/2।",
         "y = (3 − 2)/2 = 1/2।"
       ],
@@ -890,7 +890,7 @@ export default {
       "prompt": "ମଧ୍ୟବିନ୍ଦୁ ମୂଳବିନ୍ଦୁ ଓ ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (2, 3) ହେଲେ ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ କେଉଁଟି?",
       "answer": "(−2, −3)।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ (x, y) ନିଅ।",
         "(2 + x)/2 = (3 + y)/2 = 0 ହେତୁ x = −2, y = −3।"
       ],
@@ -1023,7 +1023,7 @@ export default {
       "prompt": "(a, b) ଓ (c, d)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।",
       "answer": "((a + c)/2, (b + d)/2)।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "x-ସ୍ଥାନାଙ୍କ = [(a) + (c)]/2 = (a + c)/2।",
         "y-ସ୍ଥାନାଙ୍କ = [(b) + (d)]/2 = (b + d)/2।"
       ],
@@ -1061,7 +1061,7 @@ export default {
       "prompt": "(a·t₁², 2·a·t₁) ଓ (a·t₂², 2·a·t₂)କୁ ଯୋଗ କରୁଥିବା ରେଖାଖଣ୍ଡର ମଧ୍ୟବିନ୍ଦୁ ନିର୍ଣ୍ଣୟ କର।",
       "answer": "(a·(t₁² + t₂²)/2, a·(t₁ + t₂))।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "x-ସ୍ଥାନାଙ୍କ = [(a·t₁²) + (a·t₂²)]/2 = a·(t₁² + t₂²)/2।",
         "y-ସ୍ଥାନାଙ୍କ = [(2·a·t₁) + (2·a·t₂)]/2 = a·(t₁ + t₂)।"
       ],
@@ -1080,7 +1080,7 @@ export default {
       "prompt": "(h, −1) ଓ (2, k)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।",
       "answer": "h = −4, k = 5।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।",
         "ତେଣୁ h + 4 = 0 ଏବଂ k − 5 = 0।",
         "ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −4, k = 5। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।"
@@ -1100,7 +1100,7 @@ export default {
       "prompt": "(5, 3) ଓ (h, k)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।",
       "answer": "h = −7, k = 1।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।",
         "ତେଣୁ h + 7 = 0 ଏବଂ k − 1 = 0।",
         "ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −7, k = 1। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।"
@@ -1120,7 +1120,7 @@ export default {
       "prompt": "(h + 1, k) ଓ (k, −h − 1)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।",
       "answer": "h = −4, k = 1।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।",
         "ତେଣୁ h + k + 3 = 0 ଏବଂ −h + k − 5 = 0।",
         "ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −4, k = 1। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।"
@@ -1140,7 +1140,7 @@ export default {
       "prompt": "(h − k, −h + k) ଓ (2·h, 2·k)ର ମଧ୍ୟବିନ୍ଦୁ (−1, 2)। h, k ନିର୍ଣ୍ଣୟ କର।",
       "answer": "h = −1/4, k = 5/4।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ମଧ୍ୟବିନ୍ଦୁ ସୂତ୍ରରୁ ଦୁଇ x-ସ୍ଥାନାଙ୍କର ଯୋଗ −2 ଓ ଦୁଇ y-ସ୍ଥାନାଙ୍କର ଯୋଗ 4।",
         "ତେଣୁ 3·h − k + 2 = 0 ଏବଂ −h + 3·k − 4 = 0।",
         "ଦୁଇ ସମୀକରଣ ସମାଧାନ କଲେ h = −1/4, k = 5/4। ବସାଇଲେ ଉଭୟ ଯୋଗ −2 ଓ 4 ମିଳେ।"
@@ -1160,7 +1160,7 @@ export default {
       "prompt": "ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (2, 3) ଓ ମଧ୍ୟବିନ୍ଦୁ (0, 0)। ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ ସ୍ଥିର କର।",
       "answer": "(−2, −3)।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ଅପର ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ = 2 × ମଧ୍ୟବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ − ପ୍ରଥମ ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ।",
         "x = 2(0) − (2) = -2। y = 2(0) − (3) = -3।"
       ],
@@ -1179,7 +1179,7 @@ export default {
       "prompt": "ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (−2, 4) ଓ ମଧ୍ୟବିନ୍ଦୁ (1, 2)। ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ ସ୍ଥିର କର।",
       "answer": "(4, 0)।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ଅପର ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ = 2 × ମଧ୍ୟବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ − ପ୍ରଥମ ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ।",
         "x = 2(1) − (-2) = 4। y = 2(2) − (4) = 0।"
       ],
@@ -1198,7 +1198,7 @@ export default {
       "prompt": "ଏକ ପ୍ରାନ୍ତବିନ୍ଦୁ (3, 5) ଓ ମଧ୍ୟବିନ୍ଦୁ (2, 1)। ଅନ୍ୟ ପ୍ରାନ୍ତବିନ୍ଦୁ ସ୍ଥିର କର।",
       "answer": "(1, −3)।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "ଅପର ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ = 2 × ମଧ୍ୟବିନ୍ଦୁର ସ୍ଥାନାଙ୍କ − ପ୍ରଥମ ପ୍ରାନ୍ତର ସ୍ଥାନାଙ୍କ।",
         "x = 2(2) − (3) = 1। y = 2(1) − (5) = -3।"
       ],
@@ -1292,7 +1292,7 @@ export default {
     {
       "number": "6(b) · 11",
       "prompt": "ସ୍ଥାନାଙ୍କ ଜ୍ୟାମିତି ସାହାଯ୍ୟରେ ପ୍ରମାଣ କର ଯେ ତ୍ରିଭୁଜର ମଧ୍ୟମାତ୍ରୟ ଏକବିନ୍ଦୁଗାମୀ।",
-      "answer": "ତିନି ମଧ୍ୟମା ଏକେ ଭରକେନ୍ଦ୍ର Gରେ ମିଳନ୍ତି।",
+      "answer": "ତିନି ମଧ୍ୟମା ଏକା ଭରକେନ୍ଦ୍ର Gରେ ମିଳନ୍ତି।",
       "steps": [
         "ଶୀର୍ଷ A(x₁,y₁), B(x₂,y₂), C(x₃,y₃) ନିଅ।",
         "BCର ମଧ୍ୟବିନ୍ଦୁ D = ((x₂ + x₃)/2, (y₂ + y₃)/2)।",
@@ -1315,7 +1315,7 @@ export default {
       "prompt": "(h, 5), (−4, k), (8, 9) ଶୀର୍ଷର ତ୍ରିଭୁଜର ଭରକେନ୍ଦ୍ର (−2, 6) ହେଲେ h ଓ k କେତେ?",
       "answer": "h = −10, k = 4।",
       "steps": [
-        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |",
+        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃।",
         "(h − 4 + 8)/3 = −2ରୁ h + 4 = −6।",
         "(5 + k + 9)/3 = 6ରୁ k + 14 = 18।"
       ],
@@ -1334,7 +1334,7 @@ export default {
       "prompt": "ABCର ଭରକେନ୍ଦ୍ର (1, 1), A(3, −4), B(−4, 7)। C ନିର୍ଣ୍ଣୟ କର।",
       "answer": "C(4, 0)।",
       "steps": [
-        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |",
+        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃।",
         "C(x, y) ନିଅ। (3 − 4 + x)/3 = 1ରୁ x = 4।",
         "(−4 + 7 + y)/3 = 1ରୁ y = 0।"
       ],
@@ -1353,7 +1353,7 @@ export default {
       "prompt": "(−4, 1), (3, −4), (1, 3) ଶୀର୍ଷ ଥିବା ତ୍ରିଭୁଜର ଭରକେନ୍ଦ୍ର ମୂଳବିନ୍ଦୁ ଦର୍ଶାଅ।",
       "answer": "G = (0, 0)।",
       "steps": [
-        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |",
+        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃।",
         "x-ସ୍ଥାନାଙ୍କ (−4 + 3 + 1)/3 = 0।",
         "y-ସ୍ଥାନାଙ୍କ (1 − 4 + 3)/3 = 0।"
       ],
@@ -1410,11 +1410,11 @@ export default {
       "prompt": "O(0, 0), A(2a, 0), B(0, 2b)। OAB ସମକୋଣୀ ଓ କର୍ଣ୍ଣର ମଧ୍ୟବିନ୍ଦୁ ତିନି ଶୀର୍ଷଠାରୁ ସମଦୂରବର୍ତ୍ତୀ ଦର୍ଶାଅ।",
       "answer": "ତ୍ରିଭୁଜ ଅବିକଳ ଥିଲେ ∠AOB = 90° ଓ MO = MA = MB।",
       "steps": [
-        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂ | ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
+        "ମଧ୍ୟବିନ୍ଦୁ M(h, k) ପାଇଁ 2h = x₁ + x₂ ଓ 2k = y₁ + y₂। ତେଣୁ ଗୋଟିଏ ସ୍ଥାନାଙ୍କର ଅଜଣା ମାନ ମିଳିଲେ ଅନ୍ୟ ସ୍ଥାନାଙ୍କକୁ ଅଲଗା ଯାଞ୍ଚ କରିହୁଏ।",
         "OA x-ଅକ୍ଷରେ ଓ OB y-ଅକ୍ଷରେ ହେତୁ OA ⟂ OB।",
         "କର୍ଣ୍ଣ ABର ମଧ୍ୟବିନ୍ଦୁ M(a, b)। MO² = a² + b²।",
-        "MA² = (2a − a)² + (0 − b)² = a² + b² |",
-        "ସେହିପରି MB² = (0 − a)² + (2b − b)² = a² + b² |"
+        "MA² = (2a − a)² + (0 − b)² = a² + b²।",
+        "ସେହିପରି MB² = (0 − a)² + (2b − b)² = a² + b²।"
       ],
       "pages": [
         13
@@ -1468,7 +1468,7 @@ export default {
       "prompt": "ଚିତ୍ର 6.7ରେ ABC ସମବାହୁ, A(a, 0), BC ଓ AC ଉପରେ ନିର୍ଭର କରି ଅନ୍ୟ ଶୀର୍ଷ, ତିନି ବାହୁ, Bରୁ ମଧ୍ୟମାର ଦୈର୍ଘ୍ୟ ଓ ଭରକେନ୍ଦ୍ର G ନିର୍ଣ୍ଣୟ କର।",
       "answer": "(i) B(−a, 0), C(0, √3a)। (ii) 2a। (iii) √3a। (iv) G(0, √3a/3)।",
       "steps": [
-        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃ |",
+        "ଭରକେନ୍ଦ୍ର Gର x-ସ୍ଥାନାଙ୍କ ତିନି ଶୀର୍ଷର x-ସ୍ଥାନାଙ୍କର ମାଧ୍ୟମାନ। y ପାଇଁ ସେହି ନିୟମ ଅଲଗା ଲାଗେ। ତେଣୁ 3x_G = x₁ + x₂ + x₃ ଓ 3y_G = y₁ + y₂ + y₃।",
         "ଚିତ୍ରରେ C ଧନାତ୍ମକ y-ଅକ୍ଷ ଉପରେ ଓ O, ABର ମଧ୍ୟବିନ୍ଦୁ।",
         "ତେଣୁ B(−a, 0), AB = 2a, a > 0।",
         "AC = 2a। ସମକୋଣୀ AOCରେ OC = √[(2a)² − a²] = √3a। ତେଣୁ C(0, √3a)।",
@@ -1480,8 +1480,8 @@ export default {
       ],
       "diagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grLjgrY3grKXgrL7grKjgrL7grJngrY3grJUg4KyF4KyV4K2N4Ky3IOCsieCsquCssOCthyDgrLjgrK7grKzgrL7grLngrYEg4pazQUJDIHwgQShhLCAwKSwgTyDgrJMgRiDgrK7grKfgrY3grZ/grKzgrL/grKjgrY3grKbgrYEsIENPIOCskyBCRiDgrK7grKfgrY3grZ/grK7grL7grLAg4Kyb4K2H4KymIEcgfDwvdGl0bGU+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJ4PSI4IiBmaWxsPSIjZmZmY2Y1Ii8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+Cjxwb2x5bGluZSBwb2ludHM9IjEwMy40MywyMzcuMzAgMzk2LjU3LDIzNy4zMCIgc3Ryb2tlPSIjNTU3MTgxIiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjQ3Ljk5LDI4Ny41MCAyNDcuOTksMzIuNTAiIHN0cm9rZT0iIzU1NzE4MSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjM0MC4zNSwyMzcuMzAgMTU1LjYzLDIzNy4zMCAyNDcuOTksNzcuMzMgMzQwLjM1LDIzNy4zMCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMTU1LjYzLDIzNy4zMCAyOTQuMTcsMTU3LjMyIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNDcuOTksNzcuMzMgMjQ3Ljk5LDIzNy4zMCIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8dGV4dCB4PSI5NS40MyIgeT0iMjI2LjMwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WOKAsjwvdGV4dD4KPHRleHQgeD0iNDA1LjU3IiB5PSIyMjYuMzAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5YPC90ZXh0Pgo8dGV4dCB4PSIyNTcuOTkiIHk9IjMyLjUwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WTwvdGV4dD4KPHRleHQgeD0iMjU3Ljk5IiB5PSIyOTAuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5Z4oCyPC90ZXh0Pgo8Y2lyY2xlIGN4PSIzNDAuMzUiIGN5PSIyMzcuMzAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNTQuMzUiIHk9IjI1Mi4zMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkEoYSwgMCk8L3RleHQ+CjxjaXJjbGUgY3g9IjE1NS42MyIgY3k9IjIzNy4zMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjE0OS42MyIgeT0iMjUyLjMwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QjwvdGV4dD4KPGNpcmNsZSBjeD0iMjQ3Ljk5IiBjeT0iNzcuMzMiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMzQuOTkiIHk9IjcwLjMzIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMjk0LjE3IiBjeT0iMTU3LjMyIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzA3LjE3IiB5PSIxNTQuMzIiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNDcuOTkiIGN5PSIxODMuOTgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMzQuOTkiIHk9IjE4MS45OCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkc8L3RleHQ+CjxjaXJjbGUgY3g9IjI0Ny45OSIgY3k9IjIzNy4zMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIzNi45OSIgeT0iMjUxLjMwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+TzwvdGV4dD4KPC9zdmc+Cg==",
-        "alt": "ସ୍ଥାନାଙ୍କ ଅକ୍ଷ ଉପରେ ସମବାହୁ △ABC | A(a, 0), O ଓ F ମଧ୍ୟବିନ୍ଦୁ, CO ଓ BF ମଧ୍ୟମାର ଛେଦ G।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 6.7 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 14"
+        "alt": "ସ୍ଥାନାଙ୍କ ଅକ୍ଷ ଉପରେ ସମବାହୁ △ABC। A(a, 0), O ଓ F ମଧ୍ୟବିନ୍ଦୁ, CO ଓ BF ମଧ୍ୟମାର ଛେଦ G।",
+        "caption": "ଚିତ୍ର 6.7 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/99%20-%20OD_ODIA_MATH_CLASS10_TERM1.pdf#page=120",

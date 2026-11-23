@@ -136,7 +136,7 @@ export default {
     {
       "number": "୬",
       "prompt": "ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍ କ’ଣ? ଦୁଇଟି ଉଦାହରଣ ଦିଅ।",
-      "answer": "ଅମ୍ଳ ଓ କ୍ଷାରକ ଉଭୟ ସହ ପ୍ରତିକ୍ରିୟା କରୁଥିବା ଅକ୍ସାଇଡ୍‌କୁ ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍ କୁହାଯାଏ। ଉଦାହରଣ ଆଲୁମିନିୟମ୍ ଅକ୍ସାଇଡ୍ (Al₂O₃) ଓ ଜିଙ୍କ୍ ଅକ୍ସାଇଡ୍ (ZnO)।\n\nଉଭୟଧର୍ମୀ ଅକ୍ସାଇଡ୍ ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟା କଲେ କ୍ଷାରକ ପରି ଓ କ୍ଷାରକ ସହ ପ୍ରତିକ୍ରିୟା କଲେ ଅମ୍ଳ ପରି ଆଚରଣ ଦେଖାଏ। ଯଥା Al₂O₃ + 6HCl → 2AlCl₃ + 3H₂O ଓ Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O | ZnO ମଧ୍ୟ ଏହି ଶ୍ରେଣୀରେ ପଡ଼େ।",
+      "answer": "ଅମ୍ଳ ଓ କ୍ଷାରକ ଉଭୟ ସହ ପ୍ରତିକ୍ରିୟା କରୁଥିବା ଅକ୍ସାଇଡ୍‌କୁ ଏମ୍ଫୋଟେରିକ୍ ଅକ୍ସାଇଡ୍ କୁହାଯାଏ। ଉଦାହରଣ ଆଲୁମିନିୟମ୍ ଅକ୍ସାଇଡ୍ (Al₂O₃) ଓ ଜିଙ୍କ୍ ଅକ୍ସାଇଡ୍ (ZnO)।\n\nଉଭୟଧର୍ମୀ ଅକ୍ସାଇଡ୍ ଅମ୍ଳ ସହ ପ୍ରତିକ୍ରିୟା କଲେ କ୍ଷାରକ ପରି ଓ କ୍ଷାରକ ସହ ପ୍ରତିକ୍ରିୟା କଲେ ଅମ୍ଳ ପରି ଆଚରଣ ଦେଖାଏ। ଯଥା Al₂O₃ + 6HCl → 2AlCl₃ + 3H₂O ଓ Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O। ZnO ମଧ୍ୟ ଏହି ଶ୍ରେଣୀରେ ପଡ଼େ।",
       "pages": [
         48,
         64
@@ -318,7 +318,7 @@ export default {
     },
     {
       "number": "୧୨",
-      "prompt": "କାରଣ ବୁଝାଅ।\n(a) ସୁନା, ରୁପା ଓ ପ୍ଲାଟିନମ୍ ଗହଣାରେ କାହିଁକି ବ୍ୟବହୃତ ହୁଏ?\n(b) ସୋଡ଼ିୟମ୍, ପୋଟାସିୟମ୍ ଓ ଲିଥିୟମ୍‌କୁ ତେଲରେ କାହିଁକି ରଖାଯାଏ?\n(c) ପ୍ରତିକ୍ରିୟାଶୀଳ ହେଲେ ମଧ୍ୟ ଏଲୁମିନିୟମ୍ ରନ୍ଧନ ପାତ୍ର ତିଆରିରେ କାହିଁକି ଲାଗେ?\n(d) ସଲ୍‌ଫାଇଡ୍ ଓ କାର୍ବୋନେଟ୍ ଧାତୁପିଣ୍ଡକୁ ଧାତୁ ନିଷ୍କାସନ ଆଗରୁ ଅକ୍ସାଇଡ୍‌ରେ କାହିଁକି ବଦଳାଯାଏ?",
+      "prompt": "କାରଣ ବୁଝାଅ।\n(a) ସୁନା, ରୁପା ଓ ପ୍ଲାଟିନମ୍ ଗହଣାରେ କାହିଁକି ବ୍ୟବହୃତ ହୁଏ?\n(b) ସୋଡିୟମ୍, ପୋଟାସିୟମ୍ ଓ ଲିଥିୟମ୍‌କୁ ତେଲରେ କାହିଁକି ରଖାଯାଏ?\n(c) ପ୍ରତିକ୍ରିୟାଶୀଳ ହେଲେ ମଧ୍ୟ ଏଲୁମିନିୟମ୍ ରନ୍ଧନ ପାତ୍ର ତିଆରିରେ କାହିଁକି ଲାଗେ?\n(d) ସଲ୍‌ଫାଇଡ୍ ଓ କାର୍ବୋନେଟ୍ ଧାତୁପିଣ୍ଡକୁ ଧାତୁ ନିଷ୍କାସନ ଆଗରୁ ଅକ୍ସାଇଡ୍‌ରେ କାହିଁକି ବଦଳାଯାଏ?",
       "answer": "(d) ସଲ୍‌ଫାଇଡ୍ ବା କାର୍ବୋନେଟ୍‌ରୁ ସିଧା ଧାତୁ ପାଇବା ଅପେକ୍ଷା ଅକ୍ସାଇଡ୍‌ର ବିଜାରଣରୁ ଧାତୁ ପାଇବା ସହଜ।\n\n(a) ଗହଣାରେ ଦୀପ୍ତି ଓ କମ୍ ପ୍ରତିକ୍ରିୟାଶୀଳତା, ଉଭୟ ଉପଯୋଗୀ। (b) ତେଲର ଆବରଣ ଅଧିକ ସକ୍ରିୟ ଧାତୁକୁ ବାୟୁ ଓ ଆର୍ଦ୍ରତାରୁ ଅଲଗା ରଖେ। (c) ରନ୍ଧନ ପାତ୍ରକୁ ତାପ ସଞ୍ଚାଳନ କରିବା ସହ ଗରମ ଅବସ୍ଥାରେ ସ୍ଥିର ରହିବାକୁ ହୁଏ। (d) ଧାତୁପିଣ୍ଡର ରୂପାନ୍ତରଣର ଉଦ୍ଦେଶ୍ୟ ହେଉଛି ପରବର୍ତ୍ତୀ ବିଜାରଣରେ ମୁକ୍ତ ଧାତୁ ପାଇବା।",
       "pages": [
         65
@@ -449,7 +449,7 @@ export default {
     {
       "number": "ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୪୮ · ୧",
       "prompt": "ସାଧାରଣ ତାପମାତ୍ରାରେ ତରଳ, ଛୁରୀରେ କାଟି ହେଉଥିବା, ତାପର ସୁପରିବାହୀ ଓ ତାପର କୁପରିବାହୀ ଧାତୁର ଗୋଟିଏ ଲେଖାଏଁ ଉଦାହରଣ ଦିଅ।",
-      "answer": "(i) ପାରଦ ସାଧାରଣ ତାପମାତ୍ରାରେ ତରଳ। (ii) ସୋଡ଼ିୟମ୍ ନରମ, ତେଣୁ ଛୁରୀରେ କଟେ। (iii) ରୁପା ତାପର ସୁପରିବାହୀ। (iv) ସୀସା ଅନ୍ୟ ଅନେକ ଧାତୁ ଅପେକ୍ଷା ତାପର କୁପରିବାହୀ।\n\nଚାରିଟି ଉତ୍ତର ଚାରି ଭିନ୍ନ ମାନଦଣ୍ଡରେ ବଛାଯାଇଛି: ପ୍ରଥମଟି ଭୌତିକ ଅବସ୍ଥା, ଦ୍ୱିତୀୟଟି କଠିନତା ଏବଂ ଶେଷ ଦୁଇଟି ତାପ ପରିବାହିତା। ପାରଦ ଓ ସୋଡ଼ିୟମ୍‌ର ଉଦାହରଣରୁ ସମସ୍ତ ଧାତୁକୁ ଏକା ଭୌତିକ ଲକ୍ଷଣରେ ଚିହ୍ନିବାର ସୀମା ବୁଝିହୁଏ।",
+      "answer": "(i) ପାରଦ ସାଧାରଣ ତାପମାତ୍ରାରେ ତରଳ। (ii) ସୋଡିୟମ୍ ନରମ, ତେଣୁ ଛୁରୀରେ କଟେ। (iii) ରୁପା ତାପର ସୁପରିବାହୀ। (iv) ସୀସା ଅନ୍ୟ ଅନେକ ଧାତୁ ଅପେକ୍ଷା ତାପର କୁପରିବାହୀ।\n\nଚାରିଟି ଉତ୍ତର ଚାରି ଭିନ୍ନ ମାନଦଣ୍ଡରେ ବଛାଯାଇଛି: ପ୍ରଥମଟି ଭୌତିକ ଅବସ୍ଥା, ଦ୍ୱିତୀୟଟି କଠିନତା ଏବଂ ଶେଷ ଦୁଇଟି ତାପ ପରିବାହିତା। ପାରଦ ଓ ସୋଡିୟମ୍‌ର ଉଦାହରଣରୁ ସମସ୍ତ ଧାତୁକୁ ଏକା ଭୌତିକ ଲକ୍ଷଣରେ ଚିହ୍ନିବାର ସୀମା ବୁଝିହୁଏ।",
       "pages": [
         48
       ],
@@ -498,8 +498,8 @@ export default {
     },
     {
       "number": "ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୫୩ · ୧",
-      "prompt": "ସୋଡ଼ିୟମ୍‌କୁ କିରୋସିନ୍ ତେଲରେ ବୁଡ଼ାଇ ରଖିବାର କାରଣ କ’ଣ?",
-      "answer": "ସୋଡ଼ିୟମ୍ ଅତି ପ୍ରତିକ୍ରିୟାଶୀଳ। ବାୟୁର ଅକ୍ସିଜେନ୍ ଓ ଆର୍ଦ୍ରତା ସହ ଏହା ଦ୍ରୁତ ପ୍ରତିକ୍ରିୟା କରେ। କିରୋସିନ୍ ବାୟୁ ଓ ଆର୍ଦ୍ରତା ସହ ଏହାର ସଂସ୍ପର୍ଶକୁ ରୋକେ।\n\nକିରୋସିନ୍ ତେଲ ଧାତୁ ଚାରିପଟେ ଏକ ଅବିଚ୍ଛିନ୍ନ ସ୍ତର ହୋଇ ରହେ। ଏହି ସ୍ତରର କାମ ପଦାର୍ଥଗୁଡ଼ିକୁ ଅଲଗା ରଖିବା। ଏଠାରେ ବାୟୁର ଆର୍ଦ୍ରତା ସହ ଅତି ସକ୍ରିୟ ଧାତୁର ପ୍ରତିକ୍ରିୟାକୁ ଏଡ଼ାଯାଏ।",
+      "prompt": "ସୋଡିୟମ୍‌କୁ କିରୋସିନ୍ ତେଲରେ ବୁଡ଼ାଇ ରଖିବାର କାରଣ କ’ଣ?",
+      "answer": "ସୋଡିୟମ୍ ଅତି ପ୍ରତିକ୍ରିୟାଶୀଳ। ବାୟୁର ଅକ୍ସିଜେନ୍ ଓ ଆର୍ଦ୍ରତା ସହ ଏହା ଦ୍ରୁତ ପ୍ରତିକ୍ରିୟା କରେ। କିରୋସିନ୍ ବାୟୁ ଓ ଆର୍ଦ୍ରତା ସହ ଏହାର ସଂସ୍ପର୍ଶକୁ ରୋକେ।\n\nକିରୋସିନ୍ ତେଲ ଧାତୁ ଚାରିପଟେ ଏକ ଅବିଚ୍ଛିନ୍ନ ସ୍ତର ହୋଇ ରହେ। ଏହି ସ୍ତରର କାମ ପଦାର୍ଥଗୁଡ଼ିକୁ ଅଲଗା ରଖିବା। ଏଠାରେ ବାୟୁର ଆର୍ଦ୍ରତା ସହ ଅତି ସକ୍ରିୟ ଧାତୁର ପ୍ରତିକ୍ରିୟାକୁ ଏଡ଼ାଯାଏ।",
       "pages": [
         53
       ],
@@ -549,7 +549,7 @@ export default {
     {
       "number": "ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୫୩ · ୩",
       "prompt": "ଚାରି ଧାତୁର ସାରଣୀରେ A ତମ୍ବାକୁ, B ଲୁହାକୁ ଓ C ରୁପାକୁ ପ୍ରତିସ୍ଥାପନ କରେ। D କୌଣସି ଧାତୁକୁ ପ୍ରତିସ୍ଥାପନ କରେନାହିଁ। ସବୁଠାରୁ ସକ୍ରିୟ ଧାତୁ, CuSO₄ରେ Bର ପ୍ରଭାବ ଓ ଚାରିଟିର ଅଧଃକ୍ରମ ଲେଖ।",
-      "answer": "(i) B ସର୍ବାଧିକ ପ୍ରତିକ୍ରିୟାଶୀଳ। A ଲୁହାକୁ ବିସ୍ଥାପିତ କରେନାହିଁ, କିନ୍ତୁ B କରେ।\n(ii) B କପର୍‌କୁ ବିସ୍ଥାପିତ କରିବ। ଧାତବ କପର୍‌ର ଲାଲଚେ ବାଦାମୀ ଆବରଣ ଜମିବ ଓ ନୀଳ Cu²⁺ ଆୟନର ପରିମାଣ କମିବ।\n(iii) B > A > C > D। C ରୁପାକୁ ବିସ୍ଥାପିତ କରେ, ତମ୍ବାକୁ କରେନାହିଁ। D ରୁପାକୁ ମଧ୍ୟ ବିସ୍ଥାପିତ କରେନାହିଁ।\n\nସାରଣୀରେ ଯେଉଁଠି ପ୍ରତିସ୍ଥାପନ ଘଟିଛି ସେଠାରେ ବାହାରୁ ଦିଆଯାଇଥିବା ଧାତୁ ଅଧିକ ସକ୍ରିୟ। B ଲୁହାକୁ ବିସ୍ଥାପିତ କରେ, A ତମ୍ବାକୁ କରେ କିନ୍ତୁ ଲୁହାକୁ କରେନାହିଁ। ତେଣୁ B, Aଠାରୁ ଆଗରେ। C କେବଳ ରୁପାକୁ ବିସ୍ଥାପିତ କରୁଥିବା ଓ D କାହାକୁ କରୁନଥିବାରୁ ଅବଶିଷ୍ଟ କ୍ରମ ମିଳେ।",
+      "answer": "(i) B ସର୍ବାଧିକ ପ୍ରତିକ୍ରିୟାଶୀଳ। A ଲୁହାକୁ ବିସ୍ଥାପିତ କରେନାହିଁ, କିନ୍ତୁ B କରେ।\n(ii) B କପର୍‌କୁ ବିସ୍ଥାପିତ କରିବ। ଧାତବ କପର୍‌ର ଲାଲ୍-ବାଦାମୀ ବାଦାମୀ ଆବରଣ ଜମିବ ଓ ନୀଳ Cu²⁺ ଆୟନର ପରିମାଣ କମିବ।\n(iii) B > A > C > D। C ରୁପାକୁ ବିସ୍ଥାପିତ କରେ, ତମ୍ବାକୁ କରେନାହିଁ। D ରୁପାକୁ ମଧ୍ୟ ବିସ୍ଥାପିତ କରେନାହିଁ।\n\nସାରଣୀରେ ଯେଉଁଠି ପ୍ରତିସ୍ଥାପନ ଘଟିଛି ସେଠାରେ ବାହାରୁ ଦିଆଯାଇଥିବା ଧାତୁ ଅଧିକ ସକ୍ରିୟ। B ଲୁହାକୁ ବିସ୍ଥାପିତ କରେ, A ତମ୍ବାକୁ କରେ କିନ୍ତୁ ଲୁହାକୁ କରେନାହିଁ। ତେଣୁ B, Aଠାରୁ ଆଗରେ। C କେବଳ ରୁପାକୁ ବିସ୍ଥାପିତ କରୁଥିବା ଓ D କାହାକୁ କରୁନଥିବାରୁ ଅବଶିଷ୍ଟ କ୍ରମ ମିଳେ।",
       "pages": [
         53
       ],
@@ -574,7 +574,7 @@ export default {
     {
       "number": "ପାଠମଧ୍ୟ ପ୍ରଶ୍ନ · ପୃ. ୫୩ · ୪",
       "prompt": "ପ୍ରତିକ୍ରିୟାଶୀଳ ଧାତୁ ଓ ଲଘୁ HClରୁ କେଉଁ ଗ୍ୟାସ୍ ମିଳେ? ଲୁହା ସହ ଲଘୁ H₂SO₄ର ସମୀକରଣ ଦିଅ।",
-      "answer": "ଗ୍ୟାସ୍‌ଟି ହାଇଡ୍ରୋଜେନ୍। ଲୁହା ଲଘୁ ସଲ୍‌ଫ୍ୟୁରିକ୍ ଏସିଡ୍‌ରୁ ହାଇଡ୍ରୋଜେନ୍ ବିସ୍ଥାପିତ କରେ। Fe(s) + H₂SO₄(aq) → FeSO₄(aq) + H₂(g)।\n\nଏଠାରେ ଅମ୍ଳ ବଦଳିଲେ ଲବଣର ଋଣାତ୍ମକ ଆୟନ ବଦଳେ। ଲଘୁ H₂SO₄ ନେଲେ FeSO₄, ଲଘୁ HCl ନେଲେ କ୍ଲୋରାଇଡ୍ ମିଳିବ। ସକ୍ରିୟ ଧାତୁ H⁺କୁ ବିସ୍ଥାପିତ କରୁଥିବା ଯୋଗୁଁ ଉଭୟରେ ଗ୍ୟାସ୍ H₂ |",
+      "answer": "ଗ୍ୟାସ୍‌ଟି ହାଇଡ୍ରୋଜେନ୍। ଲୁହା ଲଘୁ ସଲ୍‌ଫ୍ୟୁରିକ୍ ଏସିଡ୍‌ରୁ ହାଇଡ୍ରୋଜେନ୍ ବିସ୍ଥାପିତ କରେ। Fe(s) + H₂SO₄(aq) → FeSO₄(aq) + H₂(g)।\n\nଏଠାରେ ଅମ୍ଳ ବଦଳିଲେ ଲବଣର ଋଣାତ୍ମକ ଆୟନ ବଦଳେ। ଲଘୁ H₂SO₄ ନେଲେ FeSO₄, ଲଘୁ HCl ନେଲେ କ୍ଲୋରାଇଡ୍ ମିଳିବ। ସକ୍ରିୟ ଧାତୁ H⁺କୁ ବିସ୍ଥାପିତ କରୁଥିବା ଯୋଗୁଁ ଉଭୟରେ ଗ୍ୟାସ୍ H₂।",
       "pages": [
         53
       ],
@@ -630,8 +630,8 @@ export default {
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MzAgMjU1IiByb2xlPSJpbWciPjx0aXRsZT5OYSwgTywgTWfgrLAg4Kys4Ky+4Ky54K2N4K2fIOCsh+CssuCth+CsleCtjeCsn+CtjeCssOCsqOCtjSDgrJMgTmHigoJPLCBNZ0/grLAg4KyG4K2f4KyoPC90aXRsZT48cmVjdCB3aWR0aD0iNDMwIiBoZWlnaHQ9IjI1NSIgZmlsbD0iI2ZmZmRmNiIvPjxnIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksTm90byBTYW5zIE9yaXlhLCBzYW5zLXNlcmlmIj48dGV4dCB4PSI4NS4wIiB5PSI0My4wIiBmaWxsPSIjMTkzZjNhIiBmb250LXNpemU9IjI1IiBmb250LXdlaWdodD0iNjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+TmE8L3RleHQ+PHRleHQgeD0iMjIyLjAiIHk9IjQzLjAiIGZpbGw9IiMxOTNmM2EiIGZvbnQtc2l6ZT0iMjUiIGZvbnQtd2VpZ2h0PSI2MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj5PPC90ZXh0Pjx0ZXh0IHg9IjM1NS4wIiB5PSI0My4wIiBmaWxsPSIjMTkzZjNhIiBmb250LXNpemU9IjI1IiBmb250LXdlaWdodD0iNjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+TWc8L3RleHQ+PGNpcmNsZSBjeD0iMTEwLjAiIGN5PSI0MS4wIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIzMjguMCIgY3k9IjQyLjAiIHI9IjMuMSIgZmlsbD0iIzE3NmQ3MCIvPjxjaXJjbGUgY3g9IjM4Mi4wIiBjeT0iNDIuMCIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjE3LjMiIGN5PSIyMS4wIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyMjYuNyIgY3k9IjIxLjAiIHI9IjMuMSIgZmlsbD0iIzE3NmQ3MCIvPjxjaXJjbGUgY3g9IjIxNy4zIiBjeT0iNjUuMCIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjI2LjciIGN5PSI2NS4wIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyMDMuMCIgY3k9IjQzLjAiIHI9IjMuMSIgZmlsbD0iIzE3NmQ3MCIvPjxjaXJjbGUgY3g9IjI0MS4wIiBjeT0iNDMuMCIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PHRleHQgeD0iNTUuMCIgeT0iMTM0LjAiIGZpbGw9IiMxNzZkNzAiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSI2MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj5OYeKCgk88L3RleHQ+PHRleHQgeD0iMTM3LjAiIHk9IjEzNC4wIiBmaWxsPSIjMTkzZjNhIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+MiBOYeKBujwvdGV4dD48dGV4dCB4PSIxODguMCIgeT0iMTM0LjAiIGZpbGw9IiMxOTNmM2EiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4rPC90ZXh0Pjx0ZXh0IHg9IjIzOS4wIiB5PSIxMzQuMCIgZmlsbD0iIzE5M2YzYSIgZm9udC1zaXplPSIyNiIgZm9udC13ZWlnaHQ9IjYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPk88L3RleHQ+PGNpcmNsZSBjeD0iMjM0LjMiIGN5PSIxMTUuMCIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjQzLjciIGN5PSIxMTUuMCIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjM0LjMiIGN5PSIxNTMuMCIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjQzLjciIGN5PSIxNTMuMCIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjE4LjAiIGN5PSIxMjkuMyIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjE4LjAiIGN5PSIxMzguNyIgcj0iMy4xIiBmaWxsPSIjMTc2ZDcwIi8+PGNpcmNsZSBjeD0iMjYwLjAiIGN5PSIxMjkuMyIgcj0iMy4xIiBmaWxsPSIjYWM0ZTIwIi8+PGNpcmNsZSBjeD0iMjYwLjAiIGN5PSIxMzguNyIgcj0iMy4xIiBmaWxsPSIjYWM0ZTIwIi8+PHBhdGggZD0iTTIwNy4wLDEwNS4wIEwyMTMuMCwxMDUuMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTkzZjNhIiBzdHJva2Utd2lkdGg9IjIuNCIvPjxwYXRoIGQ9Ik0yMDcuMCwxMDUuMCBMMjA3LjAsMTYzLjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE5M2YzYSIgc3Ryb2tlLXdpZHRoPSIyLjQiLz48cGF0aCBkPSJNMjA3LjAsMTYzLjAgTDIxMy4wLDE2My4wIiBmaWxsPSJub25lIiBzdHJva2U9IiMxOTNmM2EiIHN0cm9rZS13aWR0aD0iMi40Ii8+PHBhdGggZD0iTTI3MS4wLDEwNS4wIEwyNjUuMCwxMDUuMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTkzZjNhIiBzdHJva2Utd2lkdGg9IjIuNCIvPjxwYXRoIGQ9Ik0yNzEuMCwxMDUuMCBMMjcxLjAsMTYzLjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE5M2YzYSIgc3Ryb2tlLXdpZHRoPSIyLjQiLz48cGF0aCBkPSJNMjcxLjAsMTYzLjAgTDI2NS4wLDE2My4wIiBmaWxsPSJub25lIiBzdHJva2U9IiMxOTNmM2EiIHN0cm9rZS13aWR0aD0iMi40Ii8+PHRleHQgeD0iMjg2LjAiIHk9IjEwOS4wIiBmaWxsPSIjMTkzZjNhIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+MuKIkjwvdGV4dD48dGV4dCB4PSI1NS4wIiB5PSIyMTYuMCIgZmlsbD0iIzE3NmQ3MCIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPk1nTzwvdGV4dD48dGV4dCB4PSIxMzcuMCIgeT0iMjE2LjAiIGZpbGw9IiMxOTNmM2EiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj5NZ8Ky4oG6PC90ZXh0Pjx0ZXh0IHg9IjE4OC4wIiB5PSIyMTYuMCIgZmlsbD0iIzE5M2YzYSIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPis8L3RleHQ+PHRleHQgeD0iMjM5LjAiIHk9IjIxNi4wIiBmaWxsPSIjMTkzZjNhIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iNjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+TzwvdGV4dD48Y2lyY2xlIGN4PSIyMzQuMyIgY3k9IjE5Ny4wIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyNDMuNyIgY3k9IjE5Ny4wIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyMzQuMyIgY3k9IjIzNS4wIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyNDMuNyIgY3k9IjIzNS4wIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyMTguMCIgY3k9IjIxMS4zIiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyMTguMCIgY3k9IjIyMC43IiByPSIzLjEiIGZpbGw9IiMxNzZkNzAiLz48Y2lyY2xlIGN4PSIyNjAuMCIgY3k9IjIxMS4zIiByPSIzLjEiIGZpbGw9IiNhYzRlMjAiLz48Y2lyY2xlIGN4PSIyNjAuMCIgY3k9IjIyMC43IiByPSIzLjEiIGZpbGw9IiNhYzRlMjAiLz48cGF0aCBkPSJNMjA3LjAsMTg3LjAgTDIxMy4wLDE4Ny4wIiBmaWxsPSJub25lIiBzdHJva2U9IiMxOTNmM2EiIHN0cm9rZS13aWR0aD0iMi40Ii8+PHBhdGggZD0iTTIwNy4wLDE4Ny4wIEwyMDcuMCwyNDUuMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTkzZjNhIiBzdHJva2Utd2lkdGg9IjIuNCIvPjxwYXRoIGQ9Ik0yMDcuMCwyNDUuMCBMMjEzLjAsMjQ1LjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE5M2YzYSIgc3Ryb2tlLXdpZHRoPSIyLjQiLz48cGF0aCBkPSJNMjcxLjAsMTg3LjAgTDI2NS4wLDE4Ny4wIiBmaWxsPSJub25lIiBzdHJva2U9IiMxOTNmM2EiIHN0cm9rZS13aWR0aD0iMi40Ii8+PHBhdGggZD0iTTI3MS4wLDE4Ny4wIEwyNzEuMCwyNDUuMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTkzZjNhIiBzdHJva2Utd2lkdGg9IjIuNCIvPjxwYXRoIGQ9Ik0yNzEuMCwyNDUuMCBMMjY1LjAsMjQ1LjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE5M2YzYSIgc3Ryb2tlLXdpZHRoPSIyLjQiLz48dGV4dCB4PSIyODYuMCIgeT0iMTkxLjAiIGZpbGw9IiMxOTNmM2EiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4y4oiSPC90ZXh0PjwvZz48L3N2Zz4K",
-        "alt": "ସୋଡ଼ିୟମ୍, ଅକ୍ସିଜେନ୍ ଓ ମ୍ୟାଗ୍ନେସିୟମ୍‌ର ଇଲେକ୍ଟ୍ରନ୍ ବିନ୍ଦୁ ଏବଂ ଦୁଇ ଅକ୍ସାଇଡ୍‌ର ଆୟନ",
-        "caption": "ସୋଡ଼ିୟମ୍, ଅକ୍ସିଜେନ୍ ଓ ମ୍ୟାଗ୍ନେସିୟମ୍‌ର ଇଲେକ୍ଟ୍ରନ୍ ବିନ୍ଦୁ ଏବଂ ଦୁଇ ଅକ୍ସାଇଡ୍‌ର ଆୟନ"
+        "alt": "ସୋଡିୟମ୍, ଅକ୍ସିଜେନ୍ ଓ ମ୍ୟାଗ୍ନେସିୟମ୍‌ର ଇଲେକ୍ଟ୍ରନ୍ ବିନ୍ଦୁ ଏବଂ ଦୁଇ ଅକ୍ସାଇଡ୍‌ର ଆୟନ",
+        "caption": "ସୋଡିୟମ୍, ଅକ୍ସିଜେନ୍ ଓ ମ୍ୟାଗ୍ନେସିୟମ୍‌ର ଇଲେକ୍ଟ୍ରନ୍ ବିନ୍ଦୁ ଏବଂ ଦୁଇ ଅକ୍ସାଇଡ୍‌ର ଆୟନ"
       },
       "solutionPages": [
         54,

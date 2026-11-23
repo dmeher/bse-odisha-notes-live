@@ -11,7 +11,7 @@ export default {
         12
       ],
       "prompt": "ଏକ ବକ୍ରରେଖାର ପ୍ରତ୍ୟେକ ବିନ୍ଦୁ ଗୋଟିଏ ବିନ୍ଦୁଠାରୁ ସମଦୂରବର୍ତ୍ତୀ ହେଲେ ବକ୍ରରେଖାଟି ପୂରା ବୃତ୍ତ ହେବ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ଏକ ଅର୍ଦ୍ଧବୃତ୍ତର ପ୍ରତ୍ୟେକ ବିନ୍ଦୁ ମଧ୍ୟ କେନ୍ଦ୍ରଠାରୁ r ଦୂରରେ।",
         "ବୃତ୍ତ ହେବା ପାଇଁ ସେହି ସମତଳରେ r ଦୂରରେ ଥିବା ସମସ୍ତ ବିନ୍ଦୁ ଅନ୍ତର୍ଭୁକ୍ତ ହେବା ଆବଶ୍ୟକ।"
@@ -29,7 +29,7 @@ export default {
         12
       ],
       "prompt": "ବୃତ୍ତର ପ୍ରତ୍ୟେକ ବିନ୍ଦୁ ଏକ ବ୍ୟାସାର୍ଦ୍ଧର ପ୍ରାନ୍ତବିନ୍ଦୁ କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ପରିଧି ଉପରେ ଯେକୌଣସି P ନିଅ।",
         "କେନ୍ଦ୍ର O ସହ P କୁ ଯୋଗ କଲେ OP ଏକ ବ୍ୟାସାର୍ଦ୍ଧ।",
@@ -48,7 +48,7 @@ export default {
         12
       ],
       "prompt": "ଗୋଟିଏ ବୃତ୍ତର ଅସଂଖ୍ୟ ବ୍ୟାସ ଅଛି କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "କେନ୍ଦ୍ର ଦେଇ ଅସଂଖ୍ୟ ସରଳରେଖା ଅଙ୍କନ କରିହେବ।",
         "ପ୍ରତି ରେଖାର ଦୁଇ ବୃତ୍ତଛେଦ ବିନ୍ଦୁକୁ ଯୋଡ଼ୁଥିବା ଖଣ୍ଡ ଏକ ବ୍ୟାସ।"
@@ -66,7 +66,7 @@ export default {
         12
       ],
       "prompt": "ସବୁ ବ୍ୟାସର ଏକମାତ୍ର ସାଧାରଣ ବିନ୍ଦୁ କେନ୍ଦ୍ର କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ସଂଜ୍ଞା ଅନୁସାରେ ପ୍ରତି ବ୍ୟାସ କେନ୍ଦ୍ରଗାମୀ।",
         "ଭିନ୍ନ ଦୁଇ ବ୍ୟାସର ରେଖା ଗୋଟିଏ ମାତ୍ର ବିନ୍ଦୁରେ ମିଳେ, ସେହି ବିନ୍ଦୁ କେନ୍ଦ୍ର।"
@@ -84,7 +84,7 @@ export default {
         12
       ],
       "prompt": "ଜ୍ୟା ଦ୍ୱାରା ବିଭକ୍ତ ବୃତ୍ତର ଅନ୍ତର୍ଦେଶର ଦୁଇ ଅଂଶ ଉତ୍ତଳ ସେଟ୍ କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ଜ୍ୟାର ଏକ ପାର୍ଶ୍ୱର ଅଂଶରୁ ଦୁଇ ବିନ୍ଦୁ ବାଛ।",
         "ସେମାନଙ୍କ ସଂଯୋଜକ ଖଣ୍ଡ ବୃତ୍ତର ଅନ୍ତର୍ଦେଶ ଓ ସେହି ଅର୍ଦ୍ଧସମତଳରେ ରହେ।",
@@ -122,7 +122,7 @@ export default {
         12
       ],
       "prompt": "ପ୍ରତ୍ୟେକ ତ୍ରିଭୁଜର ପରିକେନ୍ଦ୍ର ତାହାର ଅନ୍ତଃସ୍ଥ ବିନ୍ଦୁ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ସମକୋଣୀ ତ୍ରିଭୁଜର ପରିକେନ୍ଦ୍ର କର୍ଣ୍ଣର ମଧ୍ୟବିନ୍ଦୁ।",
         "ଏହା ସୀମାରେ ଅଛି। ସ୍ଥୂଳକୋଣୀ ତ୍ରିଭୁଜରେ ପରିକେନ୍ଦ୍ର ବାହାରେ ରହେ।"
@@ -140,7 +140,7 @@ export default {
         12
       ],
       "prompt": "ବୃତ୍ତର ସବୁ ବିନ୍ଦୁଠାରୁ ସମଦୂରବର୍ତ୍ତୀ ଏକମାତ୍ର ଅନ୍ତଃସ୍ଥ ବିନ୍ଦୁ କେନ୍ଦ୍ର କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ସବୁ ପରିଧିବିନ୍ଦୁଠାରୁ କେନ୍ଦ୍ରର ଦୂରତା r।",
         "ଅନ୍ୟ ଏକ ଅନ୍ତଃସ୍ଥ ବିନ୍ଦୁ P ଓ କେନ୍ଦ୍ର O ଦେଇ ବ୍ୟାସ ଟାଣ।",
@@ -159,7 +159,7 @@ export default {
         12
       ],
       "prompt": "ରଶ୍ମି ବୃତ୍ତକୁ ମାତ୍ର ଗୋଟିଏ ବିନ୍ଦୁରେ ଛେଦ କଲେ ତାହାର ଆଦ୍ୟବିନ୍ଦୁ ନିଶ୍ଚୟ ଭିତରେ ରହେ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ବୃତ୍ତ ବାହାରର P ଠାରୁ ଏକ ସ୍ପର୍ଶକ ରଶ୍ମି ଟାଣ।",
         "ଆଦ୍ୟବିନ୍ଦୁ ବାହାରେ ଥାଇ ମଧ୍ୟ ରଶ୍ମି କେବଳ ସ୍ପର୍ଶବିନ୍ଦୁରେ ବୃତ୍ତକୁ ମିଳେ।"
@@ -177,11 +177,11 @@ export default {
         12
       ],
       "prompt": "ବୃତ୍ତରେ AB = BC ହେଲେ B ଠାରେ କେନ୍ଦ୍ରଗାମୀ ରଶ୍ମି ∠ABC ର ସମଦ୍ୱିଖଣ୍ଡକ କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "କେନ୍ଦ୍ର O ସହ A ଓ C କୁ ଯୋଗ କର। AB = BC, OA = OC ଓ OB ସାଧାରଣ।",
         "△ABO ≅ △CBO। ତେଣୁ ∠ABO = ∠OBC।",
-        "OA = OC ବ୍ୟାସାର୍ଦ୍ଧ, AB = CB ଦତ୍ତ ଓ OB ସାଧାରଣ। ତିନି ବାହୁ ମେଳ ପାଇଁ △ABO ≅ △CBO | B ଶୀର୍ଷରେ ∠ABO = ∠OBC।"
+        "OA = OC ବ୍ୟାସାର୍ଦ୍ଧ, AB = CB ଦତ୍ତ ଓ OB ସାଧାରଣ। ତିନି ବାହୁ ମେଳ ପାଇଁ △ABO ≅ △CBO। B ଶୀର୍ଷରେ ∠ABO = ∠OBC।"
       ],
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=54",
@@ -196,7 +196,7 @@ export default {
         12
       ],
       "prompt": "ଗୋଟିଏ ବିନ୍ଦୁ ଦୁଇ ବା ଅଧିକ ବୃତ୍ତର କେନ୍ଦ୍ର ହୋଇପାରିବ ନାହିଁ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ଗୋଟିଏ O କେନ୍ଦ୍ର ରଖି ଦୁଇ ଭିନ୍ନ ବ୍ୟାସାର୍ଦ୍ଧରେ ବୃତ୍ତ ଅଙ୍କନ କର।",
         "ଏଗୁଡ଼ିକ ଏକକେନ୍ଦ୍ରିକ ବୃତ୍ତ। ଏକ କେନ୍ଦ୍ରରେ ଅସଂଖ୍ୟ ବୃତ୍ତ ସମ୍ଭବ।"
@@ -214,7 +214,7 @@ export default {
         12
       ],
       "prompt": "ସରଳରେଖା ସର୍ବଦା ବୃତ୍ତକୁ ଦୁଇ ବିନ୍ଦୁରେ ଛେଦ କରେ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "କେନ୍ଦ୍ରଠାରୁ ରେଖାର ଦୂରତା d କୁ ବ୍ୟାସାର୍ଦ୍ଧ r ସହ ତୁଳନା କର।",
         "d < r ହେଲେ ଦୁଇ, d = r ହେଲେ ଏକ ଓ d > r ହେଲେ କୌଣସି ଛେଦବିନ୍ଦୁ ନାହିଁ।"
@@ -323,7 +323,7 @@ export default {
       "answer": "4 ସେ.ମି.।",
       "steps": [
         "ଜ୍ୟାର ଏକ ପ୍ରାନ୍ତକୁ A ଧର।",
-        "AD = 16/2 = 8 ସେ.ମି. |",
+        "AD = 16/2 = 8 ସେ.ମି.।",
         "କେନ୍ଦ୍ର ଓ ଜ୍ୟାର ମଧ୍ୟବିନ୍ଦୁର ସଂଯୋଜକ OD ଜ୍ୟା ପ୍ରତି ଲମ୍ବ।",
         "ସମକୋଣୀ △ODA ରେ OD² = OA² − AD² = 100 − 64 = 36। ତେଣୁ OD = 6।",
         "D, O ଓ P ମଧ୍ୟରେ ଅଛି। DP = OP − OD = 10 − 6 = 4।"
@@ -487,7 +487,7 @@ export default {
       "answer": "AB = 16 ସେ.ମି., CD = 4√21 ସେ.ମି.।",
       "steps": [
         "AB ର ଅର୍ଦ୍ଧ = √(10² − 6²) = 8 ସେ.ମି.।",
-        "CD ଏକେ ପାର୍ଶ୍ୱରେ ଆହୁରି 10 ସେ.ମି. ଦୂରରେ ଥିଲେ କେନ୍ଦ୍ରରୁ ଦୂରତା 16 ହୋଇ ବ୍ୟାସାର୍ଦ୍ଧକୁ ଟପିଯିବ।",
+        "CD ଏକା ପାର୍ଶ୍ୱରେ ଆହୁରି 10 ସେ.ମି. ଦୂରରେ ଥିଲେ କେନ୍ଦ୍ରରୁ ଦୂରତା 16 ହୋଇ ବ୍ୟାସାର୍ଦ୍ଧକୁ ଟପିଯିବ।",
         "ତେଣୁ ଅନ୍ୟ ପାର୍ଶ୍ୱରେ ଦୂରତା 10 − 6 = 4।",
         "CD ର ଅର୍ଦ୍ଧ = √(100 − 16) = 2√21। ଦୁଇ ଅର୍ଦ୍ଧକୁ ଦ୍ୱିଗୁଣ କର।"
       ],
@@ -634,7 +634,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj5BLCBCIOCsleCth+CsqOCtjeCspuCtjeCssOCssCDgrKbgrYHgrIcg4Kys4K2D4Kyk4K2N4KykIOCskyDgrLjgrL7grKfgrL7grLDgrKMg4Kyc4K2N4K2f4Ky+IFBRIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIxNTYuMTgiIGN5PSIxNjAuMDAiIHI9IjEwMy40NCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8Y2lyY2xlIGN4PSIzMTkuNzYiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxNTYuMTgsMTYwLjAwIDMxOS43NiwxNjAuMDAiIHN0cm9rZT0iIzA4N2I3OSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjIyMC45OSw3OS4zOCAyMjAuOTksMjQwLjYyIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8L2c+CjxjaXJjbGUgY3g9IjE1Ni4xOCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjE0Ni4xOCIgeT0iMTcyLjAwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QTwvdGV4dD4KPGNpcmNsZSBjeD0iMzE5Ljc2IiBjeT0iMTYwLjAwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzI4Ljc2IiB5PSIxNzIuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5CPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMjAuOTkiIGN5PSI3OS4zOCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIyMC45OSIgeT0iNjQuMzgiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5QPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMjAuOTkiIGN5PSIyNDAuNjIiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMjAuOTkiIHk9IjI1NS42MiIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlE8L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "A, B କେନ୍ଦ୍ରର ଦୁଇ ବୃତ୍ତ ଓ ସାଧାରଣ ଜ୍ୟା PQ।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.17 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 14"
+        "caption": "ଚିତ୍ର 2.17 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=56",
@@ -658,8 +658,8 @@ export default {
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKbgrYHgrIcg4Kys4K2D4Kyk4K2N4Kyk4KywIOCsruCsv+Css+CsqOCsrOCsv+CsqOCtjeCspuCtgSBQIOCskyBRIHwgQeKAk1DigJNCIOCskyBD4oCTUeKAk0Qg4Kyw4K2H4KyW4Ky+IFBRIOCsquCtjeCssOCspOCsvyDgrLLgrK7grY3grKwgfDwvdGl0bGU+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJ4PSI4IiBmaWxsPSIjZmZmY2Y1Ii8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CjxjaXJjbGUgY3g9IjE2Ny44NiIgY3k9IjE2MC4wMCIgcj0iMTEwLjM0IiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi41Ii8+CjxjaXJjbGUgY3g9IjMxNC45OCIgY3k9IjE2MC4wMCIgcj0iMTI3LjUwIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjEwOC4xOCw2Ny4yMCA0MDIuNDEsNjcuMjAiIHN0cm9rZT0iIzI0NDM1NSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjEwOC4xOCwyNTIuODAgNDAyLjQxLDI1Mi44MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjI3LjU0LDY3LjIwIDIyNy41NCwyNTIuODAiIHN0cm9rZT0iIzA4N2I3OSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjIzNy41NCw2Ny4yMCAyMzcuNTQsNzcuMjAgMjI3LjU0LDc3LjIwIiBzdHJva2U9IiNhOTU3MWUiIHN0cm9rZS13aWR0aD0iMS43Ii8+CjwvZz4KPGNpcmNsZSBjeD0iMTA4LjE4IiBjeT0iNjcuMjAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSI5Ni40NiIgeT0iNTguOTkiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSI0MDIuNDEiIGN5PSI2Ny4yMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjQxNC4zNyIgeT0iNTkuNDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5CPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMDguMTgiIGN5PSIyNTIuODAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSI5Ni40NiIgeT0iMjYxLjAxIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iNDAyLjQxIiBjeT0iMjUyLjgwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDE0LjM3IiB5PSIyNjAuNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5EPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMjcuNTQiIGN5PSI2Ny4yMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIyNy41NCIgeT0iNTIuMjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5QPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMjcuNTQiIGN5PSIyNTIuODAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMjcuNTQiIHk9IjI2Ny44MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlE8L3RleHQ+Cjwvc3ZnPgo=",
-        "alt": "ଦୁଇ ବୃତ୍ତର ମିଳନବିନ୍ଦୁ P ଓ Q | A–P–B ଓ C–Q–D ରେଖା PQ ପ୍ରତି ଲମ୍ବ।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.18 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 14"
+        "alt": "ଦୁଇ ବୃତ୍ତର ମିଳନବିନ୍ଦୁ P ଓ Q। A–P–B ଓ C–Q–D ରେଖା PQ ପ୍ରତି ଲମ୍ବ।",
+        "caption": "ଚିତ୍ର 2.18 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=56",
@@ -705,7 +705,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grLjgrK7grJXgrYjgrKjgrY3grKbgrY3grLDgrL/grJUg4Kys4K2D4Kyk4K2N4KykIFPigoEsIFPigoIg4KyTIOCsnOCtjeCtn+CsvuCssOCthyBB4oCTQ+KAk0TigJNCIOCsleCtjeCssOCsriB8PC90aXRsZT4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjgiIGZpbGw9IiNmZmZjZjUiLz4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMTYwLjAwIiByPSIxMjcuNTAiIHN0cm9rZT0iIzI0NDM1NSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMTYwLjAwIiByPSI3MC4xMiIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxMjguOTIsMTk5Ljk1IDM3MS4wOCwxOTkuOTUiIHN0cm9rZT0iIzA4N2I3OSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+CjwvZz4KPHRleHQgeD0iMzYwLjY3IiB5PSI3MC4wNCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlPigoE8L3RleHQ+Cjx0ZXh0IHg9IjMxMy43MSIgeT0iMTA5LjU2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+U+KCgjwvdGV4dD4KPGNpcmNsZSBjeD0iMTI4LjkyIiBjeT0iMTk5Ljk1IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMTE0LjkyIiB5PSIyMDUuOTUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxOTIuMzciIGN5PSIxOTkuOTUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxOTIuMzciIHk9IjIxNC45NSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkM8L3RleHQ+CjxjaXJjbGUgY3g9IjMwNy42MyIgY3k9IjE5OS45NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjMwNy42MyIgeT0iMjE0Ljk1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMzcxLjA4IiBjeT0iMTk5Ljk1IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzg2LjA4IiB5PSIyMDQuOTUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5CPC90ZXh0Pgo8L3N2Zz4K",
         "alt": "ସମକୈନ୍ଦ୍ରିକ ବୃତ୍ତ S₁, S₂ ଓ ଜ୍ୟାରେ A–C–D–B କ୍ରମ।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.19 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 15"
+        "caption": "ଚିତ୍ର 2.19 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=57",
@@ -765,7 +765,7 @@ export default {
         32
       ],
       "prompt": "ବୃତ୍ତର ଯେକୌଣସି ଉପସେଟ୍‌କୁ ଚାପ କହିହେବ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ଚାପ ଦୁଇ ପ୍ରାନ୍ତ ମଧ୍ୟରେ ବୃତ୍ତର ଅବିଚ୍ଛିନ୍ନ ଅଂଶ।",
         "କେବଳ ଦୁଇଟି ବିଚ୍ଛିନ୍ନ ବିନ୍ଦୁର ସେଟ୍ ଉପସେଟ୍ ହେଲେ ମଧ୍ୟ ଚାପ ନୁହେଁ।"
@@ -783,7 +783,7 @@ export default {
         32
       ],
       "prompt": "ଚାପର ଅନ୍ତଃସ୍ଥ ବିନ୍ଦୁ କି ବୃତ୍ତର ଅନ୍ତଃସ୍ଥ ବିନ୍ଦୁ ନୁହେଁ?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ଚାପର ଅନ୍ତଃସ୍ଥ କହିଲେ ଚାପର ପ୍ରାନ୍ତବିନ୍ଦୁ ଦୁଇଟି ଛଡ଼ା ଅନ୍ୟ ବିନ୍ଦୁକୁ ବୁଝାଏ।",
         "ସେହି ବିନ୍ଦୁ ବୃତ୍ତ ଉପରେ ଅଛି ଓ କେନ୍ଦ୍ରଠାରୁ ତାହାର ଦୂରତା r।"
@@ -801,7 +801,7 @@ export default {
         32
       ],
       "prompt": "ଗୋଟିଏ ବୃତ୍ତର ଭିନ୍ନ ଦୁଇ ଚାପର ପ୍ରାନ୍ତ P, Q ସମାନ ହେଲେ ସେମାନେ ପରିପୂରକ କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "P ଠାରୁ Q ଯାଏଁ ପରିଧିରେ ଦୁଇଟି ଭିନ୍ନ ପଥ ଅଛି।",
         "ସେହି ଦୁଇ ଚାପର ସଂଯୋଗରେ ସମଗ୍ର ବୃତ୍ତ ଗଠିତ ହୁଏ।",
@@ -820,7 +820,7 @@ export default {
         32
       ],
       "prompt": "ଯେକୌଣସି ଚାପର ପ୍ରାନ୍ତକୁ କେନ୍ଦ୍ର ସହ ଯୋଡ଼ି ମିଳୁଥିବା ସାଧାରଣ ∠AOB ସେହି ଚାପର କେନ୍ଦ୍ରସ୍ଥ କୋଣ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ପାଠର ସଂଜ୍ଞାରେ କ୍ଷୁଦ୍ର ଚାପ AB ର ମାପ m∠AOB।",
         "ସେହି ପ୍ରାନ୍ତର ବୃହତ୍ ଚାପର ମାପ 360°−m∠AOB।",
@@ -839,7 +839,7 @@ export default {
         32
       ],
       "prompt": "ଦୁଇ ଚାପର ମାପର ସମଷ୍ଟି 360° ଅତିକ୍ରମ କରିପାରିବ ନାହିଁ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ଦୁଇଟି ବୃହତ୍ ଚାପର ମାପ ପ୍ରତ୍ୟେକ 180° ଠାରୁ ଅଧିକ।",
         "ଦୃଷ୍ଟାନ୍ତ ସ୍ୱରୂପ 220° ଓ 230° ଚାପର ମାପର ସମଷ୍ଟି 450°।"
@@ -857,7 +857,7 @@ export default {
         32
       ],
       "prompt": "ବୃତ୍ତ ଏକ ଉତ୍ତଳ ସେଟ୍ ନୁହେଁ — ଠିକ୍ କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ଏକ ବ୍ୟାସର ଦୁଇ ପ୍ରାନ୍ତ ପରିଧିରେ ଅଛି।",
         "ତାଙ୍କ ମଧ୍ୟବର୍ତ୍ତୀ କେନ୍ଦ୍ର ପରିଧିରେ ନାହିଁ।",
@@ -876,7 +876,7 @@ export default {
         32
       ],
       "prompt": "ମାତ୍ର ଗୋଟିଏ ସାଧାରଣ ପ୍ରାନ୍ତବିନ୍ଦୁ ଥିବା ସବୁ ଚାପ ସନ୍ନିହିତ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "ଉଦାହରଣ ପାଇଁ ପରିଧିରେ A,B,C କ୍ରମରେ ଥାଆନ୍ତୁ।",
         "A ଠାରୁ B ଓ A ଠାରୁ B ଦେଇ C ପର୍ଯ୍ୟନ୍ତ ଚାପ ନିଅ।",
@@ -896,7 +896,7 @@ export default {
         32
       ],
       "prompt": "ସର୍ବସମ ଜ୍ୟାର ସନ୍ନିହିତ ଚାପକୁ ଯୋଡ଼ିଲେ ସର୍ବଦା ବୃହତ୍ ଚାପ ହୁଏ କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "30° ମାପ ବିଶିଷ୍ଟ ଦୁଇ ସନ୍ନିହିତ ଚାପ ନିଅ। ସେଗୁଡ଼ିକର ଜ୍ୟା ସର୍ବସମ।",
         "ଏମାନଙ୍କ ସଂଯୋଗର ମାପ 60° < 180°। ତେଣୁ ଏହା କ୍ଷୁଦ୍ର ଚାପ।"
@@ -934,7 +934,7 @@ export default {
         32
       ],
       "prompt": "ଚାପ BPC ର ମାପ 30° ହେଲେ ପରିଧିର ଯେକୌଣସି A ଠାରେ ∠BAC ସର୍ବଦା 15° କି?",
-      "answer": "F।",
+      "answer": "ଭୁଲ୍।",
       "steps": [
         "A ବିପରୀତ ଚାପରେ ଥିଲେ ସେ 30° ଚାପକୁ ଦେଖେ, ତେଣୁ ∠BAC = 15°।",
         "A ଯଦି 30° ଚାପର ଭିତରେ, ଛେଦିତ ଚାପ 330° ଓ ∠BAC = 165°।"
@@ -952,7 +952,7 @@ export default {
         32
       ],
       "prompt": "ଗୋଟିଏ ଚାପରେ ଅସଂଖ୍ୟ ବିନ୍ଦୁ ଅଛି କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ଚାପର ମଧ୍ୟବିନ୍ଦୁ ନେଇ ତାହାକୁ ଦୁଇଟି ଚାପରେ ଭାଗ କର।",
         "ପ୍ରତ୍ୟେକ ନୂଆ ଚାପରେ ଏହିପରି ମଧ୍ୟବିନ୍ଦୁ ମିଳି ଚାଲିଥାଏ।"
@@ -970,7 +970,7 @@ export default {
         32
       ],
       "prompt": "ବୃତ୍ତାନ୍ତର୍ଲିଖିତ ରମ୍ବସ୍ ଏକ ବର୍ଗଚିତ୍ର କି?",
-      "answer": "T।",
+      "answer": "ଠିକ୍।",
       "steps": [
         "ରମ୍ବସ୍‌ର ସମ୍ମୁଖୀନ କୋଣ ସମାନ। ବୃତ୍ତାନ୍ତର୍ଲିଖିତ ଥିବାରୁ ସେମାନଙ୍କ ଯୋଗ 180°।",
         "ଏଣୁ ପ୍ରତି କୋଣ 90°। ଚାରି ବାହୁ ଆଗରୁ ସମାନ ଥିବାରୁ ଏହା ବର୍ଗଚିତ୍ର।"
@@ -1028,7 +1028,7 @@ export default {
       "answer": "70°।",
       "steps": [
         "ABCDରେ Aର ବିପରୀତ C, Bର ବିପରୀତ D।",
-        "C = 180° − 50° = 130°, D = 180° − 120° = 60° |",
+        "C = 180° − 50° = 130°, D = 180° − 120° = 60°।",
         "ବୃହତ୍ତର ମାପରୁ କ୍ଷୁଦ୍ରତର ମାପ ବିୟୋଗ କର।"
       ],
       "originalPdf": {
@@ -1083,7 +1083,7 @@ export default {
       "prompt": "AB ର ଏକ ପାର୍ଶ୍ୱରେ ∠ACB = ∠ADB = 20°। △ACD ର ପରିକେନ୍ଦ୍ର O ହେଲେ ∠AOB କେତେ?",
       "answer": "40°।",
       "steps": [
-        "ଏକେ ପାର୍ଶ୍ୱରେ AB ଉପରିସ୍ଥ କୋଣ ସମାନ ହେତୁ A,B,C,D ଏକବୃତ୍ତୀୟ।",
+        "ଏକା ପାର୍ଶ୍ୱରେ AB ଉପରିସ୍ଥ କୋଣ ସମାନ ହେତୁ A,B,C,D ଏକବୃତ୍ତୀୟ।",
         "∠ACB ଯେଉଁ AB ଚାପକୁ ଛେଦ କରେ, ତାହାର କେନ୍ଦ୍ରସ୍ଥ କୋଣ 2×20°।"
       ],
       "originalPdf": {
@@ -1140,7 +1140,7 @@ export default {
       "steps": [
         "ପୂର୍ଣ୍ଣ ବୃତ୍ତରେ 360°।",
         "ବ୍ୟାସରେ ଏହା ଦୁଇ ସର୍ବସମ ଚାପ ହେବାରୁ ପ୍ରତ୍ୟେକ 360°/2 = 180°।",
-        "ଅର୍ଦ୍ଧବୃତ୍ତର ଦୁଇ ପ୍ରାନ୍ତରେ ଅଙ୍କିତ ବ୍ୟାସାର୍ଦ୍ଧ ଏକେ ସରଳରେଖାର ବିପରୀତ ରଶ୍ମି। ତେଣୁ ଏହି ଚାପର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଏକ ସରଳକୋଣ।"
+        "ଅର୍ଦ୍ଧବୃତ୍ତର ଦୁଇ ପ୍ରାନ୍ତରେ ଅଙ୍କିତ ବ୍ୟାସାର୍ଦ୍ଧ ଏକା ସରଳରେଖାର ବିପରୀତ ରଶ୍ମି। ତେଣୁ ଏହି ଚାପର କେନ୍ଦ୍ରସ୍ଥ କୋଣ ଏକ ସରଳକୋଣ।"
       ],
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1181,7 +1181,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrYPgrKTgrY3grKTgrLDgrYcg4pazQUJDIOCsj+CsrOCsgiDgrJrgrL7grKogQkVBLCBBREMsIEJGQyB8IOCsleCth+CsqOCtjeCspuCtjeCssCBPIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMzIuNTAgMTM5LjU4LDIyMy43NSAzNjAuNDIsMjIzLjc1IDI1MC4wMCwzMi41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIzMi41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMTcuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMzkuNTgiIGN5PSIyMjMuNzUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9IjIzMS4yNSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9IjIyMy43NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM3Mi41NCIgeT0iMjMxLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMTM5LjU4IiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMzYwLjQyIiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNzIuNTQiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMjg3LjUwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIzMDIuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNjEuMDAiIHk9IjE2OS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ବୃତ୍ତରେ △ABC ଏବଂ ଚାପ BEA, ADC, BFC। କେନ୍ଦ୍ର O।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.50 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.50 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1200,12 +1200,12 @@ export default {
       "steps": [
         "A ଓ C ପ୍ରାନ୍ତବିନ୍ଦୁ ରହନ୍ତି।",
         "B ନ ଥିବା ବିପରୀତ A–D–C ଚାପ କୋଣଟି ଦ୍ୱାରା ଛେଦିତ।",
-        "∠ABCର ବାହୁ BA ଓ BC, ତେଣୁ ଚାପର ପ୍ରାନ୍ତ A ଓ C | Aରୁ C ଯିବାର ଦୁଇଟି ପଥରେ B ଥିବା ପଥକୁ ବାଦ ଦେଲେ D ଦେଇ ଯାଇଥିବା ପଥ ରହେ।"
+        "∠ABCର ବାହୁ BA ଓ BC, ତେଣୁ ଚାପର ପ୍ରାନ୍ତ A ଓ C। Aରୁ C ଯିବାର ଦୁଇଟି ପଥରେ B ଥିବା ପଥକୁ ବାଦ ଦେଲେ D ଦେଇ ଯାଇଥିବା ପଥ ରହେ।"
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrYPgrKTgrY3grKTgrLDgrYcg4pazQUJDIOCsj+CsrOCsgiDgrJrgrL7grKogQkVBLCBBREMsIEJGQyB8IOCsleCth+CsqOCtjeCspuCtjeCssCBPIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMzIuNTAgMTM5LjU4LDIyMy43NSAzNjAuNDIsMjIzLjc1IDI1MC4wMCwzMi41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIzMi41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMTcuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMzkuNTgiIGN5PSIyMjMuNzUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9IjIzMS4yNSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9IjIyMy43NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM3Mi41NCIgeT0iMjMxLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMTM5LjU4IiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMzYwLjQyIiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNzIuNTQiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMjg3LjUwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIzMDIuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNjEuMDAiIHk9IjE2OS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ବୃତ୍ତରେ △ABC ଏବଂ ଚାପ BEA, ADC, BFC। କେନ୍ଦ୍ର O।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.50 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.50 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1229,7 +1229,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrYPgrKTgrY3grKTgrLDgrYcg4pazQUJDIOCsj+CsrOCsgiDgrJrgrL7grKogQkVBLCBBREMsIEJGQyB8IOCsleCth+CsqOCtjeCspuCtjeCssCBPIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMzIuNTAgMTM5LjU4LDIyMy43NSAzNjAuNDIsMjIzLjc1IDI1MC4wMCwzMi41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIzMi41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMTcuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMzkuNTgiIGN5PSIyMjMuNzUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9IjIzMS4yNSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9IjIyMy43NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM3Mi41NCIgeT0iMjMxLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMTM5LjU4IiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMzYwLjQyIiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNzIuNTQiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMjg3LjUwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIzMDIuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNjEuMDAiIHk9IjE2OS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ବୃତ୍ତରେ △ABC ଏବଂ ଚାପ BEA, ADC, BFC। କେନ୍ଦ୍ର O।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.50 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.50 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1253,7 +1253,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrYPgrKTgrY3grKTgrLDgrYcg4pazQUJDIOCsj+CsrOCsgiDgrJrgrL7grKogQkVBLCBBREMsIEJGQyB8IOCsleCth+CsqOCtjeCspuCtjeCssCBPIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMzIuNTAgMTM5LjU4LDIyMy43NSAzNjAuNDIsMjIzLjc1IDI1MC4wMCwzMi41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIzMi41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMTcuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMzkuNTgiIGN5PSIyMjMuNzUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9IjIzMS4yNSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9IjIyMy43NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM3Mi41NCIgeT0iMjMxLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMTM5LjU4IiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMzYwLjQyIiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNzIuNTQiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMjg3LjUwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIzMDIuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNjEuMDAiIHk9IjE2OS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ବୃତ୍ତରେ △ABC ଏବଂ ଚାପ BEA, ADC, BFC। କେନ୍ଦ୍ର O।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.50 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.50 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1277,7 +1277,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrYPgrKTgrY3grKTgrLDgrYcg4pazQUJDIOCsj+CsrOCsgiDgrJrgrL7grKogQkVBLCBBREMsIEJGQyB8IOCsleCth+CsqOCtjeCspuCtjeCssCBPIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMzIuNTAgMTM5LjU4LDIyMy43NSAzNjAuNDIsMjIzLjc1IDI1MC4wMCwzMi41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIzMi41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMTcuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMzkuNTgiIGN5PSIyMjMuNzUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9IjIzMS4yNSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9IjIyMy43NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM3Mi41NCIgeT0iMjMxLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMTM5LjU4IiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMzYwLjQyIiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNzIuNTQiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMjg3LjUwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIzMDIuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNjEuMDAiIHk9IjE2OS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ବୃତ୍ତରେ △ABC ଏବଂ ଚାପ BEA, ADC, BFC। କେନ୍ଦ୍ର O।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.50 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.50 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1301,7 +1301,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrYPgrKTgrY3grKTgrLDgrYcg4pazQUJDIOCsj+CsrOCsgiDgrJrgrL7grKogQkVBLCBBREMsIEJGQyB8IOCsleCth+CsqOCtjeCspuCtjeCssCBPIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMzIuNTAgMTM5LjU4LDIyMy43NSAzNjAuNDIsMjIzLjc1IDI1MC4wMCwzMi41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIzMi41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMTcuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMzkuNTgiIGN5PSIyMjMuNzUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9IjIzMS4yNSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9IjIyMy43NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM3Mi41NCIgeT0iMjMxLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMTM5LjU4IiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMzYwLjQyIiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNzIuNTQiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMjg3LjUwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIzMDIuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNjEuMDAiIHk9IjE2OS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ବୃତ୍ତରେ △ABC ଏବଂ ଚାପ BEA, ADC, BFC। କେନ୍ଦ୍ର O।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.50 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.50 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1326,7 +1326,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrYPgrKTgrY3grKTgrLDgrYcg4pazQUJDIOCsj+CsrOCsgiDgrJrgrL7grKogQkVBLCBBREMsIEJGQyB8IOCsleCth+CsqOCtjeCspuCtjeCssCBPIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMzIuNTAgMTM5LjU4LDIyMy43NSAzNjAuNDIsMjIzLjc1IDI1MC4wMCwzMi41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIzMi41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMTcuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMzkuNTgiIGN5PSIyMjMuNzUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9IjIzMS4yNSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9IjIyMy43NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM3Mi41NCIgeT0iMjMxLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMTM5LjU4IiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMjcuNDYiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMzYwLjQyIiBjeT0iOTYuMjUiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNzIuNTQiIHk9Ijg4Ljc1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMjg3LjUwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIzMDIuNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNjEuMDAiIHk9IjE2OS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ବୃତ୍ତରେ △ABC ଏବଂ ଚାପ BEA, ADC, BFC। କେନ୍ଦ୍ର O।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.50 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.50 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1352,7 +1352,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj5BQkNEIOCsrOCtg+CspOCtjeCspOCsvuCsqOCtjeCspOCssOCtjeCssuCsv+CsluCsv+CspCB8IEFDIOCskyBCRCDgrKzgrY3grZ/grL7grLggfCDgrKzgrYPgrKTgrY3grKTgrLDgrYcgQSwgRSwgQiwgRiwgQywgRywgRCwgSCDgrJXgrY3grLDgrK4gfDwvdGl0bGU+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJ4PSI4IiBmaWxsPSIjZmZmY2Y1Ii8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CjxjaXJjbGUgY3g9IjI1MC4wMCIgY3k9IjE2MC4wMCIgcj0iMTI3LjUwIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjI3Mi4xNCwzNC40NCAxMjIuNTAsMTYwLjAwIDIyNy44NiwyODUuNTYgMzc3LjUwLDE2MC4wMCAyNzIuMTQsMzQuNDQiIHN0cm9rZT0iIzI0NDM1NSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjI3Mi4xNCwzNC40NCAyMjcuODYsMjg1LjU2IiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxMjIuNTAsMTYwLjAwIDM3Ny41MCwxNjAuMDAiIHN0cm9rZT0iIzA4N2I3OSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+CjwvZz4KPGNpcmNsZSBjeD0iMjcyLjE0IiBjeT0iMzQuNDQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNzQuNTciIHk9IjE5LjY2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QTwvdGV4dD4KPGNpcmNsZSBjeD0iMTIyLjUwIiBjeT0iMTYwLjAwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMTA4LjUwIiB5PSIxNjAuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5CPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMjcuODYiIGN5PSIyODUuNTYiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMjUuNDMiIHk9IjMwMC4zNCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkM8L3RleHQ+CjxjaXJjbGUgY3g9IjM3Ny41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM5MS41MCIgeT0iMTYwLjAwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMTY4LjA0IiBjeT0iNjIuMzMiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxNTkuMDUiIHk9IjUwLjg0IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RTwvdGV4dD4KPGNpcmNsZSBjeD0iMTUyLjMzIiBjeT0iMjQxLjk2IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMTQxLjYwIiB5PSIyNTEuNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5GPC90ZXh0Pgo8Y2lyY2xlIGN4PSIzMzEuOTYiIGN5PSIyNTcuNjciIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNDAuOTUiIHk9IjI2OS4xNiIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkc8L3RleHQ+CjxjaXJjbGUgY3g9IjM0Ny42NyIgY3k9Ijc4LjA0IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzU4LjQwIiB5PSI2OC40MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkg8L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "ABCD ବୃତ୍ତାନ୍ତର୍ଲିଖିତ। AC ଓ BD ବ୍ୟାସ। ବୃତ୍ତରେ A, E, B, F, C, G, D, H କ୍ରମ।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.51 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 33"
+        "caption": "ଚିତ୍ର 2.51 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=75",
@@ -1366,7 +1366,7 @@ export default {
       "prompt": "ଜ୍ୟା AB ଓ CD ପରସ୍ପରକୁ P ରେ ଛେଦ କରନ୍ତି। ∠PBD = 80°, ∠CAP = 45°। △BPD ଓ △APC ର ସମସ୍ତ କୋଣ ଏବଂ △APC ଓ △DPB ର ସମ୍ପର୍କ ନିର୍ଣ୍ଣୟ କର।",
       "answer": "△BPD ର B, P, D କୋଣ 80°, 55°, 45°। △APC ର A, P, C କୋଣ 45°, 55°, 80°। △APC ∼ △DPB।",
       "steps": [
-        "∠CAB ଓ ∠CDB ଏକେ CB ଚାପ ଉପରିସ୍ଥ। P ଜ୍ୟାଦ୍ୱୟ ଉପରେ ଥିବାରୁ ∠PDB = ∠CAB = ∠CAP = 45°।",
+        "∠CAB ଓ ∠CDB ଏକା CB ଚାପ ଉପରିସ୍ଥ। P ଜ୍ୟାଦ୍ୱୟ ଉପରେ ଥିବାରୁ ∠PDB = ∠CAB = ∠CAP = 45°।",
         "△BPD ରେ ∠BPD = 180° − 80° − 45° = 55°। ଏହାର ପ୍ରତୀପ କୋଣ ∠APC = 55°।",
         "△APC ରେ ∠ACP = 180° − 45° − 55° = 80°।",
         "A ↔ D, P ↔ P ଓ C ↔ B ଅନୁରୂପ କୋଣ ସମାନ ହେତୁ ତ୍ରିଭୁଜଦ୍ୱୟ ସଦୃଶ।"
@@ -1381,7 +1381,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj5BQiDgrJMgQ0Qg4Kyc4K2N4K2f4Ky+IFDgrLDgrYcg4Kyb4K2H4KymIOCsleCssOCsqOCtjeCspOCsvyB8IEFDIOCskyBEQiDgrJzgrY3grZ/grL7grLDgrYcg4pazQVBDIOCskyDilrNEUEIg4KyX4Kyg4Ky/4KykIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxMjIuNTgsMTU1LjU1IDI1MC4wMCwyODcuNTAiIHN0cm9rZT0iIzI0NDM1NSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjM3Ny41MCwxNjAuMDAgMzcxLjI2LDEyMC42MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMTIyLjU4LDE1NS41NSAzNzcuNTAsMTYwLjAwIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMjg3LjUwIDM3MS4yNiwxMjAuNjAiIHN0cm9rZT0iIzA4N2I3OSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+CjwvZz4KPGNpcmNsZSBjeD0iMTIyLjU4IiBjeT0iMTU1LjU1IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMTA4LjU5IiB5PSIxNTUuMDMiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIzNzcuNTAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzOTEuNTAiIHk9IjE2MC4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjI1MC4wMCIgY3k9IjI4Ny41MCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI1MC4wMCIgeT0iMzAyLjUwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMzcxLjI2IiBjeT0iMTIwLjYwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzg0LjU3IiB5PSIxMTUuOTciIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5EPC90ZXh0Pgo8Y2lyY2xlIGN4PSIzNDMuMDciIGN5PSIxNTkuNDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzMzkuMDciIHk9IjE3Ni40MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlA8L3RleHQ+Cjwvc3ZnPgo=",
         "alt": "AB ଓ CD ଜ୍ୟା Pରେ ଛେଦ କରନ୍ତି। AC ଓ DB ଜ୍ୟାରେ △APC ଓ △DPB ଗଠିତ।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.52 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 34"
+        "caption": "ଚିତ୍ର 2.52 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=76",
@@ -1418,7 +1418,7 @@ export default {
       "prompt": "ଚିତ୍ର 2.53 ରେ A-P-Q, A-R-S ଦୁଇ ଛେଦକ। APR ଓ AQS ତ୍ରିଭୁଜର ସଦୃଶତା ଓ ଅନୁରୂପ ଶୀର୍ଷ ଦେଖାଅ।",
       "answer": "ସଠିକ୍ ଅନୁରୂପ କ୍ରମ △APR ∼ △ASQ।",
       "steps": [
-        "∠PAR ଓ ∠SAQ ଏକେ ଦୁଇ ରଶ୍ମି ମଧ୍ୟର କୋଣ।",
+        "∠PAR ଓ ∠SAQ ଏକା ଦୁଇ ରଶ୍ମି ମଧ୍ୟର କୋଣ।",
         "P,Q,S,R ଏକବୃତ୍ତୀୟ।",
         "∠APR ହେଉଛି ∠QPR ର ବହିଃକୋଣ, ତେଣୁ ଏହା ସମ୍ମୁଖୀନ ଅନ୍ତଃକୋଣ ∠QSR = ∠ASQ ସହ ସମାନ।",
         "କୋଣ–କୋଣ ସଦୃଶତାରେ A ସହ A, P ସହ S ଓ R ସହ Q ମିଳନ୍ତି।",
@@ -1426,8 +1426,8 @@ export default {
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrLngrL/grIPgrLjgrY3grKUgQeCssOCtgSDgrJvgrYfgrKbgrJUgQeKAk1DigJNRIOCskyBB4oCTUuKAk1MgfCBQUyDgrJMgUlHgrLAg4Kyb4K2H4KymIFQsIOCsleCtjeCst+CtgeCspuCtjeCssCDgrJrgrL7grKogUVhTIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIzMjkuMDAiIGN5PSIxNjAuMDAiIHI9IjExOC41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDEzLjI5LDc2LjcxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCAyMTIuNjYsMTgyLjUxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI0MTMuMjksNzYuNzEgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCA0MzQuNjMsMjEzLjcxIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyMTIuNjYsMTgyLjUxIDQxMy4yOSw3Ni43MSIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSI1Mi41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM4LjUwIiB5PSIxNjAuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMTYuNzMiIGN5PSIxMjIuMDgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMDcuNTAiIHk9IjExMC44MSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlA8L3RleHQ+CjxjaXJjbGUgY3g9IjQxMy4yOSIgY3k9Ijc2LjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDI1Ljc2IiB5PSI2OS44OSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlE8L3RleHQ+CjxjaXJjbGUgY3g9IjIxMi42NiIgY3k9IjE4Mi41MSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIwMC42NyIgeT0iMTkwLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+UjwvdGV4dD4KPGNpcmNsZSBjeD0iNDM0LjYzIiBjeT0iMjEzLjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDQ4LjA3IiB5PSIyMTcuODkiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5TPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNzguMjEiIGN5PSIxNDcuOTQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNzguMjEiIHk9IjE2My45NCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlQ8L3RleHQ+CjxjaXJjbGUgY3g9IjQ0Ni4wOSIgY3k9IjE0MS43NiIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjQ2MS4wOSIgeT0iMTQyLjc2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WDwvdGV4dD4KPC9zdmc+Cg==",
-        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S | PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.53 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 34"
+        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S। PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
+        "caption": "ଚିତ୍ର 2.53 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=76",
@@ -1445,13 +1445,13 @@ export default {
       "answer": "△APS ∼ △ARQ।",
       "steps": [
         "∠PAS = ∠RAQ କାରଣ ତାହା ଦୁଇ ଛେଦକର ସାଧାରଣ କୋଣ।",
-        "∠ASP = ∠RSP ଓ ∠AQR = ∠PQR। ଶେଷ ଦୁଇ କୋଣ ଏକେ ଚାପ PR କୁ ଛେଦ କରନ୍ତି।",
+        "∠ASP = ∠RSP ଓ ∠AQR = ∠PQR। ଶେଷ ଦୁଇ କୋଣ ଏକା ଚାପ PR କୁ ଛେଦ କରନ୍ତି।",
         "ଦୁଇ ଯୋଡ଼ି କୋଣ ସମାନ ହେତୁ କୋଣ–କୋଣ ସଦୃଶତା ଲାଗେ।"
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrLngrL/grIPgrLjgrY3grKUgQeCssOCtgSDgrJvgrYfgrKbgrJUgQeKAk1DigJNRIOCskyBB4oCTUuKAk1MgfCBQUyDgrJMgUlHgrLAg4Kyb4K2H4KymIFQsIOCsleCtjeCst+CtgeCspuCtjeCssCDgrJrgrL7grKogUVhTIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIzMjkuMDAiIGN5PSIxNjAuMDAiIHI9IjExOC41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDEzLjI5LDc2LjcxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCAyMTIuNjYsMTgyLjUxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI0MTMuMjksNzYuNzEgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCA0MzQuNjMsMjEzLjcxIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyMTIuNjYsMTgyLjUxIDQxMy4yOSw3Ni43MSIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSI1Mi41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM4LjUwIiB5PSIxNjAuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMTYuNzMiIGN5PSIxMjIuMDgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMDcuNTAiIHk9IjExMC44MSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlA8L3RleHQ+CjxjaXJjbGUgY3g9IjQxMy4yOSIgY3k9Ijc2LjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDI1Ljc2IiB5PSI2OS44OSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlE8L3RleHQ+CjxjaXJjbGUgY3g9IjIxMi42NiIgY3k9IjE4Mi41MSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIwMC42NyIgeT0iMTkwLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+UjwvdGV4dD4KPGNpcmNsZSBjeD0iNDM0LjYzIiBjeT0iMjEzLjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDQ4LjA3IiB5PSIyMTcuODkiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5TPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNzguMjEiIGN5PSIxNDcuOTQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNzguMjEiIHk9IjE2My45NCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlQ8L3RleHQ+CjxjaXJjbGUgY3g9IjQ0Ni4wOSIgY3k9IjE0MS43NiIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjQ2MS4wOSIgeT0iMTQyLjc2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WDwvdGV4dD4KPC9zdmc+Cg==",
-        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S | PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.53 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 34"
+        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S। PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
+        "caption": "ଚିତ୍ର 2.53 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=76",
@@ -1475,8 +1475,8 @@ export default {
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrLngrL/grIPgrLjgrY3grKUgQeCssOCtgSDgrJvgrYfgrKbgrJUgQeKAk1DigJNRIOCskyBB4oCTUuKAk1MgfCBQUyDgrJMgUlHgrLAg4Kyb4K2H4KymIFQsIOCsleCtjeCst+CtgeCspuCtjeCssCDgrJrgrL7grKogUVhTIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIzMjkuMDAiIGN5PSIxNjAuMDAiIHI9IjExOC41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDEzLjI5LDc2LjcxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCAyMTIuNjYsMTgyLjUxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI0MTMuMjksNzYuNzEgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCA0MzQuNjMsMjEzLjcxIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyMTIuNjYsMTgyLjUxIDQxMy4yOSw3Ni43MSIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSI1Mi41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM4LjUwIiB5PSIxNjAuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMTYuNzMiIGN5PSIxMjIuMDgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMDcuNTAiIHk9IjExMC44MSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlA8L3RleHQ+CjxjaXJjbGUgY3g9IjQxMy4yOSIgY3k9Ijc2LjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDI1Ljc2IiB5PSI2OS44OSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlE8L3RleHQ+CjxjaXJjbGUgY3g9IjIxMi42NiIgY3k9IjE4Mi41MSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIwMC42NyIgeT0iMTkwLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+UjwvdGV4dD4KPGNpcmNsZSBjeD0iNDM0LjYzIiBjeT0iMjEzLjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDQ4LjA3IiB5PSIyMTcuODkiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5TPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNzguMjEiIGN5PSIxNDcuOTQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNzguMjEiIHk9IjE2My45NCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlQ8L3RleHQ+CjxjaXJjbGUgY3g9IjQ0Ni4wOSIgY3k9IjE0MS43NiIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjQ2MS4wOSIgeT0iMTQyLjc2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WDwvdGV4dD4KPC9zdmc+Cg==",
-        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S | PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.53 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 34"
+        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S। PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
+        "caption": "ଚିତ୍ର 2.53 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=76",
@@ -1500,8 +1500,8 @@ export default {
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrLngrL/grIPgrLjgrY3grKUgQeCssOCtgSDgrJvgrYfgrKbgrJUgQeKAk1DigJNRIOCskyBB4oCTUuKAk1MgfCBQUyDgrJMgUlHgrLAg4Kyb4K2H4KymIFQsIOCsleCtjeCst+CtgeCspuCtjeCssCDgrJrgrL7grKogUVhTIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIzMjkuMDAiIGN5PSIxNjAuMDAiIHI9IjExOC41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDEzLjI5LDc2LjcxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCAyMTIuNjYsMTgyLjUxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI0MTMuMjksNzYuNzEgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCA0MzQuNjMsMjEzLjcxIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyMTIuNjYsMTgyLjUxIDQxMy4yOSw3Ni43MSIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSI1Mi41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM4LjUwIiB5PSIxNjAuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMTYuNzMiIGN5PSIxMjIuMDgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMDcuNTAiIHk9IjExMC44MSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlA8L3RleHQ+CjxjaXJjbGUgY3g9IjQxMy4yOSIgY3k9Ijc2LjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDI1Ljc2IiB5PSI2OS44OSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlE8L3RleHQ+CjxjaXJjbGUgY3g9IjIxMi42NiIgY3k9IjE4Mi41MSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIwMC42NyIgeT0iMTkwLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+UjwvdGV4dD4KPGNpcmNsZSBjeD0iNDM0LjYzIiBjeT0iMjEzLjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDQ4LjA3IiB5PSIyMTcuODkiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5TPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNzguMjEiIGN5PSIxNDcuOTQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNzguMjEiIHk9IjE2My45NCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlQ8L3RleHQ+CjxjaXJjbGUgY3g9IjQ0Ni4wOSIgY3k9IjE0MS43NiIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjQ2MS4wOSIgeT0iMTQyLjc2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WDwvdGV4dD4KPC9zdmc+Cg==",
-        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S | PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.53 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 34"
+        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S। PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
+        "caption": "ଚିତ୍ର 2.53 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=76",
@@ -1525,8 +1525,8 @@ export default {
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grKzgrLngrL/grIPgrLjgrY3grKUgQeCssOCtgSDgrJvgrYfgrKbgrJUgQeKAk1DigJNRIOCskyBB4oCTUuKAk1MgfCBQUyDgrJMgUlHgrLAg4Kyb4K2H4KymIFQsIOCsleCtjeCst+CtgeCspuCtjeCssCDgrJrgrL7grKogUVhTIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIzMjkuMDAiIGN5PSIxNjAuMDAiIHI9IjExOC41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDEzLjI5LDc2LjcxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI1Mi41MCwxNjAuMDAgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCAyMTIuNjYsMTgyLjUxIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSI0MTMuMjksNzYuNzEgNDM0LjYzLDIxMy43MSIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjE2LjczLDEyMi4wOCA0MzQuNjMsMjEzLjcxIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyMTIuNjYsMTgyLjUxIDQxMy4yOSw3Ni43MSIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSI1Mi41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM4LjUwIiB5PSIxNjAuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyMTYuNzMiIGN5PSIxMjIuMDgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMDcuNTAiIHk9IjExMC44MSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlA8L3RleHQ+CjxjaXJjbGUgY3g9IjQxMy4yOSIgY3k9Ijc2LjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDI1Ljc2IiB5PSI2OS44OSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlE8L3RleHQ+CjxjaXJjbGUgY3g9IjIxMi42NiIgY3k9IjE4Mi41MSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIwMC42NyIgeT0iMTkwLjI1IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+UjwvdGV4dD4KPGNpcmNsZSBjeD0iNDM0LjYzIiBjeT0iMjEzLjcxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iNDQ4LjA3IiB5PSIyMTcuODkiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5TPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNzguMjEiIGN5PSIxNDcuOTQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNzguMjEiIHk9IjE2My45NCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlQ8L3RleHQ+CjxjaXJjbGUgY3g9IjQ0Ni4wOSIgY3k9IjE0MS43NiIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjQ2MS4wOSIgeT0iMTQyLjc2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WDwvdGV4dD4KPC9zdmc+Cg==",
-        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S | PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.53 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 34"
+        "alt": "ବହିଃସ୍ଥ Aରୁ ଛେଦକ A–P–Q ଓ A–R–S। PS ଓ RQର ଛେଦ T, କ୍ଷୁଦ୍ର ଚାପ QXS।",
+        "caption": "ଚିତ୍ର 2.53 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=76",
@@ -1552,7 +1552,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj5PQSwgT0IsIE9DIOCsrOCtjeCtn+CsvuCsuOCsvuCssOCtjeCspuCtjeCspyB8IOCsrOCtg+CspOCtjeCspOCssOCthyBB4oCTWOKAk0LigJNZ4oCTQ+KAk1og4KyV4K2N4Kyw4KyuLCDgrJrgrL7grKogQVhCID0gODDCsCwgQllDID0gMTQwwrAgfDwvdGl0bGU+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJ4PSI4IiBmaWxsPSIjZmZmY2Y1Ii8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CjxjaXJjbGUgY3g9IjI1MC4wMCIgY3k9IjE2MC4wMCIgcj0iMTI3LjUwIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjI1MC4wMCwxNjAuMDAgMjA2LjM5LDQwLjE5IiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIyNTAuMDAsMTYwLjAwIDM2MC40Miw5Ni4yNSIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMjUwLjAwLDE2MC4wMCAyMDYuMzksMjc5LjgxIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8L2c+CjxjaXJjbGUgY3g9IjIwNi4zOSIgY3k9IjQwLjE5IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjAxLjYwIiB5PSIyNi4wOSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkE8L3RleHQ+CjxjaXJjbGUgY3g9IjI5My42MSIgY3k9IjQwLjE5IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjk4LjQwIiB5PSIyNi4wOSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlg8L3RleHQ+CjxjaXJjbGUgY3g9IjM2MC40MiIgY3k9Ijk2LjI1IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzcyLjU0IiB5PSI4OC43NSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjM0Ny42NyIgY3k9IjI0MS45NiIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM1OC40MCIgeT0iMjUxLjYwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WTwvdGV4dD4KPGNpcmNsZSBjeD0iMjA2LjM5IiBjeT0iMjc5LjgxIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjAxLjYwIiB5PSIyOTMuOTEiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5DPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxMjIuNTAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMDguNTAiIHk9IjE2MC4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPlo8L3RleHQ+CjxjaXJjbGUgY3g9IjI1MC4wMCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjIzOC4wMCIgeT0iMTY1LjAwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+TzwvdGV4dD4KPC9zdmc+Cg==",
         "alt": "OA, OB, OC ବ୍ୟାସାର୍ଦ୍ଧ। ବୃତ୍ତରେ A–X–B–Y–C–Z କ୍ରମ, ଚାପ AXB = 80°, BYC = 140°।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.54 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 34"
+        "caption": "ଚିତ୍ର 2.54 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=76",
@@ -1598,7 +1598,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grLjgrK7grL7grKjgrY3grKTgrLAg4Kyc4K2N4K2f4Ky+IENELCBBQiB8IOCspuCtgeCshyDgrKrgrL7grLDgrY3grLbgrY3grbHgrLDgrYcg4Kya4Ky+4KyqIEFYQyDgrJMgQllEIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxNDYuODUsMjM0Ljk0IDM1My4xNSwyMzQuOTQiIHN0cm9rZT0iIzA4N2I3OSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjE2My4wNSw2Ni43NSAzMzYuOTUsNjYuNzUiIHN0cm9rZT0iIzA4N2I3OSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+CjwvZz4KPGNpcmNsZSBjeD0iMTQ2Ljg1IiBjeT0iMjM0Ljk0IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMTM1LjUyIiB5PSIyNDMuNzYiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5BPC90ZXh0Pgo8Y2lyY2xlIGN4PSIzNTMuMTUiIGN5PSIyMzQuOTQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNjQuNDgiIHk9IjI0My43NiIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkI8L3RleHQ+CjxjaXJjbGUgY3g9IjE2My4wNSIgY3k9IjY2Ljc1IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMTUzLjUwIiB5PSI1NS43OCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkM8L3RleHQ+CjxjaXJjbGUgY3g9IjMzNi45NSIgY3k9IjY2Ljc1IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzQ2LjUwIiB5PSI1NS43OCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkQ8L3RleHQ+CjxjaXJjbGUgY3g9IjEyMi41OCIgY3k9IjE1NS41NSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjEwOC41OSIgeT0iMTU1LjAzIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+WDwvdGV4dD4KPGNpcmNsZSBjeD0iMzc3LjMzIiBjeT0iMTUzLjMzIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzkxLjMxIiB5PSIxNTIuNTQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5ZPC90ZXh0Pgo8L3N2Zz4K",
         "alt": "ସମାନ୍ତର ଜ୍ୟା CD, AB। ଦୁଇ ପାର୍ଶ୍ୱରେ ଚାପ AXC ଓ BYD।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.55 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 35"
+        "caption": "ଚିତ୍ର 2.55 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=77",
@@ -1615,7 +1615,7 @@ export default {
         "AC ଅଙ୍କନ କର।",
         "AB ∥ CD ହେତୁ ∠BAC = ∠ACD।",
         "ସେମାନଙ୍କ ଦ୍ୱାରା ଛେଦିତ ଚାପ BC ଓ AD ର ମାପ ସମାନ।",
-        "ସର୍ବସମ ଚାପର ଜ୍ୟା AD ଓ BC ସମାନ। ଦୁଇ ଚାପରେ ଏକେ ଚାପ CD ଯୋଗ କର।",
+        "ସର୍ବସମ ଚାପର ଜ୍ୟା AD ଓ BC ସମାନ। ଦୁଇ ଚାପରେ ଏକା ଚାପ CD ଯୋଗ କର।",
         "ଫଳରେ ଚାପ ADC = ଚାପ BCD। ଏମାନଙ୍କର ଜ୍ୟା ଯଥାକ୍ରମେ AC ଓ BD ହେତୁ AC = BD।"
       ],
       "pages": [
@@ -1704,8 +1704,8 @@ export default {
       ],
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj5BQiDgrKzgrY3grZ/grL7grLgg4KyTIE9EIOKIpSBBQyB8IELigJNY4oCTROKAk1nigJNDIOCsj+CslSDgrIXgrLDgrY3grKbgrY3grKfgrKzgrYPgrKTgrY3grKQg4KyJ4Kyq4Kyw4K2HIHw8L3RpdGxlPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0iI2ZmZmNmNSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjEyNy41MCIgc3Ryb2tlPSIjMjQ0MzU1IiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxMjIuNTAsMTYwLjAwIDM3Ny41MCwxNjAuMDAiIHN0cm9rZT0iIzI0NDM1NSIgc3Ryb2tlLXdpZHRoPSIyLjM1Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjI1MC4wMCwxNjAuMDAgMzMxLjk2LDYyLjMzIiBzdHJva2U9IiMwODdiNzkiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxMjIuNTAsMTYwLjAwIDIyNy44NiwzNC40NCIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIxMjIuNTAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMDguNTAiIHk9IjE2MC4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkE8L3RleHQ+CjxjaXJjbGUgY3g9IjM3Ny41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM5MS41MCIgeT0iMTYwLjAwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QjwvdGV4dD4KPGNpcmNsZSBjeD0iMjI3Ljg2IiBjeT0iMzQuNDQiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyMjUuNDMiIHk9IjE5LjY2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMzMxLjk2IiBjeT0iNjIuMzMiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzNDAuOTUiIHk9IjUwLjg0IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMzY2LjQ4IiBjeT0iMTA4LjE0IiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMzc5LjI3IiB5PSIxMDIuMDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5YPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyODAuODUiIGN5PSIzNi4yOSIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjI4NC4yMyIgeT0iMjEuNzMiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5ZPC90ZXh0Pgo8Y2lyY2xlIGN4PSIyNTAuMDAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIyNDkuMDAiIHk9IjE3NS4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPk88L3RleHQ+Cjwvc3ZnPgo=",
-        "alt": "AB ବ୍ୟାସ ଓ OD ∥ AC | B–X–D–Y–C ଏକ ଅର୍ଦ୍ଧବୃତ୍ତ ଉପରେ।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.56 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 35"
+        "alt": "AB ବ୍ୟାସ ଓ OD ∥ AC। B–X–D–Y–C ଏକ ଅର୍ଦ୍ଧବୃତ୍ତ ଉପରେ।",
+        "caption": "ଚିତ୍ର 2.56 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=77",
@@ -1732,7 +1732,7 @@ export default {
       "solutionDiagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgo8dGl0bGUgaWQ9InRpdGxlIj7grJXgrYfgrKjgrY3grKbgrY3grLAgT+CssCDgrKzgrY3grZ/grL7grLggQUIg4Ky44Ky5IENEIOCsuOCsruCsvuCsqOCtjeCspOCssCB8IENEID0gT0Ig4KyTIEJEIOCsnOCtjeCtn+CsviB8PC90aXRsZT4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjgiIGZpbGw9IiNmZmZjZjUiLz4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMTYwLjAwIiByPSIxMjcuNTAiIHN0cm9rZT0iIzI0NDM1NSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHBvbHlsaW5lIHBvaW50cz0iMTIyLjUwLDE2MC4wMCAzNzcuNTAsMTYwLjAwIiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIxODYuMjUsNDkuNTggMzEzLjc1LDQ5LjU4IiBzdHJva2U9IiMyNDQzNTUiIHN0cm9rZS13aWR0aD0iMi4zNSIvPgo8cG9seWxpbmUgcG9pbnRzPSIzNzcuNTAsMTYwLjAwIDMxMy43NSw0OS41OCIgc3Ryb2tlPSIjMDg3Yjc5IiBzdHJva2Utd2lkdGg9IjIuMzUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIxMjIuNTAiIGN5PSIxNjAuMDAiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxMDguNTAiIHk9IjE2MC4wMCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9IiMxZDM4NDkiIHN0cm9rZT0iI2ZmZmNmNSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHBhaW50LW9yZGVyPSJzdHJva2UiPkE8L3RleHQ+CjxjaXJjbGUgY3g9IjM3Ny41MCIgY3k9IjE2MC4wMCIgcj0iMi43IiBmaWxsPSIjMjQ0MzU1Ii8+Cjx0ZXh0IHg9IjM5MS41MCIgeT0iMTYwLjAwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QjwvdGV4dD4KPGNpcmNsZSBjeD0iMTg2LjI1IiBjeT0iNDkuNTgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIxNzkuMjUiIHk9IjM2LjU5IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+QzwvdGV4dD4KPGNpcmNsZSBjeD0iMzEzLjc1IiBjeT0iNDkuNTgiIHI9IjIuNyIgZmlsbD0iIzI0NDM1NSIvPgo8dGV4dCB4PSIzMjAuNzUiIHk9IjM2LjU5IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC1zdHlsZT0iaXRhbGljIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzFkMzg0OSIgc3Ryb2tlPSIjZmZmY2Y1IiBzdHJva2Utd2lkdGg9IjMuNSIgcGFpbnQtb3JkZXI9InN0cm9rZSI+RDwvdGV4dD4KPGNpcmNsZSBjeD0iMjUwLjAwIiBjeT0iMTYwLjAwIiByPSIyLjciIGZpbGw9IiMyNDQzNTUiLz4KPHRleHQgeD0iMjUwLjAwIiB5PSIxNzUuMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjMWQzODQ5IiBzdHJva2U9IiNmZmZjZjUiIHN0cm9rZS13aWR0aD0iMy41IiBwYWludC1vcmRlcj0ic3Ryb2tlIj5PPC90ZXh0Pgo8L3N2Zz4K",
         "alt": "କେନ୍ଦ୍ର Oର ବ୍ୟାସ AB ସହ CD ସମାନ୍ତର। CD = OB ଓ BD ଜ୍ୟା।",
-        "caption": "ମୌଳିକ ଭେକ୍ଟର ରେଖାଚିତ୍ର · ଚିତ୍ର 2.57 ଆଧାରିତ · ଅଧ୍ୟାୟ PDF ପୃଷ୍ଠା 35"
+        "caption": "ଚିତ୍ର 2.57 ଆଧାରିତ ରେଖାଚିତ୍ର"
       },
       "originalPdf": {
         "url": "https://osepa.odisha.gov.in/upload/ebooks/CLASS-X/100%20-%20OD_ODIA_GEOMETRY_CLASS10_TERM1.pdf#page=77",
@@ -1921,7 +1921,7 @@ export default {
       "answer": "PA = PB + PC।",
       "steps": [
         "BP ରଶ୍ମିକୁ P ପରେ D ଯାଏଁ ବଢ଼ାଅ, ଯେପରି PD = PC।",
-        "∠BPC = 180°−∠BAC = 120° |",
+        "∠BPC = 180°−∠BAC = 120°।",
         "ତେଣୁ ∠CPD = 60°।",
         "△CPD ସମବାହୁ ଓ ∠PCD = 60°।",
         "△BCD ଓ △ACP ରେ BC = AC।",
@@ -1946,7 +1946,7 @@ export default {
       "steps": [
         "AP ସାପେକ୍ଷ C ର ପ୍ରତିବିମ୍ବ C′ ନିଅ।",
         "C′ ରଶ୍ମି AB ଉପରେ, AC′ = AC ଓ PC′ = PC।",
-        "କୋଣ A ର ସମଦ୍ୱିଖଣ୍ଡକ ହେତୁ ଚାପ BP ଓ PC ସମାନ, ତେଣୁ PB = PC = PC′ |",
+        "କୋଣ A ର ସମଦ୍ୱିଖଣ୍ଡକ ହେତୁ ଚାପ BP ଓ PC ସମାନ, ତେଣୁ PB = PC = PC′।",
         "B ଓ C′ ଭିନ୍ନ ହେଲେ ସେମାନଙ୍କ ସଂଯୋଜକରେ P ର ଲମ୍ବପାଦ Q ମଧ୍ୟବିନ୍ଦୁ।",
         "ଏଣୁ AQ = (AB+AC′)/2।",
         "ପ୍ରତିବିମ୍ବରେ Q ର ସ୍ଥାନ R, ତେଣୁ AR = AQ।",
@@ -1994,7 +1994,7 @@ export default {
         "ତେଣୁ △ADE ∼ △BDC।",
         "ଫଳରେ AE/BC = AD/BD, ଅର୍ଥାତ୍ AE·BD = AD·BC।",
         "ସାଦୃଶ୍ୟର ଶୀର୍ଷକ୍ରମ ଅନୁସାରେ A ↔ B, D ↔ D, E ↔ C। ଏଣୁ ଅନୁରୂପ ବାହୁର ଅନୁପାତ AD/BD = DE/DC = AE/BC।",
-        "∠EDC = ∠ADC−∠ADE = ∠ADB |",
+        "∠EDC = ∠ADC−∠ADE = ∠ADB।",
         "ଆଉ ∠ECD = ∠ACD = ∠ABD କାରଣ ସମାନ AD ଜ୍ୟା ଉପରେ।",
         "ତେଣୁ △EDC ∼ △ADB।",
         "ଏଥିରୁ EC·BD = AB·CD।",

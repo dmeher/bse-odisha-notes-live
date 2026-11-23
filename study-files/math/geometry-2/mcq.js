@@ -80,7 +80,7 @@ export default {
       "text": "ଆଦର୍ଶ ପ୍ରଶ୍ନପତ୍ର · ସେଟ୍ ୧, ଭାଗ ୧, ପ୍ରଶ୍ନ ୩୨ (୧ ନମ୍ବର)"
     },
     {
-      "prompt": "ଏକେ ଚାପ ଉପରେ କେନ୍ଦ୍ରସ୍ଥ କୋଣ 100° ହେଲେ ବୃତ୍ତସ୍ଥ କୋଣ କେତେ?",
+      "prompt": "ଏକା ଚାପ ଉପରେ କେନ୍ଦ୍ରସ୍ଥ କୋଣ 100° ହେଲେ ବୃତ୍ତସ୍ଥ କୋଣ କେତେ?",
       "options": [
         "100°",
         "200°",
@@ -95,7 +95,7 @@ export default {
       ],
       "diagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+Q2VudHJhbCBhbmQgaW5zY3JpYmVkIGFuZ2xlcyBzdWJ0ZW5kaW5nIEFCPC90aXRsZT4KICA8cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIyNSIgcng9IjgiIGZpbGw9IndoaXRlIi8+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjU0YjU1IiBzdHJva2Utd2lkdGg9IjIiPgo8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxMTAiIHI9IjgyIi8+PHBhdGggZD0iTTgyLjggMTU3TDE1MCAxMTBMMjE3LjIgMTU3TTgyLjggMTU3TDE1MCAyOEwyMTcuMiAxNTciLz4KICA8L2c+CiAgPGcgZmlsbD0iIzE3Mzk0MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiPgogICAgPHRleHQgeD0iNjIiIHk9IjE3MiI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjIyMSIgeT0iMTc0Ij5CPC90ZXh0PgogICAgPHRleHQgeD0iMTQ2IiB5PSIyMSI+UDwvdGV4dD4KICAgIDx0ZXh0IHg9IjE0NiIgeT0iMTI5Ij5PPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg==",
-        "alt": "ଏକେ ଚାପର କେନ୍ଦ୍ରସ୍ଥ କୋଣ AOB ଓ ବୃତ୍ତସ୍ଥ କୋଣ APB।"
+        "alt": "ଏକା ଚାପର କେନ୍ଦ୍ରସ୍ଥ କୋଣ AOB ଓ ବୃତ୍ତସ୍ଥ କୋଣ APB।"
       },
       "modelReferences": [
         {

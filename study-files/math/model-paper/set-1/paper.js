@@ -40,7 +40,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1xlrv9W4psXNexlb_4Y7h7Dfy5neajF3U/view"
     },
     {
-      "prompt": "x + y + 1 = 0 ସହ କେଉଁ ସମୀକରଣ ଏକେ ରେଖାକୁ ସୂଚାଏ?",
+      "prompt": "x + y + 1 = 0 ସହ କେଉଁ ସମୀକରଣ ଏକା ରେଖାକୁ ସୂଚାଏ?",
       "options": [
         "x − y + 1 = 0",
         "x + y + 3 = 0",
@@ -592,7 +592,7 @@ export default {
       "sourceUrl": "https://drive.google.com/file/d/1Ji5Wwx0ZMV3WlotvWxxajEFKA4VxMWTv/view"
     },
     {
-      "prompt": "ଏକେ ଚାପ ଉପରେ କେନ୍ଦ୍ରସ୍ଥ କୋଣ 100° ହେଲେ ବୃତ୍ତସ୍ଥ କୋଣ କେତେ?",
+      "prompt": "ଏକା ଚାପ ଉପରେ କେନ୍ଦ୍ରସ୍ଥ କୋଣ 100° ହେଲେ ବୃତ୍ତସ୍ଥ କୋଣ କେତେ?",
       "options": [
         "100°",
         "200°",
@@ -607,7 +607,7 @@ export default {
       ],
       "diagram": {
         "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjI1Ij4KICA8dGl0bGU+Q2VudHJhbCBhbmQgaW5zY3JpYmVkIGFuZ2xlcyBzdWJ0ZW5kaW5nIEFCPC90aXRsZT4KICA8cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIyNSIgcng9IjgiIGZpbGw9IndoaXRlIi8+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjU0YjU1IiBzdHJva2Utd2lkdGg9IjIiPgo8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxMTAiIHI9IjgyIi8+PHBhdGggZD0iTTgyLjggMTU3TDE1MCAxMTBMMjE3LjIgMTU3TTgyLjggMTU3TDE1MCAyOEwyMTcuMiAxNTciLz4KICA8L2c+CiAgPGcgZmlsbD0iIzE3Mzk0MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiPgogICAgPHRleHQgeD0iNjIiIHk9IjE3MiI+QTwvdGV4dD4KICAgIDx0ZXh0IHg9IjIyMSIgeT0iMTc0Ij5CPC90ZXh0PgogICAgPHRleHQgeD0iMTQ2IiB5PSIyMSI+UDwvdGV4dD4KICAgIDx0ZXh0IHg9IjE0NiIgeT0iMTI5Ij5PPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg==",
-        "alt": "ଏକେ ଚାପର କେନ୍ଦ୍ରସ୍ଥ କୋଣ AOB ଓ ବୃତ୍ତସ୍ଥ କୋଣ APB।"
+        "alt": "ଏକା ଚାପର କେନ୍ଦ୍ରସ୍ଥ କୋଣ AOB ଓ ବୃତ୍ତସ୍ଥ କୋଣ APB।"
       },
       "chapter": "geometry-2",
       "title": "ବୃତ୍ତ",
